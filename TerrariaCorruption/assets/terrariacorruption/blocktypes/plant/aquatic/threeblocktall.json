@@ -1,0 +1,94 @@
+{
+  "code": "corruptaquaticplant",
+  "class": "BlockWaterPlant",
+  "handbook": { "exclude": true },
+  "behaviors": [ { "name": "Unstable" } ],
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [ "milfoilfeather" ]
+    }
+  ],
+  "creativeinventory": {
+    "general": [ "*" ],
+    "aquatic": [ "*" ]
+  },
+  "drawtype": "JSONAndWater",
+  "renderpass": "liquid",
+  "blockmaterial": "Plant",
+  "faceCullMode": "liquid",
+  "doNotRenderAtLod2": true,
+  "vertexFlags": {
+    "windMode": "WaterPlant"
+  },
+  "shape": { "base": "game:block/aquatic/plant/threeblocktall" },
+  "randomizeRotations": true,
+  "randomDrawOffset": true,
+  "texturesByType": {
+    "*": {
+      "north": { "base": "terrariacorruption:block/plant/aquatic/{type}*" },
+      "south": { "base": "terrariacorruption:block/plant/aquatic/{type}*" }
+    }
+  },
+  "sideopaque": { "all": false },
+  "sidesolid": { "all": false },
+  "replaceable": 3000,
+  "lightAbsorption": 0,
+  "resistance": 0.5,
+  "collisionbox": null,
+  "sounds": {
+    "place": "game:block/plant",
+    "break": "game:block/plant",
+    "hit": "game:block/plant"
+  },
+  "materialDensity": 1100,
+  "selectionboxByType": {
+    "*": {
+      "x1": 0.125,
+      "y1": 0,
+      "z1": 0.125,
+      "x2": 0.875,
+      "y2": 0.25,
+      "z2": 0.875
+    }
+  },
+  "guitransformByType": {
+    "*": {
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0.6,
+        "z": 0.5
+      }
+    }
+  },
+  "tpHandTransformByType": {
+    "*": {
+      "translation": {
+        "x": -1,
+        "y": -0.1,
+        "z": -1
+      },
+      "rotation": {
+        "x": 71,
+        "y": 0,
+        "z": -84
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0.1,
+        "z": 0.5
+      },
+      "scale": 0.48
+    }
+  },
+  "groundTransformByType": {
+    "*": {
+      "scale": 2.64
+    }
+  }
+}

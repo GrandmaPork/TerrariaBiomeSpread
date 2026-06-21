@@ -1,0 +1,75 @@
+{
+  "code": "corruptfern",
+  "class": "BlockFern",
+  "behaviors": [ { "name": "DropNotSnowCovered" } ],
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [ "cinnamonfern", "deerfern", "eaglefern", "hartstongue" ]
+    }
+  ],
+  "attributes": {
+    "butterflyFeed": false,
+    "beeFeed": false,
+    "disappearOnSoilRemoved": true,
+    "plantContainable": {
+      "smallContainer": {
+        "shape": { "base": "game:block/plant/fern/{type}/flowerpot/var*" }
+      },
+      "largeContainer": {
+        "shape": { "base": "terrariacorruption:block/plant/fern/{type}/planter/var*" }
+      }
+    },
+    "allowOverlays": false,
+    "isCorrupt": true
+  },
+  "creativeinventory": {
+    "general": [ "*" ],
+    "flora": [ "*" ]
+  },
+  "renderpass": "OpaqueNoCull",
+  "drawtype": "JSON",
+  "shape": { "base": "terrariacorruption:block/plant/fern/{type}/var*" },
+  "randomDrawOffset": true,
+  "randomizeRotations": true,
+  "randomizeAxes": "xz",
+  "randomSizeAdjust": 0.1,
+  "blockmaterial": "Plant",
+  "climateColorMap": "corruptClimatePlantTint",
+  "seasonColorMapByType": {
+    "*-cinnamonfern": "corruptSeasonalCinnamonfern",
+    "*-deerfern": "corruptSeasonalDeerfern",
+    "*-eaglefern": "corruptSeasonalCinnamonfern",
+    "*-hartstongue": "corruptSeasonalDeerfern"
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "sidesolid": {
+    "all": false
+  },
+  "replaceable": 3000,
+  "lightAbsorption": 0,
+  "resistance": 0.5,
+  "collisionbox": null,
+  "selectionbox": {
+    "x1": 0.125,
+    "y1": 0,
+    "z1": 0.125,
+    "x2": 0.875,
+    "y2": 0.25,
+    "z2": 0.875
+  },
+  "sounds": {
+    "place": "game:block/plant",
+    "break": "game:block/plant",
+    "hit": "game:block/plant"
+  },
+  "rainPermeable": false,
+  "materialDensity": 200,
+  "combustibleProps": {
+    "burnTemperature": 600,
+    "burnDuration": 5
+  },
+  "frostable": true
+}

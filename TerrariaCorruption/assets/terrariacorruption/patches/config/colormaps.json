@@ -1,0 +1,147 @@
+[
+  {
+    "file": "game:config/colormaps.json",
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "corruptClimatePlantTint",
+      "texture": { "base": "terrariacorruption:environment/corruptplanttint" },
+      "padding": 4,
+      "loadIntoBlockTextureAtlas": true
+    }
+  },
+  {
+    "file": "game:config/colormaps.json",
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "corruptClimateCrimsonKingTint",
+      "texture": { "base": "terrariacorruption:environment/corruptcrimsonkingmapletint" },
+      "padding": 4,
+      "loadIntoBlockTextureAtlas": true
+    }
+  },
+  {
+    "file": "game:config/colormaps.json",
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "corruptClimateDarkerPlantTint",
+      "texture": { "base": "terrariacorruption:environment/corruptplanttintdarker" },
+      "padding": 4,
+      "loadIntoBlockTextureAtlas": true
+    }
+  },
+  {
+    "file": "game:config/colormaps.json",
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "corruptClimateLighterPlantTint",
+      "texture": { "base": "terrariacorruption:environment/corruptplanttintlighter" },
+      "padding": 4,
+      "loadIntoBlockTextureAtlas": true
+    }
+  },
+  {
+    "file": "game:config/colormaps.json",
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "corruptTropicalKapok",
+      "texture": { "base": "terrariacorruption:environment/seasons/corrupttropictintkapok" },
+      "loadIntoBlockTextureAtlas": true,
+      "extraFlags": 1
+    }
+  },
+  {
+    "file": "game:config/colormaps.json",
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "corruptSeasonalOak",
+      "texture": { "base": "terrariacorruption:environment/seasons/corruptoaktint" },
+      "loadIntoBlockTextureAtlas": true
+    }
+  },
+  {
+    "file": "game:config/colormaps.json",
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "corruptSeasonalLarch",
+      "texture": { "base": "terrariacorruption:environment/seasons/corruptlarchtint" },
+      "loadIntoBlockTextureAtlas": true
+    }
+  },
+  {
+    "file": "game:config/colormaps.json",
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "corruptSeasonalBirch",
+      "texture": { "base": "terrariacorruption:environment/seasons/corruptbirchtint" },
+      "loadIntoBlockTextureAtlas": true
+    }
+  },
+  {
+    "file": "game:config/colormaps.json",
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "corruptSeasonalDarkerNeedles",
+      "texture": { "base": "terrariacorruption:environment/seasons/corruptneedletintdarker" },
+      "loadIntoBlockTextureAtlas": true
+    }
+  },
+  {
+    "file": "game:config/colormaps.json",
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "corruptSeasonalFoliage",
+      "texture": { "base": "terrariacorruption:environment/seasons/corruptfoliagetint" },
+      "loadIntoBlockTextureAtlas": true
+    }
+  },
+  {
+    "file": "game:config/colormaps.json",
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "corruptSeasonalGrass",
+      "texture": { "base": "terrariacorruption:environment/seasons/corruptgrasstint" },
+      "loadIntoBlockTextureAtlas": true
+    }
+  },
+  {
+    "file": "game:config/colormaps.json",
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "corruptSeasonalOlive",
+      "texture": { "base": "terrariacorruption:environment/seasons/corruptolivetint" },
+      "loadIntoBlockTextureAtlas": true
+    }
+  },
+  {
+    "file": "game:config/colormaps.json",
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "corruptSeasonalTule",
+      "texture": { "base": "terrariacorruption:environment/seasons/corrupttuletint" },
+      "loadIntoBlockTextureAtlas": true
+    }
+  },
+  {
+    "file": "game:config/colormaps.json",
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "corruptSeasonalMoss",
+      "texture": { "base": "terrariacorruption:environment/seasons/corruptmosstint" },
+      "loadIntoBlockTextureAtlas": true
+    }
+  }
+]

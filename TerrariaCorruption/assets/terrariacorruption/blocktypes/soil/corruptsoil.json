@@ -1,0 +1,120 @@
+{
+  "code": "corruptsoil",
+  "class": "terrariacorruption.corruptsoil",
+  "variantgroups": [
+    {
+      "code": "fertility",
+      "states": [
+        "verylow",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "loadFromProperties": "abstract/grasscoverage"
+    }
+  ],
+  "creativeinventory": {
+    "general": [ "*" ],
+    "flora": [ "*" ],
+    "terrain": [ "*" ]
+  },
+  "shape": { "base": "game:block/basic/cube" },
+  "drawtypeByType": {
+    "*-none": "Cube",
+    "*": "TopSoil"
+  },
+  "renderpassByType": {
+    "*-none": "Opaque",
+    "*": "TopSoil"
+  },
+  "blockmaterial": "Soil",
+  "particlesTextureCodeByType": {
+    "*-none": "up",
+    "*": "particletop"
+  },
+  "textures": {
+    "all": { "base": "game:block/soil/fert{fertility}" },
+    "particletop": { "base": "game:block/plant/grasscoverage/normal-top" },
+    "snowed": { "base": "game:block/plant/grasscoverage/snow/normal" },
+    "specialSecondTexture": { "base": "game:block/plant/grasscoverage/{grasscoverage}" }
+  },
+  "attributes": {
+    "mapColorCode": "land",
+    "ignoreTintInventory": true,
+    "growthBlockLayer": "game:l1soilwithgrass",
+    "growthLightLevel": 3,
+    "preventsDecay": true,
+    "tallGrassGrowthChance": 0.3,
+    "spreadsGrassByType": {
+      "*-none": false,
+      "*": true
+    },
+    "isCorrupt": true
+  },
+  "texturesInventory": {
+    "down": { "base": "game:block/soil/fert{fertility}" },
+    "horizontals": {
+      "base": "game:block/soil/fert{fertility}",
+      "overlays": [ "terrariacorruption:block/plant/grasscoverage/inventory/corrupt_side_{grasscoverage}" ] //9340bf
+    },
+    "up": {
+      "base": "game:block/soil/fert{fertility}",
+      "overlays": [ "terrariacorruption:block/plant/grasscoverage/inventory/corrupt_top_{grasscoverage}" ]
+    }
+  },
+  "climateColorMapByType": {
+    "*-none": null,
+    "*": "corruptClimatePlantTint"
+  },
+  "seasonColorMapByType": {
+    "*-none": null,
+    "*": "corruptSeasonalGrass"
+  },
+  "frostableByType": {
+    "*-none": false,
+    "*": true
+  },
+  "replaceable": 400,
+  "fertilityByType": {
+    "corruptsoil-verylow-*": 10,
+    "corruptsoil-low-*": 15,
+    "corruptsoil-medium-*": 20,
+    "corruptsoil-compost-*": 25,
+    "corruptsoil-high-*": 30
+  },
+  "resistance": 1.8,
+  "sounds": {
+    "place": "game:block/dirt",
+    "break": "game:block/dirt",
+    "hit": "game:block/dirt",
+    "walk": "game:walk/grass"
+  },
+  "drops": [
+    {
+      "type": "block",
+      "code": "corruptsoil-{fertility}-none",
+      "quantity": {
+        "avg": 1,
+        "var": 0
+      }
+    }
+  ],
+  "heldTpIdleAnimation": "holdbothhandslarge",
+  "heldRightReadyAnimation": "heldblockready",
+  "heldTpUseAnimation": "twohandplaceblock",
+  "tpHandTransform": {
+    "translation": {
+      "x": -1.23,
+      "y": -0.91,
+      "z": -0.8
+    },
+    "rotation": {
+      "x": -2,
+      "y": 25,
+      "z": -78
+    },
+    "scale": 0.4
+  }
+}

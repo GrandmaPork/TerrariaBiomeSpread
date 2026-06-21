@@ -1,0 +1,88 @@
+{
+  "code": "corruptwaterlily",
+  "class": "BlockWaterLily",
+  "creativeinventory": {
+    "general": [ "*" ],
+    "flora": [ "*" ]
+  },
+  "shape": {
+    "base": "game:block/plant/flower/lily",
+    "alternates": [ { "base": "game:block/plant/flower/lily-flowering1" } ]
+  },
+  "renderpass": "OpaqueWaterPlant",
+  "blockmaterial": "Plant",
+  "textures": {
+    "base": { "base": "game:block/plant/waterlily/lily*" }
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "sidesolid": {
+    "all": false
+  },
+  "vertexFlags": {
+    "zOffset": 5,
+    "windMode": "Water"
+  },
+  "frostable": true,
+  // Set to rainpermeable so it doesn't cause dark squares when in the midst of specular reflection on water
+  "rainPermeable": true,
+  "randomizeRotations": true,
+  "liquidSelectable": 1,
+  "replaceable": 6001,
+  "lightAbsorption": 0,
+  "resistance": 0,
+  "collisionbox": null,
+  "selectionbox": {
+    "x1": 0,
+    "y1": 0,
+    "z1": 0,
+    "x2": 1,
+    "y2": 0.125,
+    "z2": 1
+  },
+  "sounds": {
+    "place": "game:block/plant",
+    "break": "game:block/plant",
+    "hit": "game:block/plant"
+  },
+  "materialDensity": 450,
+  "groundTransform": {
+    "translation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "rotation": {
+      "x": 0,
+      "y": -45,
+      "z": 0
+    },
+    "origin": {
+      "x": 0.5,
+      "y": -0.08,
+      "z": 0.5
+    },
+    "scale": 2.71
+  },
+  "guiTransform": {
+    "rotation": {
+      "x": -31,
+      "y": -82,
+      "z": 11
+    },
+    "origin": {
+      "x": 0.63,
+      "y": 0.01,
+      "z": 0.45
+    },
+    "scale": 1.6
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -2.1,
+      "y": -1.1,
+      "z": -1.9
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "code": "corruptleavesbranchystatic",
+  // BlockLeaves contains some code for map color tinting, stuff for wind affectedness and random testForDecay server block ticks
+  "class": "Block",
+  "attributes": {
+    "fenceConnect": {
+      "north": false,
+      "east": false,
+      "west": false,
+      "south": false
+    },
+    "asphyxiating": false,
+    "handbook": {
+      "exclude": true
+    },
+    "treeFellingGroupCode": "0{wood}",
+    "treeFellingGroupSpreadIndex": 1,
+    "canDecay": true,
+    "liquidBarrierOnSides": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+    "allowOverlays": false
+  },
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [ "grown" ]
+    },
+    {
+      "code": "wood",
+      "states": [ "birch" ]
+    }
+  ],
+  "creativeinventory": { "meta": [ "*" ] },
+  "shape": {
+    "baseByType": {
+      "*-birch": "game:block/plant/leaves/branchy-birch"
+    },
+    "rotateY": 10,
+    "alternates": [
+      { "rotateY": 61 },
+      { "rotateY": 113 },
+      { "rotateY": 164 },
+      { "rotateY": 216 },
+      { "rotateY": 267 },
+      { "rotateY": 319 }
+    ]
+  },
+  "lod0Shape": {
+    "baseByType": {
+      "*-birch": "game:block/plant/leaves/branchy-birch-lod0"
+    },
+    "rotateY": 10,
+    "alternates": [
+      { "rotateY": 61 },
+      { "rotateY": 113 },
+      { "rotateY": 164 },
+      { "rotateY": 216 },
+      { "rotateY": 267 },
+      { "rotateY": 319 }
+    ]
+  },
+  "shapeInventory": {
+    "baseByType": {
+      "*": "game:block/plant/leaves/branchy-lod0"
+    }
+  },
+  "renderpass": "OpaqueNoCull",
+  "faceCullMode": "CollapseMaterial",
+  "blockmaterial": "Leaves",
+  "vertexFlags": {
+    "zOffset": 4
+  },
+  "textures": {
+    "largeleavesByType": {
+      "*": { "base": "game:block/plant/leaves-static/large/{wood}*" }
+    },
+    "smallleavesByType": {
+      "*": { "base": "game:block/plant/leaves-static/small/{wood}*" }
+    },
+    "branch": { "base": "game:block/plant/leaves/large/branch" }
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "sideao": {
+    "all": true
+  },
+  "emitSideAo": {
+    "all": false
+  },
+  "replaceable": 3000,
+  "lightAbsorption": 1,
+  "resistance": 0.9,
+  "snowCoverage": true,
+  "drops": [
+    {
+      "type": "item",
+      "code": "stick",
+      "quantity": {
+        "avg": 1,
+        "var": 0
+      }
+    }
+  ],
+  "sounds": {
+    "break": "game:block/plant",
+    "place": "game:block/plant",
+    "hit": "game:block/plant",
+    "walk": "game:walk/grass"
+  },
+  "combustibleProps": {
+    "burnTemperature": 600,
+    "burnDuration": 10
+  },
+  "materialDensity": 400,
+  "heldTpIdleAnimation": "holdbothhandslarge",
+  "heldRightReadyAnimation": "heldblockready",
+  "heldTpUseAnimation": "twohandplaceblock",
+  "tpHandTransform": {
+    "translation": {
+      "x": -1.23,
+      "y": -0.91,
+      "z": -0.8
+    },
+    "rotation": {
+      "x": -2,
+      "y": 25,
+      "z": -78
+    },
+    "scale": 0.4
+  },
+  "guiTransform": {
+    "scale": 0.8
+  },
+  "frostable": true
+}

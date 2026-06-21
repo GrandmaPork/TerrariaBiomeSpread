@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="TerrariaCorruption/TerrariaCorruption.csproj" />
+  <Project Path="ZZCakeBuild/CakeBuild.csproj" />
+</Solution>

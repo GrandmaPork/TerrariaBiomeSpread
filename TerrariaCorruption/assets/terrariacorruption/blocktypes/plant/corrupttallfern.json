@@ -1,0 +1,70 @@
+{
+  "code": "corrupttallfern",
+  "class": "BlockPlant",
+  "creativeinventory": {
+    "general": [ "*" ],
+    "flora": [ "*" ]
+  },
+  "randomDrawOffset": true,
+  "renderpass": "OpaqueNoCull",
+  "shape": { "base": "terrariacorruption:block/plant/fern/tallfern/var1" },
+  "textures": {
+    "all": { "base": "game:block/plant/fern/tallfern/fern*" }
+  },
+  "attributes": {
+    "plantContainable": {
+      "smallContainer": {
+        "shape": { "base": "game:block/plant/fern/tallfern/flowerpot/var1" },
+        "texture": { "base": "game:block/plant/fern/tallfern/flowerpot/var1" }
+      },
+      "largeContainer": {
+        "shape": { "base": "game:block/plant/fern/tallfern/var1" },
+        "texture": { "base": "game:block/plant/fern/tallfern/fern*" }
+      }
+    },
+    "allowOverlays": false,
+    "isCorrupt": true
+  },
+  "blockmaterial": "Plant",
+  "climateColorMap": "corruptClimatePlantTint",
+  "sideopaque": {
+    "all": false
+  },
+  "sidesolid": {
+    "all": false
+  },
+  "sideao": { "all": false },
+  "replaceable": 6500,
+  "lightAbsorption": 0,
+  "resistance": 0.25,
+  "randomizeRotations": true,
+  "randomSizeAdjust": 0.15,
+  "collisionbox": null,
+  "sounds": {
+    "place": "game:block/plant",
+    "break": "game:block/plant",
+    "hit": "game:block/plant"
+  },
+  "rainPermeable": true,
+  "drops": [
+    {
+      "type": "block",
+      "code": "tallfern",
+      "quantity": { "avg": 1 },
+      "tool": "knife"
+    }
+  ],
+  "materialDensity": 200,
+  "frostable": true,
+  "combustibleProps": {
+    "burnTemperature": 600,
+    "burnDuration": 10
+  },
+  "guiTransform": {
+    "origin": {
+      "x": 0.5,
+      "y": 0.9,
+      "z": 0.5
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "code": "corruptleaves",
+  // BlockLeaves contains some code for map color tinting, stuff for wind affectedness and random testForDecay server block ticks
+  "class": "terrariacorruption.corruptleaves",
+  "behaviorsByType": {
+    "*-grown*-*": [
+      {
+        "name": "PushEventOnBlockBroken",
+        "properties": { "eventName": "testForDecay" }
+      },
+      { "name": "RainDrip" }
+    ],
+    "*": [ { "name": "RainDrip" } ]
+  },
+  "attributes": {
+    "handbook": {
+      "groupBy": [ "corruptleaves-*", "corruptleavesnarrow-*" ]
+    },
+    "treeFellingGroupCodeByType": {
+      "*-grown-crimsonkingmaple": "0maple",
+      "*-grown1- maple": "1maple",
+      "*-grown2-crimsonkingmaple": "2maple",
+      "*-grown3-crimsonkingmaple": "3maple",
+      "*-grown4-crimsonkingmaple": "4maple",
+      "*-grown5-crimsonkingmaple": "5maple",
+      "*-grown6-crimsonkingmaple": "6maple",
+      "*-grown7-crimsonkingmaple": "7maple",
+      "*-grown-*": "0{wood}",
+      "*-grown1-*": "1{wood}",
+      "*-grown2-*": "2{wood}",
+      "*-grown3-*": "3{wood}",
+      "*-grown4-*": "4{wood}",
+      "*-grown5-*": "5{wood}",
+      "*-grown6-*": "6{wood}",
+      "*-grown7-*": "7{wood}"
+    },
+    "treeFellingGroupSpreadIndex": 0,
+    "canDecayByType": {
+      "*-grown*-*": true
+    },
+    "allowOverlays": false,
+    "isCorrupt": true
+  },
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [ "grown", "grown1", "grown2", "grown3", "grown4", "grown5", "grown6", "grown7", "placed" ]
+    },
+    {
+      "code": "wood",
+      "states": [ "crimsonkingmaple" ],
+      "loadFromProperties": "game:block/wood"
+    }
+  ],
+  "creativeinventory": {
+    "general": [ "leaves-placed-*" ],
+    "flora": [ "leaves-placed-*" ]
+  },
+  "shape": {
+    "base": "game:block/plant/leaves/normal",
+    "rotateY": 10,
+    "alternates": [
+      { "rotateY": 61 },
+      { "rotateY": 113 },
+      { "rotateY": 164 },
+      { "rotateY": 216 },
+      { "rotateY": 267 },
+      { "rotateY": 319 }
+    ]
+  },
+  "lod0Shape": {
+    "base": "game:block/plant/leaves/normal-lod0",
+    "rotateY": 10,
+    "alternates": [
+      { "rotateY": 61 },
+      { "rotateY": 113 },
+      { "rotateY": 164 },
+      { "rotateY": 216 },
+      { "rotateY": 267 },
+      { "rotateY": 319 }
+    ]
+  },
+  "shapeInventory": { "base": "game:block/plant/leaves/normal-lod0" }, //9340bf  or 7440bf
+  "renderpass": "OpaqueNoCull",
+  "faceCullMode": "CollapseMaterial",
+  "blockmaterial": "Leaves",
+  "climateColorMapByType": {
+    "*-crimsonkingmaple": "corruptClimateCrimsonKingTint",
+    "*-redwood": "corruptClimateDarkerPlantTint",
+    "*": "corruptClimatePlantTint"
+  },
+  "seasonColorMapByType": {
+    "*-pine": "corruptSeasonalNeedles",
+    "*-redwood": "corruptSeasonalNeedles",
+    "*-birch": "corruptSeasonalBirch",
+    "*-maple": "corruptSeasonalLarch",
+    "*-oak": "corruptSeasonalOak",
+    "*-walnut": "corruptSeasonalTule",
+    "*-larch": "corruptSeasonalLarch",
+    "*-crimsonkingmaple": "corruptSeasonalMoss",
+    "*-kapok": "corruptTropicalKapok",
+    "*": "corruptSeasonalFoliage"
+  },
+  "vertexFlags": {
+    "zOffset": 4,
+    "windMode": "Leaves"
+  },
+  "textures": {
+    "largeleavesByType": {
+      "*-larch": { "base": "game:block/plant/leaves/large/pine*" },
+      "*-redwood": { "base": "game:block/plant/leaves/large/pine*" },
+      "*-crimsonkingmaple": { "base": "game:block/plant/leaves/large/maple*" },
+      "*": { "base": "game:block/plant/leaves/large/{wood}*" }
+    },
+    "smallleavesByType": {
+      "*-larch": { "base": "terrariacorruption:block/plant/leaves/small/pine*" },
+      "*-redwood": { "base": "terrariacorruption:block/plant/leaves/small/pine*" },
+      "*-crimsonkingmaple": { "base": "terrariacorruption:block/plant/leaves/small/maple*" },
+      "*": { "base": "terrariacorruption:block/plant/leaves/small/{wood}*" }
+    }
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "sidesolid": {
+    "all": false
+  },
+  "sideao": {
+    "all": true
+  },
+  "emitSideAo": {
+    "all": false
+  },
+  "snowCoverage": true,
+  "replaceable": 4000,
+  "lightAbsorption": 1,
+  "resistance": 0.5,
+  "collisionbox": null,
+  "drops": [
+    {
+      "type": "item",
+      "code": "treeseed-{wood}",
+      "quantityByType": {
+        "*-pine": {
+          "avg": 0.05,
+          "var": 0
+        },
+        "*-acacia": {
+          "avg": 0.05,
+          "var": 0
+        },
+        "*-larch": {
+          "avg": 0.01,
+          "var": 0
+        },
+        "*-crimsonkingmaple": {
+          "avg": 0.01,
+          "var": 0
+        },
+        "*-redwood": {
+          "avg": 0.002,
+          "var": 0
+        },
+        "*-ebony": {
+          "avg": 0.004,
+          "var": 0
+        },
+        "*-purpleheart": {
+          "avg": 0.004,
+          "var": 0
+        },
+        "*": {
+          "avg": 0.02,
+          "var": 0
+        }
+      }
+    },
+    {
+      "type": "item",
+      "code": "stick",
+      "quantity": {
+        "avg": 0.02,
+        "var": 0
+      }
+    }
+  ],
+  "sounds": {
+    "break": "game:block/plant",
+    "place": "game:block/plant",
+    "hit": "game:block/plant",
+    "walk": "game:walk/grass",
+    "inside": "game:walk/inside/leafy/bushrustle*"
+  },
+  "combustibleProps": {
+    "burnTemperature": 600,
+    "burnDuration": 10
+  },
+  "materialDensity": 300,
+  "heldTpIdleAnimation": "holdbothhandslarge",
+  "heldRightReadyAnimation": "heldblockready",
+  "heldTpUseAnimation": "twohandplaceblock",
+  "tpHandTransform": {
+    "translation": {
+      "x": -1.23,
+      "y": -0.91,
+      "z": -0.8
+    },
+    "rotation": {
+      "x": -2,
+      "y": 25,
+      "z": -78
+    },
+    "scale": 0.4
+  },
+  "guiTransform": {
+    "scale": 0.8
+  },
+  "frostable": true
+}

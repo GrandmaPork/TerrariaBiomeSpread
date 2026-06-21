@@ -1,0 +1,83 @@
+{
+  "code": "corruptforestfloor",
+  "class": "terrariacorruption.corruptforestfloor",
+  "variantgroups": [
+    {
+      "code": "grass",
+      "states": [ "0", "1", "2", "3", "4", "5", "6", "7" ]
+    }
+  ],
+  "behaviors": [ { "name": "MyceliumHost" } ],
+  "creativeinventory": {
+    "general": [ "*" ],
+    "terrain": [ "*" ]
+  },
+  "shape": { "base": "block/basic/cube" },
+  "drawtype": "TopSoil",
+  "renderpass": "TopSoil",
+  "blockmaterial": "Soil",
+  "textures": {
+    "up": { "base": "game:block/soil/forest/forestsoil*" },
+    "down": { "base": "game:block/soil/fertmedium" },
+    "all": { "base": "game:block/soil/forest/side" },
+    "snowed": { "base": "game:block/plant/grasscoverage/snow/normal" },
+    "specialSecondTextureByType": {
+      "*-0": { "base": "game:block/plant/grasscoverage/none" },
+      "*": { "base": "game:block/soil/forest/forestoverlay{grass}" }
+    }
+  },
+  "attributes": {
+    "mapColorCode": "forest",
+    "ignoreTintInventory": true,
+    "preventsDecay": true,
+    "handbook": { "exclude": true }
+  },
+  "texturesInventory": {
+    "all": { "base": "game:block/soil/forest/side" },
+    "up": {
+      "base": "game:block/soil/forest/forestsoil11",
+      "overlaysByType": {
+        "*-0": [],
+        "*": [ "terrariacorruption:block/soil/forest/inventory/top{grass}" ]
+      }
+    }
+  },
+  "climateColorMap": "corruptClimatePlantTint",
+  "seasonColorMap": "corruptSeasonalGrass",
+  "frostable": true,
+  "replaceable": 400,
+  "fertility": 120,
+  "resistance": 1.8,
+  "sounds": {
+    "place": "game:block/dirt",
+    "break": "game:block/dirt",
+    "hit": "game:block/dirt",
+    "walk": "game:walk/grass"
+  },
+  "drops": [
+    {
+      "type": "block",
+      "code": "soil-low-none",
+      "quantity": {
+        "avg": 1,
+        "var": 0
+      }
+    }
+  ],
+  "heldTpIdleAnimation": "holdbothhandslarge",
+  "heldRightReadyAnimation": "heldblockready",
+  "heldTpUseAnimation": "twohandplaceblock",
+  "tpHandTransform": {
+    "translation": {
+      "x": -1.23,
+      "y": -0.91,
+      "z": -0.8
+    },
+    "rotation": {
+      "x": -2,
+      "y": 25,
+      "z": -78
+    },
+    "scale": 0.4
+  }
+}

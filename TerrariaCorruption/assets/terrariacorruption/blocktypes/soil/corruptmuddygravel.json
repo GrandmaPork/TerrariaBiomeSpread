@@ -1,0 +1,31 @@
+{
+	"code": "corruptmuddygravel",
+	"behaviors": [{"name": "UnstableFalling", "properties": { "fallSound": "game:effect/rockslide", "dustIntensity": 0 }}],	
+	"creativeinventory": { "general": ["*"], "flora": ["*"], "terrain": ["*"] },
+	"shape": { "base": "game:block/basic/cube" },
+	"drawtype": "cube",
+	"blockmaterial": "Soil",
+	"textures": {
+		"all": {"base": "terrariacorruption:block/soil/muddygravel*"},
+	},
+	"attributes": {
+		"mapColorCode": "land",
+		"preventsDecay": true,
+		"isCorrupt": true
+	},
+	"replaceable": 400,
+	"fertility": 30,
+	"resistance": 2.2,
+	"sounds": {
+		"place": "game:block/dirt",
+		"break": "game:block/dirt",
+		"hit": "game:block/dirt",
+		"walk": "game:walk/grass"
+	},
+	"heldTpIdleAnimation": "holdbothhandslarge", "heldRightReadyAnimation": "heldblockready", "heldTpUseAnimation": "twohandplaceblock",
+	"tpHandTransform": {
+		"translation": { "x": -1.23, "y": -0.91, "z": -0.8 },
+		"rotation": { "x": -2, "y": 25, "z": -78 },
+		"scale": 0.4
+	}
+}

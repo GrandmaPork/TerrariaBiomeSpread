@@ -1,0 +1,73 @@
+{
+  "code": "corruptseaweed",
+  "class": "BlockSeaweed",
+  "variantgroups": [
+    {
+      "code": "part",
+      "states": [ "top", "section" ]
+    }
+  ],
+  "creativeinventory": {
+    "general": [ "*" ],
+    "aquatic": [ "*" ]
+  },
+  "shape": { "base": "game:block/aquatic/plant/seaweed" },
+  "drawtype": "JSONAndWater",
+  "renderpass": "liquid",
+  "blockmaterial": "plant",
+  "faceCullMode": "liquid",
+  "doNotRenderAtLod2": true,
+  "randomizeAxes": "xz",
+  "randomizeRotations": true,
+  "randomDrawOffset": true,
+  // Explicit listing of alternates to ensure that top and section alternate are in the same order
+  "textures": {
+    "weed": {
+      "base": "terrariacorruption:block/plant/aquatic/seaweed/{part}1",
+      "alternates": [ { "base": "terrariacorruption:block/plant/aquatic/seaweed/{part}2" } ]
+    }
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "vertexFlags": {
+    "windMode": "WaterPlant"
+  },
+  "sidesolid": {
+    "all": false
+  },
+  "climateColorMap": "climateWaterTint",
+  "replaceable": 3000,
+  "lightAbsorption": 2,
+  "resistance": 0.5,
+  "collisionbox": null,
+  "selectionbox": {
+    "x1": 0,
+    "y1": 0,
+    "z1": 0,
+    "x2": 1,
+    "y2": 1,
+    "z2": 1
+  },
+  "guiTransform": {
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.68,
+      "z": 0.5
+    }
+  },
+  "sounds": {
+    "place": "game:block/plant",
+    "break": "game:block/plant",
+    "hit": "game:block/plant",
+    "inside": "game:walk/water"
+  },
+  "rainPermeable": true,
+  "materialDensity": 200,
+  "drops": []
+}

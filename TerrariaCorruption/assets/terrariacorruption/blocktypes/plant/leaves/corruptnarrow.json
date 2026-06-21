@@ -1,0 +1,254 @@
+{
+  "code": "corruptleavesnarrow",
+  "class": "BlockLeavesNarrow",
+  "behaviorsByType": {
+    "*-grown-*": [
+      {
+        "name": "PushEventOnBlockBroken",
+        "properties": { "eventName": "testForDecay" }
+      }
+    ]
+  },
+  "attributes": {
+    "treeFellingGroupCodeByType": {
+      "*-grown-*": "{wood}"
+    },
+    "treeFellingGroupSpreadIndex": 0,
+    "preventsDecayByType": {
+      "*-grown-*": true
+    },
+    "handbook": {
+      "groupBy": [ "leaves-*", "leavesnarrow-*" ],
+      "isDuplicateByType": {
+        "*-1": true,
+        "*-2": true,
+        "*-3": true,
+        "*-4": true
+      }
+    },
+    "allowOverlays": false
+  },
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [ "grown", "placed" ]
+    },
+    {
+      "code": "wood",
+      "states": [ "cypress" ]
+    },
+    {
+      "code": "xz",
+      "states": [ "1", "2", "3", "4", "5" ]
+    }
+  ],
+  "creativeinventory": {
+    "general": [ "leavesnarrow-placed-*-5" ],
+    "flora": [ "leavesnarrow-placed-*" ]
+  },
+  "shapeByType": {
+    "*-1": {
+      "base": "game:block/plant/leaves/narrow1",
+      "rotateY": 10,
+      "alternates": [
+        { "rotateY": 70 },
+        { "rotateY": 130 },
+        { "rotateY": 190 },
+        { "rotateY": 250 },
+        { "rotateY": 310 }
+      ]
+    },
+    "*-2": {
+      "base": "game:block/plant/leaves/narrow2",
+      "rotateY": 10,
+      "alternates": [
+        { "rotateY": 70 },
+        { "rotateY": 130 },
+        { "rotateY": 190 },
+        { "rotateY": 250 },
+        { "rotateY": 310 }
+      ]
+    },
+    "*-3": {
+      "base": "game:block/plant/leaves/narrow3",
+      "rotateY": 10,
+      "alternates": [
+        { "rotateY": 70 },
+        { "rotateY": 130 },
+        { "rotateY": 190 },
+        { "rotateY": 250 },
+        { "rotateY": 310 }
+      ]
+    },
+    "*-4": {
+      "base": "game:block/plant/leaves/narrow4",
+      "rotateY": 10,
+      "alternates": [
+        { "rotateY": 70 },
+        { "rotateY": 130 },
+        { "rotateY": 190 },
+        { "rotateY": 250 },
+        { "rotateY": 310 }
+      ]
+    },
+    "*-5": {
+      "base": "game:block/plant/leaves/normal",
+      "rotateY": 10,
+      "alternates": [
+        { "rotateY": 70 },
+        { "rotateY": 130 },
+        { "rotateY": 190 },
+        { "rotateY": 250 },
+        { "rotateY": 310 }
+      ]
+    }
+  },
+  "lod0ShapeByType": {
+    "*-1": {
+      "base": "game:block/plant/leaves/narrow1-lod0",
+      "rotateY": 10,
+      "alternates": [
+        { "rotateY": 70 },
+        { "rotateY": 130 },
+        { "rotateY": 190 },
+        { "rotateY": 250 },
+        { "rotateY": 310 }
+      ]
+    },
+    "*-2": {
+      "base": "game:block/plant/leaves/narrow2-lod0",
+      "rotateY": 10,
+      "alternates": [
+        { "rotateY": 70 },
+        { "rotateY": 130 },
+        { "rotateY": 190 },
+        { "rotateY": 250 },
+        { "rotateY": 310 }
+      ]
+    },
+    "*-3": {
+      "base": "game:block/plant/leaves/narrow3-lod0",
+      "rotateY": 10,
+      "alternates": [
+        { "rotateY": 70 },
+        { "rotateY": 130 },
+        { "rotateY": 190 },
+        { "rotateY": 250 },
+        { "rotateY": 310 }
+      ]
+    },
+    "*-4": {
+      "base": "game:block/plant/leaves/narrow4-lod0",
+      "rotateY": 10,
+      "alternates": [
+        { "rotateY": 70 },
+        { "rotateY": 130 },
+        { "rotateY": 190 },
+        { "rotateY": 250 },
+        { "rotateY": 310 }
+      ]
+    },
+    "*-5": {
+      "base": "game:block/plant/leaves/normal-lod0",
+      "rotateY": 10,
+      "alternates": [
+        { "rotateY": 70 },
+        { "rotateY": 130 },
+        { "rotateY": 190 },
+        { "rotateY": 250 },
+        { "rotateY": 310 }
+      ]
+    }
+  },
+  "shapeInventoryByType": {
+    "*-1": { "base": "game:block/plant/leaves/narrow1-lod0" },
+    "*-2": { "base": "game:block/plant/leaves/narrow2-lod0" },
+    "*-3": { "base": "game:block/plant/leaves/narrow3-lod0" },
+    "*-4": { "base": "game:block/plant/leaves/narrow4-lod0" },
+    "*-5": { "base": "game:block/plant/leaves/normal-lod0" }
+  },
+  "renderpass": "OpaqueNoCull",
+  "blockmaterial": "Leaves",
+
+  "climateColorMap": "corruptClimateDarkerPlantTint",
+  "seasonColorMapByType": {
+    "*-cypress-*": "corruptSeasonalDarkerNeedles"
+  },
+  "vertexFlags": {
+    "zOffset": 4,
+    "windMode": "Leaves"
+  },
+  "textures": {
+    "smallleaves": { "base": "game:block/plant/leaves/large/greenspirecypress1*" },
+    "largeleaves": { "base": "game:block/plant/leaves/large/greenspirecypress1*" }
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "sidesolid": {
+    "all": false
+  },
+  "sideao": {
+    "all": true
+  },
+  "emitSideAo": {
+    "all": false
+  },
+  "snowCoverage": false,
+  "replaceable": 4000,
+  "lightAbsorption": 2,
+  "resistance": 0.5,
+  "collisionbox": null,
+  "drops": [
+    {
+      "type": "item",
+      "code": "treeseed-greenspirecypress",
+      "quantityByType": {
+        "*": {
+          "avg": 0.16,
+          "var": 0
+        }
+      }
+    },
+    {
+      "type": "item",
+      "code": "stick",
+      "quantity": {
+        "avg": 0.1,
+        "var": 0
+      }
+    }
+  ],
+  "sounds": {
+    "break": "game:block/plant",
+    "place": "game:block/plant",
+    "hit": "game:block/plant",
+    "walk": "game:walk/grass",
+    "inside": "game:walk/inside/leafy/bushrustle*"
+  },
+  "combustibleProps": {
+    "burnTemperature": 600,
+    "burnDuration": 10
+  },
+  "materialDensity": 300,
+  "heldTpIdleAnimation": "holdbothhandslarge",
+  "heldRightReadyAnimation": "heldblockready",
+  "heldTpUseAnimation": "twohandplaceblock",
+  "tpHandTransform": {
+    "translation": {
+      "x": -1.23,
+      "y": -0.91,
+      "z": -0.8
+    },
+    "rotation": {
+      "x": -2,
+      "y": 25,
+      "z": -78
+    },
+    "scale": 0.4
+  },
+  "guiTransform": {
+    "scale": 0.8
+  },
+  "frostable": true
+}
