@@ -5,6 +5,8 @@
 
 Currently this mod only adds a few spreading blocks for the corruption but I plan on making a fully functioning corruption biome with monsters and bosses included! Most items will not be added, instead I will be adding Vintage Story inspired metals and gear alongside it. I do plan on adding the same for Hallow and Crimson biomes when it is done. Since the player will need to have the biomes loaded for them to properly spread, I will incentivize being in the chunks and delay how soon you can begin purification. 
 
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/4ea6ff23-c298-4d77-86f0-0643ca8ba493" />
+
 # Inspiration
 
 The backgrounds of the evil biomes look beautiful and I'd like to represent them in world gen. The corruption will have worm tunnels and ravines stretching across a dying dull landscape. Worms will slowly tear across, eating through soil blocks, and stone that is exposed to air. 
