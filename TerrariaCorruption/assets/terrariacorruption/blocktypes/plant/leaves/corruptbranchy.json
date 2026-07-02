@@ -133,7 +133,7 @@
     "smallleavesByType": {
       "*-larch": { "base": "terrariacorruption:block/plant/leaves/small/pine*" },
       "*-redwood": { "base": "terrariacorruption:block/plant/leaves/small/pine*" },
-      "*-crimsonkingmaple": { "base": "terrariacorruption:block/plant/leaves/small/maple*" },
+      "*-crimsonkingmaple": { "base": "terrariacorruption:block/plant/leaves/small/maple" },
       "*": { "base": "terrariacorruption:block/plant/leaves/small/{wood}*" }
     },
     "branch": { "base": "terrariacorruption:block/plant/leaves/large/corruptbranch" }

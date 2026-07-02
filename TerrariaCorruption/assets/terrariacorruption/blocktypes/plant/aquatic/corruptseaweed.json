@@ -36,7 +36,7 @@
   "sidesolid": {
     "all": false
   },
-  "climateColorMap": "climateWaterTint",
+  "climateColorMap": "corruptClimateWaterTint",
   "replaceable": 3000,
   "lightAbsorption": 2,
   "resistance": 0.5,
