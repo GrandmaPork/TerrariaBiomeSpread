@@ -22,7 +22,7 @@
 			"shade": false,
 			"gradientShade": true,
 			"climateColorMap": "corruptClimatePlantTint",
-			"seasonColorMap": "corruptSeasonalGrass",
+			"seasonColorMap": "corruptSeasonalLarch",
 			"renderPass": 1,
 			"faces": {
 				"north": {
@@ -142,7 +142,7 @@
 					"shade": false,
 					"gradientShade": true,
 					"climateColorMap": "corruptClimatePlantTint",
-					"seasonColorMap": "corruptSeasonalGrass",
+					"seasonColorMap": "corruptSeasonalLarch",
 					"rotationOrigin": [ 8.0, 8.0, 8.0 ],
 					"rotationX": 0.57,
 					"rotationY": -67.5,
@@ -186,7 +186,7 @@
 					"shade": false,
 					"gradientShade": true,
 					"climateColorMap": "corruptClimatePlantTint",
-					"seasonColorMap": "corruptSeasonalGrass",
+					"seasonColorMap": "corruptSeasonalLarch",
 					"rotationOrigin": [ 8.0, 8.0, 8.0 ],
 					"rotationX": 0.21,
 					"rotationY": 22.5,

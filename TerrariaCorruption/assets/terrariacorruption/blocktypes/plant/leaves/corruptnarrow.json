@@ -172,7 +172,7 @@
 
   "climateColorMap": "corruptClimateDarkerPlantTint",
   "seasonColorMapByType": {
-    "*-cypress-*": "corruptSeasonalNeedles"
+    "*-cypress-*": "corruptSeasonalDarkerNeedles"
   },
   "vertexFlags": {
     "zOffset": 4,

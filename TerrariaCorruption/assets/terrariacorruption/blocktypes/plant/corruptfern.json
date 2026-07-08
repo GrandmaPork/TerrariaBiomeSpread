@@ -37,10 +37,10 @@
   "blockmaterial": "Plant",
   "climateColorMap": "corruptClimatePlantTint",
   "seasonColorMapByType": {
-    "*-cinnamonfern": "corruptSeasonalFern1",
-    "*-deerfern": "corruptSeasonalFern2",
-    "*-eaglefern": "corruptSeasonalFern1",
-    "*-hartstongue": "corruptSeasonalFern2"
+    "*-cinnamonfern": "corruptSeasonalCinnamonfern",
+    "*-deerfern": "corruptSeasonalDeerfern",
+    "*-eaglefern": "corruptSeasonalCinnamonfern",
+    "*-hartstongue": "corruptSeasonalDeerfern"
   },
   "sideopaque": {
     "all": false

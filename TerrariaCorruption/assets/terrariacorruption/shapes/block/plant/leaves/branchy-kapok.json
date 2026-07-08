@@ -12,8 +12,8 @@
 	},
 	"textures": {
 		"largeleaves": "game:block/plant/leaves/large/oak1",
-		"smallleaves": "terrariacorruption:block/plant/leaves/small/oak",
-		"branch": "terrariacorruption:block/plant/leaves/large/corruptbranch"
+		"smallleaves": "game:block/plant/leaves/small/oak1",
+		"branch": "game:block/plant/leaves/large/branch"
 	},
 	"elements": [
 		{

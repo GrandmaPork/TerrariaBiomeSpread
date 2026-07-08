@@ -15,7 +15,7 @@
   "renderpass": "OpaqueWaterPlant",
   "blockmaterial": "Plant",
   "climateColorMap": "corruptClimatePlantTint",
-  "seasonColorMap": "corruptTropicalKapok",
+  "seasonColorMap": "tropicalKapok",
   "sideopaque": {
     "all": false
   },
