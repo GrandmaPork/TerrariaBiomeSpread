@@ -42,8 +42,8 @@
       }
     }
   },
-  "climateColorMap": "corruptClimatePlantTint",
-  "seasonColorMap": "corruptSeasonalGrass",
+  "climateColorMap": "climateCorruptPlantTint",
+  "seasonColorMap": "seasonalCorruptGrass",
   "frostable": true,
   "replaceable": 400,
   "fertility": 120,

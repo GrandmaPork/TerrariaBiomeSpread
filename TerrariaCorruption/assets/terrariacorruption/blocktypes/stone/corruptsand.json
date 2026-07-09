@@ -1,5 +1,6 @@
 {
 	"code": "corruptsand",
+	"class": "terrariacorruption.corruptrock",
 	"behaviors": [
 		{
 			"name": "UnstableFalling",

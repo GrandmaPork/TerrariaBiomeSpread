@@ -35,12 +35,12 @@
   "randomizeAxes": "xz",
   "randomSizeAdjust": 0.1,
   "blockmaterial": "Plant",
-  "climateColorMap": "corruptClimatePlantTint",
+  "climateColorMap": "climateCorruptPlantTint",
   "seasonColorMapByType": {
-    "*-cinnamonfern": "corruptSeasonalFern1",
-    "*-deerfern": "corruptSeasonalFern2",
-    "*-eaglefern": "corruptSeasonalFern1",
-    "*-hartstongue": "corruptSeasonalFern2"
+    "*-cinnamonfern": "corruptSeasonalCinnamonfern",
+    "*-deerfern": "corruptSeasonalDeerfern",
+    "*-eaglefern": "corruptSeasonalCinnamonfern",
+    "*-hartstongue": "corruptSeasonalDeerfern"
   },
   "sideopaque": {
     "all": false
