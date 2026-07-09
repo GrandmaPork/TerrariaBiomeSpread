@@ -18,7 +18,7 @@
   "lod0shape": { "base": "game:block/plant/leaves/fallen" },
   "shape": { "base": "game:block/plant/leaves/fallen-lod1" },
   "shapeInventory": { "base": "game:block/plant/leaves/fallen" },
-  "seasonColorMap": "corruptSeasonalFoliage",
+  "seasonColorMap": "seasonalCorruptFoliage",
   "sidesolid": { "all": false },
   "sideopaque": { "all": false },
   "blockmaterial": "Leaves",

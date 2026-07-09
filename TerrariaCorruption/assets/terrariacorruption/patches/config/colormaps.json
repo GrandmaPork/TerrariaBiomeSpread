@@ -4,7 +4,7 @@
     "op": "add",
     "path": "/-",
     "value": {
-      "code": "corruptClimatePlantTint",
+      "code": "climateCorruptPlantTint",
       "texture": { "base": "terrariacorruption:environment/corruptplanttint" },
       "padding": 4,
       "loadIntoBlockTextureAtlas": true
@@ -15,7 +15,7 @@
     "op": "add",
     "path": "/-",
     "value": {
-      "code": "corruptClimateCrimsonKingTint",
+      "code": "climateCorruptCrimsonKingTint",
       "texture": { "base": "terrariacorruption:environment/corruptcrimsonkingmapletint" },
       "padding": 4,
       "loadIntoBlockTextureAtlas": true
@@ -26,7 +26,7 @@
     "op": "add",
     "path": "/-",
     "value": {
-      "code": "corruptClimateDarkerPlantTint",
+      "code": "climateCorruptDarkerPlantTint",
       "texture": { "base": "terrariacorruption:environment/corruptplanttintdarker" },
       "padding": 4,
       "loadIntoBlockTextureAtlas": true
@@ -37,7 +37,7 @@
     "op": "add",
     "path": "/-",
     "value": {
-      "code": "corruptClimateLighterPlantTint",
+      "code": "climateCorruptLighterPlantTint",
       "texture": { "base": "terrariacorruption:environment/corruptplanttintlighter" },
       "padding": 4,
       "loadIntoBlockTextureAtlas": true
@@ -59,7 +59,7 @@
     "op": "add",
     "path": "/-",
     "value": {
-      "code": "corruptSeasonalOak",
+      "code": "seasonalCorruptOak",
       "texture": { "base": "terrariacorruption:environment/seasons/corruptoaktint" },
       "loadIntoBlockTextureAtlas": true
     }
@@ -69,7 +69,7 @@
     "op": "add",
     "path": "/-",
     "value": {
-      "code": "corruptSeasonalLarch",
+      "code": "seasonalCorruptLarch",
       "texture": { "base": "terrariacorruption:environment/seasons/corruptlarchtint" },
       "loadIntoBlockTextureAtlas": true
     }
@@ -79,7 +79,7 @@
     "op": "add",
     "path": "/-",
     "value": {
-      "code": "corruptSeasonalBirch",
+      "code": "seasonalCorruptLarch",
       "texture": { "base": "terrariacorruption:environment/seasons/corruptbirchtint" },
       "loadIntoBlockTextureAtlas": true
     }
@@ -89,7 +89,7 @@
     "op": "add",
     "path": "/-",
     "value": {
-      "code": "corruptSeasonalDarkerNeedles",
+      "code": "seasonalCorruptDarkerNeedles",
       "texture": { "base": "terrariacorruption:environment/seasons/corruptneedletintdarker" },
       "loadIntoBlockTextureAtlas": true
     }
@@ -99,7 +99,7 @@
     "op": "add",
     "path": "/-",
     "value": {
-      "code": "corruptSeasonalFoliage",
+      "code": "seasonalCorruptFoliage",
       "texture": { "base": "terrariacorruption:environment/seasons/corruptfoliagetint" },
       "loadIntoBlockTextureAtlas": true
     }
@@ -109,7 +109,7 @@
     "op": "add",
     "path": "/-",
     "value": {
-      "code": "corruptSeasonalGrass",
+      "code": "seasonalCorruptGrass",
       "texture": { "base": "terrariacorruption:environment/seasons/corruptgrasstint" },
       "loadIntoBlockTextureAtlas": true
     }
@@ -119,7 +119,7 @@
     "op": "add",
     "path": "/-",
     "value": {
-      "code": "corruptSeasonalOlive",
+      "code": "seasonalCorruptOlive",
       "texture": { "base": "terrariacorruption:environment/seasons/corruptolivetint" },
       "loadIntoBlockTextureAtlas": true
     }
@@ -129,7 +129,7 @@
     "op": "add",
     "path": "/-",
     "value": {
-      "code": "corruptSeasonalTule",
+      "code": "seasonalCorruptTule",
       "texture": { "base": "terrariacorruption:environment/seasons/corrupttuletint" },
       "loadIntoBlockTextureAtlas": true
     }
@@ -139,7 +139,7 @@
     "op": "add",
     "path": "/-",
     "value": {
-      "code": "corruptSeasonalMoss",
+      "code": "seasonalCorruptMoss",
       "texture": { "base": "terrariacorruption:environment/seasons/corruptmosstint" },
       "loadIntoBlockTextureAtlas": true
     }

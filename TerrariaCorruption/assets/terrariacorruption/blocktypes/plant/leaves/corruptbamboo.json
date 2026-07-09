@@ -59,7 +59,7 @@
   "renderpass": "OpaqueNoCull",
   "faceCullMode": "CollapseMaterial",
   "blockmaterial": "Leaves",
-  "climateColorMap": "corruptClimatePlantTint",
+  "climateColorMap": "climateCorruptPlantTint",
   "vertexFlags": {
     "zOffset": 4,
     "windMode": "Leaves"

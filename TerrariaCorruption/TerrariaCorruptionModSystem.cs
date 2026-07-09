@@ -59,6 +59,7 @@ namespace TerrariaCorruption
         {
             Mod.Logger.Notification("Hello from terrariacorruption mod: " + api.Side);
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptsoil", typeof(Blocks.BlockCorruptSoil));
+            api.RegisterBlockClass(Mod.Info.ModID + ".corruptsoildeposit", typeof(Blocks.BlockCorruptSoilDeposit));
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptforestfloor", typeof(Blocks.BlockCorruptForestFloor));
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptrock", typeof(Blocks.BlockCorruptRock));
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptgravel", typeof(Blocks.BlockCorruptRock));
@@ -76,7 +77,7 @@ namespace TerrariaCorruption
         {
             Mod.Logger.Notification("Hello from terrariacorruption mod: " + api.Side);
             //api.Logger.Notification(api.World.ApplyColorMapOnRgba("climatePlantTint","seasonalGrass",0xFFFFFF,0, 0, 0).ToString());
-            //api.Logger.Notification(api.World.ApplyColorMapOnRgba("corruptClimatePlantTint", "CorruptSeasonalGrass", 0xFFFFFF, 0, 0, 0).ToString());
+            //api.Logger.Notification(api.World.ApplyColorMapOnRgba("climateCorruptPlantTint", "seasonalCorruptGrass", 0xFFFFFF, 0, 0, 0).ToString());
         }
         public override void StartServerSide(ICoreServerAPI api)
         {

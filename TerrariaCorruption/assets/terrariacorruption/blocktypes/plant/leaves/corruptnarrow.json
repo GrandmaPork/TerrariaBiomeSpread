@@ -170,9 +170,9 @@
   "renderpass": "OpaqueNoCull",
   "blockmaterial": "Leaves",
 
-  "climateColorMap": "corruptClimateDarkerPlantTint",
+  "climateColorMap": "climateCorruptDarkerPlantTint",
   "seasonColorMapByType": {
-    "*-cypress-*": "corruptSeasonalDarkerNeedles"
+    "*-cypress-*": "seasonalCorruptDarkerNeedles"
   },
   "vertexFlags": {
     "zOffset": 4,

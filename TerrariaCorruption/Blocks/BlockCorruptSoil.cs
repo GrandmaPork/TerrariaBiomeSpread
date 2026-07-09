@@ -373,7 +373,7 @@ namespace TerrariaCorruption.Blocks
                 }
                 capi.Logger.Notification($"Climate: {ClimateColorMap}, Season: {SeasonColorMap}");
                 return capi.World.ApplyColorMapOnRgba(ClimateColorMap, SeasonColorMap, capi.BlockTextureAtlas.GetRandomColor(subid, rndIndex), pos.X, pos.Y, pos.Z);
-                //return capi.World.ApplyColorMapOnRgba("corruptClimatePlantTint", "corruptSeasonalGrass", capi.BlockTextureAtlas.GetRandomColor(subid, rndIndex), pos.X, pos.Y, pos.Z);
+                //return capi.World.ApplyColorMapOnRgba("climateCorruptPlantTint", "seasonalCorruptGrass", capi.BlockTextureAtlas.GetRandomColor(subid, rndIndex), pos.X, pos.Y, pos.Z);
             }
 
             return base.GetRandomColor(capi, pos, facing, rndIndex);

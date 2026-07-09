@@ -21,7 +21,7 @@
 			"to": [ 16.0, 16.0, 16.0 ],
 			"shade": false,
 			"gradientShade": true,
-			"climateColorMap": "corruptClimatePlantTint",
+			"climateColorMap": "climateCorruptPlantTint",
 			"seasonColorMap": "corruptTropicalKapok",
 			"renderPass": 1,
 			"faces": {
@@ -143,7 +143,7 @@
 					"to": [ 24.0, 24.0, 8.0 ],
 					"shade": false,
 					"gradientShade": true,
-					"climateColorMap": "corruptClimatePlantTint",
+					"climateColorMap": "climateCorruptPlantTint",
 					"seasonColorMap": "corruptTropicalKapok",
 					"rotationOrigin": [ 8.0, 8.0, 8.0 ],
 					"rotationX": 0.57,

@@ -105,10 +105,10 @@
     "*": "MergeSnowLayer"
   },
   "climateColorMapByType": {
-    "*-free": "corruptClimatePlantTint"
+    "*-free": "climateCorruptPlantTint"
   },
   "seasonColorMapByType": {
-    "*-free": "corruptSeasonalGrass"
+    "*-free": "seasonalCorruptGrass"
   },
   "sideopaqueByType": {
     "*-free": { "all": false },

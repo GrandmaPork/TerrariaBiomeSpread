@@ -85,21 +85,21 @@
   "faceCullMode": "CollapseMaterial",
   "blockmaterial": "Leaves",
   "climateColorMapByType": {
-    "*-crimsonkingmaple": "corruptClimateCrimsonKingTint",
-    "*-redwood": "corruptClimateDarkerPlantTint",
-    "*": "corruptClimatePlantTint"
+    "*-crimsonkingmaple": "climateCorruptCrimsonKingTint",
+    "*-redwood": "climateCorruptDarkerPlantTint",
+    "*": "climateCorruptPlantTint"
   },
   "seasonColorMapByType": {
     "*-pine": "corruptSeasonalNeedles",
     "*-redwood": "corruptSeasonalNeedles",
-    "*-birch": "corruptSeasonalBirch",
-    "*-maple": "corruptSeasonalLarch",
-    "*-oak": "corruptSeasonalOak",
-    "*-walnut": "corruptSeasonalTule",
-    "*-larch": "corruptSeasonalLarch",
-    "*-crimsonkingmaple": "corruptSeasonalMoss",
+    "*-birch": "seasonalCorruptLarch",
+    "*-maple": "seasonalCorruptLarch",
+    "*-oak": "seasonalCorruptOak",
+    "*-walnut": "seasonalCorruptTule",
+    "*-larch": "seasonalCorruptLarch",
+    "*-crimsonkingmaple": "seasonalCorruptMoss",
     "*-kapok": "corruptTropicalKapok",
-    "*": "corruptSeasonalFoliage"
+    "*": "seasonalCorruptFoliage"
   },
   "vertexFlags": {
     "zOffset": 4,

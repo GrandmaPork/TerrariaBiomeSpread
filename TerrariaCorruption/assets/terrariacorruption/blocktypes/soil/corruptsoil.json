@@ -66,11 +66,11 @@
   },
   "climateColorMapByType": {
     "*-none": null,
-    "*": "corruptClimatePlantTint"
+    "*": "climateCorruptPlantTint"
   },
   "seasonColorMapByType": {
     "*-none": null,
-    "*": "corruptSeasonalGrass"
+    "*": "seasonalCorruptGrass"
   },
   "frostableByType": {
     "*-none": false,
