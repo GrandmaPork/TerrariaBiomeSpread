@@ -1,0 +1,51 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 24,
+	"textureHeight": 48,
+	"textureSizes": {
+	},
+	"textures": {
+		"leaves-sparse1": "game:block/plant/reeds/tule/sparse1",
+		"leaves-sparse2": "game:block/plant/reeds/tule/sparse2"
+	},
+	"elements": [
+		{
+			"name": "Face",
+			"from": [ -4.0, 0.0, 0.0 ], 
+			"to": [ 20.0, 52.0, 1.0 ], 
+			"shade": false,
+			"climateColorMap": "climateCorruptDarkerPlantTint",
+			"seasonColorMap": "seasonalCorruptTule",
+			"rotationOrigin": [ -1.59, 0.0, 4.0 ],
+			"rotationY": -45.0,
+			"faces": {
+				"north": {
+					"texture": "#leaves-sparse1",
+					"uv": [ 0.0, 0.0, 16.0, 32.0 ],
+					"windMode": [ 0, 4, 4, 0 ],
+					"windData": [ 0, 2, 2, 0 ]
+				}
+			}
+		},
+		{
+			"name": "Face2",
+			"from": [ -4.0, 0.0, 15.0 ], 
+			"to": [ 20.0, 52.0, 16.0 ], 
+			"shade": false,
+			"climateColorMap": "climateCorruptDarkerPlantTint",
+			"seasonColorMap": "seasonalCorruptTule",
+			"rotationOrigin": [ -1.59, 0.0, 12.0 ],
+			"rotationY": 45.0,
+			"faces": {
+				"south": {
+					"texture": "#leaves-sparse2",
+					"uv": [ 0.0, 0.0, 16.0, 32.0 ],
+					"windMode": [ 0, 0, 4, 4 ],
+					"windData": [ 0, 0, 2, 2 ]
+				}
+			}
+		}
+	]}

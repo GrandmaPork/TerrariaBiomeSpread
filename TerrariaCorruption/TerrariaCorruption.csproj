@@ -8,6 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="assets\terrariacorruption\patches\worldproperties\**" />
+    <Compile Remove="assets\terrariacorruption\textures\block\wood\**" />
+    <EmbeddedResource Remove="assets\terrariacorruption\patches\worldproperties\**" />
+    <EmbeddedResource Remove="assets\terrariacorruption\textures\block\wood\**" />
+    <None Remove="assets\terrariacorruption\patches\worldproperties\**" />
+    <None Remove="assets\terrariacorruption\textures\block\wood\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="VintagestoryAPI">
       <HintPath>$(VINTAGE_STORY)/VintagestoryAPI.dll</HintPath>
       <Private>false</Private>
@@ -63,7 +72,6 @@
 </ItemGroup>
 
 <ItemGroup>
-  <Folder Include="assets\terrariacorruption\patches\worldproperties\block\" />
   <Folder Include="assets\terrariacorruption\shapes\block\plant\fern\deerfern\flowerpot\" />
   <Folder Include="assets\terrariacorruption\shapes\block\plant\fern\eaglefern\flowerpot\" />
   <Folder Include="assets\terrariacorruption\shapes\block\plant\fern\hartstongue\flowerpot\" />
@@ -71,8 +79,6 @@
   <Folder Include="assets\terrariacorruption\textures\block\plant\aquatic\waterlily\" />
   <Folder Include="assets\terrariacorruption\textures\block\plant\aquatic\seaweed\" />
   <Folder Include="assets\terrariacorruption\textures\block\stone\sand\" />
-  <Folder Include="assets\terrariacorruption\textures\block\wood\bark\" />
-  <Folder Include="assets\terrariacorruption\textures\block\wood\debarked\" />
 </ItemGroup>
 
 <ItemGroup>

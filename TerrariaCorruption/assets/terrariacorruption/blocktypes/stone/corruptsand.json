@@ -13,7 +13,7 @@
 	],
 	"variantgroups": [
 		{
-			"loadFromProperties": "terrariacorruption:block/corruptrock",
+			"loadFromProperties": "block/rock",
 			"code": "corruptrock"
 		}
 	],
@@ -41,7 +41,7 @@
 	"drawtype": "json",
 	"blockmaterial": "Sand",
 	"textures": {
-		"all": { "base": "terrariacorruption:block/stone/sand/{corruptrock}" } //9340bf
+		"all": { "base": "block/stone/sand/{corruptrock}" } //9340bf
 	},
 	"attributes": {
 		"mapColorCode": "desert",

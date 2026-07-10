@@ -76,7 +76,7 @@ namespace TerrariaCorruption
         public override void StartClientSide(ICoreClientAPI api)
         {
             Mod.Logger.Notification("Hello from terrariacorruption mod: " + api.Side);
-            //api.Logger.Notification(api.World.ApplyColorMapOnRgba("climatePlantTint","seasonalGrass",0xFFFFFF,0, 0, 0).ToString());
+            //api.Logger.Notification(api.World.ApplyColorMapOnRgba("climateCorruptPlantTint","seasonalGrass",0xFFFFFF,0, 0, 0).ToString());
             //api.Logger.Notification(api.World.ApplyColorMapOnRgba("climateCorruptPlantTint", "seasonalCorruptGrass", 0xFFFFFF, 0, 0, 0).ToString());
         }
         public override void StartServerSide(ICoreServerAPI api)

@@ -34,6 +34,20 @@ namespace TerrariaCorruption.Blocks
 
             world.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
             world.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
+
+            while (targetBlock.Code.Path.StartsWith("log-"))
+            {
+                victim.Y += 1;
+                targetBlock = world.BlockAccessor.GetBlock(victim);
+                corruptPath = "corrupt" + targetBlock.Code.Path;
+                corruptCode = new AssetLocation("terrariacorruption", corruptPath);
+                corruptBlock = world.GetBlock(corruptCode);
+                if (corruptBlock == null) return;
+
+                world.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
+                world.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
+            }
+
         }
 
         public override bool ShouldReceiveServerGameTicks(IWorldAccessor world, BlockPos pos, Random offThreadRandom, out object extra)
