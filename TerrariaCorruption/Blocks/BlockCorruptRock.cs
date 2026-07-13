@@ -35,7 +35,7 @@ namespace TerrariaCorruption.Blocks
             world.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
             world.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
 
-            while (targetBlock.Code.Path.StartsWith("log-"))
+            while ((targetBlock.Code.Path.StartsWith("log-")) || (targetBlock.Code.Path.StartsWith("water-")) || targetBlock.Code.Path.StartsWith("aquatic-") || targetBlock.Code.Path.StartsWith("aquaticplant-"))
             {
                 victim.Y += 1;
                 targetBlock = world.BlockAccessor.GetBlock(victim);

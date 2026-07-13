@@ -1,0 +1,25 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"base": "game:block/plant/waterlily/lily1"
+	},
+	"elements": [
+		{
+			"name": "Cube",
+			"from": [ 0.0, -1.5, 0.0 ], 
+			"to": [ 16.0, -1.5, 16.0 ], 
+			"climateColorMap": "climateCorruptPlantTint",
+			"seasonColorMap": "seasonalCorruptFoliage",
+			"faces": {
+				"up": { "texture": "#base", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+
+			}
+		}
+	]}

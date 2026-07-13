@@ -17,7 +17,7 @@
         "shape": { "base": "game:block/plant/fern/{type}/flowerpot/var*" }
       },
       "largeContainer": {
-        "shape": { "base": "terrariacorruption:block/plant/fern/{type}/planter/var*" }
+        "shape": { "base": "block/plant/fern/{type}/planter/var*" }
       }
     },
     "allowOverlays": false,
@@ -29,7 +29,7 @@
   },
   "renderpass": "OpaqueNoCull",
   "drawtype": "JSON",
-  "shape": { "base": "terrariacorruption:block/plant/fern/{type}/var*" },
+  "shape": { "base": "block/plant/fern/{type}/var*" },
   "randomDrawOffset": true,
   "randomizeRotations": true,
   "randomizeAxes": "xz",
@@ -37,10 +37,10 @@
   "blockmaterial": "Plant",
   "climateColorMap": "climateCorruptPlantTint",
   "seasonColorMapByType": {
-    "*-cinnamonfern": "corruptSeasonalCinnamonfern",
-    "*-deerfern": "corruptSeasonalDeerfern",
-    "*-eaglefern": "corruptSeasonalCinnamonfern",
-    "*-hartstongue": "corruptSeasonalDeerfern"
+    "*-cinnamonfern": "seasonalCorruptCinnamonfern",
+    "*-deerfern": "seasonalCorruptDeerfern",
+    "*-eaglefern": "seasonalCorruptCinnamonfern",
+    "*-hartstongue": "seasonalCorruptDeerfern"
   },
   "sideopaque": {
     "all": false

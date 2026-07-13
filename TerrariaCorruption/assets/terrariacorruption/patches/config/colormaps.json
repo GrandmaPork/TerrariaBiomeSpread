@@ -37,8 +37,8 @@
     "op": "add",
     "path": "/-",
     "value": {
-      "code": "climateCorruptNeedleTint",
-      "texture": { "base": "terrariacorruption:environment/seasons/corruptneedletint" },
+      "code": "climateCorruptWaterTint",
+      "texture": { "base": "terrariacorruption:environment/corruptwatertint" },
       "padding": 4,
       "loadIntoBlockTextureAtlas": true
     }
@@ -51,6 +51,16 @@
       "code": "climateCorruptCrimsonKingTint",
       "texture": { "base": "terrariacorruption:environment/corruptcrimsonkingmapletint" },
       "padding": 4,
+      "loadIntoBlockTextureAtlas": true
+    }
+  },
+  {
+    "file": "game:config/colormaps.json",
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "seasonalCorruptNeedles",
+      "texture": { "base": "terrariacorruption:environment/seasons/corruptneedletint" },
       "loadIntoBlockTextureAtlas": true
     }
   },
@@ -110,8 +120,8 @@
     "op": "add",
     "path": "/-",
     "value": {
-      "code": "seasonalCorruptTule",
-      "texture": { "base": "terrariacorruption:environment/seasons/corrupttuletint" },
+      "code": "seasonalCorruptMoss",
+      "texture": { "base": "terrariacorruption:environment/seasons/corruptmosstint" },
       "loadIntoBlockTextureAtlas": true
     }
   },
@@ -120,8 +130,18 @@
     "op": "add",
     "path": "/-",
     "value": {
-      "code": "seasonalCorruptMoss",
-      "texture": { "base": "terrariacorruption:environment/seasons/corruptmosstint" },
+      "code": "seasonalCorruptCinnamonfern",
+      "texture": { "base": "terrariacorruption:environment/seasons/fern/corruptcinnamonfern" },
+      "loadIntoBlockTextureAtlas": true
+    }
+  },
+  {
+    "file": "game:config/colormaps.json",
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "seasonalCorruptDeerfern",
+      "texture": { "base": "terrariacorruption:environment/seasons/fern/corruptdeerfern" },
       "loadIntoBlockTextureAtlas": true
     }
   }

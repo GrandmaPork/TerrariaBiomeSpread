@@ -1,0 +1,100 @@
+{
+  "code": "corruptaquaticplant",
+  "class": "BlockWaterPlant",
+  "handbook": { "exclude": true },
+  "behaviors": [ { "name": "Unstable" } ],
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [ "bladderwrack", "irishmoss" ]
+    }
+  ],
+  "creativeinventory": {
+    "general": [ "*" ],
+    "aquatic": [ "*" ]
+  },
+  "shape": { "base": "block/aquatic/plant/bladderwrack*" },
+  "randomizeRotations": true,
+  "randomDrawOffset": true,
+  "texturesByType": {
+    "*-bladderwrack": {
+      "bladderwrackEW": { "base": "block/plant/aquatic/bladderwrackEW" },
+      "bladderwrackNS": { "base": "block/plant/aquatic/bladderwrackNS" },
+      "bladderwrackH": { "base": "block/plant/aquatic/bladderwrackH" }
+    },
+    "*": {
+      "bladderwrackEW": { "base": "block/plant/aquatic/irishmossEW" },
+      "bladderwrackNS": { "base": "block/plant/aquatic/irishmossNS" },
+      "bladderwrackH": { "base": "block/plant/aquatic/irishmossH" }
+    }
+  },
+  "drawtype": "JSONAndWater",
+  "renderpass": "liquid",
+  "blockmaterial": "Plant",
+  "faceCullMode": "liquid",
+  "doNotRenderAtLod2": true,
+  "vertexFlags": {
+    "windMode": "WaterPlant"
+  },
+  "sideopaque": { "all": false },
+  "sidesolid": { "all": false },
+  "replaceable": 3000,
+  "lightAbsorption": 0,
+  "resistance": 0.5,
+  "collisionbox": null,
+  "sounds": {
+    "place": "game:block/plant",
+    "break": "game:block/plant",
+    "hit": "game:block/plant"
+  },
+  "materialDensity": 1100,
+  "selectionboxByType": {
+    "*": {
+      "x1": 0.125,
+      "y1": 0,
+      "z1": 0.125,
+      "x2": 0.875,
+      "y2": 0.25,
+      "z2": 0.875
+    }
+  },
+  "guitransformByType": {
+    "*": {
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0.6,
+        "z": 0.5
+      }
+    }
+  },
+  "tpHandTransformByType": {
+    "*": {
+      "translation": {
+        "x": -1,
+        "y": -0.1,
+        "z": -1
+      },
+      "rotation": {
+        "x": 71,
+        "y": 0,
+        "z": -84
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0.1,
+        "z": 0.5
+      },
+      "scale": 0.48
+    }
+  },
+  "groundTransformByType": {
+    "*": {
+      "scale": 2.64
+    }
+  }
+}

@@ -1,0 +1,513 @@
+{
+  "code": "corruptrapidwater",
+  // BlockWaterfall and BlockWaterflowing merely contain some extra code for particle spawning, BlockWater contains code for extra checks on ambient sounds
+  "classByType": {
+    "rapidwater-d-*": "BlockWaterfall",
+    "rapidwater-still-*": "BlockWater",
+    "*": "BlockWaterflowing"
+  },
+  "behaviors": [
+    {
+      "name": "FiniteSpreadingLiquid",
+      "properties": {
+        "spreadDelay": 50,
+        "liquidCollisionSound": "sizzle",
+        "sourceReplacementCode": "corruptrock-obsidian",
+        "flowingReplacementCode": "corruptrock-basalt",
+        "collidesWith": "lava",
+        "multiplySpread": false
+      }
+    }
+  ],
+  "attributes": {
+    "isCorrupt":  true,
+    "smothersFire": true,
+    "flowSpeed": 2,
+    "pushVectorByType": {
+      "rapidwater-n-*": {
+        "x": 0,
+        "y": 0,
+        "z": -0.004
+      },
+      "rapidwater-ne-*": {
+        "x": 0.004,
+        "y": 0,
+        "z": -0.004
+      },
+      "rapidwater-e-*": {
+        "x": 0.004,
+        "y": 0,
+        "z": 0
+      },
+      "rapidwater-se-*": {
+        "x": 0.004,
+        "y": 0,
+        "z": 0.004
+      },
+      "rapidwater-s-*": {
+        "x": 0,
+        "y": 0,
+        "z": 0.004
+      },
+      "rapidwater-sw-*": {
+        "x": -0.004,
+        "y": 0,
+        "z": 0.004
+      },
+      "rapidwater-w-*": {
+        "x": -0.004,
+        "y": 0,
+        "z": 0
+      },
+      "rapidwater-nw-*": {
+        "x": -0.004,
+        "y": 0,
+        "z": -0.004
+      },
+      "rapidwater-d-*": {
+        "x": 0,
+        "y": -0.006,
+        "z": 0
+      }
+    },
+    "waterTightContainerProps": {
+      "containable": true,
+      "itemsPerLitre": 0.001,
+      "whenFilled": {
+        "stack": {
+          "type": "item",
+          "code": "waterportion"
+        }
+      }
+    }
+  },
+  "shape": { "base": "game:block/basic/cube" },
+  "variantgroups": [
+    {
+      "code": "flow",
+      "states": [ "n", "ne", "e", "se", "s", "sw", "w", "nw", "d", "still" ]
+    },
+    {
+      "code": "height",
+      "states": [ "1", "2", "3", "4", "5", "6", "7" ]
+    }
+  ],
+  "drawtype": "liquid",
+  "renderpass": "liquid",
+  "matterstate": "liquid",
+  "blockmaterial": "water",
+  "faceCullMode": "liquid",
+  "liquidCode": "water",
+  "snowCoverage": false,
+  "materialdensity": 1000,
+  "creativeinventory": {
+    "general": [ "rapidwater-still-7" ],
+    "terrain": [ "rapidwater-still-7" ]
+  },
+  "replaceable": 9500,
+  "lightAbsorption": 1,
+  "climateColorMap": "climateCorruptWaterTint",
+  "drops": [],
+  "liquidLevelByType": {
+    "*-1": 1,
+    "*-2": 2,
+    "*-3": 3,
+    "*-4": 4,
+    "*-5": 5,
+    "*-6": 6,
+    "*-7": 7
+  },
+  "textures": {
+    "all": { "base": "game:block/liquid/rapidwater" },
+    "specialSecondTexture": { "base": "game:block/liquid/rapidwater2" }
+  },
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "collisionbox": null,
+  "selectionbox": null,
+  "soundsByType": {
+    "rapidwater-still-*": {
+      "place": "game:block/water",
+      "inside": "game:walk/water",
+      "ambient": "game:environment/waterwaves",
+      "ambientBlockCount": 50
+    },
+    "rapidwater-d-*": {
+      "place": "game:block/water",
+      "inside": "game:walk/water",
+      "ambient": "game:environment/waterfall"
+    },
+    "*": {
+      "place": "game:block/water",
+      "inside": "game:walk/water",
+      "ambient": "game:environment/rapids"
+    }
+  },
+  "particlePropertiesByType": {
+    "rapidwater-still-*": [],
+    "rapidwater-d-*": [
+      {
+        // North side
+        "hsvaColor": [
+          {
+            "avg": 110,
+            "var": 0
+          },
+          {
+            "avg": 80,
+            "var": 40
+          },
+          {
+            "avg": 210,
+            "var": 30
+          },
+          {
+            "avg": 150,
+            "var": 25
+          }
+        ],
+        "opacityEvolve": {
+          "transform": "quadratic",
+          "factor": -16
+        },
+        "gravityEffect": {
+          "avg": 1,
+          "var": 0
+        },
+        "posOffset": [
+          {
+            "avg": -0.1,
+            "var": 0.5
+          },
+          {
+            "avg": 0.8,
+            "var": 0.2
+          },
+          {
+            "avg": -0.55,
+            "var": 0.05
+          }
+        ],
+        "velocity": [
+          {
+            "avg": 0,
+            "var": 0.1
+          },
+          {
+            "avg": 0,
+            "var": 0
+          },
+          {
+            "avg": 0,
+            "var": 0.1
+          }
+        ],
+        "quantity": { "avg": 0.5 },
+        "lifeLength": { "avg": 0.33 },
+        "size": {
+          "avg": 0.4,
+          "var": 0.05
+        },
+        "sizeEvolve": {
+          "transform": "linear",
+          "factor": 0.7
+        },
+        "particleModel": "Quad"
+      },
+      {
+        // East side
+        "hsvaColor": [
+          {
+            "avg": 110,
+            "var": 0
+          },
+          {
+            "avg": 80,
+            "var": 40
+          },
+          {
+            "avg": 210,
+            "var": 30
+          },
+          {
+            "avg": 150,
+            "var": 25
+          }
+        ],
+        "opacityEvolve": {
+          "transform": "quadratic",
+          "factor": -16
+        },
+        "gravityEffect": {
+          "avg": 1,
+          "var": 0
+        },
+        "posOffset": [
+          {
+            "avg": 0.55,
+            "var": 0.05
+          },
+          {
+            "avg": 0.8,
+            "var": 0.2
+          },
+          {
+            "avg": 0,
+            "var": 0.5
+          }
+        ],
+        "velocity": [
+          {
+            "avg": 0,
+            "var": 0.1
+          },
+          {
+            "avg": 0,
+            "var": 0
+          },
+          {
+            "avg": 0,
+            "var": 0.1
+          }
+        ],
+        "quantity": { "avg": 0.5 },
+        "lifeLength": { "avg": 0.33 },
+        "size": {
+          "avg": 0.4,
+          "var": 0.05
+        },
+        "sizeEvolve": {
+          "transform": "linear",
+          "factor": 0.7
+        },
+        "particleModel": "Quad"
+      },
+      {
+        // South side
+        "hsvaColor": [
+          {
+            "avg": 110,
+            "var": 0
+          },
+          {
+            "avg": 80,
+            "var": 40
+          },
+          {
+            "avg": 210,
+            "var": 30
+          },
+          {
+            "avg": 150,
+            "var": 25
+          }
+        ],
+        "opacityEvolve": {
+          "transform": "quadratic",
+          "factor": -16
+        },
+        "gravityEffect": {
+          "avg": 1,
+          "var": 0
+        },
+        "posOffset": [
+          {
+            "avg": 0,
+            "var": 0.5
+          },
+          {
+            "avg": 0.8,
+            "var": 0.2
+          },
+          {
+            "avg": 0.55,
+            "var": 0.05
+          }
+        ],
+        "velocity": [
+          {
+            "avg": 0,
+            "var": 0.1
+          },
+          {
+            "avg": 0,
+            "var": 0
+          },
+          {
+            "avg": 0,
+            "var": 0.1
+          }
+        ],
+        "quantity": { "avg": 0.5 },
+        "lifeLength": { "avg": 0.33 },
+        "size": {
+          "avg": 0.4,
+          "var": 0.05
+        },
+        "sizeEvolve": {
+          "transform": "linear",
+          "factor": 0.7
+        },
+        "particleModel": "Quad"
+      },
+      {
+        // West side
+        "hsvaColor": [
+          {
+            "avg": 110,
+            "var": 0
+          },
+          {
+            "avg": 80,
+            "var": 40
+          },
+          {
+            "avg": 210,
+            "var": 30
+          },
+          {
+            "avg": 150,
+            "var": 25
+          }
+        ],
+        "opacityEvolve": {
+          "transform": "quadratic",
+          "factor": -16
+        },
+        "gravityEffect": {
+          "avg": 1,
+          "var": 0
+        },
+        "posOffset": [
+          {
+            "avg": -0.55,
+            "var": 0.05
+          },
+          {
+            "avg": 0.8,
+            "var": 0.2
+          },
+          {
+            "avg": 0,
+            "var": 0.5
+          }
+        ],
+        "velocity": [
+          {
+            "avg": 0,
+            "var": 0.1
+          },
+          {
+            "avg": 0,
+            "var": 0
+          },
+          {
+            "avg": 0,
+            "var": 0.1
+          }
+        ],
+        "quantity": { "avg": 0.5 },
+        "lifeLength": { "avg": 0.33 },
+        "size": {
+          "avg": 0.4,
+          "var": 0.05
+        },
+        "sizeEvolve": {
+          "transform": "linear",
+          "factor": 0.7
+        },
+        "particleModel": "Quad"
+      }
+    ],
+    "*": [
+      {
+        // Up side
+        "hsvaColor": [
+          {
+            "avg": 110,
+            "var": 0
+          },
+          {
+            "avg": 80,
+            "var": 40
+          },
+          {
+            "avg": 210,
+            "var": 30
+          },
+          {
+            "avg": 150,
+            "var": 25
+          }
+        ],
+        "opacityEvolve": {
+          "transform": "quadratic",
+          "factor": -16
+        },
+        "gravityEffect": {
+          "avg": 0.2,
+          "var": 0
+        },
+        "posOffset": [
+          {
+            "avg": 0.5,
+            "var": 0.5
+          },
+          {
+            "avg": 0.7,
+            "var": 0.2
+          },
+          {
+            "avg": 0.5,
+            "var": 0.5
+          }
+        ],
+        "velocity": [
+          {
+            "avg": 0,
+            "var": 1
+          },
+          {
+            "avg": 0,
+            "var": 0
+          },
+          {
+            "avg": 0,
+            "var": 1
+          }
+        ],
+        "quantity": { "avg": 6 },
+        "lifeLength": { "avg": 0.33 },
+        "size": {
+          "avg": 0.1,
+          "var": 0.05
+        },
+        "sizeEvolve": {
+          "transform": "linear",
+          "factor": 0.6
+        },
+        "particleModel": "Quad"
+      }
+    ]
+  },
+  "heldTpIdleAnimation": "holdbothhandslarge",
+  "heldRightReadyAnimation": "heldblockready",
+  "heldTpUseAnimation": "twohandplaceblock",
+  "tpHandTransform": {
+    "translation": {
+      "x": -1.23,
+      "y": -0.91,
+      "z": -0.8
+    },
+    "rotation": {
+      "x": -2,
+      "y": 25,
+      "z": -78
+    },
+    "scale": 0.4
+  }
+}
