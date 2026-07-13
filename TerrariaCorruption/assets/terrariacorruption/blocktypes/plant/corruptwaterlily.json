@@ -6,8 +6,8 @@
     "flora": [ "*" ]
   },
   "shape": {
-    "base": "game:block/plant/flower/lily",
-    "alternates": [ { "base": "game:block/plant/flower/lily-flowering1" } ]
+    "base": "block/plant/flower/lily",
+    "alternates": [ { "base": "block/plant/flower/lily-flowering1" } ]
   },
   "renderpass": "OpaqueWaterPlant",
   "blockmaterial": "Plant",

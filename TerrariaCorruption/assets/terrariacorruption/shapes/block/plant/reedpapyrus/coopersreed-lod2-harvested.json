@@ -1,0 +1,54 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 48,
+	"textureHeight": 48,
+	"textureSizes": {
+		"foliage1": [24,48],
+		"foliage2": [24,48]
+	},
+	"textures": {
+		"foliage1": "game:block/plant/reeds/foliage1",
+		"foliage2": "game:block/plant/reeds/foliage2"
+	},
+	"elements": [
+		{
+			"name": "Face",
+			"from": [ 0.0, 0.0, 0.0 ], 
+			"to": [ 22.6, 45.2, 1.0 ], 
+			"shade": false,
+			"climateColorMap": "climateCorruptPlantTint",
+			"seasonColorMap": "seasonalCorruptFoliage",
+			"rotationOrigin": [ 0.0, 0.0, 0.0 ],
+			"rotationY": -45.0,
+			"faces": {
+				"north": { "texture": "#foliage1", "uv": [ 0.0, 0.0, 16.0, 32.0 ], "windMode": [0,2,2,0], "windData": [0,2,2,0] },
+				"east": { "texture": "#null", "uv": [ 0.0, 0.0, 1.0, 45.0 ], "enabled": false },
+				"south": { "texture": "#null", "uv": [ 0.0, 0.0, 22.5, 45.0 ], "enabled": false },
+				"west": { "texture": "#null", "uv": [ 0.0, 0.0, 1.0, 45.0 ], "enabled": false },
+				"up": { "texture": "#null", "uv": [ 0.0, 0.0, 22.5, 1.0 ], "enabled": false },
+				"down": { "texture": "#null", "uv": [ 0.0, 0.0, 22.5, 1.0 ], "enabled": false }
+			}
+		},
+		{
+			"name": "Face2",
+			"from": [ 0.0, 0.0, 15.0 ], 
+			"to": [ 22.6, 45.2, 16.0 ], 
+			"shade": false,
+			"climateColorMap": "climateCorruptPlantTint",
+			"seasonColorMap": "seasonalCorruptFoliage",
+			"rotationOrigin": [ 0.0, 0.0, 16.0 ],
+			"rotationY": 45.0,
+			"faces": {
+				"north": { "texture": "#null", "uv": [ 0.0, 0.0, 22.5, 45.0 ], "enabled": false },
+				"east": { "texture": "#null", "uv": [ 0.0, 0.0, 1.0, 45.0 ], "enabled": false },
+				"south": { "texture": "#foliage2", "uv": [ 0.0, 0.0, 16.0, 32.0 ], "windMode": [0,0,2,2], "windData": [0,0,2,2] },
+				"west": { "texture": "#null", "uv": [ 0.0, 0.0, 1.0, 45.0 ], "enabled": false },
+				"up": { "texture": "#null", "uv": [ 0.0, 0.0, 22.5, 1.0 ], "enabled": false },
+				"down": { "texture": "#null", "uv": [ 0.0, 0.0, 22.5, 1.0 ], "enabled": false }
+
+			}
+		}
+	]}

@@ -1,0 +1,185 @@
+{
+	"editor": {
+		"collapsedPaths": "Root/plant1,Root/origin/plant1,Root/origin/plant3",
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"watercrowfoot-stem": "block/plant/aquatic/watercrowfoot-stem"
+	},
+	"elements": [
+		{
+			"name": "origin",
+			"from": [ 8.0, 0.0, 8.0 ],
+			"to": [ 8.0, 0.0, 8.0 ],
+			"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+			"shade": false,  "faces": {
+			},
+			"children": [
+				{
+					"name": "NS1",
+					"from": [ 0.0, -2.0, -8.0 ],
+					"to": [ 0.0, 6.0, 8.0 ],
+					
+					"rotationOrigin": [ 0.0, -2.0, 0.0 ],
+					"shade": false,  "faces": {
+						"west": { "texture": "#watercrowfoot-stem", "uv": [ 0.0, 0.0, 16.0, 8.0 ], "windMode": [-1,-1,-1,-1], "windData": [0,0,1,1] }
+					},
+					"children": [
+						{
+							"name": "strand6",
+							"from": [ 0.0, 8.0, 12.0 ],
+							"to": [ 0.0, 16.0, 16.0 ],
+							
+							
+							"rotationOrigin": [ 0.0, 8.0, 12.0 ],
+							"shade": false,  "faces": {
+								"west": { "texture": "#watercrowfoot-stem", "uv": [ 0.0, 0.0, 4.0, 8.0 ], "windMode": [-1,-1,-1,-1], "windData": [0,0,1,1] }
+							}
+						}
+					]
+				},
+				{
+					"name": "NS2",
+					"from": [ -4.0, -2.0, -8.0 ],
+					"to": [ -4.0, 6.0, 8.0 ],
+					
+					"rotationOrigin": [ -4.0, -2.0, 0.0 ],
+					"shade": false,  "faces": {
+						"west": { "texture": "#watercrowfoot-stem", "uv": [ 0.0, 0.0, 16.0, 8.0 ] }
+					},
+					"children": [
+						{
+							"name": "strand7",
+							"from": [ 0.0, 8.0, 4.0 ],
+							"to": [ 0.0, 12.0, 8.0 ],
+							
+							
+							"rotationOrigin": [ 0.0, 8.0, 4.0 ],
+							"shade": false,  "faces": {
+								"west": { "texture": "#watercrowfoot-stem", "uv": [ 0.0, 0.0, 4.0, 4.0 ], "windMode": [-1,-1,-1,-1], "windData": [0,0,1,1] }
+							}
+						}
+					]
+				},
+				{
+					"name": "NS3",
+					"from": [ 4.0, -2.0, -8.0 ],
+					"to": [ 4.0, 6.0, 8.0 ],
+					
+					"rotationOrigin": [ 4.0, -2.0, 0.0 ],
+					"shade": false,  "faces": {
+						"west": { "texture": "#watercrowfoot-stem", "uv": [ 0.0, 0.0, 16.0, 8.0 ] }
+					},
+					"children": [
+						{
+							"name": "strand8",
+							"from": [ 0.0, 8.0, 12.0 ],
+							"to": [ 0.0, 12.0, 16.0 ],
+							
+							
+							"rotationOrigin": [ 0.0, 8.0, 12.0 ],
+							"shade": false,  "faces": {
+								"west": { "texture": "#watercrowfoot-stem", "uv": [ 0.0, 0.0, 4.0, 4.0 ], "windMode": [-1,-1,-1,-1], "windData": [0,0,1,1] }
+							}
+						}
+					]
+				},
+				{
+					"name": "EW1",
+					"from": [ -8.0, -2.0, 0.0 ],
+					"to": [ 8.0, 6.0, 0.0 ],
+					
+					"rotationOrigin": [ 0.0, -2.0, 0.0 ],
+					"shade": false,  "faces": {
+						"north": { "texture": "#watercrowfoot-stem", "uv": [ 0.0, 0.0, 16.0, 8.0 ] }
+					},
+					"children": [
+						{
+							"name": "strand3",
+							"from": [ 4.0, 8.0, 0.0 ],
+							"to": [ 8.0, 10.0, 0.0 ],
+							
+							
+							"rotationOrigin": [ 12.0, 8.0, 0.0 ],
+							"shade": false,  "faces": {
+								"north": { "texture": "#watercrowfoot-stem", "uv": [ 0.0, 0.0, 4.0, 2.0 ] }
+							}
+						},
+						{
+							"name": "strand4",
+							"from": [ 12.0, 8.0, 0.0 ],
+							"to": [ 16.0, 17.0, 0.0 ],
+							
+							
+							"rotationOrigin": [ 20.0, 8.0, 0.0 ],
+							"shade": false,  "faces": {
+								"north": { "texture": "#watercrowfoot-stem", "uv": [ 0.0, 0.0, 4.0, 9.0 ] }
+							}
+						}
+					]
+				},
+				{
+					"name": "EW2",
+					"from": [ -8.0, -2.0, 4.0 ],
+					"to": [ 8.0, 6.0, 4.0 ],
+					
+					"rotationOrigin": [ 0.0, -2.0, 4.0 ],
+					"shade": false,  "faces": {
+						"north": { "texture": "#watercrowfoot-stem", "uv": [ 0.0, 0.0, 16.0, 8.0 ] }
+					},
+					"children": [
+						{
+							"name": "strand5",
+							"from": [ 0.0, 8.0, 0.0 ],
+							"to": [ 4.0, 14.0, 0.0 ],
+							
+							
+							"rotationOrigin": [ 8.0, 8.0, 0.0 ],
+							"shade": false,  "faces": {
+								"north": { "texture": "#watercrowfoot-stem", "uv": [ 0.0, 0.0, 4.0, 6.0 ] }
+							}
+						}
+					]
+				},
+				{
+					"name": "EW3",
+					"from": [ -8.0, -2.0, -4.0 ],
+					"to": [ 8.0, 6.0, -4.0 ],
+					
+					"rotationOrigin": [ 0.0, -2.0, -4.0 ],
+					"shade": false,  "faces": {
+						"north": { "texture": "#watercrowfoot-stem", "uv": [ 0.0, 0.0, 16.0, 8.0 ] }
+					},
+					"children": [
+						{
+							"name": "strand1",
+							"from": [ 0.0, 8.0, 0.0 ],
+							"to": [ 4.0, 16.0, 0.0 ],
+							
+							
+							"rotationOrigin": [ 8.0, 8.0, 0.0 ],
+							"shade": false,  "faces": {
+								"north": { "texture": "#watercrowfoot-stem", "uv": [ 0.0, 0.0, 4.0, 8.0 ] }
+							}
+						},
+						{
+							"name": "strand2",
+							"from": [ 8.0, 8.0, 0.0 ],
+							"to": [ 12.0, 14.0, 0.0 ],
+							
+							
+							"rotationOrigin": [ 16.0, 8.0, 0.0 ],
+							"shade": false,  "faces": {
+								"north": { "texture": "#watercrowfoot-stem", "uv": [ 0.0, 0.0, 4.0, 6.0 ] }
+							}
+						}
+					]
+				}
+			]
+		}
+	]}

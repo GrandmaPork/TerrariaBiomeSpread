@@ -38,7 +38,7 @@
       "base": "game:block/soil/forest/forestsoil11",
       "overlaysByType": {
         "*-0": [],
-        "*": [ "terrariacorruption:block/soil/forest/inventory/top{grass}" ]
+        "*": [ "game:block/soil/forest/inventory/top{grass}" ]
       }
     }
   },

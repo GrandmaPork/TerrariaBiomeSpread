@@ -22,7 +22,7 @@
 			"shade": false,
 			"gradientShade": true,
 			"climateColorMap": "climateCorruptCrimsonKingTint",
-			"seasonColorMap": "corruptSeasonalCrimsonKingMaple",
+			"seasonColorMap": "seasonalCorruptAlternate",
 			"renderPass": 1,
 			"faces": {
 				"north": {

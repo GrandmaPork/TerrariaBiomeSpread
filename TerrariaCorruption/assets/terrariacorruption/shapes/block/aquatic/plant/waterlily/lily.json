@@ -1,0 +1,29 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"base": "game:block/plant/waterlily/lily1"
+	},
+	"elements": [
+		{
+			"name": "Cube",
+			"from": [ 0.0, -1.5, 0.0 ], 
+			"to": [ 16.0, -1.5, 16.0 ], 
+			"climateColorMap": "climateCorruptPlantTint",
+			"seasonColorMap": "seasonalCorruptFoliage",
+			"faces": {
+				"north": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false },
+				"east": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false },
+				"south": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false },
+				"west": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false },
+				"up": { "texture": "#base", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+				"down": { "texture": "#base", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false }
+			}
+		}
+	]}

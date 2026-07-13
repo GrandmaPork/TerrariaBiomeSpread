@@ -90,13 +90,13 @@
     "*": "climateCorruptPlantTint"
   },
   "seasonColorMapByType": {
-    "*-pine": "corruptSeasonalNeedles",
-    "*-redwood": "corruptSeasonalNeedles",
-    "*-birch": "seasonalCorruptLarch",
-    "*-maple": "seasonalCorruptLarch",
-    "*-oak": "seasonalCorruptOak",
-    "*-walnut": "seasonalCorruptTule",
-    "*-larch": "seasonalCorruptLarch",
+    "*-pine": "seasonalCorruptNeedles",
+    "*-redwood": "seasonalCorruptNeedles",
+    "*-birch": "seasonalCorruptAlternate",
+    "*-maple": "seasonalCorruptAlternate",
+    "*-oak": "seasonalCorruptAlternate",
+    "*-walnut": "seasonalCorruptAlternate",
+    "*-larch": "seasonalCorruptAlternate",
     "*-crimsonkingmaple": "seasonalCorruptMoss",
     "*-kapok": "corruptTropicalKapok",
     "*": "seasonalCorruptFoliage"

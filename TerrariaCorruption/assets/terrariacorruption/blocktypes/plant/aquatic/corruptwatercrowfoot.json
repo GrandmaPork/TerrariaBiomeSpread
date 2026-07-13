@@ -12,9 +12,9 @@
     "aquatic": [ "*" ]
   },
   "shapeByType": {
-    "*-top": { "base": "game:block/aquatic/plant/watercrowfoot-top*" },
-    "*-tip": { "base": "game:block/aquatic/plant/watercrowfoot-tip1" },
-    "*-section": { "base": "game:block/aquatic/plant/watercrowfoot-stem" }
+    "*-top": { "base": "block/aquatic/plant/watercrowfoot-top*" },
+    "*-tip": { "base": "block/aquatic/plant/watercrowfoot-tip1" },
+    "*-section": { "base": "block/aquatic/plant/watercrowfoot-stem" }
   },
   "drawtype": "JSONAndWater",
   "renderpass": "liquid",

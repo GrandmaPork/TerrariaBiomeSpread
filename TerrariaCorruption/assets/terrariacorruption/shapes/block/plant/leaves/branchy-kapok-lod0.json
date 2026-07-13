@@ -187,7 +187,7 @@
 					"to": [ 24.0, 24.0, 8.0 ],
 					"shade": false,
 					"gradientShade": true,
-					"climateColorMap": "climatePlantTint",
+					"climateColorMap": "climateCorruptPlantTint",
 					"seasonColorMap": "tropicalKapok",
 					"rotationOrigin": [ 8.0, 8.0, 8.0 ],
 					"rotationX": 0.21,

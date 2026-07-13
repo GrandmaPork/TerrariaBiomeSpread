@@ -1,0 +1,402 @@
+{
+  "code": "corrupttallplant",
+  "class": "BlockReeds",
+  "entityClassByType": {
+    "*-harvested-*": "Transient"
+  },
+  "attributes": {
+    "isCorrupt":  true,
+    "climateColorMapForMap": "climateCorruptPlantTint",
+    "seasonColorMapForMap": "seasonalCorruptFoliage",
+    "transientPropsByType": {
+      "corrupttallplant-coopersreed-*": {
+        "convertFrom": "*-harvested-{cover}",
+        "convertTo": "corrupttallplant-coopersreed-land-normal-{cover}",
+        "inGameHours": "168",
+        "resetBelowTemperature": -4,
+        "stopBelowTemperature": 2
+      },
+      "corrupttallplant-papyrus-*": {
+        "convertFrom": "*-harvested-{cover}",
+        "convertTo": "corrupttallplant-papyrus-land-normal-{cover}",
+        "inGameHours": "132",
+        "resetBelowTemperature": 4,
+        "stopBelowTemperature": 6
+      },
+      "corrupttallplant-tule-*": {
+        "convertFrom": "*-harvested-{cover}",
+        "convertTo": "corrupttallplant-tule-land-normal-{cover}",
+        "inGameHours": "168",
+        "resetBelowTemperature": 0,
+        "stopBelowTemperature": 4
+      },
+      "corrupttallplant-brownsedge-*": {
+        "convertFrom": "*-harvested-{cover}",
+        "convertTo": "corrupttallplant-brownsedge-land-normal-{cover}",
+        "inGameHours": "132",
+        "resetBelowTemperature": -4,
+        "stopBelowTemperature": 2
+      }
+
+    },
+    "maxWaterDepthByType": {
+      "corrupttallplant-coopersreed-*": 1,
+      "corrupttallplant-papyrus-*": 1,
+      "corrupttallplant-tule-*": 1,
+      "corrupttallplant-brownsedge-*": 0
+    },
+    "allowOverlays": false
+  },
+  "allowedVariants": [
+    "*-land-*",
+    "corrupttallplant-coopersreed-water-normal-free",
+    "corrupttallplant-coopersreed-water-harvested-free",
+    "corrupttallplant-coopersreed-ice-normal-free",
+    "corrupttallplant-coopersreed-ice-harvested-free",
+    "corrupttallplant-papyrus-water-normal-free",
+    "corrupttallplant-papyrus-water-harvested-free",
+    "corrupttallplant-papyrus-ice-normal-free",
+    "corrupttallplant-papyrus-ice-harvested-free"
+  ],
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [ "coopersreed", "papyrus", "tule", "brownsedge" ]
+    },
+    {
+      "code": "habitat",
+      "states": [ "land", "water", "ice" ]
+    },
+    {
+      "code": "state",
+      "states": [ "normal", "harvested" ]
+    },
+    {
+      "code": "cover",
+      "states": [ "free", "snow" ]
+    }
+  ],
+  "creativeinventory": {
+    "general": [ "*-land-normal-free" ],
+    "flora": [ "*-land-normal-free" ]
+  },
+  "shapeByType": {
+    "corrupttallplant-papyrus-*-harvested-*": { "base": "block/plant/reedpapyrus/papyrus-harvested" },
+    "corrupttallplant-papyrus-*": {
+      "base": "block/plant/reedpapyrus/papyrus-medium",
+      "alternates": [ { "base": "block/plant/reedpapyrus/papyrus-tall" } ]
+    },
+    "corrupttallplant-coopersreed-*": { "base": "block/plant/reedpapyrus/coopersreed-{state}*" },
+    "corrupttallplant-tule-land-normal-*": {
+      "base": "block/plant/reedpapyrus/tule-dense",
+      "alternates": [
+        { "base": "block/plant/reedpapyrus/tule-sparse" },
+        {
+          "base": "block/plant/reedpapyrus/tule-small-dense",
+          "rotateY": 15
+        },
+        {
+          "base": "block/plant/reedpapyrus/tule-small-sparse",
+          "rotateY": 15
+        },
+        { "base": "block/plant/reedpapyrus/tule-tuft-dense" },
+        { "base": "block/plant/reedpapyrus/tule-tuft-sparse" },
+        {
+          "base": "block/plant/reedpapyrus/tule-tuft-small-dense",
+          "rotateY": 15
+        },
+        {
+          "base": "block/plant/reedpapyrus/tule-tuft-small-sparse",
+          "rotateY": 15
+        }
+      ]
+    },
+    "corrupttallplant-tule-land-harvested-*": {
+      "base": "block/plant/reedpapyrus/tule-sparse",
+      "alternates": [
+        {
+          "base": "block/plant/reedpapyrus/tule-dense",
+          "rotateY": 15
+        }
+      ]
+    },
+    "corrupttallplant-brownsedge-*": { "base": "block/plant/reedpapyrus/sedge" }
+  },
+  "lod2shapeByType": {
+    "corrupttallplant-coopersreed-*": { "base": "block/plant/reedpapyrus/coopersreed-lod2-{state}*" },
+    "corrupttallplant-tule-*": { "base": "block/plant/reedpapyrus/tule-lod2" },
+    "corrupttallplant-brownsedge-*": { "base": "block/basic/cross" }
+  },
+  "drawtypeByType": {
+    "*-snow": "JSONAndSnowLayer",
+    "*": "JSON"
+  },
+  "renderpass": "OpaqueNoCull",
+  "matterstate": "solid",
+  "blockmaterial": "plant",
+  "faceCullMode": "NeverCull",
+  "randomDrawOffset": true,
+  "randomizeRotations": true,
+  "texturesByType": {
+    "corrupttallplant-papyrus-*": {
+    },
+    "corrupttallplant-coopersreed-*": {
+      "cobs1": { "base": "game:block/plant/reeds/lod2-1" },
+      "cobs2": { "base": "game:block/plant/reeds/lod2-2" }
+    },
+    "corrupttallplant-tule-land-harvested-*": {
+      "leaves-dense1": { "base": "game:block/plant/reeds/tule/dense-harvested1" },
+      "leaves-dense2": { "base": "game:block/plant/reeds/tule/dense-harvested2" },
+      "leaves-dense3": { "base": "game:block/plant/reeds/tule/dense-harvested3" },
+      "leaves-dense4": { "base": "game:block/plant/reeds/tule/dense-harvested4" },
+      "leaves-sparse1": { "base": "game:block/plant/reeds/tule/sparse-harvested1" },
+      "leaves-sparse2": { "base": "game:block/plant/reeds/tule/sparse-harvested2" },
+      "leaves-sparse3": { "base": "game:block/plant/reeds/tule/sparse-harvested3" },
+      "leaves-sparse4": { "base": "game:block/plant/reeds/tule/sparse-harvested4" }
+    },
+    "corrupttallplant-tule-land-normal-*": {
+      "leaves-dense1": { "base": "game:block/plant/reeds/tule/dense1" },
+      "leaves-dense2": { "base": "game:block/plant/reeds/tule/dense2" },
+      "leaves-dense3": { "base": "game:block/plant/reeds/tule/dense3" },
+      "leaves-dense4": { "base": "game:block/plant/reeds/tule/dense4" },
+      "leaves-sparse1": { "base": "game:block/plant/reeds/tule/sparse1" },
+      "leaves-sparse2": { "base": "game:block/plant/reeds/tule/sparse2" },
+      "leaves-sparse3": { "base": "game:block/plant/reeds/tule/sparse3" },
+      "leaves-sparse4": { "base": "game:block/plant/reeds/tule/sparse4" },
+      "tuft-dense1": { "base": "game:block/plant/reeds/tule/tuft-dense1" },
+      "tuft-dense2": { "base": "game:block/plant/reeds/tule/tuft-dense2" },
+      "tuft-dense3": { "base": "game:block/plant/reeds/tule/tuft-dense3" },
+      "tuft-dense4": { "base": "game:block/plant/reeds/tule/tuft-dense4" },
+      "tuft-sparse1": { "base": "game:block/plant/reeds/tule/tuft-sparse1" },
+      "tuft-sparse2": { "base": "game:block/plant/reeds/tule/tuft-sparse2" },
+      "tuft-sparse3": { "base": "game:block/plant/reeds/tule/tuft-sparse3" },
+      "tuft-sparse4": { "base": "game:block/plant/reeds/tule/tuft-sparse4" }
+    },
+    "corrupttallplant-brownsedge-land-normal-*": {
+      "all": { "base": "game:block/plant/reeds/{type}" },
+      "north": { "base": "game:block/plant/reeds/{type}" },
+      "south": { "base": "game:block/plant/reeds/{type}" }
+    },
+    "corrupttallplant-brownsedge-land-harvested-*": {
+      "all": { "base": "game:block/plant/reeds/{type}-harvested" },
+      "south": { "base": "game:block/plant/reeds/{type}-harvested" },
+      "north": { "base": "game:block/plant/reeds/{type}-harvested" }
+    }
+  },
+  "climateColorMapByType": {
+    "corrupttallplant-brownsedge-land-*": "climateCorruptDarkerPlantTint"
+  },
+  "seasonColorMapByType": {
+    "corrupttallplant-brownsedge-land-*": "seasonalCorruptFoliage"
+  },
+  "sideopaqueByType": {
+    "*-snow": {
+      "all": false,
+      "down": true
+    },
+    "*": { "all": false }
+  },
+  "sidesolid": { "all": false },
+  "emitsideao": { "all": false },
+  "sideao": { "all": true },
+  "replaceable": 3000,
+  "lightAbsorption": 0,
+  "resistance": 1,
+  "collisionbox": null,
+  "selectionboxByType": {
+    "corrupttallplant-brownsedge-land-normal-*": {
+      "x1": 0,
+      "y1": 0,
+      "z1": 0,
+      "x2": 1,
+      "y2": 1,
+      "z2": 1
+    },
+    "corrupttallplant-brownsedge-land-harvested-*": {
+      "x1": 0.25,
+      "y1": 0,
+      "z1": 0.25,
+      "x2": 0.75,
+      "y2": 0.25,
+      "z2": 0.75
+    },
+    "*": {
+      "x1": 0,
+      "y1": 0,
+      "z1": 0,
+      "x2": 1,
+      "y2": 1.125,
+      "z2": 1
+    }
+  },
+  "sounds": {
+    "place": "game:block/plant",
+    "break": "game:block/plant",
+    "hit": "game:block/plant"
+  },
+  "rainPermeableByType": {
+    "*-land-*": true
+  },
+  "materialDensity": 200,
+  "frostable": true,
+  "combustibleProps": {
+    "burnTemperature": 600,
+    "burnDuration": 10
+  },
+  "dropsByType": {
+    "*coopersreed-*-normal-*": [
+      {
+        "type": "item",
+        "code": "cattailtops"
+      }
+    ],
+    "*coopersreed-*-harvested-*": [
+      {
+        "type": "item",
+        "code": "cattailroot"
+      }
+    ],
+    "*papyrus-*-normal-*": [
+      {
+        "type": "item",
+        "code": "papyrustops"
+      }
+    ],
+    "*papyrus-*-harvested-*": [
+      {
+        "type": "item",
+        "code": "papyrusroot"
+      }
+    ],
+    "corrupttallplant-tule-land-normal-*": [
+      {
+        "type": "item",
+        "code": "thatch"
+      }
+    ],
+    "corrupttallplant-tule-land-harvested-*": [
+      {
+        "type": "item",
+        "code": "tuleroot"
+      }
+    ],
+    "corrupttallplant-brownsedge-land-normal-*": [
+      {
+        "type": "item",
+        "code": "drygrass"
+      }
+    ],
+    "corrupttallplant-brownsedge-land-harvested-*": [
+      {
+        "type": "block",
+        "code": "corrupttallplant-brownsedge-land-harvested-free"
+      }
+    ]
+  },
+  "guiTransformByType": {
+    "corrupttallplant-brownsedge-*": {
+      "rotate": true,
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0.6,
+        "z": 0.5
+      },
+      "scale": 1.33
+    },
+    "*": {
+      "rotate": true,
+      "translation": {
+        "x": 0,
+        "y": -1.5,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 1.2,
+        "z": 0.5
+      },
+      "scale": 0.65
+    }
+  },
+  "tpHandTransformByType": {
+    "corrupttallplant-tule-*-harvested-free": {
+      "translation": {
+        "x": -1,
+        "y": -0.2,
+        "z": -0.6
+      },
+      "rotation": {
+        "x": 17,
+        "y": -173,
+        "z": 68
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0.2,
+        "z": 0.5
+      },
+      "scale": 0.61
+    },
+    "corrupttallplant-brownsedge-*-harvested-free": {
+      "translation": {
+        "x": -1,
+        "y": -0.2,
+        "z": -0.6
+      },
+      "rotation": {
+        "x": 17,
+        "y": -173,
+        "z": 68
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0.2,
+        "z": 0.5
+      },
+      "scale": 0.61
+    }
+  },
+  "groundTransformByType": {
+    "corrupttallplant-tule-*-harvested-free": {
+      "translation": {
+        "x": -1,
+        "y": 0.1,
+        "z": -0.6
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0.2,
+        "z": 0.5
+      },
+      "scale": 3
+    },
+    "corrupttallplant-brownsedge-*-harvested-free": {
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      },
+      "scale": 4
+    }
+  }
+}

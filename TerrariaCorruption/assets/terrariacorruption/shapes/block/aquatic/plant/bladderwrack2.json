@@ -1,0 +1,73 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"bladderwrackEW": "block/plant/aquatic/bladderwrackEW",
+		"bladderwrackH": "block/plant/aquatic/bladderwrackH",
+		"bladderwrackNS": "block/plant/aquatic/bladderwrackNS"
+	},
+	"elements": [
+		{
+			"name": "origin",
+			"from": [ 8.0, 0.0, 8.0 ],
+			"to": [ 8.0, 0.0, 8.0 ],
+			"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+			"faces": {
+			},
+			"children": [
+				{
+					"name": "EW",
+					"from": [ -8.0, -2.0, 0.0 ],
+					"to": [ 8.0, 8.0, 0.0 ],
+					"rotationOrigin": [ 0.0, -2.0, 0.0 ],
+					"faces": {
+						"south": { "texture": "#bladderwrackEW", "uv": [ 0.0, 0.0, 16.0, 10.0 ], "windMode": [-1,-1,-1,-1], "windData": [0,0,1,1] }
+					}
+				},
+				{
+					"name": "NS",
+					"from": [ 0.0, -2.0, -8.0 ],
+					"to": [ 0.0, 8.0, 8.0 ],
+					"rotationOrigin": [ 0.0, -2.0, 0.0 ],
+					"faces": {
+						"east": { "texture": "#bladderwrackNS", "uv": [ 0.0, 0.0, 16.0, 10.0 ], "windMode": [-1,-1,-1,-1], "windData": [0,1,1,0] }
+					}
+				},
+				{
+					"name": "H1",
+					"from": [ -8.0, 1.0, -8.0 ],
+					"to": [ 8.0, 1.0, 8.0 ],
+					"rotationOrigin": [ 0.0, 1.0, 0.0 ],
+					"faces": {
+						"up": { "texture": "#bladderwrackH", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "windMode": [-1,-1,-1,-1], "windData": [0,1,1,0] }
+					}
+				},
+				{
+					"name": "NS2",
+					"from": [ 0.0, -2.0, -8.0 ],
+					"to": [ 0.0, 8.0, 8.0 ],
+					"rotationOrigin": [ 0.0, -2.0, 0.0 ],
+					"rotationY": 45.0,
+					"faces": {
+						"east": { "texture": "#bladderwrackNS", "uv": [ 0.0, 0.0, 16.0, 10.0 ], "windMode": [-1,-1,-1,-1], "windData": [0,1,1,0] }
+					}
+				},
+				{
+					"name": "EW2",
+					"from": [ -8.0, -2.0, 0.0 ],
+					"to": [ 8.0, 8.0, 0.0 ],
+					"rotationOrigin": [ 0.0, -2.0, 0.0 ],
+					"rotationY": 45.0,
+					"faces": {
+						"south": { "texture": "#bladderwrackEW", "uv": [ 0.0, 0.0, 16.0, 10.0 ], "windMode": [-1,-1,-1,-1], "windData": [0,1,1,0] }
+					}
+				}
+			]
+		}
+	]}

@@ -19,7 +19,7 @@ namespace TerrariaCorruption.Blocks
         public Block Grass;
         public Block TallGrass;
     }
-    public class BlockCorruptSoil : BlockWithGrassOverlay, IBlockSoil
+    public class BlockCorruptSoil : BlockSoil
     {
         protected List<AssetLocation> tallGrassCodes = new List<AssetLocation>();
         protected string[] growthStages = new string[] { "none", "verysparse", "sparse", "normal" };
@@ -85,7 +85,7 @@ namespace TerrariaCorruption.Blocks
 
         public override void OnServerGameTick(IWorldAccessor world, BlockPos pos, object extra = null)
         {
-            base.OnServerGameTick(world, pos, extra);
+            //base.OnServerGameTick(world, pos, extra);
 
             GrassTick tick = extra as GrassTick;
             if (tick == null) return;
@@ -114,7 +114,7 @@ namespace TerrariaCorruption.Blocks
             world.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
             world.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
 
-            while (targetBlock.Code.Path.StartsWith("log-"))
+            while ((targetBlock.Code.Path.StartsWith("log-")) || (targetBlock.Code.Path.StartsWith("water-")) || (targetBlock.Code.Path.StartsWith("aquatic-")))
             {
                 victim.Y += 1;
                 targetBlock = world.BlockAccessor.GetBlock(victim);
@@ -213,204 +213,5 @@ namespace TerrariaCorruption.Blocks
             }
             return extra != null;
         }
-
-        protected bool isSmotheringBlock(IWorldAccessor world, BlockPos pos)
-        {
-            Block block = world.BlockAccessor.GetBlock(pos, BlockLayersAccess.Fluid);
-
-            if (block is BlockLakeIce || block.LiquidLevel > 1) return true;
-            block = world.BlockAccessor.GetBlock(pos);
-            return block.SideSolid[BlockFacing.DOWN.Index] && block.SideOpaque[BlockFacing.DOWN.Index] || block is BlockLava;
-        }
-
-        protected Block tryGetBlockForGrowing(IWorldAccessor world, BlockPos pos)
-        {
-            int targetStage;
-
-            ClimateCondition conds = GetClimateAt(world.BlockAccessor, pos);
-
-            if (currentStage != MaxStage && (targetStage = getClimateSuitedGrowthStage(world, pos, conds)) != currentStage)
-            {
-                int nextStage = GameMath.Clamp(targetStage, currentStage - 1, currentStage + 1);
-
-                return world.GetBlock(CodeWithParts(growthStages[nextStage]));
-            }
-
-            return null;
-        }
-
-        private ClimateCondition GetClimateAt(IBlockAccessor blockAccessor, BlockPos pos)
-        {
-            if (genBlockLayers == null)
-            {
-                return blockAccessor.GetClimateAt(pos, EnumGetClimateMode.WorldGenValues);
-            }
-            else
-            {
-                // Some randomness stuff to hide straight lines in the climate transition system resulting from using lerp on a low resolution map
-                int rndY = genBlockLayers.RandomlyAdjustPosition(pos, out double rndX, out double rndZ);
-                int distx = (int)(Math.Round(rndX, 0));
-                int distz = (int)(Math.Round(rndZ, 0));
-                pos.Add(distx, rndY, distz);
-                var conds = blockAccessor.GetClimateAt(pos, EnumGetClimateMode.WorldGenValues);
-                pos.Add(-distx, -rndY, -distz);
-                return conds;
-            }
-        }
-
-        protected Block tryGetBlockForDying(IWorldAccessor world)
-        {
-            int nextStage = Math.Max(currentStage - 1, 0);
-            if (nextStage != currentStage)
-            {
-                return world.GetBlock(CodeWithParts(growthStages[nextStage]));
-            }
-
-            return null;
-        }
-
-        /// <summary>
-        /// Gets the tallgrass block to be placed above soil. If tallgrass is already present
-        /// then it will grow by either 1 or 2 stages. Returns null if none is to be placed
-        /// or if it's already fully grown.
-        /// </summary>
-        /// <param name="world"></param>
-        /// <param name="abovePos"></param>
-        /// <returns></returns>
-        protected Block getTallGrassBlock(IWorldAccessor world, BlockPos abovePos, Random offthreadRandom)
-        {
-            if (offthreadRandom.NextDouble() > tallGrassGrowthChance) return null;
-            Block block = world.BlockAccessor.GetBlock(abovePos);
-
-            int curTallgrassStage = (block.FirstCodePart() == "tallgrass") ? Array.IndexOf(tallGrassGrowthStages, block.Variant["tallgrass"]) : 0;
-
-            int nextTallgrassStage = Math.Min(curTallgrassStage + 1 + offthreadRandom.Next(3), tallGrassGrowthStages.Length - 1);
-
-            return world.GetBlock(tallGrassCodes[nextTallgrassStage]);
-        }
-
-
-        /// <summary>
-        /// Returns true if grass can grow on this block at this location. The requirements for growth are
-        /// as follows:
-        /// * Soil is not fully grown
-        /// * Light Level is greater than or equal to the value of the growthLightLevel Attribute
-        /// * The BlockLayer associated with the next growth stage has climate conditions that match the current climate
-        /// * The block above this soil block is not solid
-        /// </summary>
-        /// <param name="world"></param>
-        /// <param name="pos"></param>
-        /// <returns>true if grass can grow on this block at this location, false otherwise</returns>
-        protected bool canGrassGrowHere(IWorldAccessor world, BlockPos pos)
-        {
-            bool isFullyGrown = currentStage == FullyGrownStage;
-
-            if (!isFullyGrown &&
-                world.BlockAccessor.GetLightLevel(pos, EnumLightLevelType.MaxLight) >= growthLightLevel &&
-                world.BlockAccessor.IsSideSolid(pos.X, pos.Y + 1, pos.Z, BlockFacing.DOWN) == false)
-            {
-                return getClimateSuitedGrowthStage(world, pos, GetClimateAt(world.BlockAccessor, pos)) != currentStage;
-            }
-            return false;
-        }
-
-
-
-        protected int getClimateSuitedGrowthStage(IWorldAccessor world, BlockPos pos, ClimateCondition climate)
-        {
-            if (climate == null) return currentStage;  // Can occasionally be null, e.g. during running /wgen regen command
-
-            IMapChunk mapchunk = world.BlockAccessor.GetMapChunkAtBlockPos(pos);
-            if (mapchunk == null) return 0;
-
-            ICoreServerAPI api = (ICoreServerAPI)world.Api;
-            int mapheight = api.WorldManager.MapSizeY;
-            float transitionSize = blocklayerconfig.blockLayerTransitionSize;
-            int topblockid = mapchunk.TopRockIdMap[(pos.Z % chunksize) * chunksize + (pos.X % chunksize)];
-
-            double posRand = (double)GameMath.MurmurHash3(pos.X, 1, pos.Z) / int.MaxValue;
-            posRand = (posRand + 1) * transitionSize;
-
-            int posY = pos.Y + (int)(genBlockLayers.distort2dx.Noise(-pos.X, -pos.Z) / 4.0);
-
-            for (int j = 0; j < blocklayerconfig.Blocklayers.Length; j++)
-            {
-                BlockLayer bl = blocklayerconfig.Blocklayers[j];
-                float trfDist = bl.CalcTrfDistance(climate.Temperature, climate.WorldgenRainfall, climate.Fertility);
-                float yDist = bl.CalcYDistance(posY, mapheight);
-
-                if (trfDist + yDist <= posRand)
-                {
-                    int blockId = bl.GetBlockId(posRand, climate.Temperature, climate.WorldgenRainfall, climate.Fertility, topblockid, pos, mapheight, climate.Biome);
-
-                    Block block = world.Blocks[blockId];
-                    if (block is BlockSoil blockSoil)
-                    {
-                        return GrowthStage(block.Variant["grasscoverage"]);
-                    }
-                }
-            }
-
-            return 0;
-        }
-
-        public override int GetColor(ICoreClientAPI capi, BlockPos pos)
-        {
-            return base.GetColor(capi, pos);
-        }
-
-
-        public override int GetRandomColor(ICoreClientAPI capi, BlockPos pos, BlockFacing facing, int rndIndex = -1)
-        {
-            if (ParticlesTextureCode != null && facing == BlockFacing.UP)
-            {
-                var subid = Textures[ParticlesTextureCode].Baked.TextureSubId;
-
-                if (rndIndex == -1 /* Otherwise worldmap gets extremely noisy */ && capi.World.Rand.NextDouble() > currentStage / 4.0)
-                {
-                    subid = Textures["down"].Baked.TextureSubId;
-                    return capi.BlockTextureAtlas.GetRandomColor(subid, rndIndex);
-                }
-                capi.Logger.Notification($"Climate: {ClimateColorMap}, Season: {SeasonColorMap}");
-                return capi.World.ApplyColorMapOnRgba(ClimateColorMap, SeasonColorMap, capi.BlockTextureAtlas.GetRandomColor(subid, rndIndex), pos.X, pos.Y, pos.Z);
-                //return capi.World.ApplyColorMapOnRgba("climateCorruptPlantTint", "seasonalCorruptGrass", capi.BlockTextureAtlas.GetRandomColor(subid, rndIndex), pos.X, pos.Y, pos.Z);
-            }
-
-            return base.GetRandomColor(capi, pos, facing, rndIndex);
-        }
-
-
-        public override void GetHeldItemInfo(ItemSlot inSlot, StringBuilder dsc, IWorldAccessor world, bool withDebugInfo)
-        {
-            base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
-
-            if (Variant.ContainsKey("fertility"))
-            {
-                var fertility = inSlot.Itemstack.Block.Variant["fertility"];
-                var farmland = world.GetBlock(new AssetLocation("farmland-dry-" + fertility));
-                if (farmland == null) return;
-                var fert_value = farmland.Fertility;
-                if (fert_value <= 0) return;
-                dsc.Append(Lang.Get("Fertility when tilled:") + " " + fert_value + "%\n");
-            }
-        }
-
-        //public override void OnBlockPlaced(IWorldAccessor world, BlockPos pos, ItemStack byItemStack = null)
-        //{
-        //    base.OnBlockPlaced(world, pos, byItemStack);
-
-        //    TerrariaCorruptionModSystem system = world.Api.ModLoader.GetModSystem<TerrariaCorruptionModSystem>();
-
-        //    system.RegisterCorruptBlock(pos);
-        //}
-
-        //public override void OnBlockRemoved(IWorldAccessor world,BlockPos pos)
-        //{
-        //    base.OnBlockRemoved(world, pos);
-
-        //    TerrariaCorruptionModSystem system = world.Api.ModLoader.GetModSystem<TerrariaCorruptionModSystem>();
-
-        //    system.UnregisterCorruptBlock(pos);
-        //}
     }
 }

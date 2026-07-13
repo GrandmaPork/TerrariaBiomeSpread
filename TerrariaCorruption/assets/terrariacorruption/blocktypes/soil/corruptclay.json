@@ -17,6 +17,7 @@
   "renderpass": "TopSoil",
   "blockmaterial": "Soil",
   "attributes": {
+    "isCorrupt": true,
     "mapColorCode": "land",
     "ignoreTintInventory": true,
     "placeBelowBlockCode": "soil-low-none",
@@ -49,11 +50,11 @@
     "down": { "base": "game:block/soil/{type}clay" },
     "horizontals": {
       "base": "game:block/soil/{type}clay",
-      "overlays": [ "block/plant/grasscoverage/inventory/side_{grasscoverage}" ]
+      "overlays": [ "block/plant/grasscoverage/inventory/corrupt_side_{grasscoverage}" ]
     },
     "up": {
       "base": "game:block/soil/{type}clay",
-      "overlays": [ "block/plant/grasscoverage/inventory/top_{grasscoverage}" ]
+      "overlays": [ "block/plant/grasscoverage/inventory/corrupt_top_{grasscoverage}" ]
     }
   },
   "climateColorMapByType": {

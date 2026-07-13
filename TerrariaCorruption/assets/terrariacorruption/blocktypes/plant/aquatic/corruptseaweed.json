@@ -11,7 +11,7 @@
     "general": [ "*" ],
     "aquatic": [ "*" ]
   },
-  "shape": { "base": "game:block/aquatic/plant/seaweed" },
+  "shape": { "base": "block/aquatic/plant/seaweed" },
   "drawtype": "JSONAndWater",
   "renderpass": "liquid",
   "blockmaterial": "plant",
@@ -23,8 +23,8 @@
   // Explicit listing of alternates to ensure that top and section alternate are in the same order
   "textures": {
     "weed": {
-      "base": "terrariacorruption:block/plant/aquatic/seaweed/{part}1",
-      "alternates": [ { "base": "terrariacorruption:block/plant/aquatic/seaweed/{part}2" } ]
+      "base": "block/plant/aquatic/seaweed/{part}1",
+      "alternates": [ { "base": "block/plant/aquatic/seaweed/{part}2" } ]
     }
   },
   "sideopaque": {
@@ -36,7 +36,7 @@
   "sidesolid": {
     "all": false
   },
-  "climateColorMap": "climateWaterTint",
+  "climateColorMap": "climateCorruptWaterTint",
   "replaceable": 3000,
   "lightAbsorption": 2,
   "resistance": 0.5,

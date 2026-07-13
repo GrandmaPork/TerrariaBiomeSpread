@@ -21,13 +21,13 @@
   "vertexFlags": {
     "windMode": "WaterPlant"
   },
-  "shape": { "base": "game:block/aquatic/plant/threeblocktall" },
+  "shape": { "base": "block/aquatic/plant/threeblocktall" },
   "randomizeRotations": true,
   "randomDrawOffset": true,
   "texturesByType": {
     "*": {
-      "north": { "base": "terrariacorruption:block/plant/aquatic/{type}*" },
-      "south": { "base": "terrariacorruption:block/plant/aquatic/{type}*" }
+      "north": { "base": "block/plant/aquatic/{type}*" },
+      "south": { "base": "block/plant/aquatic/{type}*" }
     }
   },
   "sideopaque": { "all": false },
