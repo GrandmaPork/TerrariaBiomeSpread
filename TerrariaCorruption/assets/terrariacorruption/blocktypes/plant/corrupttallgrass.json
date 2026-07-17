@@ -64,7 +64,7 @@
       "largeContainer": {
         "shape": { "base": "game:block/clay/planter/contents" },
         "textures": {
-          "north": { "base": "game:game:block/plant/potted/tallgrass" },
+          "north": { "base": "game:block/plant/potted/tallgrass" },
           "south": { "base": "game:block/plant/potted/tallgrass" }
         }
       }
@@ -88,8 +88,8 @@
   },
   "texturesByType": {
     "*-free": {
-      "north": { "base": "game:block/plant/tallgrass/{cover}/{tallgrass}-north" },
-      "south": { "base": "game:block/plant/tallgrass/{cover}/{tallgrass}-south" }
+      "north": { "base": "block/plant/tallgrass/{cover}/{tallgrass}-north" },
+      "south": { "base": "block/plant/tallgrass/{cover}/{tallgrass}-south" }
     },
     "*-snow*": {
       "north": { "base": "game:block/plant/tallgrass/snow/{tallgrass}-north" },

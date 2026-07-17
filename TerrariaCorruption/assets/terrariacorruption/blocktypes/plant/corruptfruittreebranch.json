@@ -1,0 +1,1002 @@
+{
+	"code": "corruptfruittree",
+	"class": "BlockDynamicTreeBranch",
+	"entityClass": "DynamicTreeBranch",
+	"maxStackSize": 16,
+	"attributes": {
+    "isCorrupt": true,
+		"handbook": {
+			"groupBy": [ "fruittree-*" ]
+		},
+		"asphyxiating": false,
+		"foliageBlock": "fruittree-foliage",
+		"branchBlock": "fruittree-branch",
+		"worldgen": [
+			{
+				"type": "pinkapple",
+				"mintemp": -5,
+				"maxtemp": 18,
+				"minrain": 0.5,
+				"maxrain": 1
+			},
+			{
+				"type": "redapple",
+				"mintemp": -9,
+				"maxtemp": 18,
+				"minrain": 0.5,
+				"maxrain": 0.9
+			},
+			{
+				"type": "yellowapple",
+				"mintemp": 0,
+				"maxtemp": 22,
+				"minrain": 0.6,
+				"maxrain": 1
+			},
+			{
+				"type": "cherry",
+				"mintemp": 0,
+				"maxtemp": 24,
+				"minrain": 0.6,
+				"maxrain": 1
+			},
+			{
+				"type": "mango",
+				"mintemp": 28,
+				"maxtemp": 50,
+				"minrain": 0.6,
+				"maxrain": 1
+			},
+			{
+				"type": "olive",
+				"mintemp": 22,
+				"maxtemp": 50,
+				"minrain": 0.3,
+				"maxrain": 0.5
+			},
+			{
+				"type": "orange",
+				"mintemp": 25,
+				"maxtemp": 30,
+				"minrain": 0.45,
+				"maxrain": 1
+			},
+			{
+				"type": "peach",
+				"mintemp": 10,
+				"maxtemp": 17,
+				"minrain": 0.55,
+				"maxrain": 1
+			},
+			{
+				"type": "pear",
+				"mintemp": -10,
+				"maxtemp": 19,
+				"minrain": 0.5,
+				"maxrain": 1
+			},
+			{
+				"type": "breadfruit",
+				"mintemp": 28,
+				"maxtemp": 50,
+				"minrain": 0.6,
+				"maxrain": 1
+			},
+			{
+				"type": "lychee",
+				"mintemp": 22,
+				"maxtemp": 50,
+				"minrain": 0.6,
+				"maxrain": 1
+			},
+			{
+				"type": "pomegranate",
+				"mintemp": 22,
+				"maxtemp": 50,
+				"minrain": 0.3,
+				"maxrain": ".7"
+			}
+		],
+		"shapes": {
+			"stem": { "base": "game:block/plant/fruittree/branch-ver" },
+
+			"cutting-ns": {
+				"base": "game:block/plant/fruittree/cutting-hor",
+				"rotateY": 90
+			},
+			"cutting-we": { "base": "game:block/plant/fruittree/cutting-hor" },
+			"cutting-ud": { "base": "game:block/plant/fruittree/cutting-ver" },
+
+			"branch-n": {
+				"base": "game:block/plant/fruittree/branch-hor",
+				"rotateY": 90
+			},
+			"branch-e": { "base": "game:block/plant/fruittree/branch-hor" },
+			"branch-s": {
+				"base": "game:block/plant/fruittree/branch-hor",
+				"rotateY": -90
+			},
+			"branch-w": {
+				"base": "game:block/plant/fruittree/branch-hor",
+				"rotateY": 180
+			},
+
+			"branch-n-end": {
+				"base": "game:block/plant/fruittree/branch-hor-end",
+				"rotateY": 90
+			},
+			"branch-e-end": { "base": "game:block/plant/fruittree/branch-hor-end" },
+			"branch-s-end": {
+				"base": "game:block/plant/fruittree/branch-hor-end",
+				"rotateY": -90
+			},
+			"branch-w-end": {
+				"base": "game:block/plant/fruittree/branch-hor-end",
+				"rotateY": 180
+			},
+
+			"branch-ud": { "base": "game:block/plant/fruittree/branch-ver" },
+			"branch-ud-end": { "base": "game:block/plant/fruittree/branch-ver-end" },
+
+			"foliage-ver": { "base": "game:block/plant/fruittree/leaves-ver" },
+			"foliage-hor-n": {
+				"base": "game:block/plant/fruittree/leaves-hor",
+				"rotateY": 90
+			},
+			"foliage-hor-e": {
+				"base": "game:block/plant/fruittree/leaves-hor",
+				"rotateY": 0
+			},
+			"foliage-hor-s": {
+				"base": "game:block/plant/fruittree/leaves-hor",
+				"rotateY": 270
+			},
+			"foliage-hor-w": {
+				"base": "game:block/plant/fruittree/leaves-hor",
+				"rotateY": 180
+			},
+
+			"fruit-pinkapple": { "base": "game:block/plant/fruittree/fruit-pinkapple" },
+			"fruit-redapple": { "base": "game:block/plant/fruittree/fruit-redapple" },
+			"fruit-yellowapple": { "base": "game:block/plant/fruittree/fruit-yellowapple" },
+
+			"fruit-cherry": { "base": "game:block/plant/fruittree/fruit-cherry" },
+			"fruit-mango": { "base": "game:block/plant/fruittree/fruit-mango" },
+			"fruit-olive": { "base": "game:block/plant/fruittree/fruit-olive" },
+			"fruit-orange": { "base": "game:block/plant/fruittree/fruit-orange" },
+			"fruit-peach": { "base": "game:block/plant/fruittree/fruit-peach" },
+			"fruit-pear": { "base": "game:block/plant/fruittree/fruit-pear" },
+			"fruit-breadfruit": { "base": "game:block/plant/fruittree/fruit-breadfruit" },
+			"fruit-breadfruit-ripe": { "base": "game:block/plant/fruittree/fruit-breadfruit-ripe" },
+			"fruit-lychee": { "base": "game:block/plant/fruittree/fruit-lychee" },
+			"fruit-pomegranate": { "base": "game:block/plant/fruittree/fruit-pomegranate" }
+		},
+		"treeFellingGroupCode": "fruittree",
+		"treeFellingGroupSpreadIndexByType": {
+			"*-stem": 3,
+			"*-branch": 2,
+			"*-cutting": 2
+		},
+		"fruittreeProperties": {
+			"pinkapple": {
+				"vernalizationHours": {
+					"avg": 250,
+					"var": 30
+				},
+				"vernalizationTemp": {
+					"avg": 3,
+					"var": 0.5
+				},
+				"floweringDays": {
+					"avg": 4.5,
+					"var": 1.5
+				},
+				"fruitingDays": {
+					"dist": "strongerinvexp",
+					"avg": 21,
+					"var": 12
+				},
+				"ripeDays": {
+					"dist": "strongerinvexp",
+					"avg": 9,
+					"var": 10
+				},
+				"growthStepDays": {
+					"dist": "verynarrowgaussian",
+					"avg": 5,
+					"var": 1
+				},
+				"fruitStacks": [
+					{
+						"type": "item",
+						"code": "fruit-pinkapple",
+						"quantity": {
+							"dist": "strongerinvexp",
+							"avg": 6,
+							"var": 4
+						}
+					}
+				],
+				"enterDormancyTemp": {
+					"dist": "verynarrowgaussian",
+					"avg": -3,
+					"var": 2
+				},
+				"leaveDormancyTemp": {
+					"dist": "verynarrowgaussian",
+					"avg": 19,
+					"var": 5
+				},
+				"dieBelowTemp": {
+					"dist": "strongerinvexp",
+					"avg": -24,
+					"var": -10
+				},
+				"cuttingRootingChance": 0.4,
+				"cuttingGraftChance": 0.6
+			},
+			"redapple": {
+				"vernalizationHours": {
+					"avg": 250,
+					"var": 30
+				},
+				"vernalizationTemp": {
+					"avg": 2,
+					"var": 0.5
+				},
+				"floweringDays": {
+					"avg": 4.5,
+					"var": 1.5
+				},
+				"fruitingDays": {
+					"dist": "strongerinvexp",
+					"avg": 18,
+					"var": 12
+				},
+				"ripeDays": {
+					"dist": "strongerinvexp",
+					"avg": 12,
+					"var": 10
+				},
+				"growthStepDays": {
+					"dist": "verynarrowgaussian",
+					"avg": 5,
+					"var": 1
+				},
+				"fruitStacks": [
+					{
+						"type": "item",
+						"code": "fruit-redapple",
+						"quantity": {
+							"dist": "strongerinvexp",
+							"avg": 4,
+							"var": 4
+						}
+					}
+				],
+				"enterDormancyTemp": {
+					"dist": "verynarrowgaussian",
+					"avg": -3,
+					"var": 2
+				},
+				"leaveDormancyTemp": {
+					"dist": "verynarrowgaussian",
+					"avg": 19,
+					"var": 5
+				},
+				"dieBelowTemp": {
+					"dist": "strongerinvexp",
+					"avg": -28,
+					"var": -10
+				},
+				"cuttingRootingChance": 0.4,
+				"cuttingGraftChance": 0.6
+			},
+			"yellowapple": {
+				"vernalizationHours": {
+					"avg": 250,
+					"var": 30
+				},
+				"vernalizationTemp": {
+					"avg": 4,
+					"var": 0.5
+				},
+				"floweringDays": {
+					"avg": 4.5,
+					"var": 1.5
+				},
+				"fruitingDays": {
+					"dist": "strongerinvexp",
+					"avg": 23,
+					"var": 12
+				},
+				"ripeDays": {
+					"dist": "strongerinvexp",
+					"avg": 10,
+					"var": 10
+				},
+				"growthStepDays": {
+					"dist": "verynarrowgaussian",
+					"avg": 5,
+					"var": 1
+				},
+				"fruitStacks": [
+					{
+						"type": "item",
+						"code": "fruit-yellowapple",
+						"quantity": {
+							"dist": "strongerinvexp",
+							"avg": 5,
+							"var": 4
+						}
+					}
+				],
+				"enterDormancyTemp": {
+					"dist": "verynarrowgaussian",
+					"avg": -3,
+					"var": 2
+				},
+				"leaveDormancyTemp": {
+					"dist": "verynarrowgaussian",
+					"avg": 19,
+					"var": 5
+				},
+				"dieBelowTemp": {
+					"dist": "strongerinvexp",
+					"avg": -22,
+					"var": -10
+				},
+				"cuttingRootingChance": 0.4,
+				"cuttingGraftChance": 0.6
+			},
+			"cherry": {
+				"vernalizationHours": {
+					"avg": 250,
+					"var": 30
+				},
+				"vernalizationTemp": {
+					"avg": 5,
+					"var": 0.5
+				},
+				"floweringDays": {
+					"avg": 4.5,
+					"var": 1.5
+				},
+				"fruitingDays": {
+					"dist": "strongerinvexp",
+					"avg": 11,
+					"var": 8
+				},
+				"ripeDays": {
+					"dist": "strongerinvexp",
+					"avg": 9,
+					"var": 10
+				},
+				"growthStepDays": {
+					"dist": "verynarrowgaussian",
+					"avg": 5,
+					"var": 1
+				},
+				"fruitStacks": [
+					{
+						"type": "item",
+						"code": "fruit-cherry",
+						"quantity": {
+							"dist": "strongerinvexp",
+							"avg": 8,
+							"var": 4
+						}
+					}
+				],
+				"enterDormancyTemp": {
+					"dist": "verynarrowgaussian",
+					"avg": -3,
+					"var": 4
+				},
+				"leaveDormancyTemp": {
+					"dist": "verynarrowgaussian",
+					"avg": 19,
+					"var": 5
+				},
+				"dieBelowTemp": {
+					"dist": "strongerinvexp",
+					"avg": -20,
+					"var": -10
+				},
+				"cuttingRootingChance": 0.4,
+				"cuttingGraftChance": 0.6
+			},
+			"mango": {
+				"cycleType": "Evergreen",
+				"floweringDays": {
+					"avg": 4.5,
+					"var": 1.5
+				},
+				"fruitingDays": {
+					"dist": "strongerinvexp",
+					"avg": 50,
+					"var": 12
+				},
+				"ripeDays": {
+					"dist": "strongerinvexp",
+					"avg": 10,
+					"var": 10
+				},
+				"growthStepDays": {
+					"dist": "verynarrowgaussian",
+					"avg": 5,
+					"var": 1
+				},
+				"fruitStacks": [
+					{
+						"type": "item",
+						"code": "fruit-mango",
+						"quantity": {
+							"dist": "strongerinvexp",
+							"avg": 4,
+							"var": 4
+						}
+					}
+				],
+				"looseLeavesBelowTemp": {
+					"dist": "strongerinvexp",
+					"avg": 3,
+					"var": -4
+				},
+				"blossomAtYearRel": {
+					"dist": "strongerinvexp",
+					"avg": 0.2,
+					"var": 0.1
+				},
+				"dieBelowTemp": {
+					"dist": "strongerinvexp",
+					"avg": 10,
+					"var": -4
+				},
+				"cuttingRootingChance": 0.4,
+				"cuttingGraftChance": 0.6
+			},
+			"olive": {
+				"cycleType": "Evergreen",
+				"floweringDays": {
+					"avg": 4.5,
+					"var": 1.5
+				},
+				"fruitingDays": {
+					"dist": "strongerinvexp",
+					"avg": 40,
+					"var": 12
+				},
+				"ripeDays": {
+					"dist": "strongerinvexp",
+					"avg": 24,
+					"var": 10
+				},
+				"growthStepDays": {
+					"dist": "verynarrowgaussian",
+					"avg": 5,
+					"var": 1
+				},
+				"fruitStacks": [
+					{
+						"type": "item",
+						"code": "vegetable-olive",
+						"quantity": {
+							"dist": "strongerinvexp",
+							"avg": 4,
+							"var": 4
+						}
+					}
+				],
+				"looseLeavesBelowTemp": {
+					"dist": "strongerinvexp",
+					"avg": 0,
+					"var": -4
+				},
+				"blossomAtYearRel": {
+					"dist": "strongerinvexp",
+					"avg": 0.3,
+					"var": 0.1
+				},
+				"dieBelowTemp": {
+					"dist": "strongerinvexp",
+					"avg": 7,
+					"var": -5
+				},
+				"cuttingRootingChance": 0.4,
+				"cuttingGraftChance": 0.6
+			},
+			"orange": {
+				"cycleType": "Evergreen",
+				"floweringDays": {
+					"avg": 4.5,
+					"var": 1.5
+				},
+				"fruitingDays": {
+					"dist": "strongerinvexp",
+					"avg": 60,
+					"var": 12
+				},
+				"ripeDays": {
+					"dist": "strongerinvexp",
+					"avg": 12,
+					"var": 10
+				},
+				"growthStepDays": {
+					"dist": "verynarrowgaussian",
+					"avg": 5,
+					"var": 1
+				},
+				"fruitStacks": [
+					{
+						"type": "item",
+						"code": "fruit-orange",
+						"quantity": {
+							"dist": "strongerinvexp",
+							"avg": 5,
+							"var": 4
+						}
+					}
+				],
+				"looseLeavesBelowTemp": {
+					"dist": "strongerinvexp",
+					"avg": 3,
+					"var": -4
+				},
+				"blossomAtYearRel": {
+					"dist": "strongerinvexp",
+					"avg": 0.5,
+					"var": 0.1
+				},
+				"dieBelowTemp": {
+					"dist": "strongerinvexp",
+					"avg": 6,
+					"var": -5
+				},
+				"cuttingRootingChance": 0.4,
+				"cuttingGraftChance": 0.6
+			},
+			"peach": {
+				"vernalizationHours": {
+					"avg": 250,
+					"var": 30
+				},
+				"vernalizationTemp": {
+					"avg": 5,
+					"var": 0.5
+				},
+				"floweringDays": {
+					"avg": 4.5,
+					"var": 1.5
+				},
+				"fruitingDays": {
+					"dist": "strongerinvexp",
+					"avg": 17,
+					"var": 10
+				},
+				"ripeDays": {
+					"dist": "strongerinvexp",
+					"avg": 8,
+					"var": 8
+				},
+				"growthStepDays": {
+					"dist": "verynarrowgaussian",
+					"avg": 5,
+					"var": 1
+				},
+				"fruitStacks": [
+					{
+						"type": "item",
+						"code": "fruit-peach",
+						"quantity": {
+							"dist": "strongerinvexp",
+							"avg": 5,
+							"var": 4
+						}
+					}
+				],
+				"enterDormancyTemp": {
+					"dist": "verynarrowgaussian",
+					"avg": -3,
+					"var": 2
+				},
+				"leaveDormancyTemp": {
+					"dist": "verynarrowgaussian",
+					"avg": 19,
+					"var": 5
+				},
+				"dieBelowTemp": {
+					"dist": "strongerinvexp",
+					"avg": -12,
+					"var": -10
+				},
+				"cuttingRootingChance": 0.4,
+				"cuttingGraftChance": 0.6
+			},
+			"pear": {
+				"vernalizationHours": {
+					"avg": 250,
+					"var": 30
+				},
+				"vernalizationTemp": {
+					"avg": 2,
+					"var": 0.5
+				},
+				"floweringDays": {
+					"avg": 4.5,
+					"var": 1.5
+				},
+				"fruitingDays": {
+					"dist": "strongerinvexp",
+					"avg": 20,
+					"var": 12
+				},
+				"ripeDays": {
+					"dist": "strongerinvexp",
+					"avg": 28,
+					"var": 10
+				},
+				"growthStepDays": {
+					"dist": "verynarrowgaussian",
+					"avg": 5,
+					"var": 1
+				},
+				"fruitStacks": [
+					{
+						"type": "item",
+						"code": "fruit-pear",
+						"quantity": {
+							"dist": "strongerinvexp",
+							"avg": 5,
+							"var": 4
+						}
+					}
+				],
+				"enterDormancyTemp": {
+					"dist": "verynarrowgaussian",
+					"avg": -4.5,
+					"var": 2
+				},
+				"leaveDormancyTemp": {
+					"dist": "verynarrowgaussian",
+					"avg": 19,
+					"var": 5
+				},
+				"dieBelowTemp": {
+					"dist": "strongerinvexp",
+					"avg": -28,
+					"var": -13
+				},
+				"cuttingRootingChance": 0.4,
+				"cuttingGraftChance": 0.6
+			},
+			"breadfruit": {
+				"cycleType": "Evergreen",
+				"blossomParticles": false,
+				"floweringDays": {
+					"avg": 4.5,
+					"var": 1.5
+				},
+				"fruitingDays": {
+					"dist": "strongerinvexp",
+					"avg": 50,
+					"var": 12
+				},
+				"ripeDays": {
+					"dist": "strongerinvexp",
+					"avg": 10,
+					"var": 10
+				},
+				"growthStepDays": {
+					"dist": "verynarrowgaussian",
+					"avg": 5,
+					"var": 1
+				},
+				"fruitStacks": [
+					{
+						"type": "item",
+						"code": "fruit-breadfruit",
+						"quantity": {
+							"dist": "strongerinvexp",
+							"avg": 3,
+							"var": 4
+						}
+					}
+				],
+				"looseLeavesBelowTemp": {
+					"dist": "strongerinvexp",
+					"avg": 12,
+					"var": -4
+				},
+				"blossomAtYearRel": {
+					"dist": "strongerinvexp",
+					"avg": 0.3,
+					"var": 0.1
+				},
+				"dieBelowTemp": {
+					"dist": "strongerinvexp",
+					"avg": 10,
+					"var": -4
+				},
+				"cuttingRootingChance": 0.4,
+				"cuttingGraftChance": 0.6
+			},
+			"lychee": {
+				"cycleType": "Evergreen",
+				"floweringDays": {
+					"avg": 4.5,
+					"var": 1.5
+				},
+				"fruitingDays": {
+					"dist": "strongerinvexp",
+					"avg": 50,
+					"var": 12
+				},
+				"ripeDays": {
+					"dist": "strongerinvexp",
+					"avg": 10,
+					"var": 10
+				},
+				"growthStepDays": {
+					"dist": "verynarrowgaussian",
+					"avg": 5,
+					"var": 1
+				},
+				"fruitStacks": [
+					{
+						"type": "item",
+						"code": "fruit-lychee",
+						"quantity": {
+							"dist": "strongerinvexp",
+							"avg": 8,
+							"var": 4
+						}
+					}
+				],
+				"looseLeavesBelowTemp": {
+					"dist": "strongerinvexp",
+					"avg": 12,
+					"var": -4
+				},
+				"blossomAtYearRel": {
+					"dist": "strongerinvexp",
+					"avg": 0.3,
+					"var": 0.1
+				},
+				"dieBelowTemp": {
+					"dist": "strongerinvexp",
+					"avg": 10,
+					"var": -4
+				},
+				"cuttingRootingChance": 0.4,
+				"cuttingGraftChance": 0.6
+			},
+			"pomegranate": {
+				"cycleType": "Evergreen",
+				"floweringDays": {
+					"avg": 4.5,
+					"var": 1.5
+				},
+				"fruitingDays": {
+					"dist": "strongerinvexp",
+					"avg": 50,
+					"var": 12
+				},
+				"ripeDays": {
+					"dist": "strongerinvexp",
+					"avg": 10,
+					"var": 10
+				},
+				"growthStepDays": {
+					"dist": "verynarrowgaussian",
+					"avg": 5,
+					"var": 1
+				},
+				"fruitStacks": [
+					{
+						"type": "item",
+						"code": "fruit-pomegranate",
+						"quantity": {
+							"dist": "strongerinvexp",
+							"avg": 5,
+							"var": 4
+						}
+					}
+				],
+				"looseLeavesBelowTemp": {
+					"dist": "strongerinvexp",
+					"avg": 12,
+					"var": -4
+				},
+				"blossomAtYearRel": {
+					"dist": "strongerinvexp",
+					"avg": 0.3,
+					"var": 0.1
+				},
+				"dieBelowTemp": {
+					"dist": "strongerinvexp",
+					"avg": 10,
+					"var": -4
+				},
+				"cuttingRootingChance": 0.4,
+				"cuttingGraftChance": 0.6
+			}
+		}
+	},
+	"variantgroups": [
+		{
+			"code": "type",
+			"states": [ "stem", "branch", "cutting" ]
+		}
+	],
+	"creativeinventory": {},
+	"creativeinventoryStacksByType": {
+		"*-branch": [
+			{
+				"tabs": [ "general", "flora" ],
+				"stacks": [
+					{
+						"type": "block",
+						"code": "fruittree-cutting",
+						"attributes": { "type": "pinkapple" }
+					},
+					{
+						"type": "block",
+						"code": "fruittree-cutting",
+						"attributes": { "type": "redapple" }
+					},
+					{
+						"type": "block",
+						"code": "fruittree-cutting",
+						"attributes": { "type": "yellowapple" }
+					},
+
+					{
+						"type": "block",
+						"code": "fruittree-cutting",
+						"attributes": { "type": "cherry" }
+					},
+					{
+						"type": "block",
+						"code": "fruittree-cutting",
+						"attributes": { "type": "mango" }
+					},
+					{
+						"type": "block",
+						"code": "fruittree-cutting",
+						"attributes": { "type": "olive" }
+					},
+					{
+						"type": "block",
+						"code": "fruittree-cutting",
+						"attributes": { "type": "orange" }
+					},
+					{
+						"type": "block",
+						"code": "fruittree-cutting",
+						"attributes": { "type": "peach" }
+					},
+					{
+						"type": "block",
+						"code": "fruittree-cutting",
+						"attributes": { "type": "pear" }
+					},
+					{
+						"type": "block",
+						"code": "fruittree-cutting",
+						"attributes": { "type": "breadfruit" }
+					},
+					{
+						"type": "block",
+						"code": "fruittree-cutting",
+						"attributes": { "type": "lychee" }
+					},
+					{
+						"type": "block",
+						"code": "fruittree-cutting",
+						"attributes": { "type": "pomegranate" }
+					}
+				]
+			}
+		]
+	},
+	"shape": {
+		"base": "game:block/plant/fruittree/cutting-ver"
+	},
+	"textures": {
+		"deadtree": { "base": "game:block/wood/bark/aged" }
+	},
+	"renderpass": "OpaqueNoCull",
+	"faceCullMode": "Callback",
+	"blockmaterial": "Wood",
+	"requiredMiningTierByType": {
+		"*-cutting": 0,
+		"*": 1
+	},
+	"climateColorMap": "climateCorruptPlantTint",
+	"seasonColorMap": "seasonalCorruptFoliage",
+	"sideopaque": {
+		"all": false
+	},
+	"sidesolid": {
+		"all": false
+	},
+	"sideao": {
+		"all": true
+	},
+	"emitSideAo": {
+		"all": false
+	},
+	"snowCoverage": true,
+	"replaceable": 4000,
+	"lightAbsorption": 1,
+	"resistance": 5,
+	"collisionbox": null,
+	"dropsByType": {
+		"*-stem": [
+			{
+				"type": "item",
+				"code": "firewood",
+				"quantity": { "avg": 1 }
+			}
+		],
+		"*-branch": [
+			{
+				"type": "block",
+				"code": "fruittree-cutting",
+				"quantity": { "avg": 1 }
+			}
+		],
+		"*-cutting": [
+			{
+				"type": "block",
+				"code": "fruittree-cutting",
+				"quantity": { "avg": 1 }
+			}
+		]
+	},
+	"sounds": {
+		"place": "game:block/planks",
+		"walk": "game:walk/wood",
+		"hit": "game:block/planks",
+		"break": "game:block/planks",
+		"byTool": {
+			"Axe": {
+				"hit": "game:block/chop",
+				"break": "game:block/planks"
+			}
+		}
+	},
+	"combustibleProps": {
+		"burnTemperature": 600,
+		"burnDuration": 10
+	},
+	"frostable": true,
+	"materialDensity": 300,
+	"collisionSelectionBox": {
+		"x1": 0.1875,
+		"y1": 0,
+		"z1": 0.1875,
+		"x2": 0.8125,
+		"y2": 1,
+		"z2": 0.8125
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 90,
+			"y": 0,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.65
+		},
+		"scale": 2.3
+	}
+}

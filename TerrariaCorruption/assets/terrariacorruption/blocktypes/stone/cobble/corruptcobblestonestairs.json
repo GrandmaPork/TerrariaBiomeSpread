@@ -1,0 +1,225 @@
+{
+	"code": "corruptcobblestonestairs",
+	"class": "BlockStairs",
+	"attributes": {
+    "isCorrupt": true,
+		"mapColorCode": "settlement",
+		"canChisel": true,
+		"chiselShapeFromCollisionBox": true,
+		"handbook": {
+			"groupBy": [ "cobblestonestairs-*-up-north-free" ]
+		},
+		"partialAttachable": true,
+		"liquidBarrierOnSidesByType": {
+			"*-up-north-*": [ 1.0, 0.5, 0.5, 0.5 ],
+			"*-up-south-*": [ 0.5, 0.5, 1.0, 0.5 ],
+			"*-up-west-*": [ 0.5, 0.5, 0.5, 1.0 ],
+			"*-up-east-*": [ 0.5, 1.0, 0.5, 0.5 ]
+		},
+		"inContainerTexture": { "base": "game:block/stone/cobblestone/{rock}1" }
+	},
+	"behaviors": [
+		{
+			"name": "WrenchOrientable",
+			"properties": { "baseCode": "cobblestonestairs-{rock}-*-{cover}" }
+		}
+	],
+	"variantgroups": [
+		{
+			"code": "rock",
+			"loadFromProperties": "terrariacorruption:block/corruptrockwithdeposit"
+		},
+		{ "loadFromProperties": "game:abstract/verticalorientation" },
+		{ "loadFromProperties": "game:abstract/horizontalorientation" },
+		{
+			"code": "cover",
+			"states": [ "free", "snow" ]
+		}
+	],
+	"skipVariants": [ "*-obsidian-*", "*-halite-*", "*-scoria-*", "*-tuff-*", "cobblestonestairs-travertine-*", "*-down-north-snow", "*-down-east-snow", "*-down-south-snow", "*-down-west-snow" ],
+	"creativeinventory": {
+		"general": [ "*-up-north-free" ],
+		"construction": [ "*-up-north-free" ]
+	},
+	"sideSolidOpaqueAoByType": {
+		"*-up-north-*": {
+			"all": false,
+			"down": true,
+			"north": true
+		},
+		"*-up-west-*": {
+			"all": false,
+			"down": true,
+			"west": true
+		},
+		"*-up-south-*": {
+			"all": false,
+			"down": true,
+			"south": true
+		},
+		"*-up-east-*": {
+			"all": false,
+			"down": true,
+			"east": true
+		},
+		"*-down-north-free": {
+			"all": false,
+			"up": true,
+			"north": true
+		},
+		"*-down-south-free": {
+			"all": false,
+			"up": true,
+			"south": true
+		},
+		"*-down-west-free": {
+			"all": false,
+			"up": true,
+			"west": true
+		},
+		"*-down-east-free": {
+			"all": false,
+			"up": true,
+			"east": true
+		}
+	},
+	"shapebytype": {
+		"*-up-north-free": {
+			"base": "game:block/basic/stairs/normal",
+			"rotateY": 0
+		},
+		"*-up-west-free": {
+			"base": "game:block/basic/stairs/normal",
+			"rotateY": 90
+		},
+		"*-up-south-free": {
+			"base": "game:block/basic/stairs/normal",
+			"rotateY": 180
+		},
+		"*-up-east-free": {
+			"base": "game:block/basic/stairs/normal",
+			"rotateY": 270
+		},
+		"*-up-north-snow": {
+			"base": "game:block/basic/stairs/snow-normal",
+			"rotateY": 0
+		},
+		"*-up-west-snow": {
+			"base": "game:block/basic/stairs/snow-normal",
+			"rotateY": 90
+		},
+		"*-up-south-snow": {
+			"base": "game:block/basic/stairs/snow-normal",
+			"rotateY": 180
+		},
+		"*-up-east-snow": {
+			"base": "game:block/basic/stairs/snow-normal",
+			"rotateY": 270
+		},
+		"*-down-north-free": {
+			"base": "game:block/basic/stairs/normal",
+			"rotateY": 0,
+			"rotateZ": 180
+		},
+		"*-down-west-free": {
+			"base": "game:block/basic/stairs/normal",
+			"rotateY": 90,
+			"rotateX": 180
+		},
+		"*-down-south-free": {
+			"base": "game:block/basic/stairs/normal",
+			"rotateY": 180,
+			"rotateZ": 180
+		},
+		"*-down-east-free": {
+			"base": "block/basic/stairs/normal",
+			"rotateY": 270,
+			"rotateX": 180
+		}
+	},
+	"faceCullModeByType": {
+		"*-snow": "NeverCull",
+		"*-free": "Stairs"
+	},
+	"blockmaterial": "Stone",
+	"textures": {
+		"sides": { "base": "game:block/stone/cobblestonestairs/{rock}" }
+	},
+	"replaceable": 160,
+	"resistance": 4,
+	"sounds": {
+		"walk": "game:walk/stone",
+		"byTool": {
+			"Pickaxe": {
+				"hit": "game:block/rock-hit-pickaxe",
+				"break": "game:block/rock-break-pickaxe"
+			}
+		}
+	},
+	"collisionSelectionBoxesByType": {
+		"*-down-*": [
+			{
+				"x1": 0,
+				"y1": 0.5,
+				"z1": 0,
+				"x2": 1,
+				"y2": 1,
+				"z2": 1
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.5,
+				"x2": 1,
+				"y2": 0.5,
+				"z2": 1,
+				"rotateYByType": {
+					"*-north-*": 180,
+					"*-east-*": 90,
+					"*-south-*": 0,
+					"*-west-*": 270
+				}
+			}
+		],
+		"*-up-*": [
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.5,
+				"z2": 1
+			},
+			{
+				"x1": 0,
+				"y1": 0.5,
+				"z1": 0.5,
+				"x2": 1,
+				"y2": 1,
+				"z2": 1,
+				"rotateYByType": {
+					"*-north-*": 180,
+					"*-east-*": 90,
+					"*-south-*": 0,
+					"*-west-*": 270
+				}
+			}
+		]
+	},
+	"heldTpIdleAnimation": "holdbothhandslarge",
+	"heldRightReadyAnimation": "heldblockready",
+	"heldTpUseAnimation": "twohandplaceblock",
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.23,
+			"y": -0.91,
+			"z": -0.8
+		},
+		"rotation": {
+			"x": -2,
+			"y": 25,
+			"z": -78
+		},
+		"scale": 0.4
+	}
+}

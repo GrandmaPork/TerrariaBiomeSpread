@@ -12,8 +12,8 @@
       "properties": {
         "spreadDelay": 75,
         "liquidCollisionSound": "sizzle",
-        "sourceReplacementCode": "rock-obsidian",
-        "flowingReplacementCode": "rock-basalt",
+        "sourceReplacementCode": "corruptrock-obsidian",
+        "flowingReplacementCode": "corruptrock-basalt",
         "collidesWith": "lava"
       }
     },
@@ -24,6 +24,7 @@
     }
   ],
   "attributes": {
+    "isCorrupt":  true,
     "coolingMediumTemperature": 90,
     "killPlantRadius": 3,
     "canStep": false,
@@ -114,7 +115,7 @@
   },
   "replaceable": 9500,
   "lightAbsorption": 2,
-  "climateColorMap": "climateWaterTint",
+  "climateColorMap": "climateCorruptWaterTint",
   "drops": [],
   "liquidLevelByType": {
     "*-1": 1,

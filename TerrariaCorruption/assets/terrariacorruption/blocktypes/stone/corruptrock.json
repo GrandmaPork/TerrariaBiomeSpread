@@ -62,7 +62,7 @@
   "fertility": 0,
   "texturesByType": {
     "corruptrock-*": {
-      "all": { "base": "terrariacorruption:block/stone/rock/{corruptrock}*" }
+      "all": { "base": "block/stone/rock/{corruptrock}*" }
     }
   },
   "sounds": {

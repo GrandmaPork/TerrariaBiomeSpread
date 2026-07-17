@@ -1,0 +1,717 @@
+{
+	"code": "corruptfruitingbush",
+	"class": "BlockRequireFertileGround",
+	"behaviors": [
+		{ "name": "FruitingBush" },
+		{ "name": "BlockEntityInteract" },
+		{ "name": "Unstable" }
+	],
+	"entityClassByType": {
+		"fruitingbush-wild-*": "WildFruitingBush",
+		"*": "Generic"
+	},
+	"entityBehaviors": [
+		{ "name": "FruitingBush" },
+		{ "name": "FruitingBushMesh" }
+	],
+	"variantgroups": [
+		{
+			"code": "state",
+			"states": [ "wild", "grown" ]
+		},
+		{
+			"code": "type",
+			"states": [ "beautyberry", "blueberry", "cloudberry", "cranberry", "blackberry", "blackcurrant", "raspberry", "redcurrant", "whitecurrant", "strawberry" ]
+		},
+		{
+			"code": "cover",
+			"states": [ "free", "snow" ]
+		}
+	],
+	"attributes": {
+    "isCorrupt": true,
+		"foodTags": [ "sweetBerryBush" ],
+		"forageStatAffectedByType": {
+			"*-wild-*": true,
+			"*": false
+		},
+		"textureVariantsByType": {
+			"*": 3
+		},
+		"cuttingBlockCode": "fruitingbushcutting-{type}-free",
+		"growthProperties": {
+			"pauseGrowthBelowTemperature": 4,
+			"pauseGrowthAboveTemperature": 30,
+			"resetGrowthBelowTemperature": -3,
+			"resetGrowthAboveTemperature": 38,
+			"goDormantBelowTemperatureByType": {
+				"*currant-*": -2,
+				"*": -5
+			},
+			"leaveDormantAboveTemperatureByType": {
+				"*currant-*": 12,
+				"*": 15
+			},
+			"nutrientUseByHealthStateByType": {
+				"fruitingbush-grown-cloudberry-*": {
+					"bountiful": {
+						"n": 5,
+						"p": 5,
+						"k": 5
+					},
+					"healthy": {
+						"n": 3.5,
+						"p": 3.5,
+						"k": 3.5
+					},
+					"struggling": {
+						"n": 2,
+						"p": 2,
+						"k": 2
+					},
+					"barren": {
+						"n": 0.5,
+						"p": 0.5,
+						"k": 0.5
+					}
+				},
+				"fruitingbush-grown-strawberry-*": {
+					"bountiful": {
+						"n": 5,
+						"p": 5,
+						"k": 5
+					},
+					"healthy": {
+						"n": 3.5,
+						"p": 3.5,
+						"k": 3.5
+					},
+					"struggling": {
+						"n": 2,
+						"p": 2,
+						"k": 2
+					},
+					"barren": {
+						"n": 0.5,
+						"p": 0.5,
+						"k": 0.5
+					}
+				},
+				"*": {
+					"bountiful": {
+						"n": 10,
+						"p": 10,
+						"k": 10
+					},
+					"healthy": {
+						"n": 7,
+						"p": 7,
+						"k": 7
+					},
+					"struggling": {
+						"n": 4,
+						"p": 4,
+						"k": 4
+					},
+					"barren": {
+						"n": 1,
+						"p": 1,
+						"k": 1
+					}
+				}
+			},
+			"youngStageMonths": {
+				"avg": 3,
+				"var": 1
+			},
+			"emptyStageMonths": {
+				"avg": 1,
+				"var": 0.1
+			},
+			"floweringStageMonths": {
+				"avg": 0.5,
+				"var": 0.1
+			},
+			"ripeningStageMonths": {
+				"avg": 1,
+				"var": 0.1
+			},
+			"ripeStageMonths": {
+				"avg": 1,
+				"var": 0.1
+			}
+		},
+		"harvestedStacksByType": {
+			"*-cloudberry-*": [
+				{
+					"type": "item",
+					"code": "fruit-{type}",
+					"quantity": { "avg": 2.75 }
+				}
+			],
+			"*-strawberry-*": [
+				{
+					"type": "item",
+					"code": "fruit-{type}",
+					"quantity": { "avg": 2.75 }
+				}
+			],
+			"*": [
+				{
+					"type": "item",
+					"code": "fruit-{type}",
+					"quantity": { "avg": 5.5 }
+				}
+			]
+		},
+		"textureMappingByType": {
+			"@.*-(cloudberry|cranberry|strawberry|beautyberry|blackberry)-.*": {
+				"leavescenter1": {
+					"base": "game:block/plant/berrybush/{type}/leaves/leavescenter1",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/leaves/leavescenter2" },
+						{ "base": "game:block/plant/berrybush/{type}/leaves/leavescenter3" }
+					]
+				},
+				"leavescenter2": {
+					"base": "game:block/plant/berrybush/{type}/leaves/leavescenter2",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/leaves/leavescenter3" },
+						{ "base": "game:block/plant/berrybush/{type}/leaves/leavescenter1" }
+					]
+				},
+				"leavescenter3": {
+					"base": "game:block/plant/berrybush/{type}/leaves/leavescenter3",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/leaves/leavescenter1" },
+						{ "base": "game:block/plant/berrybush/{type}/leaves/leavescenter2" }
+					]
+				},
+				"leavesinside1": {
+					"base": "game:block/plant/berrybush/{type}/leaves/leavesinside1",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/leaves/leavesinside2" },
+						{ "base": "game:block/plant/berrybush/{type}/leaves/leavesinside3" }
+					]
+				},
+				"leavesinside2": {
+					"base": "game:block/plant/berrybush/{type}/leaves/leavesinside2",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/leaves/leavesinside3" },
+						{ "base": "game:block/plant/berrybush/{type}/leaves/leavesinside1" }
+					]
+				},
+				"leavesinside3": {
+					"base": "game:block/plant/berrybush/{type}/leaves/leavesinside3",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/leaves/leavesinside1" },
+						{ "base": "game:block/plant/berrybush/{type}/leaves/leavesinside2" }
+					]
+				},
+				"steminside1": {
+					"base": "game:block/plant/berrybush/{type}/stem/steminside1",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/stem/steminside2" },
+						{ "base": "game:block/plant/berrybush/{type}/stem/steminside3" }
+					]
+				},
+				"steminside2": {
+					"base": "game:block/plant/berrybush/{type}/stem/steminside2",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/stem/steminside3" },
+						{ "base": "game:block/plant/berrybush/{type}/stem/steminside1" }
+					]
+				},
+				"steminside3": {
+					"base": "game:block/plant/berrybush/{type}/stem/steminside3",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/stem/steminside1" },
+						{ "base": "game:block/plant/berrybush/{type}/stem/steminside2" }
+					]
+				},
+				"stemcenter1": {
+					"base": "game:block/plant/berrybush/{type}/stem/stemcenter1",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/stem/stemcenter2" },
+						{ "base": "game:block/plant/berrybush/{type}/stem/stemcenter3" }
+					]
+				},
+				"stemcenter2": {
+					"base": "game:block/plant/berrybush/{type}/stem/stemcenter2",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/stem/stemcenter3" },
+						{ "base": "game:block/plant/berrybush/{type}/stem/stemcenter1" }
+					]
+				},
+				"stemcenter3": {
+					"base": "game:block/plant/berrybush/{type}/stem/stemcenter3",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/stem/stemcenter1" },
+						{ "base": "game:block/plant/berrybush/{type}/stem/stemcenter2" }
+					]
+				},
+				"flowerberryinside1": {
+					"base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}inside1",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}inside2" },
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}inside3" }
+					]
+				},
+				"flowerberryinside2": {
+					"base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}inside2",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}inside3" },
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}inside1" }
+					]
+				},
+				"flowerberryinside3": {
+					"base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}inside3",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}inside1" },
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}inside2" }
+					]
+				},
+				"flowerberrycenter1": {
+					"base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}center1",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}center2" },
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}center3" }
+					]
+				},
+				"flowerberrycenter2": {
+					"base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}center2",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}center3" },
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}center1" }
+					]
+				},
+				"flowerberrycenter3": {
+					"base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}center3",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}center1" },
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}center2" }
+					]
+				}
+			},
+			"@.*-(blackcurrant|redcurrant|whitecurrant)-.*": {
+				"leavescenter1": {
+					"base": "game:block/plant/berrybush/currant/leaves/leavescenter1",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/currant/leaves/leavescenter2" },
+						{ "base": "game:block/plant/berrybush/currant/leaves/leavescenter3" }
+					]
+				},
+				"leavescenter2": {
+					"base": "game:block/plant/berrybush/currant/leaves/leavescenter2",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/currant/leaves/leavescenter3" },
+						{ "base": "game:block/plant/berrybush/currant/leaves/leavescenter1" }
+					]
+				},
+				"leavescenter3": {
+					"base": "game:block/plant/berrybush/currant/leaves/leavescenter3",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/currant/leaves/leavescenter1" },
+						{ "base": "game:block/plant/berrybush/currant/leaves/leavescenter2" }
+					]
+				},
+				"steminside1": {
+					"base": "game:block/plant/berrybush/currant/stem/steminside1",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/currant/stem/steminside2" },
+						{ "base": "game:block/plant/berrybush/currant/stem/steminside3" }
+					]
+				},
+				"steminside2": {
+					"base": "game:block/plant/berrybush/currant/stem/steminside2",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/currant/stem/steminside3" },
+						{ "base": "game:block/plant/berrybush/currant/stem/steminside1" }
+					]
+				},
+				"steminside3": {
+					"base": "game:block/plant/berrybush/currant/stem/steminside3",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/currant/stem/steminside1" },
+						{ "base": "game:block/plant/berrybush/currant/stem/steminside2" }
+					]
+				},
+				"stemcenter1": {
+					"base": "game:block/plant/berrybush/currant/stem/stemcenter1",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/currant/stem/stemcenter2" },
+						{ "base": "game:block/plant/berrybush/currant/stem/stemcenter3" }
+					]
+				},
+				"stemcenter2": {
+					"base": "game:block/plant/berrybush/currant/stem/stemcenter2",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/currant/stem/stemcenter3" },
+						{ "base": "game:block/plant/berrybush/currant/stem/stemcenter1" }
+					]
+				},
+				"stemcenter3": {
+					"base": "game:block/plant/berrybush/currant/stem/stemcenter3",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/currant/stem/stemcenter1" },
+						{ "base": "game:block/plant/berrybush/currant/stem/stemcenter2" }
+					]
+				},
+				"flowerberrycenter1": {
+					"base": "game:block/plant/berrybush/currant/berries/{type}/{healthstate}/{berrystage}center1",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/currant/berries/{type}/{healthstate}/{berrystage}center2" },
+						{ "base": "game:block/plant/berrybush/currant/berries/{type}/{healthstate}/{berrystage}center3" }
+					]
+				},
+				"flowerberrycenter2": {
+					"base": "game:block/plant/berrybush/currant/berries/{type}/{healthstate}/{berrystage}center2",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/currant/berries/{type}/{healthstate}/{berrystage}center3" },
+						{ "base": "game:block/plant/berrybush/currant/berries/{type}/{healthstate}/{berrystage}center1" }
+					]
+				},
+				"flowerberrycenter3": {
+					"base": "game:block/plant/berrybush/currant/berries/{type}/{healthstate}/{berrystage}center3",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/currant/berries/{type}/{healthstate}/{berrystage}center1" },
+						{ "base": "game:block/plant/berrybush/currant/berries/{type}/{healthstate}/{berrystage}center2" }
+					]
+				}
+			},
+			"*": {
+				"leavescenter1": {
+					"base": "game:block/plant/berrybush/{type}/leaves/leavescenter1",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/leaves/leavescenter2" },
+						{ "base": "game:block/plant/berrybush/{type}/leaves/leavescenter3" }
+					]
+				},
+				"leavescenter2": {
+					"base": "game:block/plant/berrybush/{type}/leaves/leavescenter2",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/leaves/leavescenter3" },
+						{ "base": "game:block/plant/berrybush/{type}/leaves/leavescenter1" }
+					]
+				},
+				"leavescenter3": {
+					"base": "game:block/plant/berrybush/{type}/leaves/leavescenter3",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/leaves/leavescenter1" },
+						{ "base": "game:block/plant/berrybush/{type}/leaves/leavescenter2" }
+					]
+				},
+				"steminside1": {
+					"base": "game:block/plant/berrybush/{type}/stem/steminside1",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/stem/steminside2" },
+						{ "base": "game:block/plant/berrybush/{type}/stem/steminside3" }
+					]
+				},
+				"steminside2": {
+					"base": "game:block/plant/berrybush/{type}/stem/steminside2",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/stem/steminside3" },
+						{ "base": "game:block/plant/berrybush/{type}/stem/steminside1" }
+					]
+				},
+				"steminside3": {
+					"base": "game:block/plant/berrybush/{type}/stem/steminside3",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/stem/steminside1" },
+						{ "base": "game:block/plant/berrybush/{type}/stem/steminside2" }
+					]
+				},
+				"stemcenter1": {
+					"base": "game:block/plant/berrybush/{type}/stem/stemcenter1",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/stem/stemcenter2" },
+						{ "base": "game:block/plant/berrybush/{type}/stem/stemcenter3" }
+					]
+				},
+				"stemcenter2": {
+					"base": "game:block/plant/berrybush/{type}/stem/stemcenter2",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/stem/stemcenter3" },
+						{ "base": "game:block/plant/berrybush/{type}/stem/stemcenter1" }
+					]
+				},
+				"stemcenter3": {
+					"base": "game:block/plant/berrybush/{type}/stem/stemcenter3",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/stem/stemcenter1" },
+						{ "base": "game:block/plant/berrybush/{type}/stem/stemcenter2" }
+					]
+				},
+				"flowerberryinside1": {
+					"base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}inside1",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}inside2" },
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}inside3" }
+					]
+				},
+				"flowerberrycenter1": {
+					"base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}center1",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}center2" },
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}center3" }
+					]
+				},
+				"flowerberrycenter2": {
+					"base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}center2",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}center3" },
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}center1" }
+					]
+				},
+				"flowerberrycenter3": {
+					"base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}center3",
+					"alternates": [
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}center1" },
+						{ "base": "game:block/plant/berrybush/{type}/berries/{healthstate}/{berrystage}center2" }
+					]
+				}
+			}
+		},
+		"youngTextureMappingByType": {
+			"*currant-*": {
+				"north1": { "base": "game:block/plant/berrybush/young/currant-stem1" },
+				"south1": { "base": "game:block/plant/berrybush/young/currant-stem2" },
+				"northTinted1": { "base": "game:block/plant/berrybush/young/currant-leaves1" },
+				"southTinted1": { "base": "game:block/plant/berrybush/young/currant-leaves2" }
+			},
+			"*": {
+				"north1": { "base": "game:block/plant/berrybush/young/{type}-stem1" },
+				"south1": { "base": "game:block/plant/berrybush/young/{type}-stem2" },
+				"northTinted1": { "base": "game:block/plant/berrybush/young/{type}-leaves1" },
+				"southTinted1": { "base": "game:block/plant/berrybush/young/{type}-leaves2" }
+			}
+		},
+		"youngShape": { "base": "game:block/plant/flower/1patch-cross-16x16" },
+		"reinforcable": true,
+		"overrideRandomDrawOffset": 14,
+		"allowOverlays": false
+	},
+	"shapeByType": {
+		"@fruitingbush-grown-(cloudberry|cranberry|strawberry)-.*": {
+			"base": "game:block/plant/berrybush/berrybush-small*",
+			"selectiveElements": [ "Stem/*", "Leaves/*" ],
+			"alternates": [
+				{ "rotateY": 10 },
+				{ "rotateY": 70 },
+				{ "rotateY": 130 },
+				{ "rotateY": 190 },
+				{ "rotateY": 250 },
+				{ "rotateY": 310 }
+			]
+		},
+		"@fruitingbush-wild-(cloudberry|cranberry|strawberry)-.*": {
+			"base": "game:block/plant/berrybush/berrybush-small*",
+			"selectiveElements": [ "Stem/*", "Leaves/*" ],
+			"alternates": [
+				{ "rotateY": 10 },
+				{ "rotateY": 70 },
+				{ "rotateY": 130 },
+				{ "rotateY": 190 },
+				{ "rotateY": 250 },
+				{ "rotateY": 310 }
+			]
+		},
+		"fruitingbush-grown-beautyberry-*": {
+			"base": "game:block/plant/berrybush/berrybush-large*",
+			"selectiveElements": [ "Stem/*", "Leaves/*" ],
+			"alternates": [
+				{ "rotateY": 10 },
+				{ "rotateY": 70 },
+				{ "rotateY": 130 },
+				{ "rotateY": 190 },
+				{ "rotateY": 250 },
+				{ "rotateY": 310 }
+			]
+		},
+		"fruitingbush-wild-beautyberry-*": {
+			"base": "game:block/plant/berrybush/berrybush-large*",
+			"selectiveElements": [ "Stem/*", "Leaves/*" ],
+			"alternates": [
+				{ "rotateY": 10 },
+				{ "rotateY": 70 },
+				{ "rotateY": 130 },
+				{ "rotateY": 190 },
+				{ "rotateY": 250 },
+				{ "rotateY": 310 }
+			]
+		},
+		"fruitingbush-grown-blackberry-*": {
+			"base": "game:block/plant/berrybush/berrybush-large*",
+			"selectiveElements": [ "Stem/*", "Leaves/*" ],
+			"alternates": [
+				{ "rotateY": 10 },
+				{ "rotateY": 70 },
+				{ "rotateY": 130 },
+				{ "rotateY": 190 },
+				{ "rotateY": 250 },
+				{ "rotateY": 310 }
+			]
+		},
+		"fruitingbush-wild-blackberry-*": {
+			"base": "game:block/plant/berrybush/berrybush-large*",
+			"selectiveElements": [ "Stem/*", "Leaves/*" ],
+			"alternates": [
+				{ "rotateY": 10 },
+				{ "rotateY": 70 },
+				{ "rotateY": 130 },
+				{ "rotateY": 190 },
+				{ "rotateY": 250 },
+				{ "rotateY": 310 }
+			]
+		},
+		"*": {
+			"base": "game:block/plant/berrybush/berrybush-medium*",
+			"selectiveElements": [ "Stem/*", "Leaves/*" ],
+			"alternates": [
+				{ "rotateY": 10 },
+				{ "rotateY": 70 },
+				{ "rotateY": 130 },
+				{ "rotateY": 190 },
+				{ "rotateY": 250 },
+				{ "rotateY": 310 }
+			]
+		}
+	},
+	"texturesByType": {
+		"*currant-*": {
+			"particle": { "base": "game:block/plant/berrybush/currant/leaves/leavescenter1" }
+		},
+		"*": {
+			"particle": { "base": "game:block/plant/berrybush/{type}/leaves/leavescenter1" }
+		}
+	},
+	"drawtypeByType": {
+		"*-snow": "JSONAndSnowLayer",
+		"*": "JSON"
+	},
+	"blockmaterialByType": {
+		"*-free": "Plant",
+		"*": "Snow"
+	},
+	"faceCullModeByType": {
+		"*-free": "Default",
+		"*": "MergeSnowLayer"
+	},
+	// Color maps are configured in survival/config/colormaps.json
+	// The ones defined in the shape file take precedence over the ones defined here
+	// However BE Behavior FruitingBushMesh inverts this behavior
+	"climateColorMap": "climateCorruptPlantTint",
+	"seasonColorMapByType": {
+		"*-beautyberry-*": "seasonalCorruptAlternate",
+		"*-blackberry-*": "seasonalCorruptFoliage",
+		"*-blueberry-*": "seasonalCorruptAlternate",
+		"*-cloudberry-*": "seasonalCorruptAlternate",
+		"*-cranberry-*": "seasonalCorruptAlternate",
+		"*-strawberry-*": "seasonalCorruptAlternate",
+		"*": "seasonalCorruptFoliage"
+	},
+	"walkspeedmultiplierByType": {
+		"*-blackberry-*": 0.3,
+		"*-raspberry-*": 0.6
+	},
+	"particlesTextureCode": "particle",
+	"creativeinventory": {
+		"general": [ "*-free" ],
+		"flora": [ "*-free" ]
+	},
+	"randomizeRotations": true,
+	"renderpass": "OpaqueNoCull",
+	"renderAlphaTest": 0.4,
+	"blockmaterial": "Plant",
+	"sideopaqueByType": {
+		"*-snow": {
+			"all": false,
+			"down": true
+		},
+		"*": { "all": false }
+	},
+	"sidesolid": { "all": false },
+	"replaceable": 3000,
+	"lightAbsorption": 0,
+	"resistance": 0.5,
+	"collisionbox": null,
+	"selectionboxByType": {
+		"*-cloudberry-free": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0,
+			"x2": 1,
+			"y2": 0.5,
+			"z2": 1
+		},
+		"*-cloudberry-snow": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0,
+			"x2": 1,
+			"y2": 0.5,
+			"z2": 1
+		},
+		"*-cranberry-free": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0,
+			"x2": 1,
+			"y2": 0.5,
+			"z2": 1
+		},
+		"*-cranberry-snow": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0,
+			"x2": 1,
+			"y2": 0.5,
+			"z2": 1
+		},
+		"*-strawberry-free": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0,
+			"x2": 1,
+			"y2": 0.4,
+			"z2": 1
+		},
+		"*-strawberry-snow": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0,
+			"x2": 1,
+			"y2": 0.4,
+			"z2": 1
+		},
+		"*": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0,
+			"x2": 1,
+			"y2": 1,
+			"z2": 1
+		}
+	},
+	"sounds": {
+		"place": "game:block/plant",
+		"break": "game:block/plant",
+		"hit": "game:block/plant",
+		"inside": "game:walk/inside/leafy/bushrustle*"
+	},
+	"rainPermeable": false,
+	"drops": [
+		{
+			"type": "item",
+			"code": "plantdebris-leafy",
+			"quantity": { "avg": 3 }
+		}
+	],
+	"materialDensity": 200,
+	"frostable": true,
+	"combustibleProps": {
+		"burnTemperature": 600,
+		"burnDuration": 10
+	}
+}

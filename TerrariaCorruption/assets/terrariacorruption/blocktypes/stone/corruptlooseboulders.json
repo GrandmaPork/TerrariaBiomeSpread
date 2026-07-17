@@ -1,0 +1,111 @@
+{
+	"code": "corruptlooseboulders",
+	"class": "BlockLooseRock",
+	"attributes": {
+		"isCorrupt": true,
+		"handbook": {
+			"groupBy": [ "looseboulders-*" ]
+		}
+	},
+	"behaviors": [ { "name": "UnstableFalling" } ],
+	"variantgroups": [
+		{
+			"code": "rock",
+			"loadFromProperties": "terrariacorruption:block/corruptrockwithdeposit"
+		},
+		{
+			"code": "cover",
+			"states": [ "free", "water", "ice", "snow" ]
+		}
+	],
+	"replaceable": 6500,
+	"creativeinventory": { "general": [ "*-free" ] },
+	"shapeByType": {
+		"*-snow": {
+			"base": "game:block/stone/looseboulders/{cover}*",
+			"alternates": [
+				{ "rotateY": 90 },
+				{ "rotateY": 180 },
+				{ "rotateY": 270 }
+			]
+		},
+		"*": {
+			"base": "game:block/stone/looseboulders/free*",
+			"alternates": [
+				{ "rotateY": 90 },
+				{ "rotateY": 180 },
+				{ "rotateY": 270 }
+			]
+		}
+	},
+	"lod2shapeByType": {
+		"*-snow": {
+			"base": "block/stone/looseboulders/lod2{cover}*",
+			"alternates": [
+				{ "rotateY": 90 },
+				{ "rotateY": 180 },
+				{ "rotateY": 270 }
+			]
+		},
+		"*": {
+			"base": "block/stone/looseboulders/lod2free*",
+			"alternates": [
+				{ "rotateY": 90 },
+				{ "rotateY": 180 },
+				{ "rotateY": 270 }
+			]
+		}
+
+	},
+	"resistance": 0.15,
+	"textures": {
+		"rock": { "base": "block/stone/rock/{rock}1" }
+	},
+	"drawtypeByType": {
+		"*-free": "JSON",
+		"*-snow": "JSONAndSnowLayer"
+	},
+	"drops": [
+		{
+			"type": "item",
+			"code": "stone-{rock}",
+			"quantity": {
+				"avg": 5,
+				"var": 3
+			}
+		}
+	],
+	"sidesolid": { "all": false },
+	"sideopaqueByType": {
+		"*-snow": {
+			"all": false,
+			"down": true
+		},
+		"*": { "all": false }
+	},
+	"sounds": {
+		"walk": "game:walk/stone"
+	},
+	"lightAbsorption": 0,
+	"collisionSelectionBox": {
+		"x1": 0.0625,
+		"y1": 0,
+		"z1": 0.0625,
+		"x2": 0.9375,
+		"y2": 0.25,
+		"z2": 0.9375
+	},
+	"guiTransform": {
+		"translation": {
+			"x": 0,
+			"y": -8,
+			"z": 0
+		},
+		"rotation": {
+			"x": -22.59375,
+			"y": 82,
+			"z": 0
+		},
+		"scale": 1.64
+	}
+}

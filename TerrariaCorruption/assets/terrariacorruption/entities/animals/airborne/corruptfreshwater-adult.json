@@ -1,0 +1,385 @@
+{
+  "code": "corruptfish-freshwater",
+  "class": "EntityFish",
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [
+        //"Below fish group for fish less than 3kg or so (alewife and chub are bait fish).",
+        "piranha",
+        //"Below fish group for fish from roughly 70kg and up.",
+        "arapaima"
+      ]
+    },
+    {
+      "code": "species",
+      "states": [
+        "black",
+        "red",
+        "arapaima",
+        "gigas"
+      ]
+    },
+    {
+      "code": "age",
+      "states": [ "adult" ]
+    }
+  ],
+  "allowedVariants": [
+    "fish-freshwater-piranha-black-*",
+    "fish-freshwater-piranha-red-*",
+
+    "fish-freshwater-arapaima-arapaima-*",
+    "fish-freshwater-arapaima-gigas-*"
+  ],
+  "hitboxSizeByType": {
+    "@fish-freshwater-(piranha)-.*": {
+      "x": 0.5,
+      "y": 0.25
+    },
+    "@fish-freshwater-(arapaima)-.*": {
+      "x": 0.8,
+      "y": 0.25
+    }
+  },
+  "deadhitboxSizeByType": {
+    "@fish-freshwater-(piranha)-.*": {
+      "x": 0.5,
+      "y": 0.25
+    },
+    "@fish-freshwater-(arapaima)-.*": {
+      "x": 0.8,
+      "y": 0.25
+    }
+  },
+  "eyeHeight": 0.2,
+  "drops": [
+    {
+      "type": "item",
+      "code": "fishraw-freshwater-{type}-{species}-{age}"
+    }
+  ],
+  "attributes": {
+    "handbook": {
+      "groupcode": "creaturegroup-fish-freshwater"
+    },
+    "baitTagsByType": {
+      "*-juvenile": [ "nobait", "bait-worm", "bait-meat", "bait-stinkmeat", "bait-stinkdough" ],
+      "fish-freshwater-arapaima-*-adult": [ "bait-meat", "bait-stinkmeat", "bait-fishtiny", "bait-fishsmall" ],
+      "*": [ "bait-worm", "bait-meat", "bait-stinkmeat", "bait-stinkdough" ]
+    }
+  },
+  "habitat": "Underwater",
+  "client": {
+    "renderer": "Shape",
+    "size": 1,
+    "shape": { "base": "entity/animal/fish/freshwater/{type}-{age}" },
+    "texture": { "base": "game:entity/animal/fish/freshwater/{type}-{species}-{age}*" },
+    "behaviors": [
+      { "code": "repulseagents" },
+      {
+        "code": "controlledphysics",
+        "stepHeight": 0
+      },
+      { "code": "interpolateposition" },
+      {
+        "code": "floatupwhenstuck",
+        "onlyWhenDead": true
+      },
+      {
+        "code": "despawn",
+        "minPlayerDistance": 8,
+        "belowLightLevel": 8,
+        "minSeconds": 300
+      },
+      {
+        "code": "despawn",
+        "minPlayerDistance": 64,
+        "minSeconds": 210
+      }
+    ],
+    "animations": [
+      {
+        "code": "hurt",
+        "animation": "hurt",
+        "animationSpeed": 1,
+        "weight": 10,
+        "blendMode": "AddAverage"
+      },
+      {
+        "code": "swim",
+        "animation": "swim"
+      },
+      {
+        "code": "swimfast",
+        "animation": "run"
+      },
+      {
+        "code": "die",
+        "animation": "dead"
+      },
+      {
+        "code": "eat",
+        "animation": "eat"
+      },
+      {
+        "code": "eat2",
+        "animation": "rising-eat"
+      },
+      {
+        "code": "idle",
+        "animation": "idle",
+        "blendMode": "AddAverage",
+        "easeOutSpeed": 4,
+        "triggeredBy": { "defaultAnim": true }
+      }
+    ]
+  },
+  "server": {
+    "behaviors": [
+      { "code": "repulseagents" },
+      {
+        "code": "controlledphysics",
+        "stepHeight": 1.1251
+      },
+      {
+        "code": "despawn",
+        "minPlayerDistance": 12,
+        "belowLightLevel": 8,
+        "minSeconds": 200
+      },
+      {
+        "code": "health",
+        "currenthealthByType": {
+          "@fish-freshwater-(alewife|chub|crappie|perch|piranha|trout)-.*": 2,
+          "@fish-freshwater-(bass|carp|catfish|pickerel|salmon|tilapia|walleye)-.*": 4,
+          "@fish-freshwater-(pike)-.*": 6,
+          "fish-freshwater-sheatfish-*": 12,
+          "fish-freshwater-arapaima-*": 24
+        },
+        "maxhealthByType": {
+          "@fish-freshwater-(alewife|chub|crappie|perch|piranha|trout)-.*": 2,
+          "@fish-freshwater-(bass|carp|catfish|pickerel|salmon|tilapia|walleye)-.*": 4,
+          "@fish-freshwater-(pike)-.*": 6,
+          "fish-freshwater-sheatfish-*": 12,
+          "fish-freshwater-arapaima-*": 24
+        }
+      },
+      {
+        "code": "floatupwhenstuck",
+        "onlyWhenDead": true
+      },
+      {
+        "code": "emotionstates",
+        "states": [
+          {
+            "code": "fleeondamage",
+            "duration": 10,
+            "chance": 1,
+            "slot": 0,
+            "priority": 1,
+            "accumType": "max"
+          }
+        ]
+      },
+      {
+        "code": "taskai",
+        "aitasks": [
+          {
+            "code": "meleeattack",
+            "enabledByType": {
+              "*-arapaima-*": true,
+              "*-piranha-*": true,
+              "*-pike-*": true,
+              "*-sheatfish-*": true,
+              "*": false
+            },
+            "entityCodes": [ "player" ],
+            "priority": 5.2,
+            "executionChance": 0.01,
+            "minDistByType": { "*-piranha-*": 8.0 },
+            "damageByType": {
+              "*-arapaima-gigas-*": 3,
+              "*-arapaima-*": 2,
+              "*-piranha-*": 0.5
+            },
+            "whenSwimming": true,
+            "animation": "rising-eat",
+            "animationSpeed": 2
+          },
+          {
+            "code": "meleeattack",
+            "enabledByType": {
+              "*-piranha-red-*": true,
+              "*": false
+            },
+            "entityCodes": [ "player" ],
+            "priority": 5.1,
+            "executionChance": 0.1,
+            "minTargetInjury": 0.5,
+            "minDist": 8.0,
+            "damage": 0.5,
+            "whenSwimming": true,
+            "animation": "rising-eat",
+            "animationSpeed": 2
+          },
+          {
+            "code": "fleeentity",
+            "id": "fleecreature",
+            "entityCodes": [ "player", "wolf-*", "fox-*", "hyena-*" ],
+            "priority": 2,
+            "whenSwimming": true,
+            "fleeDurationMs": 10000,
+            "fleeingDistance": 23,
+            "movespeed": 0.06,
+            "seekingRange": 14,
+            "animation": "swimfast",
+            "animationSpeed": 2.3
+          },
+          {
+            "code": "seekbobber",
+            "id": "seekbobber",
+            "entityCodes": [ "bobber-*" ],
+            "searchType": "Inanimate",
+            "targetOnlyInteractableEntities": false,
+            "priority": 1.8,
+            "whenSwimming": true,
+            "seekingRange": 20,
+            "movespeed": 0.01,
+            "animation": "swim",
+            "animationSpeed": 2
+          },
+          {
+            // This task is started through code in EntityBobber
+            "code": "fleeentity",
+            "id": "fleebobber",
+            "entityCodes": [ "bobber-*" ],
+            "priority": -1,
+            "priorityForCancel": 2,
+            "whenSwimming": true,
+            "fleeDurationMs": 10000,
+            "fleeingDistance": 30,
+            "movespeed": 0.06,
+            "seekingRange": 14,
+            "animation": "swimfast",
+            "animationSpeed": 2.3
+          },
+          {
+            "code": "wander",
+            "priority": 1.2,
+            "priorityForCancel": 1.35,
+            "movespeed": 0.005,
+            "animation": "swim"
+          },
+          {
+            "code": "fishmovefast",
+            "priority": 0.8,
+            "priorityForCancel": 1.5,
+            "movespeed": 0.045,
+            "animation": "swimfast"
+          },
+          {
+            "code": "idle",
+            "priority": 0.9,
+            "priorityForCancel": 1.5,
+            "minduration": 1000,
+            "maxduration": 6000,
+            "mincooldown": 2000,
+            "maxcooldown": 20000,
+            "animation": "idle"
+          },
+          {
+            "code": "idle",
+            "priority": 0.9,
+            "minduration": 500,
+            "maxduration": 1000,
+            "mincooldown": 2000,
+            "maxcooldown": 30000,
+            "animation": "idle"
+          }
+        ]
+      }
+    ],
+    "spawnconditions": {
+      "worldgen": {
+        "TriesPerChunk": {
+          "avg": 0.05,
+          "var": 0
+        },
+        "tryOnlySurface": true,
+        "minLightLevel": 3,
+        "groupSize": {
+          "dist": "verynarrowgaussian",
+          "avg": 2,
+          "var": 3
+        },
+        "insideBlockCodes": [ "water-still-7" ]
+      },
+      "runtime": {
+        "group": "passive",
+        "maxQuantityByGroup": {
+          "code": "fish-freshwater-{type}-*",
+          "maxQuantity": 4
+        },
+        "chance": 0.0001,
+        "tryOnlySurface": true,
+        "minLightLevel": 3,
+        "groupSize": {
+          "dist": "verynarrowgaussian",
+          "avg": 2,
+          "var": 3
+        },
+        "insideBlockCodes": [ "water-still-7" ]
+
+      },
+      "climate": {
+        "randomMapCodePool": [ "fish1", "fish2", "fish3", "fish4", "fish5", "fish6", "fish7", "fish8", "fish9" ],
+        "minTempByType": {
+          "fish-freshwater-alewife-*": -25,
+          "fish-freshwater-chub-*": -25,
+          "fish-freshwater-salmon-*": -25,
+          "fish-freshwater-trout-*": -20,
+          "fish-freshwater-walleye-*": -17,
+          "fish-freshwater-catfish-channel-*": -16,
+          "fish-freshwater-pike-*": -15,
+          "fish-freshwater-perch-*": -13,
+          "fish-freshwater-crappie-*": -10,
+          "fish-freshwater-sheatfish-*": -5,
+          "fish-freshwater-carp-common-*": -5,
+          "fish-freshwater-catfish-blue-*": -3,
+          "fish-freshwater-carp-grass-*": -2,
+          "fish-freshwater-bass-*": -1,
+          "fish-freshwater-tilapia-*": 26,
+          "fish-freshwater-piranha-*": 28,
+          "fish-freshwater-arapaima-*": 30,
+          "*": 0
+        },
+        "maxTempByType": {
+          "fish-freshwater-salmon-*": 0,
+          "fish-freshwater-trout-*": 3,
+          "fish-freshwater-carp-common-*": 12,
+          "fish-freshwater-walleye-*": 15,
+          "fish-freshwater-carp-grass-*": 16,
+          "fish-freshwater-perch-*": 17,
+          "fish-freshwater-catfish-channel-*": 19,
+          "fish-freshwater-crappie-*": 20,
+          "fish-freshwater-sheatfish-*": 20,
+          "fish-freshwater-bass-*": 21,
+          "fish-freshwater-pickerel-*": 23,
+          "fish-freshwater-catfish-blue-*": 24,
+          "fish-freshwater-pike-*": 25,
+          "*": 40
+        },
+        "minYByType": {
+          "@fish-freshwater-(catfish|sheatfish|walleye)-.*": 0.7,
+          "@fish-freshwater-(crappie|perch|trout)-.*": 0.9,
+          "*": 0.8
+        },
+        "maxYByType": {
+          "@fish-freshwater-(catfish|sheatfish|walleye)-.*": 0.9,
+          "*": 1.0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "code": "corruptcobblestonefan",
+  "variantgroups": [
+    {
+      "code": "rock",
+      "states": [ "granite", "andesite", "basalt", "bauxite", "chalk", "chert", "claystone", "conglomerate", "kimberlite", "limestone", "mixed", "peridotite", "phyllite", "sandstone", "shale", "slate", "suevite", "greenmarble", "redmarble", "whitemarble" ]
+    },
+    {
+      "code": "side",
+      "loadFromProperties": "game:abstract/horizontalorientation"
+    }
+  ],
+  "behaviors": [ { "name": "HorizontalOrientable" } ],
+  "attributes": {
+    "isCorrupt": true,
+    "mapColorCode": "settlement",
+    "handbook": {
+      "groupBy": [ "cobblestonefan-*-north" ]
+    }
+  },
+  "creativeinventory": {
+    "general": [ "cobblestonefan-*-north" ],
+    "construction": [ "cobblestonefan-*-north" ]
+  },
+  "shape": {
+    "base": "game:block/basic/cube"
+  },
+  "drawtype": "cube",
+  "blockmaterial": "Stone",
+  "texturesByType": {
+    "*-north": {
+      "all": {
+        "base": "game:block/stone/cobblestone/fanned/{rock}1",
+        "rotation": 180,
+        "tiles": [
+          { "base": "game:block/stone/cobblestone/fanned/{rock}*" }
+        ],
+        "tilesWidth": 2
+      }
+    },
+    "*-south": {
+      "all": {
+        "base": "game:block/stone/cobblestone/fanned/{rock}1",
+        "rotation": 0,
+        "tiles": [
+          { "base": "game:block/stone/cobblestone/fanned/{rock}*" }
+        ],
+        "tilesWidth": 2
+      }
+
+    },
+    "*-west": {
+      "all": {
+        "base": "game:block/stone/cobblestone/fanned/{rock}1",
+        "rotation": 270,
+        "tiles": [
+          { "base": "game:block/stone/cobblestone/fanned/{rock}*" }
+        ],
+        "tilesWidth": 2
+      }
+    },
+    "*-east": {
+      "all": {
+        "base": "game:block/stone/cobblestone/fanned/{rock}1",
+        "rotation": 90,
+        "tiles": [
+          { "base": "game:block/stone/cobblestone/fanned/{rock}*" }
+        ],
+        "tilesWidth": 2
+      }
+    }
+  },
+  "replaceable": 140,
+  "fertility": 0,
+  "resistance": 4,
+  "sounds": {
+    "walk": "game:walk/stone",
+    "byTool": {
+      "Pickaxe": {
+        "hit": "game:block/rock-hit-pickaxe",
+        "break": "game:block/rock-break-pickaxe"
+      }
+    }
+  },
+  "heldTpIdleAnimation": "holdbothhandslarge",
+  "heldRightReadyAnimation": "heldblockready",
+  "heldTpUseAnimation": "twohandplaceblock",
+  "tpHandTransform": {
+    "translation": {
+      "x": -1.23,
+      "y": -0.91,
+      "z": -0.8
+    },
+    "rotation": {
+      "x": -2,
+      "y": 25,
+      "z": -78
+    },
+    "scale": 0.4
+  }
+}
