@@ -1,0 +1,80 @@
+{
+  "code": "corruptsandwavy",
+  "behaviors": [
+    {
+      "name": "UnstableFalling",
+      "properties": {
+        "fallSound": "game:effect/rockslide",
+        "dustIntensity": 1,
+        "fallSidewaysChance": 0.75
+      }
+    }
+  ],
+  "variantgroups": [
+    {
+      "loadFromProperties": "terrariacorruption:block/corruptrock",
+      "code": "rock"
+    }
+  ],
+  "attributes": {
+    "isCorrupt": true,
+    "handbook": { "exclude": true },
+    "mapColorCode": "desert",
+    "preventsDecay": true,
+    "allowUnstablePlacement": true,
+    "pannable": true,
+    "pannedBlock": "sand-{rock}-7"
+  },
+  "shape": { "base": "game:block/basic/cube" },
+  "textures": {
+    "all": {
+      "base": "game:block/stone/sand/wavy/{rock}1",
+      "tiles": [
+        { "base": "game:block/sandwet/{rock}*" }
+
+      ],
+      "tilesWidth": 4
+    }
+  },
+  "creativeinventory": {
+    "general": [ "*" ],
+    "terrain": [ "*" ]
+  },
+  "drops": [
+    {
+      "type": "block",
+      "code": "sand-{rock}",
+      "quantity": {
+        "avg": 1,
+        "var": 0
+      }
+    }
+  ],
+  "drawtype": "Cube",
+  "blockmaterial": "Sand",
+  "replaceable": 600,
+  "fertility": 10,
+  "resistance": 1.8,
+  "sounds": {
+    "place": "game:block/sand",
+    "break": "game:block/sand",
+    "hit": "game:block/sand",
+    "walk": "game:walk/sand"
+  },
+  "heldTpIdleAnimation": "holdbothhandslarge",
+  "heldRightReadyAnimation": "heldblockready",
+  "heldTpUseAnimation": "twohandplaceblock",
+  "tpHandTransform": {
+    "translation": {
+      "x": -1.23,
+      "y": -0.91,
+      "z": -0.8
+    },
+    "rotation": {
+      "x": -2,
+      "y": 25,
+      "z": -78
+    },
+    "scale": 0.4
+  }
+}

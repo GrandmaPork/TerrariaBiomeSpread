@@ -57,11 +57,11 @@
     "down": { "base": "game:block/soil/fert{fertility}" },
     "horizontals": {
       "base": "game:block/soil/fert{fertility}",
-      "overlays": [ "terrariacorruption:block/plant/grasscoverage/inventory/corrupt_side_{grasscoverage}" ] //9340bf
+      "overlays": [ "block/plant/grasscoverage/inventory/grass-side-{grasscoverage}" ] //9340bf
     },
     "up": {
       "base": "game:block/soil/fert{fertility}",
-      "overlays": [ "terrariacorruption:block/plant/grasscoverage/inventory/corrupt_top_{grasscoverage}" ]
+      "overlays": [ "block/plant/grasscoverage/inventory/grass-top-{grasscoverage}" ]
     }
   },
   "climateColorMapByType": {

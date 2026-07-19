@@ -13,7 +13,7 @@
     "general": [ "*" ],
     "aquatic": [ "*" ]
   },
-  "shape": { "base": "block/aquatic/plant/bladderwrack*" },
+  "shape": { "base": "game:block/aquatic/plant/bladderwrack*" },
   "randomizeRotations": true,
   "randomDrawOffset": true,
   "texturesByType": {

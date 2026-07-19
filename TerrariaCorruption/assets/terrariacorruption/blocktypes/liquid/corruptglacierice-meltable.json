@@ -1,0 +1,60 @@
+{
+	"code": "corruptice",
+	"class": "BlockLakeIce",
+	"attributes": {
+		"stayIceWhenBroken": true
+	},
+	"variantgroups": [
+		{
+			"code": "type",
+			"states": [ "glacier", "packedglacier" ]
+		}
+	],
+	"shape": { "base": "game:block/basic/cube-nozfight" },
+	"textures": {
+		"all": { "base": "block/liquid/ice/{type}*" }
+	},
+	"renderpassByType": {
+		"ice-glacier": "transparent",
+		"*": "opaque"
+	},
+	"creativeinventory": {
+		"general": [ "" ],
+		"terrain": [ "" ]
+	},
+	"blockmaterial": "Ice",
+	"faceCullModeByType": {
+		"ice-glacier": "Callback"
+	},
+	"replaceable": 950,
+	"lightAbsorption": 0,
+	"vertexFlagsByType": {
+		"ice-glacier": {
+			"zOffset": 4,
+			"glowLevel": 16
+		}
+	},
+	"resistance": 0.5,
+	"sideopaqueByType": {
+		"ice-glacier": { "all": false },
+		"*": { "all": true }
+	},
+	"dragMultiplier": 0.02,
+	"materialDensity": 800,
+	"heldTpIdleAnimation": "holdbothhandslarge",
+	"heldRightReadyAnimation": "heldblockready",
+	"heldTpUseAnimation": "twohandplaceblock",
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.23,
+			"y": -0.91,
+			"z": -0.8
+		},
+		"rotation": {
+			"x": -2,
+			"y": 25,
+			"z": -78
+		},
+		"scale": 0.4
+	}
+}

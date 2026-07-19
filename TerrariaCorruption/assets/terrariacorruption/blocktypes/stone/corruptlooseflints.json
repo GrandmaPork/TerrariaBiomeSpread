@@ -1,0 +1,122 @@
+{
+	"code": "corruptlooseflints",
+	"class": "BlockLooseStones",
+	"behaviors": [
+		{ "name": "UnstableFalling" },
+		{
+			"name": "RightClickPickup",
+			"properties": {
+				"dropsPickupMode": true,
+				"sound": "game:sounds/block/loosestone"
+			}
+		}
+	],
+	"variantgroups": [
+		{ "loadFromProperties": "terrariacorruption:block/corruptrockwithdeposit" },
+		{
+			"code": "cover",
+			"states": [ "free", "water", "ice", "snow" ]
+		}
+	],
+	"creativeinventory": {
+		"general": [ "*-free" ],
+		"terrain": [ "*-free" ]
+	},
+	"doNotRenderAtLod2": true,
+	"shapeByType": {
+		"*-snow": {
+			"base": "game:block/stone/groundflint/{cover}*",
+			"alternates": [
+				{ "rotateY": 90 },
+				{ "rotateY": 180 },
+				{ "rotateY": 270 }
+			]
+		},
+		"*": {
+			"base": "game:block/stone/groundflint/free*",
+			"alternates": [
+				{ "rotateY": 90 },
+				{ "rotateY": 180 },
+				{ "rotateY": 270 }
+			]
+		}
+	},
+	"attributes": {
+		"isCorrupt": true,
+		"handbook": {
+			"groupBy": [ "looseflints-*" ]
+		}
+	},
+	"drawtypeByType": {
+		"*-free": "JSON",
+		"*-snow": "JSONAndSnowLayer"
+	},
+	"replaceable": 6500,
+	"resistance": 0.15,
+	"textures": {
+		"rock": { "base": "block/stone/rock/{corruptrockwithdeposit}1" }
+	},
+	"drops": [
+		{
+			"type": "item",
+			"code": "flint",
+			"quantity": {
+				"avg": 1.3,
+				"var": 0
+			},
+			"lastDrop": true
+		}
+	],
+	"rainPermeableByType": {
+		"*-free": true,
+		"*": false
+	},
+	"sidesolid": { "all": false },
+	"sideopaqueByType": {
+		"*-snow": {
+			"all": false,
+			"down": true
+		},
+		"*": { "all": false }
+	},
+	"lightAbsorption": 0,
+	"selectionbox": {
+		"x1": 0,
+		"y1": 0,
+		"z1": 0,
+		"x2": 1,
+		"y2": 0.125,
+		"z2": 1
+	},
+	"collisionbox": null,
+	"guiTransform": {
+		"translation": {
+			"x": 0,
+			"y": 2,
+			"z": 0
+		},
+		"rotation": {
+			"x": -22.5937,
+			"y": 82,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.1,
+			"z": 0.5
+		},
+		"scale": 2.3
+	},
+	"sounds": {
+		"hit": "game:block/loosestone*",
+		"walk": "game:walk/stone*"
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.5,
+			"y": -0.9,
+			"z": -1.4
+		},
+		"scale": 0.42
+	}
+}

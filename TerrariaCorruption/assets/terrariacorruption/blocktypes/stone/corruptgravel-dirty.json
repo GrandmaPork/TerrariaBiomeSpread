@@ -1,0 +1,83 @@
+{
+	"code": "corruptdirtygravel",
+	"behaviors": [
+		{
+			"name": "UnstableFalling",
+			"properties": {
+				"fallSound": "game:effect/rockslide",
+				"dustIntensity": 1,
+				"fallSidewaysChance": 0.75
+			}
+		}
+	],
+	"variantgroups": [
+		{
+			"code": "moisture",
+			"states": [ "dry", "wet", "wetdark", "wetverydark" ]
+		},
+		{
+			"code": "type",
+			"states": [ "cracked", "plain", "stoney" ]
+		}
+	],
+	"skipVariants": [
+		"dirtygravel-wetverydark-stoney",
+		"dirtygravel-wetverydark-cracked"
+	],
+	"creativeinventory": {
+		"general": [ "*" ],
+		"terrain": [ "*" ]
+	},
+	"shape": {
+		"base": "game:block/basic/cube",
+		"alternates": [
+			{
+				"base": "game:block/basic/cube",
+				"rotateY": 90
+			},
+			{
+				"base": "game:block/basic/cube",
+				"rotateY": 180
+			},
+			{
+				"base": "game:block/basic/cube",
+				"rotateY": 270
+			}
+		]
+	},
+	"drawtype": "json",
+	"blockmaterial": "Gravel",
+	"textures": {
+		"all": { "base": "game:block/stone/dirtygravel/{moisture}/{type}*" }
+	},
+	"attributes": {
+		"mapColorCode": "desert",
+		"preventsDecay": true,
+		"allowUnstablePlacement": true
+	},
+	"replaceable": 400,
+	"fertility": 5,
+	"resistance": 2.4,
+	"sounds": {
+		"place": "game:block/gravel",
+		"break": "game:block/gravel",
+		"hit": "game:block/gravel",
+		"walk": "game:walk/gravel"
+	},
+	"heldTpIdleAnimation": "holdbothhandslarge",
+	"heldRightReadyAnimation": "heldblockready",
+	"heldTpUseAnimation": "twohandplaceblock",
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.23,
+			"y": -0.91,
+			"z": -0.8
+		},
+		"rotation": {
+			"x": -2,
+			"y": 25,
+			"z": -78
+		},
+		"scale": 0.4
+	}
+}

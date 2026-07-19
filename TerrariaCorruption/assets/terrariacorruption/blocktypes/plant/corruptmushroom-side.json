@@ -1,0 +1,316 @@
+{
+	"code": "corruptmushroom",
+	"class": "BlockMushroom",
+	"variantgroups": [
+		{ "loadFromProperties": "game:block/mushroom" },
+		{
+			"code": "state",
+			"states": [ "normal", "harvested" ]
+		},
+		{
+			"code": "side",
+			"loadFromProperties": "game:abstract/horizontalorientation"
+		}
+	],
+	"behaviors": [
+		{
+			"name": "HorizontalAttachable",
+			"properties": { "handleDrops": false }
+		}
+	],
+	"allowedVariants": [
+		"mushroom-beardedtooth-*",
+		"mushroom-chickenofthewoods-*",
+		"mushroom-dryadsaddle-*",
+		"mushroom-pinkoyster-*",
+		"mushroom-tinderhoof-*",
+		"mushroom-whiteoyster-*",
+		"mushroom-reishi-*",
+		"mushroom-funeralbell-*",
+		"mushroom-deerear-*",
+		"mushroom-livermushroom-*",
+		"mushroom-pinkbonnet-*",
+		"mushroom-shiitake-*"
+	],
+	"attributes": {
+		"mushroomProps": {
+			"dieWhenTempBelowByType": {
+				"*-tinderhoof-*": -99,
+				"*": 0
+			},
+			"dieAfterFruitingByType": {
+				"*-tinderhoof-*": false,
+				"*": true
+			}
+		},
+		"forageStatAffected": true,
+		"shadeTolerant": true,
+		"nutritionPropsWhenInMeal": {
+			"satiety": 120,
+			"foodcategory": "Vegetable",
+			"healthByType": {
+				"*-funeralbell-*": -40,
+				"*-pinkbonnet-*": -10,
+				"*": 0
+			}
+		},
+		"eatHealthEffectDurationSec": 10,
+		"eatHealthEffectTicks": 10,
+		"displayedShape": { "base": "game:item/food/mushroom/{mushroom}" },
+		"inTrapTransform": {
+			"small": {
+				"translation": {
+					"x": -0.15,
+					"y": 0.08,
+					"z": -0.05
+				},
+				"rotation": {
+					"x": 0,
+					"y": 25,
+					"z": 0
+				}
+			},
+			"large": {
+				"translation": {
+					"x": 0.05,
+					"y": 0.2,
+					"z": 0.05
+				},
+				"rotation": {
+					"x": 89,
+					"y": 2,
+					"z": -85
+				}
+			}
+		},
+		"handbook": {
+			"groupBy": [ "mushroom-*" ]
+		},
+		"displayable": {
+			"shelf": {
+				"size": {
+					"width": 4,
+					"height": 6,
+					"length": 4
+				},
+				"shape": { "base": "game:item/food/mushroom/{mushroom}" }
+			}
+		}
+	},
+	"nutritionPropsByType": {
+		"*-funeralbell-*": {
+			"satiety": 80,
+			"health": -40,
+			"foodcategory": "Vegetable"
+		},
+		"*-pinkbonnet-*": {
+			"satiety": 80,
+			"health": -10,
+			"foodcategory": "Vegetable"
+		},
+		"*": {
+			"satiety": 80,
+			"health": 0,
+			"foodcategory": "Vegetable"
+		}
+	},
+	"creativeinventory": {
+		"general": [ "*-normal-north" ],
+		"flora": [ "*-normal-north" ]
+	},
+	"drawtype": "JSON",
+	"shapeByType": {
+		"*-north": {
+			"base": "game:block/plant/mushroom/{mushroom}/{state}*",
+			"rotateY": 180
+		},
+		"*-east": {
+			"base": "game:block/plant/mushroom/{mushroom}/{state}*",
+			"rotateY": 90
+		},
+		"*-south": {
+			"base": "game:block/plant/mushroom/{mushroom}/{state}*",
+			"rotateY": 0
+		},
+		"*-west": {
+			"base": "game:block/plant/mushroom/{mushroom}/{state}*",
+			"rotateY": 270
+		}
+	},
+	"shapeInventory": { "base": "game:item/food/mushroom/{mushroom}" },
+	"doNotRenderAtLod2": true,
+	"blockmaterial": "Plant",
+	"sideopaqueByType": {
+		"*": { "all": false }
+	},
+	"sidesolid": {
+		"all": false
+	},
+	"replaceable": 3000,
+	"lightAbsorption": 0,
+	"resistance": 1.5,
+	"collisionbox": null,
+	"selectionBox": {
+		"x1": 0.125,
+		"y1": 0.125,
+		"z1": 0.625,
+		"x2": 0.875,
+		"y2": 0.875,
+		"z2": 1,
+		"rotateYByType": {
+			"*-north": 180,
+			"*-east": 90,
+			"*-south": 0,
+			"*-west": 270
+		}
+	},
+	"guiTransformByType": {
+		"mushroom-reishi-*": {
+			"rotation": {
+				"x": -22,
+				"y": -78,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5,
+				"y": 0.13,
+				"z": 0.47
+			},
+			"scale": 3
+		},
+		"mushroom-tinderhoof-*": {
+			"rotation": {
+				"x": -22,
+				"y": -133,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.49,
+				"y": 0.13,
+				"z": 0.5
+			},
+			"scale": 3
+		},
+		"mushroom-dryadsaddle-*": {
+			"rotation": {
+				"x": -9,
+				"y": -62,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5,
+				"y": 0.12,
+				"z": 0.5
+			},
+			"scale": 3
+		},
+		"mushroom-beardedtooth-*": {
+			"rotation": {
+				"x": -22,
+				"y": 107,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5,
+				"y": 0.13,
+				"z": 0.5
+			},
+			"scale": 3
+		},
+		"mushroom-deerear-*": {
+			"rotation": {
+				"x": -22,
+				"y": 43,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5,
+				"y": 0.08,
+				"z": 0.5
+			},
+			"scale": 4.08
+		},
+		"mushroom-pinkbonnet-*": {
+			"rotation": {
+				"x": -22,
+				"y": 107,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5,
+				"y": 0.14,
+				"z": 0.5
+			},
+			"scale": 4.53
+		},
+		"*": {
+			"rotation": {
+				"x": -22,
+				"y": 107,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5,
+				"y": 0.2,
+				"z": 0.5
+			},
+			"scale": 3
+		}
+	},
+	"groundTransform": {
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 5
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -0.93,
+			"y": -0.17,
+			"z": -0.8
+		},
+		"rotation": {
+			"x": 15,
+			"y": -10,
+			"z": -114
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.1,
+			"z": 0.5
+		},
+		"scale": 0.58
+	},
+	"sounds": {
+		"place": "game:block/plant",
+		"break": "game:block/plant",
+		"hit": "game:block/plant"
+	},
+	"rainPermeable": true,
+	"transitionableProps": [
+		{
+			"type": "Perish",
+			"freshHours": { "avg": 432 },
+			"transitionHours": { "avg": 72 },
+			"transitionedStack": {
+				"type": "item",
+				"code": "rot"
+			},
+			"transitionRatio": 1
+		}
+	],
+	"materialDensity": 200,
+	"frostable": true,
+	"drops": [
+		{
+			"type": "block",
+			"code": "mushroom-{mushroom}-normal-north",
+			"quantity": {
+				"avg": 1,
+				"var": 0
+			}
+		}
+	]
+}

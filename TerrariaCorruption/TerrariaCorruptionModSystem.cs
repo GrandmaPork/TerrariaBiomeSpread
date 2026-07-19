@@ -72,6 +72,9 @@ namespace TerrariaCorruption
             //api.RegisterBlockClass(Mod.Info.ModID + ".corruptfallenleaves", typeof(Blocks.BlockCorruptLeaves));
             //api.RegisterBlockClass(Mod.Info.ModID + ".corruptleavesnarrow", typeof(Blocks.BlockCorruptLeaves));
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptleaves", typeof(Blocks.BlockCorruptLeaves));
+            api.RegisterBlockClass(Mod.Info.ModID + ".corruptwater", typeof(Blocks.BlockCorruptWater));
+
+            //api.RegisterEntityClass(Mod.Info.ModID + ".entityairborne", typeof(Entities.EntityAirborne));
         }
         public override void StartClientSide(ICoreClientAPI api)
         {
@@ -124,18 +127,5 @@ namespace TerrariaCorruption
                 world.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
             }
         }
-        //public Block GetCorruptedBlock(IWorldAccessor world, BlockPos pos, object extra = null)
-        //{
-        //    BlockPos victim = pos.AddCopy(rnd.Next(-1, 2), rnd.Next(-1, 2), rnd.Next(-1, 2));
-        //    Block targetBlock = world.BlockAccessor.GetBlock(victim);
-        //    string changePath = "corrupt" + targetBlock.Code.Path;
-
-        //    AssetLocation changeCode = new AssetLocation("terrariacorruption", changePath);
-
-        //    Block corruptBlock = world.GetBlock(changeCode);
-        //    if (corruptBlock == null) return;
-
-        //    return changeCode;
-        //}
     }
 }

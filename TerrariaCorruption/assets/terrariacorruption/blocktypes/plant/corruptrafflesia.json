@@ -1,0 +1,61 @@
+{
+	"code": "corruptflower",
+	"class": "BlockPlant",
+	"behaviors": [ { "name": "DropNotSnowCovered" } ],
+	"variantgroups": [
+		{
+			"code": "type",
+			"states": [ "rafflesia" ]
+		},
+		{
+			"code": "color",
+			"states": [ "brown", "red" ]
+		}
+	],
+	"attributes": {
+		"butterflyFeed": false,
+		"beeFeed": false
+	},
+	"creativeinventory": {
+		"general": [ "*" ],
+		"flora": [ "*" ]
+	},
+	"renderpass": "OpaqueNoCull",
+	"drawtype": "JSON",
+	"shape": { "base": "game:block/plant/rafflesia/{color}" },
+	"randomDrawOffset": true,
+	"randomizeRotations": true,
+	"randomizeAxes": "xz",
+	"randomSizeAdjust": 0.1,
+	"blockmaterial": "Plant",
+	"sideopaque": {
+		"all": false
+	},
+	"sidesolid": {
+		"all": false
+	},
+	"replaceable": 3000,
+	"lightAbsorption": 0,
+	"resistance": 0.5,
+	"collisionbox": null,
+	"selectionbox": {
+		"x1": 0.125,
+		"y1": 0,
+		"z1": 0.125,
+		"x2": 0.875,
+		"y2": 0.25,
+		"z2": 0.875
+	},
+	"sounds": {
+		"place": "game:block/plant",
+		"break": "game:block/plant",
+		"hit": "game:block/plant"
+	},
+	"rainPermeable": false,
+	"materialDensity": 200,
+	"combustibleProps": {
+		"burnTemperature": 600,
+		"burnDuration": 5
+	},
+	"frostable": true
+}

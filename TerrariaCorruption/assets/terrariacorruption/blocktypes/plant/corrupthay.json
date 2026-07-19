@@ -1,0 +1,96 @@
+{
+	"code": "corrupthay",
+	"shape": { "base": "game:block/basic/cube" },
+	"drawtype": "cube",
+	"attributes": {
+		"foodTags": [ "grass" ],
+		"handbook": {
+		},
+		"inBarrelShape": "game:block/wood/barrel/contents-grass",
+		"inCrateShape": "game:block/wood/crate/contents-grass"
+	},
+	"behaviors": [ { "name": "Pillar" } ],
+	"variantgroups": [
+		{
+			"code": "type",
+			"states": [ "normal", "aged" ]
+		},
+		{
+			"code": "rotation",
+			"states": [ "ud", "ns", "we" ]
+		}
+	],
+	"creativeinventory": {
+		"general": [ "*-ud" ],
+		"construction": [ "*-ud" ],
+		"flora": [ "*-ud" ],
+		"decorative": [ "*-ud" ]
+	},
+	"blockmaterial": "Plant",
+	"replaceable": 900,
+	"lightAbsorption": 99,
+	"texturesByType": {
+		"*-ud": {
+			"horizontals": { "base": "game:block/hay/{type}-side" },
+			"verticals": { "base": "game:block/hay/{type}-top" }
+		},
+		"*-ns": {
+			"all": {
+				"base": "game:block/hay/{type}-side",
+				"rotation": 90
+			},
+			"west": {
+				"base": "game:block/hay/{type}-side",
+				"rotation": 270
+			},
+			"up": { "base": "game:block/hay/{type}-side" },
+			"down": {
+				"base": "game:block/hay/{type}-side",
+				"rotation": 180
+			},
+
+			"north": { "base": "game:block/hay/{type}-top" },
+			"south": { "base": "game:block/hay/{type}-top" }
+		},
+		"*-we": {
+			"all": {
+				"base": "game:block/hay/{type}-side",
+				"rotation": 270
+			},
+			"south": {
+				"base": "game:block/hay/{type}-side",
+				"rotation": 90
+			},
+			"up": {
+				"base": "game:block/hay/{type}-side",
+				"rotation": 270
+			},
+
+			"west": { "base": "game:block/hay/{type}-top" },
+			"east": { "base": "game:block/hay/{type}-top" }
+		}
+	},
+	"resistance": 0.25,
+	"sideopaque": {
+		"all": true
+	},
+	"sounds": {
+		"place": "game:block/plant",
+		"break": "game:block/plant",
+		"hit": "game:block/plant"
+	},
+	"materialDensity": 200,
+	"combustibleProps": {
+		"burnTemperature": 600,
+		"burnDuration": 5
+	},
+	"drops": [
+		{
+			"type": "block",
+			"code": "hay-{type}-ud"
+		}
+	],
+	"heldTpIdleAnimation": "holdbothhandslarge",
+	"heldRightReadyAnimation": "heldblockready",
+	"heldTpUseAnimation": "twohandplaceblock"
+}
