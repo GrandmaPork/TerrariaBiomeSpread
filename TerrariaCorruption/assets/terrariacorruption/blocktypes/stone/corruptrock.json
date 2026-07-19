@@ -58,7 +58,7 @@
   "drawtype": "cube",
   "replaceable": 90,
   "resistance": 8,
-  "requiredMiningTier": 2,
+  "requiredMiningTier": 3,
   "fertility": 0,
   "texturesByType": {
     "corruptrock-*": {

@@ -48,11 +48,11 @@
     "down": { "base": "game:block/soil/peat" },
     "horizontals": {
       "base": "game:block/soil/peat",
-      "overlays": [ "block/plant/grasscoverage/inventory/corrupt_side_{grasscoverage}" ]
+      "overlays": [ "block/plant/grasscoverage/inventory/grass-side-{grasscoverage}" ]
     },
     "up": {
       "base": "game:block/soil/peat",
-      "overlays": [ "block/plant/grasscoverage/inventory/corrupt_top_{grasscoverage}" ]
+      "overlays": [ "block/plant/grasscoverage/inventory/grass-top-{grasscoverage}" ]
     }
   },
   "climateColorMapByType": {

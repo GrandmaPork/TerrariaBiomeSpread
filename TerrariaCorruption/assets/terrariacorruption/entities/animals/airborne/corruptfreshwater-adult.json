@@ -60,6 +60,7 @@
     }
   ],
   "attributes": {
+    "isCorrupt": true,
     "handbook": {
       "groupcode": "creaturegroup-fish-freshwater"
     },
@@ -73,7 +74,7 @@
   "client": {
     "renderer": "Shape",
     "size": 1,
-    "shape": { "base": "entity/animal/fish/freshwater/{type}-{age}" },
+    "shape": { "base": "game:entity/animal/fish/freshwater/{type}-{age}" },
     "texture": { "base": "game:entity/animal/fish/freshwater/{type}-{species}-{age}*" },
     "behaviors": [
       { "code": "repulseagents" },

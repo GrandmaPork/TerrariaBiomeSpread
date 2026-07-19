@@ -1,0 +1,45 @@
+{
+	"code": "corruptsilvertorchcactus",
+	"class": "BlockPlantDamageOnTouch",
+	"behaviors": [ { "name": "Unstable" } ],
+	"attributes": {
+		"sprintIntoDamage": 1,
+		"fallIntoDamageMul": 2,
+		"immuneCreatures": [ "locust-bronze", "locust-corrupt", "drifter-normal", "drifter-deep", "drifter-tainted", "drifter-nightmare", "drifter-corrupt", "drifter-doubleheaded" ],
+		"plantContainable": {
+			"smallContainer": {
+				"shape": { "base": "game:block/plant/silvertorchcactus/flowerpot/normal*" }
+			},
+			"largeContainer": {
+				"shape": { "base": "game:block/plant/silvertorchcactus/planter/normal*" }
+			}
+		}
+	},
+	"shape": {
+		"base": "game:block/plant/silvertorchcactus/normal*"
+	},
+	"textures": {
+		"silvertorch": { "base": "game:block/plant/cactus/silvertorch-*" }
+	},
+	"randomizeRotations": true,
+	"creativeinventory": {
+		"general": [ "*" ],
+		"flora": [ "*" ]
+	},
+	"blockmaterial": "Glass",
+	"replaceable": 900,
+	"lightAbsorption": 0,
+	"resistance": 0.25,
+	"sideopaque": {
+		"all": false
+	},
+	"sidesolid": { "all": false },
+	"selectionBox": {
+		"x1": 0.0625,
+		"y1": 0,
+		"z1": 0.0625,
+		"x2": 0.9375,
+		"y2": 1,
+		"z2": 0.9375
+	}
+}
