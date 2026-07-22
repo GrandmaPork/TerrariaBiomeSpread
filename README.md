@@ -27,13 +27,17 @@ To not make it tedious to purify, a machine will be used to first stop the sprea
 ## Thank you to takeothewolf! They made the following 177 textures:
 11 in: `block/liquid/ice`
 - (All 11 textures)
+
 12 in: `block/liquid/ice/alts`
 - (All 12 textures)
+  
 3 in: `block/liquid/ice/alts`
 - lake*
+
 6 in: `block/plant/grasscoverage/inventory`
 - grass-side-*
 - grass-top-*
+
 14 in: `block/plant/tallgrass/free`
 - eaten-*
 - medium-*
@@ -42,11 +46,15 @@ To not make it tedious to purify, a machine will be used to first stop the sprea
 - tall-*
 - veryshort-*
 - verytall-*
+
 1 in: `block/soil`
 - muddygravel
+
 15 in: `block/stone/gravel`
 - (all 15 textures)
+
 100 in: `block/stone/rock`
 - (all 100 textures)
+
 15 in: `block/stone/rock`
 - (all 15 textures)
