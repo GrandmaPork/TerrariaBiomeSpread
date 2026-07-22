@@ -1,5 +1,5 @@
-# !Artist needed!
-- I would prefer to focus on the programming side of things. I cannot afford to pay anyone but you would be credited for each texture you provide. 
+# Artists welcome!
+- I would prefer to focus on the programming side of things. I cannot afford to pay anyone but you would be credited for each texture you provide. This is just for those who want to contribute in their free time. Texture credits at the bottom of the page 
 
 # Overview
 
@@ -21,3 +21,32 @@ The Hallow will be the polar opposite of each biome, the landscapes will remain 
 # Purification
 
 To not make it tedious to purify, a machine will be used to first stop the spread in a large radius, then slowly purify the spread. The catch is, the evils are a cancer to the world, and cancer must be killed via chemotherapy. Here, the purification machine will kill all plants in the radius regardless of purity
+
+
+# Credits
+## Thank you to takeothewolf! They made the following 177 textures:
+11 in: `block/liquid/ice`
+- (All 11 textures)
+12 in: `block/liquid/ice/alts`
+- (All 12 textures)
+3 in: `block/liquid/ice/alts`
+- lake*
+6 in: `block/plant/grasscoverage/inventory`
+- grass-side-*
+- grass-top-*
+14 in: `block/plant/tallgrass/free`
+- eaten-*
+- medium-*
+- mediumshort-*
+- short-*
+- tall-*
+- veryshort-*
+- verytall-*
+1 in: `block/soil`
+- muddygravel
+15 in: `block/stone/gravel`
+- (all 15 textures)
+100 in: `block/stone/rock`
+- (all 100 textures)
+15 in: `block/stone/rock`
+- (all 15 textures)
