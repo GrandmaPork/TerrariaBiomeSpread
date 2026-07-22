@@ -41,7 +41,7 @@
   "drawtype": "json",
   "blockmaterial": "Gravel",
   "textures": {
-    "all": { "base": "terrariacorruption:block/stone/gravel/{corruptrock}" }
+    "all": { "base": "block/stone/gravel/{corruptrock}" }
   },
   "attributes": {
     "mapColorCode": "desert",
@@ -50,7 +50,7 @@
     "preventsDecay": true,
     "allowUnstablePlacement": true,
     "handbook": { "groupBy": [ "gravel-*" ] },
-    "inContainerTexture": { "base": "terrariacorruption:block/stone/gravel/{corruptrock}" }, //9340bf
+    "inContainerTexture": { "base": "block/stone/gravel/{corruptrock}" }, //9340bf
     "isCorrupt": true
   },
   "replaceable": 400,

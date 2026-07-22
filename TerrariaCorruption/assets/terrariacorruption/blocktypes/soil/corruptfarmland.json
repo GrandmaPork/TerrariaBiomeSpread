@@ -1,0 +1,90 @@
+{
+	"code": "corruptfarmland",
+	// BlockFarmland contains code so that placing farmland in creative mode works. 663acf
+	"class": "BlockFarmland",
+	"entityClass": "Farmland",
+	"attributes": {
+		"isCorrupt": true,
+		"mapColorCode": "settlement",
+		"debuffUnaffectedDrops": [ "seeds-*" ],
+		"liquidBarrierOnSides": [ 1.0, 1.0, 1.0, 1.0, 1.0, 1.0 ],
+		"fertilizedSound": {
+			"sound": "game:block/dirt",
+			"range": 12
+		}
+	},
+	"variantgroups": [
+		{
+			"code": "state",
+			"states": [ "dry", "moist" ]
+		},
+		{ "loadFromProperties": "game:abstract/fertility" }
+	],
+	"creativeinventory": {
+		"general": [ "farmland-dry-*" ],
+		"flora": [ "farmland-dry-" ]
+	},
+	"shape": { "base": "game:block/basic/cube-lowered" },
+	"faceCullMode": "FlushExceptTop",
+	"blockmaterial": "Soil",
+	"textures": {
+		"up": { "base": "game:block/soil/farmland/fert{fertility}-{state}" },
+		"all": { "base": "block/soil/fert{fertility}" }
+	},
+	"replaceable": 900,
+	"fertilityByType": {
+		"*-verylow": 5,
+		"*-low": 25,
+		"*-medium": 50,
+		"*-compost": 65,
+		"*-high": 80
+	},
+	"resistance": 2.5,
+	"sounds": {
+		"place": "game:block/dirt",
+		"break": "game:block/dirt",
+		"hit": "game:block/dirt",
+		"walk": "game:walk/grass"
+	},
+	"sideopaque": {
+		"all": false,
+		"down": true
+	},
+	"sidesolid": {
+		"up": false,
+		"all": true
+	},
+	"drops": [],
+	"collisionbox": {
+		"x1": 0,
+		"y1": 0,
+		"z1": 0,
+		"x2": 1,
+		"y2": 0.9375,
+		"z2": 1
+	},
+	"selectionbox": {
+		"x1": 0,
+		"y1": 0,
+		"z1": 0,
+		"x2": 1,
+		"y2": 0.9375,
+		"z2": 1
+	},
+	"heldTpIdleAnimation": "holdbothhandslarge",
+	"heldRightReadyAnimation": "heldblockready",
+	"heldTpUseAnimation": "twohandplaceblock",
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.23,
+			"y": -0.91,
+			"z": -0.8
+		},
+		"rotation": {
+			"x": -2,
+			"y": 25,
+			"z": -78
+		},
+		"scale": 0.4
+	}
+}

@@ -67,15 +67,15 @@
 
   "shape": {
     "baseByType": {
-      "*-pine": "terrariacorruption:block/plant/leaves/branchy-pine",
-      "*-redwood": "terrariacorruption:block/plant/leaves/branchy-redwood",
-      "*-birch": "terrariacorruption:block/plant/leaves/branchy-birch",
-      "*-maple": "terrariacorruption:block/plant/leaves/branchy-maple",
-      "*-oak": "terrariacorruption:block/plant/leaves/branchy-oak",
-      "*-crimsonkingmaple": "terrariacorruption:block/plant/leaves/branchy-crimsonkingmaple",
-      "*-larch": "terrariacorruption:block/plant/leaves/branchy-larch",
-      "*-kapok": "terrariacorruption:block/plant/leaves/branchy-kapok",
-      "*": "terrariacorruption:block/plant/leaves/branchy"
+      "*-pine": "block/plant/leaves/branchy-pine",
+      "*-redwood": "block/plant/leaves/branchy-redwood",
+      "*-birch": "block/plant/leaves/branchy-birch",
+      "*-maple": "block/plant/leaves/branchy-maple",
+      "*-oak": "block/plant/leaves/branchy-oak",
+      "*-crimsonkingmaple": "block/plant/leaves/branchy-crimsonkingmaple",
+      "*-larch": "block/plant/leaves/branchy-larch",
+      "*-kapok": "block/plant/leaves/branchy-kapok",
+      "*": "block/plant/leaves/branchy"
     },
     "rotateY": 10,
     "alternates": [
@@ -89,15 +89,15 @@
   },
   "lod0Shape": {
     "baseByType": {
-      "*-pine": "terrariacorruption:block/plant/leaves/branchy-pine-lod0",
-      "*-redwood": "terrariacorruption:block/plant/leaves/branchy-redwood-lod0",
-      "*-birch": "terrariacorruption:block/plant/leaves/branchy-birch-lod0",
-      "*-maple": "terrariacorruption:block/plant/leaves/branchy-maple-lod0",
-      "*-oak": "terrariacorruption:block/plant/leaves/branchy-oak-lod0",
-      "*-kapok": "terrariacorruption:block/plant/leaves/branchy-kapok-lod0",
-      "*-crimsonkingmaple": "terrariacorruption:block/plant/leaves/branchy-crimsonkingmaple-lod0",
-      "*-larch": "terrariacorruption:block/plant/leaves/branchy-larch-lod0",
-      "*": "terrariacorruption:block/plant/leaves/branchy-lod0"
+      "*-pine":             "block/plant/leaves/branchy-pine-lod0",
+      "*-redwood":          "block/plant/leaves/branchy-redwood-lod0",
+      "*-birch":            "block/plant/leaves/branchy-birch-lod0",
+      "*-maple":            "block/plant/leaves/branchy-maple-lod0",
+      "*-oak":              "block/plant/leaves/branchy-oak-lod0",
+      "*-kapok":            "block/plant/leaves/branchy-kapok-lod0",
+      "*-crimsonkingmaple": "block/plant/leaves/branchy-crimsonkingmaple-lod0",
+      "*-larch":            "block/plant/leaves/branchy-larch-lod0",
+      "*":                  "block/plant/leaves/branchy-lod0"
     },
     "rotateY": 10,
     "alternates": [
@@ -111,9 +111,9 @@
   },
   "shapeInventory": {
     "baseByType": {
-      "*-redwood": "terrariacorruption:block/plant/leaves/branchy-redwood-lod0",
-      "*-crimsonkingmaple": "terrariacorruption:block/plant/leaves/branchy-crimsonkingmaple-lod0",
-      "*": "terrariacorruption:block/plant/leaves/branchy-lod0"
+      "*-redwood":          "block/plant/leaves/branchy-redwood-lod0",
+      "*-crimsonkingmaple": "block/plant/leaves/branchy-crimsonkingmaple-lod0",
+      "*":                  "block/plant/leaves/branchy-lod0"
     }
   },
   "renderpass": "OpaqueNoCull",
@@ -131,12 +131,12 @@
       "*": { "base": "game:block/plant/leaves/large/{wood}*" }
     },
     "smallleavesByType": {
-      "*-larch": { "base": "terrariacorruption:block/plant/leaves/small/pine*" },
-      "*-redwood": { "base": "terrariacorruption:block/plant/leaves/small/pine*" },
-      "*-crimsonkingmaple": { "base": "terrariacorruption:block/plant/leaves/small/maple*" },
-      "*": { "base": "terrariacorruption:block/plant/leaves/small/{wood}*" }
+      "*-larch": { "base": "block/plant/leaves/small/pine*" },
+      "*-redwood": { "base": "block/plant/leaves/small/pine*" },
+      "*-crimsonkingmaple": { "base": "block/plant/leaves/small/maple*" },
+      "*": { "base": "block/plant/leaves/small/{wood}*" }
     },
-    "branch": { "base": "terrariacorruption:block/plant/leaves/large/corruptbranch" }
+    "branch": { "base": "block/plant/leaves/large/corruptbranch" }
   },
   "sideopaque": {
     "all": false

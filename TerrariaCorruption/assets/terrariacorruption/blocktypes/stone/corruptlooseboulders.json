@@ -57,7 +57,7 @@
 		}
 
 	},
-	"resistance": 0.15,
+	"resistance": 0.25,
 	"textures": {
 		"rock": { "base": "block/stone/rock/{rock}1" }
 	},

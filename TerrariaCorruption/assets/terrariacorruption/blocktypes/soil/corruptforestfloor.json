@@ -12,14 +12,14 @@
     "general": [ "*" ],
     "terrain": [ "*" ]
   },
-  "shape": { "base": "block/basic/cube" },
+  "shape": { "base": "game:block/basic/cube" },
   "drawtype": "TopSoil",
   "renderpass": "TopSoil",
   "blockmaterial": "Soil",
   "textures": {
-    "up": { "base": "game:block/soil/forest/forestsoil*" },
-    "down": { "base": "game:block/soil/fertmedium" },
-    "all": { "base": "game:block/soil/forest/side" },
+    "up": { "base": "block/soil/forest/forestsoil*" },
+    "down": { "base": "block/soil/fertmedium" },
+    "all": { "base": "block/soil/forest/side" },
     "snowed": { "base": "game:block/plant/grasscoverage/snow/normal" },
     "specialSecondTextureByType": {
       "*-0": { "base": "game:block/plant/grasscoverage/none" },
@@ -33,12 +33,12 @@
     "handbook": { "exclude": true }
   },
   "texturesInventory": {
-    "all": { "base": "game:block/soil/forest/side" },
+    "all": { "base": "block/soil/forest/side" },
     "up": {
-      "base": "game:block/soil/forest/forestsoil11",
+      "base": "block/soil/forest/forestsoil11",
       "overlaysByType": {
         "*-0": [],
-        "*": [ "game:block/soil/forest/inventory/top{grass}" ]
+        "*": [ "block/soil/forest/inventory/top{grass}" ]
       }
     }
   },
