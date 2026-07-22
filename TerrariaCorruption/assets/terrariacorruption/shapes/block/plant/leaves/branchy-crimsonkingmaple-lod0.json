@@ -12,7 +12,7 @@
 	},
 	"textures": {
 		"largeleaves": "game:block/plant/leaves/large/oak1",
-		"branch": "terrariacorruption:block/plant/leaves/large/corruptbranch"
+		"branch": "block/plant/leaves/large/corruptbranch"
 	},
 	"elements": [
 		{
@@ -142,7 +142,7 @@
 					"shade": false,
 					"gradientShade": true,
 					"climateColorMap": "climateCorruptCrimsonKingTint",
-					"seasonColorMap": "seasonalCrimsonKingMaple",
+					"seasonColorMap": "seasonalCorruptAlternate",
 					"rotationOrigin": [ 8.0, 8.0, 8.0 ],
 					"rotationX": 0.57,
 					"rotationY": -67.5,
@@ -185,8 +185,8 @@
 					"to": [ 24.0, 24.0, 8.0 ],
 					"shade": false,
 					"gradientShade": true,
-					"climateColorMap": "climateCrimsonKingTint",
-					"seasonColorMap": "seasonalCrimsonKingMaple",
+					"climateColorMap": "climateCorruptCrimsonKingTint",
+					"seasonColorMap": "seasonalCorruptAlternate",
 					"rotationOrigin": [ 8.0, 8.0, 8.0 ],
 					"rotationX": 0.21,
 					"rotationY": 22.5,

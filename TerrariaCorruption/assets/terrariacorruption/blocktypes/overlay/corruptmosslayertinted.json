@@ -1,0 +1,66 @@
+{
+	"code": "corruptmosslayertinted",
+	"behaviors": [
+		{
+			"name": "Decor",
+			"properties": {
+				"sides": [ "north", "east", "south", "west", "up", "down" ],
+				"notFullFace": true,
+				"canAttachToAnything": true,
+				"thickness": 0.0
+			}
+		}
+	],
+	"variantgroups": [
+		{
+			"code": "cover",
+			"states": [ "full", "patchy", "shortside", "longside", "transparent" ]
+		}
+	],
+	"attributes": {
+		"isCorrupt": true,
+		"handbook": {
+			"exclude": true
+		},
+		"ignoreSounds": true
+	},
+	"renderPass": "Decor",
+	"drawtype": "surfacelayer",
+	"doNotRenderAtLod2": true,
+	"shapeInventory": {
+		"base": "game:block/basic/layers/0voxel-up",
+		"rotateX": 90
+	},
+	"sidesolid": { "all": false },
+	"sideopaque": { "all": false },
+	"blockmaterial": "Plant",
+	"creativeinventory": {
+		"general": [ "*" ],
+		"flora": [ "*" ]
+	},
+	"replaceable": 5500,
+	"resistance": 0,
+	"lightAbsorption": 0,
+	"textures": {
+		"all": { "base": "game:block/overlay/tintedmoss/{cover}*" }
+	},
+	"climateColorMap": "climateCorruptDarkerPlantTint",
+	"seasonColorMap": "seasonalCorruptMoss",
+	"vertexflags": {
+		"zOffset": 1
+	},
+	"drops": [],
+	"combustibleProps": {
+		"burnTemperature": 150,
+		"burnDuration": 2
+	},
+	"guiTransform": {
+		"origin": {
+			"x": 0.5,
+			"y": 0.5,
+			"z": 0
+		}
+	},
+	"materialDensity": 400,
+	"frostable": true
+}

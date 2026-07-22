@@ -7,7 +7,7 @@
 		{ "name": "Unstable" }
 	],
 	"entityClassByType": {
-		"fruitingbush-wild-*": "WildFruitingBush",
+		"corruptfruitingbush-wild-*": "WildFruitingBush",
 		"*": "Generic"
 	},
 	"entityBehaviors": [
@@ -38,7 +38,7 @@
 		"textureVariantsByType": {
 			"*": 3
 		},
-		"cuttingBlockCode": "fruitingbushcutting-{type}-free",
+		"cuttingBlockCode": "corruptfruitingbushcutting-{type}-free",
 		"growthProperties": {
 			"pauseGrowthBelowTemperature": 4,
 			"pauseGrowthAboveTemperature": 30,
@@ -53,7 +53,7 @@
 				"*": 15
 			},
 			"nutrientUseByHealthStateByType": {
-				"fruitingbush-grown-cloudberry-*": {
+				"corruptfruitingbush-grown-cloudberry-*": {
 					"bountiful": {
 						"n": 5,
 						"p": 5,
@@ -75,7 +75,7 @@
 						"k": 0.5
 					}
 				},
-				"fruitingbush-grown-strawberry-*": {
+				"corruptfruitingbush-grown-strawberry-*": {
 					"bountiful": {
 						"n": 5,
 						"p": 5,
@@ -493,7 +493,7 @@
 		"allowOverlays": false
 	},
 	"shapeByType": {
-		"@fruitingbush-grown-(cloudberry|cranberry|strawberry)-.*": {
+		"@corruptfruitingbush-grown-(cloudberry|cranberry|strawberry)-.*": {
 			"base": "game:block/plant/berrybush/berrybush-small*",
 			"selectiveElements": [ "Stem/*", "Leaves/*" ],
 			"alternates": [
@@ -505,7 +505,7 @@
 				{ "rotateY": 310 }
 			]
 		},
-		"@fruitingbush-wild-(cloudberry|cranberry|strawberry)-.*": {
+		"@corruptfruitingbush-wild-(cloudberry|cranberry|strawberry)-.*": {
 			"base": "game:block/plant/berrybush/berrybush-small*",
 			"selectiveElements": [ "Stem/*", "Leaves/*" ],
 			"alternates": [
@@ -517,7 +517,7 @@
 				{ "rotateY": 310 }
 			]
 		},
-		"fruitingbush-grown-beautyberry-*": {
+		"corruptfruitingbush-grown-beautyberry-*": {
 			"base": "game:block/plant/berrybush/berrybush-large*",
 			"selectiveElements": [ "Stem/*", "Leaves/*" ],
 			"alternates": [
@@ -529,7 +529,7 @@
 				{ "rotateY": 310 }
 			]
 		},
-		"fruitingbush-wild-beautyberry-*": {
+		"corruptfruitingbush-wild-beautyberry-*": {
 			"base": "game:block/plant/berrybush/berrybush-large*",
 			"selectiveElements": [ "Stem/*", "Leaves/*" ],
 			"alternates": [
@@ -541,7 +541,7 @@
 				{ "rotateY": 310 }
 			]
 		},
-		"fruitingbush-grown-blackberry-*": {
+		"corruptfruitingbush-grown-blackberry-*": {
 			"base": "game:block/plant/berrybush/berrybush-large*",
 			"selectiveElements": [ "Stem/*", "Leaves/*" ],
 			"alternates": [
@@ -553,7 +553,7 @@
 				{ "rotateY": 310 }
 			]
 		},
-		"fruitingbush-wild-blackberry-*": {
+		"corruptfruitingbush-wild-blackberry-*": {
 			"base": "game:block/plant/berrybush/berrybush-large*",
 			"selectiveElements": [ "Stem/*", "Leaves/*" ],
 			"alternates": [

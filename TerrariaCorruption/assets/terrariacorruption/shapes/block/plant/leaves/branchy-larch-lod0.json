@@ -186,7 +186,7 @@
 					"shade": false,
 					"gradientShade": true,
 					"climateColorMap": "climateCorruptPlantTint",
-					"seasonColorMap": "seasonalLarch",
+					"seasonColorMap": "seasonalCorruptAlternate",
 					"rotationOrigin": [ 8.0, 8.0, 8.0 ],
 					"rotationX": 0.21,
 					"rotationY": 22.5,

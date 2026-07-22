@@ -35,7 +35,7 @@
     "*": "particletop"
   },
   "textures": {
-    "all": { "base": "game:block/soil/fert{fertility}" },
+    "all": { "base": "block/soil/fert{fertility}" },
     "particletop": { "base": "game:block/plant/grasscoverage/normal-top" },
     "snowed": { "base": "game:block/plant/grasscoverage/snow/normal" },
     "specialSecondTexture": { "base": "game:block/plant/grasscoverage/{grasscoverage}" }
@@ -56,11 +56,11 @@
   "texturesInventory": {
     "down": { "base": "game:block/soil/fert{fertility}" },
     "horizontals": {
-      "base": "game:block/soil/fert{fertility}",
+      "base": "block/soil/fert{fertility}",
       "overlays": [ "block/plant/grasscoverage/inventory/grass-side-{grasscoverage}" ] //9340bf
     },
     "up": {
-      "base": "game:block/soil/fert{fertility}",
+      "base": ".block/soil/fert{fertility}",
       "overlays": [ "block/plant/grasscoverage/inventory/grass-top-{grasscoverage}" ]
     }
   },
