@@ -1,0 +1,185 @@
+{
+	"code": "corruptcarvedlog",
+	"class": "terrariacorruption.corruptlog",
+	"behaviors": [
+		{ "name": "Pillar" },
+		{
+			"name": "WrenchOrientable",
+			"properties": { "baseCode": "carvedlog-{wood}" }
+		}
+	],
+	"variantgroups": [
+		{
+			"code": "wood",
+			"states": [ "acacia" ]
+		},
+		{
+			"code": "age",
+			"states": [ "aged" ]
+		},
+		{
+			"code": "section",
+			"states": [ "bottom", "middle", "top" ]
+		},
+		{
+			"code": "decoration",
+			"states": [ "plain", "fancy" ]
+		},
+		{
+			"code": "rotation",
+			"states": [ "ud", "ns", "we" ]
+		}
+	],
+	"creativeinventory": {
+		"general": [ "*-ud" ],
+		"flora": [ "*-ud" ],
+		"construction": [ "*-ud" ]
+	},
+	"shape": { "base": "game:block/basic/cube" },
+	"drawtype": "cube",
+	"blockmaterial": "Wood",
+	"requiredMiningTier": 1,
+	"texturesByType": {
+		"*-ud": {
+			"all": { "base": "block/wood/carved/{wood}/{age}/{section}-{decoration}*" },
+			"verticals": { "base": "block/wood/carved/{wood}/{age}/treetrunk" },
+
+			"inside-north": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" },
+			"inside-east": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" },
+			"inside-south": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" },
+			"inside-west": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" }
+		},
+		"*-ns": {
+			"all": {
+				"base": "block/wood/carved/{wood}/{age}/{section}-{decoration}*",
+				"rotation": 0
+			},
+			"down": {
+				"base": "block/wood/carved/{wood}/{age}/{section}-{decoration}*",
+				"rotation": 180
+			},
+			"east": {
+				"base": "block/wood/carved/{wood}/{age}/{section}-{decoration}*",
+				"rotation": 90
+			},
+			"west": {
+				"base": "block/wood/carved/{wood}/{age}/{section}-{decoration}*",
+				"rotation": 270
+			},
+			"north": { "base": "block/wood/carved/{wood}/{age}/treetrunk" },
+			"south": { "base": "block/wood/carved/{wood}/{age}/treetrunk" },
+
+			"inside-north": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" },
+			"inside-east": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" },
+			"inside-south": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" },
+			"inside-west": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" }
+
+		},
+		"*-we": {
+			"all": {
+				"base": "block/wood/carved/{wood}/{age}/{section}-{decoration}*",
+				"rotation": 270
+			},
+			"verticals": {
+				"base": "block/wood/carved/{wood}/{age}/{section}-{decoration}*",
+				"rotation": 270
+			},
+			"north": {
+				"base": "block/wood/carved/{wood}/{age}/{section}-{decoration}*",
+				"rotation": 270
+			},
+			"south": {
+				"base": "block/wood/carved/{wood}/{age}/{section}-{decoration}*",
+				"rotation": 90
+			},
+			"west": { "base": "block/wood/carved/{wood}/{age}/treetrunk" },
+			"east": { "base": "block/wood/carved/{wood}/{age}/treetrunk" },
+
+			"inside-north": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" },
+			"inside-east": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" },
+			"inside-south": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" },
+			"inside-west": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" }
+		}
+	},
+	"replaceable": 500,
+	"resistance": 4.5,
+	"sounds": {
+		"place": "game:block/planks",
+		"walk": "game:walk/wood",
+		"hit": "game:block/planks",
+		"break": "game:block/planks",
+		"byTool": {
+			"Axe": {
+				"hit": "game:block/chop",
+				"break": "game:block/planks"
+			}
+		}
+	},
+	"drops": [
+		{
+			"type": "block",
+			"code": "corruptcarvedlog-{wood}-{age}-{section}-{decoration}-ud",
+			"quantity": { "avg": 1 }
+		}
+	],
+	"combustiblePropsByType": {
+		"corruptlog-*-birch-*": {
+			"burnTemperature": 800,
+			"burnDuration": 78
+		},
+		"corruptlog-*-oak-*": {
+			"burnTemperature": 800,
+			"burnDuration": 98
+		},
+		"corruptlog-*-ebony-*": {
+			"burnTemperature": 800,
+			"burnDuration": 110
+		},
+		"corruptlog-*-pine-*": {
+			"burnTemperature": 800,
+			"burnDuration": 60
+		},
+		"corruptlog-*-acacia-*": {
+			"burnTemperature": 800,
+			"burnDuration": 89
+		},
+		"corruptlog-*-kapok-*": {
+			"burnTemperature": 800,
+			"burnDuration": 47
+		},
+		"corruptlog-*-maple-*": {
+			"burnTemperature": 800,
+			"burnDuration": 79
+		},
+		"corruptlog-*-redwood-*": {
+			"burnTemperature": 800,
+			"burnDuration": 72
+		},
+		"corruptlog-*-aged-*": {
+			"burnTemperature": 700,
+			"burnDuration": 40
+		},
+		"*": {
+			"burnTemperature": 800,
+			"burnDuration": 72
+		}
+	},
+	"maxStackSize": 16,
+	"materialDensity": 700,
+	"heldTpIdleAnimation": "holdbothhandslarge",
+	"heldRightReadyAnimation": "heldblockready",
+	"heldTpUseAnimation": "twohandplaceblock",
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.23,
+			"y": -0.91,
+			"z": -0.8
+		},
+		"rotation": {
+			"x": -2,
+			"y": 25,
+			"z": -78
+		},
+		"scale": 0.4
+	}
+}

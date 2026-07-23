@@ -1,0 +1,388 @@
+{
+  "code": "corruptdoor",
+  "class": "BlockGeneric",
+  "entityClass": "Generic",
+  // Lockable behavior first so that it prevents subsequent Door behavior if it is locked
+  "behaviors": [
+    { "name": "Lockable" },
+    { "name": "Door" },
+    { "name": "BlockEntityInteract" }
+  ],
+  "entityBehaviors": [ { "name": "Door" } ],
+  "variantgroups": [
+    {
+      "code": "style",
+      "states": [ "sleek-windowed", "solid", "1x3gate", "2x2gate", "2x4gate", "2x3gate" ]
+    }
+  ],
+  "skipVariants": [
+    "corruptdoor-sleek-windowed-veryaged-*"
+  ],
+  "attributes": {
+    "isCorrupt": true,
+    "handbook": {
+      "groupBy": [ "door-{style}-*" ]
+    },
+    "widthByType": {
+      "corruptdoor-2x2gate-*": 2,
+      "corruptdoor-2x3gate-*": 2,
+      "corruptdoor-2x4gate-*": 2,
+      "*": 1
+    },
+    "heightByType": {
+      "corruptdoor-1x3gate-*": 3,
+      "corruptdoor-2x3gate-*": 3,
+      "corruptdoor-2x4gate-*": 4,
+      "*": 2
+    },
+    "openSoundByType": {
+      "corruptdoor-1x3gate-*": "game:sounds/block/largedoor-open",
+      "corruptdoor-2x4gate-*": "game:sounds/block/largedoor-open",
+      "corruptdoor-2x3gate-*": "game:sounds/block/largedoor-open",
+      "corruptdoor-2x2gate-*": "game:sounds/block/largedoor-open",
+      "*": "game:sounds/block/door"
+    },
+    "closeSoundByType": {
+      "corruptdoor-1x3gate-*": "game:sounds/block/largedoor-close",
+      "corruptdoor-2x4gate-*": "game:sounds/block/largedoor-close",
+      "corruptdoor-2x3gate-*": "game:sounds/block/largedoor-close",
+      "corruptdoor-2x2gate-*": "game:sounds/block/largedoor-close",
+      "*": "game:sounds/block/door"
+    },
+    "breakOnTriggerChanceByType": {
+      "corruptdoor-crude": 0.08
+    },
+    "easingSpeedByType": {
+      "corruptdoor-1x3gate-*": 3,
+      "corruptdoor-2x2gate-*": 2,
+      "corruptdoor-2x3gate-*": 2,
+      "corruptdoor-2x4gate-*": 1,
+
+      "*": 10
+    }
+  },
+  "creativeinventoryByType": {
+    "*": {
+      "general": [ "*" ],
+      "decorative": [ "*" ]
+    }
+  },
+  "shape": { "base": "game:block/wood/door/{style}" },
+  "texturesByType": {
+    "corruptdoor-sleek-windowed-*": {
+      "wood": { "base": "block/wood/door/sleek/ebonwood" }
+    },
+    "corruptdoor-solid-*": {
+      "wood": {
+        "base": "block/wood/debarked/{wood}",
+        "rotation": 90,
+        "blendedOverlays": [
+          {
+            "base": "game:block/wood/door/overlay-solid",
+            "blendMode": "Overlay"
+          }
+        ]
+      }
+    },
+    "corruptdoor-1x3gate-*": {
+      "wood": {
+        "base": "block/wood/debarked/{wood}",
+        "rotation": 90,
+        "blendedOverlays": [
+          {
+            "base": "game:block/wood/door/overlay-tall",
+            "blendMode": "Overlay"
+          }
+        ]
+      }
+    },
+    "corruptdoor-2x2gate-*": {
+      "wood": {
+        "base": "block/wood/debarked/{wood}",
+        "rotation": 90,
+        "blendedOverlays": [
+          {
+            "base": "game:block/wood/door/overlay-wide",
+            "blendMode": "Overlay"
+          }
+        ]
+      }
+    },
+    "corruptdoor-2x3gate-*": {
+      "wood": {
+        "base": "block/wood/debarked/{wood}",
+        "rotation": 90,
+        "blendedOverlays": [
+          {
+            "base": "game:block/wood/door/overlay-tall",
+            "blendMode": "Overlay"
+          }
+        ]
+      }
+    },
+    "corruptdoor-2x4gate-*": {
+      "wood": {
+        "base": "game:block/wood/debarked/{wood}",
+        "rotation": 90
+      }
+    }
+  },
+  // Needs to be no cull pass because for double doors we flip x coords, but indices don't change so i believe that inverts the winding order, making the graphics card believe the face is facing the other direction
+  "renderPass": "OpaqueNoCull",
+  "faceCullMode": "NeverCull",
+  "blockmaterial": "Wood",
+  "sideAo": { "all": false },
+  "heldTpIdleAnimation": "holdunderarm",
+  "replaceable": 500,
+  "resistance": 3.5,
+  "lightAbsorption": 0,
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "guiTransformByType": {
+    "corruptdoor-2x2gate-*": {
+      "origin": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "scale": 0.93
+    },
+    "corruptdoor-2x4gate-*": {
+      "origin": {
+        "x": 1,
+        "y": 2,
+        "z": 1
+      },
+      "scale": 0.73
+    },
+    "corruptdoor-1x3gate-*": {
+      "origin": {
+        "x": 0.5,
+        "y": 1.5,
+        "z": 1
+      },
+      "scale": 0.73
+    },
+    "corruptdoor-2x3gate-*": {
+      "origin": {
+        "x": 0.49,
+        "y": 1.6,
+        "z": 0.8
+      },
+      "scale": 0.73
+    },
+    "*": {
+      "origin": {
+        "x": 0.49,
+        "y": 1,
+        "z": 0.8
+      },
+      "scale": 0.73
+    }
+  },
+  "tpHandTransformByType": {
+    "corruptdoor-2x2gate-*": {
+      "translation": {
+        "x": -0.94,
+        "y": -1.42,
+        "z": -1.4
+      },
+      "rotation": {
+        "x": 13,
+        "y": 11,
+        "z": 59
+      },
+      "origin": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "scale": 0.71
+    },
+    "corruptdoor-2x4gate-*": {
+      "translation": {
+        "x": -0.84,
+        "y": -2.81,
+        "z": -1.46
+      },
+      "rotation": {
+        "x": 12,
+        "y": 11,
+        "z": 59
+      },
+      "origin": {
+        "x": 1,
+        "y": 2,
+        "z": 1
+      },
+      "scale": 0.71
+    },
+    "corruptdoor-1x3gate-*": {
+      "translation": {
+        "x": -0.44,
+        "y": -1.82,
+        "z": -1.3
+      },
+      "rotation": {
+        "x": 8,
+        "y": 11,
+        "z": 59
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 1.5,
+        "z": 1
+      },
+      "scale": 0.71
+    },
+    "corruptdoor-2x3gate-*": {
+      "translation": {
+        "x": -0.74,
+        "y": -2.32,
+        "z": -1.6
+      },
+      "rotation": {
+        "x": 8,
+        "y": -3,
+        "z": 59
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 1,
+        "z": 1
+      },
+      "scale": 0.61
+    },
+    "*": {
+      "translation": {
+        "x": -0.74,
+        "y": -1.22,
+        "z": -1.3
+      },
+      "rotation": {
+        "x": 8,
+        "y": 11,
+        "z": 59
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 1,
+        "z": 1
+      },
+      "scale": 0.71
+    }
+  },
+  "groundTransformByType": {
+    "corruptdoor-2x2gate-*": {
+      "translation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "x": -90,
+        "y": 0,
+        "z": 0
+      },
+      "origin": {
+        "x": 1,
+        "y": 1,
+        "z": 0.85
+      },
+      "scale": 3
+    },
+    "corruptdoor-2x4gate-*": {
+      "translation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "x": -90,
+        "y": 0,
+        "z": 0
+      },
+      "origin": {
+        "x": 1,
+        "y": 2,
+        "z": 0.85
+      },
+      "scale": 3
+    },
+    "corruptdoor-1x3gate-*": {
+      "translation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "x": -90,
+        "y": 0,
+        "z": 0
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 1.5,
+        "z": 0.85
+      },
+      "scale": 3
+    },
+    "*": {
+      "translation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "x": -90,
+        "y": 0,
+        "z": 0
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 1,
+        "z": 0.85
+      },
+      "scale": 3
+    }
+  },
+  "selectionbox": {
+    "x1": 0,
+    "y1": 0,
+    "z1": 0.875,
+    "x2": 1,
+    "y2": 1,
+    "z2": 1
+  },
+  "collisionbox": {
+    "x1": 0,
+    "y1": 0,
+    "z1": 0.875,
+    "x2": 1,
+    "y2": 1,
+    "z2": 1
+  },
+  "combustibleProps": {
+    "burnTemperature": 600,
+    "burnDuration": 25
+  },
+  "sounds": {
+    "place": "game:block/planks",
+    "hit": "game:block/planks",
+    "break": "game:block/planks",
+    "walk": "game:walk/wood"
+  },
+  "materialDensity": 600,
+  "dropsByType": {
+    "*-ruined-rough1": [],
+    "*-ruined-rough2": [],
+    "*-ruined-rough3": [],
+    "*-ruined-windowed1": [],
+    "*-ruined-windowed2": [],
+    "*-ruined-windowed3": []
+  }
+}

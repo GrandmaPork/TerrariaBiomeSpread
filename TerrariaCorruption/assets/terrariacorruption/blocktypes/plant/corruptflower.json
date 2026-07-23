@@ -16,36 +16,36 @@
 	"attributes": {
 		"isCorrupt": true,
 		"butterflyFeedByType": {
-			"flower-horsetail-*": false,
+			"corruptflower-horsetail-*": false,
 			"*": true
 		},
 		"beeFeedByType": {
-			"flower-horsetail-*": false,
+			"corruptflower-horsetail-*": false,
 			"*": true
 		},
 		"reinforcable": true,
 		"sitHeightByType": {
-			"flower-catmint-*": 0.8125,
-			"flower-cornflower-*": 0.6,
-			"flower-forgetmenot-*": 0.2,
-			"flower-lilyofthevalley-*": 0.2,
-			"flower-edelweiss-*": 0.46,
-			"flower-heather-*": 0.4375,
-			"flower-horsetail-*": 0.75,
-			"flower-orangemallow-*": 0.6875,
-			"flower-wilddaisy-*": 0.85,
-			"flower-westerngorse-*": 0.45,
-			"flower-cowparsley-*": 0.9375,
-			"flower-goldenpoppy-*": 0.41,
-			"flower-woad-*": 0.8125,
-			"flower-redtopgrass-*": 0.75
+			"corruptflower-catmint-*": 0.8125,
+			"corruptflower-cornflower-*": 0.6,
+			"corruptflower-forgetmenot-*": 0.2,
+			"corruptflower-lilyofthevalley-*": 0.2,
+			"corruptflower-edelweiss-*": 0.46,
+			"corruptflower-heather-*": 0.4375,
+			"corruptflower-horsetail-*": 0.75,
+			"corruptflower-orangemallow-*": 0.6875,
+			"corruptflower-wilddaisy-*": 0.85,
+			"corruptflower-westerngorse-*": 0.45,
+			"corruptflower-cowparsley-*": 0.9375,
+			"corruptflower-goldenpoppy-*": 0.41,
+			"corruptflower-woad-*": 0.8125,
+			"corruptflower-redtopgrass-*": 0.75
 		},
 		"overrideRandomDrawOffsetByType": {
-			"flower-heather-*": 3
+			"corruptflower-heather-*": 3
 		},
 		"plantContainable": {
 			"smallContainerByType": {
-				"flower-lilyofthevalley-*": {
+				"corruptflower-lilyofthevalley-*": {
 					"shape": { "base": "game:block/clay/flowerpot/contents-lilyofthevalley" }
 				},
 				"*": {
@@ -57,7 +57,7 @@
 				}
 			},
 			"largeContainerByType": {
-				"flower-lilyofthevalley-*": {
+				"corruptflower-lilyofthevalley-*": {
 					"shape": { "base": "game:block/clay/planter/contents-lilyofthevalley" }
 				},
 				"*": {
@@ -70,15 +70,15 @@
 			}
 		},
 		"drawnHeightByType": {
-			"flower-goldenpoppy-*": 32,
-			"flower-edelweiss-*": 36,
-			"flower-forgetmenot-*": 16,
-			"flower-horsetail-*": 40,
-			"flower-heather-*": 28,
-			"flower-redtopgrass-*": 38,
+			"corruptflower-goldenpoppy-*": 32,
+			"corruptflower-edelweiss-*": 36,
+			"corruptflower-forgetmenot-*": 16,
+			"corruptflower-horsetail-*": 40,
+			"corruptflower-heather-*": 28,
+			"corruptflower-redtopgrass-*": 38,
 
-			"flower-lilyofthevalley-*": 48,
-			"flower-bluebell-*": 48,
+			"corruptflower-lilyofthevalley-*": 48,
+			"corruptflower-bluebell-*": 48,
 			"*": 48
 		},
 		"allowOverlays": false
@@ -93,32 +93,32 @@
 		"*": "JSON"
 	},
 	"shapeInventoryByType": {
-		"flower-horsetail-*": { "base": "game:item/resource/horsetail" }
+		"corruptflower-horsetail-*": { "base": "game:item/resource/horsetail" }
 	},
 	"shapeByType": {
-		"flower-redtopgrass-*": { "base": "game:block/plant/flower/1patch-cross-24x24" },
-		"flower-edelweiss-*": { "base": "game:block/plant/flower/1patch-3faces-16x16" },
-		"flower-forgetmenot-*": { "base": "game:block/plant/flower/1patch-3faces-16x16" },
-		"flower-ghostpipe-*": { "base": "game:block/plant/flower/1patch-3faces-16x16" },
-		"flower-mugwort-*": { "base": "game:block/plant/flower/3patches-3faces-24x24" },
-		"flower-bluebell-*": { "base": "game:block/plant/flower/lilyofthevalley" },
-		"flower-daffodil-*": { "base": "game:block/plant/flower/lilyofthevalley" },
-		"flower-lilyofthevalley-*": { "base": "game:block/plant/flower/lilyofthevalley" },
+		"corruptflower-redtopgrass-*": { "base": "game:block/plant/flower/1patch-cross-24x24" },
+		"corruptflower-edelweiss-*": { "base": "game:block/plant/flower/1patch-3faces-16x16" },
+		"corruptflower-forgetmenot-*": { "base": "game:block/plant/flower/1patch-3faces-16x16" },
+		"corruptflower-ghostpipe-*": { "base": "game:block/plant/flower/1patch-3faces-16x16" },
+		"corruptflower-mugwort-*": { "base": "game:block/plant/flower/3patches-3faces-24x24" },
+		"corruptflower-bluebell-*": { "base": "game:block/plant/flower/lilyofthevalley" },
+		"corruptflower-daffodil-*": { "base": "game:block/plant/flower/lilyofthevalley" },
+		"corruptflower-lilyofthevalley-*": { "base": "game:block/plant/flower/lilyofthevalley" },
 		"*": { "base": "game:block/plant/flower/1patch-3faces-24x24" }
 	},
 	"lod2shapeByType": {
-		"flower-edelweiss-*": { "base": "game:block/plant/flower/1patch-3faces-16x16" },
-		"flower-forgetmenot-*": { "base": "game:block/plant/flower/1patch-3faces-16x16" },
+		"corruptflower-edelweiss-*": { "base": "game:block/plant/flower/1patch-3faces-16x16" },
+		"corruptflower-forgetmenot-*": { "base": "game:block/plant/flower/1patch-3faces-16x16" },
 		"*": { "base": "game:block/plant/flower/1patch-cross-24x24" }
 	},
 	"texturesByType": {
-		"flower-orangemallow-*": {
+		"corruptflower-orangemallow-*": {
 			"north1": { "base": "game:block/plant/flower/petal/{flower}1" },
 			"south1": { "base": "game:block/plant/flower/petal/{flower}3" },
 			"northTinted1": { "base": "game:block/plant/flower/stem/{flower}1" },
 			"southTinted1": { "base": "game:block/plant/flower/stem/{flower}3" },
-			"flower2": { "base": "game:block/plant/flower/petal/{flower}2" },
-			"flower2Tinted": { "base": "game:block/plant/flower/stem/{flower}2" }
+			"corruptflower2": { "base": "game:block/plant/flower/petal/{flower}2" },
+			"corruptflower2Tinted": { "base": "game:block/plant/flower/stem/{flower}2" }
 		},
 		"@.*-(woad|horsetail|cowparsley|goldenpoppy)-.*": {
 			"north1": { "base": "game:block/plant/flower/petal/{flower}1" },
@@ -148,13 +148,13 @@
 			"northTinted3": { "base": "game:block/transparent" },
 			"southTinted3": { "base": "game:block/transparent" }
 		},
-		"flower-ghostpipe*": {
+		"corruptflower-ghostpipe*": {
 			"north1": { "base": "game:block/plant/flower/petal/{flower}*" },
 			"south1": { "base": "game:block/plant/flower/petal/{flower}*" },
 			"northTinted1": { "base": "game:block/transparent" },
 			"southTinted1": { "base": "game:block/transparent" }
 		},
-		"flower-lilyofthevalley-*": {
+		"corruptflower-lilyofthevalley-*": {
 			"stem1": { "base": "game:block/plant/flower/stem/{flower}1" },
 			"stem2": { "base": "game:block/plant/flower/stem/{flower}2" },
 			"stem3": { "base": "game:block/plant/flower/stem/{flower}3" },
@@ -167,7 +167,7 @@
 			"northTinted1": { "base": "game:block/transparent" },
 			"southTinted1": { "base": "game:block/transparent" }
 		},
-		"flower-daffodil-*": {
+		"corruptflower-daffodil-*": {
 			"stem1": { "base": "game:block/plant/flower/stem/{flower}1" },
 			"stem2": { "base": "game:block/plant/flower/stem/{flower}2" },
 			"stem3": { "base": "game:block/plant/flower/stem/{flower}3" },
@@ -180,7 +180,7 @@
 			"northTinted1": { "base": "game:block/transparent" },
 			"southTinted1": { "base": "game:block/transparent" }
 		},
-		"flower-bluebell-*": {
+		"corruptflower-bluebell-*": {
 			"stem1": { "base": "game:block/plant/flower/stem/{flower}1" },
 			"stem2": { "base": "game:block/plant/flower/stem/{flower}2" },
 			"stem3": { "base": "game:block/plant/flower/stem/{flower}3" },
@@ -206,8 +206,8 @@
 			"south3": { "base": "game:block/plant/flower/petal/{flower}*" },
 			"northTinted3": { "base": "game:block/plant/flower/stem/{flower}*" },
 			"southTinted3": { "base": "game:block/plant/flower/stem/{flower}*" },
-			"flower2": { "base": "game:block/plant/flower/petal/{flower}*" },
-			"flower2Tinted": { "base": "game:block/plant/flower/stem/{flower}*" }
+			"corruptflower2": { "base": "game:block/plant/flower/petal/{flower}*" },
+			"corruptflower2Tinted": { "base": "game:block/plant/flower/stem/{flower}*" }
 		}
 	},
 	"randomDrawOffset": true,
@@ -235,7 +235,7 @@
 	"resistance": 0.5,
 	"collisionbox": null,
 	"selectionboxByType": {
-		"flower-cornflower-*": {
+		"corruptflower-cornflower-*": {
 			"x1": 0.125,
 			"y1": 0,
 			"z1": 0.125,
@@ -243,7 +243,7 @@
 			"y2": 0.75,
 			"z2": 0.875
 		},
-		"flower-cowparsley-*": {
+		"corruptflower-cowparsley-*": {
 			"x1": 0.0625,
 			"y1": 0,
 			"z1": 0.125,
@@ -251,7 +251,7 @@
 			"y2": 0.875,
 			"z2": 0.9375
 		},
-		"flower-woad-*": {
+		"corruptflower-woad-*": {
 			"x1": 0.0625,
 			"y1": 0,
 			"z1": 0.125,
@@ -259,7 +259,7 @@
 			"y2": 0.875,
 			"z2": 0.9375
 		},
-		"flower-wilddaisy-*": {
+		"corruptflower-wilddaisy-*": {
 			"x1": 0.125,
 			"y1": 0,
 			"z1": 0.125,
@@ -267,7 +267,7 @@
 			"y2": 0.75,
 			"z2": 0.875
 		},
-		"flower-redtopgrass-*": {
+		"corruptflower-redtopgrass-*": {
 			"x1": 0.125,
 			"y1": 0,
 			"z1": 0.125,
@@ -275,7 +275,7 @@
 			"y2": 0.5,
 			"z2": 0.875
 		},
-		"flower-catmint-*": {
+		"corruptflower-catmint-*": {
 			"x1": 0.125,
 			"y1": 0,
 			"z1": 0.125,
@@ -283,7 +283,7 @@
 			"y2": 0.625,
 			"z2": 0.875
 		},
-		"flower-heather-*": {
+		"corruptflower-heather-*": {
 			"x1": 0.0625,
 			"y1": 0,
 			"z1": 0.125,
@@ -301,10 +301,10 @@
 		}
 	},
 	"dropsByType": {
-		"flower-ghostpipe*": []
+		"corruptflower-ghostpipe*": []
 	},
 	"guitransformByType": {
-		"flower-forgetmenot-*": {
+		"corruptflower-forgetmenot-*": {
 			"rotation": {
 				"x": -33,
 				"y": -18,
@@ -317,7 +317,7 @@
 			},
 			"scale": 1.63
 		},
-		"flower-lilyofthevalley-*": {
+		"corruptflower-lilyofthevalley-*": {
 			"rotation": {
 				"x": -33,
 				"y": -150,
@@ -330,7 +330,7 @@
 			},
 			"scale": 1.63
 		},
-		"flower-edelweiss-*": {
+		"corruptflower-edelweiss-*": {
 			"rotation": {
 				"x": -33,
 				"y": -18,
@@ -343,7 +343,7 @@
 			},
 			"scale": 1.63
 		},
-		"flower-horsetail-*": {
+		"corruptflower-horsetail-*": {
 			"rotation": {
 				"x": 166,
 				"y": 34,
@@ -370,7 +370,7 @@
 		}
 	},
 	"tpHandTransformByType": {
-		"flower-horsetail-*": {
+		"corruptflower-horsetail-*": {
 			"translation": {
 				"x": -0.7,
 				"y": -0.2,
@@ -408,7 +408,7 @@
 		}
 	},
 	"groundTransformByType": {
-		"flower-horsetail-*": {
+		"corruptflower-horsetail-*": {
 			"translation": {
 				"x": 0,
 				"y": 0,
@@ -426,7 +426,7 @@
 			},
 			"scale": 4.5
 		},
-		"flower-forgetmenot-*": {
+		"corruptflower-forgetmenot-*": {
 			"scale": 2.64
 		}
 	},
@@ -436,7 +436,7 @@
 		"hit": "game:block/plant"
 	},
 	"rainPermeableByType": {
-		"flower-horsetail-*": true,
+		"corruptflower-horsetail-*": true,
 		"*": false
 	},
 	"materialDensity": 200,
