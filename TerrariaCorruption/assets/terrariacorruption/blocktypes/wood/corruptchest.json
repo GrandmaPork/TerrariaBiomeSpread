@@ -1,0 +1,227 @@
+{
+	"code": "corruptchest",
+	"class": "BlockGenericTypedContainer",
+	"entityclass": "GenericTypedContainer",
+	"attributes": {
+		"humanoidTraversalCost": 100,
+		"reinforcable": true,
+		"partialAttachable": true,
+		"inventoryClassName": "chest",
+		"defaultType": "normal-generic",
+		"types": [ "normal-generic", "golden", "owl" ],
+		"collisionSelectionBoxes": {
+			"owl": [
+				{
+					"x1": 0.125,
+					"y1": 0,
+					"z1": 0.1875,
+					"x2": 0.875,
+					"y2": 0.4875,
+					"z2": 0.75
+				}
+			],
+			"golden": [
+				{
+					"x1": 0.125,
+					"y1": 0,
+					"z1": 0.1875,
+					"x2": 0.875,
+					"y2": 0.4875,
+					"z2": 0.75
+				}
+			]
+		},
+		"rotatatableInterval": {
+			"normal-generic": "22.5degnot45deg",
+			"golden": "22.5deg",
+			"owl": "22.5deg"
+		},
+		"drop": {
+			"normal-generic": true,
+			"golden": true,
+			"owl": true
+		},
+		"quantitySlots": {
+			"normal-generic": 16,
+			"golden": 4,
+			"owl": 4
+		},
+		"dialogTitleLangCode": {
+			"normal-generic": "chestcontents",
+			"golden": "chestcontents",
+			"owl": "chestcontents"
+		},
+		"storageType": {
+			"normal-generic": 189,
+			"golden": 72,
+			"owl": 72
+		},
+		"retrieveOnly": {
+			"normal-generic": false,
+			"golden": false,
+			"owl": false
+		},
+		"shape": {
+			"normal-generic": "block/wood/chest/normal",
+			"golden": "block/wood/chest/golden",
+			"owl": "block/wood/chest/owl"
+		},
+		"openSound": {
+			"path": "game:block/chestopen",
+			"pitch": {
+				"avg": 1.0,
+				"var": 0.25
+			}
+		},
+		"closeSound": {
+			"path": "game:block/chestclose",
+			"pitch": {
+				"avg": 1.0,
+				"var": 0.25
+			}
+		},
+		"typedOpenSound": {
+			"normal-generic": "game:sounds/block/largechestopen"
+		},
+		"typedCloseSound": {
+			"normal-generic": "game:sounds/block/largechestclose"
+		},
+		"variantByGroup": "side",
+		"variantByGroupInventory": null
+	},
+	"behaviors": [
+		{ "name": "Lockable" },
+		{ "name": "Container" },
+		{ "name": "BoatableGenericTypedContainer" }
+	],
+	"entityBehaviors": [ { "name": "Animatable" } ],
+	"variantgroups": [
+		{
+			"code": "side",
+			"loadFromProperties": "game:abstract/horizontalorientation"
+		}
+	],
+	"creativeinventory": {},
+	"creativeinventoryStacksByType": {
+		"*-east": [
+			{
+				"tabs": [ "general", "decorative" ],
+				"stacks": [
+					{
+						"type": "block",
+						"code": "corruptchest-east",
+						"attributes": { "type": "normal-generic" }
+					},
+					{
+						"type": "block",
+						"code": "corruptchest-east",
+						"attributes": { "type": "golden" }
+					},
+					{
+						"type": "block",
+						"code": "corruptchest-east",
+						"attributes": { "type": "owl" }
+					}
+				]
+			}
+		]
+	},
+	"heldTpIdleAnimation": "holdunderarm",
+	"shapeInventory": {
+		"base": "block/wood/chest/normal",
+		"rotateY": 270
+	},
+	"shapeByType": {
+		"*-north": {
+			"base": "block/wood/chest/normal",
+			"rotateY": 0
+		},
+		"*-east": {
+			"base": "block/wood/chest/normal",
+			"rotateY": 270
+		},
+		"*-west": {
+			"base": "block/wood/chest/normal",
+			"rotateY": 90
+		},
+		"*-south": {
+			"base": "block/wood/chest/normal",
+			"rotateY": 180
+		}
+	},
+	// Must declare textures so they get added to the block texture atlas
+	"textures": {
+		"normal-generic-sides2": { "base": "game:block/wood/trunk/sides" },
+		"normal-generic-lid": { "base": "game:block/wood/trunk/lid" },
+		"normal-generic-accessories": { "base": "game:block/wood/trunk/accessories" },
+
+		"golden-top": { "base": "block/wood/chest/golden/top" },
+		"golden-sides2": { "base": "block/wood/chest/golden/sides2" },
+		"golden-sides1": { "base": "block/wood/chest/golden/sides1" },
+		"golden-inside": { "base": "block/wood/chest/golden/inside" },
+
+		"owl-top": { "base": "block/wood/chest/owl/top" },
+		"owl-sides2": { "base": "block/wood/chest/owl/sides2" },
+		"owl-sides1": { "base": "block/wood/chest/owl/sides1" },
+		"owl-inside": { "base": "block/wood/chest/owl/inside" }
+	},
+	"blockmaterial": "Wood",
+	"replaceable": 900,
+	"resistance": 3,
+	"lightAbsorption": 0,
+	"sideAo": { "all": false },
+	"sidesolid": {
+		"all": false
+	},
+	"sideopaque": {
+		"all": false
+	},
+	"collisionbox": {
+		"x1": 0.0625,
+		"y1": 0,
+		"z1": 0.0625,
+		"x2": 0.9375,
+		"y2": 0.8125,
+		"z2": 0.9375
+	},
+	"selectionbox": {
+		"x1": 0.0625,
+		"y1": 0,
+		"z1": 0.0625,
+		"x2": 0.9375,
+		"y2": 0.8125,
+		"z2": 0.9375
+	},
+	"combustibleProps": {
+		"burnTemperature": 600,
+		"burnDuration": 35
+	},
+	"sounds": {
+		"place": "game:block/planks",
+		"hit": "game:block/planks",
+		"break": "game:block/planks",
+		"walk": "game:walk/wood"
+	},
+	"materialDensity": 600,
+	"tpHandTransform": {
+		"translation": {
+			"x": -0.9,
+			"y": -0.5,
+			"z": -0.3
+		},
+		"rotation": {
+			"x": 0,
+			"y": 90,
+			"z": -102
+		},
+		"scale": 0.56
+	},
+	"guiTransform": {
+		"origin": {
+			"x": 0.5,
+			"y": 0.4,
+			"z": 0.5
+		},
+		"scale": 1.16
+	}
+}

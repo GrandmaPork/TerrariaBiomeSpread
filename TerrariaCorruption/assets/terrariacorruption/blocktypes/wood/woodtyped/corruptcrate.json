@@ -48,41 +48,13 @@
 			}
 		},
 		"properties": {
-			"wood-aged": {
-				"quantitySlots": 16,
-				"rotatatableInterval": "22.5deg",
-				"shape": {
-					"base": "game:block/wood/crate/aged-closed",
-					"rotateY": 180
-				}
-			},
-			"wood-ebony": {
-				"quantitySlots": 25,
-				"rotatatableInterval": "22.5deg",
-				"storageType": 189,
-				"retrieveOnly": false,
-				"shape": {
-					"base": "game:block/wood/crate/normal-closed",
-					"rotateY": 180
-				}
-			},
-			"wood-purpleheart": {
-				"quantitySlots": 25,
-				"rotatatableInterval": "22.5deg",
-				"storageType": 189,
-				"retrieveOnly": false,
-				"shape": {
-					"base": "game:block/wood/crate/normal-closed",
-					"rotateY": 180
-				}
-			},
 			"*": {
 				"quantitySlots": 20,
 				"rotatatableInterval": "22.5deg",
 				"storageType": 189,
 				"retrieveOnly": false,
 				"shape": {
-					"base": "game:block/wood/crate/normal-closed",
+					"base": "block/wood/crate/normal-closed",
 					"rotateY": 180
 				}
 			}
@@ -101,7 +73,7 @@
 			"stacks": [
 				{
 					"type": "block",
-					"code": "crate",
+					"code": "corruptcrate",
 					"attributes": {
 						"lidState": "closed",
 						"type": "wood-ebonwood"
@@ -112,11 +84,11 @@
 	],
 	"heldTpIdleAnimation": "holdunderarm",
 	"shapeInventory": {
-		"base": "game:block/wood/crate/normal-closed",
+		"base": "block/wood/crate/normal-closed",
 		"rotateY": 0
 	},
-	"shapeByType": {
-		"base": "game:block/wood/crate/normal-closed",
+	"shape": {
+		"base": "block/wood/crate/normal-closed",
 		"rotateY": 0
 	},
 	"textures": {
@@ -132,8 +104,8 @@
 		"frame-generic": { "base": "block/wood/crate/frame-generic" },
 		"building": { "base": "game:block/wood/crate/label-building" },
 
-		"corruptwood-*-sides": { "base": "game:block/wood/crate/ebonwood-sides" },
-		"corruptwood-*-inside": { "base": "game:block/wood/crate/ebonwood-inside" }
+		"wood-*-sides": { "base": "block/wood/crate/ebonwood-sides" },
+		"wood-*-inside": { "base": "block/wood/crate/ebonwood-inside" }
 	},
 	"blockmaterial": "Wood",
 	"replaceable": 900,

@@ -40,12 +40,12 @@
 		}
 	},
 	"texturesByType": {
-		"logquad-barkedcorner-*": {
+		"corruptlogquad-barkedcorner-*": {
 			"bark": { "base": "block/wood/bark/quad/placed/{wood}*" },
 			"barkup": { "base": "block/wood/bark/quad/placed/{wood}*" },
 			"ends": { "base": "block/wood/bark/quad/ends/placed/{wood}*" }
 		},
-		"logquad-debarkedcorner-*": {
+		"corruptlogquad-debarkedcorner-*": {
 			"bark": { "base": "block/wood/bark/quad/debarked/{wood}*" },
 			"barkup": { "base": "block/wood/bark/quad/debarked/{wood}*" },
 			"ends": { "base": "block/wood/bark/quad/ends/debarked/{wood}*" }

@@ -14,10 +14,6 @@
 			"states": [ "acacia" ]
 		},
 		{
-			"code": "age",
-			"states": [ "aged" ]
-		},
-		{
 			"code": "section",
 			"states": [ "bottom", "middle", "top" ]
 		},
@@ -41,64 +37,64 @@
 	"requiredMiningTier": 1,
 	"texturesByType": {
 		"*-ud": {
-			"all": { "base": "block/wood/carved/{wood}/{age}/{section}-{decoration}*" },
-			"verticals": { "base": "block/wood/carved/{wood}/{age}/treetrunk" },
+			"all": { "base": "block/wood/carved/{wood}/normal/{section}-{decoration}*" },
+			"verticals": { "base": "block/wood/carved/{wood}/normal/treetrunk" },
 
-			"inside-north": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" },
-			"inside-east": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" },
-			"inside-south": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" },
-			"inside-west": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" }
+			"inside-north": { "base": "block/wood/carved/{wood}/normal/middle-plain1" },
+			"inside-east": { "base": "block/wood/carved/{wood}/normal/middle-plain1" },
+			"inside-south": { "base": "block/wood/carved/{wood}/normal/middle-plain1" },
+			"inside-west": { "base": "block/wood/carved/{wood}/normal/middle-plain1" }
 		},
 		"*-ns": {
 			"all": {
-				"base": "block/wood/carved/{wood}/{age}/{section}-{decoration}*",
+				"base": "block/wood/carved/{wood}/normal/{section}-{decoration}*",
 				"rotation": 0
 			},
 			"down": {
-				"base": "block/wood/carved/{wood}/{age}/{section}-{decoration}*",
+				"base": "block/wood/carved/{wood}/normal/{section}-{decoration}*",
 				"rotation": 180
 			},
 			"east": {
-				"base": "block/wood/carved/{wood}/{age}/{section}-{decoration}*",
+				"base": "block/wood/carved/{wood}/normal/{section}-{decoration}*",
 				"rotation": 90
 			},
 			"west": {
-				"base": "block/wood/carved/{wood}/{age}/{section}-{decoration}*",
+				"base": "block/wood/carved/{wood}/normal/{section}-{decoration}*",
 				"rotation": 270
 			},
-			"north": { "base": "block/wood/carved/{wood}/{age}/treetrunk" },
-			"south": { "base": "block/wood/carved/{wood}/{age}/treetrunk" },
+			"north": { "base": "block/wood/carved/{wood}/normal/treetrunk" },
+			"south": { "base": "block/wood/carved/{wood}/normal/treetrunk" },
 
-			"inside-north": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" },
-			"inside-east": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" },
-			"inside-south": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" },
-			"inside-west": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" }
+			"inside-north": { "base": "block/wood/carved/{wood}/normal/middle-plain1" },
+			"inside-east": { "base": "block/wood/carved/{wood}/normal/middle-plain1" },
+			"inside-south": { "base": "block/wood/carved/{wood}/normal/middle-plain1" },
+			"inside-west": { "base": "block/wood/carved/{wood}/normal/middle-plain1" }
 
 		},
 		"*-we": {
 			"all": {
-				"base": "block/wood/carved/{wood}/{age}/{section}-{decoration}*",
+				"base": "block/wood/carved/{wood}/normal/{section}-{decoration}*",
 				"rotation": 270
 			},
 			"verticals": {
-				"base": "block/wood/carved/{wood}/{age}/{section}-{decoration}*",
+				"base": "block/wood/carved/{wood}/normal/{section}-{decoration}*",
 				"rotation": 270
 			},
 			"north": {
-				"base": "block/wood/carved/{wood}/{age}/{section}-{decoration}*",
+				"base": "block/wood/carved/{wood}/normal/{section}-{decoration}*",
 				"rotation": 270
 			},
 			"south": {
-				"base": "block/wood/carved/{wood}/{age}/{section}-{decoration}*",
+				"base": "block/wood/carved/{wood}/normal/{section}-{decoration}*",
 				"rotation": 90
 			},
-			"west": { "base": "block/wood/carved/{wood}/{age}/treetrunk" },
-			"east": { "base": "block/wood/carved/{wood}/{age}/treetrunk" },
+			"west": { "base": "block/wood/carved/{wood}/normal/treetrunk" },
+			"east": { "base": "block/wood/carved/{wood}/normal/treetrunk" },
 
-			"inside-north": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" },
-			"inside-east": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" },
-			"inside-south": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" },
-			"inside-west": { "base": "block/wood/carved/{wood}/{age}/middle-plain1" }
+			"inside-north": { "base": "block/wood/carved/{wood}/normal/middle-plain1" },
+			"inside-east": { "base": "block/wood/carved/{wood}/normal/middle-plain1" },
+			"inside-south": { "base": "block/wood/carved/{wood}/normal/middle-plain1" },
+			"inside-west": { "base": "block/wood/carved/{wood}/normal/middle-plain1" }
 		}
 	},
 	"replaceable": 500,
@@ -118,7 +114,7 @@
 	"drops": [
 		{
 			"type": "block",
-			"code": "corruptcarvedlog-{wood}-{age}-{section}-{decoration}-ud",
+			"code": "corruptcarvedlog-{wood}-{section}-{decoration}-ud",
 			"quantity": { "avg": 1 }
 		}
 	],

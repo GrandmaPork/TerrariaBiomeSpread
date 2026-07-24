@@ -67,7 +67,7 @@
       "decorative": [ "*" ]
     }
   },
-  "shape": { "base": "game:block/wood/door/{style}" },
+  "shape": { "base": "block/wood/door/{style}" },
   "texturesByType": {
     "corruptdoor-sleek-windowed-*": {
       "wood": { "base": "block/wood/door/sleek/ebonwood" }

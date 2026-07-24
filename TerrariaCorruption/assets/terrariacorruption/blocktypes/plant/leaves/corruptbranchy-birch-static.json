@@ -32,7 +32,7 @@
   "creativeinventory": { "meta": [ "*" ] },
   "shape": {
     "baseByType": {
-      "*-birch": "game:block/plant/leaves/branchy-birch"
+      "*-birch": "block/plant/leaves/branchy-birch"
     },
     "rotateY": 10,
     "alternates": [

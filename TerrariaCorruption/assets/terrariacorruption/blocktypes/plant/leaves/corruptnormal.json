@@ -53,8 +53,8 @@
     }
   ],
   "creativeinventory": {
-    "general": [ "leaves-placed-*" ],
-    "flora": [ "leaves-placed-*" ]
+    "general": [ "corruptleaves-placed-*" ],
+    "flora": [ "corruptleaves-placed-*" ]
   },
   "shape": {
     "base": "game:block/plant/leaves/normal",

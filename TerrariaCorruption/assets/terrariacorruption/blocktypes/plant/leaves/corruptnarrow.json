@@ -43,8 +43,8 @@
     }
   ],
   "creativeinventory": {
-    "general": [ "leavesnarrow-placed-*-5" ],
-    "flora": [ "leavesnarrow-placed-*" ]
+    "general": [ "corruptleavesnarrow-placed-*-5" ],
+    "flora": [ "corruptleavesnarrow-placed-*" ]
   },
   "shapeByType": {
     "*-1": {
