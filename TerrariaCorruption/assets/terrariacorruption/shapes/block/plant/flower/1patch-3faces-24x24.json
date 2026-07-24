@@ -1,0 +1,119 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 24,
+	"textureHeight": 24,
+	"textureSizes": {
+	},
+	"textures": {
+		"north1": "game:block/plant/flower/petal/heather1",
+		"south1": "game:block/plant/flower/petal/heather1",
+		"northTinted1": "game:block/plant/flower/stem/heather1",
+		"southTinted1": "game:block/plant/flower/stem/heather1"
+	},
+	"elements": [
+		{
+			"name": "origin",
+			"from": [ 0.0, 0.0, 0.0 ], 
+			"to": [ 0.0, 0.0, 0.0 ], 
+			"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+			"faces": {
+			},
+			"children": [
+				{
+					"name": "flower",
+					"from": [ 8.0, 0.0, 8.0 ], 
+					"to": [ 8.0, 0.0, 8.0 ], 
+					"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+					"faces": {
+					},
+					"children": [
+						{
+							"name": "face 6",
+							"from": [ -12.0, 0.0, 0.0 ], 
+							"to": [ 12.0, 24.0, 0.0 ], 
+							"shade": false,
+							"rotationOrigin": [ 0.0, 0.0, 0.0 ],
+							"rotationY": -22.5,
+							"faces": {
+								"north": { "texture": "#north1", "uv": [ 0.0, 0.0, 24.0, 24.0 ], "windMode": [0,2,2,0], "windData": [0,1,1,0] }
+							}
+						},
+						{
+							"name": "face 7",
+							"from": [ -12.0, 0.0, 0.0 ], 
+							"to": [ 12.0, 24.0, 0.0 ], 
+							"shade": false,
+							"rotationOrigin": [ 0.0, 0.0, 0.0 ],
+							"rotationY": 45.0,
+							"faces": {
+								"north": { "texture": "#south1", "uv": [ 0.0, 0.0, 24.0, 24.0 ], "windMode": [0,2,2,0], "windData": [0,1,1,0] }
+							}
+						},
+						{
+							"name": "face 8",
+							"from": [ -12.0, 0.0, 0.0 ], 
+							"to": [ 12.0, 24.0, 0.0 ], 
+							"shade": false,
+							"rotationOrigin": [ 0.0, 0.0, 0.0 ],
+							"rotationY": -67.5,
+							"faces": {
+								"north": { "texture": "#north1", "uv": [ 0.0, 0.0, 24.0, 24.0 ], "windMode": [0,2,2,0], "windData": [0,1,1,0] }
+							}
+						}
+					]
+				},
+				{
+					"name": "stem",
+					"from": [ 8.0, 0.0, 8.0 ], 
+					"to": [ 8.0, 0.0, 8.0 ], 
+					"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+					"faces": {
+					},
+					"children": [
+						{
+							"name": "face 1",
+							"from": [ -12.0, 0.0, 0.0 ], 
+							"to": [ 12.0, 24.0, 0.0 ], 
+							"shade": false,
+							"climateColorMap": "climateCorruptPlantTint",
+							"seasonColorMap": "seasonalCorruptGrass",
+							"rotationOrigin": [ 0.0, 0.0, 0.0 ],
+							"rotationY": -22.5,
+							"faces": {
+								"north": { "texture": "#northTinted1", "uv": [ 0.0, 0.0, 24.0, 24.0 ], "windMode": [0,2,2,0], "windData": [0,1,1,0] }
+							}
+						},
+						{
+							"name": "face 2",
+							"from": [ -12.0, 0.0, 0.0 ], 
+							"to": [ 12.0, 24.0, 0.0 ], 
+							"shade": false,
+							"climateColorMap": "climateCorruptPlantTint",
+							"seasonColorMap": "seasonalCorruptGrass",
+							"rotationOrigin": [ 0.0, 0.0, 0.0 ],
+							"rotationY": 45.0,
+							"faces": {
+								"north": { "texture": "#southTinted1", "uv": [ 0.0, 0.0, 24.0, 24.0 ], "windMode": [0,2,2,0], "windData": [0,1,1,0] }
+							}
+						},
+						{
+							"name": "face 3",
+							"from": [ -12.0, 0.0, 0.0 ], 
+							"to": [ 12.0, 24.0, 0.0 ], 
+							"shade": false,
+							"climateColorMap": "climateCorruptPlantTint",
+							"seasonColorMap": "seasonalCorruptGrass",
+							"rotationOrigin": [ 0.0, 0.0, 0.0 ],
+							"rotationY": -67.5,
+							"faces": {
+								"north": { "texture": "#northTinted1", "uv": [ 0.0, 0.0, 24.0, 24.0 ], "windMode": [0,2,2,0], "windData": [0,1,1,0] }
+							}
+						}
+					]
+				}
+			]
+		}
+	]}

@@ -96,20 +96,20 @@
 		"corruptflower-horsetail-*": { "base": "game:item/resource/horsetail" }
 	},
 	"shapeByType": {
-		"corruptflower-redtopgrass-*": { "base": "game:block/plant/flower/1patch-cross-24x24" },
-		"corruptflower-edelweiss-*": { "base": "game:block/plant/flower/1patch-3faces-16x16" },
-		"corruptflower-forgetmenot-*": { "base": "game:block/plant/flower/1patch-3faces-16x16" },
-		"corruptflower-ghostpipe-*": { "base": "game:block/plant/flower/1patch-3faces-16x16" },
-		"corruptflower-mugwort-*": { "base": "game:block/plant/flower/3patches-3faces-24x24" },
-		"corruptflower-bluebell-*": { "base": "game:block/plant/flower/lilyofthevalley" },
-		"corruptflower-daffodil-*": { "base": "game:block/plant/flower/lilyofthevalley" },
-		"corruptflower-lilyofthevalley-*": { "base": "game:block/plant/flower/lilyofthevalley" },
-		"*": { "base": "game:block/plant/flower/1patch-3faces-24x24" }
+		"corruptflower-redtopgrass-*": { "base": "block/plant/flower/1patch-cross-24x24" },
+		"corruptflower-edelweiss-*": { "base": "block/plant/flower/1patch-3faces-16x16" },
+		"corruptflower-forgetmenot-*": { "base": "block/plant/flower/1patch-3faces-16x16" },
+		"corruptflower-ghostpipe-*": { "base": "block/plant/flower/1patch-3faces-16x16" },
+		"corruptflower-mugwort-*": { "base": "block/plant/flower/3patches-3faces-24x24" },
+		"corruptflower-bluebell-*": { "base": "block/plant/flower/lilyofthevalley" },
+		"corruptflower-daffodil-*": { "base": "block/plant/flower/lilyofthevalley" },
+		"corruptflower-lilyofthevalley-*": { "base": "block/plant/flower/lilyofthevalley" },
+		"*": { "base": "block/plant/flower/1patch-3faces-24x24" }
 	},
 	"lod2shapeByType": {
-		"corruptflower-edelweiss-*": { "base": "game:block/plant/flower/1patch-3faces-16x16" },
-		"corruptflower-forgetmenot-*": { "base": "game:block/plant/flower/1patch-3faces-16x16" },
-		"*": { "base": "game:block/plant/flower/1patch-cross-24x24" }
+		"corruptflower-edelweiss-*": { "base": "block/plant/flower/1patch-3faces-16x16" },
+		"corruptflower-forgetmenot-*": { "base": "block/plant/flower/1patch-3faces-16x16" },
+		"*": { "base": "block/plant/flower/1patch-cross-24x24" }
 	},
 	"texturesByType": {
 		"corruptflower-orangemallow-*": {

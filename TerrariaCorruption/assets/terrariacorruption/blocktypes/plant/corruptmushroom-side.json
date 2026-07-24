@@ -19,18 +19,18 @@
 		}
 	],
 	"allowedVariants": [
-		"mushroom-beardedtooth-*",
-		"mushroom-chickenofthewoods-*",
-		"mushroom-dryadsaddle-*",
-		"mushroom-pinkoyster-*",
-		"mushroom-tinderhoof-*",
-		"mushroom-whiteoyster-*",
-		"mushroom-reishi-*",
-		"mushroom-funeralbell-*",
-		"mushroom-deerear-*",
-		"mushroom-livermushroom-*",
-		"mushroom-pinkbonnet-*",
-		"mushroom-shiitake-*"
+		"corruptmushroom-beardedtooth-*",
+		"corruptmushroom-chickenofthewoods-*",
+		"corruptmushroom-dryadsaddle-*",
+		"corruptmushroom-pinkoyster-*",
+		"corruptmushroom-tinderhoof-*",
+		"corruptmushroom-whiteoyster-*",
+		"corruptmushroom-reishi-*",
+		"corruptmushroom-funeralbell-*",
+		"corruptmushroom-deerear-*",
+		"corruptmushroom-livermushroom-*",
+		"corruptmushroom-pinkbonnet-*",
+		"corruptmushroom-shiitake-*"
 	],
 	"attributes": {
 		"mushroomProps": {

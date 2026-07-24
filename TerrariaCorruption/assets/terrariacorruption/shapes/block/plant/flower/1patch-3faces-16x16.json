@@ -1,0 +1,119 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"south1": "game:block/plant/flower/petal/lilyofthevalley1",
+		"northTinted1": "game:block/plant/flower/stem/lilyofthevalley1",
+		"north1": "game:block/plant/flower/petal/lilyofthevalley1",
+		"southTinted1": "game:block/plant/flower/stem/lilyofthevalley1"
+	},
+	"elements": [
+		{
+			"name": "origin",
+			"from": [ 0.0, 0.0, 0.0 ], 
+			"to": [ 0.0, 0.0, 0.0 ], 
+			"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+			"faces": {
+			},
+			"children": [
+				{
+					"name": "flower",
+					"from": [ 8.0, 0.0, 8.0 ], 
+					"to": [ 8.0, 0.0, 8.0 ], 
+					"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+					"faces": {
+					},
+					"children": [
+						{
+							"name": "face 6",
+							"from": [ -8.0, 0.0, 0.0 ], 
+							"to": [ 8.0, 16.0, 0.0 ], 
+							"shade": false,
+							"rotationOrigin": [ 0.0, 0.0, 0.0 ],
+							"rotationY": -22.5,
+							"faces": {
+								"north": { "texture": "#north1", "uv": [ 0.0, 0.0, 15.75, 15.75 ], "windMode": [0,2,2,0], "windData": [0,1,1,0] }
+							}
+						},
+						{
+							"name": "face 7",
+							"from": [ -8.0, 0.0, 0.0 ], 
+							"to": [ 8.0, 16.0, 0.0 ], 
+							"shade": false,
+							"rotationOrigin": [ 0.0, 0.0, 0.0 ],
+							"rotationY": 45.0,
+							"faces": {
+								"north": { "texture": "#south1", "uv": [ 0.0, 0.0, 15.75, 15.75 ], "windMode": [0,2,2,0], "windData": [0,1,1,0] }
+							}
+						},
+						{
+							"name": "face 8",
+							"from": [ -8.0, 0.0, 0.0 ], 
+							"to": [ 8.0, 16.0, 0.0 ], 
+							"shade": false,
+							"rotationOrigin": [ 0.0, 0.0, 0.0 ],
+							"rotationY": -67.5,
+							"faces": {
+								"north": { "texture": "#north1", "uv": [ 0.0, 0.0, 15.75, 15.75 ], "windMode": [0,2,2,0], "windData": [0,1,1,0] }
+							}
+						}
+					]
+				},
+				{
+					"name": "stem",
+					"from": [ 8.0, 0.0, 8.0 ], 
+					"to": [ 8.0, 0.0, 8.0 ], 
+					"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+					"faces": {
+					},
+					"children": [
+						{
+							"name": "face 1",
+							"from": [ -8.0, 0.0, 0.0 ], 
+							"to": [ 8.0, 16.0, 0.0 ], 
+							"shade": false,
+							"climateColorMap": "climateCorruptPlantTint",
+							"seasonColorMap": "seasonalCorruptGrass",
+							"rotationOrigin": [ 0.0, 0.0, 0.0 ],
+							"rotationY": -22.5,
+							"faces": {
+								"north": { "texture": "#northTinted1", "uv": [ 0.0, 0.0, 15.75, 15.75 ], "windMode": [0,2,2,0], "windData": [0,1,1,0] }
+							}
+						},
+						{
+							"name": "face 2",
+							"from": [ -8.0, 0.0, 0.0 ], 
+							"to": [ 8.0, 16.0, 0.0 ], 
+							"shade": false,
+							"climateColorMap": "climateCorruptPlantTint",
+							"seasonColorMap": "seasonalCorruptGrass",
+							"rotationOrigin": [ 0.0, 0.0, 0.0 ],
+							"rotationY": 45.0,
+							"faces": {
+								"north": { "texture": "#southTinted1", "uv": [ 0.0, 0.0, 15.75, 15.75 ], "windMode": [0,2,2,0], "windData": [0,1,1,0] }
+							}
+						},
+						{
+							"name": "face 3",
+							"from": [ -8.0, 0.0, 0.0 ], 
+							"to": [ 8.0, 16.0, 0.0 ], 
+							"shade": false,
+							"climateColorMap": "climateCorruptPlantTint",
+							"seasonColorMap": "seasonalCorruptGrass",
+							"rotationOrigin": [ 0.0, 0.0, 0.0 ],
+							"rotationY": -67.5,
+							"faces": {
+								"north": { "texture": "#south1", "uv": [ 0.0, 0.0, 15.75, 15.75 ], "windMode": [0,2,2,0], "windData": [0,1,1,0] }
+							}
+						}
+					]
+				}
+			]
+		}
+	]}

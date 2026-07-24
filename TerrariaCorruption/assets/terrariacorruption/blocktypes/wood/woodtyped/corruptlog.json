@@ -34,6 +34,9 @@
       "states": [ "ud", "ns", "we" ]
     }
   ],
+  "skipVariants": [
+    "*-aged-*"
+  ],
   "creativeinventory": {
     "general": [ "log-placed-*-ud" ],
     "flora": [ "log-placed-*-ud" ],
@@ -63,7 +66,6 @@
       "corruptlog-grown-ebony-*": 6,
       "corruptlog-grown-walnut-*": 4,
       "corruptlog-grown-purpleheart-*": 5,
-      "corruptlog-grown-aged-*": 3,
       "corruptlog-grown-*": 4
     },
     "preventsDecayByType": {
@@ -182,10 +184,6 @@
     "corruptlog-*-redwood-*": {
       "burnTemperature": 800,
       "burnDuration": 72
-    },
-    "corruptlog-*-aged-*": {
-      "burnTemperature": 700,
-      "burnDuration": 40
     },
     "*": {
       "burnTemperature": 800,
