@@ -1,0 +1,101 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"southTinted1": "game:block/plant/berrybush/cuttings/beautyberry-leaves1",
+		"northTinted1": "game:block/plant/berrybush/cuttings/beautyberry-leaves2",
+		"south1": "game:block/plant/berrybush/cuttings/beautyberry-stem1",
+		"north1": "game:block/plant/berrybush/cuttings/beautyberry-stem2"
+	},
+	"elements": [
+		{
+			"name": "origin",
+			"from": [ 0.0, 0.0, 0.0 ],
+			"to": [ 0.0, 0.0, 0.0 ],
+			"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+			"faces": {
+				"north": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+				"east": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+				"south": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+				"west": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+				"up": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+				"down": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false }
+			},
+			"children": [
+				{
+					"name": "southTinted",
+					"from": [ 0.0, 0.0, 8.0 ],
+					"to": [ 16.0, 16.0, 8.0 ],
+					"shade": false,
+					"climateColorMap": "climateCorruptPlantTint",
+					"seasonColorMap": "seasonalCorruptGrass",
+					"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+					"rotationY": 45.0,
+					"faces": {
+						"north": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false },
+						"east": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 16.0 ], "enabled": false },
+						"south": { "texture": "#southTinted1", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "windMode": [0,0,2,2], "windData": [0,0,1,1] },
+						"west": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 16.0 ], "enabled": false },
+						"up": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false },
+						"down": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false }
+					}
+				},
+				{
+					"name": "northTinted",
+					"from": [ 0.0, 0.0, 8.0 ],
+					"to": [ 16.0, 16.0, 8.0 ],
+					"shade": false,
+					"climateColorMap": "climateCorruptPlantTint",
+					"seasonColorMap": "seasonalCorruptGrass",
+					"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+					"rotationY": -45.0,
+					"faces": {
+						"north": { "texture": "#northTinted1", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "windMode": [0,2,2,0], "windData": [0,1,1,0] },
+						"east": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 16.0 ], "enabled": false },
+						"south": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false },
+						"west": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 16.0 ], "enabled": false },
+						"up": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false },
+						"down": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false }
+					}
+				},
+				{
+					"name": "South",
+					"from": [ 0.0, 0.0, 8.0 ],
+					"to": [ 16.0, 16.0, 8.0 ],
+					"shade": false,
+					"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+					"rotationY": 45.0,
+					"faces": {
+						"north": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false },
+						"east": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 16.0 ], "enabled": false },
+						"south": { "texture": "#south1", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "windMode": [0,0,2,2], "windData": [0,0,1,1] },
+						"west": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 16.0 ], "enabled": false },
+						"up": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false },
+						"down": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false }
+					}
+				},
+				{
+					"name": "North",
+					"from": [ 0.0, 0.0, 8.0 ],
+					"to": [ 16.0, 16.0, 8.0 ],
+					"shade": false,
+					"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+					"rotationY": -45.0,
+					"faces": {
+						"north": { "texture": "#north1", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "windMode": [0,2,2,0], "windData": [0,1,1,0] },
+						"east": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 16.0 ], "enabled": false },
+						"south": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false },
+						"west": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 16.0 ], "enabled": false },
+						"up": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false },
+						"down": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false }
+					}
+				}
+			]
+		}
+	]}

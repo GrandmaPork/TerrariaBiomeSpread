@@ -1,0 +1,164 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+		"normal": [32,16],
+		"short-south": [24,24],
+		"short-north": [24,24],
+		"aged1": [16,16]
+	},
+	"textures": {
+		"snowcover": "game:block/liquid/snow/normal1",
+		"normal": "block/plant/grasscoverage/normal"
+	},
+	"elements": [
+		{
+			"name": "origin",
+			"from": [ 0.0, 0.0, 0.0 ],
+			"to": [ 0.0, 0.0, 0.0 ],
+			"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+			"faces": {
+			},
+			"children": [
+				{
+					"name": "base horizontal",
+					"from": [ 0.2, 0.0, 8.0 ],
+					"to": [ 6.0, 5.0, 16.0 ],
+					"rotationOrigin": [ 0.2, 0.0, 8.0 ],
+					"faces": {
+						"north": { "texture": "#aged1", "uv": [ 10.0, 11.0, 15.5, 16.0 ] },
+						"south": { "texture": "#aged1", "uv": [ 0.0, 11.0, 5.5, 16.0 ] },
+						"down": { "texture": "#aged1", "uv": [ 0.0, 0.0, 5.5, 8.0 ] }
+					}
+				},
+				{
+					"name": "base vertical",
+					"from": [ 6.0, 0.0, 8.0 ],
+					"to": [ 12.4, 11.5, 16.0 ],
+					"rotationOrigin": [ 6.0, -2.0, 8.0 ],
+					"faces": {
+						"north": { "texture": "#aged1", "uv": [ 0.0, 4.5, 6.0, 16.0 ] },
+						"south": { "texture": "#aged1", "uv": [ 5.0, 4.5, 11.0, 16.0 ] },
+						"down": { "texture": "#aged1", "uv": [ 0.0, 0.0, 6.0, 8.0 ] }
+					}
+				},
+				{
+					"name": "slanted down",
+					"from": [ -2.5, 7.0, 7.991 ],
+					"to": [ 8.0, 10.5, 16.001 ],
+					"rotationOrigin": [ 8.0, 7.0, 8.0 ],
+					"rotationZ": 45.0,
+					"faces": {
+						"north": { "texture": "#aged-side", "uv": [ 0.0, 1.0, 10.5, 4.5 ] },
+						"south": { "texture": "#aged-side", "uv": [ 0.0, 1.0, 10.5, 4.5 ] },
+						"west": { "texture": "#aged-side", "uv": [ 8.0, 1.0, 16.0, 4.5 ] },
+						"down": { "texture": "#aged1", "uv": [ 0.0, 5.0, 8.0, 15.5 ], "rotation": 90 }
+					},
+					"children": [
+						{
+							"name": "slanted down6",
+							"from": [ 10.5, 0.0, 0.0 ],
+							"to": [ 22.65, 3.5, 8.01 ],
+							"rotationOrigin": [ 10.5, 0.0, 8.0 ],
+							"faces": {
+								"north": { "texture": "#aged-side", "uv": [ 0.0, 1.0, 12.0, 4.5 ] },
+								"east": { "texture": "#aged-side", "uv": [ 0.0, 1.0, 8.0, 4.5 ] },
+								"south": { "texture": "#aged-side", "uv": [ 0.0, 1.0, 12.0, 4.5 ] },
+								"down": { "texture": "#aged1", "uv": [ 0.0, 0.0, 8.0, 12.0 ], "rotation": 90 }
+							}
+						},
+						{
+							"name": "Edge",
+							"from": [ 0.0, 3.5, 0.0 ],
+							"to": [ 2.0, 6.5, 8.01 ],
+							"rotationOrigin": [ 0.0, 3.5, 0.0 ],
+							"faces": {
+								"north": { "texture": "#aged-top", "uv": [ 0.0, 0.0, 2.0, 3.0 ] },
+								"east": { "texture": "#aged-top", "uv": [ 0.0, 0.0, 8.0, 3.0 ], "rotation": 180 },
+								"south": { "texture": "#aged-top", "uv": [ 14.0, 0.0, 16.0, 3.0 ] },
+								"west": { "texture": "#aged-top", "uv": [ 8.0, 0.0, 16.0, 3.0 ] }
+							},
+							"children": [
+								{
+									"name": "Edge-snow",
+									"from": [ 0.0, 3.01, 0.0 ],
+									"to": [ 2.0, 5.01, 8.01 ],
+									"rotationOrigin": [ 0.0, 3.5, 0.0 ],
+									"faces": {
+										"north": { "texture": "#snowcover", "uv": [ 0.0, 0.0, 2.0, 2.0 ] },
+										"east": { "texture": "#snowcover", "uv": [ 0.0, 0.0, 8.0, 2.0 ], "rotation": 180 },
+										"south": { "texture": "#snowcover", "uv": [ 14.0, 0.0, 16.0, 2.0 ] },
+										"west": { "texture": "#snowcover", "uv": [ 8.0, 0.0, 16.0, 2.0 ] },
+										"up": { "texture": "#snowcover", "uv": [ 8.0, 0.0, 16.0, 2.0 ], "rotation": 90 }
+									}
+								}
+							]
+						},
+						{
+							"name": "Grass1",
+							"from": [ 2.0, 3.5, 0.0 ],
+							"to": [ 18.0, 5.5, 8.01 ],
+							"climateColorMap": "climateCorruptPlantTint",
+							"seasonColorMap": "seasonalCorruptGrass",
+							"rotationOrigin": [ 2.0, 3.5, 0.0 ],
+							"faces": {
+							},
+							"children": [
+								{
+									"name": "Grass1-snow",
+									"from": [ 0.0, 0.0, 0.0 ],
+									"to": [ 16.0, 4.0, 8.01 ],
+									"rotationOrigin": [ 2.0, 3.5, 0.0 ],
+									"faces": {
+										"north": { "texture": "#snowcover", "uv": [ 0.0, 0.0, 16.0, 4.0 ] },
+										"south": { "texture": "#snowcover", "uv": [ 0.0, 0.0, 16.0, 4.0 ] },
+										"up": { "texture": "#snowcover", "uv": [ 0.0, 0.0, 16.0, 8.0 ] }
+									}
+								}
+							]
+						},
+						{
+							"name": "Grass2",
+							"from": [ 18.0, 3.5, 0.0 ],
+							"to": [ 22.65, 5.5, 8.01 ],
+							"climateColorMap": "climateCorruptPlantTint",
+							"seasonColorMap": "seasonalCorruptGrass",
+							"rotationOrigin": [ 18.0, 3.5, 0.0 ],
+							"faces": {
+							},
+							"children": [
+								{
+									"name": "Grass2-snow",
+									"from": [ 0.0, 0.01, 0.0 ],
+									"to": [ 4.65, 4.01, 8.01 ],
+									"rotationOrigin": [ 18.0, 3.5, 0.0 ],
+									"faces": {
+										"north": { "texture": "#snowcover", "uv": [ 0.0, 0.0, 4.5, 4.0 ] },
+										"east": { "texture": "#snowcover", "uv": [ 0.0, 0.0, 8.0, 4.0 ] },
+										"south": { "texture": "#snowcover", "uv": [ 0.0, 0.0, 4.5, 4.0 ] },
+										"up": { "texture": "#snowcover", "uv": [ 0.0, 8.0, 8.0, 12.5 ], "rotation": 90 }
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "base horizontal39",
+					"from": [ 12.4, 0.0, 8.0 ],
+					"to": [ 16.0, 15.0, 16.0 ],
+					"rotationOrigin": [ 12.4, 0.0, 8.0 ],
+					"faces": {
+						"north": { "texture": "#aged1", "uv": [ 8.0, 1.0, 11.5, 16.0 ] },
+						"east": { "texture": "#aged1", "uv": [ 0.0, 1.0, 8.0, 16.0 ] },
+						"south": { "texture": "#aged1", "uv": [ 6.0, 1.0, 9.5, 16.0 ] },
+						"down": { "texture": "#aged1", "uv": [ 0.0, 0.0, 3.5, 8.0 ] }
+					}
+				}
+			]
+		}
+	]}

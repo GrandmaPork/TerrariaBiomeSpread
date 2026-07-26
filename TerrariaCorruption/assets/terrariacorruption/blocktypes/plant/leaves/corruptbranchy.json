@@ -61,8 +61,8 @@
     }
   ],
   "creativeinventory": {
-    "general": [ "leavesbranchy-placed-*" ],
-    "flora": [ "leavesbranchy-placed-*" ]
+    "general": [ "corruptleavesbranchy-placed-*" ],
+    "flora": [ "corruptleavesbranchy-placed-*" ]
   },
 
   "shape": {

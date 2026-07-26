@@ -1,0 +1,122 @@
+{
+	"code": "corruptbeam-plane",
+	"class": "BlockSupportBeam",
+	"entityClass": "Generic",
+	"heldTpUseAnimation": "interactstatic-beams",
+	"entityBehaviors": [ { "name": "SupportBeam" } ],
+	"variantgroups": [
+		{
+			"code": "material",
+			"states": [
+				"slate",
+				"thatch",
+				"bamboo",
+				"sod",
+				"ebonwood"
+			]
+		},
+		{
+			"code": "cover",
+			"states": [ "free", "snow" ]
+		}
+	],
+	"skipVariants": [
+		"corruptbeam-plane-sod-*",
+		"corruptbeam-plane-thatch-*"
+	],
+	"attributes": {
+		"handbook": { "exclude": true }
+	},
+	"creativeinventory": {
+		"general": [ "*-free" ],
+		"construction": [ "*-free" ]
+	},
+	"shapeByType": {
+		"*-slate-free": { "base": "game:block/roofing/beam/planeshingle-{cover}" },
+		"*-slate-snow": { "base": "game:block/roofing/beam/planeshingle-{cover}" },
+
+		"*-bamboo-free": { "base": "game:block/roofing/beam/planeshingle-{cover}" },
+		"*-bamboo-snow": { "base": "game:block/roofing/beam/planeshingle-{cover}" },
+
+		"*-free": { "base": "game:block/roofing/beam/planeshingle-free" },
+		"*-snow": { "base": "game:block/roofing/beam/planeshingle-snow*" }
+	},
+	"texturesByType": {
+		"beam-plane-slate-*": {
+			"material": { "base": "game:block/stone/shingles/slate*" }
+		},
+		"beam-plane-thatch-*": {
+			"top": { "base": "game:block/plant/grassroofing/normal-side" },
+			"bamboo-top": { "base": "game:block/hay/normal-top" }
+		},
+		"beam-plane-bamboo-*": {
+			"material": { "base": "game:block/wood/planks/bamboosmooth" }
+		},
+		"*": {
+			"material": { "base": "block/wood/shingles/{material}-top" }
+		}
+	},
+	"blockmaterialByType": {
+		"*-thatch-*": "Plant",
+		"*-sod-*": "Plant",
+		"*-bamboo-*": "Wood",
+		"*-slate-*": "Stone",
+		"*": "Wood"
+	},
+	"drawtype": "json",
+	"faceCullMode": "NeverCull",
+	"sideOpaque": { "all": false },
+	"emitSideAo": { "all": false },
+	"lightAbsorption": 0,
+	"resistance": 3.5,
+	"soundsByType": {
+		"*-thatch-*": {
+			"place": "block/plant",
+			"break": "block/plant",
+			"hit": "block/plant"
+		},
+		"*-bamboo-*": {
+			"place": "block/planks",
+			"break": "block/planks",
+			"hit": "block/planks"
+		},
+		"*-slate-*": {
+			"walk": "walk/stone",
+			"place": "block/ceramicplace"
+		},
+		"*clay-*": {
+			"walk": "walk/stone",
+			"place": "block/ceramicplace"
+		},
+		"*-sod-*": {
+			"hit": "block/planks",
+			"break": "block/planks",
+			"place": "block/planks",
+			"walk": "walk/grass*"
+		},
+		"*": {
+			"place": "block/planks",
+			"break": "block/planks",
+			"hit": "block/planks"
+		}
+	},
+	"maxStackSize": 32,
+	"materialDensity": 1200,
+	"heldTpIdleAnimation": "holdbothhandslarge",
+	"heldRightReadyAnimation": "heldblockready",
+	"heldTpUseAnimation": "twohandplaceblock",
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.23,
+			"y": -0.91,
+			"z": -0.8
+		},
+		"rotation": {
+			"x": -2,
+			"y": 25,
+			"z": -78
+		},
+		"scale": 0.4
+	},
+	"drops": []
+}

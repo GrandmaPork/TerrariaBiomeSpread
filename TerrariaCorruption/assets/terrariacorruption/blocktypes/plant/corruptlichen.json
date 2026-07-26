@@ -25,25 +25,25 @@
 	},
 	"renderpass": "OpaqueNoCull",
 	"shapeByType": {
-		"wildvine-*-north": {
+		"corruptwildvine-*-north": {
 			"base": "game:block/plant/vines-n",
 			"rotateY": 180
 		},
-		"wildvine-*-east": {
+		"corruptwildvine-*-east": {
 			"base": "game:block/plant/vines-n",
 			"rotateY": 90
 		},
-		"wildvine-*-south": {
+		"corruptwildvine-*-south": {
 			"base": "game:block/plant/vines-n",
 			"rotateY": 0
 		},
-		"wildvine-*-west": {
+		"corruptwildvine-*-west": {
 			"base": "game:block/plant/vines-n",
 			"rotateY": 270
 		}
 	},
 	"texturesByType": {
-		"wildvine-section-*": {
+		"corruptwildvine-section-*": {
 			"north": {
 				"base": "game:block/plant/wildvine/wildvine_1",
 				"alternates": [
@@ -55,7 +55,7 @@
 				]
 			}
 		},
-		"wildvine-end-*": {
+		"corruptwildvine-end-*": {
 			"north": {
 				"base": "game:block/plant/wildvine/wildvineend_1",
 				"alternates": [
@@ -82,7 +82,7 @@
 	"resistance": 0.4,
 	"collisionbox": null,
 	"selectionboxbyType": {
-		"wildvine-*-north": {
+		"corruptwildvine-*-north": {
 			"x1": 0,
 			"y1": 0,
 			"z1": 0,
@@ -91,7 +91,7 @@
 			"z2": 0.125,
 			"rotateY": 180
 		},
-		"wildvine-*-east": {
+		"corruptwildvine-*-east": {
 			"x1": 0,
 			"y1": 0,
 			"z1": 0,
@@ -100,7 +100,7 @@
 			"z2": 0.125,
 			"rotateY": 90
 		},
-		"wildvine-*-south": {
+		"corruptwildvine-*-south": {
 			"x1": 0,
 			"y1": 0,
 			"z1": 0,
@@ -108,7 +108,7 @@
 			"y2": 1,
 			"z2": 0.125
 		},
-		"wildvine-*-west": {
+		"corruptwildvine-*-west": {
 			"x1": 0,
 			"y1": 0,
 			"z1": 0,

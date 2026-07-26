@@ -19,6 +19,7 @@
     }
   ],
   "attributes": {
+    "isCorrupt": true,
     "smothersFire": true,
     "pushVectorByType": {
       "corruptwater-n-*": {

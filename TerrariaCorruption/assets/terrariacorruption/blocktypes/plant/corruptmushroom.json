@@ -2,27 +2,17 @@
 	"code": "corruptmushroom",
 	"class": "BlockMushroom",
 	"variantgroups": [
-		{ "loadFromProperties": "game:block/mushroom" },
+		{
+			"code": "mushroom",
+			"states": [ "witchhat" ]
+		},
 		{
 			"code": "state",
 			"states": [ "normal" ]
 		}
 	],
-	"skipVariants": [
-		"mushroom-beardedtooth-*",
-		"mushroom-whiteoyster-*",
-		"mushroom-pinkoyster-*",
-		"mushroom-dryadsaddle-*",
-		"mushroom-tinderhoof-*",
-		"mushroom-chickenofthewoods-*",
-		"mushroom-reishi-*",
-		"mushroom-funeralbell-*",
-		"mushroom-livermushroom-*",
-		"mushroom-pinkbonnet-*",
-		"mushroom-shiitake-*",
-		"mushroom-deerear-*"
-	],
 	"attributes": {
+		"isCorrupt": true,
 		"mushroomProps": {
 			"dieWhenTempBelow": 0,
 			"dieAfterFruiting": true
@@ -32,27 +22,10 @@
 			"satiety": 120,
 			"foodcategory": "Vegetable",
 			"healthByType": {
-				"*-flyagaric-*": -6.5,
-				"*-earthball-*": -8,
-				"*-deathcap-*": -50,
-				"*-elfinsaddle-*": -7,
-				"*-jackolantern-*": -6,
-				"*-devilbolete-*": -10,
-				"*-bitterbolete-*": -1,
-				"*-devilstooth-*": -2,
-				"*-golddropmilkcap-*": -2.5,
-				"*-laughingjim-*": -10,
-				"*-foolsconecap-*": -20,
-				"*-sickener-*": -7,
-				"*": 0
+				"*": -1
 			},
 			"psychedelicByType": {
-				"*-flyagaric-*": 0.4,
-				"*-goldcap-*": 1,
-				"*-libertycap-*": 1.4,
-				"*-wavycap-*": 0.8,
-				"*-bluemeanie-*": 2,
-				"*-laughingjim-*": 0.6
+				"*-witchhat-*": 1.4
 			}
 		},
 		"eatHealthEffectDurationSec": 10,
@@ -60,11 +33,11 @@
 		"plantContainable": {
 			"smallContainer": {
 				"randomRotate": false,
-				"shape": { "base": "game:block/plant/mushroom/{mushroom}/flowerpot/normal*" }
+				"shape": { "base": "block/plant/mushroom/{mushroom}/flowerpot/normal*" }
 			},
 			"largeContainer": {
 				"randomRotate": false,
-				"shape": { "base": "game:block/plant/mushroom/{mushroom}/planter/normal*" }
+				"shape": { "base": "block/plant/mushroom/{mushroom}/planter/normal*" }
 			}
 		},
 		"displayedShape": { "base": "game:item/food/mushroom/{mushroom}" },
@@ -109,91 +82,9 @@
 		}
 	},
 	"nutritionPropsByType": {
-		"*-flyagaric-*": {
-			"satiety": 80,
-			"health": -6.5,
-			"foodcategory": "Vegetable",
-			"psychedelic": 0.4
-		},
-		"*-earthball-*": {
-			"satiety": 80,
-			"health": -8,
-			"foodcategory": "Vegetable"
-		},
-		"*-deathcap-*": {
-			"satiety": 80,
-			"health": -50,
-			"foodcategory": "Vegetable"
-		},
-		"*-elfinsaddle-*": {
-			"satiety": 80,
-			"health": -7,
-			"foodcategory": "Vegetable"
-		},
-		"*-jackolantern-*": {
-			"satiety": 80,
-			"health": -6,
-			"foodcategory": "Vegetable"
-		},
-		"*-devilbolete-*": {
-			"satiety": 80,
-			"health": -10,
-			"foodcategory": "Vegetable"
-		},
-		"*-bitterbolete-*": {
-			"satiety": 80,
-			"health": -1,
-			"foodcategory": "Vegetable"
-		},
-		"*-devilstooth-*": {
-			"satiety": 80,
-			"health": -2,
-			"foodcategory": "Vegetable"
-		},
-		"*-golddropmilkcap-*": {
-			"satiety": 80,
-			"health": -2.5,
-			"foodcategory": "Vegetable"
-		},
-		"*-goldcap-*": {
-			"satiety": 80,
-			"foodcategory": "Vegetable",
-			"psychedelic": 1
-		},
-		"*-libertycap-*": {
-			"satiety": 80,
-			"foodcategory": "Vegetable",
-			"psychedelic": 1.4
-		},
-		"*-wavycap-*": {
-			"satiety": 80,
-			"foodcategory": "Vegetable",
-			"psychedelic": 0.8
-		},
-		"*-bluemeanie-*": {
-			"satiety": 80,
-			"foodcategory": "Vegetable",
-			"psychedelic": 2
-		},
-		"*-laughingjim-*": {
-			"satiety": 80,
-			"health": -10,
-			"foodcategory": "Vegetable",
-			"psychedelic": 0.6
-		},
-		"*-foolsconecap-*": {
-			"satiety": 80,
-			"health": -20,
-			"foodcategory": "Vegetable"
-		},
-		"*-sickener-*": {
-			"satiety": 80,
-			"health": -7,
-			"foodcategory": "Vegetable"
-		},
 		"*": {
 			"satiety": 80,
-			"health": 0,
+			"health": -10,
 			"foodcategory": "Vegetable"
 		}
 	},
@@ -202,7 +93,7 @@
 		"flora": [ "*-normal" ]
 	},
 	"drawtype": "JSON",
-	"shape": { "base": "game:block/plant/mushroom/{mushroom}/{state}*" },
+	"shape": { "base": "block/plant/mushroom/{mushroom}/{state}*" },
 	"shapeInventory": { "base": "game:item/food/mushroom/{mushroom}" },
 	"doNotRenderAtLod2": true,
 	"randomDrawOffset": false,
