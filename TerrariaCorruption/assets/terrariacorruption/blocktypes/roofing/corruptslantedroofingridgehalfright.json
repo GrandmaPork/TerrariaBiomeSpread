@@ -1,0 +1,335 @@
+{
+	"code": "corruptslantedroofingridgehalfright",
+	"behaviors": [
+		{
+			"name": "HorizontalOrientable",
+			"properties": {
+				"dropBlockFace": "east",
+				"drop": {
+					"type": "block",
+					"code": "corruptslantedroofingridgehalfright-{material}-east-free"
+				}
+			}
+		}
+	],
+	"variantgroups": [
+		{
+			"code": "material",
+			"states": [
+				"slate",
+				"thatch",
+				"bamboo",
+				"sod",
+				"ebonwood"
+			]
+		},
+		{ "loadFromProperties": "abstract/horizontalorientation" },
+		{
+			"code": "cover",
+			"states": [ "free", "snow" ]
+		}
+	],
+	"attributes": {
+		"isCorrupt": true,
+		"humanoidTraversalCost": 100,
+		"mapColorCode": "settlement"
+	},
+	"heldTpIdleAnimation": "holdbothhandslarge",
+	"heldRightReadyAnimation": "heldblockready",
+	"heldTpUseAnimation": "twohandplaceblock",
+	"shapeByType": {
+		"@.*-thatch-north-.*": {
+			"base": "game:block/roofing/ridge-half/right/{material}-{cover}",
+			"rotateY": 90
+		},
+		"@.*-thatch-west-.*": {
+			"base": "game:block/roofing/ridge-half/right/{material}-{cover}",
+			"rotateY": 180
+		},
+		"@.*-thatch-south-.*": {
+			"base": "game:block/roofing/ridge-half/right/{material}-{cover}",
+			"rotateY": 270
+		},
+		"@.*-thatch-east-.*": {
+			"base": "game:block/roofing/ridge-half/right/{material}-{cover}",
+			"rotateY": 0
+		},
+
+		"*-bamboo-north-*": {
+			"base": "game:block/roofing/ridge-half/right/bamboo-{cover}",
+			"rotateY": 90
+		},
+		"*-bamboo-west-*": {
+			"base": "game:block/roofing/ridge-half/right/bamboo-{cover}",
+			"rotateY": 180
+		},
+		"*-bamboo-south-*": {
+			"base": "game:block/roofing/ridge-half/right/bamboo-{cover}",
+			"rotateY": 270
+		},
+		"*-bamboo-east-*": {
+			"base": "game:block/roofing/ridge-half/right/bamboo-{cover}",
+			"rotateY": 0
+		},
+
+		"*-sod-north-*": {
+			"base": "block/roofing/ridge-half/right/sod-{cover}",
+			"rotateY": 90
+		},
+		"*-sod-west-*": {
+			"base": "block/roofing/ridge-half/right/sod-{cover}",
+			"rotateY": 180
+		},
+		"*-sod-south-*": {
+			"base": "block/roofing/ridge-half/right/sod-{cover}",
+			"rotateY": 270
+		},
+		"*-sod-east-*": {
+			"base": "block/roofing/ridge-half/right/sod-{cover}",
+			"rotateY": 0
+		},
+
+		"@.*-slate-north-.*": {
+			"base": "game:block/roofing/ridge-half/right/shingles-slate-copper-{cover}",
+			"rotateY": 90
+		},
+		"@.*-slate-west-.*": {
+			"base": "game:block/roofing/ridge-half/right/shingles-slate-copper-{cover}",
+			"rotateY": 180
+		},
+		"@.*-slate-south-.*": {
+			"base": "game:block/roofing/ridge-half/right/shingles-slate-copper-{cover}",
+			"rotateY": 270
+		},
+		"@.*-slate-east-.*": {
+			"base": "game:block/roofing/ridge-half/right/shingles-slate-copper-{cover}",
+			"rotateY": 0
+		},
+
+		"*-north-*": {
+			"base": "block/roofing/ridge-half/right/wood-{cover}",
+			"rotateY": 90
+		},
+		"*-west-*": {
+			"base": "block/roofing/ridge-half/right/wood-{cover}",
+			"rotateY": 180
+		},
+		"*-south-*": {
+			"base": "block/roofing/ridge-half/right/wood-{cover}",
+			"rotateY": 270
+		},
+		"*-east-*": {
+			"base": "block/roofing/ridge-half/right/wood-{cover}",
+			"rotateY": 0
+		}
+	},
+	"texturesByType": {
+		"*-slate-*": {
+			"material": { "base": "game:block/stone/shingles/slate*" }
+		},
+		"*-thatch-*": {
+			"normal-top": { "base": "game:block/hay/normal-top" },
+			"normal-side": { "base": "game:block/hay/normal-side" },
+			"straw1": { "base": "game:block/plant/grassroofing/straw1" }
+		},
+		"*-bamboo-*": {
+			"bamboo-side": { "base": "game:block/wood/planks/bamboo-side" },
+			"bamboo-top": { "base": "game:block/wood/planks/bamboo-top" },
+			"bamboosmooth": { "base": "game:block/wood/planks/bamboosmooth" }
+		},
+		"@.*-ebonwood-.*": {
+			"acacia1": { "base": "block/wood/planks/{material}1" },
+			"acacia-top": { "base": "block/wood/shingles/{material}-top" },
+			"acacia-side": { "base": "block/wood/shingles/{material}-side" }
+		}
+	},
+	"drawtype": "json",
+	"faceCullMode": "NeverCull",
+	"renderpass": "OpaqueNoCull",
+	"sidesolid": { "all": false },
+	"sideopaque": { "all": false },
+	"blockmaterialByType": {
+		"*-thatch-*": "Plant",
+		"*-sod-*": "Plant",
+		"*-bamboo-*": "Wood",
+		"*-slate-*": "Stone",
+		"*": "Wood"
+	},
+	"creativeinventory": {
+		"general": [ "*-east-free" ],
+		"decorative": [ "*-east-free" ]
+	},
+	"replaceable": 300,
+	"resistance": 2,
+	"lightAbsorption": 99,
+	"emitSideAo": {
+		"all": true
+	},
+	"sideAoByType": { "*-sod-*": { "all": false } },
+	"collisionSelectionBoxesByType": {
+		"*-north-*": [
+			{
+				"x1": 0.5,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.375,
+				"z2": 1,
+				"rotateY": 90
+			},
+			{
+				"x1": 0.5,
+				"y1": 0.375,
+				"z1": 0,
+				"x2": 0.75,
+				"y2": 0.5625,
+				"z2": 1,
+				"rotateY": 90
+			}
+		],
+		"*-west-*": [
+			{
+				"x1": 0.5,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.375,
+				"z2": 1,
+				"rotateY": 180
+			},
+			{
+				"x1": 0.5,
+				"y1": 0.375,
+				"z1": 0,
+				"x2": 0.75,
+				"y2": 0.5625,
+				"z2": 1,
+				"rotateY": 180
+			}
+		],
+		"*-south-*": [
+			{
+				"x1": 0.5,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.375,
+				"z2": 1,
+				"rotateY": 270
+			},
+			{
+				"x1": 0.5,
+				"y1": 0.375,
+				"z1": 0,
+				"x2": 0.75,
+				"y2": 0.5625,
+				"z2": 1,
+				"rotateY": 270
+			}
+		],
+		"*-east-*": [
+			{
+				"x1": 0.5,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.375,
+				"z2": 1
+			},
+			{
+				"x1": 0.5,
+				"y1": 0.375,
+				"z1": 0,
+				"x2": 0.75,
+				"y2": 0.5625,
+				"z2": 1
+			}
+		]
+	},
+	"soundsByType": {
+		"*-agedthatch-*": {
+			"place": "block/plant",
+			"break": "block/plant",
+			"hit": "block/plant"
+		},
+		"*-thatch-*": {
+			"place": "block/plant",
+			"break": "block/plant",
+			"hit": "block/plant"
+		},
+		"*-bamboo-*": {
+			"place": "block/planks",
+			"break": "block/planks",
+			"hit": "block/planks"
+		},
+		"*-copper-*": {
+			"place": "block/chute",
+			"break": "block/chute",
+			"hit": "block/chute",
+			"walk": "walk/stone"
+		},
+		"*-slate-*": {
+			"walk": "walk/stone",
+			"place": "block/ceramicplace"
+		},
+		"*clay-*": {
+			"walk": "walk/stone",
+			"place": "block/ceramicplace"
+		},
+		"*-sod-*": {
+			"hit": "block/planks",
+			"break": "block/planks",
+			"place": "block/planks",
+			"walk": "walk/grass*"
+		},
+		"*": {
+			"place": "block/planks",
+			"break": "block/planks",
+			"hit": "block/planks"
+		}
+	},
+	"guiTransform": {
+		"rotation": {
+			"x": -22.6,
+			"y": -40,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.8298,
+			"y": 0.25,
+			"z": 0.46
+		},
+		"scale": 0.96
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.9,
+			"y": -1,
+			"z": -1
+		},
+		"rotation": {
+			"x": 98,
+			"y": -180,
+			"z": 76
+		},
+		"scale": 0.43
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 0,
+			"y": -45,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 2.2
+	}
+}

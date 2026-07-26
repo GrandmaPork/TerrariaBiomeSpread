@@ -1,0 +1,149 @@
+{
+	"code": "corruptbeam-ridge",
+	"class": "BlockSupportBeam",
+	"entityClass": "Generic",
+	"heldTpUseAnimation": "interactstatic-beams",
+	"entityBehaviors": [ { "name": "SupportBeam" } ],
+	"variantgroups": [
+		{
+			"code": "material",
+			"states": [
+				"slate",
+				"thatch",
+				"bamboo",
+				"sod",
+				"ebonwood"
+			]
+		},
+		{
+			"code": "cover",
+			"states": [ "free", "snow" ]
+		}
+	],
+	"skipVariants": [
+		"corruptbeam-ridge-sod-*",
+		"corruptbeam-ridge-thatch-*"
+	],
+	"attributes": {
+		"isCorrupt": true,
+		"handbook": { "exclude": true },
+		"partialEnds": true
+	},
+	"creativeinventory": {
+		"general": [ "*-free" ],
+		"construction": [ "*-free" ]
+	},
+	"shapeByType": {
+		"*-slate-free": { "base": "game:block/roofing/beam/ridgeclay-{cover}/16" },
+		"*-slate-snow": { "base": "game:block/roofing/beam/ridgeclay-{cover}/16" },
+
+		"*-bamboo-free": { "base": "game:block/roofing/beam/ridgeclay-{cover}/16" },
+		"*-bamboo-snow": { "base": "game:block/roofing/beam/ridgeclay-{cover}/16" },
+
+		"*-free": { "base": "game:block/roofing/beam/ridgeshingle-free/16" },
+		"*-snow": { "base": "game:block/roofing/beam/ridgeshingle-snow/16" }
+	},
+	"texturesByType": {
+		"beam-ridge-slate-*": {
+			"material": { "base": "game:block/stone/shingles/slate*" }
+		},
+		"beam-ridge-thatch-*": {
+			"top": { "base": "game:block/plant/grassroofing/normal-side" },
+			"bamboo-top": { "base": "game:block/hay/normal-top" },
+			"agedstraw": { "base": "game:block/plant/grassroofing/straw1" }
+		},
+		"beam-ridge-bamboo-*": {
+			"material": { "base": "game:block/wood/planks/bamboosmooth" }
+		},
+		"*": {
+			"material": { "base": "block/wood/shingles/{material}-side" }
+		}
+	},
+	"blockmaterialByType": {
+		"*-thatch-*": "Plant",
+		"*-sod-*": "Plant",
+		"*-bamboo-*": "Wood",
+		"*-slate-*": "Stone",
+		"*": "Wood"
+	},
+	"drawtype": "json",
+	"faceCullMode": "NeverCull",
+	"sideOpaque": { "all": false },
+	"emitSideAo": { "all": false },
+	"lightAbsorption": 0,
+	"resistance": 3.5,
+	"soundsByType": {
+		"*-agedthatch-*": {
+			"place": "block/plant",
+			"break": "block/plant",
+			"hit": "block/plant"
+		},
+		"*-thatch-*": {
+			"place": "block/plant",
+			"break": "block/plant",
+			"hit": "block/plant"
+		},
+		"*-bamboo-*": {
+			"place": "block/planks",
+			"break": "block/planks",
+			"hit": "block/planks"
+		},
+		"*-copper-*": {
+			"place": "block/chute",
+			"break": "block/chute",
+			"hit": "block/chute",
+			"walk": "walk/stone"
+		},
+		"*-slate-*": {
+			"walk": "walk/stone",
+			"place": "block/ceramicplace"
+		},
+		"*clay-*": {
+			"walk": "walk/stone",
+			"place": "block/ceramicplace"
+		},
+		"*-sod-*": {
+			"hit": "block/planks",
+			"break": "block/planks",
+			"place": "block/planks",
+			"walk": "walk/grass*"
+		},
+		"*": {
+			"place": "block/planks",
+			"break": "block/planks",
+			"hit": "block/planks"
+		}
+	},
+	"maxStackSize": 32,
+	"materialDensity": 1200,
+	"heldTpIdleAnimation": "holdbothhandslarge",
+	"heldRightReadyAnimation": "heldblockready",
+	"heldTpUseAnimation": "twohandplaceblock",
+	"guiTransform": {
+		"rotation": {
+			"x": -22.6,
+			"y": -64,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.1,
+			"z": 0.5
+		},
+		"scale": 2.24
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.23,
+			"y": -0.91,
+			"z": -0.8
+		},
+		"rotation": {
+			"x": -2,
+			"y": 25,
+			"z": -78
+		},
+		"scale": 0.4
+	},
+	"drops": []
+}

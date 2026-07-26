@@ -54,13 +54,13 @@
     "isCorrupt": true
   },
   "texturesInventory": {
-    "down": { "base": "game:block/soil/fert{fertility}" },
+    "down": { "base": "block/soil/fert{fertility}" },
     "horizontals": {
       "base": "block/soil/fert{fertility}",
       "overlays": [ "block/plant/grasscoverage/inventory/grass-side-{grasscoverage}" ] //9340bf
     },
     "up": {
-      "base": ".block/soil/fert{fertility}",
+      "base": "block/soil/fert{fertility}",
       "overlays": [ "block/plant/grasscoverage/inventory/grass-top-{grasscoverage}" ]
     }
   },

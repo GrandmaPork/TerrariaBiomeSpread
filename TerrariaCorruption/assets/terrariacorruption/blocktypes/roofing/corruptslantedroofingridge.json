@@ -1,0 +1,196 @@
+{
+	"code": "corruptslantedroofingridge",
+	"behaviors": [ { "name": "NWOrientable" } ],
+	"variantgroups": [
+		{
+			"code": "material",
+			"states": [
+				"slate",
+				"thatch",
+				"bamboo",
+				"sod",
+				"ebonwood"
+			]
+		},
+		{
+			"code": "orientation",
+			"states": [ "ns", "we" ]
+		},
+		{
+			"code": "cover",
+			"states": [ "free", "snow" ]
+		}
+	],
+	"attributes": {
+		"isCorrupt": true,
+		"humanoidTraversalCost": 100,
+		"mapColorCode": "settlement"
+	},
+	"shapeByType": {
+		"@.*-thatch-ns-.*": {
+			"base": "game:block/roofing/ridge/{material}-{cover}",
+			"rotateY": 0
+		},
+		"@.*-thatch-we-.*": {
+			"base": "game:block/roofing/ridge/{material}-{cover}",
+			"rotateY": 90
+		},
+
+		"*-bamboo-ns-*": {
+			"base": "game:block/roofing/ridge/bamboo-{cover}",
+			"rotateY": 0
+		},
+		"*-bamboo-we-*": {
+			"base": "game:block/roofing/ridge/bamboo-{cover}",
+			"rotateY": 90
+		},
+
+		"*-sod-ns-*": { "base": "block/roofing/ridge/sod-{cover}" },
+		"*-sod-we-*": {
+			"base": "block/roofing/ridge/sod-{cover}",
+			"rotateY": 90
+		},
+
+		"@.*-slate-ns-.*": {
+			"base": "game:block/roofing/ridge/shingles-slate-copper-{cover}",
+			"rotateY": 0
+		},
+		"@.*-slate-we-.*": {
+			"base": "game:block/roofing/ridge/shingles-slate-copper-{cover}",
+			"rotateY": 90
+		},
+
+		"*-ns-*": {
+			"base": "block/roofing/ridge/wood-{cover}",
+			"rotateY": 0
+		},
+		"*-we-*": {
+			"base": "block/roofing/ridge/wood-{cover}",
+			"rotateY": 90
+		}
+	},
+	"texturesByType": {
+		"*-slate-*": {
+			"material": { "base": "game:block/stone/shingles/slate*" }
+		},
+		"*-thatch-*": {
+			"normal-top": { "base": "game:block/hay/normal-top" },
+			"normal-side": { "base": "game:block/hay/normal-side" },
+			"straw1": { "base": "game:block/plant/grassroofing/straw1" }
+		},
+		"*-bamboo-*": {
+			"bamboo-side": { "base": "game:block/wood/planks/bamboo-side" },
+			"bamboo-top": { "base": "game:block/wood/planks/bamboo-top" },
+			"bamboosmooth": { "base": "game:block/wood/planks/bamboosmooth" }
+		},
+		"@.*-ebonwood-.*": {
+			"acacia1": { "base": "block/wood/planks/{material}1" },
+			"acacia-top": { "base": "block/wood/shingles/{material}-top" },
+			"acacia-side": { "base": "block/wood/shingles/{material}-side" }
+		}
+	},
+	"drawtype": "json",
+	"faceCullMode": "NeverCull",
+	"renderpass": "OpaqueNoCull",
+	"sidesolid": {
+		"all": false,
+		"down": true
+	},
+	"sideopaque": { "all": false },
+	"blockmaterialByType": {
+		"*-thatch-*": "Plant",
+		"*-sod-*": "Plant",
+		"*-bamboo-*": "Wood",
+		"*-slate-*": "Stone",
+		"*": "Wood"
+	},
+	"creativeinventory": {
+		"general": [ "*-ns-free" ],
+		"decorative": [ "*-ns-free" ]
+	},
+	"replaceable": 300,
+	"resistance": 2,
+	"lightAbsorption": 99,
+	"emitSideAo": {
+		"all": true
+	},
+	"sideAoByType": { "*-sod-*": { "all": false } },
+	"collisionSelectionBoxes": [
+		{
+			"x1": 0,
+			"y1": 0,
+			"z1": 0,
+			"x2": 1,
+			"y2": 0.375,
+			"z2": 1,
+			"rotateYByType": { "*-we-*": 90 }
+		},
+		{
+			"x1": 0.25,
+			"y1": 0.375,
+			"z1": 0,
+			"x2": 0.75,
+			"y2": 0.5625,
+			"z2": 1,
+			"rotateYByType": { "*-we-*": 90 }
+		}
+	],
+	"soundsByType": {
+		"*-straw-*": {
+			"place": "block/plant",
+			"break": "block/plant",
+			"hit": "block/plant",
+			"walk": "walk/grass*"
+		},
+		"*-thatch-*": {
+			"place": "block/plant",
+			"break": "block/plant",
+			"hit": "block/plant",
+			"walk": "walk/grass*"
+		},
+		"*-bamboo-*": {
+			"place": "block/planks",
+			"break": "block/planks",
+			"hit": "block/planks",
+			"walk": "walk/wood*"
+		},
+		"*-copper-*": {
+			"place": "block/chute",
+			"break": "block/chute",
+			"hit": "block/chute",
+			"walk": "walk/stone"
+		},
+		"*-slate-*": {
+			"walk": "walk/stone",
+			"place": "block/ceramicplace"
+		},
+		"*clay-*": {
+			"walk": "walk/stone",
+			"place": "block/ceramicplace"
+		},
+		"*-sod-*": {
+			"hit": "block/planks",
+			"break": "block/planks",
+			"place": "block/planks",
+			"walk": "walk/grass*"
+		},
+		"*": {
+			"place": "block/planks",
+			"break": "block/planks",
+			"hit": "block/planks"
+		}
+	},
+	"guiTransform": {
+		"rotation": {
+			"x": -22.6,
+			"y": -50,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.3,
+			"z": 0.5
+		},
+		"scale": 0.8
+	}
+}
