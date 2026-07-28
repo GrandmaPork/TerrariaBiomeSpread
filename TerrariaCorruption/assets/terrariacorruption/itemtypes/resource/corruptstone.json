@@ -1,0 +1,325 @@
+{
+	"code": "corruptstone",
+	"class": "ItemStone",
+	"behaviorsByType": {
+		"corruptstone-chalk": [
+			{
+				"name": "GroundStorable",
+				"properties": {
+					"layout": "Stacking",
+					"ctrlKey": true,
+					"placeRemoveSound": "game:sounds/block/loosestone*",
+					"stackingModel": "game:item/stone-pile",
+					"upSolid": false,
+					"modelItemsToStackSizeRatio": 0.5,
+					"stackingCapacity": 64,
+					"transferQuantity": 2,
+					"bulkTransferQuantity": 16,
+					"collisionBox": {
+						"x1": 0,
+						"y1": 0,
+						"z1": 0,
+						"x2": 1,
+						"y2": 0.14,
+						"z2": 1
+					},
+					"cbScaleYByLayer": 0.06
+				}
+			},
+			{
+				"name": "Throwable",
+				"properties": {
+					"damage": 1,
+					"thrownProjectileCode": "thrownitem",
+					"damageType": "BluntAttack",
+					"randomThrowYaw": true,
+					"dropOnImpactChance": 0.75
+				}
+			},
+			{
+				"name": "ArtPigment",
+				"properties": {
+					"decorBlockCodes": [ "caveart-chalk-1-*" ],
+					"paintableOnBlockMaterials": [ "Stone", "Wood", "Brick", "Ceramic", "Metal", "Meta" ]
+				}
+			}
+		],
+		"corruptstone-limestone": [
+			{
+				"name": "GroundStorable",
+				"properties": {
+					"layout": "Stacking",
+					"ctrlKey": true,
+					"placeRemoveSound": "game:sounds/block/loosestone*",
+					"stackingModel": "game:item/stone-pile",
+					"upSolid": false,
+					"modelItemsToStackSizeRatio": 0.5,
+					"stackingCapacity": 64,
+					"transferQuantity": 2,
+					"bulkTransferQuantity": 16,
+					"collisionBox": {
+						"x1": 0,
+						"y1": 0,
+						"z1": 0,
+						"x2": 1,
+						"y2": 0.14,
+						"z2": 1
+					},
+					"cbScaleYByLayer": 0.06
+				}
+			},
+			{
+				"name": "Throwable",
+				"properties": {
+					"damage": 1,
+					"thrownProjectileCode": "thrownitem",
+					"damageType": "BluntAttack",
+					"randomThrowYaw": true,
+					"dropOnImpactChance": 0.5
+				}
+			},
+			{
+				"name": "ArtPigment",
+				"properties": {
+					"decorBlockCodes": [ "caveart-chalk-1-*" ],
+					"paintableOnBlockMaterials": [ "Stone", "Wood", "Brick", "Ceramic", "Metal", "Meta" ]
+				}
+			}
+		],
+		"*": [
+			{
+				"name": "GroundStorable",
+				"properties": {
+					"layout": "Stacking",
+					"ctrlKey": true,
+					"placeRemoveSound": "game:sounds/block/loosestone*",
+					"stackingModel": "game:item/stone-pile",
+					"upSolid": false,
+					"modelItemsToStackSizeRatio": 0.5,
+					"stackingCapacity": 64,
+					"transferQuantity": 2,
+					"bulkTransferQuantity": 16,
+					"collisionBox": {
+						"x1": 0,
+						"y1": 0,
+						"z1": 0,
+						"x2": 1,
+						"y2": 0.14,
+						"z2": 1
+					},
+					"cbScaleYByLayer": 0.06
+				}
+			},
+			{
+				"name": "Throwable",
+				"properties": {
+					"damage": 1,
+					"thrownProjectileCode": "thrownitem",
+					"damageType": "BluntAttack",
+					"randomThrowYaw": true,
+					"dropOnImpactChance": 0.5
+				}
+			}
+		]
+	},
+	"storageFlags": 5,
+	"variantgroups": [
+		{
+			"code": "rock",
+			"states": [ "meteorite-iron" ],
+			"loadFromProperties": "game:block/rockwithdeposit"
+		}
+	],
+	"maxstacksize": 64,
+	"shape": { "base": "game:item/stone" },
+	"textures": {
+		"material": { "base": "block/stone/rock/{rock}1" }
+	},
+	"attributes": {
+		"displaycaseable": true,
+		"shelvable": true,
+		"handbook": {
+			"groupBy": [ "stone-*" ]
+		},
+		"displayable": {
+			"shelf": {
+				"size": {
+					"width": 5,
+					"height": 2,
+					"length": 4
+				}
+			}
+		},
+		"inContainerTexture": { "base": "block/stone/rock/{rock}1" }
+	},
+	"attributesByType": {
+		"corruptstone-chert": {
+			"knappable": true,
+			"reinforcementStrength": 50
+		},
+		"corruptstone-granite": {
+			"knappable": true,
+			"reinforcementStrength": 50
+		},
+		"corruptstone-peridotite": {
+			"knappable": true,
+			"reinforcementStrength": 50,
+			"crushedOutput": {
+				"type": "item",
+				"code": "game:crushed-peridotite",
+				"stacksize": 1,
+				"attributes": { "crushingtier": "tinbronze" }
+			}
+		},
+		"corruptstone-andesite": {
+			"knappable": true,
+			"reinforcementStrength": 50
+		},
+		"corruptstone-basalt": {
+			"knappable": true,
+			"reinforcementStrength": 50
+		},
+		"corruptstone-obsidian": {
+			"knappable": true,
+			"reinforcementStrength": 50
+		},
+		"corruptstone-chalk": {
+			"pigment": {
+				"name": "Chalk white",
+				"color": {
+					"red": 237,
+					"green": 237,
+					"blue": 237
+				}
+			},
+			"handbook": {
+				"groupBy": [ "stone-*" ],
+				"extraSections": [
+					{
+						"title": "handbook-drawing",
+						"text": "handbook-chalk-drawing"
+					}
+				]
+			}
+		},
+		"corruptstone-limestone": {
+			"pigment": {
+				"name": "Lime white",
+				"color": {
+					"red": 221,
+					"green": 216,
+					"blue": 199
+				}
+			}
+		}
+	},
+	"combustiblePropsByType": {
+		"*-meteorite-iron": {
+			"meltingPoint": 1476,
+			"meltingDuration": 30,
+			"smeltedRatio": 2,
+			"smeltedStack": {
+				"type": "item",
+				"code": "ingot-meteoriciron"
+			}
+		}
+	},
+	"grindingPropsByType": {
+		"*-halite": {
+			"groundStack": {
+				"type": "item",
+				"code": "salt",
+				"stacksize": 2
+			}
+		},
+		"*-limestone": {
+			"groundStack": {
+				"type": "item",
+				"code": "lime",
+				"stacksize": 1
+			}
+		},
+		"*-chalk": {
+			"groundStack": {
+				"type": "item",
+				"code": "lime",
+				"stacksize": 1
+			}
+		},
+		"*marble*": {
+			"groundStack": {
+				"type": "item",
+				"code": "lime",
+				"stacksize": 1
+			}
+		}
+	},
+	"crushingPropsByType": {
+		"*-bauxite": {
+			"crushedStack": {
+				"type": "item",
+				"code": "game:crushed-bauxite",
+				"stacksize": 1
+			},
+			"hardnessTier": 2
+		}
+	},
+	"guiTransform": {
+		"translation": {
+			"x": 2,
+			"y": 1,
+			"z": 0
+		},
+		"rotation": {
+			"x": 150,
+			"y": -38,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.1,
+			"z": 0.5
+		},
+		"scale": 2.8
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -0.7,
+			"y": -0.12,
+			"z": -0.7
+		},
+		"rotation": {
+			"x": -44,
+			"y": 7,
+			"z": -9
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.1,
+			"z": 0.5
+		},
+		"scale": 0.7
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 4.5
+	},
+	"creativeinventory": {
+		"general": [ "*" ],
+		"items": [ "*" ]
+	}
+}

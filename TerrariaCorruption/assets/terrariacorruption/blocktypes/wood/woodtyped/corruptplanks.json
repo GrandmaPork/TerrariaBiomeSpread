@@ -76,7 +76,7 @@
 	"drops": [
 		{
 			"type": "block",
-			"code": "planks-{wood}-ud"
+			"code": "corruptplanks-ud"
 		}
 	]
 }

@@ -160,7 +160,7 @@
 		"rock-suevite": [
 			{
 				"type": "item",
-				"code": "stone-{rock}",
+				"code": "corruptstone-{rock}",
 				"quantity": {
 					"avg": 2.5,
 					"var": 0.5
@@ -179,7 +179,7 @@
 		"*": [
 			{
 				"type": "item",
-				"code": "stone-{rock}",
+				"code": "corruptstone-{rock}",
 				"quantity": {
 					"avg": 2.5,
 					"var": 0.5

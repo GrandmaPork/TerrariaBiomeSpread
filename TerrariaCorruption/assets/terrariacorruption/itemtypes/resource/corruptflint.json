@@ -1,0 +1,121 @@
+{
+	"code": "corruptflint",
+	"class": "ItemFlint",
+	"storageFlags": 5,
+	"attributes": {
+		"knappable": true,
+		"displaycaseable": true,
+		"shelvable": true,
+		"displayable": {
+			"shelf": {
+				"size": {
+					"width": 9,
+					"height": 1.5,
+					"length": 4
+				}
+			}
+		},
+		"bloomeryFuelRatio": 4,
+		"onTongTransform": {
+			"translation": {
+				"x": -1.85,
+				"y": -1.14,
+				"z": -0.6
+			},
+			"rotation": {
+				"x": 93,
+				"y": 19,
+				"z": -86
+			},
+			"scale": 0.7
+		},
+		"tongOpening": "medium",
+		"onMetalTongTransform": {
+			"translation": {
+				"x": -1.42,
+				"y": -0.13,
+				"z": -0.8
+			},
+			"rotation": {
+				"x": 85,
+				"y": 14,
+				"z": -85
+			},
+			"origin": {
+				"x": 0.6,
+				"y": -0,
+				"z": 0.5
+			},
+			"scale": 0.7
+		},
+		"inContainerTexture": { "base": "game:block/stone/flint" }
+	},
+	"shape": { "base": "game:item/resource/flint" },
+	"texture": { "base": "game:block/stone/flint" },
+	"creativeinventory": {
+		"general": [ "*" ],
+		"items": [ "*" ]
+	},
+	"maxstacksize": 64,
+	"materialDensity": 2000,
+	"combustibleProps": {
+		"meltingPoint": 1000,
+		"meltingDuration": 13,
+		"smeltedRatio": 1,
+		"requiresContainer": false,
+		"smeltedStack": {
+			"type": "item",
+			"code": "game:calcined-flint",
+			"stacksize": 1
+		}
+	},
+	"guiTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 171,
+			"y": 54,
+			"z": -36
+		},
+		"origin": {
+			"x": 0.56,
+			"y": 0.04,
+			"z": 0.48
+		},
+		"scale": 3.05
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -1,
+			"y": -0.9,
+			"z": -1.35
+		},
+		"rotation": {
+			"x": -80,
+			"y": 0,
+			"z": 0
+		},
+		"scale": 0.56
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0.2,
+			"z": 0
+		},
+		"rotation": {
+			"x": 1,
+			"y": 0,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.25,
+			"z": 0.5299
+		},
+		"scale": 4
+	}
+}

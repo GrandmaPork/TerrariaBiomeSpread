@@ -114,7 +114,7 @@
 	"drops": [
 		{
 			"type": "item",
-			"code": "stone-{corruptrock}",
+			"code": "corruptstone-{corruptrock}",
 			"quantity": {
 				"avg": 1.5,
 				"var": 0.5
