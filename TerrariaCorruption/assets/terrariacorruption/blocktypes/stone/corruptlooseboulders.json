@@ -40,7 +40,7 @@
 	},
 	"lod2shapeByType": {
 		"*-snow": {
-			"base": "block/stone/looseboulders/lod2{cover}*",
+			"base": "game:block/stone/looseboulders/lod2{cover}*",
 			"alternates": [
 				{ "rotateY": 90 },
 				{ "rotateY": 180 },
@@ -48,7 +48,7 @@
 			]
 		},
 		"*": {
-			"base": "block/stone/looseboulders/lod2free*",
+			"base": "game:block/stone/looseboulders/lod2free*",
 			"alternates": [
 				{ "rotateY": 90 },
 				{ "rotateY": 180 },
@@ -68,7 +68,7 @@
 	"drops": [
 		{
 			"type": "item",
-			"code": "stone-{rock}",
+			"code": "corruptstone-{rock}",
 			"quantity": {
 				"avg": 5,
 				"var": 3

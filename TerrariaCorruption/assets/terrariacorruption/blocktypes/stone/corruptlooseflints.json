@@ -59,7 +59,7 @@
 	"drops": [
 		{
 			"type": "item",
-			"code": "flint",
+			"code": "corruptflint",
 			"quantity": {
 				"avg": 1.3,
 				"var": 0

@@ -6,22 +6,22 @@
     {
       "name": "UnstableRock",
       "propertiesByType": {
-        "@corruptrock-(corrupt_claystone|corrupt_sandstone|corrupt_shale|corrupt_conglomerate|corrupt_limestone|corrupt_chert|corrupt_chalk)": {
-          "collapsedBlock": "crackedrock-{corruptrock}",
+        "@corruptrock-(claystone|sandstone|shale|conglomerate|limestone|chert|chalk)": {
+          "collapsedBlock": "corruptcrackedrock-{corruptrock}",
           "collapseChance": 0.5,
           "maxSupportDistance": 2,
           "maxCollapseDistance": 1,
           "impactDamageMul": 6
         },
-        "@corruptrock-(corrupt_bauxite|corrupt_slate|corrupt_phyllite)": {
-          "collapsedBlock": "crackedrock-{corruptrock}",
+        "@corruptrock-(bauxite|slate|phyllite)": {
+          "collapsedBlock": "corruptcrackedrock-{corruptrock}",
           "collapseChance": 0.25,
           "maxSupportDistance": 4,
           "maxCollapseDistance": 2,
           "impactDamageMul": 6
         },
         "*": {
-          "collapsedBlock": "crackedrock-{corruptrock}",
+          "collapsedBlock": "corruptcrackedrock-{corruptrock}",
           "collapseChance": 0.2,
           "maxSupportDistance": 6,
           "maxCollapseDistance": 3,
@@ -78,7 +78,7 @@
     "corruptrock-suevite": [
       {
         "type": "item",
-        "code": "stone-{corruptrock}",
+        "code": "corruptstone-{corruptrock}",
         "quantity": {
           "avg": 2.5,
           "var": 0.5
@@ -97,7 +97,7 @@
     "*": [
       {
         "type": "item",
-        "code": "stone-{corruptrock}",
+        "code": "corruptstone-{corruptrock}",
         "quantity": {
           "avg": 2.5,
           "var": 0.5

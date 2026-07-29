@@ -57,7 +57,7 @@
   "drops": [
     {
       "type": "block",
-      "code": "soil-low-none",
+      "code": "corruptsoil-low-none",
       "quantity": {
         "avg": 1,
         "var": 0

@@ -73,7 +73,7 @@
   "drops": [
     {
       "type": "block",
-      "code": "peatbrick",
+      "code": "game:peatbrick",
       "quantity": {
         "avg": 2,
         "var": 1

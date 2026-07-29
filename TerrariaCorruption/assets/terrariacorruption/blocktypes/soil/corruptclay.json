@@ -75,7 +75,7 @@
   "drops": [
     {
       "type": "item",
-      "code": "clay-{type}",
+      "code": "game:clay-{type}",
       "quantity": {
         "avg": 4.5,
         "var": 1

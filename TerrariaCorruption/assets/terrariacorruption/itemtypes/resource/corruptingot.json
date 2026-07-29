@@ -1,0 +1,447 @@
+{
+	"code": "corruptingot",
+	"class": "ItemIngot",
+	"maxstacksize": 16,
+	"behaviors": [
+		{
+			"name": "GroundStorable",
+			"properties": {
+				"layout": "Stacking",
+				"placeRemoveSound": "game:sounds/block/ingot",
+				"stackingModelByType": {
+					"*-gold": "game:block/metal/ingotpileshiny",
+					"*": "game:block/metal/ingotpile"
+				},
+				"stackingTextures": {
+					"metal": "game:block/metal/ingot/{metal}"
+				},
+				"modelItemsToStackSizeRatio": 1,
+				"upSolid": true,
+				"stackingCapacity": 64,
+				"transferQuantity": 1,
+				"bulkTransferQuantity": 4,
+				"collisionBox": {
+					"x1": 0,
+					"y1": 0,
+					"z1": 0,
+					"x2": 1,
+					"y2": 0.125,
+					"z2": 1
+				},
+				"cbScaleYByLayer": 0.125
+			}
+		}
+	],
+	"attributes": {
+		"reinforcementStrengthByType": {
+			"*-copper": 150,
+			"*-tinbronze": 300,
+			"*-bismuthbronze": 300,
+			"*-blackbronze": 400,
+			"*-iron": 800,
+			"*-meteoriciron": 1000,
+			"*-steel": 1200
+		},
+		"handbook": {
+			"groupBy": [ "ingot-*" ],
+			"excludeByType": {
+				"*-chromium": true,
+				"*-platinum": true,
+				"*-titanium": true,
+				"*-stainlesssteel": true,
+				"*-uranium": true
+			}
+		},
+		"workableTemperatureByType": {
+			"ingot-lead": 0,
+			"ingot-tin": 0,
+			"ingot-leadsolder": 0
+		},
+		"requiresAnvilTierByType": {
+			"ingot-meteoriciron": 3,
+			"ingot-blistersteel": 3
+		},
+		"shatteredStack": {
+			"type": "item",
+			"code": "game:metalbit-{metal}"
+		},
+		"carburizablePropsByType": {
+			"ingot-iron": {
+				"carburizedOutput": {
+					"type": "item",
+					"code": "game:ingot-blistersteel"
+				}
+			}
+		},
+		"displaycaseable": true,
+		"shelvable": true,
+		"displayable": {
+			"shelf": {
+				"behavior": "Stacking",
+				"category": "ingot",
+				"size": {
+					"width": 3,
+					"height": 2,
+					"length": 7
+				},
+				"randYRotAngle": 5
+			}
+		},
+		"onshelfTransform": {
+			"rotation": {
+				"x": 0,
+				"y": 75,
+				"z": 0
+			}
+		},
+		"onTongTransform": {
+			"translation": {
+				"x": -0.48,
+				"y": -0.58,
+				"z": -0.45
+			},
+			"rotation": {
+				"x": 0,
+				"y": 0,
+				"z": 76
+			},
+			"scale": 1.02
+		},
+		"tongOpening": "medium",
+		"onMetalTongTransform": {
+			"translation": {
+				"x": -1,
+				"y": -0.19,
+				"z": -0.6
+			},
+			"rotation": {
+				"x": 0,
+				"y": -1,
+				"z": -10
+			},
+			"origin": {
+				"x": 0.5,
+				"y": 0,
+				"z": 0.5
+			},
+			"scale": 1
+		}
+	},
+	"variantgroups": [
+		{
+			"code": "metal",
+			"loadFromProperties": "block/metal",
+			"states": [ "blistersteel", "leadsolder", "silversolder" ]
+		}
+	],
+	"storageFlags": 5,
+	"shapeByType": {
+		"*-gold": { "base": "game:item/ingotshiny" },
+		"*": { "base": "game:item/ingot" }
+	},
+	"textures": {
+		"metal": { "base": "game:block/metal/ingot/{metal}" }
+	},
+	"creativeinventory": {
+		"general": [ "*" ],
+		"items": [ "*" ]
+	},
+	"materialDensityByType": {
+		"*-copper": 8960,
+		"*-cupronickel": 8940,
+		"*-brass": 8500,
+		"*-tinbronze": 7600,
+		"*-bismuthbronze": 7900,
+		"*-blackbronze": 9000,
+		"*-iron": 7870,
+		"*-meteoriciron": 7800,
+		"*-steel": 7820,
+		"*-blistersteel": 7720,
+		"*-gold": 19300,
+		"*-lead": 11300,
+		"*-electrum": 8900,
+		"*-nickel": 8908,
+		"*-tin": 7260,
+		"*-chromium": 7150,
+		"*-platinum": 21500,
+		"*-titanium": 4510,
+		"*-zinc": 7140,
+		"*-silver": 10500,
+		"*-bismuth": 9790,
+		"*-molybdochalkos": 9600,
+		"*-leadsolder": 9280,
+		"*-silversolder": 8880
+	},
+	"combustiblePropsByType": {
+		"ingot-copper": {
+			"meltingPoint": 1084,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-copper"
+			}
+		},
+		"ingot-cupronickel": {
+			"meltingPoint": 1171,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-cupronickel"
+			}
+		},
+		"ingot-brass": {
+			"meltingPoint": 920,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-brass"
+			}
+		},
+		"ingot-tinbronze": {
+			"meltingPoint": 950,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-tinbronze"
+			}
+		},
+		"ingot-bismuthbronze": {
+			"meltingPoint": 850,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-bismuthbronze"
+			}
+		},
+		"ingot-blackbronze": {
+			"meltingPoint": 1020,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-blackbronze"
+			}
+		},
+		"ingot-electrum": {
+			"meltingPoint": 1010,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-electrum"
+			}
+		},
+		"ingot-iron": {
+			"meltingPoint": 1482,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-iron"
+			}
+		},
+		"ingot-meteoriciron": {
+			"meltingPoint": 1476,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-meteoriciron"
+			}
+		},
+		"ingot-nickel": {
+			"meltingPoint": 1325,
+			"meltingDuration": 40,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-nickel"
+			}
+		},
+		"ingot-steel": {
+			"meltingPoint": 1502,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-steel"
+			}
+		},
+		"ingot-blistersteel": {
+			"meltingPoint": 1602,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-blistersteel"
+			}
+		},
+		"ingot-gold": {
+			"meltingPoint": 1063,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-gold"
+			}
+		},
+		"ingot-lead": {
+			"meltingPoint": 327,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-lead"
+			}
+		},
+		"ingot-tin": {
+			"meltingPoint": 232,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-tin"
+			}
+		},
+		"ingot-chromium": {
+			"meltingPoint": 1907,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-chromium"
+			}
+		},
+		"ingot-platinum": {
+			"meltingPoint": 1770,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-platinum"
+			}
+		},
+		"ingot-titanium": {
+			"meltingPoint": 1668,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-titanium"
+			}
+		},
+		"ingot-zinc": {
+			"meltingPoint": 419,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-zinc"
+			}
+		},
+		"ingot-silver": {
+			"meltingPoint": 961,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptcorruptingot-silver"
+			}
+		},
+		"ingot-bismuth": {
+			"meltingPoint": 271,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-bismuth"
+			}
+		},
+		"ingot-molybdochalkos": {
+			"meltingPoint": 902,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-molybdochalkos"
+			}
+		},
+		"ingot-leadsolder": {
+			"meltingPoint": 327,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-leadsolder"
+			}
+		},
+		"ingot-silversolder": {
+			"meltingPoint": 758,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-silversolder"
+			}
+		}
+	},
+	"guiTransform": {
+		"translation": {
+			"x": 2,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 149,
+			"y": -36,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.1,
+			"z": 0.5
+		},
+		"scale": 3.5
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -0.77,
+			"y": -0.15,
+			"z": -0.64
+		},
+		"rotation": {
+			"x": 0,
+			"y": -71,
+			"z": 18
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.1,
+			"z": 0.5
+		},
+		"scale": 0.75
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 4.8
+	}
+}

@@ -73,7 +73,7 @@
   //"block-corruptfirepit-construct3": "Firepit (In construction)",
   //"block-corruptfirepit-construct4": "Firepit (In construction)",
   //"block-corruptclayoven-*": "Clay oven",
-  "block-corruptloosestick-*": "Crumbling sticks",
+  "block-corruptloosestick-*": "Brittle sticks",
   "block-corruptloosestones-meteorite-iron-*": "Loose meteoric iron pieces",
   "block-corruptloosestones-andesite-*": "EbonAndesite stones",
   "block-corruptloosestones-chalk-*": "EbonChalk stones",
@@ -889,8 +889,8 @@
 
   //"block-altar-*": "Altar",
   //"block-forge": "Forge",
-  "block-corruptstonepath-*": "EbonStone path",
-  "block-corruptstonepathfullblock": "EbonStone path",
+  //"block-corruptstonepath-*": "EbonStone path",
+  //"block-corruptstonepathfullblock": "EbonStone path",
 
 
   //"block-basalt": "Basalt",
