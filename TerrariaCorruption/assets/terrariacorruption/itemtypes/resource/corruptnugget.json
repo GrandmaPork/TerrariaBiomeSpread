@@ -1,0 +1,419 @@
+{
+	"code": "corruptnugget",
+	// ItemNugget is just for displaying the yield in units in the tooltip
+	"class": "ItemNugget",
+	"behaviorsByType": {
+		"*-hematite": [
+			{
+				"name": "GroundStorable",
+				"properties": {
+					"layout": "Messy12",
+					"collisionBox": {
+						"x1": 0,
+						"y1": 0,
+						"z1": 0,
+						"x2": 1,
+						"y2": 0.125,
+						"z2": 1
+					}
+				}
+			},
+			{
+				"name": "ArtPigment",
+				"properties": {
+					"decorBlockCodes": [ "caveart-redochre-1-*" ],
+					"paintableOnBlockMaterials": [ "Stone", "Wood", "Brick", "Ceramic", "Metal", "Meta" ],
+					"consumeChance": 0.066
+				}
+			}
+		],
+		"*-limonite": [
+			{
+				"name": "GroundStorable",
+				"properties": {
+					"layout": "Messy12",
+					"collisionBox": {
+						"x1": 0,
+						"y1": 0,
+						"z1": 0,
+						"x2": 1,
+						"y2": 0.125,
+						"z2": 1
+					}
+				}
+			},
+			{
+				"name": "ArtPigment",
+				"properties": {
+					"decorBlockCodes": [ "caveart-yellowochre-1-*" ],
+					"paintableOnBlockMaterials": [ "Stone", "Wood", "Brick", "Ceramic", "Metal", "Meta" ],
+					"consumeChance": 0.066
+				}
+			}
+		],
+		"*": [
+			{
+				"name": "GroundStorable",
+				"properties": {
+					"layout": "Messy12",
+					"collisionBox": {
+						"x1": 0,
+						"y1": 0,
+						"z1": 0,
+						"x2": 1,
+						"y2": 0.125,
+						"z2": 1
+					}
+				}
+			}
+		]
+	},
+	"variantgroups": [
+		{
+			"code": "ore",
+			"loadFromProperties": "block/ore-nugget"
+		}
+	],
+	"shape": { "base": "game:item/nugget" },
+	"textures": {
+		"ore": { "base": "game:item/resource/nugget/{ore}" }
+	},
+	"attributes": {
+		"handbook": {
+			"groupBy": [ "nugget-*" ],
+			"excludeByType": {
+				"*-chromite-*": true,
+				"*-platinum-*": true,
+				"*-ilmenite-*": true,
+				"*-rocksalt_sylvite-*": true
+			}
+		},
+		"pigmentByType": {
+			"*-malachite": {
+				"name": "Verdigris",
+				"color": {
+					"red": 112,
+					"green": 154,
+					"blue": 108
+				}
+			},
+			"*-hematite": {
+				"name": "Red ochre",
+				"color": {
+					"red": 102,
+					"green": 40,
+					"blue": 35
+				}
+			},
+			"*-limonite": {
+				"name": "Yellow ochre",
+				"color": {
+					"red": 193,
+					"green": 143,
+					"blue": 50
+				}
+			}
+		},
+		"displaycaseable": true,
+		"shelvable": true,
+		"onTongTransform": {
+			"translation": {
+				"x": -1.03,
+				"y": -0.29,
+				"z": -0.48
+			},
+			"rotation": {
+				"x": 0,
+				"y": 7,
+				"z": 0
+			}
+		},
+		"tongOpening": "medium",
+		"onMetalTongTransform": {
+			"translation": {
+				"x": -1.05,
+				"y": -0.12,
+				"z": -0.48
+			},
+			"rotation": {
+				"x": -89,
+				"y": -8,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5,
+				"y": -0,
+				"z": 0.5
+			}
+		},
+		"displayable": {
+			"shelf": {
+				"size": {
+					"width": 2,
+					"height": 2,
+					"length": 2
+				}
+			}
+		}
+	},
+	"maxstacksize": 128,
+	"size": {
+		"width": 0.0625,
+		"height": 0.0625,
+		"length": 0.0625
+	},
+	"storageFlags": 5,
+	"creativeinventory": {
+		"general": [ "*" ],
+		"items": [ "*" ]
+	},
+	"crushingPropsByType": {
+		"nugget-galena": {
+			"crushedStack": {
+				"type": "item",
+				"code": "corruptcrushed-galena"
+			},
+			"quantity": { "avg": ".33" },
+			"hardnessTier": 1
+		},
+		"nugget-cassiterite": {
+			"crushedStack": {
+				"type": "item",
+				"code": "corruptcrushed-cassiterite"
+			},
+			"quantity": { "avg": ".33" },
+			"hardnessTier": 1
+		},
+		"nugget-chromite": {
+			"crushedStack": {
+				"type": "item",
+				"code": "corruptcrushed-chromite"
+			},
+			"quantity": { "avg": ".33" },
+			"hardnessTier": 4
+		},
+		"nugget-ilmenite": {
+			"crushedStack": {
+				"type": "item",
+				"code": "corruptcrushed-ilmenite"
+			},
+			"quantity": { "avg": ".33" },
+			"hardnessTier": 4
+		},
+		"nugget-limonite": {
+			"crushedStack": {
+				"type": "item",
+				"code": "corruptcrushed-iron"
+			},
+			"quantity": { "avg": ".33" },
+			"hardnessTier": 3
+		},
+		"nugget-magnetite": {
+			"crushedStack": {
+				"type": "item",
+				"code": "corruptcrushed-iron"
+			},
+			"quantity": { "avg": ".33" },
+			"hardnessTier": 3
+		},
+		"nugget-hematite": {
+			"crushedStack": {
+				"type": "item",
+				"code": "corruptcrushed-iron"
+			},
+			"quantity": { "avg": ".33" },
+			"hardnessTier": 3
+		}
+	},
+	"combustiblePropsByType": {
+		"*-nativecopper": {
+			"meltingPoint": 1084,
+			"meltingDuration": 30,
+			"smeltedRatio": 20,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-copper"
+			}
+		},
+		"*-malachite": {
+			"meltingPoint": 1084,
+			"meltingDuration": 30,
+			"smeltedRatio": 20,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-copper"
+			}
+		},
+		"*-limonite": {
+			"meltingPoint": 1482,
+			"meltingDuration": 30,
+			"smeltedRatio": 20,
+			"smeltedStack": {
+				"type": "item",
+				"code": "game:ironbloom"
+			}
+		},
+		"*-hematite": {
+			"meltingPoint": 1482,
+			"meltingDuration": 30,
+			"smeltedRatio": 20,
+			"smeltedStack": {
+				"type": "item",
+				"code": "game:ironbloom"
+			}
+		},
+		"*-nativegold": {
+			"meltingPoint": 1063,
+			"meltingDuration": 30,
+			"smeltedRatio": 20,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-gold"
+			}
+		},
+		"*-galena": {
+			"meltingPoint": 327,
+			"meltingDuration": 30,
+			"smeltedRatio": 20,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-lead"
+			}
+		},
+		"*-cassiterite": {
+			"meltingPoint": 232,
+			"meltingDuration": 30,
+			"smeltedRatio": 20,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-tin"
+			}
+		},
+		"*-chromite": {
+			"meltingPoint": 1907,
+			"meltingDuration": 30,
+			"smeltedRatio": 20,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-chromium"
+			}
+		},
+		"*-platinum": {
+			"meltingPoint": 1770,
+			"meltingDuration": 30,
+			"smeltedRatio": 20,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-platinum"
+			}
+		},
+		"*-ilmenite": {
+			"meltingPoint": 1668,
+			"meltingDuration": 30,
+			"smeltedRatio": 20,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-titanium"
+			}
+		},
+		"*-sphalerite": {
+			"meltingPoint": 419,
+			"meltingDuration": 30,
+			"smeltedRatio": 20,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-zinc"
+			}
+		},
+		"*-nativesilver": {
+			"meltingPoint": 961,
+			"meltingDuration": 30,
+			"smeltedRatio": 20,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-silver"
+			}
+		},
+		"*-bismuthinite": {
+			"meltingPoint": 271,
+			"meltingDuration": 30,
+			"smeltedRatio": 20,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-bismuth"
+			}
+		},
+		"*-magnetite": {
+			"meltingPoint": 1482,
+			"meltingDuration": 30,
+			"smeltedRatio": 20,
+			"smeltedStack": {
+				"type": "item",
+				"code": "game:ironbloom"
+			}
+		},
+		"*-pentlandite": {
+			"meltingPoint": 1325,
+			"meltingDuration": 30,
+			"smeltedRatio": 20,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-nickel"
+			}
+		}
+	},
+	"guiTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 176,
+			"y": 132,
+			"z": -21
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.07,
+			"z": 0.5
+		},
+		"scale": 5.61
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 5
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -0.8,
+			"y": -0.1,
+			"z": -0.7
+		},
+		"rotation": {
+			"x": 5,
+			"y": 82,
+			"z": 16
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.1,
+			"z": 0.5
+		},
+		"scale": 0.7
+	}
+}
