@@ -24,7 +24,7 @@ To not make it tedious to purify, a machine will be used to first stop the sprea
 
 
 # Credits
-## Thank you to takeothewolf! They made the following 177 textures:
+## Thank you to takeothewolf! They made the following 359 textures:
 11 in: `block/liquid/ice`
 - (All 11 textures)
 
@@ -58,3 +58,41 @@ To not make it tedious to purify, a machine will be used to first stop the sprea
 
 15 in: `block/stone/rock`
 - (all 15 textures)
+- 
+90 in: `block/wood/bark`
+- (all 26 bark textures)
+- (all 64 quad textures)
+
+11 in `block/wood/bark/cabinet`
+- (all 7 1block textures)
+- (all 4 2block textures)
+
+9 in `block/wood/carved/acacia/normal`
+- (all 9 textures)
+
+3 in `block/wood/carved/crate`
+- (all 3 textures)
+
+15 in `block/wood/debarked`
+- (all 15 textures)
+
+1 in `block/wood/door/sleek`
+- ebonwood
+
+8 in `block/wood/path`
+- (all 8 textures)
+
+6 in `block/wood/planks`
+- (all 6 textures)
+
+2 in `block/wood/roughfence`
+- (both ebonwood textures)
+
+2 in `block/wood/shingles`
+- (both ebonwood textures)
+
+35 in `block/wood/treetrunk`
+- (all 13 bark textures)
+- (all 8 quad textures)
+- (the one fruit texture)
+- (all 13 debarked textures)
