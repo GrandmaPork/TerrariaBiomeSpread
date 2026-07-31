@@ -51,7 +51,7 @@
 		"inContainerTexture": { "base": "game:block/stone/flint" }
 	},
 	"shape": { "base": "game:item/resource/flint" },
-	"texture": { "base": "game:block/stone/flint" },
+	"texture": { "base": "block/stone/flint" },
 	"creativeinventory": {
 		"general": [ "*" ],
 		"items": [ "*" ]

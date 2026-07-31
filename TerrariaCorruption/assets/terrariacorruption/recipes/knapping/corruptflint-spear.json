@@ -1,0 +1,25 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "corruptflint"
+	},
+	"pattern": [
+		[
+			"____##____",
+			"____##____",
+			"___####___",
+			"___####___",
+			"___####___",
+			"___####___",
+			"___####___",
+			"___####___",
+			"____##____",
+			"___####___"
+		]
+	],
+	"name": "Corrupt Flint spear",
+	"output": {
+		"type": "item",
+		"code": "shadowspearhead-flint"
+	}
+}

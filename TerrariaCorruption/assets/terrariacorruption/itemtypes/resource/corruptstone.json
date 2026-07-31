@@ -220,7 +220,7 @@
 			"smeltedRatio": 2,
 			"smeltedStack": {
 				"type": "item",
-				"code": "ingot-meteoriciron"
+				"code": "corruptingot-meteoriciron"
 			}
 		}
 	},

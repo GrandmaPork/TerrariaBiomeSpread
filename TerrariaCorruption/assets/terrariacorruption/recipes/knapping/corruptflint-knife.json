@@ -1,0 +1,26 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "corruptflint"
+	},
+	"pattern": [
+		[
+			"_____#____",
+			"_____#____",
+			"____##____",
+			"____##____",
+			"____##____",
+			"___###____",
+			"___###____",
+			"___###____",
+			"___###____",
+			"___###____"
+		]
+	],
+	"name": "Corrupt Flint knife",
+	"output": {
+		"type": "item",
+		"code": "shadowknifeblade-flint",
+		"stacksize": 1
+	}
+}

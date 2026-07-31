@@ -1,0 +1,903 @@
+{
+	"code": "shadowspear",
+	"classByType": {
+		"spear-generic-hacking": "ItemHackingSpear",
+		"*": "ItemSpear"
+	},
+	"tags": [ "weapon", "weapon-melee", "weapon-spear" ],
+	"damagedby": [ "attacking" ],
+	"tool": "spear",
+	"behaviors": [
+		{
+			"name": "GroundStorable",
+			"properties": {
+				"layout": "WallHalves",
+				"wallOffYByType": {
+					"@shadowspear-generic-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": 2,
+					"*": 3
+				},
+				"ctrlKey": true,
+				"selectionBox": {
+					"x1": 0,
+					"y1": 0,
+					"z1": 0,
+					"x2": 1,
+					"y2": 0.1,
+					"z2": 1
+				},
+				"collisionBox": {
+					"x1": 0,
+					"y1": 0,
+					"z1": 0,
+					"x2": 0,
+					"y2": 0,
+					"z2": 0
+				}
+			}
+		},
+		{ "name": "Buffable" },
+		{ "name": "AnimationAuthoritative" }
+	],
+	"variantgroups": [
+		{
+			"code": "type",
+			"states": [ "generic", "scrap", "boar", "voulge", "fork", "ranseur" ]
+		},
+		{
+			"code": "material",
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze","meteoriciron", "steel" ]
+		}
+	],
+	"skipVariants": [
+		"shadowspear-generic-ruined",
+		"shadowspear-generic-scrap"
+	],
+	"allowedVariants": [
+		"shadowspear-generic-*",
+		"shadowspear-scrap-scrap",
+		"shadowspear-boar-ruined",
+		"shadowspear-voulge-ruined",
+		"shadowspear-fork-ruined",
+		"shadowspear-ranseur-ruined"
+	],
+	"shapeByType": {
+		"@shadowspear-generic-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": { "base": "game:item/tool/spear/stone" },
+		"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": { "base": "game:item/tool/spear/metal-{material}" }
+	},
+	"texturesByType": {
+		"shadowspear-generic-flint": {
+			"stone": { "base": "block/stone/{material}" }
+		},
+		"@shadowspear-generic-(chert|granite|andesite|basalt|obsidian|peridotite)": {
+			"stone": { "base": "block/stone/rock/{material}1" }
+		},
+		"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+			"ingot": { "base": "game:block/metal/ingot/{material}" }
+		}
+	},
+	"heldTpIdleAnimation": "spearidle",
+	"heldRightReadyAnimation": "spearidle",
+	"heldTpHitAnimation": "spearhit",
+	"attackRange": 3.5,
+	"attackpowerbytype": {
+		"shadowspear-generic-chert": 1.75,
+		"shadowspear-generic-granite": 1.75,
+		"shadowspear-generic-andesite": 1.75,
+		"shadowspear-generic-peridotite": 1.75,
+		"shadowspear-generic-basalt": 1.75,
+		"shadowspear-generic-flint": 2,
+		"shadowspear-generic-obsidian": 2.25,
+		"shadowspear-generic-copper": 2.75,
+		"shadowspear-generic-bismuthbronze": 3.25,
+		"shadowspear-generic-tinbronze": 3.75,
+		"shadowspear-generic-blackbronze": 4,
+		"shadowspear-generic-meteoriciron": 4.3,
+		"shadowspear-generic-steel": 4.4
+	},
+	"attributes": {
+		"heldItemPitchFollow": 1,
+		"groundStorageTransformByType": {
+			"spear-generic-hacking": {
+				"translation": {
+					"x": -0.45,
+					"y": 0.35,
+					"z": 0.2
+				},
+				"rotation": {
+					"x": 16,
+					"y": 1,
+					"z": 90
+				},
+				"scale": 0.85
+			},
+			"spear-scrap-scrap": {
+				"translation": {
+					"x": 0,
+					"y": 0.25,
+					"z": 0.546
+				},
+				"rotation": {
+					"x": 16,
+					"y": 90,
+					"z": 90
+				},
+				"scale": 0.85
+			},
+			"spear-boar-ruined": {
+				"translation": {
+					"x": 0,
+					"y": 0.65,
+					"z": 0.61
+				},
+				"rotation": {
+					"x": 16,
+					"y": 90,
+					"z": 90
+				},
+				"scale": 0.85
+			},
+			"spear-voulge-ruined": {
+				"translation": {
+					"x": 0.24,
+					"y": 0.65,
+					"z": 0.516
+				},
+				"rotation": {
+					"x": 16,
+					"y": 130,
+					"z": 90
+				},
+				"scale": 0.85
+			},
+			"spear-fork-ruined": {
+				"translation": {
+					"x": -0.25,
+					"y": 0.65,
+					"z": 0.11
+				},
+				"rotation": {
+					"x": 16,
+					"y": 0,
+					"z": 90
+				},
+				"scale": 0.85
+			},
+			"spear-ranseur-ruined": {
+				"translation": {
+					"x": 0,
+					"y": 0.93,
+					"z": -0.11
+				},
+				"rotation": {
+					"x": 16,
+					"y": -90,
+					"z": 90
+				},
+				"scale": 0.85
+			},
+			"@shadowspear-generic-(copper|tinbronze|bismuthbronze)": {
+				"translation": {
+					"x": -0.39,
+					"y": 0.78,
+					"z": 0.235
+				},
+				"rotation": {
+					"x": 16,
+					"y": 1,
+					"z": 90
+				},
+				"scale": 0.85
+			},
+			"@shadowspear-generic-(blackbronze|meteoriciron|steel)": {
+				"translation": {
+					"x": -0.39,
+					"y": 0.78,
+					"z": 0.2
+				},
+				"rotation": {
+					"x": 16,
+					"y": 1,
+					"z": 90
+				},
+				"scale": 0.85
+			},
+			"shadowspear-generic-ornate*": {
+				"translation": {
+					"x": -0.39,
+					"y": 0.72,
+					"z": 0.25
+				},
+				"rotation": {
+					"x": 16,
+					"y": 1,
+					"z": 90
+				},
+				"scale": 0.81
+			},
+			"shadowspear-generic-erel": {
+				"translation": {
+					"x": -0,
+					"y": 0.88,
+					"z": 0.79
+				},
+				"rotation": {
+					"x": 16,
+					"y": 90,
+					"z": 90
+				},
+				"scale": 0.85
+			},
+			"*": {
+				"translation": {
+					"x": 0,
+					"y": 0.26,
+					"z": 0.596
+				},
+				"rotation": {
+					"x": 16,
+					"y": 90,
+					"z": 90
+				},
+				"scale": 0.85
+			}
+		},
+		"hackingByType": {
+			"*-hacking": true
+		},
+		// Thrown damage
+		"damageByType": {
+			"*-flint": 4.0,
+			"*-obsidian": 4.5,
+			"*-copper": 5,
+			"*-bismuthbronze": 5.75,
+			"*-tinbronze": 6.0,
+			"*-blackbronze": 6.5,
+			"*-meteoriciron": 6.9,
+			"*-steel": 7.0,
+			"*": 3.0
+		},
+		"damageTierByType": {
+			"*-chert": 0,
+			"*-granite": 0,
+			"*-andesite": 0,
+			"*-peridotite": 0,
+			"*-basalt": 0,
+			"*-flint": 0,
+			"*-obsidian": 0,
+			"*-copper": 0,
+			"*-bismuthbronze": 0,
+			"*-tinbronze": 0,
+			"*-blackbronze": 0,
+			"*-meteoriciron": 1,
+			"*-steel": 2
+		},
+		"spearEntityCodeByType": {
+			"*": "spear-{type}-{material}"
+		},
+		"handbook": {
+			"groupBy": [ "spear-*" ]
+		},
+		"toolrackTransformByType": {
+			"spear-generic-erel": {
+				"translation": {
+					"x": 0.9,
+					"y": 0.7,
+					"z": 0
+				},
+				"rotation": {
+					"x": 0,
+					"y": 1,
+					"z": -1
+				},
+				"scale": 1.36
+			},
+			"spear-scrap-scrap": {
+				"rotation": {
+					"x": 0,
+					"y": 1,
+					"z": -1
+				},
+				"translation": {
+					"x": -0.35,
+					"y": 0.7,
+					"z": 0
+				},
+				"scale": 1.36
+			},
+			"spear-voulge-ruined": {
+				"translation": {
+					"x": 0.3,
+					"y": 0.4,
+					"z": 0.7
+				},
+				"rotation": {
+					"x": 60,
+					"y": 1,
+					"z": -1
+				},
+				"scale": 1.37
+			},
+			"spear-fork-ruined": {
+				"translation": {
+					"x": 0.95,
+					"y": -0.27,
+					"z": 0.6
+				},
+				"rotation": {
+					"x": 125,
+					"y": 1,
+					"z": -1
+				},
+				"scale": 1.36
+			},
+			"spear-ranseur-ruined": {
+				"translation": {
+					"x": 0.56,
+					"y": 0.05,
+					"z": 0.6
+				},
+				"rotation": {
+					"x": 89,
+					"y": 1,
+					"z": -1
+				},
+				"scale": 1.36
+			},
+			"spear-boar-ruined": {
+				"translation": {
+					"x": 0.45,
+					"y": 0.05,
+					"z": 0.7
+				},
+				"rotation": {
+					"x": 89,
+					"y": 1,
+					"z": -1
+				}
+			},
+			"@spear-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+				"rotation": {
+					"x": 90,
+					"y": 1,
+					"z": -1
+				},
+				"translation": {
+					"x": 0.31,
+					"y": 0.04,
+					"z": 0.7
+				},
+				"scale": 1.36
+			},
+			"spear-generic-hacking": {
+				"rotation": {
+					"x": 90,
+					"y": 1,
+					"z": -1
+				},
+				"translation": {
+					"x": -0.19,
+					"y": 0.04,
+					"z": 0.7
+				},
+				"scale": 1.36
+			},
+			"*": {
+				"rotation": {
+					"y": 1,
+					"z": -1
+				},
+				"translation": {
+					"x": -0.23,
+					"y": 0.66
+				},
+				"scale": 1.36
+			}
+		},
+		"rangedWeaponsSpeedMul": 0.5,
+		"texturesByType": {
+			"axe-scrap-scrap": {},
+			"axe-felling-*": {
+				"material": { "base": "game:block/metal/ingot/{material}" }
+			}
+		},
+		"antlerMountable": true,
+		"onAntlerMountTransformByType": {
+			"spear-scrap-scrap": {
+				"translation": {
+					"x": -0.39,
+					"y": 0.533,
+					"z": -0.18
+				},
+				"rotation": {
+					"x": -90,
+					"y": 0,
+					"z": -90
+				},
+				"origin": {
+					"x": 0.5,
+					"y": 0,
+					"z": 0.5
+				},
+				"scale": 0.8
+			},
+			"spear-boar-ruined": {
+				"translation": {
+					"x": -0.406,
+					"y": 0.533,
+					"z": 0.12
+				},
+				"rotation": {
+					"x": -90,
+					"y": -80,
+					"z": -90
+				},
+				"origin": {
+					"x": 0.5,
+					"y": 0,
+					"z": 0.5
+				},
+				"scale": 0.8
+			},
+			"spear-fork-ruined": {
+				"translation": {
+					"x": -0.406,
+					"y": 0.533,
+					"z": 0.24
+				},
+				"rotation": {
+					"x": -90,
+					"y": 42,
+					"z": -90
+				},
+				"origin": {
+					"x": 0.5,
+					"y": 0,
+					"z": 0.5
+				},
+				"scale": 0.8
+			},
+			"spear-ranseur-ruined": {
+				"translation": {
+					"x": -0.406,
+					"y": 0.533,
+					"z": 0.25
+				},
+				"rotation": {
+					"x": -90,
+					"y": 90,
+					"z": -90
+				},
+				"origin": {
+					"x": 0.5,
+					"y": 0,
+					"z": 0.5
+				},
+				"scale": 0.8
+			},
+			"spear-voulge-ruined": {
+				"translation": {
+					"x": -0.406,
+					"y": 0.533,
+					"z": 0.12
+				},
+				"rotation": {
+					"x": -90,
+					"y": -59,
+					"z": -90
+				},
+				"origin": {
+					"x": 0.5,
+					"y": 0,
+					"z": 0.5
+				},
+				"scale": 0.8
+			},
+			"spear-generic-hacking": {
+				"translation": {
+					"x": -0.406,
+					"y": 0.5,
+					"z": -0.14
+				},
+				"rotation": {
+					"x": -90,
+					"y": -90,
+					"z": -90
+				},
+				"origin": {
+					"x": 0.5,
+					"y": 0,
+					"z": 0.5
+				},
+				"scale": 0.8
+			},
+			"spear-generic-*": {
+				"translation": {
+					"x": -0.406,
+					"y": 0.5,
+					"z": 0.15
+				},
+				"rotation": {
+					"x": -90,
+					"y": -90,
+					"z": -90
+				},
+				"origin": {
+					"x": 0.5,
+					"y": 0,
+					"z": 0.5
+				},
+				"scale": 0.8
+			},
+			"*": {
+				"translation": {
+					"x": -0.406,
+					"y": 0.533,
+					"z": 0.12
+				},
+				"rotation": {
+					"x": -90,
+					"y": 0,
+					"z": -90
+				},
+				"origin": {
+					"x": 0.5,
+					"y": 0,
+					"z": 0.5
+				},
+				"scale": 0.8
+			}
+		}
+	},
+	"durabilitybytype": {
+		"spear-generic-chert": 16,
+		"spear-generic-granite": 16,
+		"spear-generic-andesite": 16,
+		"spear-generic-basalt": 16,
+		"spear-generic-peridotite": 16,
+		"spear-generic-obsidian": 45,
+		"spear-generic-flint": 32,
+		"spear-scrap-scrap": 80,
+		"spear-generic-copper": 140,
+		"spear-generic-tinbronze": 220,
+		"spear-generic-bismuthbronze": 260,
+		"spear-generic-blackbronze": 300,
+		"spear-generic-meteoriciron": 450,
+		"spear-generic-steel": 700
+	},
+	"creativeinventory": {
+		"general": [ "*" ],
+		"items": [ "*" ],
+		"tools": [ "*" ]
+	},
+	"guiTransformByType": {
+		"*-erel": {
+			"translation": {
+				"x": -0.1,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": -60,
+				"y": 124,
+				"z": 6
+			},
+			"origin": {
+				"x": 0.39,
+				"y": 0,
+				"z": 0.5
+			},
+			"scale": 2.26
+		},
+		"spear-generic-hacking": {
+			"translation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": 23,
+				"y": -180,
+				"z": -52
+			},
+			"origin": {
+				"x": 1.43,
+				"y": 0,
+				"z": 0.52
+			},
+			"scale": 2.26
+		},
+		"spear-scrap-scrap": {
+			"translation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": -60,
+				"y": 124,
+				"z": 6
+			},
+			"origin": {
+				"x": 1.54,
+				"y": 0,
+				"z": 0.5
+			},
+			"scale": 2.26
+		},
+		"spear-boar-ruined": {
+			"rotation": {
+				"x": 2,
+				"y": 157,
+				"z": -46
+			},
+			"origin": {
+				"x": 1.39,
+				"y": -0,
+				"z": 0.5
+			},
+			"scale": 2.26
+		},
+		"spear-fork-ruined": {
+			"rotation": {
+				"x": -17,
+				"y": 144,
+				"z": -37
+			},
+			"origin": {
+				"x": 1.39,
+				"y": 0.05,
+				"z": 0.5
+			},
+			"scale": 2
+		},
+		"spear-voulge-ruined": {
+			"rotation": {
+				"x": -180,
+				"y": 128,
+				"z": 38
+			},
+			"origin": {
+				"x": 1.29,
+				"y": 0,
+				"z": 0.5
+			},
+			"scale": 2.26
+		},
+		"spear-ranseur-ruined": {
+			"translation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": -175,
+				"y": 140,
+				"z": 38
+			},
+			"origin": {
+				"x": 1.19,
+				"y": 0,
+				"z": 0.6
+			},
+			"scale": 2.26
+		},
+		"spear-generic-ornategold": {
+			"rotation": {
+				"x": -16,
+				"y": -2,
+				"z": -134
+			},
+			"origin": {
+				"x": 1.47,
+				"y": 0.05,
+				"z": 0.5
+			},
+			"scale": 3.09
+		},
+		"spear-generic-ornatesilver": {
+			"rotation": {
+				"x": -16,
+				"y": -2,
+				"z": -134
+			},
+			"origin": {
+				"x": 1.47,
+				"y": 0.05,
+				"z": 0.5
+			},
+			"scale": 3.09
+		},
+		"@spear-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+			"rotation": {
+				"x": 33,
+				"y": 0,
+				"z": -127
+			},
+			"origin": {
+				"x": 1.39,
+				"y": 0.05,
+				"z": 0.52
+			},
+			"scale": 2.26
+		},
+		"*": {
+			"rotation": {
+				"x": -39,
+				"y": -29,
+				"z": -134
+			},
+			"origin": {
+				"x": 1.4,
+				"y": 0.05,
+				"z": 0.5
+			},
+			"scale": 3.09
+		}
+	},
+	"groundTransformByType": {
+		"spear-scrap-scrap": {
+			"translation": {
+				"x": 0,
+				"y": 0.05,
+				"z": 0
+			},
+			"rotation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5,
+				"y": 0,
+				"z": 0.5
+			},
+			"scale": 3.4
+		},
+		"spear-voulge-ruined": {
+			"translation": {
+				"x": 0,
+				"y": 0.05,
+				"z": 0
+			},
+			"rotation": {
+				"x": 68,
+				"y": 0,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5,
+				"y": 0,
+				"z": 0.5
+			},
+			"scale": 3.4
+		},
+		"spear-fork-ruined": {
+			"translation": {
+				"x": 0,
+				"y": 0.05,
+				"z": 0
+			},
+			"rotation": {
+				"x": -90,
+				"y": 0,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5,
+				"y": 0,
+				"z": 0.5
+			},
+			"scale": 3.4
+		},
+		"*": {
+			"translation": {
+				"x": 0,
+				"y": 0.05,
+				"z": 0
+			},
+			"rotation": {
+				"x": 90,
+				"y": 0,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5,
+				"y": 0,
+				"z": 0.5
+			},
+			"scale": 3.4
+		}
+	},
+	"tpHandTransformByType": {
+		"spear-scrap-scrap": {
+			"translation": {
+				"x": -1.14,
+				"y": 0.01,
+				"z": -0.6
+			},
+			"rotation": {
+				"x": -90,
+				"y": 0,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.6,
+				"y": 0,
+				"z": 0.5
+			},
+			"scale": 0.8
+		},
+		"spear-voulge-ruined": {
+			"translation": {
+				"x": -1.24,
+				"y": 0.03,
+				"z": -0.61
+			},
+			"rotation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5,
+				"y": 0,
+				"z": 0.5
+			},
+			"scale": 0.8
+		},
+		"@spear-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+			"translation": {
+				"x": -1.29,
+				"y": 0.03,
+				"z": -0.57
+			},
+			"rotation": {
+				"x": -90,
+				"y": 0,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.6,
+				"y": 0,
+				"z": 0.5
+			},
+			"scale": 0.8
+		},
+		"*-ruined": {
+			"translation": {
+				"x": -1.24,
+				"y": 0.03,
+				"z": -0.61
+			},
+			"rotation": {
+				"x": -90,
+				"y": 0,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5,
+				"y": 0,
+				"z": 0.5
+			},
+			"scale": 0.8
+		},
+		"*": {
+			"translation": {
+				"x": -1.29,
+				"y": 0.02,
+				"z": -0.57
+			},
+			"rotation": {
+				"x": -90,
+				"y": 0,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5,
+				"y": 0,
+				"z": 0.5
+			},
+			"scale": 0.8
+		}
+	}
+}

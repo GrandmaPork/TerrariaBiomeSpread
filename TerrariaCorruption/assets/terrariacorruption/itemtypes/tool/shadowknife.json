@@ -1,0 +1,669 @@
+{
+	"code": "shadowknife",
+	// ItemKnife contains code for harvesting animal carcasses
+	"class": "ItemKnife",
+	"tags": [ "weapon", "weapon-melee", "tool-knife", "tool-trimming", "tool" ],
+	"damagedby": [ "blockbreaking", "attacking" ],
+	"tool": "knife",
+	"attributes": {
+		"attachableToEntity": { "categoryCode": "toolholding" },
+		"heldItemPitchFollow": 1,
+		"knifeHitBlockAnimation": "knifecut",
+		"knifeHitEntityAnimation": "knifestab",
+		"handbook": {
+			"groupBy": [ "knife-*" ]
+		},
+		"toolrackTransformByType": {
+			"shadowknife-dagger-ruined": {
+				"translation": {
+					"x": 0,
+					"y": 0.6,
+					"z": -0.1
+				},
+				"rotation": {
+					"x": 122,
+					"y": 180,
+					"z": 3
+				},
+				"origin": {
+					"x": 0.5,
+					"y": 0,
+					"z": 0.5
+				},
+				"scale": 1.44
+			},
+			"shadowknife-stiletto-ruined": {
+				"translation": {
+					"x": 0.17,
+					"y": 0.6,
+					"z": -0.1
+				},
+				"rotation": {
+					"x": 0,
+					"y": 180,
+					"z": 0
+				},
+				"origin": {
+					"x": 0.5,
+					"y": 0,
+					"z": 0.5
+				},
+				"scale": 1.8
+			},
+			"shadowknife-khanjar-ruined": {
+				"translation": {
+					"x": 0.1,
+					"y": 0.6,
+					"z": -0.1
+				},
+				"rotation": {
+					"x": 97,
+					"y": 180,
+					"z": 3
+				},
+				"origin": {
+					"x": 0.5,
+					"y": 0,
+					"z": 0.5
+				},
+				"scale": 1.8
+			},
+			"shadowknife-baselard-ruined": {
+				"translation": {
+					"x": 0.1,
+					"y": 0.6,
+					"z": -0.1
+				},
+				"rotation": {
+					"x": 69,
+					"y": 180,
+					"z": 0
+				},
+				"origin": {
+					"x": 0.5,
+					"y": 0,
+					"z": 0.5
+				},
+				"scale": 1.72
+			},
+			"*": {
+				"translation": {
+					"x": -0.3,
+					"y": 0.6,
+					"z": -0.1
+				},
+				"rotation": {
+					"x": 97,
+					"y": 180,
+					"z": 3
+				},
+				"origin": {
+					"x": 0.5,
+					"y": 0,
+					"z": 0.5
+				},
+				"scale": 1.8
+			}
+		},
+		"groundStorageTransformByType": {
+			"@shadowknife-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+				"translation": {
+					"x": 0,
+					"y": 0.01,
+					"z": -0.074
+				},
+				"rotation": {
+					"x": 26,
+					"y": 88,
+					"z": -87
+				},
+				"scale": 1
+			},
+			"shadowknife-khanjar-ruined": {
+				"translation": {
+					"x": 0,
+					"y": 0.065,
+					"z": -0.145
+				},
+				"rotation": {
+					"x": 26,
+					"y": 88,
+					"z": -97
+				},
+				"scale": 1
+			},
+			"shadowknife-baselard-ruined": {
+				"translation": {
+					"x": 0,
+					"y": 0.3,
+					"z": -0.09
+				},
+				"rotation": {
+					"x": 26,
+					"y": 90,
+					"z": -87
+				},
+				"scale": 1
+			},
+			"shadowknife-stiletto-ruined": {
+				"translation": {
+					"x": 0,
+					"y": 0.17,
+					"z": -0.11
+				},
+				"rotation": {
+					"x": 26,
+					"y": 88,
+					"z": -87
+				},
+				"scale": 1
+			},
+			"shadowknife-dagger-ruined": {
+				"translation": {
+					"x": 0,
+					"y": 0.18,
+					"z": -0.147
+				},
+				"rotation": {
+					"x": 26,
+					"y": 88,
+					"z": -101
+				},
+				"scale": 1
+			},
+			"*": {
+				"translation": {
+					"x": 0,
+					"y": 0.04,
+					"z": -0.104
+				},
+				"rotation": {
+					"x": 26,
+					"y": 88,
+					"z": -87
+				},
+				"scale": 1
+			}
+		},
+		"displayable": {
+			"shelf": {
+				"sizeByType": {
+					"@*-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+						"width": 2,
+						"height": 1,
+						"length": 8
+					},
+					"*": {
+						"width": 3,
+						"height": 1,
+						"length": 8
+					}
+				},
+				"transformByType": {
+					"@*-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+						"translation": {
+							"x": -0.05,
+							"y": -0.07,
+							"z": 0.09
+						},
+						"rotation": {
+							"x": -90,
+							"y": 0,
+							"z": 90
+						},
+						"origin": {
+							"x": 0.5,
+							"y": 0.1,
+							"z": 0.5
+						}
+					},
+					"*": {
+						"translation": {
+							"x": 0,
+							"y": -0.07,
+							"z": 0.065
+						},
+						"rotation": {
+							"x": -90,
+							"y": 0,
+							"z": 90
+						},
+						"origin": {
+							"x": 0.5,
+							"y": 0.1,
+							"z": 0.5
+						}
+					}
+				}
+			}
+		}
+	},
+	"behaviors": [
+		{
+			"name": "GroundStorable",
+			"properties": {
+				"layout": "WallHalves",
+				"wallOffY": 1,
+				"ctrlKey": true,
+				"selectionBox": {
+					"x1": 0,
+					"y1": 0,
+					"z1": 0,
+					"x2": 1,
+					"y2": 0.1,
+					"z2": 1
+				},
+				"collisionBox": {
+					"x1": 0,
+					"y1": 0,
+					"z1": 0,
+					"x2": 0,
+					"y2": 0,
+					"z2": 0
+				}
+			}
+		},
+		{ "name": "AnimationAuthoritative" },
+		{ "name": "Buffable" }
+	],
+	"variantgroups": [
+		{
+			"code": "type",
+			"states": [ "generic", "dagger", "stiletto", "khanjar", "baselard" ]
+		},
+		{
+			"code": "material",
+			"states": [
+				"chert",
+				"granite",
+				"andesite",
+				"basalt",
+				"obsidian",
+				"peridotite",
+				"flint",
+				"copper",
+				"tinbronze",
+				"bismuthbronze",
+				"blackbronze",
+				"meteoriciron",
+				"steel",
+				"bonechert",
+				"bonegranite",
+				"boneandesite",
+				"bonebasalt",
+				"boneobsidian",
+				"boneperidotite",
+				"boneflint"
+			]
+		}
+	],
+	"skipVariants": [
+		"knife-generic-ruined"
+	],
+	"allowedVariants": [
+		"shadowknife-generic-*",
+		"shadowknife-dagger-ruined",
+		"shadowknife-stiletto-ruined",
+		"shadowknife-khanjar-ruined",
+		"shadowknife-baselard-ruined"
+	],
+	"shapeByType": {
+		"shadowknife-generic-chert": { "base": "game:item/tool/knife/stone" },
+		"shadowknife-generic-granite": { "base": "game:item/tool/knife/stone" },
+		"shadowknife-generic-andesite": { "base": "game:item/tool/knife/stone" },
+		"shadowknife-generic-basalt": { "base": "game:item/tool/knife/stone" },
+		"shadowknife-generic-obsidian": { "base": "game:item/tool/knife/stone" },
+		"shadowknife-generic-flint": { "base": "game:item/tool/knife/stone" },
+		"shadowknife-generic-peridotite": { "base": "game:item/tool/knife/stone" },
+		"shadowknife-generic-bone*": { "base": "game:item/tool/knife/stone" },
+		"*": { "base": "game:item/tool/knife/copper" }
+	},
+	"heldTpHitAnimation": "knifestab",
+	"texturesByType": {
+		"shadowknife-generic-chert": {
+			"material": { "base": "block/stone/rock/{material}1" }
+		},
+		"shadowknife-generic-granite": {
+			"material": { "base": "block/stone/rock/{material}1" }
+		},
+		"shadowknife-generic-andesite": {
+			"material": { "base": "block/stone/rock/{material}1" }
+		},
+		"shadowknife-generic-basalt": {
+			"material": { "base": "block/stone/rock/{material}1" }
+		},
+		"shadowknife-generic-obsidian": {
+			"material": { "base": "block/stone/rock/{material}1" }
+		},
+		"shadowknife-generic-peridotite": {
+			"material": { "base": "block/stone/rock/{material}1" }
+		},
+		"shadowknife-generic-flint": {
+			"material": { "base": "block/stone/{material}" }
+		},
+		"shadowknife-generic-bonechert": {
+			"material": { "base": "block/stone/rock/chert1" },
+			"handle": { "base": "game:block/creature/bone-yellow" }
+		},
+		"shadowknife-generic-bonegranite": {
+			"material": { "base": "block/stone/rock/granite1" },
+			"handle": { "base": "game:block/creature/bone-yellow" }
+		},
+		"shadowknife-generic-boneandesite": {
+			"material": { "base": "block/stone/rock/andesite1" },
+			"handle": { "base": "block/creature/bone-yellow" }
+		},
+		"shadowknife-generic-bonebasalt": {
+			"material": { "base": "block/stone/rock/basalt1" },
+			"handle": { "base": "game:block/creature/bone-yellow" }
+		},
+		"shadowknife-generic-boneobsidian": {
+			"material": { "base": "block/stone/rock/obsidian1" },
+			"handle": { "base": "game:block/creature/bone-yellow" }
+		},
+		"shadowknife-generic-boneperidotite": {
+			"material": { "base": "block/stone/rock/peridotite1" },
+			"handle": { "base": "game:block/creature/bone-yellow" }
+		},
+		"shadowknife-generic-boneflint": {
+			"material": { "base": "block/stone/flint" },
+			"handle": { "base": "game:block/creature/bone-yellow" }
+		},
+		"shadowknife-generic-*": {
+			"material": { "base": "game:block/metal/ingot/{material}" }
+		}
+	},
+	"durabilitybytype": {
+		"shadowknife-generic-chert": 270,
+		"shadowknife-generic-granite": 270,
+		"shadowknife-generic-andesite": 270,
+		"shadowknife-generic-basalt": 270,
+		"shadowknife-generic-peridotite": 270,
+		"shadowknife-generic-flint": 390,
+		"shadowknife-generic-obsidian": 480,
+
+		"shadowknife-generic-copper": 900,
+		"shadowknife-generic-tinbronze": 1350,
+		"shadowknife-generic-bismuthbronze": 1500,
+		"shadowknife-generic-blackbronze": 1650,
+		"shadowknife-generic-meteoriciron": 3600,
+		"shadowknife-generic-steel": 6750,
+
+		"shadowknife-generic-bonechert": 330,
+		"shadowknife-generic-bonegranite": 330,
+		"shadowknife-generic-boneandesite": 330,
+		"shadowknife-generic-bonebasalt": 330,
+		"shadowknife-generic-boneperidotite": 330,
+		"shadowknife-generic-boneflint": 450,
+		"shadowknife-generic-boneobsidian": 540
+	},
+	"miningspeedbytype": {
+		"shadowknife-generic-chert": {
+			"plant": 1.2
+		},
+		"shadowknife-generic-granite": {
+			"plant": 1.2
+		},
+		"shadowknife-generic-peridotite": {
+			"plant": 1.2
+		},
+		"shadowknife-generic-andesite": {
+			"plant": 1.2
+		},
+		"shadowknife-generic-basalt": {
+			"plant": 1.3
+		},
+		"shadowknife-generic-obsidian": {
+			"plant": 1.6
+		},
+		"shadowknife-generic-flint": {
+			"plant": 1.4
+		},
+		"shadowknife-generic-copper": {
+			"plant": 1.7
+		},
+		"shadowknife-generic-bismuthbronze": {
+			"plant": 2.1
+		},
+		"shadowknife-generic-tinbronze": {
+			"plant": 2.2
+		},
+		"shadowknife-generic-blackbronze": {
+			"plant": 2.3
+		},
+		"shadowknife-generic-meteoriciron": {
+			"plant": 2.4
+		},
+		"shadowknife-generic-steel": {
+			"plant": 2.6
+		},
+		"shadowknife-generic-bonechert": {
+			"plant": 1.2
+		},
+		"shadowknife-generic-bonegranite": {
+			"plant": 1.2
+		},
+		"shadowknife-generic-boneperidotite": {
+			"plant": 1.2
+		},
+		"shadowknife-generic-boneandesite": {
+			"plant": 1.2
+		},
+		"shadowknife-generic-bonebasalt": {
+			"plant": 1.3
+		},
+		"shadowknife-generic-boneobsidian": {
+			"plant": 1.7
+		},
+		"shadowknife-generic-boneflint": {
+			"plant": 1.5
+		}
+	},
+	"attackpowerbytype": {
+		"shadowknife-generic-chert": 0.75,
+		"shadowknife-generic-granite": 0.75,
+		"shadowknife-generic-peridotite": 0.75,
+		"shadowknife-generic-andesite": 0.75,
+		"shadowknife-generic-basalt": 0.75,
+		"shadowknife-generic-obsidian": 1.5,
+
+		"shadowknife-generic-flint": 1,
+		"shadowknife-generic-copper": 1.5,
+		"shadowknife-generic-bismuthbronze": 2,
+		"shadowknife-generic-tinbronze": 2.5,
+		"shadowknife-generic-blackbronze": 3,
+		"shadowknife-generic-meteoriciron": 3.75,
+		"shadowknife-generic-steel": 4,
+
+		"shadowknife-generic-bonechert": 0.75,
+		"shadowknife-generic-bonegranite": 0.75,
+		"shadowknife-generic-boneperidotite": 0.75,
+		"shadowknife-generic-boneandesite": 0.75,
+		"shadowknife-generic-bonebasalt": 0.75,
+		"shadowknife-generic-boneobsidian": 1.5,
+		"shadowknife-generic-boneflint": 1
+	},
+	"creativeinventory": {
+		"general": [ "*" ],
+		"items": [ "*" ],
+		"tools": [ "*" ]
+	},
+	"guiTransformByType": {
+		"knife-dagger-ruined": {
+			"translation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": -168,
+				"y": 0,
+				"z": 43
+			},
+			"origin": {
+				"x": 0.48,
+				"y": 0.1,
+				"z": 0.5
+			},
+			"scale": 1.84
+		},
+		"knife-stiletto-ruined": {
+			"translation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": -161,
+				"y": 11,
+				"z": 56
+			},
+			"origin": {
+				"x": 0.58,
+				"y": 0.1,
+				"z": 0.5
+			},
+			"scale": 2.25
+		},
+		"knife-khanjar-ruined": {
+			"translation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": -158,
+				"y": 0,
+				"z": 40
+			},
+			"origin": {
+				"x": 0.75,
+				"y": 0.4,
+				"z": 1.24
+			},
+			"scale": 1.8
+		},
+		"knife-baselard-ruined": {
+			"translation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": -158,
+				"y": 0,
+				"z": 48
+			},
+			"origin": {
+				"x": 0.78,
+				"y": 0.2,
+				"z": 0.9
+			},
+			"scale": 2.09
+		},
+		"*": {
+			"rotate": false,
+			"translation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": -158,
+				"y": 0,
+				"z": 48
+			},
+			"origin": {
+				"x": 0.48,
+				"y": 0.1,
+				"z": 0.5
+			},
+			"scale": 2.41
+		}
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": -90,
+			"y": 0,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.5,
+			"z": 0.45
+		},
+		"scale": 3.6
+	},
+	"tpHandTransformByType": {
+		"knife-dagger-ruined": {
+			"translation": {
+				"x": -0.82,
+				"y": -0.04,
+				"z": -0.55
+			},
+			"rotation": {
+				"x": 0,
+				"y": 0,
+				"z": -3
+			},
+			"scale": 0.9
+		},
+		"knife-stiletto-ruined": {
+			"translation": {
+				"x": -0.63,
+				"y": 0.01,
+				"z": -0.65
+			},
+			"rotation": {
+				"x": -18,
+				"y": 0,
+				"z": -3
+			},
+			"scale": 1
+		},
+		"knife-baselard-ruined": {
+			"translation": {
+				"x": -0.66,
+				"y": -0.01,
+				"z": -0.66
+			},
+			"rotation": {
+				"x": -19,
+				"y": 0,
+				"z": 0
+			},
+			"scale": 1
+		},
+		"*-ruined": {
+			"translation": {
+				"x": -0.7,
+				"y": 0.01,
+				"z": -0.49
+			},
+			"rotation": {
+				"x": 0,
+				"y": 0,
+				"z": -3
+			},
+			"scale": 1
+		},
+		"*": {
+			"translation": {
+				"x": -0.84,
+				"y": -0.11,
+				"z": -0.48
+			},
+			"rotation": {
+				"x": 0,
+				"y": 0,
+				"z": -15
+			},
+			"scale": 1
+		}
+	}
+}
