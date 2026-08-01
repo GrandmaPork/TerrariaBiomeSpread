@@ -3,9 +3,12 @@
 
 # Overview
 
-Currently this mod only adds a few spreading blocks for the corruption but I plan on making a fully functioning corruption biome with monsters and bosses included! Most items will not be added, instead I will be adding Vintage Story inspired metals and gear alongside it. I do plan on adding the same for Hallow and Crimson biomes when it is done. Since the player will need to have the biomes loaded for them to properly spread, I will incentivize being in the chunks and delay how soon you can begin purification. 
+Currently this mod adds a few spreading blocks for the corruption but I plan on making a fully functioning corruption biome with monsters and bosses included! Most items will not be added, instead I will be adding Vintage Story inspired metals and gear alongside it. I do plan on adding the same for Hallow and Crimson biomes when it is done. Since the player will need to have the biomes loaded for them to properly spread (for the most part), I will incentivize being in the chunks and delay how soon you can begin purification. 
 
-<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/4ea6ff23-c298-4d77-86f0-0643ca8ba493" />
+<img width="1920" height="1032" alt="Screenshot 2026-07-24 153333" src="https://github.com/user-attachments/assets/1987166f-7bef-4d7b-8f2a-9611bc15316b" />
+Caption: It spreads slowly...
+<img width="1920" height="1032" alt="Screenshot 2026-07-21 010534" src="https://github.com/user-attachments/assets/843a9f53-965c-4ccd-9c52-3bfc6aee4bae" />
+Caption: Desolate. Barren. 
 
 # Inspiration
 
@@ -13,15 +16,22 @@ The backgrounds of the evil biomes look beautiful and I'd like to represent them
 The crimson will have a similar style but with brighter brown and red color schemes with mouth caves instead of caverns. Giant bones will spawn in the natural biomes to eventually be harvested for large amounts of fertilizer. The entire biome will have a hive mind so once you enter, you will be overwhelmed quickly.
 The Hallow will be the polar opposite of each biome, the landscapes will remain rather unchanged and only large crystals will grow from them. The colormaps will be pretty and vibrant. The fauna will definitely not be the best to be around still
 
-<img width="1160" height="262" alt="Screenshot 2026-06-11 014224" src="https://github.com/user-attachments/assets/58785d9d-6590-4d93-9c31-16e86f1f15ea" />
+<img width="1160" height="262" alt="Screenshot 2026-06-11 014224" src="https://github.com/user-attachments/assets/2b551e78-ec89-4a59-8d0f-f242495f2359" />
 <img width="1329" height="232" alt="image" src="https://github.com/user-attachments/assets/9625e1a9-ce58-46ad-80f2-ebde33603992" />
 <img width="1135" height="229" alt="image" src="https://github.com/user-attachments/assets/7765ea1d-45d0-41fc-a2cb-cb55155ac17c" />
 
 
+
 # Purification
 
-To not make it tedious to purify, a machine will be used to first stop the spread in a large radius, then slowly purify the spread. The catch is, the evils are a cancer to the world, and cancer must be killed via chemotherapy. Here, the purification machine will kill all plants in the radius regardless of purity
+To not make it tedious to purify, a machine will be used to first stop the spread in a large radius, then slowly purify the spread. The catch is, the evils are a cancer to the world, and cancer must be killed. Here, the purification machine will nearly kill all plants in the radius regardless of purity. In return, the leftover matter will return to the soils and make them more fertile
 
+<img width="1920" height="1032" alt="Screenshot 2026-07-21 010224" src="https://github.com/user-attachments/assets/03b595c7-e4d5-49f5-aecb-b293fe0a5695" />
+
+Caption: Barren trees
+<img width="1920" height="1032" alt="Screenshot 2026-07-28 114709" src="https://github.com/user-attachments/assets/2a1573ce-9ff5-4907-97d5-f47f7bf0a215" />
+
+Caption: Planks on da frontier
 
 # Credits
 ## Thank you to takeothewolf! They made the following 359 textures:
