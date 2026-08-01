@@ -73,14 +73,14 @@
 				"basalt",
 				"obsidian",
 				"peridotite",
-				"corruptflint",
+				"flint",
 				"bone-chert",
 				"bone-granite",
 				"bone-andesite",
 				"bone-basalt",
 				"bone-obsidian",
 				"bone-peridotite",
-				"bone-corruptflint"
+				"bone-flint"
 			]
 		}
 	],
@@ -90,7 +90,7 @@
 	"heldRightReadyAnimation": "axeready",
 	"heldTpHitAnimation": "axechop",
 	"texturesByType": {
-		"shadowaxe-corruptflint": {
+		"shadowaxe-flint": {
 			"material": { "base": "block/stone/{material}" }
 		},
 		"*-bone-chert": {
@@ -117,7 +117,7 @@
 			"material": { "base": "block/stone/rock/peridotite1" },
 			"handle": { "base": "game:block/creature/bone-yellow" }
 		},
-		"*-bone-corruptflint": {
+		"*-bone-flint": {
 			"material": { "base": "block/stone/flint" },
 			"handle": { "base": "game:block/creature/bone-yellow" }
 		},
@@ -130,22 +130,22 @@
 		"*": 1
 	},
 	"miningspeedbytype": {
-		"axe-flint": {
+		"shadowaxe-flint": {
 			"wood": 2.8,
 			"plant": 2.2,
 			"leaves": 1.6
 		},
-		"axe-bone-flint": {
+		"shadowaxe-bone-flint": {
 			"wood": 2.8,
 			"plant": 2.2,
 			"leaves": 1.6
 		},
-		"axe-obsidian": {
+		"shadowaxe-obsidian": {
 			"wood": 3.5,
 			"plant": 2.7,
 			"leaves": 2.4
 		},
-		"axe-bone-obsidian": {
+		"shadowaxe-bone-obsidian": {
 			"wood": 3.5,
 			"plant": 2.7,
 			"leaves": 2.4
@@ -157,22 +157,22 @@
 		}
 	},
 	"durabilitybytype": {
-		"axe-flint": 180,
-		"axe-bone-flint": 210,
-		"axe-obsidian": 270,
-		"axe-bone-obsidian": 300,
-		"axe-bone-chert": 180,
-		"axe-bone-andesite": 180,
-		"axe-bone-granite": 180,
-		"axe-bone-basalt": 180,
-		"axe-bone-peridotite": 180,
+		"shadowaxe-flint": 180,
+		"shadowaxe-bone-flint": 210,
+		"shadowaxe-obsidian": 270,
+		"shadowaxe-bone-obsidian": 300,
+		"shadowaxe-bone-chert": 180,
+		"shadowaxe-bone-andesite": 180,
+		"shadowaxe-bone-granite": 180,
+		"shadowaxe-bone-basalt": 180,
+		"shadowaxe-bone-peridotite": 180,
 		"*": 150
 	},
 	"attackpowerbytype": {
-		"axe-obsidian": 1.5,
-		"axe-bone-obsidian": 1.5,
-		"axe-flint": 1.25,
-		"axe-bone-flint": 1.25,
+		"shadowaxe-obsidian": 1.5,
+		"shadowaxe-bone-obsidian": 1.5,
+		"shadowaxe-flint": 1.25,
+		"shadowaxe-bone-flint": 1.25,
 		"*": 0.75
 	},
 	"creativeinventory": {

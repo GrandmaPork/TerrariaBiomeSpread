@@ -22,6 +22,6 @@
 	"name": "EbonStone hatchet",
 	"output": {
 		"type": "item",
-		"code": "shadowaxehead-{rock}"
+		"code": "shadowaxehead-{corruptrock}"
 	}
 }

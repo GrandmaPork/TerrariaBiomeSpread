@@ -1,6 +1,6 @@
 {
 	"code": "corruptknappingsurface",
-	"class": "BlockKnappingSurface",
+	"class": "terrariacorruption.corruptknappingsurface",
 	"behaviors": [ { "name": "UnstableFalling" } ],
 	"entityClass": "KnappingSurface",
 	"shape": { "base": "game:block/basic/invisible" },
@@ -13,17 +13,17 @@
 	"resistance": 2,
 	"lightAbsorption": 0,
 	"textures": {
-		"flint": { "base": "game:block/stone/flint" },
-		"chert": { "base": "block/stone/rock/chert1" },
-		"granite": { "base": "block/stone/rock/granite1" },
-		"basalt": { "base": "block/stone/rock/basalt1" },
-		"obsidian": { "base": "block/stone/rock/obsidian1" },
-		"chalk": { "base": "block/stone/rock/chalk1" },
-		"claystone": { "base": "block/stone/rock/claystone1" },
-		"andesite": { "base": "block/stone/rock/andesite1" },
-		"sandstone": { "base": "block/stone/rock/sandstone1" },
-		"shale": { "base": "block/stone/rock/shale1" },
-		"peridotite": { "base": "block/stone/rock/peridotite1" }
+		"corruptflint": { "base": "terrariacorruption:block/stone/flint" },
+		"corruptstone-chert": { "base": "terrariacorruption:block/stone/rock/chert1" },
+		"corruptstone-granite": { "base": "terrariacorruption:block/stone/rock/granite1" },
+		"corruptstone-basalt": { "base": "terrariacorruption:block/stone/rock/basalt1" },
+		"corruptstone-obsidian": { "base": "terrariacorruption:block/stone/rock/obsidian1" },
+		"corruptstone-chalk": { "base": "terrariacorruption:block/stone/rock/chalk1" },
+		"corruptstone-claystone": { "base": "terrariacorruption:block/stone/rock/claystone1" },
+		"corruptstone-andesite": { "base": "terrariacorruption:block/stone/rock/andesite1" },
+		"corruptstone-sandstone": { "base": "terrariacorruption:block/stone/rock/sandstone1" },
+		"corruptstone-shale": { "base": "terrariacorruption:block/stone/rock/shale1" },
+		"corruptstone-peridotite": { "base": "terrariacorruption:block/stone/rock/peridotite1" }
 
 	},
 	"sidesolid": {

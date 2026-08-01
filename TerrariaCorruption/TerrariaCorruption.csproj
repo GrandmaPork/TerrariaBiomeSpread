@@ -82,6 +82,7 @@
 
 <ItemGroup>
   <Folder Include="assets\terrariacorruption\itemtypes\liquid\" />
+  <Folder Include="assets\terrariacorruption\patches\blocktype\stone\" />
   <Folder Include="assets\terrariacorruption\shapes\block\plant\fern\tallfern\flowerpot\" />
   <Folder Include="assets\terrariacorruption\textures\block\plant\aquatic\waterlily\" />
   <Folder Include="assets\terrariacorruption\textures\block\plant\aquatic\seaweed\" />

@@ -1,6 +1,6 @@
 {
 	"code": "corruptstone",
-	"class": "ItemStone",
+	"class": "terrariacorruption.corruptstone",
 	"behaviorsByType": {
 		"corruptstone-chalk": [
 			{

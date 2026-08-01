@@ -351,7 +351,7 @@
 		},
 		"shadowknife-generic-boneandesite": {
 			"material": { "base": "block/stone/rock/andesite1" },
-			"handle": { "base": "block/creature/bone-yellow" }
+			"handle": { "base": "game:block/creature/bone-yellow" }
 		},
 		"shadowknife-generic-bonebasalt": {
 			"material": { "base": "block/stone/rock/basalt1" },

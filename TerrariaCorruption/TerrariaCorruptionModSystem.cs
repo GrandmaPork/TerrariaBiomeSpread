@@ -74,7 +74,12 @@ namespace TerrariaCorruption
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptleaves", typeof(Blocks.BlockCorruptLeaves));
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptwater", typeof(Blocks.BlockCorruptWater));
 
+            api.RegisterBlockClass(Mod.Info.ModID + ".corruptknappingsurface", typeof(Blocks.BlockCorruptKnappingSurface));
+
             //api.RegisterEntityClass(Mod.Info.ModID + ".entityairborne", typeof(Entities.EntityAirborne));
+
+            api.RegisterItemClass(Mod.Info.ModID + ".corruptstone", typeof(Items.ItemCorruptStone));
+            api.RegisterItemClass(Mod.Info.ModID + ".corruptflint", typeof(Items.ItemCorruptFlint));
         }
         public override void StartClientSide(ICoreClientAPI api)
         {

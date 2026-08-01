@@ -22,6 +22,6 @@
 	"name": "EbonStone shovel",
 	"output": {
 		"type": "item",
-		"code": "shadowshovelhead-{rock}"
+		"code": "shadowshovelhead-{corruptrock}"
 	}
 }

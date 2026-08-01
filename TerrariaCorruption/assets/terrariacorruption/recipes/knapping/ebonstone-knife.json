@@ -22,7 +22,7 @@
 	"name": "EbonStone knife",
 	"output": {
 		"type": "item",
-		"code": "shadowknifeblade-{rock}",
+		"code": "shadowknifeblade-{corruptrock}",
 		"stacksize": 1
 	}
 }
