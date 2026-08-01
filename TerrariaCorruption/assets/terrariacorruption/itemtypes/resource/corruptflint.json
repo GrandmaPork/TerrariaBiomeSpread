@@ -1,6 +1,6 @@
 {
 	"code": "corruptflint",
-	"class": "ItemFlint",
+	"class": "terrariacorruption.corruptflint",
 	"storageFlags": 5,
 	"attributes": {
 		"knappable": true,
@@ -50,8 +50,8 @@
 		},
 		"inContainerTexture": { "base": "game:block/stone/flint" }
 	},
-	"shape": { "base": "game:item/resource/flint" },
-	"texture": { "base": "game:block/stone/flint" },
+	"shape": { "base": "item/resource/flint" },
+	"texture": { "base": "block/stone/flint" },
 	"creativeinventory": {
 		"general": [ "*" ],
 		"items": [ "*" ]

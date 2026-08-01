@@ -1,0 +1,23 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "corruptstone-*",
+		"name": "corruptrock",
+		"allowedVariants": [ "chert", "granite", "andesite", "basalt", "obsidian", "flint", "peridotite" ]
+	},
+	"pattern": [
+		[
+			"____##____",
+			"____##____",
+			"____##____",
+			"____##____",
+			"____##____",
+			"____##____"
+		]
+	],
+	"name": "Shadow Hoe",
+	"output": {
+		"type": "item",
+		"code": "shadowhoehead-{corruptrock}"
+	}
+}

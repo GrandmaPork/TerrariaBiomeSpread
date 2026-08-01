@@ -1,0 +1,27 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "corruptstone-*",
+		"name": "corruptrock",
+		"allowedVariants": [ "chert", "granite", "andesite", "basalt", "obsidian", "flint", "peridotite" ]
+	},
+	"pattern": [
+		[
+			"____##____",
+			"____##____",
+			"___####___",
+			"___####___",
+			"___####___",
+			"___####___",
+			"___####___",
+			"___####___",
+			"____##____",
+			"___####___"
+		]
+	],
+	"name": "EbonStone spear",
+	"output": {
+		"type": "item",
+		"code": "shadowspearhead-{corruptrock}"
+	}
+}

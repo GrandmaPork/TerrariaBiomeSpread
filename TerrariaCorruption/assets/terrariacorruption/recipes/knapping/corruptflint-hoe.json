@@ -1,0 +1,21 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "corruptflint"
+	},
+	"pattern": [
+		[
+			"____##____",
+			"____##____",
+			"____##____",
+			"____##____",
+			"____##____",
+			"____##____"
+		]
+	],
+	"name": "Corrupt Hoe",
+	"output": {
+		"type": "item",
+		"code": "shadowhoehead-flint"
+	}
+}

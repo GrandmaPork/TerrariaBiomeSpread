@@ -1,0 +1,317 @@
+{
+	"code": "shadowshovel",
+	"tags": [ "tool", "tool-shovel" ],
+	"behaviors": [
+		{
+			"name": "GroundStorable",
+			"properties": {
+				"layout": "WallHalves",
+				"wallOffY": 2,
+				"ctrlKey": true,
+				"selectionBox": {
+					"x1": 0,
+					"y1": 0,
+					"z1": 0,
+					"x2": 1,
+					"y2": 0.1,
+					"z2": 1
+				},
+				"collisionBox": {
+					"x1": 0,
+					"y1": 0,
+					"z1": 0,
+					"x2": 0,
+					"y2": 0,
+					"z2": 0
+				}
+			}
+		},
+		{ "name": "Buffable" }
+	],
+	"attributes": {
+		"attachableToEntity": { "categoryCode": "toolholding" },
+		"groundStorageTransformByType": {
+			"@shovel-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+				"translation": {
+					"x": 0,
+					"y": 0.59,
+					"z": -0.15
+				},
+				"rotation": {
+					"x": 13,
+					"y": 88,
+					"z": -87
+				},
+				"scale": 0.88
+			},
+			"*": {
+				"translation": {
+					"x": 0,
+					"y": 0.4,
+					"z": -0.155
+				},
+				"rotation": {
+					"x": 13,
+					"y": 88,
+					"z": -87
+				},
+				"scale": 0.88
+			}
+		},
+		"handbook": {
+			"groupBy": [ "shovel-*" ]
+		},
+		"toolrackTransform": {
+			"rotation": {
+				"y": 1,
+				"z": -1
+			},
+			"translation": {
+				"x": -0.47,
+				"y": 0.6
+			},
+			"scale": 1.25
+		}
+	},
+	"variantgroups": [
+		{
+			"code": "material",
+			"states": [
+				"chert",
+				"granite",
+				"andesite",
+				"basalt",
+				"obsidian",
+				"peridotite",
+				"flint",
+				"copper",
+				"tinbronze",
+				"bismuthbronze",
+				"blackbronze",
+				"meteoriciron",
+				"steel"
+			]
+		}
+	],
+	"tool": "shovel",
+	"damagedby": [ "blockbreaking", "attacking" ],
+	"shapeByType": {
+		"shadowshovel-chert": { "base": "game:item/tool/shovel-stone" },
+		"shadowshovel-granite": { "base": "game:item/tool/shovel-stone" },
+		"shadowshovel-andesite": { "base": "game:item/tool/shovel-stone" },
+		"shadowshovel-basalt": { "base": "game:item/tool/shovel-stone" },
+		"shadowshovel-obsidian": { "base": "game:item/tool/shovel-stone" },
+		"shadowshovel-peridotite": { "base": "game:item/tool/shovel-stone" },
+		"shadowshovel-flint": { "base": "game:item/tool/shovel-stone" },
+		"shadowshovel-copper": { "base": "game:item/tool/shovel-copper" },
+		"shadowshovel-tinbronze": { "base": "game:item/tool/shovel-copper" },
+		"shadowshovel-bismuthbronze": { "base": "game:item/tool/shovel-copper" },
+		"shadowshovel-blackbronze": { "base": "game:item/tool/shovel-copper" },
+		"shadowshovel-meteoriciron": { "base": "game:item/tool/shovel-copper" },
+		"shadowshovel-steel": { "base": "game:item/tool/shovel-copper" }
+	},
+	"heldTpIdleAnimation": "shovelidle",
+	"heldRightReadyAnimation": "shovelready",
+	"heldTpHitAnimation": "shoveldig",
+	"heldTpUseAnimation": "interactStaticLong",
+	"texturesByType": {
+		"shadowshovel-flint": {
+			"material": { "base": "block/stone/flint" }
+		},
+		"shadowshovel-chert": {
+			"material": { "base": "block/stone/rock/{material}1" }
+		},
+		"shadowshovel-granite": {
+			"material": { "base": "block/stone/rock/{material}1" }
+		},
+		"shadowshovel-andesite": {
+			"material": { "base": "block/stone/rock/{material}1" }
+		},
+		"shadowshovel-basalt": {
+			"material": { "base": "block/stone/rock/{material}1" }
+		},
+		"shadowshovel-obsidian": {
+			"material": { "base": "block/stone/rock/{material}1" }
+		},
+		"shadowshovel-peridotite": {
+			"material": { "base": "block/stone/rock/{material}1" }
+		},
+		"*": {
+			"material": { "base": "game:block/metal/ingot/{material}" }
+		}
+	},
+	"miningspeedbytype": {
+		"shadowshovel-chert": {
+			"soil": 2.2,
+			"sand": 2.2,
+			"gravel": 1.9,
+			"snow": 1.9
+		},
+		"shadowshovel-granite": {
+			"soil": 2.2,
+			"sand": 2.2,
+			"gravel": 1.9,
+			"snow": 1.9
+		},
+		"shadowshovel-peridotite": {
+			"soil": 2.2,
+			"sand": 2.2,
+			"gravel": 1.9,
+			"snow": 1.9
+		},
+		"shadowshovel-andesite": {
+			"soil": 2.2,
+			"sand": 2.2,
+			"gravel": 1.9,
+			"snow": 1.9
+		},
+		"shadowshovel-basalt": {
+			"soil": 2.2,
+			"sand": 2.2,
+			"gravel": 1.9,
+			"snow": 1.9
+		},
+		"shadowshovel-obsidian": {
+			"soil": 3,
+			"sand": 3,
+			"gravel": 2.2,
+			"snow": 2.2
+		},
+		"shadowshovel-flint": {
+			"soil": 2.5,
+			"sand": 2.5,
+			"gravel": 2.1,
+			"snow": 2.1
+		},
+		"shadowshovel-copper": {
+			"soil": 4,
+			"sand": 4,
+			"gravel": 2.6,
+			"snow": 2.6
+		},
+		"shadowshovel-bismuthbronze": {
+			"soil": 5,
+			"sand": 5,
+			"gravel": 3.2,
+			"snow": 3.2
+		},
+		"shadowshovel-tinbronze": {
+			"soil": 5.4,
+			"sand": 5.4,
+			"gravel": 3.6,
+			"snow": 3.6
+		},
+		"shadowshovel-blackbronze": {
+			"soil": 5.5,
+			"sand": 5.5,
+			"gravel": 3.7,
+			"snow": 3.7
+		},
+		"shadowshovel-meteoriciron": {
+			"soil": 6.5,
+			"sand": 6.5,
+			"gravel": 4.2,
+			"snow": 4.2
+		},
+		"shadowshovel-steel": {
+			"soil": 7,
+			"sand": 7,
+			"gravel": 4.4,
+			"snow": 4.4
+		}
+	},
+	"attackpowerbytype": {
+		"shadowshovel-chert": 0.75,
+		"shadowshovel-granite": 0.75,
+		"shadowshovel-andesite": 0.75,
+		"shadowshovel-peridotite": 0.75,
+		"shadowshovel-basalt": 0.75,
+		"shadowshovel-obsidian": 1.25,
+
+		"shadowshovel-flint": 1,
+		"shadowshovel-copper": 1.25,
+		"shadowshovel-bismuthbronze": 1.5,
+		"shovel-tinbronze": 1.75,
+		"shadowshovel-blackbronze": 2,
+		"shadowshovel-meteoriciron": 2.35,
+		"shadowshovel-steel": 2.5
+	},
+	"durabilitybytype": {
+		"shadowshovel-chert": 180,
+		"shadowshovel-granite": 180,
+		"shadowshovel-peridotite": 180,
+		"shadowshovel-andesite": 180,
+		"shadowshovel-basalt": 180,
+		"shadowshovel-flint": 270,
+		"shadowshovel-obsidian": 300,
+
+		"shadowshovel-tinbronze": 1800,
+		"shadowshovel-bismuthbronze": 1950,
+		"shadowshovel-blackbronze": 2100,
+		"shadowshovel-meteoriciron": 4200,
+		"shadowshovel-steel": 9000
+	},
+	"creativeinventory": {
+		"general": [ "*" ],
+		"items": [ "*" ],
+		"tools": [ "*" ]
+	},
+	"guiTransformByType": {
+		"@shadowshovel-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+			"rotation": {
+				"x": -115,
+				"y": -28,
+				"z": 139
+			},
+			"origin": {
+				"x": 0.7,
+				"y": 0,
+				"z": 0.55
+			}
+		},
+		"*": {
+			"rotation": {
+				"x": -115,
+				"y": -28,
+				"z": 139
+			},
+			"origin": {
+				"x": 0.6,
+				"y": -0,
+				"z": 0.55
+			},
+			"scale": 1.1
+		}
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 3.6
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.69,
+			"y": -0.29,
+			"z": -0.6
+		},
+		"rotation": {
+			"x": 0,
+			"y": 0,
+			"z": -10
+		},
+		"scale": 0.8
+	}
+}

@@ -1,0 +1,376 @@
+{
+	"code": "shadowaxehead",
+	"variantgroups": [
+		{
+			"code": "material",
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "meteoriciron", "steel" ]
+		}
+	],
+	"behaviorsByType": {
+		"@(.*-steel|.*-meteoriciron)": [
+			{
+				"name": "Quenchable",
+				"properties": { "metalVariantgroupCode": "material" }
+			},
+			{
+				"name": "GroundStorable",
+				"properties": {
+					"layout": "Quadrants",
+					"collisionBox": {
+						"x1": 0,
+						"y1": 0,
+						"z1": 0,
+						"x2": 1,
+						"y2": 0.125,
+						"z2": 1
+					}
+				}
+			}
+		],
+		"*": [
+			{
+				"name": "GroundStorable",
+				"properties": {
+					"layout": "Quadrants",
+					"collisionBox": {
+						"x1": 0,
+						"y1": 0,
+						"z1": 0,
+						"x2": 1,
+						"y2": 0.125,
+						"z2": 1
+					}
+				}
+			}
+		]
+	},
+	"heldTpUseAnimation": "interactstatic",
+	"maxstacksize": 4,
+	"shapeByType": {
+		"*-copper": { "base": "game:item/tool/axe/copper" },
+		"*-tinbronze": { "base": "game:item/tool/axe/copper" },
+		"*-bismuthbronze": { "base": "game:item/tool/axe/copper" },
+		"*-blackbronze": { "base": "game:item/tool/axe/copper" },
+		"*-steel": { "base": "game:item/tool/axe/iron" },
+		"*-meteoriciron": { "base": "game:item/tool/axe/iron" },
+		"*": { "base": "game:item/tool/axe/stone" }
+	},
+	"texturesByType": {
+		"@shadowaxehead-(chert|granite|andesite|basalt|obsidian|peridotite)": {
+			"material": { "base": "block/stone/rock/{material}1" },
+			"string": { "base": "game:block/transparent" },
+			"handle": { "base": "game:block/transparent" }
+		},
+		"shadowaxehead-flint": {
+			"material": { "base": "block/stone/{material}" },
+			"string": { "base": "game:block/transparent" },
+			"handle": { "base": "game:block/transparent" }
+		},
+		"*": {
+			"material": { "base": "game:block/metal/ingot/{material}" },
+			"string": { "base": "game:block/transparent" },
+			"handle": { "base": "game:block/transparent" }
+		}
+	},
+	"attributes": {
+		"inForgeTransform": {
+			"translation": {
+				"x": -0.38,
+				"y": 0.028,
+				"z": 0.1
+			},
+			"rotation": {
+				"x": 0,
+				"y": 70,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.9,
+				"y": 0.5,
+				"z": 0.5
+			}
+		},
+		"forgableByType": {
+			"@shadowaxehead-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": true,
+			"*": false
+		},
+		"onTongTransformByType": {
+			"@shadowaxehead-(copper|bismuthbronze|tinbronze|blackbronze)": {
+				"translation": {
+					"x": -0.55,
+					"y": -0.51,
+					"z": -0.11
+				},
+				"rotation": {
+					"x": -105,
+					"y": -16,
+					"z": 85
+				}
+			},
+			"@shadowaxehead-(meteoriciron|steel)": {
+				"translation": {
+					"x": -1.4,
+					"y": -0.9,
+					"z": -0.03
+				},
+				"rotation": {
+					"x": 97,
+					"y": 18,
+					"z": -81
+				}
+			},
+			"*": {
+				"translation": {
+					"x": -0.4,
+					"y": -0.8,
+					"z": -0.53
+				},
+				"rotation": {
+					"x": 37,
+					"y": 0,
+					"z": -2
+				}
+			}
+		},
+		"tongOpening": "medium",
+		"onMetalTongTransformByType": {
+			"@shadowaxehead-(copper|bismuthbronze|tinbronze|blackbronze)": {
+				"translation": {
+					"x": -1.35,
+					"y": -0.13,
+					"z": -0.51
+				},
+				"rotation": {
+					"x": -82,
+					"y": -21,
+					"z": 85
+				},
+				"origin": {
+					"x": 0.875,
+					"y": -0,
+					"z": 0.5
+				}
+			},
+			"@shadowaxehead-(meteoriciron|steel)": {
+				"translation": {
+					"x": -1.27,
+					"y": -0.12,
+					"z": -0.525
+				},
+				"rotation": {
+					"x": 86,
+					"y": 6,
+					"z": -88
+				},
+				"origin": {
+					"x": 0.875,
+					"y": -0,
+					"z": 0.5
+				}
+			},
+			"*": {
+				"translation": {
+					"x": -0.4,
+					"y": -0.8,
+					"z": -0.53
+				},
+				"rotation": {
+					"x": 37,
+					"y": 0,
+					"z": -2
+				}
+			}
+		},
+		"groundStorageTransformByType": {
+			"@*-(copper|tinbronze|bismuthbronze|blackbronze)": {
+				"translation": {
+					"x": -0.6,
+					"y": 0,
+					"z": 0.05
+				},
+				"rotation": {
+					"x": 0,
+					"y": -66,
+					"z": 0
+				},
+				"origin": {
+					"x": 1,
+					"y": 0.5,
+					"z": 0.5
+				}
+			},
+			"@*-(meteoriciron|steel)": {
+				"translation": {
+					"x": -0.55,
+					"y": 0,
+					"z": 0.1
+				},
+				"rotation": {
+					"x": 0,
+					"y": -66,
+					"z": 0
+				},
+				"origin": {
+					"x": 1,
+					"y": 0.5,
+					"z": 0.5
+				}
+			},
+			"*": {
+				"translation": {
+					"x": -0.54,
+					"y": -0.01,
+					"z": 0.08
+				},
+				"rotation": {
+					"x": 0,
+					"y": 41,
+					"z": 0
+				},
+				"origin": {
+					"x": 1.05,
+					"y": 0.5,
+					"z": 0.4
+				}
+			}
+		},
+		"handbook": {
+			"groupBy": [ "axehead-*" ]
+		},
+		"displayable": {
+			"shelf": {
+				"sizeByType": {
+					"@*-(copper|tinbronze|bismuthbronze|blackbronze)": {
+						"width": 6,
+						"height": 2,
+						"length": 6
+					},
+					"@*-(meteoriciron|steel)": {
+						"width": 8,
+						"height": 2,
+						"length": 6
+					},
+					"*": {
+						"width": 3,
+						"height": 2,
+						"length": 6
+					}
+				},
+				"transformByType": {
+					"@*-(copper|tinbronze|bismuthbronze|blackbronze)": {
+						"translation": {
+							"x": -0.47,
+							"y": 0,
+							"z": 0.125
+						}
+					},
+					"@*-(meteoriciron|steel)": {
+						"translation": {
+							"x": -0.38,
+							"y": 0,
+							"z": 0.1
+						}
+					},
+					"*": {
+						"translation": {
+							"x": -0.5,
+							"y": -0.01,
+							"z": 0.125
+						}
+					}
+				}
+			}
+		}
+	},
+	"creativeinventory": {
+		"general": [ "*" ],
+		"items": [ "*" ]
+	},
+	"guiTransformByType": {
+		"@*-(meteoriciron|steel)": {
+			"translation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": -57,
+				"y": -119,
+				"z": -172
+			},
+			"origin": {
+				"x": 0.97,
+				"y": -0.07,
+				"z": 0.5
+			},
+			"scale": 2.8
+		},
+		"@*-(copper|tinbronze|bismuthbronze|blackbronze)": {
+			"translation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": -57,
+				"y": -119,
+				"z": -172
+			},
+			"origin": {
+				"x": 0.97,
+				"y": 0.17,
+				"z": 0.37
+			},
+			"scale": 3.15
+		},
+		"*": {
+			"translation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": -73,
+				"y": -117,
+				"z": -19
+			},
+			"origin": {
+				"x": 1.06,
+				"y": -0.02,
+				"z": 0.43
+			},
+			"scale": 3.69
+		}
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"origin": {
+			"x": 1,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 3.5
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -0.1,
+			"y": -0.76,
+			"z": -0.04
+		},
+		"rotation": {
+			"x": 90,
+			"y": -29,
+			"z": 0
+		},
+		"scale": 1
+	}
+}

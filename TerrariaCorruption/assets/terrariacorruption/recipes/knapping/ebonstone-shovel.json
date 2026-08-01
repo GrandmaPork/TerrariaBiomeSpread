@@ -1,0 +1,27 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "corruptstone-*",
+		"name": "corruptrock",
+		"allowedVariants": [ "chert", "granite", "andesite", "basalt", "obsidian", "flint", "peridotite" ]
+	},
+	"pattern": [
+		[
+			"___####___",
+			"__######__",
+			"__######__",
+			"_########_",
+			"_########_",
+			"_########_",
+			"_########_",
+			"_########_",
+			"_########_",
+			"_########_"
+		]
+	],
+	"name": "EbonStone shovel",
+	"output": {
+		"type": "item",
+		"code": "shadowshovelhead-{corruptrock}"
+	}
+}

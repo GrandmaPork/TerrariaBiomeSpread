@@ -1,0 +1,304 @@
+{
+	"code": "shadowshovelhead",
+	"variantgroups": [
+		{
+			"code": "material",
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "meteoriciron", "steel" ]
+		}
+	],
+	"behaviorsByType": {
+		"@(.*-steel|.*-meteoriciron)": [
+			{
+				"name": "Quenchable",
+				"properties": { "metalVariantgroupCode": "material" }
+			},
+			{
+				"name": "GroundStorable",
+				"properties": {
+					"layout": "Quadrants",
+					"collisionBox": {
+						"x1": 0,
+						"y1": 0,
+						"z1": 0,
+						"x2": 1,
+						"y2": 0.125,
+						"z2": 1
+					}
+				}
+			}
+		],
+		"*": [
+			{
+				"name": "GroundStorable",
+				"properties": {
+					"layout": "Quadrants",
+					"collisionBox": {
+						"x1": 0,
+						"y1": 0,
+						"z1": 0,
+						"x2": 1,
+						"y2": 0.125,
+						"z2": 1
+					}
+				}
+			}
+		]
+	},
+	"heldTpUseAnimation": "interactstatic",
+	"maxstacksize": 4,
+	"shapeByType": {
+		"*-copper": { "base": "game:item/tool/shovelhead-copper" },
+		"*-tinbronze": { "base": "game:item/tool/shovelhead-copper" },
+		"*-bismuthbronze": { "base": "game:item/tool/shovelhead-copper" },
+		"*-blackbronze": { "base": "game:item/tool/shovelhead-copper" },
+		"*-steel": { "base": "game:item/tool/shovelhead-copper" },
+		"*-meteoriciron": { "base": "game:item/tool/shovelhead-copper" },
+		"*": { "base": "game:item/tool/shovel-stone" }
+	},
+	"texturesByType": {
+		"shadowshovelhead-flint": {
+			"material": { "base": "block/stone/flint" },
+			"string": { "base": "game:block/transparent" },
+			"handle": { "base": "game:block/transparent" }
+		},
+		"@shadowshovelhead-(flint|chert|granite|andesite|basalt|obsidian|peridotite)": {
+			"material": { "base": "block/stone/rock/{material}1" },
+			"string": { "base": "game:block/transparent" },
+			"handle": { "base": "game:block/transparent" }
+		},
+		"*": {
+			"material": { "base": "game:block/metal/ingot/{material}" },
+			"string": { "base": "game:block/transparent" },
+			"handle": { "base": "game:block/transparent" }
+		}
+	},
+	"attributes": {
+		"inForgeTransform": {
+			"translation": {
+				"x": -0.19,
+				"y": 0.1,
+				"z": 0.05
+			},
+			"rotation": {
+				"x": 9,
+				"y": -89,
+				"z": -167
+			},
+			"origin": {
+				"x": 0.7,
+				"y": 0,
+				"z": 0.5
+			},
+			"scale": 0.9
+		},
+		"forgableByType": {
+			"@shadowshovelhead-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": true,
+			"*": false
+		},
+		"onTongTransform": {
+			"translation": {
+				"x": -0.55,
+				"y": -0.56,
+				"z": -0.55
+			},
+			"rotation": {
+				"x": -86,
+				"y": -16,
+				"z": 85
+			}
+		},
+		"onMetalTongTransform": {
+			"translation": {
+				"x": -1.07,
+				"y": -0.173,
+				"z": -0.65
+			},
+			"rotation": {
+				"x": -2,
+				"y": 90,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5,
+				"y": -0,
+				"z": 0.5
+			}
+		},
+		"groundStorageTransformByType": {
+			"@*-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": {
+				"translation": {
+					"x": -0.08,
+					"y": -0.043,
+					"z": 0.07
+				},
+				"rotation": {
+					"x": 0,
+					"y": 45,
+					"z": -3
+				},
+				"scale": 0.9
+			},
+			"*": {
+				"translation": {
+					"x": -0.72,
+					"y": -0.012,
+					"z": 0
+				},
+				"rotation": {
+					"x": 0,
+					"y": 44,
+					"z": 0
+				},
+				"origin": {
+					"x": 1.2,
+					"y": 0.5,
+					"z": 0.5
+				}
+			}
+		},
+		"handbook": {
+			"groupBy": [ "shovelhead-*" ]
+		},
+		"displayable": {
+			"shelf": {
+				"sizeByType": {
+					"@*-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": {
+						"width": 6,
+						"height": 2,
+						"length": 8
+					},
+					"*": {
+						"width": 5,
+						"height": 1,
+						"length": 8
+					}
+				},
+				"transformByType": {
+					"@*-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": {
+						"translation": {
+							"x": -0.7,
+							"y": 0.005,
+							"z": -0.5
+						},
+						"rotation": {
+							"x": 0,
+							"y": 90,
+							"z": 0
+						},
+						"origin": {
+							"x": 1.2,
+							"y": 0.5,
+							"z": 0.5
+						}
+					},
+					"*": {
+						"translation": {
+							"x": -0.7,
+							"y": -0.01,
+							"z": 0
+						},
+						"rotation": {
+							"x": 0,
+							"y": 90,
+							"z": 0
+						},
+						"origin": {
+							"x": 1.2,
+							"y": 0.5,
+							"z": 0.5
+						}
+					}
+				}
+			}
+		}
+	},
+	"creativeinventory": {
+		"general": [ "*" ],
+		"items": [ "*" ]
+	},
+	"guiTransformByType": {
+		"@shadowshovelhead-(copper|tinbronze|bismuthbronze|blackbronze|iron|meteoriciron|gold|silver|steel)": {
+			"rotate": false,
+			"translation": {
+				"x": 0,
+				"y": 0,
+				"z": 4
+			},
+			"rotation": {
+				"x": 141,
+				"y": 33,
+				"z": -38
+			},
+			"origin": {
+				"x": 0.52,
+				"y": 0.29,
+				"z": 0.3
+			},
+			"scale": 2.24
+		},
+		"*": {
+			"translation": {
+				"x": 0,
+				"y": 0,
+				"z": 120
+			},
+			"rotation": {
+				"x": -45,
+				"y": -134,
+				"z": -180
+			},
+			"origin": {
+				"x": 0.87,
+				"y": 0.55,
+				"z": 0.2
+			},
+			"scale": 3
+		}
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"origin": {
+			"x": 1.2,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 3.6
+	},
+	"tpHandTransformByType": {
+		"@shadowshovelhead-(copper|tinbronze|bismuthbronze|blackbronze|iron|meteoriciron|gold|silver)": {
+			"translation": {
+				"x": -0.7,
+				"y": -0.6,
+				"z": -0.1
+			},
+			"rotation": {
+				"x": 90,
+				"y": 20,
+				"z": 0
+			},
+			"scale": 0.85
+		},
+		"*": {
+			"translation": {
+				"x": 0,
+				"y": -0.4,
+				"z": -0.1
+			},
+			"rotation": {
+				"x": 90,
+				"y": 20,
+				"z": 0
+			},
+			"scale": 0.85
+		}
+	}
+}

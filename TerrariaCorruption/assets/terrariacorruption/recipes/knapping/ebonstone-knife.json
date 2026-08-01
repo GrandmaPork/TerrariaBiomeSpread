@@ -1,0 +1,28 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "corruptstone-*",
+		"name": "corruptrock",
+		"allowedVariants": [ "chert", "granite", "andesite", "basalt", "obsidian", "flint", "peridotite" ]
+	},
+	"pattern": [
+		[
+			"_____#____",
+			"_____#____",
+			"____##____",
+			"____##____",
+			"____##____",
+			"___###____",
+			"___###____",
+			"___###____",
+			"___###____",
+			"___###____"
+		]
+	],
+	"name": "EbonStone knife",
+	"output": {
+		"type": "item",
+		"code": "shadowknifeblade-{corruptrock}",
+		"stacksize": 1
+	}
+}

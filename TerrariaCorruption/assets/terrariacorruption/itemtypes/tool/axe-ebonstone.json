@@ -1,0 +1,238 @@
+{
+	"code": "corruptaxe",
+	"class": "ItemAxe",
+	"tags": [ "tool", "tool-axe" ],
+	"attributes": {
+		"attachableToEntity": { "categoryCode": "toolholding" },
+		"heldItemPitchFollow": 0.9,
+		"handbook": {
+			"groupBy": [ "axe-*" ]
+		},
+		"toolrackTransform": {
+			"rotation": {
+				"y": 1,
+				"z": -1
+			},
+			"translation": {
+				"x": -0.3,
+				"y": 0.6
+			},
+			"scale": 1.25
+		},
+		"groundStorageTransform": {
+			"translation": {
+				"x": 0,
+				"y": 0.18,
+				"z": -0.165
+			},
+			"rotation": {
+				"x": 26,
+				"y": 88,
+				"z": -87
+			},
+			"scale": 0.88
+		}
+	},
+	"behaviors": [
+		{
+			"name": "GroundStorable",
+			"properties": {
+				"layout": "WallHalves",
+				"wallOffY": 1,
+				"ctrlKey": true,
+				"selectionBox": {
+					"x1": 0,
+					"y1": 0,
+					"z1": 0,
+					"x2": 1,
+					"y2": 0.1,
+					"z2": 1
+				},
+				"collisionBox": {
+					"x1": 0,
+					"y1": 0,
+					"z1": 0,
+					"x2": 0,
+					"y2": 0,
+					"z2": 0
+				}
+			}
+		},
+		{
+			"name": "AnimationAuthoritative",
+			"properties": { "onlyOnEntity": true }
+		}
+	],
+	"variantgroups": [
+		{
+			"code": "material",
+			"states": [
+				"chert",
+				"granite",
+				"andesite",
+				"basalt",
+				"obsidian",
+				"peridotite",
+				"flint",
+				"bone-chert",
+				"bone-granite",
+				"bone-andesite",
+				"bone-basalt",
+				"bone-obsidian",
+				"bone-peridotite",
+				"bone-flint"
+			]
+		}
+	],
+	"tool": "axe",
+	"damagedby": [ "blockbreaking", "attacking" ],
+	"shape": { "base": "game:item/tool/axe/stone" },
+	"heldRightReadyAnimation": "axeready",
+	"heldTpHitAnimation": "axechop",
+	"texturesByType": {
+		"shadowaxe-flint": {
+			"material": { "base": "block/stone/{material}" }
+		},
+		"*-bone-chert": {
+			"material": { "base": "block/stone/rock/chert1" },
+			"handle": { "base": "game:block/creature/bone-yellow" }
+		},
+		"*-bone-granite": {
+			"material": { "base": "block/stone/rock/granite1" },
+			"handle": { "base": "game:block/creature/bone-yellow" }
+		},
+		"*-bone-andesite": {
+			"material": { "base": "block/stone/rock/andesite1" },
+			"handle": { "base": "game:block/creature/bone-yellow" }
+		},
+		"*-bone-basalt": {
+			"material": { "base": "block/stone/rock/basalt1" },
+			"handle": { "base": "game:block/creature/bone-yellow" }
+		},
+		"*-bone-obsidian": {
+			"material": { "base": "block/stone/rock/obsidian1" },
+			"handle": { "base": "game:block/creature/bone-yellow" }
+		},
+		"*-bone-peridotite": {
+			"material": { "base": "block/stone/rock/peridotite1" },
+			"handle": { "base": "game:block/creature/bone-yellow" }
+		},
+		"*-bone-flint": {
+			"material": { "base": "block/stone/flint" },
+			"handle": { "base": "game:block/creature/bone-yellow" }
+		},
+		"*": {
+			"material": { "base": "block/stone/rock/{material}1" }
+		}
+	},
+	"attackRange": 2,
+	"tooltierbytype": {
+		"*": 1
+	},
+	"miningspeedbytype": {
+		"shadowaxe-flint": {
+			"wood": 2.8,
+			"plant": 2.2,
+			"leaves": 1.6
+		},
+		"shadowaxe-bone-flint": {
+			"wood": 2.8,
+			"plant": 2.2,
+			"leaves": 1.6
+		},
+		"shadowaxe-obsidian": {
+			"wood": 3.5,
+			"plant": 2.7,
+			"leaves": 2.4
+		},
+		"shadowaxe-bone-obsidian": {
+			"wood": 3.5,
+			"plant": 2.7,
+			"leaves": 2.4
+		},
+		"*": {
+			"wood": 2.6,
+			"plant": 2.2,
+			"leaves": 1.7
+		}
+	},
+	"durabilitybytype": {
+		"shadowaxe-flint": 180,
+		"shadowaxe-bone-flint": 210,
+		"shadowaxe-obsidian": 270,
+		"shadowaxe-bone-obsidian": 300,
+		"shadowaxe-bone-chert": 180,
+		"shadowaxe-bone-andesite": 180,
+		"shadowaxe-bone-granite": 180,
+		"shadowaxe-bone-basalt": 180,
+		"shadowaxe-bone-peridotite": 180,
+		"*": 150
+	},
+	"attackpowerbytype": {
+		"shadowaxe-obsidian": 1.5,
+		"shadowaxe-bone-obsidian": 1.5,
+		"shadowaxe-flint": 1.25,
+		"shadowaxe-bone-flint": 1.25,
+		"*": 0.75
+	},
+	"creativeinventory": {
+		"general": [ "*" ],
+		"items": [ "*" ],
+		"tools": [ "*" ],
+		"clutterByType": { "*-ruined": [ "*" ] }
+	},
+	"guiTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": -89,
+			"y": 41,
+			"z": 33
+		},
+		"origin": {
+			"x": 0.88,
+			"y": 0,
+			"z": 0.4
+		},
+		"scale": 2.42
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 3.4
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -0.45,
+			"y": 0.03,
+			"z": -0.66
+		},
+		"rotation": {
+			"x": 90,
+			"y": 0,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 0.8
+	}
+}

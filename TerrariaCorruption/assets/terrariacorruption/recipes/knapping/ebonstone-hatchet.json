@@ -1,0 +1,27 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "corruptstone-*",
+		"name": "corruptrock",
+		"allowedVariants": [ "chert", "granite", "andesite", "basalt", "obsidian", "flint", "peridotite" ]
+	},
+	"pattern": [
+		[
+			"___####___",
+			"___####___",
+			"___####___",
+			"___####___",
+			"__######__",
+			"__######__",
+			"__######__",
+			"__######__",
+			"__######__",
+			"__######__"
+		]
+	],
+	"name": "EbonStone hatchet",
+	"output": {
+		"type": "item",
+		"code": "shadowaxehead-{corruptrock}"
+	}
+}
