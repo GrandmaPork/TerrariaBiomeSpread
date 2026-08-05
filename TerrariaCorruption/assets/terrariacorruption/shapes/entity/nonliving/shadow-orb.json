@@ -1,0 +1,108 @@
+{
+  "editor": {
+    "allAngles": true,
+    "backdrops": [],
+    "attachments": []
+  },
+  "textures": {
+    "texture": "shadow-orb"
+  },
+  "elements": [
+    {
+      "name": "Cube",
+      "from":[3.5355337262153625,3.5038207471370697,3.6194110363721848],
+      "to":[12.535533726215363,12.50382074713707,12.619411036372185],
+      "faces": {
+        "north": {
+          "texture": "#texture",
+          "uv":[6.0,6.0,15.0,15.0]
+        },
+        "east": {
+          "texture": "#texture",
+          "uv":[0.0,0.0,9.0,9.0]
+        },
+        "south": {
+          "texture": "#texture",
+          "uv":[0.0,0.0,9.0,9.0]
+        },
+        "west": {
+          "texture": "#texture",
+          "uv":[0.0,0.0,9.0,9.0]
+        },
+        "up": {
+          "texture": "#texture",
+          "uv":[0.0,0.0,9.0,9.0]
+        },
+        "down": {
+          "texture": "#texture",
+          "uv":[0.0,0.0,9.0,9.0]
+        }
+      },
+      "rotationOrigin":[8.0355337262153625,8.00382074713707,8.1194110363721848],
+      "rotationX": 54.0,
+      "rotationY": 45.0,
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "scaleZ": 1.0,
+      "uv":[0.0,0.0]
+    }
+  ],
+  "animations": [
+    {
+      "quantityframes": 60,
+      "name": "spinslow",
+      "code": "spin",
+      "keyframes": [
+        {
+          "frame": 0,
+          "elements": {
+            "Cube": {
+              "rotationX": 0.0,
+              "rotationY": 0.0,
+              "rotationZ": 0.0
+            }
+          }
+        },
+        {
+          "frame": 14,
+          "elements": {
+            "Cube": {
+              "rotationX": 45.0,
+              "rotationY": 84.0,
+              "rotationZ": 0.0
+            }
+          }
+        },
+        {
+          "frame": 15,
+          "elements": {
+            "Cube": {
+              "rotationX": 47.0,
+              "rotationY": 90.0,
+              "rotationZ": 0.0
+            }
+          }
+        },
+        {
+          "frame": 29,
+          "elements": {
+            "Cube": {
+              "rotationX": 90.0,
+              "rotationY": 90.0,
+              "rotationZ": 45.0
+            }
+          }
+        }
+      ],
+      "onActivityStopped": "Rewind"
+    }
+  ],
+  "textureWidth": 16,
+  "textureHeight": 16,
+  "textureSizes": {
+    "texture": [
+      16,
+      16
+    ]
+  }
+}

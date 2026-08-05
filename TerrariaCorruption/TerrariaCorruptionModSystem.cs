@@ -75,8 +75,10 @@ namespace TerrariaCorruption
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptwater", typeof(Blocks.BlockCorruptWater));
 
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptknappingsurface", typeof(Blocks.BlockCorruptKnappingSurface));
+            api.RegisterBlockClass(Mod.Info.ModID + ".shadoworb", typeof(Blocks.BlockShadowOrb)); // register orbs as blocks
 
             //api.RegisterEntityClass(Mod.Info.ModID + ".entityairborne", typeof(Entities.EntityAirborne));
+            api.RegisterBlockEntityClass(Mod.Info.ModID + ".shadowspread", typeof(BlockEntities.BEShadowOrb)); // register orb block entity behavior
 
             api.RegisterItemClass(Mod.Info.ModID + ".corruptstone", typeof(Items.ItemCorruptStone));
             api.RegisterItemClass(Mod.Info.ModID + ".corruptflint", typeof(Items.ItemCorruptFlint));
