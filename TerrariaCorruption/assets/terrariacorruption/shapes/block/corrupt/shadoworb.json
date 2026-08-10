@@ -5,7 +5,7 @@
     "attachments": []
   },
   "textures": {
-    "texture": "shadow-orb"
+    "texture": "block/corrupt/shadoworb"
   },
   "elements": [
     {

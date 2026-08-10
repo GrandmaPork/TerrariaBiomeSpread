@@ -18,7 +18,7 @@
   "enabled": true,
   "heldTpIdleAnimation": "holdbothhandslarge",
   "shape": {
-    "base": "entity/nonliving/shadow-orb"
+    "base": "block/corrupt/shadoworb"
   },
   "creativeinventory": {
     "general": [ "*" ],
@@ -29,9 +29,10 @@
   "resistance": 4,
   "lightAbsorption": 0,
   "maxStackSize": 1,
-  "texture": {
-    "all": { "base": "entity/shadow-orb" }
+  "textures": {
+    "all": { "base": "block/corrupt/shadoworb" }
   },
+  "drops": [],
   "sidesolid": {
     "all": false
   },
