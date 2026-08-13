@@ -106,32 +106,39 @@ namespace TerrariaCorruption
              */
             //api.Event.RegisterGameTickListener(SpreadTimer, 3000);
         }
-        public void spreadCorruption(IWorldAccessor world, BlockPos pos, object extra = null)
+        public void corruptionPosShort(BlockPos pos) // separate from spreadCorruption so OnGameTick can use the corruption spread function
         {
-            BlockPos victim = pos.AddCopy(rnd.Next(-1, 2), rnd.Next(-1, 2), rnd.Next(-1, 2));
-            Block targetBlock = world.BlockAccessor.GetBlock(victim);
+            BlockPos victim = pos.AddCopy(rnd.Next(-1, 2), rnd.Next(-1, 2), rnd.Next(-1, 2)); // find random position in a short radius
+            if (sapi.Side == EnumAppSide.Server)
+            {
+                spreadCorruption(victim);
+            }
+        }
+        public void spreadCorruption(BlockPos victim)
+        {
+            Block targetBlock = sapi.World.BlockAccessor.GetBlock(victim);
             string changePath = "corrupt" + targetBlock.Code.Path;
 
             AssetLocation changeCode = new AssetLocation("terrariacorruption", changePath);
 
-            Block corruptBlock = world.GetBlock(changeCode);
+            Block corruptBlock = sapi.World.GetBlock(changeCode);
             //corruptBlock = getCorruptedBlock(world = null, victim, extra);
             if (corruptBlock == null) return;
 
-            world.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-            world.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
+            sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
+            sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
 
             while (targetBlock.Code.Path.StartsWith("log-"))
             {
                 victim.Y += 1;
-                targetBlock = world.BlockAccessor.GetBlock(victim);
+                targetBlock = sapi.World.BlockAccessor.GetBlock(victim);
                 changePath = "corrupt" + targetBlock.Code.Path;
                 changeCode = new AssetLocation("terrariacorruption", changePath);
-                corruptBlock = world.GetBlock(changeCode);
+                corruptBlock = sapi.World.GetBlock(changeCode);
                 if (corruptBlock == null) return;
 
-                world.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-                world.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
+                sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
+                sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
             }
         }
     }

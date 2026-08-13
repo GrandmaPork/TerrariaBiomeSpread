@@ -15,6 +15,8 @@ using Vintagestory.API.Server;
 using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
+using TerrariaCorruption;
+
 #nullable disable
 
 namespace TerrariaCorruption.BlockEntities
@@ -22,13 +24,18 @@ namespace TerrariaCorruption.BlockEntities
     public class BEShadowOrb : BlockEntity
     {
         readonly Random rnd = new(); //initialize spread rnd
+        private ICoreServerAPI sapi;
         public float timer;
         public override void Initialize(ICoreAPI api)
         {
+            //sapi = api;
             base.Initialize(api);
-            RegisterGameTickListener(OnGameTick, 50);
+            if (api is ICoreServerAPI)
+            {
+                RegisterGameTickListener(OnGameTick, 50);
+            }
         }
-        public void OnGameTick(float dt)
+        private void OnGameTick(float dt)
         {
             timer += dt;
             BlockPos testPos = Pos.AddCopy(0, 0, 0);
@@ -44,6 +51,8 @@ namespace TerrariaCorruption.BlockEntities
                     block = Api.World.GetBlock(0);
                     Api.World.BlockAccessor.SetBlock(block.BlockId, clearPos);
 
+                    Api.World.BlockAccessor.TriggerNeighbourBlockUpdate(clearPos);
+                    Api.World.BlockAccessor.MarkBlockDirty(clearPos);
                     Api.World.BlockAccessor.GetChunkAtBlockPos(clearPos)?.MarkModified();
                 }
                 else
@@ -55,45 +64,24 @@ namespace TerrariaCorruption.BlockEntities
             else if (timer >= 1 && timer <= 1.2)
             {
                 corruptionPos(testPos);
-                timer = 2;
             }
         }
-        public void corruptionPos(BlockPos pos) // seperate from spreadCorruption so OnGameTick can use the corruption spread function
+        private void corruptionPos(BlockPos pos) // separate from spreadCorruption so OnGameTick can use the corruption spread function
         {
-            BlockPos victim = pos.AddCopy(rnd.Next(-7, 8), rnd.Next(-1, 1), rnd.Next(-7, 8)); // find random position in a large thin plane
-            spreadCorruption(victim, null);
-        }
-        public void corruptionPosShort(BlockPos pos) // seperate from spreadCorruption so OnGameTick can use the corruption spread function
-        {
-            BlockPos victim = pos.AddCopy(rnd.Next(-1, 2), rnd.Next(-1, 1), rnd.Next(-1, 2)); // find random position in a large thin plane
-            spreadCorruption(victim, null);
-        }
-        public void spreadCorruption(BlockPos victim, object extra = null)
-        {
-            Block targetBlock = Api.World.BlockAccessor.GetBlock(victim); // find block at that position
-
-            string changePath = "corrupt" + targetBlock.Code.Path;
-
-            AssetLocation changeCode = new AssetLocation("terrariacorruption", changePath);
-
-            Block corruptBlock = Api.World.GetBlock(changeCode);
-            //corruptBlock = getCorruptedBlock(world = null, victim, extra);
-            if (corruptBlock == null) return;
-
-            Api.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-            Api.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
-
-            while (targetBlock.Code.Path.StartsWith("log-")) // change later
+            BlockPos victim = pos.AddCopy(rnd.Next(-15, 16), rnd.Next(-1, 1), rnd.Next(-15, 16)); // find random position in a large thin plane
+            if (Api.Side == EnumAppSide.Server)
             {
-                victim.Y += 1;
-                targetBlock = Api.World.BlockAccessor.GetBlock(victim);
-                changePath = "corrupt" + targetBlock.Code.Path;
-                changeCode = new AssetLocation("terrariacorruption", changePath);
-                corruptBlock = Api.World.GetBlock(changeCode);
-                if (corruptBlock == null) return;
-
-                Api.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-                Api.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
+                (Api as ICoreServerAPI).ModLoader.GetModSystem<TerrariaCorruptionModSystem>()?.spreadCorruption(victim);
+            }
+            //sapi.ModLoader.GetModSystem<TerrariaCorruptionModSystem>()?.spreadCorruption(victim);
+            //TerrariaCorruptionModSystem.spreadCorruption(victim);
+        }
+        private void corruptionPosShort(BlockPos pos) // separate from spreadCorruption so OnGameTick can use the corruption spread function
+        {
+            BlockPos victim = pos.AddCopy(rnd.Next(-1, 2), rnd.Next(-1, 1), rnd.Next(-1, 2)); // find random position in a short radius
+            if (Api.Side == EnumAppSide.Server)
+            {
+                (Api as ICoreServerAPI).ModLoader.GetModSystem<TerrariaCorruptionModSystem>()?.spreadCorruption(victim);
             }
         }
         public override void ToTreeAttributes(ITreeAttribute tree)
@@ -101,7 +89,6 @@ namespace TerrariaCorruption.BlockEntities
             base.ToTreeAttributes(tree);
             tree.SetFloat("timer", timer);
         }
-
         public override void FromTreeAttributes(ITreeAttribute tree, IWorldAccessor worldForResolving)
         {
             base.FromTreeAttributes(tree, worldForResolving);
