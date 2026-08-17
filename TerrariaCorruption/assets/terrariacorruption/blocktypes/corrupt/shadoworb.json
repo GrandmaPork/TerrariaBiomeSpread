@@ -4,6 +4,10 @@
   "behaviors": [
     {
       "name": "UnstableFalling",
+      "properties": {
+        //"fallSound": "game:effect/rockslide",
+        "fallSidewaysChance": 0.1
+      },
       "impactDamageMul": 20
     }
   ],

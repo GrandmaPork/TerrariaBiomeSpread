@@ -26,6 +26,7 @@ namespace TerrariaCorruption.BlockEntities
         readonly Random rnd = new(); //initialize spread rnd
         private ICoreServerAPI sapi;
         public float timer;
+        public int minHeight;
         public override void Initialize(ICoreAPI api)
         {
             //sapi = api;
@@ -34,24 +35,36 @@ namespace TerrariaCorruption.BlockEntities
             {
                 RegisterGameTickListener(OnGameTick, 50);
             }
+            minHeight = rnd.Next(71, 83);
         }
         private void OnGameTick(float dt)
         {
             timer += dt;
             BlockPos testPos = Pos.AddCopy(0, 0, 0);
-
+            BlockPos clearPos;
 
             if (timer >= 2)
             {
-                BlockPos clearPos = Pos.AddCopy(rnd.Next(-2, 3), rnd.Next(-1, 2), rnd.Next(-2, 3)); // find random position in a short radius
+                timer = 0;
+            }
+            else if ((timer >= 1.5) && (Pos.Y > minHeight))
+            {
+                if (rnd.Next(0, 3) == 2) // one-third chance to clear block out of one block radius
+                {
+                    clearPos = Pos.AddCopy(rnd.Next(-2, 3), rnd.Next(-1, 2), rnd.Next(-2, 3)); // find random position in a short radius
+                }
+                else 
+                { 
+                    clearPos = Pos.AddCopy(rnd.Next(-1, 2), rnd.Next(-1, 2), rnd.Next(-1, 2)); // one block radius
+                }
                 Block block = Api.World.BlockAccessor.GetBlock(clearPos); // get block at position
 
-                if ((block.Attributes?["isCorrupt"]?.AsBool() != false) && (clearPos != Pos))
+                if ((block.Attributes?["isCorrupt"]?.AsBool() != false) && (clearPos != Pos)) // destroy corrupted blocks
                 {
                     block = Api.World.GetBlock(0);
                     Api.World.BlockAccessor.SetBlock(block.BlockId, clearPos);
-
                     Api.World.BlockAccessor.TriggerNeighbourBlockUpdate(clearPos);
+
                     Api.World.BlockAccessor.MarkBlockDirty(clearPos);
                     Api.World.BlockAccessor.GetChunkAtBlockPos(clearPos)?.MarkModified();
                 }
@@ -59,7 +72,6 @@ namespace TerrariaCorruption.BlockEntities
                 {
                     corruptionPosShort(Pos);
                 }
-                timer = 0;
             }
             else if (timer >= 1 && timer <= 1.2)
             {

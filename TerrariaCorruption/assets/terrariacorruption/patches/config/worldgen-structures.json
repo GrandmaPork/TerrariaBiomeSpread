@@ -1,0 +1,21 @@
+[
+  {
+    "file": "game:worldgen/structures.json",
+    "side": "server",
+    "op": "add",
+    "path": "/structures/22",
+    "value": {
+      "code": "shadowpit",
+      "group": "corrupt",
+      "minSpawnDistance": 50,
+      "minGroupDistance": 50,
+      "name": "Shadow Pit",
+      "chance": 0.1,
+      "schematics": [ "terrariacorruption:worldgen/schematics/corrupt/shadowpit.json" ],
+      "postPass": true,
+      "suppressTrees": true,
+      "placement": "surface",
+      "offsetY": -47
+    }
+  }
+]
