@@ -1,9 +1,11 @@
-﻿using System;
+﻿using HarmonyLib;
+using System;
 
 // Lets us use collections like List and HashSet.
 // These are similar to arrays, but more flexible.
 using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks.Dataflow;
 using Vintagestory.API.Client;
 
 
@@ -13,6 +15,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
+using Vintagestory.GameContent;
 
 namespace TerrariaCorruption
 {
@@ -66,17 +69,14 @@ namespace TerrariaCorruption
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptmuddygravel", typeof(Blocks.BlockCorruptRock));
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptsand", typeof(Blocks.BlockCorruptRock));
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptlog", typeof(Blocks.BlockCorruptLog));
-            //api.RegisterBlockClass(Mod.Info.ModID + ".corruptbambooleaves", typeof(Blocks.BlockCorruptLeavesWithMotion));
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptbranchy", typeof(Blocks.BlockCorruptLeaves));
-            //api.RegisterBlockClass(Mod.Info.ModID + ".corruptleavesbranchystatic", typeof(Blocks.BlockCorrupt));
-            //api.RegisterBlockClass(Mod.Info.ModID + ".corruptfallenleaves", typeof(Blocks.BlockCorruptLeaves));
-            //api.RegisterBlockClass(Mod.Info.ModID + ".corruptleavesnarrow", typeof(Blocks.BlockCorruptLeaves));
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptleaves", typeof(Blocks.BlockCorruptLeaves));
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptwater", typeof(Blocks.BlockCorruptWater));
 
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptknappingsurface", typeof(Blocks.BlockCorruptKnappingSurface));
+            api.RegisterBlockClass(Mod.Info.ModID + ".shadoworb", typeof(Blocks.BlockShadowOrb)); // register orbs as blocks
 
-            //api.RegisterEntityClass(Mod.Info.ModID + ".entityairborne", typeof(Entities.EntityAirborne));
+            api.RegisterBlockEntityClass(Mod.Info.ModID + ".shadowspread", typeof(BlockEntities.BEShadowOrb)); // register orb block entity behavior
 
             api.RegisterItemClass(Mod.Info.ModID + ".corruptstone", typeof(Items.ItemCorruptStone));
             api.RegisterItemClass(Mod.Info.ModID + ".corruptflint", typeof(Items.ItemCorruptFlint));
@@ -93,44 +93,73 @@ namespace TerrariaCorruption
             // Save the server API into our variable
             sapi = api;
 
-            /*
-             * RegisterGameTickListener:
-             *
-             * Calls a function repeatedly every X milliseconds.
-             *
-             * Here:
-             * - SpreadTimer is the function
-             * - 3000 means every 3 seconds
-             */
             //api.Event.RegisterGameTickListener(SpreadTimer, 3000);
-        }
-        public void spreadCorruption(IWorldAccessor world, BlockPos pos, object extra = null)
-        {
-            BlockPos victim = pos.AddCopy(rnd.Next(-1, 2), rnd.Next(-1, 2), rnd.Next(-1, 2));
-            Block targetBlock = world.BlockAccessor.GetBlock(victim);
-            string changePath = "corrupt" + targetBlock.Code.Path;
 
+    //        api.ChatCommands.Create("treasure").RequiresPlayer()
+    //.WithDescription("Place a treasure chest with random items")
+    //.RequiresPrivilege(Privilege.controlserver)
+    //.HandleWith(new OnCommandDelegate(PlaceTreasureChestInFrontOfPlayer));
+    //    }
+    //    private TextCommandResult PlaceTreasureChestInFrontOfPlayer(TextCommandCallingArgs args)
+    //    {
+    //        Block chest = sapi.World.GetBlock(new AssetLocation("chest-south"));
+    //        chest.TryPlaceBlockForWorldGen(sapi.World.BlockAccessor,
+    //            args.Caller.Player.Entity.Pos.HorizontalAheadCopy(2).AsBlockPos, BlockFacing.UP, null
+    //        );
+    //        GeneratedStructure shadowpit = sapi.World.GetOrCreateGeneratedStructure("terrariacorruption:shadowpit");
+    //        return TextCommandResult.Success();
+        }
+
+        public void corruptionPosShort(BlockPos pos) // separate from spreadCorruption so OnGameTick can use the corruption spread function
+        {
+            BlockPos victim = pos.AddCopy(rnd.Next(-1, 2), rnd.Next(-1, 2), rnd.Next(-1, 2)); // find random position in a short radius
+            if (sapi.Side == EnumAppSide.Server)
+            {
+                spreadCorruption(victim);
+            }
+        }
+        public void spreadCorruption(BlockPos victim)
+        {
+            AssetLocation waterOverride = new AssetLocation("terrariacorruption", "corruptwater-still-7");
+            Block overrideCode = sapi.World.GetBlock(waterOverride);
+
+            Block targetBlock = sapi.World.BlockAccessor.GetBlock(victim);
+            string changePath = "corrupt" + targetBlock.Code.Path;
             AssetLocation changeCode = new AssetLocation("terrariacorruption", changePath);
 
-            Block corruptBlock = world.GetBlock(changeCode);
-            //corruptBlock = getCorruptedBlock(world = null, victim, extra);
+            Block corruptBlock = sapi.World.GetBlock(changeCode);
             if (corruptBlock == null) return;
 
-            world.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-            world.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
-
-            while (targetBlock.Code.Path.StartsWith("log-"))
+            while (targetBlock.Code.Path.StartsWith("aquatic-") || targetBlock.Code.Path.StartsWith("aquaticplant-")) // special condition
             {
-                victim.Y += 1;
-                targetBlock = world.BlockAccessor.GetBlock(victim);
-                changePath = "corrupt" + targetBlock.Code.Path;
-                changeCode = new AssetLocation("terrariacorruption", changePath);
-                corruptBlock = world.GetBlock(changeCode);
-                if (corruptBlock == null) return;
+                if (overrideCode == null) return; // just in case
 
-                world.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-                world.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
+                sapi.World.BlockAccessor.SetBlock(overrideCode.BlockId, victim); // place corrupt water
+                sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim); // place corrupt block
+
+                pillarCorruption(victim);
+                victim.Y += 1;
             }
+
+            sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
+            sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
+
+            while (targetBlock.Code.Path.StartsWith("log-") || (targetBlock.Code.Path.StartsWith("water-"))) // special feature
+            {
+                pillarCorruption(victim);
+            }
+        }
+        public void pillarCorruption(BlockPos victim)
+        {
+            victim.Y += 1;
+            Block targetBlock = sapi.World.BlockAccessor.GetBlock(victim);
+            string changePath = "corrupt" + targetBlock.Code.Path;
+            AssetLocation changeCode = new AssetLocation("terrariacorruption", changePath);
+            Block corruptBlock = sapi.World.GetBlock(changeCode);
+            if (corruptBlock == null) return;
+
+            sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
+            sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
         }
     }
 }

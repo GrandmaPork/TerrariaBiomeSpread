@@ -1,0 +1,111 @@
+{
+  "code": "shadoworb",
+  "class": "terrariacorruption.shadoworb",
+  "behaviors": [
+    {
+      "name": "UnstableFalling",
+      "properties": {
+        //"fallSound": "game:effect/rockslide",
+        "fallSidewaysChance": 0.1
+      },
+      "impactDamageMul": 20
+    }
+  ],
+  "attributes": {
+    "isCorrupt": true,
+    "reinforcable": true,
+    "handbook": {
+      "groupBy": [ "*" ]
+    }
+  },
+  "entityClass": "terrariacorruption.shadowspread",
+  "enabled": true,
+  "heldTpIdleAnimation": "holdbothhandslarge",
+  "shape": {
+    "base": "block/corrupt/shadoworb"
+  },
+  "creativeinventory": {
+    "general": [ "*" ],
+    "decorative": [ "*" ]
+  },
+  "blockmaterial": "Metal",
+  "replaceable": 100,
+  "resistance": 4,
+  "lightAbsorption": 0,
+  "maxStackSize": 1,
+  "textures": {
+    "all": { "base": "block/corrupt/shadoworb" }
+  },
+  "drops": [],
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  },
+  // defined for both angles
+  "collisionSelectionBoxesByType": {
+    "*": [
+      {
+        "x1": 0,
+        "y1": 0,
+        "z1": 0.3125,
+        "x2": 1,
+        "y2": 0.625,
+        "z2": 0.6875
+      },
+      {
+        "x1": 0.3125,
+        "y1": 0,
+        "z1": 0,
+        "x2": 0.6875,
+        "y2": 0.625,
+        "z2": 1
+      }
+    ]
+  },
+  "sounds": {
+    "place": "game:block/anvil",
+    "break": "game:block/anvil",
+    "hit": "game:block/anvil",
+    "walk": "game:walk/stone*"
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -0.75,
+      "y": -0.5,
+      "z": -0.25
+    },
+    "rotation": {
+      "x": -85,
+      "y": 12,
+      "z": -106
+    },
+    "scale": 0.8
+  },
+  "guiTransform": {
+    "rotation": {
+      "x": -20,
+      "y": -41,
+      "z": 0
+    },
+    "origin": {
+      "x": 0.46,
+      "y": 0.34,
+      "z": 0.5
+    },
+    "scale": 1.48
+  },
+  "groundTransform": {
+    "origin": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    },
+    "scale": 2
+  },
+  "hitboxSize": {
+    "x": 0.9,
+    "y": 0.9
+  }
+}

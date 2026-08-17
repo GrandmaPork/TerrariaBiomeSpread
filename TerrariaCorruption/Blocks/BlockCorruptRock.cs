@@ -14,7 +14,6 @@ namespace TerrariaCorruption.Blocks
 {
     public class BlockCorruptRock : Block
     {
-
         Random rnd = new Random();
         public override void OnServerGameTick(IWorldAccessor world, BlockPos pos, object extra = null)
         {
@@ -69,7 +68,7 @@ namespace TerrariaCorruption.Blocks
                         Block targetBlock = world.BlockAccessor.GetBlock(victim);
                         if (targetBlock.Attributes?["isCorrupt"]?.AsBool() != true)
                         {
-                            extra = new GrassTick()
+                            extra = new GrassTick() // i have no idea what this does but it doesn't work without it
                             {
                                 Grass = this,
                                 TallGrass = null

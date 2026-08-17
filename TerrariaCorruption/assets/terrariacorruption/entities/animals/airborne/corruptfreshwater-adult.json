@@ -26,28 +26,28 @@
     }
   ],
   "allowedVariants": [
-    "fish-freshwater-piranha-black-*",
-    "fish-freshwater-piranha-red-*",
+    "corruptfish-freshwater-piranha-black-*",
+    "corruptfish-freshwater-piranha-red-*",
 
-    "fish-freshwater-arapaima-arapaima-*",
-    "fish-freshwater-arapaima-gigas-*"
+    "corruptfish-freshwater-arapaima-arapaima-*",
+    "corruptfish-freshwater-arapaima-gigas-*"
   ],
   "hitboxSizeByType": {
-    "@fish-freshwater-(piranha)-.*": {
+    "@corruptfish-freshwater-(piranha)-.*": {
       "x": 0.5,
       "y": 0.25
     },
-    "@fish-freshwater-(arapaima)-.*": {
+    "@corruptfish-freshwater-(arapaima)-.*": {
       "x": 0.8,
       "y": 0.25
     }
   },
   "deadhitboxSizeByType": {
-    "@fish-freshwater-(piranha)-.*": {
+    "@corruptfish-freshwater-(piranha)-.*": {
       "x": 0.5,
       "y": 0.25
     },
-    "@fish-freshwater-(arapaima)-.*": {
+    "@corruptfish-freshwater-(arapaima)-.*": {
       "x": 0.8,
       "y": 0.25
     }
@@ -66,7 +66,7 @@
     },
     "baitTagsByType": {
       "*-juvenile": [ "nobait", "bait-worm", "bait-meat", "bait-stinkmeat", "bait-stinkdough" ],
-      "fish-freshwater-arapaima-*-adult": [ "bait-meat", "bait-stinkmeat", "bait-fishtiny", "bait-fishsmall" ],
+      "corruptfish-freshwater-arapaima-*-adult": [ "bait-meat", "bait-stinkmeat", "bait-fishtiny", "bait-fishsmall" ],
       "*": [ "bait-worm", "bait-meat", "bait-stinkmeat", "bait-stinkdough" ]
     }
   },
@@ -74,7 +74,7 @@
   "client": {
     "renderer": "Shape",
     "size": 1,
-    "shape": { "base": "game:entity/animal/fish/freshwater/{type}-{age}" },
+    "shape": { "base": "entity/animal/fish/freshwater/{type}-{age}" },
     "texture": { "base": "game:entity/animal/fish/freshwater/{type}-{species}-{age}*" },
     "behaviors": [
       { "code": "repulseagents" },
@@ -152,18 +152,18 @@
       {
         "code": "health",
         "currenthealthByType": {
-          "@fish-freshwater-(alewife|chub|crappie|perch|piranha|trout)-.*": 2,
-          "@fish-freshwater-(bass|carp|catfish|pickerel|salmon|tilapia|walleye)-.*": 4,
-          "@fish-freshwater-(pike)-.*": 6,
-          "fish-freshwater-sheatfish-*": 12,
-          "fish-freshwater-arapaima-*": 24
+          "@corruptfish-freshwater-(alewife|chub|crappie|perch|piranha|trout)-.*": 2,
+          "@corruptfish-freshwater-(bass|carp|catfish|pickerel|salmon|tilapia|walleye)-.*": 4,
+          "@corruptfish-freshwater-(pike)-.*": 6,
+          "corruptfish-freshwater-sheatfish-*": 12,
+          "corruptfish-freshwater-arapaima-*": 24
         },
         "maxhealthByType": {
-          "@fish-freshwater-(alewife|chub|crappie|perch|piranha|trout)-.*": 2,
-          "@fish-freshwater-(bass|carp|catfish|pickerel|salmon|tilapia|walleye)-.*": 4,
-          "@fish-freshwater-(pike)-.*": 6,
-          "fish-freshwater-sheatfish-*": 12,
-          "fish-freshwater-arapaima-*": 24
+          "@corruptfish-freshwater-(alewife|chub|crappie|perch|piranha|trout)-.*": 2,
+          "@corruptfish-freshwater-(bass|carp|catfish|pickerel|salmon|tilapia|walleye)-.*": 4,
+          "@corruptfish-freshwater-(pike)-.*": 6,
+          "corruptfish-freshwater-sheatfish-*": 12,
+          "corruptfish-freshwater-arapaima-*": 24
         }
       },
       {

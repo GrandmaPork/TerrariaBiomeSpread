@@ -31,7 +31,7 @@
 	"shape": { "base": "game:block/basic/cube" },
 	"drawtype": "cube",
 	"replaceable": 90,
-	"requiredMiningTier": 2,
+	"requiredMiningTier": 3,
 	"fertility": 0,
 	"texturesByType": {
 		"*-kimberlite": {
