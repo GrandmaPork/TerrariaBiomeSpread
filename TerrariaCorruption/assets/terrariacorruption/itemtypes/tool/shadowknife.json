@@ -369,6 +369,9 @@
 			"material": { "base": "block/stone/flint" },
 			"handle": { "base": "game:block/creature/bone-yellow" }
 		},
+		"shadowknife-generic-meteoriciron": {
+			"material": { "base": "block/metal/ingot/demonite" }
+		},
 		"shadowknife-generic-*": {
 			"material": { "base": "game:block/metal/ingot/{material}" }
 		}
@@ -489,7 +492,7 @@
 		"tools": [ "*" ]
 	},
 	"guiTransformByType": {
-		"knife-dagger-ruined": {
+		"shadowknife-dagger-ruined": {
 			"translation": {
 				"x": 0,
 				"y": 0,
@@ -507,7 +510,7 @@
 			},
 			"scale": 1.84
 		},
-		"knife-stiletto-ruined": {
+		"shadowknife-stiletto-ruined": {
 			"translation": {
 				"x": 0,
 				"y": 0,
@@ -525,7 +528,7 @@
 			},
 			"scale": 2.25
 		},
-		"knife-khanjar-ruined": {
+		"shadowknife-khanjar-ruined": {
 			"translation": {
 				"x": 0,
 				"y": 0,
@@ -543,7 +546,7 @@
 			},
 			"scale": 1.8
 		},
-		"knife-baselard-ruined": {
+		"shadowknife-baselard-ruined": {
 			"translation": {
 				"x": 0,
 				"y": 0,
@@ -600,7 +603,7 @@
 		"scale": 3.6
 	},
 	"tpHandTransformByType": {
-		"knife-dagger-ruined": {
+		"shadowknife-dagger-ruined": {
 			"translation": {
 				"x": -0.82,
 				"y": -0.04,
@@ -613,7 +616,7 @@
 			},
 			"scale": 0.9
 		},
-		"knife-stiletto-ruined": {
+		"shadowknife-stiletto-ruined": {
 			"translation": {
 				"x": -0.63,
 				"y": 0.01,
@@ -626,7 +629,7 @@
 			},
 			"scale": 1
 		},
-		"knife-baselard-ruined": {
+		"shadowknife-baselard-ruined": {
 			"translation": {
 				"x": -0.66,
 				"y": -0.01,

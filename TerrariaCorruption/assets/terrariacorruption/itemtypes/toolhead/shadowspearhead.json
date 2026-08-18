@@ -47,7 +47,7 @@
 	"heldTpUseAnimation": "interactstatic",
 	"maxstacksize": 4,
 	"shapeByType": {
-		"@spearhead-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": { "base": "game:item/tool/spear/metal-{material}" },
+		"@shadowspearhead-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": { "base": "game:item/tool/spear/metal-{material}" },
 		"*": { "base": "game:item/tool/spear/stone" }
 	},
 	"texturesByType": {
@@ -56,7 +56,12 @@
 			"string": { "base": "game:block/transparent" },
 			"handle": { "base": "game:block/transparent" }
 		},
-		"@shadowspearhead-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+		"*-meteoriciron": {
+			"ingot": { "base": "block/metal/ingot/demonite" },
+			"string": { "base": "game:block/transparent" },
+			"handle": { "base": "game:block/transparent" }
+		},
+		"@shadowspearhead-(copper|tinbronze|bismuthbronze|blackbronze|steel)": {
 			"ingot": { "base": "game:block/metal/ingot/{material}" },
 			"string": { "base": "game:block/transparent" },
 			"handle": { "base": "game:block/transparent" }
@@ -87,7 +92,7 @@
 			"scale": 0.9
 		},
 		"forgableByType": {
-			"@spearhead-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": true,
+			"@shadowspearhead-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": true,
 			"*": false
 		},
 		"onTongTransform": {

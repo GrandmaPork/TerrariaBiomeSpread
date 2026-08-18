@@ -66,6 +66,11 @@
 			"string": { "base": "game:block/transparent" },
 			"handle": { "base": "game:block/transparent" }
 		},
+		"shadowshovelhead-meteoriciron": {
+			"material": { "base": "block/metal/ingot/demonite" },
+			"string": { "base": "game:block/transparent" },
+			"handle": { "base": "game:block/transparent" }
+		},
 		"*": {
 			"material": { "base": "game:block/metal/ingot/{material}" },
 			"string": { "base": "game:block/transparent" },

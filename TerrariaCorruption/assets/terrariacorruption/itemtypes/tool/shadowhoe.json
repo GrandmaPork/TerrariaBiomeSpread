@@ -130,7 +130,10 @@
 		"*-flint": {
 			"material": { "base": "block/stone/{material}" }
 		},
-		"@shadowhoe-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+		"*-meteoriciron": {
+			"material": { "base": "block/metal/ingot/demonite" }
+		},
+		"@shadowhoe-(copper|tinbronze|bismuthbronze|blackbronze|steel)": {
 			"material": { "base": "game:block/metal/ingot/{material}" }
 		},
 		"*": {
@@ -139,40 +142,40 @@
 	},
 	"tool": "hoe",
 	"miningspeedbytype": {
-		"@hoe-(granite|andesite|basalt|peridotite)": {
+		"@shadowhoe-(granite|andesite|basalt|peridotite)": {
 			"soil": 1.8
 		},
-		"hoe-obsidian": {
+		"shadowhoe-obsidian": {
 			"soil": 2.0
 		},
-		"hoe-flint": {
+		"shadowhoe-flint": {
 			"soil": 2.0
 		},
-		"hoe-copper": {
+		"shadowhoe-copper": {
 			"soil": 3.0
 		},
-		"hoe-bismuthbronze": {
+		"shadowhoe-bismuthbronze": {
 			"soil": 3.6
 		},
-		"hoe-tinbronze": {
+		"shadowhoe-tinbronze": {
 			"soil": 4.0
 		},
-		"hoe-gold": {
+		"shadowhoe-gold": {
 			"soil": 4.0
 		},
-		"hoe-silver": {
+		"shadowhoe-silver": {
 			"soil": 4.0
 		},
-		"hoe-blackbronze": {
+		"shadowhoe-blackbronze": {
 			"soil": 4.2
 		},
-		"hoe-iron": {
+		"shadowhoe-iron": {
 			"soil": 4.5
 		},
-		"hoe-meteoriciron": {
+		"shadowhoe-meteoriciron": {
 			"soil": 4.75
 		},
-		"hoe-steel": {
+		"shadowhoe-steel": {
 			"soil": 5.0
 		}
 	},
@@ -209,7 +212,7 @@
 		"tools": [ "*" ]
 	},
 	"guiTransformByType": {
-		"@hoe-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+		"@shadowhoe-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
 			"rotate": false,
 			"translation": {
 				"x": 0,
@@ -266,7 +269,7 @@
 		"scale": 3.6
 	},
 	"tpHandTransformByType": {
-		"@hoe-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+		"@shadowhoe-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
 			"translation": {
 				"x": -1,
 				"y": -0.5,

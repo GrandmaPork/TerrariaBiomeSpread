@@ -1,33 +1,34 @@
 {
-	"code": "corruptcobblestone",
-	"variantgroups": [
-		{
-			"code": "rock",
-			"loadFromProperties": "terrariacorruption:block/corruptrockwithdeposit"
-		}
-	],
-	"skipVariants": [ "*-halite", "*-scoria", "*-tuff", "*-travertine" ],
+	"code": "corruptagedstonebricks",
+	"class": "Block",
 	"attributes": {
 		"mapColorCode": "settlement",
 		"handbook": {
-			"groupBy": [ "cobblestone-*" ]
+			"groupBy": [ "agedstonebricks-*" ]
 		}
 	},
+	"variantgroups": [
+		{
+			"code": "rock",
+			"states": [ "travertine" ],
+			"loadFromProperties": "terrariacorruption:block/corruptrock"
+		}
+	],
+	"shape": { "base": "game:block/basic/cube" },
+	"drawtype": "Cube",
+	"blockmaterial": "Stone",
 	"creativeinventory": {
 		"general": [ "*" ],
 		"construction": [ "*" ]
 	},
-	"shape": { "base": "game:block/basic/cube" },
-	"drawtype": "cube",
-	"blockmaterial": "Stone",
-	"textures": {
-		"all": { "base": "block/stone/cobblestone/{rock}*" }
-	},
-	"replaceable": 140,
-	"fertility": 0,
+	"replaceable": 200,
 	"resistance": 4,
+	"lightAbsorption": 99,
+	"textures": {
+		"all": { "base": "block/stone/agedbrick/{rock}*" }
+	},
 	"sounds": {
-		"walk": "game:walk/stone",
+		"walk": "walk/stone",
 		"byTool": {
 			"Pickaxe": {
 				"hit": "game:block/rock-hit-pickaxe",

@@ -1,0 +1,655 @@
+{
+	"code": "corruptdrystonefence",
+	"class": "BlockFenceStackAware",
+	"behaviors": [
+		{
+			"name": "CanAttach",
+			"properties": { "sides": [ "up", "down" ] }
+		}
+	],
+	"attributes": {
+		"isCorrupt": true,
+		"canStep": false,
+		"mapColorCode": "settlement",
+		"isFence": true,
+		"particleCollBoxHeight": 1,
+		"handbook": {
+			"groupBy": [ "stonefence-*" ]
+		}
+	},
+	"variantgroups": [
+		{
+			"code": "rock",
+			"states": [ "mixed" ],
+			"loadFromProperties": "terrariacorruption:block/corruptrockwithdeposit"
+		},
+		{
+			"code": "type",
+			"states": [ "empty", "n", "e", "s", "w", "ne", "ns", "nw", "es", "ew", "sw", "nes", "new", "nsw", "esw", "nesw" ]
+		},
+		{
+			"code": "cover",
+			"states": [ "snow" ]
+		}
+	],
+	"skipVariants": [ "corruptdrystonefence-obsidian-*", "corruptdrystonefence-halite-*", "corruptdrystonefence-scoria-*", "corruptdrystonefence-tuff-*", "corruptdrystonefence-travertine-*" ],
+	"creativeinventory": {},
+	"shapebytype": {
+		"*-empty-snow": { "base": "game:block/stone/drystonefence/snow-empty-top" },
+		"*-n-snow": {
+			"base": "game:block/stone/drystonefence/snow-w-top",
+			"rotateY": 270
+		},
+		"*-e-snow": {
+			"base": "game:block/stone/drystonefence/snow-w-top",
+			"rotateY": 180
+		},
+		"*-s-snow": {
+			"base": "game:block/stone/drystonefence/snow-w-top",
+			"rotateY": 90
+		},
+		"*-w-snow": {
+			"base": "game:block/stone/drystonefence/snow-w-top",
+			"rotateY": 0
+		},
+
+		"*-ns-snow": {
+			"base": "game:block/stone/drystonefence/snow-ew-top",
+			"rotateY": 90
+		},
+		"*-ew-snow": {
+			"base": "game:block/stone/drystonefence/snow-ew-top",
+			"rotateY": 0
+		},
+
+		"*-ne-snow": {
+			"base": "game:block/stone/drystonefence/snow-sw-top",
+			"rotateY": 180
+		},
+		"*-nw-snow": {
+			"base": "game:block/stone/drystonefence/snow-sw-top",
+			"rotateY": 270
+		},
+		"*-es-snow": {
+			"base": "game:block/stone/drystonefence/snow-sw-top",
+			"rotateY": 90
+		},
+		"*-sw-snow": {
+			"base": "game:block/stone/drystonefence/snow-sw-top",
+			"rotateY": 0
+		},
+
+		"*-nes-snow": {
+			"base": "game:block/stone/drystonefence/snow-nsw-top",
+			"rotateY": 180
+		},
+		"*-new-snow": {
+			"base": "game:block/stone/drystonefence/snow-nsw-top",
+			"rotateY": 270
+		},
+		"*-nsw-snow": {
+			"base": "game:block/stone/drystonefence/snow-nsw-top",
+			"rotateY": 0
+		},
+		"*-esw-snow": {
+			"base": "game:block/stone/drystonefence/snow-nsw-top",
+			"rotateY": 90
+		},
+
+		"*-nesw-snow": {
+			"base": "game:block/stone/drystonefence/snow-nesw-top",
+			"rotateY": 0
+		}
+	},
+	"drawtypeByType": {
+		"*-free": "JSON",
+		"*-snow": "JSONAndSnowLayer"
+	},
+	"blockmaterial": "Stone",
+	"textures": {
+		"wall": { "base": "block/stone/drystone/{rock}*" },
+		"edge": { "base": "block/stone/drystonefence/{rock}-edge" },
+		"fence": { "base": "block/stone/drystonefence/{rock}" }
+	},
+	"sidesolid": {
+		"all": false
+	},
+	"sideopaqueByType": {
+		"*-snow": {
+			"all": false,
+			"down": true
+		},
+		"*": { "all": false }
+	},
+	"resistance": 3,
+	"lightAbsorption": 0,
+	"sounds": {
+		"walk": "game:walk/stone",
+		"byTool": {
+			"Pickaxe": {
+				"hit": "game:block/rock-hit-pickaxe",
+				"break": "game:block/rock-break-pickaxe"
+			}
+		}
+	},
+	"selectionboxbytype": {
+		"*-empty-*": {
+			"x1": 0.375,
+			"y1": 0,
+			"z1": 0.375,
+			"x2": 0.625,
+			"y2": 1.0625,
+			"z2": 0.625
+		},
+		"*-n-*": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0.375,
+			"x2": 0.625,
+			"y2": 1.0625,
+			"z2": 0.625,
+			"rotateY": 270
+		},
+		"*-e-*": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0.375,
+			"x2": 0.625,
+			"y2": 1.0625,
+			"z2": 0.625,
+			"rotateY": 180
+		},
+		"*-s-*": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0.375,
+			"x2": 0.625,
+			"y2": 1.0625,
+			"z2": 0.625,
+			"rotateY": 90
+		},
+		"*-w-*": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0.375,
+			"x2": 0.625,
+			"y2": 1.0625,
+			"z2": 0.625
+		},
+
+		"*-ns-*": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0.375,
+			"x2": 1,
+			"y2": 1.0625,
+			"z2": 0.625,
+			"rotateY": 90
+		},
+		"*-ew-*": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0.375,
+			"x2": 1,
+			"y2": 1.0625,
+			"z2": 0.625
+		}
+	},
+	"selectionboxesbytype": {
+		"*-sw-*": [
+			{
+				"x1": 0.375,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.625,
+				"y2": 1.0625,
+				"z2": 1
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.375,
+				"y2": 1.0625,
+				"z2": 0.625,
+				"rotateY": 0
+			}
+		],
+		"*-ne-*": [
+			{
+				"x1": 0.375,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.625,
+				"y2": 1.0625,
+				"z2": 1,
+				"rotateY": 180
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.375,
+				"y2": 1.0625,
+				"z2": 0.625,
+				"rotateY": 180
+			}
+		],
+		"*-nw-*": [
+			{
+				"x1": 0.375,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.625,
+				"y2": 1.0625,
+				"z2": 1,
+				"rotateY": 270
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.375,
+				"y2": 1.0625,
+				"z2": 0.625,
+				"rotateY": 270
+			}
+		],
+		"*-es-*": [
+			{
+				"x1": 0.375,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.625,
+				"y2": 1.0625,
+				"z2": 1,
+				"rotateY": 90
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.375,
+				"y2": 1.0625,
+				"z2": 0.625,
+				"rotateY": 90
+			}
+		],
+
+		"*-nes-*": [
+			{
+				"x1": 0.375,
+				"y1": 0,
+				"z1": 0,
+				"x2": 0.625,
+				"y2": 1.0625,
+				"z2": 1,
+				"rotateY": 180
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.375,
+				"y2": 1.0625,
+				"z2": 0.625,
+				"rotateY": 180
+			}
+		],
+		"*-new-*": [
+			{
+				"x1": 0.375,
+				"y1": 0,
+				"z1": 0,
+				"x2": 0.625,
+				"y2": 1.0625,
+				"z2": 1,
+				"rotateY": 270
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.375,
+				"y2": 1.0625,
+				"z2": 0.625,
+				"rotateY": 270
+			}
+		],
+		"*-nsw-*": [
+			{
+				"x1": 0.375,
+				"y1": 0,
+				"z1": 0,
+				"x2": 0.625,
+				"y2": 1.0625,
+				"z2": 1,
+				"rotateY": 0
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.375,
+				"y2": 1.0625,
+				"z2": 0.625,
+				"rotateY": 0
+			}
+		],
+		"*-esw-*": [
+			{
+				"x1": 0.375,
+				"y1": 0,
+				"z1": 0,
+				"x2": 0.625,
+				"y2": 1.0625,
+				"z2": 1,
+				"rotateY": 90
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.375,
+				"y2": 1.0625,
+				"z2": 0.625,
+				"rotateY": 90
+			}
+		],
+
+		"*-nesw-*": [
+			{
+				"x1": 0.375,
+				"y1": 0,
+				"z1": 0,
+				"x2": 0.625,
+				"y2": 1.0625,
+				"z2": 1
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 1,
+				"y2": 1.0625,
+				"z2": 0.625
+			}
+		]
+	},
+
+	"collisionboxbytype": {
+		"*-empty-*": {
+			"x1": 0.375,
+			"y1": 0,
+			"z1": 0.375,
+			"x2": 0.625,
+			"y2": 1.3125,
+			"z2": 0.625
+		},
+		"*-n-*": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0.375,
+			"x2": 0.625,
+			"y2": 1.3125,
+			"z2": 0.625,
+			"rotateY": 270
+		},
+		"*-e-*": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0.375,
+			"x2": 0.625,
+			"y2": 1.3125,
+			"z2": 0.625,
+			"rotateY": 180
+		},
+		"*-s-*": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0.375,
+			"x2": 0.625,
+			"y2": 1.3125,
+			"z2": 0.625,
+			"rotateY": 90
+		},
+		"*-w-*": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0.375,
+			"x2": 0.625,
+			"y2": 1.3125,
+			"z2": 0.625
+		},
+
+		"*-ns-*": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0.375,
+			"x2": 1,
+			"y2": 1.3125,
+			"z2": 0.625,
+			"rotateY": 90
+		},
+		"*-ew-*": {
+			"x1": 0,
+			"y1": 0,
+			"z1": 0.375,
+			"x2": 1,
+			"y2": 1.3125,
+			"z2": 0.625
+		}
+	},
+	"collisionboxesbytype": {
+		"*-sw-*": [
+			{
+				"x1": 0.375,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.625,
+				"y2": 1.3125,
+				"z2": 1
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.375,
+				"y2": 1.3125,
+				"z2": 0.625,
+				"rotateY": 0
+			}
+		],
+		"*-ne-*": [
+			{
+				"x1": 0.375,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.625,
+				"y2": 1.3125,
+				"z2": 1,
+				"rotateY": 180
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.375,
+				"y2": 1.3125,
+				"z2": 0.625,
+				"rotateY": 180
+			}
+		],
+		"*-nw-*": [
+			{
+				"x1": 0.375,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.625,
+				"y2": 1.3125,
+				"z2": 1,
+				"rotateY": 270
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.375,
+				"y2": 1.3125,
+				"z2": 0.625,
+				"rotateY": 270
+			}
+		],
+		"*-es-*": [
+			{
+				"x1": 0.375,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.625,
+				"y2": 1.3125,
+				"z2": 1,
+				"rotateY": 90
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.375,
+				"y2": 1.3125,
+				"z2": 0.625,
+				"rotateY": 90
+			}
+		],
+
+		"*-nes-*": [
+			{
+				"x1": 0.375,
+				"y1": 0,
+				"z1": 0,
+				"x2": 0.625,
+				"y2": 1.3125,
+				"z2": 1,
+				"rotateY": 180
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.375,
+				"y2": 1.3125,
+				"z2": 0.625,
+				"rotateY": 180
+			}
+		],
+		"*-new-*": [
+			{
+				"x1": 0.375,
+				"y1": 0,
+				"z1": 0,
+				"x2": 0.625,
+				"y2": 1.3125,
+				"z2": 1,
+				"rotateY": 270
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.375,
+				"y2": 1.3125,
+				"z2": 0.625,
+				"rotateY": 270
+			}
+		],
+		"*-nsw-*": [
+			{
+				"x1": 0.375,
+				"y1": 0,
+				"z1": 0,
+				"x2": 0.625,
+				"y2": 1.3125,
+				"z2": 1,
+				"rotateY": 0
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.375,
+				"y2": 1.3125,
+				"z2": 0.625,
+				"rotateY": 0
+			}
+		],
+		"*-esw-*": [
+			{
+				"x1": 0.375,
+				"y1": 0,
+				"z1": 0,
+				"x2": 0.625,
+				"y2": 1.3125,
+				"z2": 1,
+				"rotateY": 90
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 0.375,
+				"y2": 1.3125,
+				"z2": 0.625,
+				"rotateY": 90
+			}
+		],
+
+		"*-nesw-*": [
+			{
+				"x1": 0.375,
+				"y1": 0,
+				"z1": 0,
+				"x2": 0.625,
+				"y2": 1.3125,
+				"z2": 1
+			},
+			{
+				"x1": 0,
+				"y1": 0,
+				"z1": 0.375,
+				"x2": 1,
+				"y2": 1.3125,
+				"z2": 0.625
+			}
+		]
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.5,
+			"y": -1,
+			"z": -1.2
+		},
+		"rotation": {
+			"x": 5,
+			"y": -3,
+			"z": -96
+		},
+		"scale": 0.4
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0.05,
+			"z": 0
+		},
+		"rotation": {
+			"x": 90,
+			"y": -45,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 2.07
+	}
+}

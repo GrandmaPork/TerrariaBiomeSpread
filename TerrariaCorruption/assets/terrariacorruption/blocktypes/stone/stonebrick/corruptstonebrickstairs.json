@@ -1,42 +1,42 @@
 {
-	"code": "corruptcobblestonestairs",
+	"code": "corruptstonebrickstairs",
 	"class": "BlockStairs",
-	"attributes": {
-    "isCorrupt": true,
-		"mapColorCode": "settlement",
-		"canChisel": true,
-		"chiselShapeFromCollisionBox": true,
-		"handbook": {
-			"groupBy": [ "cobblestonestairs-*-up-north-free" ]
-		},
-		"partialAttachable": true,
-		"liquidBarrierOnSidesByType": {
-			"*-up-north-*": [ 1.0, 0.5, 0.5, 0.5 ],
-			"*-up-south-*": [ 0.5, 0.5, 1.0, 0.5 ],
-			"*-up-west-*": [ 0.5, 0.5, 0.5, 1.0 ],
-			"*-up-east-*": [ 0.5, 1.0, 0.5, 0.5 ]
-		},
-		"inContainerTexture": { "base": "game:block/stone/cobblestone/{rock}1" }
-	},
 	"behaviors": [
 		{
 			"name": "WrenchOrientable",
-			"properties": { "baseCode": "cobblestonestairs-{rock}-*-{cover}" }
+			"properties": { "baseCode": "stonebrickstairs-{rock}-*-{cover}" }
 		}
 	],
 	"variantgroups": [
 		{
 			"code": "rock",
-			"loadFromProperties": "terrariacorruption:block/corruptrockwithdeposit"
+			"states": [ "suevite", "travertine" ],
+			"loadFromProperties": "terrariacorruption:block/corruptrock"
 		},
-		{ "loadFromProperties": "game:abstract/verticalorientation" },
-		{ "loadFromProperties": "game:abstract/horizontalorientation" },
+		{ "loadFromProperties": "abstract/verticalorientation" },
+		{ "loadFromProperties": "abstract/horizontalorientation" },
 		{
 			"code": "cover",
 			"states": [ "free", "snow" ]
 		}
 	],
-	"skipVariants": [ "*-obsidian-*", "*-halite-*", "*-scoria-*", "*-tuff-*", "corruptcobblestonestairs-travertine-*", "*-down-north-snow", "*-down-east-snow", "*-down-south-snow", "*-down-west-snow" ],
+	"skipVariants": [ "*-down-north-snow", "*-down-east-snow", "*-down-south-snow", "*-down-west-snow" ],
+	"attributes": {
+		"isCorrupt": true,
+		"mapColorCode": "settlement",
+		"canChisel": true,
+		"chiselShapeFromCollisionBox": true,
+		"partialAttachable": true,
+		"handbook": {
+			"groupBy": [ "stonebrickstairs-*-up-north-free" ]
+		},
+		"liquidBarrierOnSidesByType": {
+			"*-up-north-*": [ 1.0, 0.5, 0.5, 0.5 ],
+			"*-up-south-*": [ 0.5, 0.5, 1.0, 0.5 ],
+			"*-up-west-*": [ 0.5, 0.5, 0.5, 1.0 ],
+			"*-up-east-*": [ 0.5, 1.0, 0.5, 0.5 ]
+		}
+	},
 	"creativeinventory": {
 		"general": [ "*-up-north-free" ],
 		"construction": [ "*-up-north-free" ]
@@ -62,22 +62,22 @@
 			"down": true,
 			"east": true
 		},
-		"*-down-north-free": {
+		"*-down-north-*": {
 			"all": false,
 			"up": true,
 			"north": true
 		},
-		"*-down-south-free": {
+		"*-down-south-*": {
 			"all": false,
 			"up": true,
 			"south": true
 		},
-		"*-down-west-free": {
+		"*-down-west-*": {
 			"all": false,
 			"up": true,
 			"west": true
 		},
-		"*-down-east-free": {
+		"*-down-east-*": {
 			"all": false,
 			"up": true,
 			"east": true
@@ -117,24 +117,20 @@
 			"rotateY": 270
 		},
 		"*-down-north-free": {
-			"base": "game:block/basic/stairs/normal",
-			"rotateY": 0,
-			"rotateZ": 180
+			"base": "game:block/basic/stairs/flipped",
+			"rotateY": 0
 		},
 		"*-down-west-free": {
-			"base": "game:block/basic/stairs/normal",
-			"rotateY": 90,
-			"rotateX": 180
+			"base": "game:block/basic/stairs/flipped",
+			"rotateY": 90
 		},
 		"*-down-south-free": {
-			"base": "game:block/basic/stairs/normal",
-			"rotateY": 180,
-			"rotateZ": 180
+			"base": "game:block/basic/stairs/flipped",
+			"rotateY": 180
 		},
 		"*-down-east-free": {
-			"base": "game:block/basic/stairs/normal",
-			"rotateY": 270,
-			"rotateX": 180
+			"base": "game:block/basic/stairs/flipped",
+			"rotateY": 270
 		}
 	},
 	"faceCullModeByType": {
@@ -143,16 +139,16 @@
 	},
 	"blockmaterial": "Stone",
 	"textures": {
-		"sides": { "base": "block/stone/cobblestone/{rock}*" }
+		"sides": { "base": "block/stone/brick/{rock}*" }
 	},
 	"replaceable": 160,
 	"resistance": 4,
 	"sounds": {
-		"walk": "game:walk/stone",
+		"walk": "walk/stone",
 		"byTool": {
 			"Pickaxe": {
-				"hit": "game:block/rock-hit-pickaxe",
-				"break": "game:block/rock-break-pickaxe"
+				"hit": "block/rock-hit-pickaxe",
+				"break": "block/rock-break-pickaxe"
 			}
 		}
 	},

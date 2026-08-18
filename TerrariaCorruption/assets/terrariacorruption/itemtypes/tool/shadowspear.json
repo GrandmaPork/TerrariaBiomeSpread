@@ -71,7 +71,10 @@
 		"@shadowspear-generic-(chert|granite|andesite|basalt|obsidian|peridotite)": {
 			"stone": { "base": "block/stone/rock/{material}1" }
 		},
-		"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+		"shadowspear-generic-meteoriciron": {
+			"ingot": { "base": "block/metal/ingot/demonite" }
+		},
+		"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze|steel)": {
 			"ingot": { "base": "game:block/metal/ingot/{material}" }
 		}
 	},
@@ -97,7 +100,7 @@
 	"attributes": {
 		"heldItemPitchFollow": 1,
 		"groundStorageTransformByType": {
-			"spear-generic-hacking": {
+			"shadowspear-generic-hacking": {
 				"translation": {
 					"x": -0.45,
 					"y": 0.35,
@@ -110,7 +113,7 @@
 				},
 				"scale": 0.85
 			},
-			"spear-scrap-scrap": {
+			"shadowspear-scrap-scrap": {
 				"translation": {
 					"x": 0,
 					"y": 0.25,
@@ -123,7 +126,7 @@
 				},
 				"scale": 0.85
 			},
-			"spear-boar-ruined": {
+			"shadowspear-boar-ruined": {
 				"translation": {
 					"x": 0,
 					"y": 0.65,
@@ -136,7 +139,7 @@
 				},
 				"scale": 0.85
 			},
-			"spear-voulge-ruined": {
+			"shadowspear-voulge-ruined": {
 				"translation": {
 					"x": 0.24,
 					"y": 0.65,
@@ -149,7 +152,7 @@
 				},
 				"scale": 0.85
 			},
-			"spear-fork-ruined": {
+			"shadowspear-fork-ruined": {
 				"translation": {
 					"x": -0.25,
 					"y": 0.65,
@@ -162,7 +165,7 @@
 				},
 				"scale": 0.85
 			},
-			"spear-ranseur-ruined": {
+			"shadowspear-ranseur-ruined": {
 				"translation": {
 					"x": 0,
 					"y": 0.93,
@@ -272,13 +275,13 @@
 			"*-steel": 2
 		},
 		"spearEntityCodeByType": {
-			"*": "spear-{type}-{material}"
+			"*": "shadowspear-{type}-{material}"
 		},
 		"handbook": {
 			"groupBy": [ "spear-*" ]
 		},
 		"toolrackTransformByType": {
-			"spear-generic-erel": {
+			"shadowspear-generic-erel": {
 				"translation": {
 					"x": 0.9,
 					"y": 0.7,
@@ -291,7 +294,7 @@
 				},
 				"scale": 1.36
 			},
-			"spear-scrap-scrap": {
+			"shadowspear-scrap-scrap": {
 				"rotation": {
 					"x": 0,
 					"y": 1,
@@ -304,7 +307,7 @@
 				},
 				"scale": 1.36
 			},
-			"spear-voulge-ruined": {
+			"shadowspear-voulge-ruined": {
 				"translation": {
 					"x": 0.3,
 					"y": 0.4,
@@ -317,7 +320,7 @@
 				},
 				"scale": 1.37
 			},
-			"spear-fork-ruined": {
+			"shadowspear-fork-ruined": {
 				"translation": {
 					"x": 0.95,
 					"y": -0.27,
@@ -330,7 +333,7 @@
 				},
 				"scale": 1.36
 			},
-			"spear-ranseur-ruined": {
+			"shadowspear-ranseur-ruined": {
 				"translation": {
 					"x": 0.56,
 					"y": 0.05,
@@ -343,7 +346,7 @@
 				},
 				"scale": 1.36
 			},
-			"spear-boar-ruined": {
+			"shadowspear-boar-ruined": {
 				"translation": {
 					"x": 0.45,
 					"y": 0.05,
@@ -355,7 +358,7 @@
 					"z": -1
 				}
 			},
-			"@spear-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+			"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
 				"rotation": {
 					"x": 90,
 					"y": 1,
@@ -368,7 +371,7 @@
 				},
 				"scale": 1.36
 			},
-			"spear-generic-hacking": {
+			"shadowspear-generic-hacking": {
 				"rotation": {
 					"x": 90,
 					"y": 1,
@@ -402,7 +405,7 @@
 		},
 		"antlerMountable": true,
 		"onAntlerMountTransformByType": {
-			"spear-scrap-scrap": {
+			"shadowspear-scrap-scrap": {
 				"translation": {
 					"x": -0.39,
 					"y": 0.533,
@@ -420,7 +423,7 @@
 				},
 				"scale": 0.8
 			},
-			"spear-boar-ruined": {
+			"shadowspear-boar-ruined": {
 				"translation": {
 					"x": -0.406,
 					"y": 0.533,
@@ -438,7 +441,7 @@
 				},
 				"scale": 0.8
 			},
-			"spear-fork-ruined": {
+			"shadowspear-fork-ruined": {
 				"translation": {
 					"x": -0.406,
 					"y": 0.533,
@@ -456,7 +459,7 @@
 				},
 				"scale": 0.8
 			},
-			"spear-ranseur-ruined": {
+			"shadowspear-ranseur-ruined": {
 				"translation": {
 					"x": -0.406,
 					"y": 0.533,
@@ -474,7 +477,7 @@
 				},
 				"scale": 0.8
 			},
-			"spear-voulge-ruined": {
+			"shadowspear-voulge-ruined": {
 				"translation": {
 					"x": -0.406,
 					"y": 0.533,
@@ -492,7 +495,7 @@
 				},
 				"scale": 0.8
 			},
-			"spear-generic-hacking": {
+			"shadowspear-generic-hacking": {
 				"translation": {
 					"x": -0.406,
 					"y": 0.5,
@@ -510,7 +513,7 @@
 				},
 				"scale": 0.8
 			},
-			"spear-generic-*": {
+			"shadowspear-generic-*": {
 				"translation": {
 					"x": -0.406,
 					"y": 0.5,
@@ -549,20 +552,20 @@
 		}
 	},
 	"durabilitybytype": {
-		"spear-generic-chert": 16,
-		"spear-generic-granite": 16,
-		"spear-generic-andesite": 16,
-		"spear-generic-basalt": 16,
-		"spear-generic-peridotite": 16,
-		"spear-generic-obsidian": 45,
-		"spear-generic-flint": 32,
-		"spear-scrap-scrap": 80,
-		"spear-generic-copper": 140,
-		"spear-generic-tinbronze": 220,
-		"spear-generic-bismuthbronze": 260,
-		"spear-generic-blackbronze": 300,
-		"spear-generic-meteoriciron": 450,
-		"spear-generic-steel": 700
+		"shadowspear-generic-chert": 32,
+		"shadowspear-generic-granite": 32,
+		"shadowspear-generic-andesite": 32,
+		"shadowspear-generic-basalt": 32,
+		"shadowspear-generic-peridotite": 32,
+		"shadowspear-generic-obsidian": 80,
+		"shadowspear-generic-flint": 45,
+		"shadowspear-scrap-scrap": 80,
+		"shadowspear-generic-copper": 220,
+		"shadowspear-generic-tinbronze": 300,
+		"shadowspear-generic-bismuthbronze": 360,
+		"shadowspear-generic-blackbronze": 450,
+		"shadowspear-generic-meteoriciron": 700,
+		"shadowspear-generic-steel": 700
 	},
 	"creativeinventory": {
 		"general": [ "*" ],
@@ -588,7 +591,7 @@
 			},
 			"scale": 2.26
 		},
-		"spear-generic-hacking": {
+		"shadowspear-generic-hacking": {
 			"translation": {
 				"x": 0,
 				"y": 0,
@@ -606,7 +609,7 @@
 			},
 			"scale": 2.26
 		},
-		"spear-scrap-scrap": {
+		"shadowspear-scrap-scrap": {
 			"translation": {
 				"x": 0,
 				"y": 0,
@@ -624,7 +627,7 @@
 			},
 			"scale": 2.26
 		},
-		"spear-boar-ruined": {
+		"shadowspear-boar-ruined": {
 			"rotation": {
 				"x": 2,
 				"y": 157,
@@ -637,7 +640,7 @@
 			},
 			"scale": 2.26
 		},
-		"spear-fork-ruined": {
+		"shadowspear-fork-ruined": {
 			"rotation": {
 				"x": -17,
 				"y": 144,
@@ -650,7 +653,7 @@
 			},
 			"scale": 2
 		},
-		"spear-voulge-ruined": {
+		"shadowspear-voulge-ruined": {
 			"rotation": {
 				"x": -180,
 				"y": 128,
@@ -663,7 +666,7 @@
 			},
 			"scale": 2.26
 		},
-		"spear-ranseur-ruined": {
+		"shadowspear-ranseur-ruined": {
 			"translation": {
 				"x": 0,
 				"y": 0,
@@ -681,7 +684,7 @@
 			},
 			"scale": 2.26
 		},
-		"spear-generic-ornategold": {
+		"shadowspear-generic-ornategold": {
 			"rotation": {
 				"x": -16,
 				"y": -2,
@@ -694,7 +697,7 @@
 			},
 			"scale": 3.09
 		},
-		"spear-generic-ornatesilver": {
+		"shadowspear-generic-ornatesilver": {
 			"rotation": {
 				"x": -16,
 				"y": -2,
@@ -707,7 +710,7 @@
 			},
 			"scale": 3.09
 		},
-		"@spear-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+		"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
 			"rotation": {
 				"x": 33,
 				"y": 0,
@@ -753,7 +756,7 @@
 			},
 			"scale": 3.4
 		},
-		"spear-voulge-ruined": {
+		"shadowspear-voulge-ruined": {
 			"translation": {
 				"x": 0,
 				"y": 0.05,
@@ -771,7 +774,7 @@
 			},
 			"scale": 3.4
 		},
-		"spear-fork-ruined": {
+		"shadowspear-fork-ruined": {
 			"translation": {
 				"x": 0,
 				"y": 0.05,
@@ -809,7 +812,7 @@
 		}
 	},
 	"tpHandTransformByType": {
-		"spear-scrap-scrap": {
+		"shadowspear-scrap-scrap": {
 			"translation": {
 				"x": -1.14,
 				"y": 0.01,
@@ -827,7 +830,7 @@
 			},
 			"scale": 0.8
 		},
-		"spear-voulge-ruined": {
+		"shadowspear-voulge-ruined": {
 			"translation": {
 				"x": -1.24,
 				"y": 0.03,
@@ -845,7 +848,7 @@
 			},
 			"scale": 0.8
 		},
-		"@spear-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+		"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
 			"translation": {
 				"x": -1.29,
 				"y": 0.03,

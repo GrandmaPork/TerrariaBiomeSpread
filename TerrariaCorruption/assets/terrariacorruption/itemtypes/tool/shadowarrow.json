@@ -24,6 +24,9 @@
 		"*-obsidian": {
 			"material": { "base": "block/stone/rock/obsidian1" }
 		},
+		"*-meteoriciron": {
+			"material": { "base": "block/metal/ingot/demonite" }
+		},
 		"*": {
 			"material": { "base": "game:block/metal/ingot/{material}" }
 		}

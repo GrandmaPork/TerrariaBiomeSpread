@@ -41,11 +41,15 @@
 		"shadowarrowhead-obsidian": {
 			"material": { "base": "block/stone/rock/{material}1" }
 		},
+		"shadowarrowhead-meteoriciron": {
+			"material": { "base": "block/metal/ingot/demonite" }
+		},
 		"*": {
 			"material": { "base": "game:block/metal/ingot/{material}" }
 		}
 	},
 	"attributes": {
+		"isCorrupt": true,
 		"displaycaseable": true,
 		"shelvable": true,
 		"onTongTransform": {

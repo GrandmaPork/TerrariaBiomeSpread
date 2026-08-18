@@ -30,20 +30,20 @@
   "texturesByType": {
     "*-north": {
       "all": {
-        "base": "game:block/stone/cobblestone/fanned/{rock}1",
+        "base": "block/stone/cobblestone/fanned/{rock}1",
         "rotation": 180,
         "tiles": [
-          { "base": "game:block/stone/cobblestone/fanned/{rock}*" }
+          { "base": "block/stone/cobblestone/fanned/{rock}*" }
         ],
         "tilesWidth": 2
       }
     },
     "*-south": {
       "all": {
-        "base": "game:block/stone/cobblestone/fanned/{rock}1",
+        "base": "block/stone/cobblestone/fanned/{rock}1",
         "rotation": 0,
         "tiles": [
-          { "base": "game:block/stone/cobblestone/fanned/{rock}*" }
+          { "base": "block/stone/cobblestone/fanned/{rock}*" }
         ],
         "tilesWidth": 2
       }
@@ -51,20 +51,20 @@
     },
     "*-west": {
       "all": {
-        "base": "game:block/stone/cobblestone/fanned/{rock}1",
+        "base": "block/stone/cobblestone/fanned/{rock}1",
         "rotation": 270,
         "tiles": [
-          { "base": "game:block/stone/cobblestone/fanned/{rock}*" }
+          { "base": "block/stone/cobblestone/fanned/{rock}*" }
         ],
         "tilesWidth": 2
       }
     },
     "*-east": {
       "all": {
-        "base": "game:block/stone/cobblestone/fanned/{rock}1",
+        "base": "block/stone/cobblestone/fanned/{rock}1",
         "rotation": 90,
         "tiles": [
-          { "base": "game:block/stone/cobblestone/fanned/{rock}*" }
+          { "base": "block/stone/cobblestone/fanned/{rock}*" }
         ],
         "tilesWidth": 2
       }

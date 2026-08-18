@@ -31,7 +31,7 @@
 	"attributes": {
 		"attachableToEntity": { "categoryCode": "toolholding" },
 		"groundStorageTransformByType": {
-			"@shovel-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+			"@shadowshovel-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
 				"translation": {
 					"x": 0,
 					"y": 0.59,
@@ -136,6 +136,9 @@
 		"shadowshovel-peridotite": {
 			"material": { "base": "block/stone/rock/{material}1" }
 		},
+		"shadowshovel-meteoriciron": {
+			"material": { "base": "block/metal/ingot/demonite" }
+		},
 		"*": {
 			"material": { "base": "game:block/metal/ingot/{material}" }
 		}
@@ -231,7 +234,7 @@
 		"shadowshovel-flint": 1,
 		"shadowshovel-copper": 1.25,
 		"shadowshovel-bismuthbronze": 1.5,
-		"shovel-tinbronze": 1.75,
+		"shadowshovel-tinbronze": 1.75,
 		"shadowshovel-blackbronze": 2,
 		"shadowshovel-meteoriciron": 2.35,
 		"shadowshovel-steel": 2.5

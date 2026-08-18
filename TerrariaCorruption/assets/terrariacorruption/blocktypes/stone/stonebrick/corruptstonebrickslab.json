@@ -1,5 +1,5 @@
 {
-	"code": "corruptcobblestoneslab",
+	"code": "corruptstonebrickslab",
 	// This block class removes the bottom snow section from vertically standing slabs when there is no ground below
 	"class": "BlockSlabSnowRemove",
 	"behaviors": [
@@ -12,13 +12,14 @@
 		},
 		{
 			"name": "WrenchOrientable",
-			"properties": { "baseCode": "cobblestoneslab-{rock}-*-{cover}" }
+			"properties": { "baseCode": "plankslab-{rock}-*-{cover}" }
 		}
 	],
 	"variantgroups": [
 		{
 			"code": "rock",
-			"loadFromProperties": "terrariacorruption:block/corruptrockwithdeposit"
+			"states": [ "suevite", "travertine" ],
+			"loadFromProperties": "block/rock"
 		},
 		{
 			"code": "rot",
@@ -29,35 +30,34 @@
 			"states": [ "free", "snow" ]
 		}
 	],
-	"skipVariants": [ "*-obsidian-*", "*-halite-*", "*-scoria-*", "*-tuff-*", "corruptcobblestoneslab-travertine-*", "*-up-snow" ],
+	"skipVariants": [ "*-up-snow" ],
 	"attributes": {
-		"isCorrupt": true,
-		"mapColorCode": "settlement",
 		"canChisel": true,
 		"chiselShapeFromCollisionBox": true,
 		"handbook": {
-			"groupBy": [ "cobblestoneslab-*-down-free" ]
+			"groupBy": [ "stonebrickslab-*" ]
+		},
+		"partialAttachableByType": {
+			"*-down": true,
+			"*-up": true
 		},
 		"liquidBarrierOnSidesByType": {
 			"*-down-*": [ 0.5, 0.5, 0.5, 0.5 ]
-		},
-		"inContainerTexture": { "base": "game:block/stone/cobblestone/{rock}1" }
+		}
 	},
 	"replaceable": 200,
 	"resistance": 4,
-	"blockmaterial": "Stone",
 	"creativeinventory": {
 		"general": [ "*-down-free" ],
 		"construction": [ "*-down-free" ]
 	},
-	"drops": [ { "code": "corruptcobblestoneslab-{rock}-down-free" } ],
+	"drops": [ { "code": "corruptstonebrickslab-{rock}-down-free" } ],
 	"shapeByType": {
 		"*-snow": { "base": "game:block/basic/slab/snow-slab-{rot}" },
 		"*": { "base": "game:block/basic/slab/slab-{rot}" }
 	},
 	"textures": {
-		"horizontals": { "base": "block/stone/cobblestone/{rock}*" },
-		"verticals": { "base": "block/stone/cobblestone/{rock}1" }
+		"sides": { "base": "block/stone/brick/{rock}*" }
 	},
 	"sideSolidOpaqueAoByType": {
 		"*-north-*": {
