@@ -45,7 +45,7 @@
 		},
 		{
 			"code": "material",
-			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze","meteoriciron", "steel" ]
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze","meteoriciron"]
 		}
 	],
 	"skipVariants": [
@@ -62,7 +62,7 @@
 	],
 	"shapeByType": {
 		"@shadowspear-generic-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": { "base": "game:item/tool/spear/stone" },
-		"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": { "base": "game:item/tool/spear/metal-{material}" }
+		"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": { "base": "item/tool/spear/metal-{material}" }
 	},
 	"texturesByType": {
 		"shadowspear-generic-flint": {
@@ -74,8 +74,8 @@
 		"shadowspear-generic-meteoriciron": {
 			"ingot": { "base": "block/metal/ingot/demonite" }
 		},
-		"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze|steel)": {
-			"ingot": { "base": "game:block/metal/ingot/{material}" }
+		"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze)": {
+			"ingot": { "base": "block/metal/ingot/{material}" }
 		}
 	},
 	"heldTpIdleAnimation": "spearidle",
@@ -94,8 +94,7 @@
 		"shadowspear-generic-bismuthbronze": 3.25,
 		"shadowspear-generic-tinbronze": 3.75,
 		"shadowspear-generic-blackbronze": 4,
-		"shadowspear-generic-meteoriciron": 4.3,
-		"shadowspear-generic-steel": 4.4
+		"shadowspear-generic-meteoriciron": 4.3
 	},
 	"attributes": {
 		"heldItemPitchFollow": 1,
@@ -191,7 +190,7 @@
 				},
 				"scale": 0.85
 			},
-			"@shadowspear-generic-(blackbronze|meteoriciron|steel)": {
+			"@shadowspear-generic-(blackbronze|meteoriciron)": {
 				"translation": {
 					"x": -0.39,
 					"y": 0.78,
@@ -268,11 +267,10 @@
 			"*-flint": 0,
 			"*-obsidian": 0,
 			"*-copper": 0,
-			"*-bismuthbronze": 0,
-			"*-tinbronze": 0,
-			"*-blackbronze": 0,
-			"*-meteoriciron": 1,
-			"*-steel": 2
+			"*-bismuthbronze": 1,
+			"*-tinbronze": 1,
+			"*-blackbronze": 1,
+			"*-meteoriciron": 2
 		},
 		"spearEntityCodeByType": {
 			"*": "shadowspear-{type}-{material}"

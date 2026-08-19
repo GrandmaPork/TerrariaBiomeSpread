@@ -28,7 +28,7 @@
 			"material": { "base": "block/metal/ingot/demonite" }
 		},
 		"*": {
-			"material": { "base": "game:block/metal/ingot/{material}" }
+			"material": { "base": "block/metal/ingot/{material}" }
 		}
 	},
 	"creativeinventory": {
@@ -91,8 +91,7 @@
 			"*-tinbronze": 1.5,
 			"*-bismuthbronze": 1.5,
 			"*-blackbronze": 2,
-			"*-meteoriciron": 2.75,
-			"*-steel": 3
+			"*-meteoriciron": 2.75
 		},
 		"breakChanceOnImpactByType": {
 			"*-flint": 0.025,
@@ -101,8 +100,7 @@
 			"*-tinbronze": 0.0125,
 			"*-bismuthbronze": 0.0125,
 			"*-blackbronze": 0.01,
-			"*-meteoriciron": 0.01,
-			"*-steel": 0.007
+			"*-meteoriciron": 0.01
 		},
 		"handbook": {
 			"groupBy": [ "arrow-*" ]

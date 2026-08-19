@@ -1,0 +1,72 @@
+{
+  "code": "shadowmetal",
+  "variants": [
+    {
+      "code": "bismuth",
+      "meltPoint": 217.5,
+      "boilPoint": 1564.0,
+      "density": 9750,
+      "specificHeatCapacity": 0.13,
+      "elemental": true,
+      "tier": 1
+    },
+    {
+      "code": "bismuthbronze",
+      "meltPoint": 850,
+      "boilPoint": 2300,
+      "density": 7900,
+      "specificHeatCapacity": 0.435,
+      "elemental": false,
+      "tier": 2
+    },
+    {
+      "code": "blackbronze",
+      "meltPoint": 1020,
+      "boilPoint": 2300,
+      "density": 9000,
+      "specificHeatCapacity": 0.435,
+      "elemental": false,
+      "tier": 2
+    },
+    {
+      "code": "copper",
+      "meltPoint": 1084.62,
+      "boilPoint": 2562,
+      "density": 8960,
+      "specificHeatCapacity": 0.39,
+      "elemental": true,
+      "tier": 1
+    },
+    {
+      "code": "demonite",
+      "meltPoint": 1476,
+      "boilPoint": 2870,
+      "density": 7800,
+      "specificHeatCapacity": 0.456,
+      "elemental": false,
+      "tier": 3,
+      "quenchMinTemp": 815,
+      "quenchMaxTemp": 1050,
+      "temperMinTemp": 550,
+      "temperMaxTemp": 700
+    },
+    {
+      "code": "tin",
+      "meltPoint": 231.93,
+      "boilPoint": 2602,
+      "density": 0.21,
+      "specificHeatCapacity": 0.21,
+      "elemental": true,
+      "tier": 4
+    },
+    {
+      "code": "tinbronze",
+      "meltPoint": 950,
+      "boilPoint": 2300,
+      "density": 7600,
+      "specificHeatCapacity": 0.435,
+      "elemental": false,
+      "tier": 2
+    }
+  ]
+}

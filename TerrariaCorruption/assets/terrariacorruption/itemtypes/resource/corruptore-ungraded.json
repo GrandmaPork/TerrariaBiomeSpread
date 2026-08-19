@@ -52,11 +52,12 @@
 	"variantgroups": [
 		{
 			"code": "ore",
-			"loadFromProperties": "block/ore-ungraded"
+			"loadFromProperties": "game:block/ore-ungraded"
 		}
 	],
 	"shape": { "base": "game:item/ore/ungraded/{ore}" },
 	"attributes": {
+		"isCorrupt": true,
 		"placeSound": "game:block/charcoal",
 		"handbook": {
 			"groupBy": [ "ore-*" ]
@@ -198,35 +199,35 @@
 		}
 	},
 	"combustiblePropsByType": {
-		"ore-lignite": {
+		"corruptore-lignite": {
 			"burnTemperature": 1100,
 			"burnDuration": 77
 		},
-		"ore-bituminouscoal": {
+		"corruptore-bituminouscoal": {
 			"burnTemperature": 1200,
 			"burnDuration": 84
 		},
-		"ore-anthracite": {
+		"corruptore-anthracite": {
 			"burnTemperature": 1200,
 			"burnDuration": 196
 		},
-		"ore-quartz": {
+		"corruptore-quartz": {
 			"meltingPoint": 1350,
 			"meltingDuration": 30,
 			"smeltedRatio": 4,
 			"smeltedStack": {
 				"type": "block",
-				"code": "glass-plain",
+				"code": "game:glass-plain",
 				"stacksize": 2
 			}
 		},
-		"ore-olivine": {
+		"corruptore-olivine": {
 			"meltingPoint": 1400,
 			"meltingDuration": 30,
 			"smeltedRatio": 8,
 			"smeltedStack": {
 				"type": "block",
-				"code": "glass-green",
+				"code": "game:glass-green",
 				"stacksize": 2
 			}
 		}

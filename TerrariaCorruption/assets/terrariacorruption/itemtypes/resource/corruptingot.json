@@ -39,9 +39,7 @@
       "*-tinbronze": 350,
       "*-bismuthbronze": 350,
       "*-blackbronze": 450,
-      "*-iron": 850,
-      "*-meteoriciron": 1200,
-      "*-steel": 1400
+      "*-meteoriciron": 1200
     },
     "handbook": {
       "groupBy": [ "ingot-*" ],
@@ -55,24 +53,14 @@
     },
     "workableTemperatureByType": {
       "corruptingot-lead": 0,
-      "corruptingot-tin": 0,
-      "corruptingot-leadsolder": 0
+      "corruptingot-tin": 0
     },
     "requiresAnvilTierByType": {
-      "corruptingot-meteoriciron": 4,
-      "corruptingot-blistersteel": 4
+      "corruptingot-meteoriciron": 4
     },
     "shatteredStack": {
       "type": "item",
-      "code": "game:metalbit-{metal}"
-    },
-    "carburizablePropsByType": {
-      "corruptingot-iron": {
-        "carburizedOutput": {
-          "type": "item",
-          "code": "game:ingot-blistersteel"
-        }
-      }
+      "code": "corruptmetalbit-{metal}"
     },
     "displaycaseable": true,
     "shelvable": true,
@@ -131,8 +119,7 @@
   "variantgroups": [
     {
       "code": "metal",
-      "loadFromProperties": "block/metal",
-      "states": [ "blistersteel", "leadsolder", "silversolder" ]
+      "loadFromProperties": "terrariacorruption:block/shadowmetal"
     }
   ],
   "storageFlags": 5,
@@ -141,11 +128,8 @@
     "*": { "base": "game:item/ingot" }
   },
   "texturesByType": {
-    "*-meteoriciron": {
-      "metal": { "base": "block/metal/ingot/demonite" }
-    },
     "*": {
-      "metal": { "base": "game:block/metal/ingot/{metal}" }
+      "metal": { "base": "block/metal/ingot/{metal}" }
     }
   },
   "creativeinventory": {
@@ -154,29 +138,12 @@
   },
   "materialDensityByType": {
     "*-copper": 8960,
-    "*-cupronickel": 8940,
-    "*-brass": 8500,
     "*-tinbronze": 7600,
     "*-bismuthbronze": 7900,
     "*-blackbronze": 9000,
-    "*-iron": 7870,
-    "*-meteoriciron": 7800,
-    "*-steel": 7820,
-    "*-blistersteel": 7720,
-    "*-gold": 19300,
-    "*-lead": 11300,
-    "*-electrum": 8900,
-    "*-nickel": 8908,
+    "*-demonite": 7800,
     "*-tin": 7260,
-    "*-chromium": 7150,
-    "*-platinum": 21500,
-    "*-titanium": 4510,
-    "*-zinc": 7140,
-    "*-silver": 10500,
-    "*-bismuth": 9790,
-    "*-molybdochalkos": 9600,
-    "*-leadsolder": 9280,
-    "*-silversolder": 8880
+    "*-bismuth": 9790
   },
   "combustiblePropsByType": {
     "corruptingot-copper": {
@@ -186,24 +153,6 @@
       "smeltedStack": {
         "type": "item",
         "code": "corruptingot-copper"
-      }
-    },
-    "ingot-cupronickel": {
-      "meltingPoint": 1171,
-      "meltingDuration": 30,
-      "smeltedRatio": 1,
-      "smeltedStack": {
-        "type": "item",
-        "code": "corruptingot-cupronickel"
-      }
-    },
-    "corruptingot-brass": {
-      "meltingPoint": 920,
-      "meltingDuration": 30,
-      "smeltedRatio": 1,
-      "smeltedStack": {
-        "type": "item",
-        "code": "corruptingot-brass"
       }
     },
     "corruptingot-tinbronze": {
@@ -233,76 +182,13 @@
         "code": "corruptingot-blackbronze"
       }
     },
-    "ingot-electrum": {
-      "meltingPoint": 1010,
-      "meltingDuration": 30,
-      "smeltedRatio": 1,
-      "smeltedStack": {
-        "type": "item",
-        "code": "corruptingot-electrum"
-      }
-    },
-    "corruptingot-iron": {
-      "meltingPoint": 1482,
-      "meltingDuration": 30,
-      "smeltedRatio": 1,
-      "smeltedStack": {
-        "type": "item",
-        "code": "corruptingot-iron"
-      }
-    },
-    "corruptingot-meteoriciron": {
+    "corruptingot-demonite": {
       "meltingPoint": 1476,
       "meltingDuration": 30,
       "smeltedRatio": 1,
       "smeltedStack": {
         "type": "item",
-        "code": "corruptingot-meteoriciron"
-      }
-    },
-    "ingot-nickel": {
-      "meltingPoint": 1325,
-      "meltingDuration": 40,
-      "smeltedRatio": 1,
-      "smeltedStack": {
-        "type": "item",
-        "code": "corruptingot-nickel"
-      }
-    },
-    "ingot-steel": {
-      "meltingPoint": 1502,
-      "meltingDuration": 30,
-      "smeltedRatio": 1,
-      "smeltedStack": {
-        "type": "item",
-        "code": "corruptingot-steel"
-      }
-    },
-    "ingot-blistersteel": {
-      "meltingPoint": 1602,
-      "meltingDuration": 30,
-      "smeltedRatio": 1,
-      "smeltedStack": {
-        "type": "item",
-        "code": "corruptingot-blistersteel"
-      }
-    },
-    "ingot-gold": {
-      "meltingPoint": 1063,
-      "meltingDuration": 30,
-      "smeltedRatio": 1,
-      "smeltedStack": {
-        "type": "item",
-        "code": "corruptingot-gold"
-      }
-    },
-    "ingot-lead": {
-      "meltingPoint": 327,
-      "meltingDuration": 30,
-      "smeltedRatio": 1,
-      "smeltedStack": {
-        "type": "item",
-        "code": "corruptingot-lead"
+        "code": "corruptingot-demonite"
       }
     },
     "corruptingot-tin": {
@@ -314,51 +200,6 @@
         "code": "corruptingot-tin"
       }
     },
-    "ingot-chromium": {
-      "meltingPoint": 1907,
-      "meltingDuration": 30,
-      "smeltedRatio": 1,
-      "smeltedStack": {
-        "type": "item",
-        "code": "corruptingot-chromium"
-      }
-    },
-    "ingot-platinum": {
-      "meltingPoint": 1770,
-      "meltingDuration": 30,
-      "smeltedRatio": 1,
-      "smeltedStack": {
-        "type": "item",
-        "code": "corruptingot-platinum"
-      }
-    },
-    "ingot-titanium": {
-      "meltingPoint": 1668,
-      "meltingDuration": 30,
-      "smeltedRatio": 1,
-      "smeltedStack": {
-        "type": "item",
-        "code": "corruptingot-titanium"
-      }
-    },
-    "ingot-zinc": {
-      "meltingPoint": 419,
-      "meltingDuration": 30,
-      "smeltedRatio": 1,
-      "smeltedStack": {
-        "type": "item",
-        "code": "corruptingot-zinc"
-      }
-    },
-    "ingot-silver": {
-      "meltingPoint": 961,
-      "meltingDuration": 30,
-      "smeltedRatio": 1,
-      "smeltedStack": {
-        "type": "item",
-        "code": "corruptcorruptingot-silver"
-      }
-    },
     "corruptingot-bismuth": {
       "meltingPoint": 271,
       "meltingDuration": 30,
@@ -366,33 +207,6 @@
       "smeltedStack": {
         "type": "item",
         "code": "corruptingot-bismuth"
-      }
-    },
-    "ingot-molybdochalkos": {
-      "meltingPoint": 902,
-      "meltingDuration": 30,
-      "smeltedRatio": 1,
-      "smeltedStack": {
-        "type": "item",
-        "code": "corruptingot-molybdochalkos"
-      }
-    },
-    "ingot-leadsolder": {
-      "meltingPoint": 327,
-      "meltingDuration": 30,
-      "smeltedRatio": 1,
-      "smeltedStack": {
-        "type": "item",
-        "code": "corruptingot-leadsolder"
-      }
-    },
-    "ingot-silversolder": {
-      "meltingPoint": 758,
-      "meltingDuration": 30,
-      "smeltedRatio": 1,
-      "smeltedStack": {
-        "type": "item",
-        "code": "corruptingot-silversolder"
       }
     }
   },

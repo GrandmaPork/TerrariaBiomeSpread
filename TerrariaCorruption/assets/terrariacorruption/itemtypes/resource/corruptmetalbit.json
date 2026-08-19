@@ -1,79 +1,45 @@
 {
-	"code": "corruptnugget",
+	"code": "corruptmetalbit",
 	// ItemNugget is just for displaying the yield in units in the tooltip
 	"class": "ItemNugget",
-	"behaviorsByType": {
-		"*-hematite": [
-			{
-				"name": "GroundStorable",
-				"properties": {
-					"layout": "Messy12",
-					"collisionBox": {
-						"x1": 0,
-						"y1": 0,
-						"z1": 0,
-						"x2": 1,
-						"y2": 0.125,
-						"z2": 1
-					}
-				}
-			},
-			{
-				"name": "ArtPigment",
-				"properties": {
-					"decorBlockCodes": [ "game:caveart-redochre-1-*" ],
-					"paintableOnBlockMaterials": [ "Stone", "Wood", "Brick", "Ceramic", "Metal", "Meta" ],
-					"consumeChance": 0.066
-				}
+	"behaviors": [
+		{
+			"name": "GroundStorable",
+			"properties": {
+				"layout": "Messy12",
+				"collisionBox": {
+					"x1": 0,
+					"y1": 0,
+					"z1": 0,
+					"x2": 1,
+					"y2": 0.125,
+					"z2": 1
+				},
+				"bulkTransferQuantity": 4
 			}
-		],
-		"*": [
-			{
-				"name": "GroundStorable",
-				"properties": {
-					"layout": "Messy12",
-					"collisionBox": {
-						"x1": 0,
-						"y1": 0,
-						"z1": 0,
-						"x2": 1,
-						"y2": 0.125,
-						"z2": 1
-					}
-				}
-			}
-		]
-	},
+		}
+	],
 	"variantgroups": [
 		{
-			"code": "ore",
-			"loadFromProperties": "terrariacorruption:block/corruptore-nugget"
+			"code": "metal",
+			"loadFromProperties": "terrariacorruption:block/shadowmetal"
 		}
 	],
 	"shape": { "base": "game:item/nugget" },
 	"textures": {
-		"ore": { "base": "item/resource/nugget/{ore}" }
+		"ore": { "base": "block/metal/ingot/{metal}" }
 	},
 	"attributes": {
-		"isCorrupt": true,
+    "isCorrupt": true,
 		"handbook": {
-			"groupBy": [ "nugget-*" ],
 			"excludeByType": {
-				"*-chromite-*": true,
-				"*-platinum-*": true,
-				"*-ilmenite-*": true,
-				"*-rocksalt_sylvite-*": true
-			}
-		},
-		"pigmentByType": {
-			"*-hematite": {
-				"name": "Red ochre",
-				"color": {
-					"red": 102,
-					"green": 40,
-					"blue": 35
-				}
-			}
+				"*-chromium": true,
+				"*-platinum": true,
+				"*-titanium": true,
+				"*-stainlesssteel": true,
+				"*-uranium": true
+			},
+			"groupBy": [ "metalbit-*" ]
 		},
 		"displaycaseable": true,
 		"shelvable": true,
@@ -128,26 +94,8 @@
 		"general": [ "*" ],
 		"items": [ "*" ]
 	},
-	"crushingPropsByType": {
-		"corruptnugget-cassiterite": {
-			"crushedStack": {
-				"type": "item",
-				"code": "corruptcrushed-cassiterite"
-			},
-			"quantity": { "avg": ".33" },
-			"hardnessTier": 1
-		},
-		"corruptnugget-hematite": {
-			"crushedStack": {
-				"type": "item",
-				"code": "corruptcrushed-iron"
-			},
-			"quantity": { "avg": ".33" },
-			"hardnessTier": 3
-		}
-	},
 	"combustiblePropsByType": {
-		"*-nativecopper": {
+		"*-copper": {
 			"meltingPoint": 1084,
 			"meltingDuration": 30,
 			"smeltedRatio": 20,
@@ -156,16 +104,43 @@
 				"code": "corruptingot-copper"
 			}
 		},
-		"*-hematite": {
-			"meltingPoint": 1482,
+		"*-tinbronze": {
+			"meltingPoint": 950,
 			"meltingDuration": 30,
 			"smeltedRatio": 20,
 			"smeltedStack": {
 				"type": "item",
-				"code": "game:ironbloom"
+				"code": "corruptingot-tinbronze"
 			}
 		},
-		"*-cassiterite": {
+		"*-bismuthbronze": {
+			"meltingPoint": 850,
+			"meltingDuration": 30,
+			"smeltedRatio": 20,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-bismuthbronze"
+			}
+		},
+		"*-blackbronze": {
+			"meltingPoint": 1020,
+			"meltingDuration": 30,
+			"smeltedRatio": 20,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-blackbronze"
+			}
+		},
+		"*-demonite": {
+			"meltingPoint": 1476,
+			"meltingDuration": 30,
+			"smeltedRatio": 20,
+			"smeltedStack": {
+				"type": "item",
+				"code": "corruptingot-demonite"
+			}
+		},
+		"*-tin": {
 			"meltingPoint": 232,
 			"meltingDuration": 30,
 			"smeltedRatio": 20,
@@ -174,7 +149,7 @@
 				"code": "corruptingot-tin"
 			}
 		},
-		"*-bismuthinite": {
+		"*-bismuth": {
 			"meltingPoint": 271,
 			"meltingDuration": 30,
 			"smeltedRatio": 20,

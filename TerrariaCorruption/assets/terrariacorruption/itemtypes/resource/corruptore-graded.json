@@ -11,11 +11,11 @@
 		},
 		{
 			"code": "ore",
-			"loadFromProperties": "game:block/ore-graded"
+			"loadFromProperties": "terrariacorruption:block/corruptore-graded"
 		},
 		{
 			"code": "rock",
-			"loadFromProperties": "block/rockwithdeposit"
+			"loadFromProperties": "terrariacorruption:block/corruptrockwithdeposit"
 		}
 	],
 	"shape": { "base": "game:item/ore/{grade}/{ore}" },
@@ -39,30 +39,15 @@
 			}
 		},
 		"metalUnitsByType": {
-			"ore-poor-cassiterite-*": 5,
-			"ore-medium-cassiterite-*": 10,
-			"ore-rich-cassiterite-*": 15,
-			"ore-bountiful-cassiterite-*": 20,
+			"corruptore-poor-cassiterite-*": 5,
+			"corruptore-medium-cassiterite-*": 10,
+			"corruptore-rich-cassiterite-*": 15,
+			"corruptore-bountiful-cassiterite-*": 20,
 
-			"ore-poor-hematite-*": 20,
-			"ore-medium-hematite-*": 25,
-			"ore-rich-hematite-*": 30,
-			"ore-bountiful-hematite-*": 40,
-
-			"ore-poor-quartz_nativesilver-*": 10,
-			"ore-medium-quartz_nativesilver-*": 15,
-			"ore-rich-quartz_nativesilver-*": 20,
-			"ore-bountiful-quartz_nativesilver-*": 25,
-
-			"ore-poor-quartz_nativegold-*": 5,
-			"ore-medium-quartz_nativegold-*": 10,
-			"ore-rich-quartz_nativegold-*": 15,
-			"ore-bountiful-quartz_nativegold-*": 20,
-
-			"ore-poor-*": 15,
-			"ore-medium-*": 20,
-			"ore-rich-*": 25,
-			"ore-bountiful-*": 35
+			"corruptore-poor-*": 15,
+			"corruptore-medium-*": 20,
+			"corruptore-rich-*": 25,
+			"corruptore-bountiful-*": 35
 		},
 		"displaycaseable": true,
 		"shelvable": true,
@@ -491,7 +476,7 @@
 		"items": [ "*" ]
 	},
 	"crushingPropsByType": {
-		"ore-poor-limonite-*": {
+		"corruptore-poor-limonite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-iron"
@@ -499,7 +484,7 @@
 			"quantity": { "avg": 1 },
 			"hardnessTier": 3
 		},
-		"ore-medium-limonite-*": {
+		"corruptore-medium-limonite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-iron"
@@ -507,7 +492,7 @@
 			"quantity": { "avg": 1.33 },
 			"hardnessTier": 3
 		},
-		"ore-rich-limonite-*": {
+		"corruptore-rich-limonite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-iron"
@@ -515,7 +500,7 @@
 			"quantity": { "avg": 1.66 },
 			"hardnessTier": 3
 		},
-		"ore-bountiful-limonite-*": {
+		"corruptore-bountiful-limonite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-iron"
@@ -523,7 +508,7 @@
 			"quantity": { "avg": 2.33 },
 			"hardnessTier": 3
 		},
-		"ore-poor-magnetite-*": {
+		"corruptore-poor-magnetite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-iron"
@@ -531,7 +516,7 @@
 			"quantity": { "avg": 1 },
 			"hardnessTier": 3
 		},
-		"ore-medium-magnetite-*": {
+		"corruptore-medium-magnetite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-iron"
@@ -539,7 +524,7 @@
 			"quantity": { "avg": 1.33 },
 			"hardnessTier": 3
 		},
-		"ore-rich-magnetite-*": {
+		"corruptore-rich-magnetite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-iron"
@@ -547,7 +532,7 @@
 			"quantity": { "avg": 1.66 },
 			"hardnessTier": 3
 		},
-		"ore-bountiful-magnetite-*": {
+		"corruptore-bountiful-magnetite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-iron"
@@ -555,7 +540,7 @@
 			"quantity": { "avg": 2.33 },
 			"hardnessTier": 3
 		},
-		"ore-poor-hematite-*": {
+		"corruptore-poor-hematite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-iron"
@@ -563,7 +548,7 @@
 			"quantity": { "avg": 1.33 },
 			"hardnessTier": 3
 		},
-		"ore-medium-hematite-*": {
+		"corruptore-medium-hematite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-iron"
@@ -571,7 +556,7 @@
 			"quantity": { "avg": 1.66 },
 			"hardnessTier": 3
 		},
-		"ore-rich-hematite-*": {
+		"corruptore-rich-hematite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-iron"
@@ -579,7 +564,7 @@
 			"quantity": { "avg": 2.0 },
 			"hardnessTier": 3
 		},
-		"ore-bountiful-hematite-*": {
+		"corruptore-bountiful-hematite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-iron"
@@ -587,7 +572,7 @@
 			"quantity": { "avg": 2.66 },
 			"hardnessTier": 3
 		},
-		"ore-poor-ilmenite-*": {
+		"corruptore-poor-ilmenite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-ilmenite"
@@ -595,7 +580,7 @@
 			"quantity": { "avg": 1.0 },
 			"hardnessTier": 4
 		},
-		"ore-medium-ilmenite-*": {
+		"corruptore-medium-ilmenite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:game:crushed-ilmenite"
@@ -603,7 +588,7 @@
 			"quantity": { "avg": 1.33 },
 			"hardnessTier": 4
 		},
-		"ore-rich-ilmenite-*": {
+		"corruptore-rich-ilmenite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-ilmenite"
@@ -611,7 +596,7 @@
 			"quantity": { "avg": 1.66 },
 			"hardnessTier": 4
 		},
-		"ore-bountiful-ilmenite-*": {
+		"corruptore-bountiful-ilmenite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-ilmenite"
@@ -619,7 +604,7 @@
 			"quantity": { "avg": 2.33 },
 			"hardnessTier": 4
 		},
-		"ore-poor-cassiterite-*": {
+		"corruptore-poor-cassiterite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-cassiterite"
@@ -627,7 +612,7 @@
 			"quantity": { "avg": ".33" },
 			"hardnessTier": 1
 		},
-		"ore-medium-cassiterite-*": {
+		"corruptore-medium-cassiterite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-cassiterite"
@@ -635,7 +620,7 @@
 			"quantity": { "avg": ".66" },
 			"hardnessTier": 1
 		},
-		"ore-rich-cassiterite-*": {
+		"corruptore-rich-cassiterite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-cassiterite"
@@ -643,7 +628,7 @@
 			"quantity": { "avg": 1 },
 			"hardnessTier": 1
 		},
-		"ore-bountiful-cassiterite-*": {
+		"corruptore-bountiful-cassiterite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-cassiterite"
@@ -651,7 +636,7 @@
 			"quantity": { "avg": 1.33 },
 			"hardnessTier": 1
 		},
-		"ore-poor-chromite-*": {
+		"corruptore-poor-chromite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-chromite"
@@ -659,7 +644,7 @@
 			"quantity": { "avg": 1 },
 			"hardnessTier": 4
 		},
-		"ore-medium-chromite-*": {
+		"corruptore-medium-chromite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-chromite"
@@ -667,7 +652,7 @@
 			"quantity": { "avg": 1.33 },
 			"hardnessTier": 4
 		},
-		"ore-rich-chromite-*": {
+		"corruptore-rich-chromite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-chromite"
@@ -675,7 +660,7 @@
 			"quantity": { "avg": 1.66 },
 			"hardnessTier": 4
 		},
-		"ore-bountiful-chromite-*": {
+		"corruptore-bountiful-chromite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-chromite"
@@ -683,7 +668,7 @@
 			"quantity": { "avg": 2.33 },
 			"hardnessTier": 4
 		},
-		"ore-poor-galena-*": {
+		"corruptore-poor-galena-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-galena"
@@ -691,7 +676,7 @@
 			"quantity": { "avg": 1 },
 			"hardnessTier": 1
 		},
-		"ore-medium-galena-*": {
+		"corruptore-medium-galena-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-galena"
@@ -699,7 +684,7 @@
 			"quantity": { "avg": 1.33 },
 			"hardnessTier": 1
 		},
-		"ore-rich-galena-*": {
+		"corruptore-rich-galena-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-galena"
@@ -707,7 +692,7 @@
 			"quantity": { "avg": 1.66 },
 			"hardnessTier": 1
 		},
-		"ore-bountiful-galena-*": {
+		"corruptore-bountiful-galena-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-galena"
@@ -715,7 +700,7 @@
 			"quantity": { "avg": 2.33 },
 			"hardnessTier": 1
 		},
-		"ore-poor-sphalerite-*": {
+		"corruptore-poor-sphalerite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-sphalerite"
@@ -723,7 +708,7 @@
 			"quantity": { "avg": 1 },
 			"hardnessTier": 1
 		},
-		"ore-medium-sphalerite-*": {
+		"corruptore-medium-sphalerite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-sphalerite"
@@ -731,7 +716,7 @@
 			"quantity": { "avg": 1.33 },
 			"hardnessTier": 1
 		},
-		"ore-rich-sphalerite-*": {
+		"corruptore-rich-sphalerite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-sphalerite"
@@ -739,7 +724,7 @@
 			"quantity": { "avg": 1.66 },
 			"hardnessTier": 1
 		},
-		"ore-bountiful-sphalerite-*": {
+		"corruptore-bountiful-sphalerite-*": {
 			"crushedStack": {
 				"type": "item",
 				"code": "game:crushed-sphalerite"
@@ -750,7 +735,7 @@
 
 	},
 	"behaviorsByType": {
-		"@(ore-rich-limonite-.*|ore-bountiful-limonite-.*)": [
+		"@(corruptore-rich-limonite-.*|corruptore-bountiful-limonite-.*)": [
 			{
 				"name": "GroundStorable",
 				"properties": {
@@ -773,7 +758,7 @@
 				}
 			}
 		],
-		"@(ore-rich-hematite-.*|ore-bountiful-hematite-.*)": [
+		"@(corruptore-rich-hematite-.*|corruptore-bountiful-hematite-.*)": [
 			{
 				"name": "GroundStorable",
 				"properties": {

@@ -88,8 +88,7 @@
 				"tinbronze",
 				"bismuthbronze",
 				"blackbronze",
-				"meteoriciron",
-				"steel"
+				"meteoriciron"
 			]
 		}
 	],
@@ -140,7 +139,7 @@
 			"material": { "base": "block/metal/ingot/demonite" }
 		},
 		"*": {
-			"material": { "base": "game:block/metal/ingot/{material}" }
+			"material": { "base": "block/metal/ingot/{material}" }
 		}
 	},
 	"miningspeedbytype": {
@@ -215,12 +214,6 @@
 			"sand": 6.5,
 			"gravel": 4.2,
 			"snow": 4.2
-		},
-		"shadowshovel-steel": {
-			"soil": 7,
-			"sand": 7,
-			"gravel": 4.4,
-			"snow": 4.4
 		}
 	},
 	"attackpowerbytype": {
@@ -260,7 +253,7 @@
 		"tools": [ "*" ]
 	},
 	"guiTransformByType": {
-		"@shadowshovel-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+		"@shadowshovel-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": {
 			"rotation": {
 				"x": -115,
 				"y": -28,
