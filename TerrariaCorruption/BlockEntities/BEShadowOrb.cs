@@ -49,7 +49,7 @@ namespace TerrariaCorruption.BlockEntities
             }
             else if ((timer >= 1.5) && (Pos.Y > minHeight))
             {
-                if (rnd.Next(0, 3) == 2) // one-third chance to clear block out of one block radius
+                if (rnd.Next(0, 2) == 1) // one-half chance to clear block out of one block radius
                 {
                     clearPos = Pos.AddCopy(rnd.Next(-2, 3), rnd.Next(-1, 2), rnd.Next(-2, 3)); // find random position in a short radius
                 }
