@@ -1,0 +1,95 @@
+{
+	"code": "shadowspear",
+	"class": "EntityProjectile",
+	"tags": [ "inanimate", "projectile" ],
+	"hitboxSize": {
+		"x": 0.125,
+		"y": 0.125
+	},
+	"variantgroups": [
+		{
+			"code": "type",
+			"states": [ "generic" ]
+		},
+		{
+			"code": "material",
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "scrap", "copper", "tinbronze", "bismuthbronze", "blackbronze", "meteoriciron" ]
+		}
+	],
+	"skipVariants": [
+		"shadowspear-generic-ruined",
+		"shadowspear-generic-scrap"
+	],
+	"allowedVariants": [
+		"shadowspear-generic-*",
+		"shadowspear-scrap-scrap",
+		"shadowspear-boar-ruined",
+		"shadowspear-voulge-ruined",
+		"shadowspear-fork-ruined",
+		"shadowspear-ranseur-ruined"
+	],
+	"attributes": {
+		"isCorrupt": true,
+		"isProjectile": true
+	},
+	"client": {
+		"renderer": "Shape",
+		"shapeByType": {
+			"shadowspear-scrap-scrap": {
+				"base": "game:item/tool/spear/scrap",
+				"offsetX": -0.8125
+			},
+			"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze|iron|meteoriciron)": {
+				"base": "item/tool/spear/metal-{material}",
+				"offsetX": -0.8125
+			},
+			"shadowspear-generic-hacking": {
+				"base": "game:item/tool/spear/hacking",
+				"offsetX": -0.8125
+			},
+			"*": {
+				"base": "game:item/tool/spear/stone",
+				"offsetX": -0.8125
+			}
+		},
+		"texturesByType": {
+			"shadowspear-generic-flint": {
+				"stone": { "base": "block/stone/{material}" }
+			},
+			"shadowspear-generic-meteoriciron": {
+				"stone": { "base": "block/stone/demonite" }
+			},
+			"@shadowspear-generic-(chert|granite|andesite|basalt|obsidian|peridotite)": {
+				"stone": { "base": "block/stone/rock/{material}1" }
+			},
+			"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze)": {
+				"ingot": { "base": "block/metal/ingot/{material}" }
+			}
+		},
+		"behaviors": [
+			{
+				"code": "passivephysics",
+				"groundDragFactor": 1,
+				"airDragFactor": 0.25,
+				"gravityFactor": 0.75
+			},
+			{ "code": "interpolateposition" }
+		]
+	},
+	"server": {
+		"behaviors": [
+			{
+				"code": "passivephysics",
+				"groundDragFactor": 1,
+				"airDragFactor": 0.25,
+				"gravityFactor": 0.75
+			},
+			{
+				"code": "despawn",
+				"minSeconds": 600
+			},
+			{ "code": "entitystatetags" }
+		]
+	},
+	"sounds": {}
+}

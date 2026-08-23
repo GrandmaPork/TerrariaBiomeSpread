@@ -31,15 +31,15 @@
 		}
 	],
 	"skipVariants": [
-		"corruptre-flint-suevite",
-		"corruptre-flint-halite",
-		"corruptre-flint-alum",
-		"corruptre-flint-whitemarble",
-		"corruptre-flint-redmarble",
-		"corruptre-flint-greenmarble",
-		"corruptre-flint-scoria",
-		"corruptre-flint-tuff",
-		"corruptre-flint-obsidian"
+		"corruptore-flint-suevite",
+		"corruptore-flint-halite",
+		"corruptore-flint-alum",
+		"corruptore-flint-whitemarble",
+		"corruptore-flint-redmarble",
+		"corruptore-flint-greenmarble",
+		"corruptore-flint-scoria",
+		"corruptore-flint-tuff",
+		"corruptore-flint-obsidian"
 	],
 	"allowedVariants": [
 		"corruptore-flint-*",

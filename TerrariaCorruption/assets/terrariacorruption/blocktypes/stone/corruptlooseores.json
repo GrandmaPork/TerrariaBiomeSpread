@@ -1,0 +1,549 @@
+{
+  "code": "corruptlooseores",
+  "class": "BlockLooseOres",
+  "behaviors": [
+    { "name": "UnstableFalling" },
+    {
+      "name": "RightClickPickup",
+      "properties": {
+        "dropsPickupMode": true,
+        "sound": "game:sounds/block/loosestone"
+      }
+    }
+  ],
+  "variantgroups": [
+    {
+      "code": "ore",
+      "loadFromPropertiesCombine": [ "block/ore-graded", "block/ore-ungraded" ]
+    },
+    {
+      "code": "rock",
+      "loadFromProperties": "terrariacorruption:block/corruptrockwithdeposit"
+    },
+    {
+      "code": "cover",
+      "states": [ "free", "snow" ]
+    }
+  ],
+  "attributes": {
+    "isCorrupt": true,
+    "handbook": {
+      "groupBy": [ "looseores-{ore}-*" ],
+      "searchWeightOffset": -0.25
+    }
+  },
+  "creativeinventory": { "general": [ "*-free" ] },
+  "doNotRenderAtLod2": true,
+  "shape": {
+    "base": "game:block/stone/loosestones/{cover}1",
+    "alternates": [
+      {
+        "base": "game:block/stone/loosestones/{cover}1",
+        "rotateY": 90
+      },
+      {
+        "base": "game:block/stone/loosestones/{cover}1",
+        "rotateY": 180
+      },
+      {
+        "base": "game:block/stone/loosestones/{cover}1",
+        "rotateY": 270
+      },
+
+      {
+        "base": "game:block/stone/loosestones/{cover}2",
+        "rotateY": 0
+      },
+      {
+        "base": "game:block/stone/loosestones/{cover}2",
+        "rotateY": 90
+      },
+      {
+        "base": "game:block/stone/loosestones/{cover}2",
+        "rotateY": 180
+      },
+      {
+        "base": "game:block/stone/loosestones/{cover}2",
+        "rotateY": 270
+      },
+
+      {
+        "base": "game:block/stone/loosestones/{cover}3",
+        "rotateY": 0
+      },
+      {
+        "base": "game:block/stone/loosestones/{cover}3",
+        "rotateY": 90
+      },
+      {
+        "base": "game:block/stone/loosestones/{cover}3",
+        "rotateY": 180
+      },
+      {
+        "base": "game:block/stone/loosestones/{cover}3",
+        "rotateY": 270
+      }
+    ]
+  },
+  "allowedVariants": [
+    "corruptlooseores-alum-claystone-free",
+    "corruptlooseores-alum-sandstone-free",
+    "corruptlooseores-alum-shale-free",
+    "corruptlooseores-alum-chalk-free",
+    "corruptlooseores-alum-limestone-free",
+    "corruptlooseores-alum-chert-free",
+    "corruptlooseores-alum-conglomerate-free",
+
+    "corruptlooseores-bismuthinite-andesite-free",
+    "corruptlooseores-bismuthinite-granite-free",
+    "corruptlooseores-bismuthinite-basalt-free",
+    "corruptlooseores-bismuthinite-peridotite-free",
+    "corruptlooseores-bismuthinite-phyllite-free",
+    "corruptlooseores-bismuthinite-slate-free",
+    "corruptlooseores-cassiterite-andesite-free",
+    "corruptlooseores-cassiterite-granite-free",
+    "corruptlooseores-cassiterite-basalt-free",
+    "corruptlooseores-cassiterite-peridotite-free",
+    "corruptlooseores-cassiterite-phyllite-free",
+    "corruptlooseores-cassiterite-slate-free",
+    "corruptlooseores-sphalerite-andesite-free",
+    "corruptlooseores-sphalerite-granite-free",
+    "corruptlooseores-sphalerite-basalt-free",
+    "corruptlooseores-sphalerite-peridotite-free",
+    "corruptlooseores-sphalerite-claystone-free",
+    "corruptlooseores-sphalerite-sandstone-free",
+    "corruptlooseores-sphalerite-shale-free",
+    "corruptlooseores-sphalerite-chalk-free",
+    "corruptlooseores-sphalerite-limestone-free",
+    "corruptlooseores-sphalerite-chert-free",
+    "corruptlooseores-sphalerite-conglomerate-free",
+    "corruptlooseores-sphalerite-phyllite-free",
+    "corruptlooseores-sphalerite-slate-free",
+    "corruptlooseores-nativecopper-granite-free",
+    "corruptlooseores-nativecopper-basalt-free",
+    "corruptlooseores-nativecopper-slate-free",
+    "corruptlooseores-nativecopper-andesite-free",
+    "corruptlooseores-nativecopper-peridotite-free",
+    "corruptlooseores-nativecopper-claystone-free",
+    "corruptlooseores-nativecopper-sandstone-free",
+    "corruptlooseores-nativecopper-shale-free",
+    "corruptlooseores-nativecopper-chalk-free",
+    "corruptlooseores-nativecopper-chert-free",
+    "corruptlooseores-nativecopper-conglomerate-free",
+    "corruptlooseores-nativecopper-phyllite-free",
+    "corruptlooseores-malachite-limestone-free",
+    "corruptlooseores-malachite-whitemarble-free",
+    "corruptlooseores-malachite-redmarble-free",
+    "corruptlooseores-malachite-greenmarble-free",
+    "corruptlooseores-galena-claystone-free",
+    "corruptlooseores-galena-sandstone-free",
+    "corruptlooseores-galena-shale-free",
+    "corruptlooseores-galena-chalk-free",
+    "corruptlooseores-galena-limestone-free",
+    "corruptlooseores-galena-chert-free",
+    "corruptlooseores-galena-conglomerate-free",
+    "corruptlooseores-quartz-andesite-free",
+    "corruptlooseores-quartz-granite-free",
+    "corruptlooseores-quartz-basalt-free",
+    "corruptlooseores-quartz-peridotite-free",
+    "corruptlooseores-quartz-claystone-free",
+    "corruptlooseores-quartz-sandstone-free",
+    "corruptlooseores-quartz-shale-free",
+    "corruptlooseores-quartz-chalk-free",
+    "corruptlooseores-quartz-limestone-free",
+    "corruptlooseores-quartz-chert-free",
+    "corruptlooseores-quartz-conglomerate-free",
+    "corruptlooseores-quartz-phyllite-free",
+    "corruptlooseores-quartz-slate-free",
+    "corruptlooseores-galena_nativesilver-claystone-free",
+    "corruptlooseores-galena_nativesilver-sandstone-free",
+    "corruptlooseores-galena_nativesilver-shale-free",
+    "corruptlooseores-galena_nativesilver-chalk-free",
+    "corruptlooseores-galena_nativesilver-limestone-free",
+    "corruptlooseores-galena_nativesilver-chert-free",
+    "corruptlooseores-galena_nativesilver-conglomerate-free",
+    "corruptlooseores-quartz_nativesilver-andesite-free",
+    "corruptlooseores-quartz_nativesilver-granite-free",
+    "corruptlooseores-quartz_nativesilver-basalt-free",
+    "corruptlooseores-quartz_nativesilver-peridotite-free",
+    "corruptlooseores-quartz_nativesilver-claystone-free",
+    "corruptlooseores-quartz_nativesilver-sandstone-free",
+    "corruptlooseores-quartz_nativesilver-shale-free",
+    "corruptlooseores-quartz_nativesilver-chalk-free",
+    "corruptlooseores-quartz_nativesilver-limestone-free",
+    "corruptlooseores-quartz_nativesilver-chert-free",
+    "corruptlooseores-quartz_nativesilver-conglomerate-free",
+    "corruptlooseores-quartz_nativesilver-phyllite-free",
+    "corruptlooseores-quartz_nativesilver-slate-free",
+    "corruptlooseores-quartz_nativegold-andesite-free",
+    "corruptlooseores-quartz_nativegold-granite-free",
+    "corruptlooseores-quartz_nativegold-basalt-free",
+    "corruptlooseores-quartz_nativegold-peridotite-free",
+    "corruptlooseores-quartz_nativegold-claystone-free",
+    "corruptlooseores-quartz_nativegold-sandstone-free",
+    "corruptlooseores-quartz_nativegold-shale-free",
+    "corruptlooseores-quartz_nativegold-chalk-free",
+    "corruptlooseores-quartz_nativegold-limestone-free",
+    "corruptlooseores-quartz_nativegold-chert-free",
+    "corruptlooseores-quartz_nativegold-conglomerate-free",
+    "corruptlooseores-quartz_nativegold-phyllite-free",
+    "corruptlooseores-quartz_nativegold-slate-free",
+    "corruptlooseores-limonite-basalt-free",
+    "corruptlooseores-limonite-shale-free",
+    "corruptlooseores-limonite-chert-free",
+    "corruptlooseores-hematite-granite-free",
+    "corruptlooseores-hematite-peridotite-free",
+    "corruptlooseores-hematite-sandstone-free",
+    "corruptlooseores-hematite-limestone-free",
+    "corruptlooseores-hematite-phyllite-free",
+    "corruptlooseores-magnetite-andesite-free",
+    "corruptlooseores-magnetite-claystone-free",
+    "corruptlooseores-magnetite-chalk-free",
+    "corruptlooseores-magnetite-conglomerate-free",
+    "corruptlooseores-magnetite-slate-free",
+    "corruptlooseores-chromite-andesite-free",
+    "corruptlooseores-chromite-granite-free",
+    "corruptlooseores-chromite-basalt-free",
+    "corruptlooseores-chromite-peridotite-free",
+    "corruptlooseores-chromite-kimberlite-free",
+    "corruptlooseores-rhodochrosite-claystone-free",
+    "corruptlooseores-rhodochrosite-sandstone-free",
+    "corruptlooseores-rhodochrosite-shale-free",
+    "corruptlooseores-rhodochrosite-chalk-free",
+    "corruptlooseores-rhodochrosite-limestone-free",
+    "corruptlooseores-rhodochrosite-chert-free",
+    "corruptlooseores-rhodochrosite-conglomerate-free",
+    "corruptlooseores-rhodochrosite-phyllite-free",
+    "corruptlooseores-rhodochrosite-slate-free",
+    "corruptlooseores-ilmenite-andesite-free",
+    "corruptlooseores-ilmenite-granite-free",
+    "corruptlooseores-ilmenite-basalt-free",
+    "corruptlooseores-ilmenite-peridotite-free",
+    "corruptlooseores-ilmenite-kimberlite-free",
+    "corruptlooseores-ilmenite-phyllite-free",
+    "corruptlooseores-ilmenite-slate-free",
+    "corruptlooseores-quartz_wolframite-granite-free",
+    "corruptlooseores-stibnite-andesite-free",
+    "corruptlooseores-stibnite-granite-free",
+    "corruptlooseores-stibnite-basalt-free",
+    "corruptlooseores-stibnite-limestone-free",
+    "corruptlooseores-uranium-andesite-free",
+    "corruptlooseores-uranium-granite-free",
+    "corruptlooseores-uranium-basalt-free",
+    "corruptlooseores-uranium-peridotite-free",
+    "corruptlooseores-uranium-kimberlite-free",
+    "corruptlooseores-uranium-claystone-free",
+    "corruptlooseores-uranium-sandstone-free",
+    "corruptlooseores-uranium-shale-free",
+    "corruptlooseores-uranium-chalk-free",
+    "corruptlooseores-uranium-limestone-free",
+    "corruptlooseores-uranium-chert-free",
+    "corruptlooseores-uranium-conglomerate-free",
+    "corruptlooseores-uranium-phyllite-free",
+    "corruptlooseores-uranium-slate-free",
+    "corruptlooseores-lignite-claystone-free",
+    "corruptlooseores-lignite-sandstone-free",
+    "corruptlooseores-lignite-shale-free",
+    "corruptlooseores-lignite-chalk-free",
+    "corruptlooseores-lignite-limestone-free",
+    "corruptlooseores-lignite-chert-free",
+    "corruptlooseores-lignite-conglomerate-free",
+    "corruptlooseores-bituminouscoal-claystone-free",
+    "corruptlooseores-bituminouscoal-sandstone-free",
+    "corruptlooseores-bituminouscoal-shale-free",
+    "corruptlooseores-bituminouscoal-chalk-free",
+    "corruptlooseores-bituminouscoal-limestone-free",
+    "corruptlooseores-bituminouscoal-chert-free",
+    "corruptlooseores-bituminouscoal-conglomerate-free",
+    "corruptlooseores-anthracite-claystone-free",
+    "corruptlooseores-anthracite-sandstone-free",
+    "corruptlooseores-anthracite-shale-free",
+    "corruptlooseores-anthracite-chalk-free",
+    "corruptlooseores-anthracite-limestone-free",
+    "corruptlooseores-anthracite-chert-free",
+    "corruptlooseores-anthracite-conglomerate-free",
+    "corruptlooseores-sulfur-claystone-free",
+    "corruptlooseores-sulfur-sandstone-free",
+    "corruptlooseores-sulfur-shale-free",
+    "corruptlooseores-sulfur-chalk-free",
+    "corruptlooseores-sulfur-limestone-free",
+    "corruptlooseores-sulfur-chert-free",
+    "corruptlooseores-sulfur-conglomerate-free",
+    "corruptlooseores-sylvite-halite-free",
+    "corruptlooseores-borax-claystone-free",
+    "corruptlooseores-borax-sandstone-free",
+    "corruptlooseores-borax-shale-free",
+    "corruptlooseores-borax-chalk-free",
+    "corruptlooseores-borax-limestone-free",
+    "corruptlooseores-borax-chert-free",
+    "corruptlooseores-borax-conglomerate-free",
+    "corruptlooseores-kernite-claystone-free",
+    "corruptlooseores-kernite-sandstone-free",
+    "corruptlooseores-kernite-shale-free",
+    "corruptlooseores-kernite-chalk-free",
+    "corruptlooseores-kernite-limestone-free",
+    "corruptlooseores-kernite-chert-free",
+    "corruptlooseores-kernite-conglomerate-free",
+    "corruptlooseores-graphite-phyllite-free",
+    "corruptlooseores-graphite-slate-free",
+    "corruptlooseores-graphite-whitemarble-free",
+    "corruptlooseores-graphite-redmarble-free",
+    "corruptlooseores-graphite-greenmarble-free",
+    "corruptlooseores-cinnabar-andesite-free",
+    "corruptlooseores-cinnabar-granite-free",
+    "corruptlooseores-cinnabar-basalt-free",
+    "corruptlooseores-cinnabar-peridotite-free",
+    "corruptlooseores-cinnabar-phyllite-free",
+    "corruptlooseores-cinnabar-slate-free",
+    "corruptlooseores-corundum-peridotite-free",
+    "corruptlooseores-corundum-phyllite-free",
+    "corruptlooseores-corundum-slate-free",
+    "corruptlooseores-corundum-whitemarble-free",
+    "corruptlooseores-corundum-redmarble-free",
+    "corruptlooseores-corundum-greenmarble-free",
+    "corruptlooseores-lapislazuli-limestone-free",
+    "corruptlooseores-lapislazuli-bauxite-free",
+    "corruptlooseores-lapislazuli-whitemarble-free",
+    "corruptlooseores-lapislazuli-redmarble-free",
+    "corruptlooseores-lapislazuli-greenmarble-free",
+    "corruptlooseores-emerald-basalt-free",
+    "corruptlooseores-emerald-peridotite-free",
+    "corruptlooseores-emerald-shale-free",
+    "corruptlooseores-emerald-limestone-free",
+    "corruptlooseores-emerald-phyllite-free",
+    "corruptlooseores-emerald-slate-free",
+    "corruptlooseores-diamond-kimberlite-free",
+    "corruptlooseores-diamond-suevite-free",
+    "corruptlooseores-olivine-peridotite-free",
+    "corruptlooseores-olivine_peridot-peridotite-free",
+    "corruptlooseores-pentlandite-andesite-free",
+    "corruptlooseores-pentlandite-granite-free",
+    "corruptlooseores-pentlandite-basalt-free",
+    "corruptlooseores-pentlandite-peridotite-free",
+    "corruptlooseores-fluorite-claystone-free",
+    "corruptlooseores-fluorite-sandstone-free",
+    "corruptlooseores-fluorite-shale-free",
+    "corruptlooseores-fluorite-chalk-free",
+    "corruptlooseores-fluorite-limestone-free",
+    "corruptlooseores-fluorite-chert-free",
+    "corruptlooseores-fluorite-conglomerate-free",
+    "corruptlooseores-fluorite-phyllite-free",
+    "corruptlooseores-fluorite-slate-free",
+    "corruptlooseores-phosphorite-claystone-free",
+    "corruptlooseores-phosphorite-sandstone-free",
+    "corruptlooseores-phosphorite-shale-free",
+    "corruptlooseores-phosphorite-chalk-free",
+    "corruptlooseores-phosphorite-limestone-free",
+    "corruptlooseores-phosphorite-chert-free",
+    "corruptlooseores-phosphorite-conglomerate-free"
+
+  ],
+  "drawtypeByType": {
+    "*-free": "JSON",
+    "*-snow": "JSONAndSnowLayer"
+  },
+  "resistance": 0.15,
+  "replaceable": 6500,
+  "textures": {
+    "rock": {
+      "base": "block/stone/rock/{rock}1",
+      "overlaysByType": {
+        "@corruptlooseores-(nativecopper|bismuth|cassiterite)-.*": [ "block/stone/ore/{ore}1" ],
+        "*": [ "game:block/stone/ore/{ore}1" ]
+      }
+    }
+  },
+  "sounds": {
+    "walk": "game:walk/stone*"
+  },
+  "dropsByType": {
+    "*_nativesilver-*": [
+      {
+        "type": "item",
+        "code": "game:nugget-nativesilver",
+        "quantity": {
+          "avg": 1,
+          "var": 0
+        }
+      }
+    ],
+    "*_nativegold-*": [
+      {
+        "type": "item",
+        "code": "game:nugget-nativegold",
+        "quantity": {
+          "avg": 1,
+          "var": 0
+        }
+      }
+    ],
+    "*-quartz-*": [
+      {
+        "type": "item",
+        "code": "game:clearquartz",
+        "quantity": {
+          "avg": 0.2,
+          "var": 0
+        },
+        "lastDrop": true
+      },
+      {
+        "type": "item",
+        "code": "corruptore-{ore}",
+        "quantity": {
+          "avg": 1,
+          "var": 0
+        }
+      }
+    ],
+    "corruptlooseores-olivine-*": [
+      {
+        "type": "item",
+        "code": "corruptore-{ore}"
+      }
+    ],
+    "corruptlooseores-sylvite-halite-*": [
+      {
+        "type": "item",
+        "code": "corruptore-sylvite"
+      }
+    ],
+    "corruptlooseores-lapislazuli-*": [
+      {
+        "type": "item",
+        "code": "corruptore-lapislazuli"
+      }
+    ],
+    "corruptlooseores-cinnabar-*": [
+      {
+        "type": "item",
+        "code": "corruptore-{ore}"
+      }
+    ],
+    "corruptlooseores-anthracite-*": [
+      {
+        "type": "item",
+        "code": "corruptore-{ore}"
+      }
+    ],
+    "corruptlooseores-borax-*": [
+      {
+        "type": "item",
+        "code": "corruptore-{ore}"
+      }
+    ],
+    "corruptlooseores-lignite-*": [
+      {
+        "type": "item",
+        "code": "corruptore-{ore}"
+      }
+    ],
+    "corruptlooseores-bituminouscoal-*": [
+      {
+        "type": "item",
+        "code": "corruptore-{ore}"
+      }
+    ],
+    "corruptlooseores-sulfur-*": [
+      {
+        "type": "item",
+        "code": "corruptore-{ore}"
+      }
+    ],
+    "corruptlooseores-fluorite-*": [
+      {
+        "type": "item",
+        "code": "corruptore-{ore}"
+      }
+    ],
+    "corruptlooseores-kernite-*": [
+      {
+        "type": "item",
+        "code": "corruptore-{ore}"
+      }
+    ],
+    "corruptlooseores-phosphorite-*": [
+      {
+        "type": "item",
+        "code": "corruptore-{ore}"
+      }
+    ],
+    "corruptlooseores-graphite-*": [
+      {
+        "type": "item",
+        "code": "corruptore-{ore}"
+      }
+    ],
+    "corruptlooseores-corundum-*": [
+      {
+        "type": "item",
+        "code": "corruptore-{ore}"
+      }
+    ],
+    "corruptlooseores-alum-*": [
+      {
+        "type": "item",
+        "code": "corruptore-{ore}"
+      }
+    ],
+
+    "*": [
+      {
+        "type": "item",
+        "code": "corruptnugget-{ore}",
+        "quantity": {
+          "avg": 2,
+          "var": 1
+        }
+      }
+    ]
+  },
+  "rainPermeableByType": {
+    "*-free": true,
+    "*": false
+  },
+  "sidesolid": { "all": false },
+  "sideopaqueByType": {
+    "*-snow": {
+      "all": false,
+      "down": true
+    },
+    "*": { "all": false }
+  },
+  "lightAbsorption": 0,
+  "selectionbox": {
+    "x1": 0,
+    "y1": 0,
+    "z1": 0,
+    "x2": 1,
+    "y2": 0.125,
+    "z2": 1
+  },
+  "collisionbox": null,
+  "guiTransform": {
+    "rotation": {
+      "x": -25,
+      "y": 0,
+      "z": 0
+    },
+    "origin": {
+      "x": 0.34,
+      "y": 0.1,
+      "z": 0.47
+    },
+    "scale": 2.75
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -1,
+      "y": -0.61,
+      "z": -0.84
+    },
+    "rotation": {
+      "x": 0,
+      "y": 149,
+      "z": 1
+    },
+    "scale": 0.5
+  }
+}

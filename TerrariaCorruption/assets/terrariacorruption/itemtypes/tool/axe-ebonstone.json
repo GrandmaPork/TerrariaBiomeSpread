@@ -1,8 +1,9 @@
 {
-	"code": "corruptaxe",
+	"code": "shadowaxe",
 	"class": "ItemAxe",
 	"tags": [ "tool", "tool-axe" ],
 	"attributes": {
+		"isCorrupt": true,
 		"attachableToEntity": { "categoryCode": "toolholding" },
 		"heldItemPitchFollow": 0.9,
 		"handbook": {
@@ -91,7 +92,7 @@
 	"heldTpHitAnimation": "axechop",
 	"texturesByType": {
 		"shadowaxe-flint": {
-			"material": { "base": "block/stone/{material}" }
+			"material": { "base": "block/stone/flint" }
 		},
 		"*-bone-chert": {
 			"material": { "base": "block/stone/rock/chert1" },

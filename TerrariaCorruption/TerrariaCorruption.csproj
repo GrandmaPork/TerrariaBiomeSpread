@@ -78,14 +78,12 @@
 </ItemGroup>
 
 <ItemGroup>
-  <Folder Include="assets\terrariacorruption\entities\nonliving\" />
   <Folder Include="assets\terrariacorruption\itemtypes\liquid\" />
   <Folder Include="assets\terrariacorruption\shapes\block\plant\fern\tallfern\flowerpot\" />
   <Folder Include="assets\terrariacorruption\shapes\entity\nonliving\" />
   <Folder Include="assets\terrariacorruption\textures\block\plant\aquatic\waterlily\" />
   <Folder Include="assets\terrariacorruption\textures\block\plant\aquatic\seaweed\" />
   <Folder Include="assets\terrariacorruption\textures\block\stone\sand\" />
-  <Folder Include="assets\terrariacorruption\textures\entity\" />
 </ItemGroup>
 
 <ItemGroup>
