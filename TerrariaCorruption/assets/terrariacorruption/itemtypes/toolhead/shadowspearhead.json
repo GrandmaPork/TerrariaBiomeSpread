@@ -3,11 +3,11 @@
 	"variantgroups": [
 		{
 			"code": "material",
-			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "meteoriciron", "steel" ]
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "meteoriciron"]
 		}
 	],
 	"behaviorsByType": {
-		"@(.*-steel|.*-meteoriciron)": [
+		"@(.*-meteoriciron)": [
 			{
 				"name": "Quenchable",
 				"properties": { "metalVariantgroupCode": "material" }
@@ -47,7 +47,7 @@
 	"heldTpUseAnimation": "interactstatic",
 	"maxstacksize": 4,
 	"shapeByType": {
-		"@spearhead-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": { "base": "game:item/tool/spear/metal-{material}" },
+		"@shadowspearhead-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": { "base": "item/tool/spear/metal-{material}" },
 		"*": { "base": "game:item/tool/spear/stone" }
 	},
 	"texturesByType": {
@@ -56,8 +56,13 @@
 			"string": { "base": "game:block/transparent" },
 			"handle": { "base": "game:block/transparent" }
 		},
-		"@shadowspearhead-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
-			"ingot": { "base": "game:block/metal/ingot/{material}" },
+		"*-meteoriciron": {
+			"ingot": { "base": "block/metal/ingot/demonite" },
+			"string": { "base": "game:block/transparent" },
+			"handle": { "base": "game:block/transparent" }
+		},
+		"@shadowspearhead-(copper|tinbronze|bismuthbronze|blackbronze)": {
+			"ingot": { "base": "block/metal/ingot/{material}" },
 			"string": { "base": "game:block/transparent" },
 			"handle": { "base": "game:block/transparent" }
 		},
@@ -68,6 +73,7 @@
 		}
 	},
 	"attributes": {
+		"isCorrupt": true,
 		"inForgeTransform": {
 			"translation": {
 				"x": -0.85,
@@ -87,7 +93,7 @@
 			"scale": 0.9
 		},
 		"forgableByType": {
-			"@spearhead-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": true,
+			"@shadowspearhead-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": true,
 			"*": false
 		},
 		"onTongTransform": {
@@ -154,7 +160,7 @@
 					"z": 0.5
 				}
 			},
-			"@*-(blackbronze|gold|silver|iron|meteoriciron|steel)": {
+			"@*-(blackbronze|gold|silver|iron|meteoriciron)": {
 				"translation": {
 					"x": -0.9,
 					"y": 0.05,
@@ -210,7 +216,7 @@
 						"height": 2.5,
 						"length": 8
 					},
-					"@*-(blackbronze|gold|silver|iron|meteoriciron|steel)": {
+					"@*-(blackbronze|gold|silver|iron|meteoriciron)": {
 						"width": 3,
 						"height": 2.5,
 						"length": 8
@@ -273,7 +279,7 @@
 							"z": 0.5
 						}
 					},
-					"@*-(blackbronze|gold|silver|iron|meteoriciron|steel)": {
+					"@*-(blackbronze|gold|silver|iron|meteoriciron)": {
 						"translation": {
 							"x": -1.05,
 							"y": 0.02,
@@ -329,7 +335,7 @@
 			},
 			"scale": 2.22
 		},
-		"@*-(blackbronze|iron|meteoriciron|steel)": {
+		"@*-(blackbronze|iron|meteoriciron)": {
 			"rotation": {
 				"x": -180,
 				"y": -32,
@@ -357,7 +363,7 @@
 		}
 	},
 	"tpHandTransformByType": {
-		"@*-(copper|tinbronze|bismuthbronze|blackbronze|iron|meteoriciron|steel)": {
+		"@*-(copper|tinbronze|bismuthbronze|blackbronze|iron|meteoriciron)": {
 			"translation": {
 				"x": 0,
 				"y": 0.04,
@@ -395,7 +401,7 @@
 		}
 	},
 	"groundTransformByType": {
-		"@*-(copper|tinbronze|bismuthbronze|blackbronze|iron|meteoriciron|steel)": {
+		"@*-(copper|tinbronze|bismuthbronze|blackbronze|iron|meteoriciron)": {
 			"translation": {
 				"x": 0,
 				"y": 0,

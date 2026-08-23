@@ -21,31 +21,7 @@
 			{
 				"name": "ArtPigment",
 				"properties": {
-					"decorBlockCodes": [ "caveart-redochre-1-*" ],
-					"paintableOnBlockMaterials": [ "Stone", "Wood", "Brick", "Ceramic", "Metal", "Meta" ],
-					"consumeChance": 0.066
-				}
-			}
-		],
-		"*-limonite": [
-			{
-				"name": "GroundStorable",
-				"properties": {
-					"layout": "Messy12",
-					"collisionBox": {
-						"x1": 0,
-						"y1": 0,
-						"z1": 0,
-						"x2": 1,
-						"y2": 0.125,
-						"z2": 1
-					}
-				}
-			},
-			{
-				"name": "ArtPigment",
-				"properties": {
-					"decorBlockCodes": [ "caveart-yellowochre-1-*" ],
+					"decorBlockCodes": [ "game:caveart-redochre-1-*" ],
 					"paintableOnBlockMaterials": [ "Stone", "Wood", "Brick", "Ceramic", "Metal", "Meta" ],
 					"consumeChance": 0.066
 				}
@@ -71,14 +47,15 @@
 	"variantgroups": [
 		{
 			"code": "ore",
-			"loadFromProperties": "block/ore-nugget"
+			"loadFromProperties": "terrariacorruption:block/corruptore-nugget"
 		}
 	],
 	"shape": { "base": "game:item/nugget" },
 	"textures": {
-		"ore": { "base": "game:item/resource/nugget/{ore}" }
+		"ore": { "base": "item/resource/nugget/{ore}" }
 	},
 	"attributes": {
+		"isCorrupt": true,
 		"handbook": {
 			"groupBy": [ "nugget-*" ],
 			"excludeByType": {
@@ -89,28 +66,12 @@
 			}
 		},
 		"pigmentByType": {
-			"*-malachite": {
-				"name": "Verdigris",
-				"color": {
-					"red": 112,
-					"green": 154,
-					"blue": 108
-				}
-			},
 			"*-hematite": {
 				"name": "Red ochre",
 				"color": {
 					"red": 102,
 					"green": 40,
 					"blue": 35
-				}
-			},
-			"*-limonite": {
-				"name": "Yellow ochre",
-				"color": {
-					"red": 193,
-					"green": 143,
-					"blue": 50
 				}
 			}
 		},
@@ -168,15 +129,7 @@
 		"items": [ "*" ]
 	},
 	"crushingPropsByType": {
-		"nugget-galena": {
-			"crushedStack": {
-				"type": "item",
-				"code": "corruptcrushed-galena"
-			},
-			"quantity": { "avg": ".33" },
-			"hardnessTier": 1
-		},
-		"nugget-cassiterite": {
+		"corruptnugget-cassiterite": {
 			"crushedStack": {
 				"type": "item",
 				"code": "corruptcrushed-cassiterite"
@@ -184,39 +137,7 @@
 			"quantity": { "avg": ".33" },
 			"hardnessTier": 1
 		},
-		"nugget-chromite": {
-			"crushedStack": {
-				"type": "item",
-				"code": "corruptcrushed-chromite"
-			},
-			"quantity": { "avg": ".33" },
-			"hardnessTier": 4
-		},
-		"nugget-ilmenite": {
-			"crushedStack": {
-				"type": "item",
-				"code": "corruptcrushed-ilmenite"
-			},
-			"quantity": { "avg": ".33" },
-			"hardnessTier": 4
-		},
-		"nugget-limonite": {
-			"crushedStack": {
-				"type": "item",
-				"code": "corruptcrushed-iron"
-			},
-			"quantity": { "avg": ".33" },
-			"hardnessTier": 3
-		},
-		"nugget-magnetite": {
-			"crushedStack": {
-				"type": "item",
-				"code": "corruptcrushed-iron"
-			},
-			"quantity": { "avg": ".33" },
-			"hardnessTier": 3
-		},
-		"nugget-hematite": {
+		"corruptnugget-hematite": {
 			"crushedStack": {
 				"type": "item",
 				"code": "corruptcrushed-iron"
@@ -235,24 +156,6 @@
 				"code": "corruptingot-copper"
 			}
 		},
-		"*-malachite": {
-			"meltingPoint": 1084,
-			"meltingDuration": 30,
-			"smeltedRatio": 20,
-			"smeltedStack": {
-				"type": "item",
-				"code": "corruptingot-copper"
-			}
-		},
-		"*-limonite": {
-			"meltingPoint": 1482,
-			"meltingDuration": 30,
-			"smeltedRatio": 20,
-			"smeltedStack": {
-				"type": "item",
-				"code": "game:ironbloom"
-			}
-		},
 		"*-hematite": {
 			"meltingPoint": 1482,
 			"meltingDuration": 30,
@@ -260,24 +163,6 @@
 			"smeltedStack": {
 				"type": "item",
 				"code": "game:ironbloom"
-			}
-		},
-		"*-nativegold": {
-			"meltingPoint": 1063,
-			"meltingDuration": 30,
-			"smeltedRatio": 20,
-			"smeltedStack": {
-				"type": "item",
-				"code": "corruptingot-gold"
-			}
-		},
-		"*-galena": {
-			"meltingPoint": 327,
-			"meltingDuration": 30,
-			"smeltedRatio": 20,
-			"smeltedStack": {
-				"type": "item",
-				"code": "corruptingot-lead"
 			}
 		},
 		"*-cassiterite": {
@@ -289,51 +174,6 @@
 				"code": "corruptingot-tin"
 			}
 		},
-		"*-chromite": {
-			"meltingPoint": 1907,
-			"meltingDuration": 30,
-			"smeltedRatio": 20,
-			"smeltedStack": {
-				"type": "item",
-				"code": "corruptingot-chromium"
-			}
-		},
-		"*-platinum": {
-			"meltingPoint": 1770,
-			"meltingDuration": 30,
-			"smeltedRatio": 20,
-			"smeltedStack": {
-				"type": "item",
-				"code": "corruptingot-platinum"
-			}
-		},
-		"*-ilmenite": {
-			"meltingPoint": 1668,
-			"meltingDuration": 30,
-			"smeltedRatio": 20,
-			"smeltedStack": {
-				"type": "item",
-				"code": "corruptingot-titanium"
-			}
-		},
-		"*-sphalerite": {
-			"meltingPoint": 419,
-			"meltingDuration": 30,
-			"smeltedRatio": 20,
-			"smeltedStack": {
-				"type": "item",
-				"code": "corruptingot-zinc"
-			}
-		},
-		"*-nativesilver": {
-			"meltingPoint": 961,
-			"meltingDuration": 30,
-			"smeltedRatio": 20,
-			"smeltedStack": {
-				"type": "item",
-				"code": "corruptingot-silver"
-			}
-		},
 		"*-bismuthinite": {
 			"meltingPoint": 271,
 			"meltingDuration": 30,
@@ -341,24 +181,6 @@
 			"smeltedStack": {
 				"type": "item",
 				"code": "corruptingot-bismuth"
-			}
-		},
-		"*-magnetite": {
-			"meltingPoint": 1482,
-			"meltingDuration": 30,
-			"smeltedRatio": 20,
-			"smeltedStack": {
-				"type": "item",
-				"code": "game:ironbloom"
-			}
-		},
-		"*-pentlandite": {
-			"meltingPoint": 1325,
-			"meltingDuration": 30,
-			"smeltedRatio": 20,
-			"smeltedStack": {
-				"type": "item",
-				"code": "corruptingot-nickel"
 			}
 		}
 	},

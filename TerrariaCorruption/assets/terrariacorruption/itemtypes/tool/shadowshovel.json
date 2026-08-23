@@ -31,7 +31,7 @@
 	"attributes": {
 		"attachableToEntity": { "categoryCode": "toolholding" },
 		"groundStorageTransformByType": {
-			"@shovel-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+			"@shadowshovel-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
 				"translation": {
 					"x": 0,
 					"y": 0.59,
@@ -88,8 +88,7 @@
 				"tinbronze",
 				"bismuthbronze",
 				"blackbronze",
-				"meteoriciron",
-				"steel"
+				"meteoriciron"
 			]
 		}
 	],
@@ -136,8 +135,11 @@
 		"shadowshovel-peridotite": {
 			"material": { "base": "block/stone/rock/{material}1" }
 		},
+		"shadowshovel-meteoriciron": {
+			"material": { "base": "block/metal/ingot/demonite" }
+		},
 		"*": {
-			"material": { "base": "game:block/metal/ingot/{material}" }
+			"material": { "base": "block/metal/ingot/{material}" }
 		}
 	},
 	"miningspeedbytype": {
@@ -212,12 +214,6 @@
 			"sand": 6.5,
 			"gravel": 4.2,
 			"snow": 4.2
-		},
-		"shadowshovel-steel": {
-			"soil": 7,
-			"sand": 7,
-			"gravel": 4.4,
-			"snow": 4.4
 		}
 	},
 	"attackpowerbytype": {
@@ -231,7 +227,7 @@
 		"shadowshovel-flint": 1,
 		"shadowshovel-copper": 1.25,
 		"shadowshovel-bismuthbronze": 1.5,
-		"shovel-tinbronze": 1.75,
+		"shadowshovel-tinbronze": 1.75,
 		"shadowshovel-blackbronze": 2,
 		"shadowshovel-meteoriciron": 2.35,
 		"shadowshovel-steel": 2.5
@@ -257,7 +253,7 @@
 		"tools": [ "*" ]
 	},
 	"guiTransformByType": {
-		"@shadowshovel-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+		"@shadowshovel-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": {
 			"rotation": {
 				"x": -115,
 				"y": -28,

@@ -43,6 +43,7 @@
 	],
 	"shape": { "base": "game:item/stonebrick" },
 	"attributes": {
+		"isCorrupt": true,
 		"displaycaseable": true,
 		"shelvable": true,
 		"displayable": {
@@ -67,9 +68,9 @@
 		}
 	},
 	"textures": {
-		"rock": { "base": "game:block/stone/brick/{rock}1" },
-		"material": { "base": "game:block/stone/brick/{rock}1" },
-		"top": { "base": "game:block/stone/brick/{rock}1" }
+		"rock": { "base": "block/stone/brick/{rock}1" },
+		"material": { "base": "block/stone/brick/{rock}1" },
+		"top": { "base": "block/stone/brick/{rock}1" }
 	},
 	"creativeinventory": {
 		"general": [ "*" ],

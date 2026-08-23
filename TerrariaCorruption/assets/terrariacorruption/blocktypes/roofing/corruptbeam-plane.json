@@ -43,7 +43,7 @@
 	},
 	"texturesByType": {
 		"beam-plane-slate-*": {
-			"material": { "base": "game:block/stone/shingles/slate*" }
+			"material": { "base": "block/stone/shingles/slate*" }
 		},
 		"beam-plane-thatch-*": {
 			"top": { "base": "game:block/plant/grassroofing/normal-side" },

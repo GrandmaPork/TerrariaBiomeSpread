@@ -1,0 +1,284 @@
+{
+	"code": "corruptore",
+	// BlockOre only contains a few lines of code to replace flint ore into plain stone
+	"class": "BlockOre",
+	"classbyType": {
+		"ore-bituminouscoal-*": "BlockBituCoal",
+		"ore-anthracite-*": "BlockBituCoal"
+	},
+	"blockmaterial": "Ore",
+	"attributes": {
+		"isCorrupt": true,
+		"mapColorCode": "land",
+		"propickable": true,
+		"handbook": {
+			"groupBy": [ "ore-{type}-*" ]
+		}
+	},
+	"behaviors": [
+		{ "name": "BreakIfFloating" },
+		{ "name": "UnstableRock" }
+	],
+	"variantgroups": [
+		{
+			"code": "type",
+			"states": [ "flint" ],
+			"loadFromProperties": "block/ore-ungraded"
+		},
+		{
+			"code": "rock",
+			"loadFromProperties": "terrariacorruption:block/corruptrockwithdeposit"
+		}
+	],
+	"skipVariants": [
+		"corruptore-flint-suevite",
+		"corruptore-flint-halite",
+		"corruptore-flint-alum",
+		"corruptore-flint-whitemarble",
+		"corruptore-flint-redmarble",
+		"corruptore-flint-greenmarble",
+		"corruptore-flint-scoria",
+		"corruptore-flint-tuff",
+		"corruptore-flint-obsidian"
+	],
+	"allowedVariants": [
+		"corruptore-flint-*",
+		"corruptore-quartz-andesite",
+		"corruptore-quartz-granite",
+		"corruptore-quartz-basalt",
+		"corruptore-quartz-peridotite",
+		"corruptore-quartz-claystone",
+		"corruptore-quartz-sandstone",
+		"corruptore-quartz-shale",
+		"corruptore-quartz-chalk",
+		"corruptore-quartz-limestone",
+		"corruptore-quartz-chert",
+		"corruptore-quartz-conglomerate",
+		"corruptore-quartz-phyllite",
+		"corruptore-quartz-slate",
+		"corruptore-quartz_wolframite-granite",
+		"corruptore-alum-claystone",
+		"corruptore-alum-sandstone",
+		"corruptore-alum-shale",
+		"corruptore-alum-chalk",
+		"corruptore-alum-limestone",
+		"corruptore-alum-chert",
+		"corruptore-alum-conglomerate",
+		"corruptore-stibnite-limestone",
+		"corruptore-lignite-claystone",
+		"corruptore-lignite-sandstone",
+		"corruptore-lignite-shale",
+		"corruptore-lignite-chalk",
+		"corruptore-lignite-limestone",
+		"corruptore-lignite-chert",
+		"corruptore-lignite-conglomerate",
+		"corruptore-bituminouscoal-claystone",
+		"corruptore-bituminouscoal-sandstone",
+		"corruptore-bituminouscoal-shale",
+		"corruptore-bituminouscoal-chalk",
+		"corruptore-bituminouscoal-limestone",
+		"corruptore-bituminouscoal-chert",
+		"corruptore-bituminouscoal-conglomerate",
+		"corruptore-anthracite-claystone",
+		"corruptore-anthracite-sandstone",
+		"corruptore-anthracite-shale",
+		"corruptore-anthracite-chalk",
+		"corruptore-anthracite-limestone",
+		"corruptore-anthracite-chert",
+		"corruptore-anthracite-conglomerate",
+		"corruptore-sulfur-claystone",
+		"corruptore-sulfur-sandstone",
+		"corruptore-sulfur-shale",
+		"corruptore-sulfur-chalk",
+		"corruptore-sulfur-limestone",
+		"corruptore-sulfur-chert",
+		"corruptore-sulfur-conglomerate",
+		"corruptore-sylvite-halite",
+		"corruptore-borax-claystone",
+		"corruptore-borax-sandstone",
+		"corruptore-borax-shale",
+		"corruptore-borax-chalk",
+		"corruptore-borax-limestone",
+		"corruptore-borax-chert",
+		"corruptore-borax-conglomerate",
+		"corruptore-kernite-claystone",
+		"corruptore-kernite-sandstone",
+		"corruptore-kernite-shale",
+		"corruptore-kernite-chalk",
+		"corruptore-kernite-limestone",
+		"corruptore-kernite-chert",
+		"corruptore-kernite-conglomerate",
+		"corruptore-graphite-phyllite",
+		"corruptore-graphite-slate",
+		"corruptore-graphite-whitemarble",
+		"corruptore-graphite-redmarble",
+		"corruptore-graphite-greenmarble",
+		"corruptore-cinnabar-andesite",
+		"corruptore-cinnabar-granite",
+		"corruptore-cinnabar-basalt",
+		"corruptore-cinnabar-peridotite",
+		"corruptore-cinnabar-phyllite",
+		"corruptore-cinnabar-slate",
+		"corruptore-corundum-peridotite",
+		"corruptore-corundum-phyllite",
+		"corruptore-corundum-slate",
+		"corruptore-corundum-whitemarble",
+		"corruptore-corundum-redmarble",
+		"corruptore-corundum-greenmarble",
+		"corruptore-lapislazuli-limestone",
+		"corruptore-lapislazuli-bauxite",
+		"corruptore-lapislazuli-whitemarble",
+		"corruptore-lapislazuli-redmarble",
+		"corruptore-lapislazuli-greenmarble",
+		"corruptore-olivine-peridotite",
+		"corruptore-fluorite-claystone",
+		"corruptore-fluorite-sandstone",
+		"corruptore-fluorite-shale",
+		"corruptore-fluorite-chalk",
+		"corruptore-fluorite-limestone",
+		"corruptore-fluorite-chert",
+		"corruptore-fluorite-conglomerate",
+		"corruptore-fluorite-phyllite",
+		"corruptore-fluorite-slate",
+		"corruptore-phosphorite-claystone",
+		"corruptore-phosphorite-sandstone",
+		"corruptore-phosphorite-shale",
+		"corruptore-phosphorite-chalk",
+		"corruptore-phosphorite-limestone",
+		"corruptore-phosphorite-chert",
+		"corruptore-phosphorite-conglomerate"
+	],
+	"creativeinventory": {
+		"general": [ "*" ],
+		"terrain": [ "*" ]
+	},
+	"storageFlags": 5,
+	"shape": { "base": "game:block/basic/cube" },
+	"drawtype": "cube",
+	"textures": {
+		"all": {
+			"base": "block/stone/rock/{rock}1",
+			"overlaysByType": {
+				"*-flint-*": [ "block/stone/ore/{type}1" ],
+				"*":  [ "game:block/stone/ore/{type}1"]
+			},
+			"alternates": [
+				{
+					"base": "block/stone/rock/{rock}1",
+					"overlaysByType": {
+						"*-flint-*": [ "block/stone/ore/{type}2" ],
+						"*": [ "game:block/stone/ore/{type}2" ]
+					}
+				},
+				{
+					"base": "block/stone/rock/{rock}1",
+					"overlaysByType": {
+						"*-flint-*": [ "block/stone/ore/{type}3" ],
+						"*": [ "game:block/stone/ore/{type}3" ]
+					}
+				}
+			]
+		}
+	},
+	"replaceable": 100,
+	"resistance": 8,
+	"sounds": {
+		"walk": "game:walk/stone",
+		"byTool": {
+			"Pickaxe": {
+				"hit": "game:block/rock-hit-pickaxe",
+				"break": "game:block/rock-break-pickaxe"
+			}
+		}
+	},
+	"requiredMiningTierByType": {
+		"corruptore-flint-*": 2,
+		"corruptore-lignite-*": 2,
+		"corruptore-bituminouscoal-*": 3,
+		"corruptore-anthracite-*": 3,
+		"corruptore-borax-*": 3,
+		"corruptore-cinnabar-*": 3,
+		"corruptore-sylvite-*": 2,
+		"corruptore-lapislazuli-*": 2,
+		"corruptore-corundum-*": 2,
+		"corruptore-diamond-*": 4,
+		"corruptore-emerald-*": 4,
+		"corruptore-bismuthinite-*": 2,
+		"corruptore-quartz-*": 3,
+		"corruptore-olivine-*": 3,
+		"corruptore-graphite-*": 3,
+		"corruptore-kernite-*": 3,
+		"corruptore-fluorite-*": 3,
+		"corruptore-phosphorite-*": 3,
+		"corruptore-alum-*": 2,
+		"corruptore-sulfur-*": 2
+	},
+	"dropsByType": {
+		"corruptore-quartz-*": [
+			{
+				"type": "item",
+				"code": "game:clearquartz",
+				"quantity": {
+					"avg": 0.2,
+					"var": 0
+				},
+				"lastDrop": true
+			},
+			{
+				"type": "item",
+				"code": "game:ore-quartz",
+				"quantity": {
+					"avg": 1.25,
+					"var": 0
+				}
+			}
+		],
+		"corruptore-flint-*": [
+			{
+				"type": "item",
+				"code": "corruptflint",
+				"quantity": {
+					"avg": 1.5,
+					"var": 0
+				},
+				"lastDrop": true
+			}
+		],
+		"corruptore-sylvite-*": [
+			{
+				"type": "item",
+				"code": "game:ore-{type}",
+				"quantity": {
+					"avg": 2.5,
+					"var": 0.25
+				}
+			}
+		],
+		"*": [
+			{
+				"type": "item",
+				"code": "game:ore-{type}",
+				"quantity": {
+					"avg": 1.25,
+					"var": 0
+				}
+			}
+		]
+	},
+	"heldTpIdleAnimation": "holdbothhandslarge",
+	"heldRightReadyAnimation": "heldblockready",
+	"heldTpUseAnimation": "twohandplaceblock",
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.23,
+			"y": -0.91,
+			"z": -0.8
+		},
+		"rotation": {
+			"x": -2,
+			"y": 25,
+			"z": -78
+		},
+		"scale": 0.4
+	}
+}

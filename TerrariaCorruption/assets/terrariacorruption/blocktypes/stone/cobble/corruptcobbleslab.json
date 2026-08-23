@@ -29,7 +29,7 @@
 			"states": [ "free", "snow" ]
 		}
 	],
-	"skipVariants": [ "*-obsidian-*", "*-halite-*", "*-scoria-*", "*-tuff-*", "cobblestoneslab-travertine-*", "*-up-snow" ],
+	"skipVariants": [ "*-obsidian-*", "*-halite-*", "*-scoria-*", "*-tuff-*", "corruptcobblestoneslab-travertine-*", "*-up-snow" ],
 	"attributes": {
 		"isCorrupt": true,
 		"mapColorCode": "settlement",
@@ -50,14 +50,14 @@
 		"general": [ "*-down-free" ],
 		"construction": [ "*-down-free" ]
 	},
-	"drops": [ { "code": "game:cobblestoneslab-{rock}-down-free" } ],
+	"drops": [ { "code": "corruptcobblestoneslab-{rock}-down-free" } ],
 	"shapeByType": {
 		"*-snow": { "base": "game:block/basic/slab/snow-slab-{rot}" },
 		"*": { "base": "game:block/basic/slab/slab-{rot}" }
 	},
 	"textures": {
-		"horizontals": { "base": "game:block/stone/cobblestonestairs/{rock}" },
-		"verticals": { "base": "game:block/stone/cobblestone/{rock}1" }
+		"horizontals": { "base": "block/stone/cobblestone/{rock}*" },
+		"verticals": { "base": "block/stone/cobblestone/{rock}1" }
 	},
 	"sideSolidOpaqueAoByType": {
 		"*-north-*": {

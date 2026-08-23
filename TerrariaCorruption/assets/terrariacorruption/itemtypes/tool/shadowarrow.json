@@ -4,14 +4,14 @@
 	"variantgroups": [
 		{
 			"code": "material",
-			"states": [ "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "meteoriciron", "steel", "obsidian" ]
+			"states": [ "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "meteoriciron", "obsidian" ]
 		}
 	],
 	"maxstacksize": 64,
 	"storageFlags": 513,
 	"shapeByType": {
-		"arrow-flint": { "base": "game:item/tool/arrow-stone" },
-		"arrow-obsidian": { "base": "game:item/tool/arrow-stone" },
+		"shadowarrow-flint": { "base": "game:item/tool/arrow-stone" },
+		"shadowarrow-obsidian": { "base": "game:item/tool/arrow-stone" },
 		"*": { "base": "game:item/tool/arrow-copper" }
 	},
 	"texturesByType": {
@@ -24,8 +24,11 @@
 		"*-obsidian": {
 			"material": { "base": "block/stone/rock/obsidian1" }
 		},
+		"*-meteoriciron": {
+			"material": { "base": "block/metal/ingot/demonite" }
+		},
 		"*": {
-			"material": { "base": "game:block/metal/ingot/{material}" }
+			"material": { "base": "block/metal/ingot/{material}" }
 		}
 	},
 	"creativeinventory": {
@@ -78,8 +81,8 @@
 		"scale": 2.64
 	},
 	"attributes": {
-		"arrowEntityCodeByType": {
-			"*": "arrow-{material}"
+		"shadowarrowEntityCodeByType": {
+			"*": "terrariacorruption:shadowarrow-{material}"
 		},
 		"damageByType": {
 			"*-flint": -0.25,
@@ -88,8 +91,7 @@
 			"*-tinbronze": 1.5,
 			"*-bismuthbronze": 1.5,
 			"*-blackbronze": 2,
-			"*-meteoriciron": 2.75,
-			"*-steel": 3
+			"*-meteoriciron": 2.75
 		},
 		"breakChanceOnImpactByType": {
 			"*-flint": 0.025,
@@ -98,8 +100,7 @@
 			"*-tinbronze": 0.0125,
 			"*-bismuthbronze": 0.0125,
 			"*-blackbronze": 0.01,
-			"*-meteoriciron": 0.01,
-			"*-steel": 0.007
+			"*-meteoriciron": 0.01
 		},
 		"handbook": {
 			"groupBy": [ "arrow-*" ]

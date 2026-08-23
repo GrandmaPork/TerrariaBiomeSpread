@@ -20,15 +20,15 @@
 	"blockmaterial": "Stone",
 	"textures": {
 		"all": {
-			"base": "game:block/stone/cobblestone/{rock}1",
+			"base": "block/stone/cobblestone/{rock}1",
 			"overlays": [ "game:block/overlay/moss1" ],
 			"alternates": [
 				{
-					"base": "game:block/stone/cobblestone/{rock}2",
+					"base": "block/stone/cobblestone/{rock}2",
 					"overlays": [ "game:block/overlay/moss2" ]
 				},
 				{
-					"base": "game:block/stone/cobblestone/{rock}3",
+					"base": "block/stone/cobblestone/{rock}3",
 					"overlays": [ "game:block/overlay/moss3" ]
 				}
 			]

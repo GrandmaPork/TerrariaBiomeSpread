@@ -3,7 +3,7 @@
 	"variantgroups": [
 		{
 			"code": "material",
-			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "meteoriciron", "steel" ]
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "meteoriciron"]
 		}
 	],
 	"behaviorsByType": {
@@ -66,8 +66,13 @@
 			"string": { "base": "game:block/transparent" },
 			"handle": { "base": "game:block/transparent" }
 		},
+		"shadowaxehead-meteoriciron": {
+			"material": { "base": "block/metal/ingot/demonite" },
+			"string": { "base": "game:block/transparent" },
+			"handle": { "base": "game:block/transparent" }
+		},
 		"*": {
-			"material": { "base": "game:block/metal/ingot/{material}" },
+			"material": { "base": "block/metal/ingot/{material}" },
 			"string": { "base": "game:block/transparent" },
 			"handle": { "base": "game:block/transparent" }
 		}
@@ -91,7 +96,7 @@
 			}
 		},
 		"forgableByType": {
-			"@shadowaxehead-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": true,
+			"@shadowaxehead-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": true,
 			"*": false
 		},
 		"onTongTransformByType": {
@@ -107,7 +112,7 @@
 					"z": 85
 				}
 			},
-			"@shadowaxehead-(meteoriciron|steel)": {
+			"shadowaxehead-meteoriciron": {
 				"translation": {
 					"x": -1.4,
 					"y": -0.9,
@@ -151,7 +156,7 @@
 					"z": 0.5
 				}
 			},
-			"@shadowaxehead-(meteoriciron|steel)": {
+			"@shadowaxehead-(meteoriciron)": {
 				"translation": {
 					"x": -1.27,
 					"y": -0.12,
@@ -199,7 +204,7 @@
 					"z": 0.5
 				}
 			},
-			"@*-(meteoriciron|steel)": {
+			"@*-(meteoriciron)": {
 				"translation": {
 					"x": -0.55,
 					"y": 0,
@@ -245,7 +250,7 @@
 						"height": 2,
 						"length": 6
 					},
-					"@*-(meteoriciron|steel)": {
+					"@*-(meteoriciron)": {
 						"width": 8,
 						"height": 2,
 						"length": 6

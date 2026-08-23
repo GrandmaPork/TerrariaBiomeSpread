@@ -3,7 +3,7 @@
 	"variantgroups": [
 		{
 			"code": "material",
-			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "meteoriciron", "steel" ]
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "meteoriciron"]
 		}
 	],
 	"behaviorsByType": {
@@ -58,8 +58,13 @@
 		"@shadowknifeblade-(chert|flint|granite|andesite|basalt|obsidian|peridotite)": {
 			"material": { "base": "block/stone/rock/{material}1" }
 		},
+		"shadowknifeblade-meteoriciron": {
+			"material": { "base": "block/metal/ingot/demonite" },
+			"string": { "base": "game:block/transparent" },
+			"handle": { "base": "game:block/transparent" }
+		},
 		"*": {
-			"material": { "base": "game:block/metal/ingot/{material}" },
+			"material": { "base": "block/metal/ingot/{material}" },
 			"string": { "base": "game:block/transparent" },
 			"handle": { "base": "game:block/transparent" }
 		}

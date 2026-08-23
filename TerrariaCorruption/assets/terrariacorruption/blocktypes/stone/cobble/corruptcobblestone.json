@@ -21,7 +21,7 @@
 	"drawtype": "cube",
 	"blockmaterial": "Stone",
 	"textures": {
-		"all": { "base": "game:block/stone/cobblestone/{rock}*" }
+		"all": { "base": "block/stone/cobblestone/{rock}*" }
 	},
 	"replaceable": 140,
 	"fertility": 0,

@@ -1,0 +1,67 @@
+{
+  "code": "shadowarrow",
+  "class": "EntityProjectile",
+  "tags": [ "inanimate", "projectile" ],
+  "variantgroups": [
+    {
+      "code": "material",
+      "states": [ "crude", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "demonite", "obsidian" ]
+    }
+  ],
+  "attributes": {
+    "isCorrupt": true,
+    "isProjectile": true
+  },
+  "hitboxSize": {
+    "x": 0.1,
+    "y": 0.1
+  },
+  "behaviorConfigs": {
+    "passivephysics": {
+      "groundDragFactor": 1,
+      "airDragFactor": 0.25,
+      "gravityFactor": 0.75
+    }
+  },
+  "client": {
+    "size": 0.75,
+    "renderer": "Shape",
+    "shapeByType": {
+      "shadowarrow-crude": { "base": "game:entity/nonliving/projectile/arrow/crude" },
+      "shadowarrow-flint": { "base": "game:entity/nonliving/projectile/arrow/stone" },
+      "shadowarrow-obsidian": { "base": "game:entity/nonliving/projectile/arrow/stone" },
+      "shadowarrow-gold": { "base": "game:entity/nonliving/projectile/arrow/gold" },
+      "shadowarrow-silver": { "base": "game:entity/nonliving/projectile/arrow/silver" },
+      "shadowarrow-bone": { "base": "game:entity/nonliving/projectile/arrow/bowtorn" },
+      "*": { "base": "game:entity/nonliving/projectile/arrow/copper" }
+    },
+    "texturesByType": {
+      "shadowarrow-crude": {},
+      "shadowarrow-flint": {
+        "material": { "base": "block/stone/flint" }
+      },
+      "shadowarrow-obsidian": {
+        "material": { "base": "block/stone/rock/obsidian1" }
+      },
+      "*": {
+        "material": { "base": "block/metal/ingot/{material}" }
+      }
+    },
+    "behaviors": [
+      { "code": "passivephysics" },
+      { "code": "interpolateposition" }
+    ]
+  },
+  "server": {
+    "behaviors": [
+      { "code": "passivephysics" },
+      {
+        "code": "despawn",
+        "minSeconds": 600
+      },
+      { "code": "entitystatetags" }
+    ]
+  },
+  "sounds": {
+  }
+}

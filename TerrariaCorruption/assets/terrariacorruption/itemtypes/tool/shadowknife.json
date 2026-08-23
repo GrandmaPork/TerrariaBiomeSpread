@@ -106,7 +106,7 @@
 			}
 		},
 		"groundStorageTransformByType": {
-			"@shadowknife-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+			"@shadowknife-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": {
 				"translation": {
 					"x": 0,
 					"y": 0.01,
@@ -188,7 +188,7 @@
 		"displayable": {
 			"shelf": {
 				"sizeByType": {
-					"@*-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+					"@*-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": {
 						"width": 2,
 						"height": 1,
 						"length": 8
@@ -200,7 +200,7 @@
 					}
 				},
 				"transformByType": {
-					"@*-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+					"@*-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": {
 						"translation": {
 							"x": -0.05,
 							"y": -0.07,
@@ -286,7 +286,6 @@
 				"bismuthbronze",
 				"blackbronze",
 				"meteoriciron",
-				"steel",
 				"bonechert",
 				"bonegranite",
 				"boneandesite",
@@ -298,7 +297,7 @@
 		}
 	],
 	"skipVariants": [
-		"knife-generic-ruined"
+		"shadowknife-generic-ruined"
 	],
 	"allowedVariants": [
 		"shadowknife-generic-*",
@@ -369,8 +368,11 @@
 			"material": { "base": "block/stone/flint" },
 			"handle": { "base": "game:block/creature/bone-yellow" }
 		},
+		"shadowknife-generic-meteoriciron": {
+			"material": { "base": "block/metal/ingot/demonite" }
+		},
 		"shadowknife-generic-*": {
-			"material": { "base": "game:block/metal/ingot/{material}" }
+			"material": { "base": "block/metal/ingot/{material}" }
 		}
 	},
 	"durabilitybytype": {
@@ -489,7 +491,7 @@
 		"tools": [ "*" ]
 	},
 	"guiTransformByType": {
-		"knife-dagger-ruined": {
+		"shadowknife-dagger-ruined": {
 			"translation": {
 				"x": 0,
 				"y": 0,
@@ -507,7 +509,7 @@
 			},
 			"scale": 1.84
 		},
-		"knife-stiletto-ruined": {
+		"shadowknife-stiletto-ruined": {
 			"translation": {
 				"x": 0,
 				"y": 0,
@@ -525,7 +527,7 @@
 			},
 			"scale": 2.25
 		},
-		"knife-khanjar-ruined": {
+		"shadowknife-khanjar-ruined": {
 			"translation": {
 				"x": 0,
 				"y": 0,
@@ -543,7 +545,7 @@
 			},
 			"scale": 1.8
 		},
-		"knife-baselard-ruined": {
+		"shadowknife-baselard-ruined": {
 			"translation": {
 				"x": 0,
 				"y": 0,
@@ -600,7 +602,7 @@
 		"scale": 3.6
 	},
 	"tpHandTransformByType": {
-		"knife-dagger-ruined": {
+		"shadowknife-dagger-ruined": {
 			"translation": {
 				"x": -0.82,
 				"y": -0.04,
@@ -613,7 +615,7 @@
 			},
 			"scale": 0.9
 		},
-		"knife-stiletto-ruined": {
+		"shadowknife-stiletto-ruined": {
 			"translation": {
 				"x": -0.63,
 				"y": 0.01,
@@ -626,7 +628,7 @@
 			},
 			"scale": 1
 		},
-		"knife-baselard-ruined": {
+		"shadowknife-baselard-ruined": {
 			"translation": {
 				"x": -0.66,
 				"y": -0.01,

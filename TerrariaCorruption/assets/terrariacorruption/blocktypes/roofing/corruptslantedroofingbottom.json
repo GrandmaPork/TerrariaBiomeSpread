@@ -125,7 +125,7 @@
 	},
 	"texturesByType": {
 		"*-slate-*": {
-			"material": { "base": "game:block/stone/shingles/slate*" }
+			"material": { "base": "block/stone/shingles/slate*" }
 		},
 		"*-thatch-*": {
 			"normal-top": { "base": "game:block/hay/normal-top" },
@@ -291,19 +291,6 @@
 				"x": 0.5299,
 				"y": 0.35,
 				"z": 0.66
-			},
-			"scale": 0.92
-		},
-		"*-agedthatch-*": {
-			"rotation": {
-				"x": -22.6,
-				"y": -40,
-				"z": 0
-			},
-			"origin": {
-				"x": 0.29,
-				"y": 0.44,
-				"z": 0.54
 			},
 			"scale": 0.92
 		},
