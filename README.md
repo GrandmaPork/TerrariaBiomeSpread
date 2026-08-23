@@ -34,7 +34,7 @@ Caption: Barren trees
 Caption: Planks on da frontier
 
 # Credits
-## Thank you to takeothewolf! They made the following 359 textures:
+## Thank you to takeothewolf! They made the following 962 textures:
 11 in: `block/liquid/ice`
 - (All 11 textures)
 
@@ -60,22 +60,32 @@ Caption: Planks on da frontier
 1 in: `block/soil`
 - muddygravel
 
-15 in: `block/stone/gravel`
-- (all 15 textures)
-
-100 in: `block/stone/rock`
-- (all 100 textures)
-
-15 in: `block/stone/rock`
-- (all 15 textures)
-- 
+603 in: `block/stone`
+- (All 80 `/agedbrick` textures)
+- (All 49 `/brick` textures)
+- (All 14 `/cobbleskull` textures)
+- (All 115 `/cobblestone` textures)
+- (All 80 `/fanned` textures)
+- (All 19 `/cobblestoneslab` textures)
+- (All 192 `/drystone` textures)
+- (All 48 `/drystonefence` textures)
+- (All 3 `/shingle` textures)
+- demonite
+- rocksaltlamp
+- rubble
+  
+130 in: `block/stone/rock`
+- (all 100 `/rock` textures)
+- (all 15 `/gravel`textures)
+- (all 15 `/sand` textures)
+  
 90 in: `block/wood/bark`
-- (all 26 bark textures)
-- (all 64 quad textures)
+- (all 26 `/bark` textures)
+- (all 64 `/quad` textures)
 
 11 in `block/wood/bark/cabinet`
-- (all 7 1block textures)
-- (all 4 2block textures)
+- (all 7 `/1block` textures)
+- (all 4 `/2block` textures)
 
 9 in `block/wood/carved/acacia/normal`
 - (all 9 textures)
@@ -89,20 +99,14 @@ Caption: Planks on da frontier
 1 in `block/wood/door/sleek`
 - ebonwood
 
-8 in `block/wood/path`
-- (all 8 textures)
-
-6 in `block/wood/planks`
-- (all 6 textures)
-
-2 in `block/wood/roughfence`
-- (both ebonwood textures)
-
-2 in `block/wood/shingles`
-- (both ebonwood textures)
+18 in `block/wood`
+- (all `/6 plank` textures)
+- (all `/8 path` textures)
+- (both `/roughfence` textures)
+- (both `/shingles` textures)
 
 35 in `block/wood/treetrunk`
-- (all 13 bark textures)
-- (all 8 quad textures)
-- (the one fruit texture)
-- (all 13 debarked textures)
+- (all 13 `/bark` textures)
+- (all 8 `/quad` textures)
+- (the one `/fruit` texture)
+- (all 13 `/debarked` textures)
