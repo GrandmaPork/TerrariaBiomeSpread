@@ -83,7 +83,7 @@
     },
     {
       "type": "block",
-      "code": "ethoslab",
+      "code": "game:ethoslab",
       "quantity": { "avg": 0.000001 }
     }
   ],

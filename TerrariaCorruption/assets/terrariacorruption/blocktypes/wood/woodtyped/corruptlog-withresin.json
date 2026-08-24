@@ -32,6 +32,7 @@
 	},
 	"attributesByType": {
 		"corruptlog-resinharvested-*": {
+			"isCorrupt": true,
 			"transientProps": {
 				"convertFrom": "corruptlog-resinharvested-{wood}-ud",
 				"convertTo": "corruptlog-resin-{wood}-ud",
@@ -42,6 +43,7 @@
 			"treeFellingGroupSpreadIndex": 3
 		},
 		"*": {
+			"isCorrupt": true,
 			"preventsDecay": true,
 			"forageStatAffected": true,
 			"treeFellingGroupCode": "{wood}",
@@ -167,7 +169,7 @@
 	"drops": [
 		{
 			"type": "block",
-			"code": "log-placed-{wood}-ud",
+			"code": "corruptlog-placed-{wood}-ud",
 			"quantity": { "avg": 1 }
 		}
 	],

@@ -3,6 +3,7 @@
   // BlockLeaves contains some code for map color tinting, stuff for wind affectedness and random testForDecay server block ticks
   "class": "Block",
   "attributes": {
+    "isCorrupt": true,
     "fenceConnect": {
       "north": false,
       "east": false,
@@ -94,7 +95,7 @@
   "drops": [
     {
       "type": "item",
-      "code": "stick",
+      "code": "game:stick",
       "quantity": {
         "avg": 1,
         "var": 0

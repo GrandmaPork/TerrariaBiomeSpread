@@ -10,6 +10,7 @@
 	"class": "BlockRequireSolidGround",
 	"replaceable": 6500,
 	"attributes": {
+		"isCorrupt": true,
 		"placeSound": "game:sounds/block/loosestick",
 		"forageStatAffected": true
 	},
@@ -36,16 +37,7 @@
 	"blockmaterial": "Wood",
 	"randomizeRotations": true,
 	"resistance": 0.15,
-	"drops": [
-		{
-			"type": "item",
-			"code": "stick",
-			"quantity": {
-				"avg": 1,
-				"var": 0
-			}
-		}
-	],
+	"drops": [],
 	"rainPermeableByType": {
 		"*-free": true,
 		"*": false

@@ -23,7 +23,7 @@
     "preventsDecay": true,
     "allowUnstablePlacement": true,
     "pannable": true,
-    "pannedBlock": "sand-{rock}-7"
+    "pannedBlock": "corruptsand-{rock}-7"
   },
   "shape": { "base": "game:block/basic/cube" },
   "textures": {
@@ -43,7 +43,7 @@
   "drops": [
     {
       "type": "block",
-      "code": "sand-{rock}",
+      "code": "corruptsand-{rock}",
       "quantity": {
         "avg": 1,
         "var": 0

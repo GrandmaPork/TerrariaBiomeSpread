@@ -145,21 +145,21 @@
 			"*-cloudberry-*": [
 				{
 					"type": "item",
-					"code": "fruit-{type}",
+					"code": "game:fruit-{type}",
 					"quantity": { "avg": 2.75 }
 				}
 			],
 			"*-strawberry-*": [
 				{
 					"type": "item",
-					"code": "fruit-{type}",
+					"code": "game:fruit-{type}",
 					"quantity": { "avg": 2.75 }
 				}
 			],
 			"*": [
 				{
 					"type": "item",
-					"code": "fruit-{type}",
+					"code": "game:fruit-{type}",
 					"quantity": { "avg": 5.5 }
 				}
 			]
@@ -704,7 +704,7 @@
 	"drops": [
 		{
 			"type": "item",
-			"code": "plantdebris-leafy",
+			"code": "game:plantdebris-leafy",
 			"quantity": { "avg": 3 }
 		}
 	],

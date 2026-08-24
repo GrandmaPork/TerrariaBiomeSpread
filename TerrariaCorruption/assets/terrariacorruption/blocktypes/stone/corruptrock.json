@@ -86,7 +86,7 @@
       },
       {
         "type": "item",
-        "code": "gem-diamond-rough",
+        "code": "game:gem-diamond-rough",
         "attributes": { "potential": "low" },
         "quantity": {
           "avg": 0.005,

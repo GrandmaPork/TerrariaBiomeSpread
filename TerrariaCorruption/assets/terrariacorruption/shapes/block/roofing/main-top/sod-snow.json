@@ -6,14 +6,19 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textureSizes": {
-		"normal": [32,16],
-		"short-south": [24,24],
-		"short-north": [24,24],
-		"aged1": [16,16]
+		"normal": [ 32, 16 ],
+		"short-south": [ 24, 24 ],
+		"short-north": [ 24, 24 ],
+		"aged1": [ 16, 16 ],
+		"aged-side": [ 16, 16 ],
+		"aged-top": [ 16, 16 ]
 	},
 	"textures": {
 		"normal1": "game:block/liquid/snow/normal1",
-		"normal": "block/plant/grasscoverage/normal"
+		"normal": "block/plant/grasscoverage/normal",
+		"aged1": "block/wood/planks/ebonwood1",
+		"aged-side": "block/wood/shingles/ebonwood-side",
+		"aged-top": "block/wood/shingles/ebonwood-top"
 	},
 	"elements": [
 		{

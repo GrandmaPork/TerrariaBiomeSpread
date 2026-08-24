@@ -113,10 +113,10 @@
       "*": { "base": "game:block/plant/leaves/large/{wood}*" }
     },
     "smallleavesByType": {
-      "*-larch": { "base": "terrariacorruption:block/plant/leaves/small/pine*" },
-      "*-redwood": { "base": "terrariacorruption:block/plant/leaves/small/pine*" },
-      "*-crimsonkingmaple": { "base": "terrariacorruption:block/plant/leaves/small/maple*" },
-      "*": { "base": "terrariacorruption:block/plant/leaves/small/{wood}*" }
+      "*-larch": { "base": "block/plant/leaves/small/pine*" },
+      "*-redwood": { "base": "block/plant/leaves/small/pine*" },
+      "*-crimsonkingmaple": { "base": "block/plant/leaves/small/maple*" },
+      "*": { "base": "game:block/plant/leaves/small/{wood}*" }
     }
   },
   "sideopaque": {
@@ -139,47 +139,9 @@
   "drops": [
     {
       "type": "item",
-      "code": "treeseed-{wood}",
-      "quantityByType": {
-        "*-pine": {
-          "avg": 0.05,
-          "var": 0
-        },
-        "*-acacia": {
-          "avg": 0.05,
-          "var": 0
-        },
-        "*-larch": {
-          "avg": 0.01,
-          "var": 0
-        },
-        "*-crimsonkingmaple": {
-          "avg": 0.01,
-          "var": 0
-        },
-        "*-redwood": {
-          "avg": 0.002,
-          "var": 0
-        },
-        "*-ebony": {
-          "avg": 0.004,
-          "var": 0
-        },
-        "*-purpleheart": {
-          "avg": 0.004,
-          "var": 0
-        },
-        "*": {
-          "avg": 0.02,
-          "var": 0
-        }
-      }
-    },
-    {
-      "type": "item",
-      "code": "stick",
+      "code": "game:stick",
       "quantity": {
-        "avg": 0.02,
+        "avg": 0.06,
         "var": 0
       }
     }

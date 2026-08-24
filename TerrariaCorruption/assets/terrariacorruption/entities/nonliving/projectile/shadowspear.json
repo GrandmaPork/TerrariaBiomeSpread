@@ -57,7 +57,7 @@
 				"stone": { "base": "block/stone/{material}" }
 			},
 			"shadowspear-generic-meteoriciron": {
-				"stone": { "base": "block/stone/demonite" }
+				"stone": { "base": "block/metal/ingot/demonite" }
 			},
 			"@shadowspear-generic-(chert|granite|andesite|basalt|obsidian|peridotite)": {
 				"stone": { "base": "block/stone/rock/{material}1" }

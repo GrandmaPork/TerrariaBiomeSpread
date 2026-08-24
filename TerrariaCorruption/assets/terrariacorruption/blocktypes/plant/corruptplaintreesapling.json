@@ -2,7 +2,7 @@
 	"code": "corruptsapling",
 	"class": "BlockSapling",
 	"entityclassByType": {
-		"@sapling-(greenbambooshoots|brownbambooshoots)-.*": null,
+		"@corruptsapling-(greenbambooshoots|brownbambooshoots)-.*": null,
 		"*": "Sapling"
 	},
 	"variantgroups": [
@@ -101,16 +101,7 @@
 	},
 	"randomDrawOffset": true,
 	"randomizeRotations": true,
-	"drops": [
-		{
-			"type": "block",
-			"code": "sapling-{wood}-free",
-			"quantity": {
-				"avg": 1,
-				"var": 0
-			}
-		}
-	],
+	"drops": [],
 	"blockmaterial": "Plant",
 	"sideopaqueByType": {
 		"*-snow": {

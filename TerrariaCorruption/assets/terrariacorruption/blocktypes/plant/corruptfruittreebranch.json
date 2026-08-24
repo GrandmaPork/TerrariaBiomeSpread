@@ -4,13 +4,13 @@
 	"entityClass": "DynamicTreeBranch",
 	"maxStackSize": 16,
 	"attributes": {
-    "isCorrupt": true,
+		"isCorrupt": true,
 		"handbook": {
-			"groupBy": [ "fruittree-*" ]
+			"groupBy": [ "corruptfruittree-*" ]
 		},
 		"asphyxiating": false,
-		"foliageBlock": "fruittree-foliage",
-		"branchBlock": "fruittree-branch",
+		"foliageBlock": "corruptfruittree-foliage",
+		"branchBlock": "corruptfruittree-branch",
 		"worldgen": [
 			{
 				"type": "pinkapple",
@@ -209,7 +209,7 @@
 				"fruitStacks": [
 					{
 						"type": "item",
-						"code": "fruit-pinkapple",
+						"code": "game:fruit-pinkapple",
 						"quantity": {
 							"dist": "strongerinvexp",
 							"avg": 6,
@@ -266,7 +266,7 @@
 				"fruitStacks": [
 					{
 						"type": "item",
-						"code": "fruit-redapple",
+						"code": "game:fruit-redapple",
 						"quantity": {
 							"dist": "strongerinvexp",
 							"avg": 4,
@@ -323,7 +323,7 @@
 				"fruitStacks": [
 					{
 						"type": "item",
-						"code": "fruit-yellowapple",
+						"code": "game:fruit-yellowapple",
 						"quantity": {
 							"dist": "strongerinvexp",
 							"avg": 5,
@@ -380,7 +380,7 @@
 				"fruitStacks": [
 					{
 						"type": "item",
-						"code": "fruit-cherry",
+						"code": "game:fruit-cherry",
 						"quantity": {
 							"dist": "strongerinvexp",
 							"avg": 8,
@@ -430,7 +430,7 @@
 				"fruitStacks": [
 					{
 						"type": "item",
-						"code": "fruit-mango",
+						"code": "game:fruit-mango",
 						"quantity": {
 							"dist": "strongerinvexp",
 							"avg": 4,
@@ -480,7 +480,7 @@
 				"fruitStacks": [
 					{
 						"type": "item",
-						"code": "vegetable-olive",
+						"code": "game:vegetable-olive",
 						"quantity": {
 							"dist": "strongerinvexp",
 							"avg": 4,
@@ -530,7 +530,7 @@
 				"fruitStacks": [
 					{
 						"type": "item",
-						"code": "fruit-orange",
+						"code": "game:fruit-orange",
 						"quantity": {
 							"dist": "strongerinvexp",
 							"avg": 5,
@@ -587,7 +587,7 @@
 				"fruitStacks": [
 					{
 						"type": "item",
-						"code": "fruit-peach",
+						"code": "game:fruit-peach",
 						"quantity": {
 							"dist": "strongerinvexp",
 							"avg": 5,
@@ -644,7 +644,7 @@
 				"fruitStacks": [
 					{
 						"type": "item",
-						"code": "fruit-pear",
+						"code": "game:fruit-pear",
 						"quantity": {
 							"dist": "strongerinvexp",
 							"avg": 5,
@@ -695,7 +695,7 @@
 				"fruitStacks": [
 					{
 						"type": "item",
-						"code": "fruit-breadfruit",
+						"code": "game:fruit-breadfruit",
 						"quantity": {
 							"dist": "strongerinvexp",
 							"avg": 3,
@@ -745,7 +745,7 @@
 				"fruitStacks": [
 					{
 						"type": "item",
-						"code": "fruit-lychee",
+						"code": "game:fruit-lychee",
 						"quantity": {
 							"dist": "strongerinvexp",
 							"avg": 8,
@@ -795,7 +795,7 @@
 				"fruitStacks": [
 					{
 						"type": "item",
-						"code": "fruit-pomegranate",
+						"code": "game:fruit-pomegranate",
 						"quantity": {
 							"dist": "strongerinvexp",
 							"avg": 5,
@@ -837,63 +837,63 @@
 				"stacks": [
 					{
 						"type": "block",
-						"code": "fruittree-cutting",
+						"code": "game:fruittree-cutting",
 						"attributes": { "type": "pinkapple" }
 					},
 					{
 						"type": "block",
-						"code": "fruittree-cutting",
+						"code": "game:fruittree-cutting",
 						"attributes": { "type": "redapple" }
 					},
 					{
 						"type": "block",
-						"code": "fruittree-cutting",
+						"code": "game:fruittree-cutting",
 						"attributes": { "type": "yellowapple" }
 					},
 
 					{
 						"type": "block",
-						"code": "fruittree-cutting",
+						"code": "game:fruittree-cutting",
 						"attributes": { "type": "cherry" }
 					},
 					{
 						"type": "block",
-						"code": "fruittree-cutting",
+						"code": "game:fruittree-cutting",
 						"attributes": { "type": "mango" }
 					},
 					{
 						"type": "block",
-						"code": "fruittree-cutting",
+						"code": "game:fruittree-cutting",
 						"attributes": { "type": "olive" }
 					},
 					{
 						"type": "block",
-						"code": "fruittree-cutting",
+						"code": "game:fruittree-cutting",
 						"attributes": { "type": "orange" }
 					},
 					{
 						"type": "block",
-						"code": "fruittree-cutting",
+						"code": "game:fruittree-cutting",
 						"attributes": { "type": "peach" }
 					},
 					{
 						"type": "block",
-						"code": "fruittree-cutting",
+						"code": "game:fruittree-cutting",
 						"attributes": { "type": "pear" }
 					},
 					{
 						"type": "block",
-						"code": "fruittree-cutting",
+						"code": "game:fruittree-cutting",
 						"attributes": { "type": "breadfruit" }
 					},
 					{
 						"type": "block",
-						"code": "fruittree-cutting",
+						"code": "game:fruittree-cutting",
 						"attributes": { "type": "lychee" }
 					},
 					{
 						"type": "block",
-						"code": "fruittree-cutting",
+						"code": "game:fruittree-cutting",
 						"attributes": { "type": "pomegranate" }
 					}
 				]
@@ -936,21 +936,21 @@
 		"*-stem": [
 			{
 				"type": "item",
-				"code": "firewood",
+				"code": "game:firewood",
 				"quantity": { "avg": 1 }
 			}
 		],
 		"*-branch": [
 			{
 				"type": "block",
-				"code": "fruittree-cutting",
+				"code": "game:fruittree-cutting",
 				"quantity": { "avg": 1 }
 			}
 		],
 		"*-cutting": [
 			{
 				"type": "block",
-				"code": "fruittree-cutting",
+				"code": "game:fruittree-cutting",
 				"quantity": { "avg": 1 }
 			}
 		]

@@ -7,11 +7,12 @@
   },
   "randomDrawOffset": true,
   "renderpass": "OpaqueNoCull",
-  "shape": { "base": "terrariacorruption:block/plant/fern/tallfern/var1" },
+  "shape": { "base": "block/plant/fern/tallfern/var1" },
   "textures": {
     "all": { "base": "game:block/plant/fern/tallfern/fern*" }
   },
   "attributes": {
+    "isCorrupt": true,
     "plantContainable": {
       "smallContainer": {
         "shape": { "base": "game:block/plant/fern/tallfern/flowerpot/var1" },
@@ -22,8 +23,7 @@
         "texture": { "base": "game:block/plant/fern/tallfern/fern*" }
       }
     },
-    "allowOverlays": false,
-    "isCorrupt": true
+    "allowOverlays": false
   },
   "blockmaterial": "Plant",
   "climateColorMap": "climateCorruptPlantTint",
@@ -49,7 +49,7 @@
   "drops": [
     {
       "type": "block",
-      "code": "tallfern",
+      "code": "corrupttallfern",
       "quantity": { "avg": 1 },
       "tool": "knife"
     }

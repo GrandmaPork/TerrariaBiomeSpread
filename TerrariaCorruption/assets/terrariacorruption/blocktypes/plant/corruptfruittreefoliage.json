@@ -3,11 +3,12 @@
 	"class": "BlockDynamicTreeFoliage",
 	"entityClass": "DynamicTreeFoliage",
 	"attributes": {
+		"isCorrupt": true,
 		"handbook": {
-			"groupBy": [ "fruittree-leaves-*" ]
+			"groupBy": [ "corruptfruittree-leaves-*" ]
 		},
-		"foliageBlock": "fruittree-foliage",
-		"branchBlock": "fruittree-branch",
+		"foliageBlock": "corruptfruittree-foliage",
+		"branchBlock": "corruptfruittree-branch",
 		"treeFellingGroupCode": "fruittree",
 		"foliageProperties": {
 			"base": {
@@ -67,7 +68,7 @@
 			"breadfruit": {
 				"texturesBasePath": "game:block/plant/fruittree/breadfruit/",
 				"seasonColorMap": "tropicalCorruptKapok",
-				"ripeFruitShapeName": "fruit-breadfruit-ripe"
+				"ripeFruitShapeName": "game:fruit-breadfruit-ripe"
 			},
 			"lychee": {
 				"texturesBasePath": "game:block/plant/fruittree/lychee/"

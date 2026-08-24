@@ -37,7 +37,7 @@
 					"rotateY": 180
 				},
 				{
-					"base": "block/wood/fence/roughfence/snow-w3",
+					"base": "game:block/wood/fence/roughfence/snow-w3",
 					"rotateY": 180
 				}
 			]

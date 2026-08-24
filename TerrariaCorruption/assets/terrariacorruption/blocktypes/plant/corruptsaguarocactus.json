@@ -9,13 +9,13 @@
 					"harvestTime": 0.6,
 					"harvestedStack": {
 						"type": "item",
-						"code": "fruit-saguaro",
+						"code": "game:fruit-saguaro",
 						"quantity": {
 							"avg": 2,
 							"var": 1
 						}
 					},
-					"harvestedBlockCode": "saguarocactus-topempty"
+					"harvestedBlockCode": "corruptsaguarocactus-topempty"
 				}
 			}
 		]
@@ -35,11 +35,11 @@
 	},
 	"randomDrawOffset": true,
 	"shapeByType": {
-		"saguarocactus-topempty": { "base": "game:block/plant/saguarocactus/top" },
-		"saguarocactus-topflowering": { "base": "game:block/plant/saguarocactus/top-flowering" },
-		"saguarocactus-topripe": { "base": "game:block/plant/saguarocactus/top-ripe" },
-		"saguarocactus-segment": { "base": "game:block/plant/saguarocactus/segment" },
-		"saguarocactus-branchysegment": { "base": "game:block/plant/saguarocactus/branchysgement" }
+		"corruptsaguarocactus-topempty": { "base": "game:block/plant/saguarocactus/top" },
+		"corruptsaguarocactus-topflowering": { "base": "game:block/plant/saguarocactus/top-flowering" },
+		"corruptsaguarocactus-topripe": { "base": "game:block/plant/saguarocactus/top-ripe" },
+		"corruptsaguarocactus-segment": { "base": "game:block/plant/saguarocactus/segment" },
+		"corruptsaguarocactus-branchysegment": { "base": "game:block/plant/saguarocactus/branchysgement" }
 	},
 	"blockmaterial": "Plant",
 	"sideopaque": {
@@ -72,7 +72,7 @@
 		"*-topripe": [
 			{
 				"type": "item",
-				"code": "fruit-saguaro",
+				"code": "game:fruit-saguaro",
 				"quantity": {
 					"avg": 2,
 					"var": 1

@@ -33,6 +33,7 @@
 	"blockmaterial": "Wood",
 	"requiredMiningTier": 1,
 	"attributes": {
+		"isCorrupt": true,
 		"handbook": {
 			"groupBy": [ "logquad-{type}-*" ]
 		}
@@ -119,7 +120,7 @@
 	"drops": [
 		{
 			"type": "block",
-			"code": "corruptlogquad-{type}-{wood}-ud",
+			"code": "game:logquad-{type}-{wood}-ud",
 			"quantity": { "avg": 1 }
 		}
 	],

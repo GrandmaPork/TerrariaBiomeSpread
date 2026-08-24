@@ -87,7 +87,7 @@
 	"drops": [
 		{
 			"type": "block",
-			"code": "hay-{type}-ud"
+			"code": "game:hay-{type}-ud"
 		}
 	],
 	"heldTpIdleAnimation": "holdbothhandslarge",

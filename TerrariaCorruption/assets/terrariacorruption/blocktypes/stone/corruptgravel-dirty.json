@@ -21,8 +21,8 @@
 		}
 	],
 	"skipVariants": [
-		"dirtygravel-wetverydark-stoney",
-		"dirtygravel-wetverydark-cracked"
+		"corruptdirtygravel-wetverydark-stoney",
+		"corruptdirtygravel-wetverydark-cracked"
 	],
 	"creativeinventory": {
 		"general": [ "*" ],

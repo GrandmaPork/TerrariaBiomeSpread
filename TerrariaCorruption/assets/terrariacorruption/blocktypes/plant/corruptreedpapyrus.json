@@ -125,7 +125,7 @@
   "lod2shapeByType": {
     "corrupttallplant-coopersreed-*": { "base": "block/plant/reedpapyrus/coopersreed-lod2-{state}*" },
     "corrupttallplant-tule-*": { "base": "block/plant/reedpapyrus/tule-lod2" },
-    "corrupttallplant-brownsedge-*": { "base": "block/basic/cross" }
+    "corrupttallplant-brownsedge-*": { "base": "game:block/basic/cross" }
   },
   "drawtypeByType": {
     "*-snow": "JSONAndSnowLayer",
@@ -247,43 +247,43 @@
     "*coopersreed-*-normal-*": [
       {
         "type": "item",
-        "code": "cattailtops"
+        "code": "game:cattailtops"
       }
     ],
     "*coopersreed-*-harvested-*": [
       {
         "type": "item",
-        "code": "cattailroot"
+        "code": "game:cattailroot"
       }
     ],
     "*papyrus-*-normal-*": [
       {
         "type": "item",
-        "code": "papyrustops"
+        "code": "game:papyrustops"
       }
     ],
     "*papyrus-*-harvested-*": [
       {
         "type": "item",
-        "code": "papyrusroot"
+        "code": "game:papyrusroot"
       }
     ],
     "corrupttallplant-tule-land-normal-*": [
       {
         "type": "item",
-        "code": "thatch"
+        "code": "game:thatch"
       }
     ],
     "corrupttallplant-tule-land-harvested-*": [
       {
         "type": "item",
-        "code": "tuleroot"
+        "code": "game:tuleroot"
       }
     ],
     "corrupttallplant-brownsedge-land-normal-*": [
       {
         "type": "item",
-        "code": "drygrass"
+        "code": "game:drygrass"
       }
     ],
     "corrupttallplant-brownsedge-land-harvested-*": [

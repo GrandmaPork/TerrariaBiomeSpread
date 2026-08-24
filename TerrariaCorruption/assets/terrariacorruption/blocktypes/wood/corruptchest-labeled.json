@@ -27,7 +27,7 @@
 			"normal-labeled": false
 		},
 		"shape": {
-			"normal-labeled": "block/wood/chest/normal-labeled"
+			"normal-labeled": "game:block/wood/chest/normal-labeled"
 		},
 		"typedOpenSound": {
 			"normal-labeled": "game:sounds/block/largechestopen"
@@ -62,7 +62,7 @@
 				"stacks": [
 					{
 						"type": "block",
-						"code": "labeledchest-east",
+						"code": "corruptlabeledchest-east",
 						"attributes": { "type": "normal-labeled" }
 					}
 				]
@@ -71,24 +71,24 @@
 	},
 	"heldTpIdleAnimation": "holdunderarm",
 	"shapeInventory": {
-		"base": "block/wood/chest/normal",
+		"base": "game:block/wood/chest/normal",
 		"rotateY": 270
 	},
 	"shapeByType": {
 		"*-north": {
-			"base": "block/wood/chest/normal",
+			"base": "game:block/wood/chest/normal",
 			"rotateY": 0
 		},
 		"*-east": {
-			"base": "block/wood/chest/normal",
+			"base": "game:block/wood/chest/normal",
 			"rotateY": 270
 		},
 		"*-west": {
-			"base": "block/wood/chest/normal",
+			"base": "game:block/wood/chest/normal",
 			"rotateY": 90
 		},
 		"*-south": {
-			"base": "block/wood/chest/normal",
+			"base": "game:block/wood/chest/normal",
 			"rotateY": 180
 		}
 	},

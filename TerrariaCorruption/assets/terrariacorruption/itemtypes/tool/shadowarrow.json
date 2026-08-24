@@ -103,7 +103,7 @@
 			"*-meteoriciron": 0.01
 		},
 		"handbook": {
-			"groupBy": [ "arrow-*" ]
+			"groupBy": [ "shadowarrow-*" ]
 		}
 	}
 }

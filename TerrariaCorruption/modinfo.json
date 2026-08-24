@@ -6,7 +6,7 @@
     "authors": [
         "GrandmaPork"
     ],
-    "description": "(currently creative only) Adds the Corruption from Terraria that spreads once placed",
+    "description": "(minor survival implementation) Adds the Corruption from Terraria that spreads once placed",
     "version": "0.0.3",
     "dependencies": {
         "game": "1.22.2"

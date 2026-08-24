@@ -39,7 +39,7 @@
 			{
 				"name": "ArtPigment",
 				"properties": {
-					"decorBlockCodes": [ "caveart-chalk-1-*" ],
+					"decorBlockCodes": [ "game:caveart-chalk-1-*" ],
 					"paintableOnBlockMaterials": [ "Stone", "Wood", "Brick", "Ceramic", "Metal", "Meta" ]
 				}
 			}
@@ -81,7 +81,7 @@
 			{
 				"name": "ArtPigment",
 				"properties": {
-					"decorBlockCodes": [ "caveart-chalk-1-*" ],
+					"decorBlockCodes": [ "game:caveart-chalk-1-*" ],
 					"paintableOnBlockMaterials": [ "Stone", "Wood", "Brick", "Ceramic", "Metal", "Meta" ]
 				}
 			}
@@ -136,6 +136,7 @@
 		"material": { "base": "block/stone/rock/{rock}1" }
 	},
 	"attributes": {
+		"isCorrupt": true,
 		"displaycaseable": true,
 		"shelvable": true,
 		"handbook": {
@@ -220,7 +221,7 @@
 			"smeltedRatio": 2,
 			"smeltedStack": {
 				"type": "item",
-				"code": "corruptingot-meteoriciron"
+				"code": "corruptingot-demonite"
 			}
 		}
 	},
@@ -228,28 +229,28 @@
 		"*-halite": {
 			"groundStack": {
 				"type": "item",
-				"code": "salt",
+				"code": "game:salt",
 				"stacksize": 2
 			}
 		},
 		"*-limestone": {
 			"groundStack": {
 				"type": "item",
-				"code": "lime",
+				"code": "game:lime",
 				"stacksize": 1
 			}
 		},
 		"*-chalk": {
 			"groundStack": {
 				"type": "item",
-				"code": "lime",
+				"code": "game:lime",
 				"stacksize": 1
 			}
 		},
 		"*marble*": {
 			"groundStack": {
 				"type": "item",
-				"code": "lime",
+				"code": "game:lime",
 				"stacksize": 1
 			}
 		}

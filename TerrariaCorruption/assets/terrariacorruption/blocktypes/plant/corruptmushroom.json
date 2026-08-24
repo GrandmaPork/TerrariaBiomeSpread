@@ -175,7 +175,7 @@
 			"transitionHours": { "avg": 72 },
 			"transitionedStack": {
 				"type": "item",
-				"code": "rot"
+				"code": "game:rot"
 			},
 			"transitionRatio": 1
 		}
@@ -184,7 +184,7 @@
 	"drops": [
 		{
 			"type": "block",
-			"code": "mushroom-{mushroom}-normal",
+			"code": "game:mushroom-{mushroom}-normal",
 			"quantity": {
 				"avg": 1,
 				"var": 0

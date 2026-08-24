@@ -134,7 +134,7 @@
 			"northTinted3": { "base": "game:block/plant/flower/stem/{flower}3" },
 			"southTinted3": { "base": "game:block/plant/flower/stem/{flower}3" }
 		},
-		"flower-mugwort-*": {
+		"corruptflower-mugwort-*": {
 			"north1": { "base": "game:block/plant/flower/petal/{flower}1" },
 			"north2": { "base": "game:block/plant/flower/petal/{flower}2" },
 			"north3": { "base": "game:block/plant/flower/petal/{flower}3" },
