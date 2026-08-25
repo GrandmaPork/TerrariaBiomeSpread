@@ -1,5 +1,5 @@
 {
-	"code": "corruptcabinet",
+	"code": "ebonwoodcabinet",
 	"class": "BlockGeneric",
 	"behaviors": [
 		{ "name": "TypedTexture" },
@@ -66,7 +66,7 @@
 		"translationEntries": [ "material-{metal}", "glass-{glass}" ],
 		"defaults": [ "iron", "vintage" ],
 		"textureMappingByType": {
-			"corruptcabinet-middle": {
+			"ebonwoodcabinet-middle": {
 				"doors": "block/wood/cabinet/1block/doors/solid/middle/ebonwood",
 				"hardware": "game:block/metal/plate/{metal}",
 				"glass": "game:block/glass/{glass}",
@@ -74,7 +74,7 @@
 				"wood-side": "block/wood/cabinet/1block/wood/side/ebonwood",
 				"wood-top": "block/wood/cabinet/1block/wood/top/wood-top2/ebonwood"
 			},
-			"corruptcabinet-bottom": {
+			"ebonwoodcabinet-bottom": {
 				"doors": "block/wood/cabinet/1block/doors/solid/middle/ebonwood",
 				"hardware": "game:block/metal/plate/{metal}",
 				"glass": "game:block/glass/{glass}",
@@ -101,7 +101,7 @@
 			"stacks": [
 				{
 					"type": "block",
-					"code": "corruptcabinet-{section}",
+					"code": "ebonwoodcabinet-{section}",
 					"attributes": { "wood": "ebonwood" }
 				}
 			]

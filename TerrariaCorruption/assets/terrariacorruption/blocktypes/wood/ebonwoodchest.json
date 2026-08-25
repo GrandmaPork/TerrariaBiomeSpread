@@ -1,5 +1,5 @@
 {
-	"code": "corruptchest",
+	"code": "ebonwoodchest",
 	"class": "BlockGenericTypedContainer",
 	"entityclass": "GenericTypedContainer",
 	"attributes": {
@@ -109,17 +109,17 @@
 				"stacks": [
 					{
 						"type": "block",
-						"code": "corruptchest-east",
+						"code": "ebonwoodchest-east",
 						"attributes": { "type": "normal-generic" }
 					},
 					{
 						"type": "block",
-						"code": "corruptchest-east",
+						"code": "ebonwoodchest-east",
 						"attributes": { "type": "golden" }
 					},
 					{
 						"type": "block",
-						"code": "corruptchest-east",
+						"code": "ebonwoodchest-east",
 						"attributes": { "type": "owl" }
 					}
 				]

@@ -1,5 +1,5 @@
 {
-  "code": "corruptplankslab",
+  "code": "ebonwoodplankslab",
   // This block class removes the bottom snow section from vertically standing slabs when there is no ground below
   "class": "BlockSlabSnowRemove",
   "behaviors": [
@@ -53,7 +53,7 @@
     "general": [ "*-down-free" ],
     "construction": [ "*-down-free" ]
   },
-  "drops": [ { "code": "corruptplankslab-down-free" } ],
+  "drops": [ { "code": "ebonwoodplankslab-down-free" } ],
   "sideSolidOpaqueAoByType": {
     "*-north-*": {
       "all": false,

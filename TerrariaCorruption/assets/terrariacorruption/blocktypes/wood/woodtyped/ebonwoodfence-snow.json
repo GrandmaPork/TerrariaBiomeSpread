@@ -1,5 +1,5 @@
 {
-	"code": "corruptroughhewnfence",
+	"code": "ebonwoodwoodenfence",
 	"class": "BlockFence",
 	"behaviors": [
 		{
@@ -9,12 +9,12 @@
 		{ "name": "RopeTieable" }
 	],
 	"attributes": {
-		"isCorrupt": true,
 		"canStep": false,
-		"isFence": true,
+		"supportsUnstableRock": true,
 		"particleCollBoxHeight": 1,
+		"isFence": true,
 		"handbook": {
-			"groupBy": [ "roughhewnfence-*" ]
+			"groupBy": [ "woodenfence-*" ]
 		}
 	},
 	"variantgroups": [
@@ -24,82 +24,74 @@
 		},
 		{
 			"code": "cover",
-			"states": [ "free" ]
+			"states": [ "snow" ]
 		}
 	],
-	// Ebony & Purple heartwood considered too hard wood for a rough hewn fence
-	"skipVariants": [
-		"*-ebony-*",
-		"*-purpleheart-*"
-	],
-	"creativeinventory": {
-		"general": [ "corruptroughhewnfence-*-ew-free" ],
-		"decorative": [ "corruptroughhewnfence-*-ew-free" ]
-	},
+	"creativeinventory": {},
 	"shapebytype": {
-		"*-empty-free": { "base": "game:block/wood/fence/roughfence/empty" },
-		"*-n-free": {
-			"base": "game:block/wood/fence/roughfence/w*",
+		"*-empty-snow": { "base": "game:block/wood/fence/snow-empty" },
+		"*-n-snow": {
+			"base": "game:block/wood/fence/snow-w",
 			"rotateY": 270
 		},
-		"*-e-free": {
-			"base": "game:block/wood/fence/roughfence/w*",
+		"*-e-snow": {
+			"base": "game:block/wood/fence/snow-w",
 			"rotateY": 180
 		},
-		"*-s-free": {
-			"base": "game:block/wood/fence/roughfence/w*",
+		"*-s-snow": {
+			"base": "game:block/wood/fence/snow-w",
 			"rotateY": 90
 		},
-		"*-w-free": {
-			"base": "game:block/wood/fence/roughfence/w*",
+		"*-w-snow": {
+			"base": "game:block/wood/fence/snow-w",
 			"rotateY": 0
 		},
 
-		"*-ns-free": {
-			"base": "game:block/wood/fence/roughfence/ew*",
+		"*-ns-snow": {
+			"base": "game:block/wood/fence/snow-ew",
 			"rotateY": 90
 		},
-		"*-ew-free": {
-			"base": "game:block/wood/fence/roughfence/ew*",
+		"*-ew-snow": {
+			"base": "game:block/wood/fence/snow-ew",
 			"rotateY": 0
 		},
 
-		"*-ne-free": {
-			"base": "game:block/wood/fence/roughfence/sw*",
+		"*-ne-snow": {
+			"base": "game:block/wood/fence/snow-sw",
 			"rotateY": 180
 		},
-		"*-nw-free": {
-			"base": "game:block/wood/fence/roughfence/sw*",
+		"*-nw-snow": {
+			"base": "game:block/wood/fence/snow-sw",
 			"rotateY": 270
 		},
-		"*-es-free": {
-			"base": "game:block/wood/fence/roughfence/sw*",
+		"*-es-snow": {
+			"base": "game:block/wood/fence/snow-sw",
 			"rotateY": 90
 		},
-		"*-sw-free": {
-			"base": "game:block/wood/fence/roughfence/sw*",
+		"*-sw-snow": {
+			"base": "game:block/wood/fence/snow-sw",
 			"rotateY": 0
 		},
 
-		"*-nes-free": {
-			"base": "game:block/wood/fence/roughfence/nsw*",
+		"*-nes-snow": {
+			"base": "game:block/wood/fence/snow-nsw",
 			"rotateY": 180
 		},
-		"*-new-free": {
-			"base": "game:block/wood/fence/roughfence/nsw*",
+		"*-new-snow": {
+			"base": "game:block/wood/fence/snow-nsw",
 			"rotateY": 270
 		},
-		"*-nsw-free": {
-			"base": "game:block/wood/fence/roughfence/nsw*",
+		"*-nsw-snow": {
+			"base": "game:block/wood/fence/snow-nsw",
 			"rotateY": 0
 		},
-		"*-esw-free": {
-			"base": "game:block/wood/fence/roughfence/nsw*",
+		"*-esw-snow": {
+			"base": "game:block/wood/fence/snow-nsw",
 			"rotateY": 90
 		},
 
-		"*-nesw-free": {
-			"base": "game:block/wood/fence/roughfence/nesw*",
+		"*-nesw-snow": {
+			"base": "game:block/wood/fence/snow-nesw",
 			"rotateY": 0
 		}
 	},
@@ -109,19 +101,19 @@
 	},
 	"blockmaterial": "Wood",
 	"textures": {
-		"wattlefence": { "base": "block/wood/roughfence/ebonwood" },
-		"wattlefence2": { "base": "block/wood/roughfence/ebonwood2" }
+		"horizontal": {
+			"base": "block/wood/debarked/aged",
+			"overlays": [ "game:block/slightlydarker" ]
+		},
+		"vertical": {
+			"base": "block/wood/debarked/aged",
+			"rotation": 90
+		}
 	},
 	"sidesolid": {
 		"all": false
 	},
-	"sideopaqueByType": {
-		"*-snow": {
-			"all": false,
-			"down": true
-		},
-		"*": { "all": false }
-	},
+	"sideopaque": { "all": false },
 	"resistance": 3,
 	"lightAbsorption": 0,
 	"sounds": {
@@ -408,7 +400,6 @@
 			}
 		]
 	},
-
 	"collisionboxbytype": {
 		"*-empty-*": {
 			"x1": 0.375,
@@ -692,14 +683,6 @@
 		"burnDuration": 10
 	},
 	"materialDensity": 600,
-	"guiTransform": {
-		"origin": {
-			"x": 0.5,
-			"y": 0.45,
-			"z": 0.5
-		},
-		"scale": 1.35
-	},
 	"tpHandTransform": {
 		"translation": {
 			"x": -1.5,

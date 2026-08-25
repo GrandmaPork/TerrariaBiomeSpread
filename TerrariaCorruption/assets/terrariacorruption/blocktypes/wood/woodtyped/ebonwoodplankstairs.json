@@ -1,5 +1,5 @@
 {
-	"code": "corruptplankstairs",
+	"code": "ebonwoodplankstairs",
 	"class": "BlockStairs",
 	"behaviors": [
 		{
@@ -35,7 +35,7 @@
 		}
 	},
 	"texturesByType": {
-		"corruptplankstairs-*": {"all": { "base": "block/wood/planks/ebonwood*" }}
+		"ebonwoodplankstairs-*": {"all": { "base": "block/wood/planks/ebonwood*" }}
 	},
 	"attributes": {
 		"isCorrupt": true,
