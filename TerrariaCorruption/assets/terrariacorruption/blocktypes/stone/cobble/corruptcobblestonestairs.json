@@ -143,7 +143,7 @@
 	},
 	"blockmaterial": "Stone",
 	"textures": {
-		"sides": { "base": "block/stone/cobblestone/{rock}*" }
+		"sides": { "base": "block/stone/cobblestoneslab/{rock}*" }
 	},
 	"replaceable": 160,
 	"resistance": 4,

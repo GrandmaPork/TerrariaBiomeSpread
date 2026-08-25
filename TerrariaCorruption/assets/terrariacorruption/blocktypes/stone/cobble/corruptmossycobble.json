@@ -1,7 +1,10 @@
 {
 	"code": "corruptmossycobblestone",
 	"variantgroups": [
-		{ "loadFromProperties": "terrariacorruption:block/corruptrock" }
+		{
+			"code": "rock",
+			"loadFromProperties": "terrariacorruption:block/corruptrock"
+		}
 	],
 	"attributes": {
     "isCorrupt": true,

@@ -44,15 +44,15 @@
 		"*-snow": { "base": "game:block/roofing/beam/ridgeshingle-snow/16" }
 	},
 	"texturesByType": {
-		"beam-ridge-slate-*": {
+		"corruptbeam-ridge-slate-*": {
 			"material": { "base": "block/stone/shingles/slate*" }
 		},
-		"beam-ridge-thatch-*": {
+		"corruptbeam-ridge-thatch-*": {
 			"top": { "base": "game:block/plant/grassroofing/normal-side" },
 			"bamboo-top": { "base": "game:block/hay/normal-top" },
 			"agedstraw": { "base": "game:block/plant/grassroofing/straw1" }
 		},
-		"beam-ridge-bamboo-*": {
+		"corruptbeam-ridge-bamboo-*": {
 			"material": { "base": "game:block/wood/planks/bamboosmooth" }
 		},
 		"*": {

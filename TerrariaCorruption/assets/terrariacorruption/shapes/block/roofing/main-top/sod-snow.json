@@ -15,7 +15,7 @@
 	},
 	"textures": {
 		"normal1": "game:block/liquid/snow/normal1",
-		"normal": "block/plant/grasscoverage/normal",
+		"normal": "game:block/plant/grasscoverage/normal",
 		"aged1": "block/wood/planks/ebonwood1",
 		"aged-side": "block/wood/shingles/ebonwood-side",
 		"aged-top": "block/wood/shingles/ebonwood-top"

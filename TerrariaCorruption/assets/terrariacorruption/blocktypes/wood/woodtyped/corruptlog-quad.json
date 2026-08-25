@@ -5,7 +5,7 @@
 			{ "name": "Pillar" },
 			{
 				"name": "WrenchOrientable",
-				"properties": { "baseCode": "logquad-{type}-{wood}" }
+				"properties": { "baseCode": "corruptlogquad-{type}-{wood}" }
 			}
 		]
 	},
@@ -35,7 +35,7 @@
 	"attributes": {
 		"isCorrupt": true,
 		"handbook": {
-			"groupBy": [ "logquad-{type}-*" ]
+			"groupBy": [ "corruptlogquad-{type}-*" ]
 		}
 	},
 	"texturesByType": {
