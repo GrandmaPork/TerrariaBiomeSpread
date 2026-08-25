@@ -1,5 +1,5 @@
 {
-	"code": "corruptlabeledchest",
+	"code": "ebonwoodlabeledchest",
 	"class": "BlockLabeledChest",
 	"entityclass": "LabeledChest",
 	"attributes": {
@@ -62,7 +62,7 @@
 				"stacks": [
 					{
 						"type": "block",
-						"code": "labeledchest-east",
+						"code": "ebonwoodlabeledchest-east",
 						"attributes": { "type": "normal-labeled" }
 					}
 				]

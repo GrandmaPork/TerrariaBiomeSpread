@@ -102,11 +102,11 @@
 	"blockmaterial": "Wood",
 	"textures": {
 		"horizontal": {
-			"base": "block/wood/debarked/aged",
+			"base": "game:block/wood/debarked/aged",
 			"overlays": [ "game:block/slightlydarker" ]
 		},
 		"vertical": {
-			"base": "block/wood/debarked/aged",
+			"base": "game:block/wood/debarked/aged",
 			"rotation": 90
 		}
 	},

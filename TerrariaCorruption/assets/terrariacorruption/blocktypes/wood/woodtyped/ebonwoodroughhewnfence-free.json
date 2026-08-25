@@ -30,7 +30,8 @@
 	// Ebony & Purple heartwood considered too hard wood for a rough hewn fence
 	"skipVariants": [
 		"*-ebony-*",
-		"*-purpleheart-*"
+		"*-purpleheart-*",
+		"*-aged-*"
 	],
 	"creativeinventory": {
 		"general": [ "ebonwoodroughhewnfence-*-ew-free" ],
