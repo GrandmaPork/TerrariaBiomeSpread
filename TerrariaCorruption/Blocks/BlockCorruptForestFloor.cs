@@ -7,6 +7,7 @@ using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
 using Vintagestory.ServerMods;
 using Vintagestory.GameContent;
+using TerrariaCorruption.BlockEntities;
 
 #nullable disable
 
@@ -76,6 +77,8 @@ namespace TerrariaCorruption.Blocks
                 }
             }
 
+            //BlockBehaviorBiomeSpread.CheckNeighbors(pos);
+
             if (offThreadRandom.NextDouble() > growthChanceOnTick) return false;
 
             if (world.BlockAccessor.GetRainMapHeightAt(pos) > pos.Y + 1)
@@ -89,7 +92,7 @@ namespace TerrariaCorruption.Blocks
         Random rnd = new Random();
         public override void OnServerGameTick(IWorldAccessor world, BlockPos pos, object extra = null)
         {
-
+            //BlockBehaviorBiomeSpread.spreadCorruption(pos);
             float val = rnd.Next();
 
             BlockPos victim = pos.AddCopy(rnd.Next(-1, 2), rnd.Next(-1, 2), rnd.Next(-1, 2));

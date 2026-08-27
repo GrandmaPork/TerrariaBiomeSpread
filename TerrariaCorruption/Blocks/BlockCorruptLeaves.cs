@@ -14,41 +14,7 @@ namespace TerrariaCorruption.Blocks
 {
     public class BlockCorruptLeaves : BlockLeaves
     {
-        //string climateColorMapInt;
-        //string seasonColorMapInt;
-
-        //public override string ClimateColorMapForMap => climateColorMapInt;
-        //public override string SeasonColorMapForMap => seasonColorMapInt;
-
-
-        //public override void OnCollectTextures(ICoreAPI api, ITextureLocationDictionary textureDict)
-        //{
-        //    base.OnCollectTextures(api, textureDict);
-
-        //    climateColorMapInt = ClimateColorMap;
-        //    seasonColorMapInt = SeasonColorMap;
-        //    string grown = Code.SecondCodePart();
-        //    if (grown.StartsWithOrdinal("grown"))
-        //    {
-        //        if (!int.TryParse(grown.Substring(5), out ExtraColorBits)) ExtraColorBits = 0;
-        //    }
-
-        //    // Branchy leaves - guard against shapes that have no elements
-        //    if (api.Side == EnumAppSide.Client && SeasonColorMap == null)
-        //    {
-        //        var clientApi = api as ICoreClientAPI;
-        //        var shape = clientApi?.TesselatorManager.GetCachedShape(Shape.Base);
-        //        if (shape?.Elements != null && shape.Elements.Length > 0)
-        //        {
-        //            var elem = shape.Elements[0];
-        //            if (!string.IsNullOrEmpty(elem.ClimateColorMap)) climateColorMapInt = elem.ClimateColorMap;
-        //            if (!string.IsNullOrEmpty(elem.SeasonColorMap)) seasonColorMapInt = elem.SeasonColorMap;
-        //        }
-        //    }
-        //}
-
-
-        public override bool ShouldReceiveServerGameTicks(IWorldAccessor world, BlockPos pos, Random offThreadRandom, out object extra)
+       public override bool ShouldReceiveServerGameTicks(IWorldAccessor world, BlockPos pos, Random offThreadRandom, out object extra)
         {
             extra = null;
 
@@ -123,7 +89,7 @@ namespace TerrariaCorruption.Blocks
         }
 
         //thorns
-        public override void OnEntityCollide(IWorldAccessor world, Entity entity, BlockPos pos, BlockFacing facing, Vec3d collideSpeed, bool isImpact)
+        public override void OnEntityCollide(IWorldAccessor world, Entity entity, BlockPos pos, BlockFacing facing, Vec3d collideSpeed, bool isImpact) // I definitely forgot to come back to this
         {
             base.OnEntityCollide(world, entity, pos, facing, collideSpeed, isImpact);
             
