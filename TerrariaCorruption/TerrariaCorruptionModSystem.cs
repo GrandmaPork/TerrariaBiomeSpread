@@ -68,7 +68,7 @@ namespace TerrariaCorruption
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptgravel", typeof(Blocks.BlockCorrupt));
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptmuddygravel", typeof(Blocks.BlockCorrupt));
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptsand", typeof(Blocks.BlockCorrupt));
-            api.RegisterBlockClass(Mod.Info.ModID + ".corruptblock", typeof(Blocks.BlockCorrupt)); // condense rocks into this class
+            api.RegisterBlockClass(Mod.Info.ModID + ".corruptblock", typeof(Blocks.BlockCorrupt)); // condense rocks into this class eventually
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptlog", typeof(Blocks.BlockCorruptLog));
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptbranchy", typeof(Blocks.BlockCorruptLeaves));
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptleaves", typeof(Blocks.BlockCorruptLeaves));
@@ -109,58 +109,6 @@ namespace TerrariaCorruption
     //        );
     //        GeneratedStructure shadowpit = sapi.World.GetOrCreateGeneratedStructure("terrariacorruption:shadowpit");
     //        return TextCommandResult.Success();
-        }
-
-        public void corruptionPosShort(BlockPos pos) // separate from spreadCorruption so OnGameTick can use the corruption spread function
-        {
-            BlockPos victim = pos.AddCopy(rnd.Next(-1, 2), rnd.Next(-1, 2), rnd.Next(-1, 2)); // find random position in a short radius
-            if (sapi.Side == EnumAppSide.Server)
-            {
-                spreadCorruption(victim);
-            }
-        }
-        public void spreadCorruption(BlockPos victim) // spaghetti code yayy
-        {
-            AssetLocation waterOverride = new AssetLocation("terrariacorruption", "corruptwater-still-7"); // pls work
-            Block overrideCode = sapi.World.GetBlock(waterOverride);
-
-            Block targetBlock = sapi.World.BlockAccessor.GetBlock(victim);
-            string changePath = "corrupt" + targetBlock.Code.Path;
-            AssetLocation changeCode = new AssetLocation("terrariacorruption", changePath);
-
-            Block corruptBlock = sapi.World.GetBlock(changeCode);
-            if (corruptBlock == null) return;
-
-            while (targetBlock.Code.Path.StartsWith("tallplant-coopersreed-land-normal-")) // special condition. probably doesn't work. we'll see ig
-            {
-                if (overrideCode == null) return; // just in case
-
-                sapi.World.BlockAccessor.SetBlock(overrideCode.BlockId, victim); // place corrupt water
-                sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim); // place corrupt block
-
-                pillarCorruption(victim);
-                victim.Y += 1;
-            }
-
-            sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-            sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
-
-            while (targetBlock.Code.Path.StartsWith("log-") || (targetBlock.Code.Path.StartsWith("water-"))) // special feature
-            {
-                pillarCorruption(victim);
-            }
-        }
-        public void pillarCorruption(BlockPos victim)
-        {
-            victim.Y += 1;
-            Block targetBlock = sapi.World.BlockAccessor.GetBlock(victim);
-            string changePath = "corrupt" + targetBlock.Code.Path;
-            AssetLocation changeCode = new AssetLocation("terrariacorruption", changePath);
-            Block corruptBlock = sapi.World.GetBlock(changeCode);
-            if (corruptBlock == null) return;
-
-            sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-            sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
         }
     }
 }

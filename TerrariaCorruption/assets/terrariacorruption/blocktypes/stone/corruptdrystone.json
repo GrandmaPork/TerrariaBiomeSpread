@@ -1,5 +1,6 @@
 {
 	"code": "corruptdrystone",
+	"class": "terrariacorruption.corruptblock",
 	"storageFlags": 5,
 	"variantgroups": [
 		{

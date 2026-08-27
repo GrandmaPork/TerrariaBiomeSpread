@@ -10,10 +10,10 @@ using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 using Vintagestory.GameContent;
 using Vintagestory.ServerMods;
+using Vintagestory.API.Datastructures;
 
 namespace TerrariaCorruption.Blocks
 {
-
     internal class GrassTick
     {
         public Block Grass;
@@ -21,24 +21,7 @@ namespace TerrariaCorruption.Blocks
     }
     public class BlockCorruptSoil : BlockSoil
     {
-        protected List<AssetLocation> tallGrassCodes = new List<AssetLocation>();
-        protected string[] growthStages = new string[] { "none", "verysparse", "sparse", "normal" };
-        protected string[] tallGrassGrowthStages = new string[] { "veryshort", "short", "mediumshort", "medium", "tall", "verytall" };
-
-        protected int growthLightLevel;
-        protected string growthBlockLayer;
-        protected float tallGrassGrowthChance;
-        protected BlockLayerConfig blocklayerconfig;
-        protected const int chunksize = GlobalConstants.ChunkSize;
-
-        Random rnd = new Random();
-
-        protected float growthChanceOnTick = 0.16f;
-
-        public bool growOnlyWhereRainfallExposed = false;
-
-        protected virtual int MaxStage => 3;
-        GenBlockLayers genBlockLayers;
+            GenBlockLayers genBlockLayers;
 
         private const int FullyGrownStage = 3;
         int GrowthStage(string stage)
@@ -50,9 +33,6 @@ namespace TerrariaCorruption.Blocks
         }
 
         protected int currentStage;
-        public int CurrentStage => currentStage;
-
-
 
         public override void OnLoaded(ICoreAPI api)
         {
@@ -99,33 +79,10 @@ namespace TerrariaCorruption.Blocks
             }
 
             //corruption
-
-            float val = rnd.Next();
-
-            BlockPos victim = pos.AddCopy(rnd.Next(-1, 2), rnd.Next(-1, 2), rnd.Next(-1, 2));
-            Block targetBlock = world.BlockAccessor.GetBlock(victim);
-            string changePath = "corrupt" + targetBlock.Code.Path;
-
-            AssetLocation changeCode = new AssetLocation("terrariacorruption", changePath);
-
-            Block corruptBlock = world.GetBlock(changeCode);
-            if (corruptBlock == null) return;
-
-            world.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-            world.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
-
-            while ((targetBlock.Code.Path.StartsWith("log-")) || (targetBlock.Code.Path.StartsWith("water-")) || (targetBlock.Code.Path.StartsWith("aquatic-")))
-            {
-                victim.Y += 1;
-                targetBlock = world.BlockAccessor.GetBlock(victim);
-                changePath = "corrupt" + targetBlock.Code.Path;
-                changeCode = new AssetLocation("terrariacorruption", changePath);
-                corruptBlock = world.GetBlock(changeCode);
-                if (corruptBlock == null) return;
-
-                world.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-                world.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
-            }
+            //if (api.Side == EnumAppSide.Server)
+            //{
+            //    (api as ICoreServerAPI).ModLoader.GetModSystem<BiomeSpreadModSystem>()?.CorruptionNeighbor(pos);
+            //}
         }
 
         public override bool ShouldReceiveServerGameTicks(IWorldAccessor world, BlockPos pos, Random offThreadRandom, out object extra)
@@ -139,8 +96,6 @@ namespace TerrariaCorruption.Blocks
             {
                 return false;
             }
-
-            //bool nested = false;
 
             bool isGrowing = false;
 
@@ -163,7 +118,6 @@ namespace TerrariaCorruption.Blocks
                 (overheatingAmount >= 3 && currentStage == 1)
             ;
 
-
             if ((lowLightLevel || smothering || die) && currentStage > 0)
             {
                 grass = tryGetBlockForDying(world);
@@ -176,7 +130,7 @@ namespace TerrariaCorruption.Blocks
                     grass = tryGetBlockForGrowing(world, pos);
                 }
             }
-            
+
 
             if (grass != null)
             {
@@ -188,28 +142,18 @@ namespace TerrariaCorruption.Blocks
             }
             else
             {
-                for (int i = -1; i <= 1; i++)
-                {
-                    for (int j = -1; j <= 1; j++)
-                    {
-                        for (int k = -1; k <= 1; k++)
-                        {
-                            if (i == 0 && j == 0 && k == 0) continue;
-                            BlockPos victim = pos.AddCopy(i, j, k);
-                            Block targetBlock = world.BlockAccessor.GetBlock(victim);
-                            if ((targetBlock.Attributes?["isCorrupt"]?.AsBool() != true) && (targetBlock.BlockId != 0)) //if block is not air and not corrupt, tick the block
-                            {
-                                extra = new GrassTick()
-                                {
-                                    Grass = this,
-                                    TallGrass = null
-                                };
-
-                                return true;
-                            }
-                        }
-                    }
-                }
+                //if (api.Side == EnumAppSide.Server)
+                //{
+                //    if ((api as ICoreServerAPI).ModLoader.GetModSystem<BiomeSpreadModSystem>()?.CheckNeighbors(pos) ?? false) // check for corrupt neighbors
+                //    {
+                //        extra = new GrassTick()
+                //        {
+                //            Grass = this,
+                //            TallGrass = null
+                //        };
+                //        return true;
+                //    }
+                //}
             }
             return extra != null;
         }

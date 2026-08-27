@@ -1,5 +1,6 @@
 {
 	"code": "corruptcobbleskull",
+	"class": "terrariacorruption.corruptblock",
 	"variantgroups": [
 		{
 			"code": "rock",
@@ -13,7 +14,7 @@
 	"shape": { "base": "game:block/basic/cube" },
 	"drawtype": "cube",
 	"attributes": {
-		"isCorrupt":  true,
+		"isCorrupt": true,
 		"mapColorCode": "settlement"
 	},
 	"blockmaterial": "Stone",

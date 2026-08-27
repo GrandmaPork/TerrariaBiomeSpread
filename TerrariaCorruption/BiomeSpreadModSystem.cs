@@ -45,13 +45,10 @@ namespace TerrariaCorruption
         {
             bool shouldSpreadNeighbor = false;
 
-            sapi.World.BlockAccessor.WalkBlocks(pos.AddCopy(-1, -1, -1), pos.AddCopy(1, 1, 1), (targetBlock, x, y, z) => // hopefully
+            sapi.World.BlockAccessor.WalkBlocks(pos.AddCopy(-1, -1, -1), pos.AddCopy(1, 1, 1), (targetBlock, x, y, z) =>
             {
-                if (targetBlock.Attributes == null) return; // if block is not air and not corrupt, tick the block
-                if ((targetBlock.Attributes["isCorrupt"].AsBool() != true) && (targetBlock.BlockId != 0)) // 
-                {
+                if (targetBlock.Attributes == null || ((targetBlock.Attributes["isCorrupt"].AsBool() == true) && (targetBlock.BlockId == 0) && (pos.X == x && pos.Y == y && pos.Z == z))) return; // if block is not air and not corrupt, and not itself, return true
                     shouldSpreadNeighbor = true;
-                }
             });
             return shouldSpreadNeighbor;
         }
