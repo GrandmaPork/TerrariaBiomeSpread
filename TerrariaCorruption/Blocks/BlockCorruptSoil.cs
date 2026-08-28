@@ -79,10 +79,10 @@ namespace TerrariaCorruption.Blocks
             }
 
             //corruption
-            //if (api.Side == EnumAppSide.Server)
-            //{
-            //    (api as ICoreServerAPI).ModLoader.GetModSystem<BiomeSpreadModSystem>()?.CorruptionNeighbor(pos);
-            //}
+            if (api.Side == EnumAppSide.Server)
+            {
+                (api as ICoreServerAPI).ModLoader.GetModSystem<BiomeSpreadModSystem>()?.CorruptionNeighbor(pos);
+            }
         }
 
         public override bool ShouldReceiveServerGameTicks(IWorldAccessor world, BlockPos pos, Random offThreadRandom, out object extra)
@@ -142,18 +142,18 @@ namespace TerrariaCorruption.Blocks
             }
             else
             {
-                //if (api.Side == EnumAppSide.Server)
-                //{
-                //    if ((api as ICoreServerAPI).ModLoader.GetModSystem<BiomeSpreadModSystem>()?.CheckNeighbors(pos) ?? false) // check for corrupt neighbors
-                //    {
-                //        extra = new GrassTick()
-                //        {
-                //            Grass = this,
-                //            TallGrass = null
-                //        };
-                //        return true;
-                //    }
-                //}
+                if (api.Side == EnumAppSide.Server)
+                {
+                    if ((api as ICoreServerAPI).ModLoader.GetModSystem<BiomeSpreadModSystem>()?.CheckNeighbors(pos) ?? false) // check for corrupt neighbors
+                    {
+                        extra = new GrassTick()
+                        {
+                            Grass = this,
+                            TallGrass = null
+                        };
+                        return true;
+                    }
+                }
             }
             return extra != null;
         }

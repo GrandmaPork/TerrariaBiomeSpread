@@ -19,7 +19,6 @@ namespace TerrariaCorruption.Blocks
     {
         public override void OnServerGameTick(IWorldAccessor world, BlockPos pos, object extra = null)
         {
-            base.OnServerGameTick(world, pos, extra);
             GrassTick grassTick = extra as GrassTick;
             world.BlockAccessor.SetBlock(grassTick.Grass.BlockId, pos);
             if (grassTick.TallGrass != null && world.BlockAccessor.GetBlock(pos.UpCopy()).BlockId == 0)
