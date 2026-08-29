@@ -25,7 +25,7 @@ namespace TerrariaCorruption.Blocks
                 {
                     Grass = this,
                     TallGrass = null
-                };
+                }; // used to break the game when removed, will check again later
                 return true;
             }
 

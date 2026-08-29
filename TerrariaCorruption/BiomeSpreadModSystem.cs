@@ -10,6 +10,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
+using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
 namespace TerrariaCorruption
@@ -72,30 +73,36 @@ namespace TerrariaCorruption
 
             Block targetBlock = sapi.World.BlockAccessor.GetBlock(victim); // targetBlock found here instead of inside NewCorruptBlock to avoid multiple calls to GetBlock
 
-            // spaghetti code yayy
-            //while (targetBlock.Code.Path.StartsWith("tallplant-coopersreed-water")) // special condition. probably doesn't work. we'll see ig
-            //{
-            //    if (overrideCode == null) return; // just in case
-
-            //    sapi.World.BlockAccessor.SetBlock(overrideCode.BlockId, victim); // place corrupt water
-            //    sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim); // place corrupt block
-
-            //    pillarCorruption(victim);
-            //    victim.Y += 1;
-            //}
-
-            Block corruptBlock = NewCorruptBlock(victim, targetBlock);
-            if (corruptBlock == targetBlock) return;
-
-            sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-            sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
-
-            if (targetBlock.Code.Path.StartsWith("log-") || targetBlock.Code.Path.StartsWith("water-")) // special feature
+            if (targetBlock.Code.Path.StartsWith("mushroom-"))
             {
-                Mod.Logger.Notification("pillarCorruption triggered: " + targetBlock.Code.Path);
-                pillarCorruption(victim, targetBlock);
+                specialConditions(victim, targetBlock);
             }
+            else
+            {
+                // spaghetti code yayy
+                //while (targetBlock.Code.Path.StartsWith("tallplant-coopersreed-water")) // special condition. probably doesn't work. we'll see ig
+                //{
+                //    if (overrideCode == null) return; // just in case
 
+                //    sapi.World.BlockAccessor.SetBlock(overrideCode.BlockId, victim); // place corrupt water
+                //    sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim); // place corrupt block
+
+                //    pillarCorruption(victim);
+                //    victim.Y += 1;
+                //}
+
+                Block corruptBlock = NewCorruptBlock(victim, targetBlock);
+                if (corruptBlock == targetBlock) return;
+
+                sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
+                sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
+
+                if (targetBlock.Code.Path.StartsWith("log-") || targetBlock.Code.Path.StartsWith("water-")) // special feature
+                {
+                    //Mod.Logger.Notification("pillarCorruption triggered: " + targetBlock.Code.Path);
+                    pillarCorruption(victim, targetBlock);
+                }
+            }
         }
         public void pillarCorruption(BlockPos victim, Block targetBlock)
         {
@@ -116,6 +123,44 @@ namespace TerrariaCorruption
             Block corruptBlock = sapi.World.GetBlock(findCode);
             if (corruptBlock == null) return targetBlock;
             return corruptBlock;
+        }
+        public void specialConditions(BlockPos victim, Block targetBlock)
+        {
+            AssetLocation specialCode;
+            Block corruptBlock;
+            string code1;
+            //var parts;
+
+            if (targetBlock.Code.Path.StartsWith("mushroom-") && targetBlock.Code.Path.EndsWith("-normal")) // doesn't corrupt shelf mushrooms atm
+            {
+                Mod.Logger.Notification("specialConditions `mushroom-` triggered: " + targetBlock.Code.Path);
+                code1 = targetBlock.Code.Path.Replace("mushroom-", "mushroom"); // remove first dash in mushroom-type-state
+                //int code2 = targetBlock.Code.Path.IndexOf("-"); // find second dash
+                var parts = code1.Split('-'); // split at second dash
+                specialCode = new AssetLocation("terrariacorruption", "corruptmushroom-witchhat-" + parts[1]); // concat second half into code
+                Mod.Logger.Notification("special block is: " + specialCode);
+                corruptBlock = sapi.World.GetBlock(specialCode);
+
+                if (corruptBlock != null)
+                {
+                    sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
+                    sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
+                }
+            }
+            else if (targetBlock.Code.Path.StartsWith("mushroom-")) // doesn't corrupt normal mushrooms atm
+            {
+                Mod.Logger.Notification("specialConditions `mushroom-` triggered: " + targetBlock.Code.Path);
+                code1 = targetBlock.Code.Path.Replace("mushroom-", "mushroom"); // remove first dash in mushroom-type-state-direction
+                var parts1 = code1.Split('-'); // split at second dash
+                specialCode = new AssetLocation("terrariacorruption", "corruptmushroom-tinderhoof-" + parts1[1] + "-" + parts1[2]); // concat second half into code
+                Mod.Logger.Notification("special block is: " + specialCode);
+                corruptBlock = sapi.World.GetBlock(specialCode);
+                if (corruptBlock != null)
+                {
+                    sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
+                    sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
+                }
+            }
         }
     }
 }
