@@ -7,6 +7,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
+using Vintagestory.API.Server;
 using Vintagestory.GameContent;
 
 #nullable disable
@@ -16,74 +17,45 @@ namespace TerrariaCorruption.Blocks
     public class BlockCorruptWater : BlockWater
     {
 
-        //Random rnd = new Random();
-        //public override void OnServerGameTick(IWorldAccessor world, BlockPos pos, object extra = null)
-        //{
-        //    base.OnServerGameTick(world, pos, extra);
+        public override void OnServerGameTick(IWorldAccessor world, BlockPos pos, object extra = null)
+        {
+            if (iceBlock != null)
+            {
+                world.BlockAccessor.SetBlock(iceBlock.Id, pos, 2); // change to corrupt ice later
+            }
+            // corruption
+            (api as ICoreServerAPI).ModLoader.GetModSystem<BiomeSpreadModSystem>()?.CorruptionNeighbor(pos);
+        }
 
-            
-        //    float val = rnd.Next();
+        public override bool ShouldReceiveServerGameTicks(IWorldAccessor world, BlockPos pos, Random offThreadRandom, out object extra)
+        {
+            extra = null;
 
-        //    BlockPos victim = pos.AddCopy(rnd.Next(-1, 2), rnd.Next(-1, 2), rnd.Next(-1, 2));
-        //    Block targetBlock = world.BlockAccessor.GetBlock(victim);
-        //    string corruptPath = "corrupt" + targetBlock.Code.Path;
+            if((api as ICoreServerAPI).ModLoader.GetModSystem<BiomeSpreadModSystem>()?.CheckNeighbors(pos) ?? false)
+            {
+                return false;
+            }
 
-        //    AssetLocation corruptCode = new AssetLocation("terrariacorruption", corruptPath);
+            if (!GlobalConstants.MeltingFreezingEnabled)
+            {
+                return false;
+            }
 
-        //    Block corruptBlock = world.GetBlock(corruptCode);
-        //    if (corruptBlock == null) return;
+            if (freezable && offThreadRandom.NextDouble() < 0.6 && world.BlockAccessor.GetRainMapHeightAt(pos) <= pos.Y)
+            {
+                BlockPos pos2 = pos.Copy();
+                for (int i = 0; i < BlockFacing.HORIZONTALS.Length; i++)
+                {
+                    BlockFacing.HORIZONTALS[i].IterateThruFacingOffsets(pos2);
+                    if ((world.BlockAccessor.GetBlock(pos2, 2) is BlockLakeIce || world.BlockAccessor.GetBlock(pos2).Replaceable < 6000) && world.BlockAccessor.GetClimateAt(pos, EnumGetClimateMode.ForSuppliedDate_TemperatureOnly, api.World.Calendar.TotalDays).Temperature <= freezingPoint)
+                    {
+                        return true;
+                    }
+                }
+            }
 
-        //    world.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-        //    world.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
-
-        //    while ((targetBlock.Code.Path.StartsWith("log-")) || (targetBlock.Code.Path.StartsWith("water-")) || targetBlock.Code.Path.StartsWith("aquatic-") || targetBlock.Code.Path.StartsWith("aquaticplant-"))
-        //    {
-        //        victim.Y += 1;
-        //        targetBlock = world.BlockAccessor.GetBlock(victim);
-        //        corruptPath = "corrupt" + targetBlock.Code.Path;
-        //        corruptCode = new AssetLocation("terrariacorruption", corruptPath);
-        //        corruptBlock = world.GetBlock(corruptCode);
-        //        if (corruptBlock == null) return;
-
-        //        world.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-        //        world.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
-        //    }
-
-        //}
-
-        //public override bool ShouldReceiveServerGameTicks(IWorldAccessor world, BlockPos pos, Random offThreadRandom, out object extra)
-        //{
-
-        //    extra = null;
-
-
-        //    //bool nested = false;
-
-        //    for (int i = -1; i <= 1; i++)
-        //    {
-        //        for (int j = -1; j <= 1; j++)
-        //        {
-        //            for (int k = -1; k <= 1; k++)
-        //            {
-        //                if (i == 0 && j == 0 && k == 0) continue;
-        //                BlockPos victim = pos.AddCopy(i, j, k);
-        //                Block targetBlock = world.BlockAccessor.GetBlock(victim);
-        //                if (targetBlock.Attributes?["isCorrupt"]?.AsBool() != true)
-        //                {
-        //                    extra = new GrassTick()
-        //                    {
-        //                        Grass = this,
-        //                        TallGrass = null
-        //                    };
-
-        //                    return true;
-        //                }
-        //            }
-        //        }
-        //    }
-
-        //    return extra != null;
-        //}
+            return false;
+        }
     }
 
 }
