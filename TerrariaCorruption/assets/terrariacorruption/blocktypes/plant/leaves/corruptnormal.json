@@ -14,7 +14,7 @@
   },
   "attributes": {
     "handbook": {
-      "groupBy": [ "corruptleaves-*", "corruptleavesnarrow-*" ]
+      "groupBy": [ "leaves-*", "leavesnarrow-*" ]
     },
     "treeFellingGroupCodeByType": {
       "*-grown-crimsonkingmaple": "0maple",

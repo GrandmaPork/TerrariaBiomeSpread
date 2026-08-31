@@ -11,6 +11,7 @@ using Vintagestory.API.Config;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 using Vintagestory.API.Util;
+using Vintagestory.Common;
 using Vintagestory.GameContent;
 
 namespace TerrariaCorruption
@@ -27,6 +28,7 @@ namespace TerrariaCorruption
          * - access players
          */
         private ICoreServerAPI sapi;
+        private const int Fluid = 2;
         private static readonly Random rnd = new Random(); // "static" means all instances share one generator.
         public override void Start(ICoreAPI api)
         {
@@ -67,41 +69,54 @@ namespace TerrariaCorruption
         }
         public void spreadCorruption(BlockPos victim)
         {
-            //Mod.Logger.Notification("victim2: " + victim.AddCopy(0, 0, 0));
-            AssetLocation waterOverride = new AssetLocation("terrariacorruption", "corruptwater-still-7"); // pls work
-            Block overrideCode = sapi.World.GetBlock(waterOverride);
-
             Block targetBlock = sapi.World.BlockAccessor.GetBlock(victim); // targetBlock found here instead of inside NewCorruptBlock to avoid multiple calls to GetBlock
+                                                                           //var specialTest = targetBlock.Code.Path.Split('-');
 
-            if (targetBlock.Code.Path.StartsWith("mushroom-"))
+            //Mod.Logger.Notification("switchcase test: " + targetBlock.Code.Path.Split('-')[0]); // test was successful
+            switch (targetBlock.Code.Path.Split('-')[0]) // check for specific blocktypes. more readable than a giant if statement
             {
-                specialConditions(victim, targetBlock);
-            }
-            else
-            {
-                // spaghetti code yayy
-                //while (targetBlock.Code.Path.StartsWith("tallplant-coopersreed-water")) // special condition. probably doesn't work. we'll see ig
-                //{
-                //    if (overrideCode == null) return; // just in case
+                //case "tallplant": // for later
+                case "log":
+                case "water":
+                case "crop":
+                case "mushroom":
+                case "farmland":
+                    //Mod.Logger.Notification("special condition triggered: " + targetBlock.Code.Path);
+                    specialConditions(victim, targetBlock);
+                    break;
+                default:
+                    if (targetBlock.Code.Path.Contains("-aged-")) return;
 
-                //    sapi.World.BlockAccessor.SetBlock(overrideCode.BlockId, victim); // place corrupt water
-                //    sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim); // place corrupt block
+                    Block corruptBlock = NewCorruptBlock(victim, targetBlock);
+                    if (corruptBlock == null) return;
 
-                //    pillarCorruption(victim);
-                //    victim.Y += 1;
-                //}
+                    // spaghetti code yayy
+                    if (targetBlock.Code.Path.StartsWith("tallplant-coopersreed-") || targetBlock.Code.Path.StartsWith("tallplant-tule-") || targetBlock.Code.Path.StartsWith("tallplant-papyrus-")) // special condition. probably doesn't work. we'll see ig
+                    {
+                        //AssetLocation waterOverride = new AssetLocation("terrariacorruption", "corruptwater-still-7"); // pls work
+                        //Mod.Logger.Notification("coopersreed triggered: " + targetBlock.Code.Path);
 
-                Block corruptBlock = NewCorruptBlock(victim, targetBlock);
-                if (corruptBlock == targetBlock) return;
+                        Block check = sapi.World.BlockAccessor.GetBlock(victim, Fluid); // check water layer
+                        Mod.Logger.Notification("check: " + check.Code.Path);
+                        Mod.Logger.Notification("check.BlockId: " + check.BlockId);
 
-                sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-                sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
+                        Block waterOverride = sapi.World.GetBlock(new AssetLocation("terrariacorruption", "corrupt" + check.Code.Path));
+                        if (waterOverride == null) return; // just in case
 
-                if (targetBlock.Code.Path.StartsWith("log-") || targetBlock.Code.Path.StartsWith("water-")) // special feature
-                {
-                    //Mod.Logger.Notification("pillarCorruption triggered: " + targetBlock.Code.Path);
-                    pillarCorruption(victim, targetBlock);
-                }
+                        if (check.BlockId != 0)
+                        {
+                            sapi.World.BlockAccessor.SetBlock(waterOverride.BlockId, victim, Fluid); // place corrupt water
+                            sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim); // place corrupt block
+                            sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
+                        }
+                    }
+                    else
+                    {
+                        sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
+                        sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
+                    }
+
+                    break;
             }
         }
         public void pillarCorruption(BlockPos victim, Block targetBlock)
@@ -111,7 +126,7 @@ namespace TerrariaCorruption
                 victim.Y += 1;
                 targetBlock = sapi.World.BlockAccessor.GetBlock(victim);
                 Block corruptBlock = NewCorruptBlock(victim, targetBlock);
-                if (corruptBlock == targetBlock) return;
+                if (corruptBlock == null) return;
 
                 sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
                 sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
@@ -121,46 +136,76 @@ namespace TerrariaCorruption
         {
             AssetLocation findCode = new AssetLocation("terrariacorruption", "corrupt" + targetBlock.Code.Path);
             Block corruptBlock = sapi.World.GetBlock(findCode);
-            if (corruptBlock == null) return targetBlock;
+            if (corruptBlock == null) return null;
             return corruptBlock;
         }
         public void specialConditions(BlockPos victim, Block targetBlock)
         {
             AssetLocation specialCode;
             Block corruptBlock;
-            string code1;
-            //var parts;
 
-            if (targetBlock.Code.Path.StartsWith("mushroom-") && targetBlock.Code.Path.EndsWith("-normal")) // doesn't corrupt shelf mushrooms atm
+            // eventually make following code a switch case statement
+            switch (targetBlock.Code.Path.Split('-')[0])
             {
-                Mod.Logger.Notification("specialConditions `mushroom-` triggered: " + targetBlock.Code.Path);
-                code1 = targetBlock.Code.Path.Replace("mushroom-", "mushroom"); // remove first dash in mushroom-type-state
-                //int code2 = targetBlock.Code.Path.IndexOf("-"); // find second dash
-                var parts = code1.Split('-'); // split at second dash
-                specialCode = new AssetLocation("terrariacorruption", "corruptmushroom-witchhat-" + parts[1]); // concat second half into code
-                Mod.Logger.Notification("special block is: " + specialCode);
-                corruptBlock = sapi.World.GetBlock(specialCode);
+                case "mushroom":
+                    if (targetBlock.Code.Path.EndsWith("-normal")) // almost optimized
+                    {
+                        specialCode = new AssetLocation("terrariacorruption", "corruptmushroom-witchhat-" + targetBlock.Code.Path.Split('-')[2]); // concat state into code
+                        corruptBlock = sapi.World.GetBlock(specialCode);
 
-                if (corruptBlock != null)
-                {
+                        if (corruptBlock != null)
+                        {
+                            sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
+                            sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
+                        }
+                    }
+                    else // mushroom-type-state-direction
+                    {
+                        //Mod.Logger.Notification("specialConditions `mushroom-` triggered: " + targetBlock.Code.Path);
+                        var parts = targetBlock.Code.Path.Split('-'); // split at dashes
+                        specialCode = new AssetLocation("terrariacorruption", "corruptmushroom-tinderhoof-" + parts[2] + "-" + parts[3]);
+                        corruptBlock = sapi.World.GetBlock(specialCode);
+                        if (corruptBlock != null)
+                        {
+                            sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
+                            sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
+                        }
+                    }
+                    break;
+                case "farmland":
+                    Block checkAbove = sapi.World.BlockAccessor.GetBlock(victim.AddCopy(0, 1, 0)); // find above block
+                    Block deadPlantBlock = sapi.World.GetBlock(new AssetLocation("deadcrop"));
+                    corruptBlock = NewCorruptBlock(victim, targetBlock);
+                    if ((checkAbove.BlockId == 0) && (deadPlantBlock != null))
+                    {
+                        sapi.World.BlockAccessor.SetBlock(deadPlantBlock.BlockId, victim.AddCopy(0, 1, 0));
+                    }
+                    if (corruptBlock != targetBlock)
+                    {
+                        sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
+                        sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
+                    }
+                    break;
+                case "crop":
+                    corruptBlock = sapi.World.GetBlock(new AssetLocation("terrariacorruption", "deadcrop"));
+                    if (corruptBlock != null)
+                    {
+                        sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
+                        sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
+                    }
+                    break;
+                case "water":
+                case "log":
+                    //Mod.Logger.Notification("pillarCorruption triggered: " + targetBlock.Code.Path);
+                    corruptBlock = NewCorruptBlock(victim, targetBlock);
                     sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-                    sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
-                }
-            }
-            else if (targetBlock.Code.Path.StartsWith("mushroom-")) // doesn't corrupt normal mushrooms atm
-            {
-                Mod.Logger.Notification("specialConditions `mushroom-` triggered: " + targetBlock.Code.Path);
-                code1 = targetBlock.Code.Path.Replace("mushroom-", "mushroom"); // remove first dash in mushroom-type-state-direction
-                var parts1 = code1.Split('-'); // split at second dash
-                specialCode = new AssetLocation("terrariacorruption", "corruptmushroom-tinderhoof-" + parts1[1] + "-" + parts1[2]); // concat second half into code
-                Mod.Logger.Notification("special block is: " + specialCode);
-                corruptBlock = sapi.World.GetBlock(specialCode);
-                if (corruptBlock != null)
-                {
-                    sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-                    sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
-                }
+                    pillarCorruption(victim, targetBlock);
+                    break;
+                default:
+                    Mod.Logger.Notification("specialConditions default triggered: " + targetBlock.Code.Path);
+                    break;
             }
         }
     }
+
 }
