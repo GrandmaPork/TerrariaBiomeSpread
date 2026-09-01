@@ -67,73 +67,6 @@ namespace TerrariaCorruption
                 spreadCorruption(victim);
             }
         }
-        public void spreadCorruption(BlockPos victim)
-        {
-            Block corruptBlock;
-            Block corruptFluid = null;
-            Block targetBlock = sapi.World.BlockAccessor.GetBlock(victim); // targetBlock found here instead of inside NewCorruptBlock to avoid multiple calls to GetBlock
-                                                                           //var specialTest = targetBlock.Code.Path.Split('-');
-
-            //Mod.Logger.Notification("switchcase test: " + targetBlock.Code.Path.Split('-')[0]); // test was successful
-            switch (targetBlock.Code.Path.Split('-')[0]) // check for specific blocktypes. more readable than a giant if statement
-            {
-                case "looseflints":
-                case "looseores":
-                case "loosestones":
-                case "aquaticplant":
-                case "aquatic":
-                    corruptBlock = NewCorruptBlock(victim, targetBlock);
-                    if (corruptBlock == null) return;
-                    corruptFluid = NewCorruptFluid(victim, targetBlock);
-                    if (corruptFluid != null)
-                    {
-                        sapi.World.BlockAccessor.SetBlock(corruptFluid.BlockId, victim, Fluid);
-                    }
-                    sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-                    sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
-                    break;
-                case "log":
-                case "water":
-                case "crop":
-                case "mushroom":
-                case "farmland":
-                    //Mod.Logger.Notification("special condition triggered: " + targetBlock.Code.Path);
-                    specialConditions(victim, targetBlock);
-                    break;
-                default:
-                    if (targetBlock.Code.Path.Contains("-aged-")) return;
-
-                    corruptBlock = NewCorruptBlock(victim, targetBlock);
-                    if (corruptBlock == null) return;
-
-                    // needs to be optimized, possibly a second case statement
-                    if (targetBlock.Code.Path.StartsWith("tallplant-coopersreed-") ||
-                        targetBlock.Code.Path.StartsWith("tallplant-tule-") ||
-                        targetBlock.Code.Path.StartsWith("tallplant-papyrus-") ||
-                        targetBlock.Code.Path.StartsWith("leaves"))
-                    {
-                        corruptFluid = NewCorruptFluid(victim, targetBlock);
-                    }
-
-                    SetBlockCorruption(victim, corruptBlock, corruptFluid);
-                    break;
-            }
-        }
-        public void pillarCorruption(BlockPos victim, Block targetBlock) // needs to include a check for aquatic plants
-        {
-            while (targetBlock.Code.Path.StartsWith("log-") || 
-                targetBlock.Code.Path.StartsWith("water-") || 
-                targetBlock.Code.Path.StartsWith("aquatic")) // technically never called for aquatic plants
-            {
-                victim.Y += 1;
-                targetBlock = sapi.World.BlockAccessor.GetBlock(victim);
-                Block corruptBlock = NewCorruptBlock(victim, targetBlock);
-                //Block corruptFluid = NewCorruptFluid(victim, targetBlock);
-                if (corruptBlock == null) return;
-
-                SetBlockCorruption(victim, corruptBlock);
-            }
-        }
         public Block NewCorruptBlock(BlockPos victim, Block targetBlock) // optimized
         {
             AssetLocation findCode = new AssetLocation("terrariacorruption", "corrupt" + targetBlock.Code.Path);
@@ -141,33 +74,93 @@ namespace TerrariaCorruption
             if (corruptBlock == null) return null;
             return corruptBlock;
         }
-        public Block NewCorruptFluid(BlockPos victim, Block targetBlock)
+        public Block NewCorruptFluid(BlockPos victim)
         {
             Block check = sapi.World.BlockAccessor.GetBlock(victim, Fluid); // check water layer
-            Mod.Logger.Notification("check: " + check.Code.Path);
-            Mod.Logger.Notification("check.BlockId: " + check.BlockId);
+            if (check.BlockId == 0) return null;
+            //Mod.Logger.Notification("check: " + check.Code.Path);
+            //Mod.Logger.Notification("check.BlockId: " + check.BlockId);
 
             Block waterOverride = sapi.World.GetBlock(new AssetLocation("terrariacorruption", "corrupt" + check.Code.Path));
-            if (check.BlockId == 0) return null;
             return waterOverride;
-            //if (waterOverride == null) return; // moved out of function, function used to be a void function
-
-            //if (check.BlockId != 0)
-            //{
-            //    sapi.World.BlockAccessor.SetBlock(waterOverride.BlockId, victim, Fluid); 
-            //}
         }
-        public void SetBlockCorruption(BlockPos victim, Block corruptBlock, Block corruptFluid) // to be added in soon
+        public void pillarCorruption(BlockPos victim, Block targetBlock)
         {
-            if (corruptBlock == null) return;
+            while (targetBlock.Code.Path.StartsWith("log-") ||
+                targetBlock.Code.Path.StartsWith("water-") ||
+                targetBlock.Code.Path.StartsWith("aquatic"))
+            {
+                victim.Y += 1;
+                targetBlock = sapi.World.BlockAccessor.GetBlock(victim);
+                Block corruptBlock = NewCorruptBlock(victim, targetBlock);
+                if (corruptBlock == null) return;
+
+                Block corruptFluid = NewCorruptFluid(victim);
+                SetCorruptBlock(victim, corruptBlock, corruptFluid);
+            }
+        }
+        public void spreadCorruption(BlockPos victim)
+        {
+            Block corruptBlock;
+            Block corruptFluid = null;
+            Block targetBlock = sapi.World.BlockAccessor.GetBlock(victim); // targetBlock found here instead of inside NewCorruptBlock to avoid multiple calls to GetBlock
+
+            switch (targetBlock.Code.Path.Split('-')[0]) // check for specific blocktypes. more readable than a giant if statement
+            {
+                case "looseflints":
+                case "looseboulders":
+                case "looseores":
+                case "loosestones":
+                    corruptBlock = NewCorruptBlock(victim, targetBlock);
+                    corruptFluid = NewCorruptFluid(victim);
+                    SetCorruptBlock(victim, corruptBlock, corruptFluid);
+                    break;
+
+                case "aquatic":
+                case "aquaticplant":
+                case "crop":
+                case "farmland":
+                case "log":
+                case "mushroom":
+                case "water":
+                    //Mod.Logger.Notification("special condition triggered: " + targetBlock.Code.Path);
+                    specialConditions(victim, targetBlock);
+                    break;
+
+                default:
+                    //Mod.Logger.Notification("default condition triggered: " + targetBlock.Code.Path);
+
+                    if (targetBlock.Code.Path.Contains("-aged-")) return; // don't touch any aged (might need specific checks in the future)
+
+                    corruptBlock = NewCorruptBlock(victim, targetBlock);
+                    if (corruptBlock == null) return; // should be kept even though SetCorruptBlock protects against null inputs
+
+                    // needs to be optimized, possibly a second case statement
+                    if (targetBlock.Code.Path.StartsWith("tallplant-coopersreed-") ||
+                        targetBlock.Code.Path.StartsWith("tallplant-tule-") ||
+                        targetBlock.Code.Path.StartsWith("tallplant-papyrus-") ||
+                        targetBlock.Code.Path.StartsWith("leaves")) // can be moved to case statement above
+                    {
+                        //Mod.Logger.Notification("fluid condition triggered: " + targetBlock.Code.Path);
+                        corruptFluid = NewCorruptFluid(victim);
+                    }
+
+                    SetCorruptBlock(victim, corruptBlock, corruptFluid); // corruptFluid only present because of the previous if statement
+                    break;
+            }
+        }
+        public void SetCorruptBlock(BlockPos victim, Block corruptBlock, Block corruptFluid) // to be added in soon
+        {
             if (corruptFluid != null)
             {
                 sapi.World.BlockAccessor.SetBlock(corruptFluid.BlockId, victim, Fluid);
+                sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified(); // so the chunk is updated in case corruptBlock is null
             }
+            if (corruptBlock == null) return; // after corruptFluid check in case block is corrupt but water isn't
             sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
             sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
         }
-        public void SetBlockCorruption(BlockPos victim, Block corruptBlock) // to be added in soon
+        public void SetCorruptBlock(BlockPos victim, Block corruptBlock) // to be added in soon
         {
             if (corruptBlock == null) return;
             sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
@@ -177,8 +170,8 @@ namespace TerrariaCorruption
         {
             AssetLocation specialCode;
             Block corruptBlock;
+            Block corruptFluid;
 
-            // eventually make following code a switch case statement
             switch (targetBlock.Code.Path.Split('-')[0])
             {
                 case "mushroom":
@@ -187,11 +180,7 @@ namespace TerrariaCorruption
                         specialCode = new AssetLocation("terrariacorruption", "corruptmushroom-witchhat-" + targetBlock.Code.Path.Split('-')[2]); // concat state into code
                         corruptBlock = sapi.World.GetBlock(specialCode);
 
-                        if (corruptBlock != null)
-                        {
-                            sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-                            sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
-                        }
+                        SetCorruptBlock(victim, corruptBlock);
                     }
                     else // mushroom-type-state-direction
                     {
@@ -199,13 +188,11 @@ namespace TerrariaCorruption
                         var parts = targetBlock.Code.Path.Split('-'); // split at dashes
                         specialCode = new AssetLocation("terrariacorruption", "corruptmushroom-tinderhoof-" + parts[2] + "-" + parts[3]);
                         corruptBlock = sapi.World.GetBlock(specialCode);
-                        if (corruptBlock != null)
-                        {
-                            sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-                            sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
-                        }
+
+                        SetCorruptBlock(victim, corruptBlock);
                     }
                     break;
+
                 case "farmland":
                     Block checkAbove = sapi.World.BlockAccessor.GetBlock(victim.AddCopy(0, 1, 0)); // find above block
                     Block deadPlantBlock = sapi.World.GetBlock(new AssetLocation("deadcrop"));
@@ -214,32 +201,33 @@ namespace TerrariaCorruption
                     {
                         sapi.World.BlockAccessor.SetBlock(deadPlantBlock.BlockId, victim.AddCopy(0, 1, 0));
                     }
-                    if (corruptBlock != targetBlock)
-                    {
-                        sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-                        sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
-                    }
+
+                    SetCorruptBlock(victim, corruptBlock);
                     break;
+
                 case "crop":
                     corruptBlock = sapi.World.GetBlock(new AssetLocation("terrariacorruption", "deadcrop"));
-                    if (corruptBlock != null)
-                    {
-                        sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
-                        sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
-                    }
+
+                    SetCorruptBlock(victim, corruptBlock);
                     break;
-                case "water":
+
+                case "aquatic":
+                case "aquaticplant":
                 case "log":
+                case "water":
                     //Mod.Logger.Notification("pillarCorruption triggered: " + targetBlock.Code.Path);
+                    corruptFluid = NewCorruptFluid(victim);
                     corruptBlock = NewCorruptBlock(victim, targetBlock);
-                    sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
+                    if (corruptBlock == null) return;
+                    SetCorruptBlock(victim, corruptBlock, corruptFluid);
                     pillarCorruption(victim, targetBlock);
                     break;
+
                 default:
                     Mod.Logger.Notification("specialConditions default triggered: " + targetBlock.Code.Path);
                     break;
             }
         }
+        //
     }
-
 }
