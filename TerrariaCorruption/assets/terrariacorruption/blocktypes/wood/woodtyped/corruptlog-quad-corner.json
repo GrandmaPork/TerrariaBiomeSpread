@@ -82,40 +82,40 @@
 	"drops": [
 		{
 			"type": "block",
-			"code": "logquad-{type}-{wood}-north",
+			"code": "game:logquad-{type}-{wood}-north",
 			"quantity": { "avg": 1 }
 		}
 	],
 	"combustiblePropsByType": {
-		"logquad-*-birch-*": {
+		"corruptlogquad-*-birch-*": {
 			"burnTemperature": 800,
 			"burnDuration": 78
 		},
-		"logquad-*-oak-*": {
+		"corruptlogquad-*-oak-*": {
 			"burnTemperature": 800,
 			"burnDuration": 98
 		},
-		"logquad-*-ebony-*": {
+		"corruptlogquad-*-ebony-*": {
 			"burnTemperature": 800,
 			"burnDuration": 110
 		},
-		"logquad-*-pine-*": {
+		"corruptlogquad-*-pine-*": {
 			"burnTemperature": 800,
 			"burnDuration": 60
 		},
-		"logquad-*-acacia-*": {
+		"corruptlogquad-*-acacia-*": {
 			"burnTemperature": 800,
 			"burnDuration": 89
 		},
-		"logquad-*-kapok-*": {
+		"corruptlogquad-*-kapok-*": {
 			"burnTemperature": 800,
 			"burnDuration": 47
 		},
-		"logquad-*-maple-*": {
+		"corruptlogquad-*-maple-*": {
 			"burnTemperature": 800,
 			"burnDuration": 79
 		},
-		"logquad-*-redwood-*": {
+		"corruptlogquad-*-redwood-*": {
 			"burnTemperature": 800,
 			"burnDuration": 72
 		},

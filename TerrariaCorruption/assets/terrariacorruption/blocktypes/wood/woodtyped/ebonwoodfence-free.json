@@ -1,5 +1,5 @@
 {
-	"code": "corruptroughhewnfence",
+	"code": "ebonwoodwoodenfence",
 	"class": "BlockFence",
 	"behaviors": [
 		{
@@ -11,13 +11,37 @@
 	"attributes": {
 		"isCorrupt": true,
 		"canStep": false,
+		"supportsUnstableRock": true,
 		"isFence": true,
 		"particleCollBoxHeight": 1,
 		"handbook": {
-			"groupBy": [ "roughhewnfence-*" ]
+			"groupBy": [ "woodenfence-*" ]
+		},
+		"attachableToEntity": {
+			"categoryCode": "ropetiepost",
+			"requiresBehindSlots": 1,
+			"attachedShape": { "base": "game:block/wood/fence/boatpost" },
+			"texturePrefixCode": "fence-{wood}",
+			"seatConfig": {
+				"controllable": false,
+				"bodyYawLimit": 0.25,
+				"riderOffset": {
+					"x": 0.75,
+					"y": 0,
+					"z": 0
+				},
+				"eyeHeight": 1,
+				"attributes": {
+					"ropeTieablesOnly": true
+				}
+			}
 		}
 	},
 	"variantgroups": [
+		{
+			"code": "wood",
+			"LoadFromProperties": "game:block/wood"
+		},
 		{
 			"code": "type",
 			"states": [ "empty", "n", "e", "s", "w", "ne", "ns", "nw", "es", "ew", "sw", "nes", "new", "nsw", "esw", "nesw" ]
@@ -27,79 +51,74 @@
 			"states": [ "free" ]
 		}
 	],
-	// Ebony & Purple heartwood considered too hard wood for a rough hewn fence
-	"skipVariants": [
-		"*-ebony-*",
-		"*-purpleheart-*"
-	],
 	"creativeinventory": {
-		"general": [ "corruptroughhewnfence-*-ew-free" ],
-		"decorative": [ "corruptroughhewnfence-*-ew-free" ]
+		"general": [ "woodenfence-*-ew-free" ],
+		"decorative": [ "woodenfence-*-ew-free" ]
 	},
 	"shapebytype": {
-		"*-empty-free": { "base": "game:block/wood/fence/roughfence/empty" },
+		"*-empty-free": { "base": "game:block/wood/fence/empty" },
 		"*-n-free": {
-			"base": "game:block/wood/fence/roughfence/w*",
+			"base": "game:block/wood/fence/w",
 			"rotateY": 270
 		},
 		"*-e-free": {
-			"base": "game:block/wood/fence/roughfence/w*",
+			"base": "game:block/wood/fence/w",
 			"rotateY": 180
 		},
 		"*-s-free": {
-			"base": "game:block/wood/fence/roughfence/w*",
+			"base": "game:block/wood/fence/w",
 			"rotateY": 90
 		},
 		"*-w-free": {
-			"base": "game:block/wood/fence/roughfence/w*",
+			"base": "game:block/wood/fence/w",
 			"rotateY": 0
 		},
 
 		"*-ns-free": {
-			"base": "game:block/wood/fence/roughfence/ew*",
+			"base": "game:block/wood/fence/ew",
 			"rotateY": 90
 		},
 		"*-ew-free": {
-			"base": "game:block/wood/fence/roughfence/ew*",
+			"base": "game:block/wood/fence/ew",
 			"rotateY": 0
 		},
 
 		"*-ne-free": {
-			"base": "game:block/wood/fence/roughfence/sw*",
+			"base": "game:block/wood/fence/sw",
 			"rotateY": 180
 		},
 		"*-nw-free": {
-			"base": "game:block/wood/fence/roughfence/sw*",
+			"base": "game:block/wood/fence/sw",
 			"rotateY": 270
 		},
 		"*-es-free": {
-			"base": "game:block/wood/fence/roughfence/sw*",
+			"base": "game:block/wood/fence/sw",
 			"rotateY": 90
 		},
 		"*-sw-free": {
-			"base": "game:block/wood/fence/roughfence/sw*",
+			"base": "game:block/wood/fence/sw",
 			"rotateY": 0
 		},
 
 		"*-nes-free": {
-			"base": "game:block/wood/fence/roughfence/nsw*",
+			"base": "game:block/wood/fence/nsw",
 			"rotateY": 180
 		},
 		"*-new-free": {
-			"base": "game:block/wood/fence/roughfence/nsw*",
+			"base": "game:block/wood/fence/nsw",
 			"rotateY": 270
 		},
 		"*-nsw-free": {
-			"base": "game:block/wood/fence/roughfence/nsw*",
+			"base": "game:block/wood/fence/nsw",
 			"rotateY": 0
 		},
 		"*-esw-free": {
-			"base": "game:block/wood/fence/roughfence/nsw*",
+			"base": "game:block/wood/fence/nsw",
 			"rotateY": 90
 		},
 
 		"*-nesw-free": {
-			"base": "game:block/wood/fence/roughfence/nesw*",
+			"base": "game:block/wood/fence/nesw",
 			"rotateY": 0
 		}
 	},
@@ -109,19 +128,19 @@
 	},
 	"blockmaterial": "Wood",
 	"textures": {
-		"wattlefence": { "base": "block/wood/roughfence/ebonwood" },
-		"wattlefence2": { "base": "block/wood/roughfence/ebonwood2" }
+		"horizontal": {
+			"base": "block/wood/debarked/{wood}",
+			"overlays": [ "game:block/slightlydarker" ]
+		},
+		"vertical": {
+			"base": "block/wood/debarked/{wood}",
+			"rotation": 90
+		}
 	},
 	"sidesolid": {
 		"all": false
 	},
-	"sideopaqueByType": {
-		"*-snow": {
-			"all": false,
-			"down": true
-		},
-		"*": { "all": false }
-	},
+	"sideopaque": { "all": false },
 	"resistance": 3,
 	"lightAbsorption": 0,
 	"sounds": {
@@ -692,14 +711,6 @@
 		"burnDuration": 10
 	},
 	"materialDensity": 600,
-	"guiTransform": {
-		"origin": {
-			"x": 0.5,
-			"y": 0.45,
-			"z": 0.5
-		},
-		"scale": 1.35
-	},
 	"tpHandTransform": {
 		"translation": {
 			"x": -1.5,

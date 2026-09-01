@@ -1,6 +1,6 @@
 {
-	"inheritFrom": "blocktypes/wood/woodtyped/corruptroughhewnfence-free",
-	"code": "corruptroughhewnfence",
+	"inheritFrom": "blocktypes/wood/woodtyped/ebonwoodroughhewnfence-free",
+	"code": "ebonwoodroughhewnfence",
 	"variantgroups": [
 		{
 			"code": "type",
@@ -33,11 +33,11 @@
 			"rotateY": 180,
 			"alternates": [
 				{
-					"base": "game:block/wood/fence/roughfence/snow-w2",
+					"base": "game:game:block/wood/fence/roughfence/snow-w2",
 					"rotateY": 180
 				},
 				{
-					"base": "block/wood/fence/roughfence/snow-w3",
+					"base": "game:block/wood/fence/roughfence/snow-w3",
 					"rotateY": 180
 				}
 			]

@@ -10,7 +10,7 @@
 		"liquidBarrierOnSides": [ 1.0, 1.0, 1.0, 1.0, 1.0, 1.0 ],
 		"fertilizedSound": {
 			"sound": "game:block/dirt",
-			"range": 12
+			"range": 4
 		}
 	},
 	"variantgroups": [
@@ -21,8 +21,8 @@
 		{ "loadFromProperties": "game:abstract/fertility" }
 	],
 	"creativeinventory": {
-		"general": [ "farmland-dry-*" ],
-		"flora": [ "farmland-dry-" ]
+		"general": [ "corruptfarmland-dry-*" ],
+		"flora": [ "corruptfarmland-dry-" ]
 	},
 	"shape": { "base": "game:block/basic/cube-lowered" },
 	"faceCullMode": "FlushExceptTop",
@@ -33,11 +33,11 @@
 	},
 	"replaceable": 900,
 	"fertilityByType": {
-		"*-verylow": 5,
-		"*-low": 25,
-		"*-medium": 50,
-		"*-compost": 65,
-		"*-high": 80
+		"*-verylow": 1,
+		"*-low": 2,
+		"*-medium": 4,
+		"*-compost": 7,
+		"*-high": 9
 	},
 	"resistance": 2.5,
 	"sounds": {

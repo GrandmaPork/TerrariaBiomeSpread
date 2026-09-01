@@ -74,7 +74,7 @@
       "whenFilled": {
         "stack": {
           "type": "item",
-          "code": "waterportion"
+          "code": "game:waterportion"
         }
       }
     }
@@ -99,8 +99,8 @@
   "snowCoverage": false,
   "materialdensity": 1000,
   "creativeinventory": {
-    "general": [ "water-still-7" ],
-    "terrain": [ "water-still-7" ]
+    "general": [ "corruptwater-still-7" ],
+    "terrain": [ "corruptwater-still-7" ]
   },
   "replaceable": 9500,
   "lightAbsorption": 1,

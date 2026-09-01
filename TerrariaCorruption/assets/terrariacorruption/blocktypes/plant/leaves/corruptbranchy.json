@@ -13,6 +13,7 @@
     "*": [ { "name": "RainDrip" } ]
   },
   "attributes": {
+    "isCorrupt": true,
     "fenceConnect": {
       "north": false,
       "east": false,
@@ -21,7 +22,7 @@
     },
     "asphyxiating": false,
     "handbook": {
-      "groupBy": [ "leavesbranchy-*" ]
+      "groupBy": [ "corruptleavesbranchy-*" ]
     },
     "treeFellingGroupCodeByType": {
       "*-grown-crimsonkingmaple": "0maple",
@@ -46,8 +47,7 @@
       "*-grown*-*": true
     },
     "liquidBarrierOnSides": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
-    "allowOverlays": false,
-    "isCorrupt": true
+    "allowOverlays": false
   },
   "variantgroups": [
     {
@@ -134,7 +134,7 @@
       "*-larch": { "base": "block/plant/leaves/small/pine*" },
       "*-redwood": { "base": "block/plant/leaves/small/pine*" },
       "*-crimsonkingmaple": { "base": "block/plant/leaves/small/maple*" },
-      "*": { "base": "block/plant/leaves/small/{wood}*" }
+      "*": { "base": "game:block/plant/leaves/small/{wood}*" }
     },
     "branch": { "base": "block/plant/leaves/large/corruptbranch" }
   },
@@ -154,48 +154,10 @@
   "drops": [
     {
       "type": "item",
-      "code": "treeseed-{wood}",
-      "quantityByType": {
-        "*-pine": {
-          "avg": 0.12,
-          "var": 0
-        },
-        "*-acacia": {
-          "avg": 0.12,
-          "var": 0
-        },
-        "*-larch": {
-          "avg": 0.025,
-          "var": 0
-        },
-        "*-crimsonkingmaple": {
-          "avg": 0.0325,
-          "var": 0
-        },
-        "*-redwood": {
-          "avg": 0.004,
-          "var": 0
-        },
-        "*-ebony": {
-          "avg": 0.01,
-          "var": 0
-        },
-        "*-purpleheart": {
-          "avg": 0.01,
-          "var": 0
-        },
-        "*": {
-          "avg": 0.05,
-          "var": 0
-        }
-      }
-    },
-    {
-      "type": "item",
-      "code": "stick",
+      "code": "game:stick",
       "quantity": {
-        "avg": 1,
-        "var": 0
+        "avg": 3,
+        "var": 2
       }
     }
   ],

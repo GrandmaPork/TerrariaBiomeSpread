@@ -42,14 +42,14 @@
 		"*-snow": { "base": "game:block/roofing/beam/planeshingle-snow*" }
 	},
 	"texturesByType": {
-		"beam-plane-slate-*": {
+		"corruptbeam-plane-slate-*": {
 			"material": { "base": "block/stone/shingles/slate*" }
 		},
-		"beam-plane-thatch-*": {
+		"corruptbeam-plane-thatch-*": {
 			"top": { "base": "game:block/plant/grassroofing/normal-side" },
 			"bamboo-top": { "base": "game:block/hay/normal-top" }
 		},
-		"beam-plane-bamboo-*": {
+		"corruptbeam-plane-bamboo-*": {
 			"material": { "base": "game:block/wood/planks/bamboosmooth" }
 		},
 		"*": {

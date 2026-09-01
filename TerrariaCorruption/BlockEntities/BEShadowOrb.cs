@@ -83,7 +83,7 @@ namespace TerrariaCorruption.BlockEntities
             BlockPos victim = pos.AddCopy(rnd.Next(-15, 16), rnd.Next(-1, 1), rnd.Next(-15, 16)); // find random position in a large thin plane
             if (Api.Side == EnumAppSide.Server)
             {
-                (Api as ICoreServerAPI).ModLoader.GetModSystem<TerrariaCorruptionModSystem>()?.spreadCorruption(victim);
+                (Api as ICoreServerAPI).ModLoader.GetModSystem<BiomeSpreadModSystem>()?.spreadCorruption(victim);
             }
             //sapi.ModLoader.GetModSystem<TerrariaCorruptionModSystem>()?.spreadCorruption(victim);
             //TerrariaCorruptionModSystem.spreadCorruption(victim);
@@ -93,7 +93,7 @@ namespace TerrariaCorruption.BlockEntities
             BlockPos victim = pos.AddCopy(rnd.Next(-1, 2), rnd.Next(-1, 1), rnd.Next(-1, 2)); // find random position in a short radius
             if (Api.Side == EnumAppSide.Server)
             {
-                (Api as ICoreServerAPI).ModLoader.GetModSystem<TerrariaCorruptionModSystem>()?.spreadCorruption(victim);
+                (Api as ICoreServerAPI).ModLoader.GetModSystem<BiomeSpreadModSystem>()?.spreadCorruption(victim);
             }
         }
         public override void ToTreeAttributes(ITreeAttribute tree)

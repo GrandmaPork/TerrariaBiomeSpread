@@ -1,5 +1,5 @@
 {
-	"code": "corruptwoodenfence",
+	"code": "ebonwoodwoodenfence",
 	"class": "BlockFence",
 	"behaviors": [
 		{
@@ -9,116 +9,89 @@
 		{ "name": "RopeTieable" }
 	],
 	"attributes": {
-		"isCorrupt": true,
 		"canStep": false,
 		"supportsUnstableRock": true,
-		"isFence": true,
 		"particleCollBoxHeight": 1,
+		"isFence": true,
 		"handbook": {
 			"groupBy": [ "woodenfence-*" ]
-		},
-		"attachableToEntity": {
-			"categoryCode": "ropetiepost",
-			"requiresBehindSlots": 1,
-			"attachedShape": { "base": "game:block/wood/fence/boatpost" },
-			"texturePrefixCode": "fence-{wood}",
-			"seatConfig": {
-				"controllable": false,
-				"bodyYawLimit": 0.25,
-				"riderOffset": {
-					"x": 0.75,
-					"y": 0,
-					"z": 0
-				},
-				"eyeHeight": 1,
-				"attributes": {
-					"ropeTieablesOnly": true
-				}
-			}
 		}
 	},
 	"variantgroups": [
-		{
-			"code": "wood",
-			"LoadFromProperties": "game:block/wood"
-		},
 		{
 			"code": "type",
 			"states": [ "empty", "n", "e", "s", "w", "ne", "ns", "nw", "es", "ew", "sw", "nes", "new", "nsw", "esw", "nesw" ]
 		},
 		{
 			"code": "cover",
-			"states": [ "free" ]
+			"states": [ "snow" ]
 		}
 	],
-	"creativeinventory": {
-		"general": [ "woodenfence-*-ew-free" ],
-		"decorative": [ "woodenfence-*-ew-free" ]
-	},
+	"creativeinventory": {},
 	"shapebytype": {
-		"*-empty-free": { "base": "game:block/wood/fence/empty" },
-		"*-n-free": {
-			"base": "game:block/wood/fence/w",
+		"*-empty-snow": { "base": "game:block/wood/fence/snow-empty" },
+		"*-n-snow": {
+			"base": "game:block/wood/fence/snow-w",
 			"rotateY": 270
 		},
-		"*-e-free": {
-			"base": "game:block/wood/fence/w",
+		"*-e-snow": {
+			"base": "game:block/wood/fence/snow-w",
 			"rotateY": 180
 		},
-		"*-s-free": {
-			"base": "game:block/wood/fence/w",
+		"*-s-snow": {
+			"base": "game:block/wood/fence/snow-w",
 			"rotateY": 90
 		},
-		"*-w-free": {
-			"base": "game:block/wood/fence/w",
+		"*-w-snow": {
+			"base": "game:block/wood/fence/snow-w",
 			"rotateY": 0
 		},
 
-		"*-ns-free": {
-			"base": "game:block/wood/fence/ew",
+		"*-ns-snow": {
+			"base": "game:block/wood/fence/snow-ew",
 			"rotateY": 90
 		},
-		"*-ew-free": {
-			"base": "game:block/wood/fence/ew",
+		"*-ew-snow": {
+			"base": "game:block/wood/fence/snow-ew",
 			"rotateY": 0
 		},
 
-		"*-ne-free": {
-			"base": "game:block/wood/fence/sw",
+		"*-ne-snow": {
+			"base": "game:block/wood/fence/snow-sw",
 			"rotateY": 180
 		},
-		"*-nw-free": {
-			"base": "game:block/wood/fence/sw",
+		"*-nw-snow": {
+			"base": "game:block/wood/fence/snow-sw",
 			"rotateY": 270
 		},
-		"*-es-free": {
-			"base": "game:block/wood/fence/sw",
+		"*-es-snow": {
+			"base": "game:block/wood/fence/snow-sw",
 			"rotateY": 90
 		},
-		"*-sw-free": {
-			"base": "game:block/wood/fence/sw",
+		"*-sw-snow": {
+			"base": "game:block/wood/fence/snow-sw",
 			"rotateY": 0
 		},
 
-		"*-nes-free": {
-			"base": "game:block/wood/fence/nsw",
+		"*-nes-snow": {
+			"base": "game:block/wood/fence/snow-nsw",
 			"rotateY": 180
 		},
-		"*-new-free": {
-			"base": "game:block/wood/fence/nsw",
+		"*-new-snow": {
+			"base": "game:block/wood/fence/snow-nsw",
 			"rotateY": 270
 		},
-		"*-nsw-free": {
-			"base": "game:block/wood/fence/nsw",
+		"*-nsw-snow": {
+			"base": "game:block/wood/fence/snow-nsw",
 			"rotateY": 0
 		},
-		"*-esw-free": {
-			"base": "game:block/wood/fence/nsw",
+		"*-esw-snow": {
+			"base": "game:block/wood/fence/snow-nsw",
 			"rotateY": 90
 		},
 
-		"*-nesw-free": {
-			"base": "game:block/wood/fence/nesw",
+		"*-nesw-snow": {
+			"base": "game:block/wood/fence/snow-nesw",
 			"rotateY": 0
 		}
 	},
@@ -129,11 +102,11 @@
 	"blockmaterial": "Wood",
 	"textures": {
 		"horizontal": {
-			"base": "block/wood/debarked/{wood}",
+			"base": "game:block/wood/debarked/aged",
 			"overlays": [ "game:block/slightlydarker" ]
 		},
 		"vertical": {
-			"base": "block/wood/debarked/{wood}",
+			"base": "game:block/wood/debarked/aged",
 			"rotation": 90
 		}
 	},
@@ -427,7 +400,6 @@
 			}
 		]
 	},
-
 	"collisionboxbytype": {
 		"*-empty-*": {
 			"x1": 0.375,

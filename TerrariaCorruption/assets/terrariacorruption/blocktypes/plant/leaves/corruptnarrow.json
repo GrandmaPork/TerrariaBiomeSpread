@@ -10,6 +10,7 @@
     ]
   },
   "attributes": {
+    "isCorrupt": true,
     "treeFellingGroupCodeByType": {
       "*-grown-*": "{wood}"
     },
@@ -202,17 +203,7 @@
   "drops": [
     {
       "type": "item",
-      "code": "treeseed-greenspirecypress",
-      "quantityByType": {
-        "*": {
-          "avg": 0.16,
-          "var": 0
-        }
-      }
-    },
-    {
-      "type": "item",
-      "code": "stick",
+      "code": "game:stick",
       "quantity": {
         "avg": 0.1,
         "var": 0

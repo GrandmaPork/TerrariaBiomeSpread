@@ -13,6 +13,7 @@
 		}
 	],
 	"attributes": {
+		"isCorrupt": true,
 		"butterflyFeed": true,
 		"beeFeed": true,
 		"sitHeight": 0.45,
@@ -136,7 +137,7 @@
 	"drops": [
 		{
 			"type": "block",
-			"code": "barrelcactus-normal",
+			"code": "corruptbarrelcactus-normal",
 			"quantity": { "avg": 1 }
 		}
 	]

@@ -1,5 +1,5 @@
 {
-	"code": "corruptplanks",
+	"code": "ebonwoodplanks",
 	"behaviors": [
 		{
 			"name": "Pillar",
@@ -76,7 +76,7 @@
 	"drops": [
 		{
 			"type": "block",
-			"code": "corruptplanks-ud"
+			"code": "ebonwoodplanks-ud"
 		}
 	]
 }

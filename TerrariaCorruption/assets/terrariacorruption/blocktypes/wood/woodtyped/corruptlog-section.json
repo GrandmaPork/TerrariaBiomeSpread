@@ -95,7 +95,7 @@
 	"drops": [
 		{
 			"type": "block",
-			"code": "logsection-placed-{wood}-ne-ud",
+			"code": "corruptlogsection-placed-{wood}-ne-ud",
 			"quantity": { "avg": 1 }
 		}
 	],

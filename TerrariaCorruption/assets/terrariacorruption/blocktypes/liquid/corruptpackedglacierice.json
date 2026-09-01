@@ -25,7 +25,7 @@
 	"heldTpIdleAnimation": "holdbothhandslarge",
 	"heldRightReadyAnimation": "heldblockready",
 	"heldTpUseAnimation": "twohandplaceblock",
-	"drops": [ { "code": "ice-packedglacier" } ],
+	"drops": [ { "code": "game:ice-packedglacier" } ],
 	"tpHandTransform": {
 		"translation": {
 			"x": -1.23,

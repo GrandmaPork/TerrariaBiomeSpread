@@ -1,5 +1,6 @@
 {
   "code": "corruptcobblestonefan",
+  "class": "terrariacorruption.corruptblock",
   "variantgroups": [
     {
       "code": "rock",

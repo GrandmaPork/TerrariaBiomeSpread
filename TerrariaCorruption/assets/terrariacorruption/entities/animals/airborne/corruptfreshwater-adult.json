@@ -56,7 +56,7 @@
   "drops": [
     {
       "type": "item",
-      "code": "fishraw-freshwater-{type}-{species}-{age}"
+      "code": "game:fishraw-freshwater-{type}-{species}-{age}"
     }
   ],
   "attributes": {
@@ -314,12 +314,12 @@
           "avg": 2,
           "var": 3
         },
-        "insideBlockCodes": [ "water-still-7" ]
+        "insideBlockCodes": [ "corruptwater-still-7" ]
       },
       "runtime": {
         "group": "passive",
         "maxQuantityByGroup": {
-          "code": "fish-freshwater-{type}-*",
+          "code": "corruptfish-freshwater-{type}-*",
           "maxQuantity": 4
         },
         "chance": 0.0001,
@@ -330,54 +330,54 @@
           "avg": 2,
           "var": 3
         },
-        "insideBlockCodes": [ "water-still-7" ]
+        "insideBlockCodes": [ "corruptwater-still-7" ]
 
       },
       "climate": {
         "randomMapCodePool": [ "fish1", "fish2", "fish3", "fish4", "fish5", "fish6", "fish7", "fish8", "fish9" ],
         "minTempByType": {
-          "fish-freshwater-alewife-*": -25,
-          "fish-freshwater-chub-*": -25,
-          "fish-freshwater-salmon-*": -25,
-          "fish-freshwater-trout-*": -20,
-          "fish-freshwater-walleye-*": -17,
-          "fish-freshwater-catfish-channel-*": -16,
-          "fish-freshwater-pike-*": -15,
-          "fish-freshwater-perch-*": -13,
-          "fish-freshwater-crappie-*": -10,
-          "fish-freshwater-sheatfish-*": -5,
-          "fish-freshwater-carp-common-*": -5,
-          "fish-freshwater-catfish-blue-*": -3,
-          "fish-freshwater-carp-grass-*": -2,
-          "fish-freshwater-bass-*": -1,
-          "fish-freshwater-tilapia-*": 26,
-          "fish-freshwater-piranha-*": 28,
-          "fish-freshwater-arapaima-*": 30,
+          "corruptfish-freshwater-alewife-*": -25,
+          "corruptfish-freshwater-chub-*": -25,
+          "corruptfish-freshwater-salmon-*": -25,
+          "corruptfish-freshwater-trout-*": -20,
+          "corruptfish-freshwater-walleye-*": -17,
+          "corruptfish-freshwater-catfish-channel-*": -16,
+          "corruptfish-freshwater-pike-*": -15,
+          "corruptfish-freshwater-perch-*": -13,
+          "corruptfish-freshwater-crappie-*": -10,
+          "corruptfish-freshwater-sheatfish-*": -5,
+          "corruptfish-freshwater-carp-common-*": -5,
+          "corruptfish-freshwater-catfish-blue-*": -3,
+          "corruptfish-freshwater-carp-grass-*": -2,
+          "corruptfish-freshwater-bass-*": -1,
+          "corruptfish-freshwater-tilapia-*": 26,
+          "corruptfish-freshwater-piranha-*": 28,
+          "corruptfish-freshwater-arapaima-*": 30,
           "*": 0
         },
         "maxTempByType": {
-          "fish-freshwater-salmon-*": 0,
-          "fish-freshwater-trout-*": 3,
-          "fish-freshwater-carp-common-*": 12,
-          "fish-freshwater-walleye-*": 15,
-          "fish-freshwater-carp-grass-*": 16,
-          "fish-freshwater-perch-*": 17,
-          "fish-freshwater-catfish-channel-*": 19,
-          "fish-freshwater-crappie-*": 20,
-          "fish-freshwater-sheatfish-*": 20,
-          "fish-freshwater-bass-*": 21,
-          "fish-freshwater-pickerel-*": 23,
-          "fish-freshwater-catfish-blue-*": 24,
-          "fish-freshwater-pike-*": 25,
+          "corruptfish-freshwater-salmon-*": 0,
+          "corruptfish-freshwater-trout-*": 3,
+          "corruptfish-freshwater-carp-common-*": 12,
+          "corruptfish-freshwater-walleye-*": 15,
+          "corruptfish-freshwater-carp-grass-*": 16,
+          "corruptfish-freshwater-perch-*": 17,
+          "corruptfish-freshwater-catfish-channel-*": 19,
+          "corruptfish-freshwater-crappie-*": 20,
+          "corruptfish-freshwater-sheatfish-*": 20,
+          "corruptfish-freshwater-bass-*": 21,
+          "corruptfish-freshwater-pickerel-*": 23,
+          "corruptfish-freshwater-catfish-blue-*": 24,
+          "corruptfish-freshwater-pike-*": 25,
           "*": 40
         },
         "minYByType": {
-          "@fish-freshwater-(catfish|sheatfish|walleye)-.*": 0.7,
-          "@fish-freshwater-(crappie|perch|trout)-.*": 0.9,
+          "@corruptfish-freshwater-(catfish|sheatfish|walleye)-.*": 0.7,
+          "@corruptfish-freshwater-(crappie|perch|trout)-.*": 0.9,
           "*": 0.8
         },
         "maxYByType": {
-          "@fish-freshwater-(catfish|sheatfish|walleye)-.*": 0.9,
+          "@corruptfish-freshwater-(catfish|sheatfish|walleye)-.*": 0.9,
           "*": 1.0
         }
       }

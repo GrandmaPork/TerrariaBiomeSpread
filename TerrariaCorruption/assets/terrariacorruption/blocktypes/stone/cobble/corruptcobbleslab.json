@@ -56,8 +56,8 @@
 		"*": { "base": "game:block/basic/slab/slab-{rot}" }
 	},
 	"textures": {
-		"horizontals": { "base": "block/stone/cobblestone/{rock}*" },
-		"verticals": { "base": "block/stone/cobblestone/{rock}1" }
+		"horizontals": { "base": "block/stone/cobblestoneslab/{rock}" },
+		"verticals": { "base": "block/stone/cobblestone/{rock}*" }
 	},
 	"sideSolidOpaqueAoByType": {
 		"*-north-*": {

@@ -5,7 +5,7 @@
 			{ "name": "Pillar" },
 			{
 				"name": "WrenchOrientable",
-				"properties": { "baseCode": "logquad-{type}-{wood}" }
+				"properties": { "baseCode": "corruptlogquad-{type}-{wood}" }
 			}
 		]
 	},
@@ -33,8 +33,9 @@
 	"blockmaterial": "Wood",
 	"requiredMiningTier": 1,
 	"attributes": {
+		"isCorrupt": true,
 		"handbook": {
-			"groupBy": [ "logquad-{type}-*" ]
+			"groupBy": [ "corruptlogquad-{type}-*" ]
 		}
 	},
 	"texturesByType": {
@@ -119,7 +120,7 @@
 	"drops": [
 		{
 			"type": "block",
-			"code": "corruptlogquad-{type}-{wood}-ud",
+			"code": "game:logquad-{type}-{wood}-ud",
 			"quantity": { "avg": 1 }
 		}
 	],

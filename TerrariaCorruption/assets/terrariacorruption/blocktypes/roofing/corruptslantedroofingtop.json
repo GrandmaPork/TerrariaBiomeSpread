@@ -51,7 +51,7 @@
 			"rotateY": 270
 		},
 		"@.*-thatch-east-.*": {
-			"base": "bgame:lock/roofing/main-top/{material}-{cover}",
+			"base": "game:block/roofing/main-top/{material}-{cover}",
 			"rotateY": 0
 		},
 
@@ -138,9 +138,9 @@
 			"bamboosmooth": { "base": "game:block/wood/planks/bamboosmooth" }
 		},
 		"@.*-ebonwood-.*": {
-			"acacia1": { "base": "block/wood/planks/{material}1" },
-			"acacia-top": { "base": "block/wood/shingles/{material}-top" },
-			"acacia-side": { "base": "block/wood/shingles/{material}-side" }
+			"ebonwood1": { "base": "block/wood/planks/ebonwood1" },
+			"ebonwood-top": { "base": "block/wood/shingles/ebonwood-top" },
+			"ebonwood-side": { "base": "block/wood/shingles/ebonwood-side" }
 		}
 	},
 	"drawtype": "json",
@@ -229,11 +229,6 @@
 		]
 	},
 	"soundsByType": {
-		"*-agedthatch-*": {
-			"place": "block/plant",
-			"break": "block/plant",
-			"hit": "block/plant"
-		},
 		"*-thatch-*": {
 			"place": "block/plant",
 			"break": "block/plant",

@@ -1,5 +1,5 @@
 {
-	"code": "corruptcrate",
+	"code": "ebonwoodcrate",
 	"class": "BlockCrate",
 	"entityclass": "Crate",
 	"attributes": {
@@ -73,7 +73,7 @@
 			"stacks": [
 				{
 					"type": "block",
-					"code": "corruptcrate",
+					"code": "ebonwoodcrate",
 					"attributes": {
 						"lidState": "closed",
 						"type": "wood-ebonwood"
@@ -93,7 +93,7 @@
 	},
 	"textures": {
 		"label-building": { "base": "game:block/wood/crate/label-building" },
-		"label-decoration": { "base": "game:/wood/crate/label-decoration" },
+		"label-decoration": { "base": "game:block/wood/crate/label-decoration" },
 		"label-defense": { "base": "game:block/wood/crate/label-defense" },
 		"label-empty": { "base": "game:block/wood/crate/label-empty" },
 		"label-ingredients": { "base": "game:block/wood/crate/label-ingredients" },
