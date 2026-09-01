@@ -1,12 +1,12 @@
 {
 	"code": "corruptfruittree",
-	"class": "BlockDynamicTreeBranch",
+	"class": "terrariacorruption.corruptdynamictreebranch",
 	"entityClass": "DynamicTreeBranch",
 	"maxStackSize": 16,
 	"attributes": {
 		"isCorrupt": true,
 		"handbook": {
-			"groupBy": [ "corruptfruittree-*" ]
+			"groupBy": [ "fruittree-*" ]
 		},
 		"asphyxiating": false,
 		"foliageBlock": "corruptfruittree-foliage",
@@ -177,7 +177,7 @@
 			"*-branch": 2,
 			"*-cutting": 2
 		},
-		"fruittreeProperties": {
+		"corruptfruittreeProperties": {
 			"pinkapple": {
 				"vernalizationHours": {
 					"avg": 250,

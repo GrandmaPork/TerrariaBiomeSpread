@@ -16,7 +16,7 @@ using Vintagestory.ServerMods;
 
 namespace TerrariaCorruption.Blocks
 {
-    public class BlockCorrupt : Block // was originally BlockCorruptRock but had no reason to be limited to rocks
+    public class BlockCorruptFruitTreePart : BlockFruitTreePart
     {
         public override void OnServerGameTick(IWorldAccessor world, BlockPos pos, object extra = null)
         {
@@ -40,11 +40,11 @@ namespace TerrariaCorruption.Blocks
             // corruption
             (api as ICoreServerAPI).ModLoader.GetModSystem<BiomeSpreadModSystem>()?.CorruptionNeighbor(pos);
         }
-        public override bool ShouldReceiveServerGameTicks(IWorldAccessor world, BlockPos pos, Random offThreadRandom, out object extra)
-        {
-            extra = null;
-            return (api as ICoreServerAPI).ModLoader.GetModSystem<BiomeSpreadModSystem>()?.CheckNeighbors(pos) ?? false;
-        }
+        //public override bool ShouldReceiveServerGameTicks(IWorldAccessor world, BlockPos pos, Random offThreadRandom, out object extra)
+        //{
+        //    extra = null;
+        //    return (api as ICoreServerAPI).ModLoader.GetModSystem<BiomeSpreadModSystem>()?.CheckNeighbors(pos) ?? false;
+        //}
     }
 
 }

@@ -19,17 +19,17 @@
 		}
 	],
 	"allowedVariants": [
-		"corruptmushroom-tinderhoof-*"
+		"corruptmushroom-funeralbell-*"
 	],
 	"attributes": {
 		"isCorrupt": true,
 		"mushroomProps": {
 			"dieWhenTempBelowByType": {
-				"*-tinderhoof-*": -99,
+				"*-funeralbell-*": -99,
 				"*": 0
 			},
 			"dieAfterFruitingByType": {
-				"*-tinderhoof-*": false,
+				"*-funeralbell-*": false,
 				"*": true
 			}
 		},
@@ -91,11 +91,7 @@
 		"*-funeralbell-*": {
 			"satiety": 80,
 			"health": -40,
-			"foodcategory": "Vegetable"
-		},
-		"*-pinkbonnet-*": {
-			"satiety": 80,
-			"health": -10,
+			"psychedelic": 1.4,
 			"foodcategory": "Vegetable"
 		},
 		"*": {
@@ -111,19 +107,19 @@
 	"drawtype": "JSON",
 	"shapeByType": {
 		"*-north": {
-			"base": "game:block/plant/mushroom/{mushroom}/{state}*",
+			"base": "block/plant/mushroom/{mushroom}/{state}*",
 			"rotateY": 180
 		},
 		"*-east": {
-			"base": "game:block/plant/mushroom/{mushroom}/{state}*",
+			"base": "block/plant/mushroom/{mushroom}/{state}*",
 			"rotateY": 90
 		},
 		"*-south": {
-			"base": "game:block/plant/mushroom/{mushroom}/{state}*",
+			"base": "block/plant/mushroom/{mushroom}/{state}*",
 			"rotateY": 0
 		},
 		"*-west": {
-			"base": "game:block/plant/mushroom/{mushroom}/{state}*",
+			"base": "block/plant/mushroom/{mushroom}/{state}*",
 			"rotateY": 270
 		}
 	},
@@ -155,7 +151,7 @@
 		}
 	},
 	"guiTransformByType": {
-		"corruptmushroom-tinderhoof-*": {
+		"corruptmushroom-funeralbell-*": {
 			"rotation": {
 				"x": -22,
 				"y": -133,
@@ -164,6 +160,19 @@
 			"origin": {
 				"x": 0.49,
 				"y": 0.13,
+				"z": 0.5
+			},
+			"scale": 3
+		},
+		"*": {
+			"rotation": {
+				"x": -22,
+				"y": 107,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5,
+				"y": 0.2,
 				"z": 0.5
 			},
 			"scale": 3

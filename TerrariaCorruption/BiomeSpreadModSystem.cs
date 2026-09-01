@@ -74,7 +74,7 @@ namespace TerrariaCorruption
             if (corruptBlock == null) return null;
             return corruptBlock;
         }
-        public Block NewCorruptFluid(BlockPos victim)
+        public Block NewCorruptFluid(BlockPos victim) // after messing with code for quite a few hours, it seems like it would be better to add the corruptFluid check into SetCorruptBlock since no edge cases will be missed and no blocks will have a waterlogging issue, but it comes at the cost of a second call to GetBlock. This will hit performance, but it will be more readable and easier to maintain. 
         {
             Block check = sapi.World.BlockAccessor.GetBlock(victim, Fluid); // check water layer
             if (check.BlockId == 0) return null;
@@ -107,6 +107,16 @@ namespace TerrariaCorruption
 
             switch (targetBlock.Code.Path.Split('-')[0]) // check for specific blocktypes. more readable than a giant if statement
             {
+                case "fruittree":
+                    while (targetBlock.Code.Path.Split('-')[0] == "fruitree")
+                    {
+                        sapi.World.BlockAccessor.SetBlock(0, victim); // not worth corrupting at the moment
+                        sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
+
+                        victim.Y += 1;
+                        targetBlock = sapi.World.BlockAccessor.GetBlock(victim);
+                    }
+                    break;
                 case "looseflints":
                 case "looseboulders":
                 case "looseores":
@@ -186,7 +196,7 @@ namespace TerrariaCorruption
                     {
                         //Mod.Logger.Notification("specialConditions `mushroom-` triggered: " + targetBlock.Code.Path);
                         var parts = targetBlock.Code.Path.Split('-'); // split at dashes
-                        specialCode = new AssetLocation("terrariacorruption", "corruptmushroom-tinderhoof-" + parts[2] + "-" + parts[3]);
+                        specialCode = new AssetLocation("terrariacorruption", "corruptmushroom-funeralbell-" + parts[2] + "-" + parts[3]);
                         corruptBlock = sapi.World.GetBlock(specialCode);
 
                         SetCorruptBlock(victim, corruptBlock);
@@ -206,8 +216,9 @@ namespace TerrariaCorruption
                     break;
 
                 case "crop":
-                    corruptBlock = sapi.World.GetBlock(new AssetLocation("terrariacorruption", "deadcrop"));
-
+                    corruptBlock = sapi.World.GetBlock(new AssetLocation("deadcrop"));
+                    if (corruptBlock == null) return;
+                    Mod.Logger.Notification("Replace " + targetBlock.Code.Path + " with " + corruptBlock.Code.Path);
                     SetCorruptBlock(victim, corruptBlock);
                     break;
 
@@ -224,7 +235,7 @@ namespace TerrariaCorruption
                     break;
 
                 default:
-                    Mod.Logger.Notification("specialConditions default triggered: " + targetBlock.Code.Path);
+                    Mod.Logger.Error("specialConditions default triggered??: " + targetBlock.Code.Path);
                     break;
             }
         }
