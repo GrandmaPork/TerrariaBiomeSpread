@@ -490,7 +490,7 @@
     "*": [
       {
         "type": "item",
-        "code": "corruptnugget-{ore}",
+        "code": "shadownugget-{ore}",
         "quantity": {
           "avg": 2,
           "var": 1

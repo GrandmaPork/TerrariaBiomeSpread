@@ -221,7 +221,7 @@
 			"smeltedRatio": 2,
 			"smeltedStack": {
 				"type": "item",
-				"code": "corruptingot-demonite"
+				"code": "shadowingot-demonite"
 			}
 		}
 	},

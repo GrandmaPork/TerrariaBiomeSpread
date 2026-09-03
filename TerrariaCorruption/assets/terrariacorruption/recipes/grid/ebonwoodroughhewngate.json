@@ -1,0 +1,56 @@
+[
+	{
+		"ingredientPattern": "APS,PSP,SPS",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"tags": [ "tool-axe" ],
+				"isTool": true
+			},
+			"P": {
+				"type": "block",
+				"code": "corruptlog-placed-*-ud",
+				"name": "wood",
+				"allowedVariants": [ "birch", "oak", "maple", "pine", "acacia", "kapok", "aged", "baldcypress", "larch", "redwood", "walnut" ]
+			},
+			"S": {
+				"type": "item",
+				"code": "game:stick"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "ebonwoodroughhewnfencegate-n-closed-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "APS,PSP,SPS",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"tags": [ "tool-axe" ],
+				"isTool": true
+			},
+			"P": {
+				"type": "block",
+				"code": "corruptlogsection-placed-*-ne-ud",
+				"name": "wood",
+				"allowedVariants": [ "redwood" ]
+			},
+			"S": {
+				"type": "item",
+				"code": "game:stick"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "ebonwoodroughhewnfencegate-n-closed-free",
+			"quantity": 2
+		}
+	}
+]

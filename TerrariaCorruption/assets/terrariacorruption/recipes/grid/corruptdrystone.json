@@ -1,0 +1,76 @@
+[
+	{
+		"ingredientPattern": "LLL,LCL,LLL",
+		"ingredients": {
+			"L": {
+				"type": "item",
+				"code": "corruptstone-*",
+				"name": "rock",
+				"allowedVariants": [ "andesite", "chalk", "chert", "conglomerate", "limestone", "claystone", "granite", "sandstone", "shale", "basalt", "peridotite", "phyllite", "slate", "bauxite", "suevite" ]
+			},
+			"C": {
+				"type": "item",
+				"code": "corruptstonebrick-*",
+				"name": "rock",
+				"allowedVariants": [ "andesite", "chalk", "chert", "conglomerate", "limestone", "claystone", "granite", "sandstone", "shale", "basalt", "peridotite", "phyllite", "slate", "bauxite", "suevite" ]
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptdrystone-{rock}",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "ABC,DEF,GHI",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "corruptstone-bauxite"
+			},
+			"B": {
+				"type": "item",
+				"code": "corruptstone-granite"
+			},
+			"C": {
+				"type": "item",
+				"code": "corruptstone-limestone"
+			},
+			"D": {
+				"type": "item",
+				"code": "corruptstone-conglomerate"
+			},
+			"F": {
+				"type": "item",
+				"code": "corruptstone-andesite"
+			},
+			"G": {
+				"type": "item",
+				"code": "corruptstone-claystone"
+			},
+			"H": {
+				"type": "item",
+				"code": "corruptstone-chalk"
+			},
+			"I": {
+				"type": "item",
+				"code": "corruptstone-phyllite"
+			},
+			"E": {
+				"type": "item",
+				"code": "corruptstonebrick-*",
+				"name": "rock",
+				"allowedVariants": [ "andesite", "chalk", "chert", "conglomerate", "limestone", "claystone", "granite", "sandstone", "shale", "basalt", "peridotite", "phyllite", "slate", "bauxite" ]
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptdrystone-mixed",
+			"quantity": 1
+		}
+	}
+]

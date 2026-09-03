@@ -1,0 +1,25 @@
+[
+	{
+		"ingredientPattern": "C,I",
+		"recipeGroup": 1,
+		"ingredients": {
+			"C": {
+				"type": "item",
+				"tags": [ "tool-chisel" ],
+				"isTool": true
+			},
+			"I": {
+				"type": "item",
+				"code": "shadowingot-*",
+				"name": "metal"
+			}
+		},
+		"width": 1,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "shadowmetalbit-{metal}",
+			"quantity": 20
+		}
+	}
+]

@@ -44,7 +44,7 @@
       "density": 7800,
       "specificHeatCapacity": 0.456,
       "elemental": false,
-      "tier": 3,
+      "tier": 4,
       "quenchMinTemp": 815,
       "quenchMaxTemp": 1050,
       "temperMinTemp": 550,

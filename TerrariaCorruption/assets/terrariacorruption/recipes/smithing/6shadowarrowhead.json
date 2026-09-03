@@ -1,0 +1,24 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "shadowingot-*",
+		"name": "metal",
+		"allowedVariants": [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "demonite" ]
+	},
+	"pattern": [
+		[
+			"##_##_##",
+			"#__#__#_",
+			"________",
+			"##_##_##",
+			"#__#__#_"
+		]
+	],
+	"name": "6 Arrowheads",
+	"code": "6shadowarrowheads-{metal}",
+	"output": {
+		"type": "item",
+		"code": "shadowarrowhead-{metal}",
+		"stacksize": 6
+	}
+}

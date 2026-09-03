@@ -1,0 +1,26 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "shadowingot-*",
+		"name": "metal",
+		"allowedVariants": [ "demonite" ]
+	},
+	"pattern": [
+		[
+			"__######_###",
+			"###_#_######",
+			"__######_###"
+		],
+		[
+			"_________###",
+			"_________###",
+			"_________###"
+		]
+	],
+	"name": "Spear",
+	"code": "shadowspearhead-{metal}",
+	"output": {
+		"type": "item",
+		"code": "shadowspearhead-{metal}"
+	}
+}

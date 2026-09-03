@@ -1,7 +1,13 @@
 {
-  "code": "corruptingot",
+  "code": "shadowingot",
   "class": "ItemIngot",
   "maxstacksize": 16,
+  "variantgroups": [
+    {
+      "code": "metal",
+      "loadFromProperties": "terrariacorruption:block/shadowmetal"
+    }
+  ],
   "behaviors": [
     {
       "name": "GroundStorable",
@@ -52,15 +58,15 @@
       }
     },
     "workableTemperatureByType": {
-      "corruptingot-lead": 0,
-      "corruptingot-tin": 0
+      "shadowingot-lead": 0,
+      "shadowingot-tin": 0
     },
     "requiresAnvilTierByType": {
-      "corruptingot-meteoriciron": 4
+      "shadowingot-meteoriciron": 4
     },
     "shatteredStack": {
       "type": "item",
-      "code": "corruptmetalbit-{metal}"
+      "code": "shadowmetalbit-{metal}"
     },
     "displaycaseable": true,
     "shelvable": true,
@@ -116,12 +122,6 @@
       "scale": 1
     }
   },
-  "variantgroups": [
-    {
-      "code": "metal",
-      "loadFromProperties": "terrariacorruption:block/shadowmetal"
-    }
-  ],
   "storageFlags": 5,
   "shapeByType": {
     "*-gold": { "base": "game:item/ingotshiny" },
@@ -146,67 +146,67 @@
     "*-bismuth": 9790
   },
   "combustiblePropsByType": {
-    "corruptingot-copper": {
+    "shadowingot-copper": {
       "meltingPoint": 1084,
       "meltingDuration": 30,
       "smeltedRatio": 1,
       "smeltedStack": {
         "type": "item",
-        "code": "corruptingot-copper"
+        "code": "shadowingot-copper"
       }
     },
-    "corruptingot-tinbronze": {
+    "shadowingot-tinbronze": {
       "meltingPoint": 950,
       "meltingDuration": 30,
       "smeltedRatio": 1,
       "smeltedStack": {
         "type": "item",
-        "code": "corruptingot-tinbronze"
+        "code": "shadowingot-tinbronze"
       }
     },
-    "corruptingot-bismuthbronze": {
+    "shadowingot-bismuthbronze": {
       "meltingPoint": 850,
       "meltingDuration": 30,
       "smeltedRatio": 1,
       "smeltedStack": {
         "type": "item",
-        "code": "corruptingot-bismuthbronze"
+        "code": "shadowingot-bismuthbronze"
       }
     },
-    "corruptingot-blackbronze": {
+    "shadowingot-blackbronze": {
       "meltingPoint": 1020,
       "meltingDuration": 30,
       "smeltedRatio": 1,
       "smeltedStack": {
         "type": "item",
-        "code": "corruptingot-blackbronze"
+        "code": "shadowingot-blackbronze"
       }
     },
-    "corruptingot-demonite": {
+    "shadowingot-demonite": {
       "meltingPoint": 1476,
       "meltingDuration": 30,
       "smeltedRatio": 1,
       "smeltedStack": {
         "type": "item",
-        "code": "corruptingot-demonite"
+        "code": "shadowingot-demonite"
       }
     },
-    "corruptingot-tin": {
+    "shadowingot-tin": {
       "meltingPoint": 232,
       "meltingDuration": 30,
       "smeltedRatio": 1,
       "smeltedStack": {
         "type": "item",
-        "code": "corruptingot-tin"
+        "code": "shadowingot-tin"
       }
     },
-    "corruptingot-bismuth": {
+    "shadowingot-bismuth": {
       "meltingPoint": 271,
       "meltingDuration": 30,
       "smeltedRatio": 1,
       "smeltedStack": {
         "type": "item",
-        "code": "corruptingot-bismuth"
+        "code": "shadowingot-bismuth"
       }
     }
   },

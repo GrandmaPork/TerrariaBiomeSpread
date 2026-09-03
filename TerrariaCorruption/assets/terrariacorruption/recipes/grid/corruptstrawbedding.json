@@ -1,0 +1,21 @@
+{
+	"ingredientPattern": "___,SSS,GGG",
+	"ingredients": {
+		"G": {
+			"type": "block",
+			"code": "game:soil-*",
+			"allowedVariants": [ "verylow-none", "low-none", "medium-none" ]
+		},
+		"S": {
+			"type": "item",
+			"code": "corruptdrygrass"
+		}
+	},
+	"width": 3,
+	"height": 3,
+	"output": {
+		"type": "block",
+		"code": "game:strawbedding",
+		"quantity": 4
+	}
+}

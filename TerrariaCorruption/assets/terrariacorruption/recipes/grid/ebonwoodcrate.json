@@ -1,0 +1,28 @@
+{
+	"ingredientPattern": "WWW,WSW,WWW",
+	"ingredients": {
+		"W": {
+			"type": "item",
+			"code": "ebonwoodplank",
+			"name": "wood",
+			"allowedVariants": [ "ebonwood" ],
+			"quantity": 2
+		},
+		"S": {
+			"type": "item",
+			"tags": [ "tool-saw" ],
+			"isTool": true
+		}
+	},
+	"width": 3,
+	"height": 3,
+	"recipeGroup": 1,
+	"output": {
+		"type": "block",
+		"code": "ebonwoodcrate",
+		"attributes": {
+			"lidState": "closed",
+			"type": "wood-{wood}"
+		}
+	}
+}

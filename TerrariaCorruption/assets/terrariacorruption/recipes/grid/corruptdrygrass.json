@@ -1,0 +1,16 @@
+{
+	"ingredientPattern": "H",
+	"ingredients": {
+		"H": {
+			"type": "block",
+			"code": "corrupthay-normal-ud"
+		}
+	},
+	"width": 1,
+	"height": 1,
+	"output": {
+		"type": "item",
+		"code": "corruptdrygrass",
+		"quantity": 8
+	}
+}

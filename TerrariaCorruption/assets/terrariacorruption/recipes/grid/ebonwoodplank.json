@@ -1,0 +1,142 @@
+[
+	{
+		"ingredientPattern": "SL",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"tags": [ "tool-saw" ],
+				"isTool": true
+			},
+			"L": {
+				"type": "block",
+				"code": "corruptlog-placed-*-ud",
+				"name": "wood"
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "ebonwoodplank",
+			"quantity": 10
+		}
+	},
+	{
+		"ingredientPattern": "SL",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"tags": [ "tool-saw" ],
+				"isTool": true
+			},
+			"L": {
+				"type": "block",
+				"code": "corruptlogsection-placed-*-ne-ud",
+				"name": "wood"
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "ebonwoodplank",
+			"quantity": 12
+		}
+	},
+	{
+		"ingredientPattern": "SL",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"tags": [ "tool-saw" ],
+				"isTool": true
+			},
+			"L": {
+				"type": "block",
+				"code": "ebonwoodplanks-ud",
+				"name": "wood"
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "ebonwoodplank",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "SL",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"tags": [ "tool-saw" ],
+				"isTool": true
+			},
+			"L": {
+				"type": "block",
+				"code": "ebonwoodplanks-ns",
+				"name": "wood"
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "ebonwoodplank",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "SL",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"tags": [ "tool-saw" ],
+				"isTool": true
+			},
+			"L": {
+				"type": "block",
+				"code": "ebonwoodplankstairs-up-north-free",
+				"name": "wood"
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "ebonwoodplank",
+			"quantity": 3
+		}
+	},
+	{
+		"ingredientPattern": "SL",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"tags": [ "tool-saw" ],
+				"isTool": true
+			},
+			"L": {
+				"type": "block",
+				"code": "ebonwoodplankslab-down-free",
+				"name": "wood"
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "ebonwoodplank",
+			"quantity": 2
+		}
+	}
+]

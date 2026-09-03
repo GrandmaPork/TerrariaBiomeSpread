@@ -1,0 +1,30 @@
+[
+	{
+		"ingredientPattern": "AHL",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"tags": [ "tool-axe" ],
+				"isTool": true
+			},
+			"H": {
+				"type": "item",
+				"tags": [ "tool-hammer" ],
+				"isTool": true
+			},
+			"L": {
+				"type": "block",
+				"code": "corruptlog-placed-*-ud",
+				"name": "wood"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "block",
+			"code": "corruptdebarkedlog-{wood}-ud",
+			"quantity": 1
+		}
+	}
+]

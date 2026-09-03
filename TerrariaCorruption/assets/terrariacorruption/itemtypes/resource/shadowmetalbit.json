@@ -1,5 +1,5 @@
 {
-	"code": "corruptmetalbit",
+	"code": "shadowmetalbit",
 	// ItemNugget is just for displaying the yield in units in the tooltip
 	"class": "ItemNugget",
 	"behaviors": [
@@ -101,7 +101,7 @@
 			"smeltedRatio": 20,
 			"smeltedStack": {
 				"type": "item",
-				"code": "corruptingot-copper"
+				"code": "shadowingot-copper"
 			}
 		},
 		"*-tinbronze": {
@@ -110,7 +110,7 @@
 			"smeltedRatio": 20,
 			"smeltedStack": {
 				"type": "item",
-				"code": "corruptingot-tinbronze"
+				"code": "shadowingot-tinbronze"
 			}
 		},
 		"*-bismuthbronze": {
@@ -119,7 +119,7 @@
 			"smeltedRatio": 20,
 			"smeltedStack": {
 				"type": "item",
-				"code": "corruptingot-bismuthbronze"
+				"code": "shadowingot-bismuthbronze"
 			}
 		},
 		"*-blackbronze": {
@@ -128,7 +128,7 @@
 			"smeltedRatio": 20,
 			"smeltedStack": {
 				"type": "item",
-				"code": "corruptingot-blackbronze"
+				"code": "shadowingot-blackbronze"
 			}
 		},
 		"*-demonite": {
@@ -137,7 +137,7 @@
 			"smeltedRatio": 20,
 			"smeltedStack": {
 				"type": "item",
-				"code": "corruptingot-demonite"
+				"code": "shadowingot-demonite"
 			}
 		},
 		"*-tin": {
@@ -146,7 +146,7 @@
 			"smeltedRatio": 20,
 			"smeltedStack": {
 				"type": "item",
-				"code": "corruptingot-tin"
+				"code": "shadowingot-tin"
 			}
 		},
 		"*-bismuth": {
@@ -155,7 +155,7 @@
 			"smeltedRatio": 20,
 			"smeltedStack": {
 				"type": "item",
-				"code": "corruptingot-bismuth"
+				"code": "shadowingot-bismuth"
 			}
 		}
 	},

@@ -1,0 +1,22 @@
+[
+	{
+		"ingredientPattern": "PSP,PSP",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "ebonwoodplank"
+			},
+			"S": {
+				"type": "item",
+				"code": "game:stick"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "block",
+			"code": "ebonwoodwoodenfence-oak-ew-free",
+			"quantity": 8
+		}
+	}
+]

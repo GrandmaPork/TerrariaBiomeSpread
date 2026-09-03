@@ -1,0 +1,23 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "shadowingot-*",
+		"name": "metal",
+		"allowedVariants": [ "copper" ]
+	},
+	"pattern": [
+		[
+			"_____###__",
+			"__########",
+			"##########",
+			"__########",
+			"_____###__"
+		]
+	],
+	"name": "Spear",
+	"code": "shadowspearhead-{metal}",
+	"output": {
+		"type": "item",
+		"code": "shadowspearhead-{metal}"
+	}
+}

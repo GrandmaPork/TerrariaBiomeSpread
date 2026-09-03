@@ -7,7 +7,7 @@
 		},
 		{
 			"name": "WrenchOrientable",
-			"properties": { "baseCode": "game:planks}" }
+			"properties": { "baseCode": "game:planks" }
 		}
 	],
 	"variantgroups": [
