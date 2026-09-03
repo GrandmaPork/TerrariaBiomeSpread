@@ -3,30 +3,10 @@
 	"variantgroups": [
 		{
 			"code": "material",
-			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "meteoriciron"]
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "demonite"]
 		}
 	],
 	"behaviorsByType": {
-		"@(.*-steel|.*-meteoriciron)": [
-			{
-				"name": "Quenchable",
-				"properties": { "metalVariantgroupCode": "material" }
-			},
-			{
-				"name": "GroundStorable",
-				"properties": {
-					"layout": "Quadrants",
-					"collisionBox": {
-						"x1": 0,
-						"y1": 0,
-						"z1": 0,
-						"x2": 1,
-						"y2": 0.125,
-						"z2": 1
-					}
-				}
-			}
-		],
 		"*": [
 			{
 				"name": "GroundStorable",
@@ -47,7 +27,7 @@
 	"heldTpUseAnimation": "interactstatic",
 	"maxstacksize": 4,
 	"shapeByType": {
-		"@shadowknifeblade-(copper|tinbronze|bismuthbronze|blackbronze|steel|meteoriciron)": { "base": "game:item/tool/knife/copper" },
+		"@shadowknifeblade-(copper|tinbronze|bismuthbronze|blackbronze|steel|demonite)": { "base": "game:item/tool/knife/copper" },
 		"*": { "base": "game:item/tool/knife/stoneblade" }
 	},
 	"particlesTextureCode": "material",
@@ -58,7 +38,7 @@
 		"@shadowknifeblade-(chert|flint|granite|andesite|basalt|obsidian|peridotite)": {
 			"material": { "base": "block/stone/rock/{material}1" }
 		},
-		"shadowknifeblade-meteoriciron": {
+		"shadowknifeblade-demonite": {
 			"material": { "base": "block/metal/ingot/demonite" },
 			"string": { "base": "game:block/transparent" },
 			"handle": { "base": "game:block/transparent" }
@@ -71,7 +51,7 @@
 	},
 	"attributes": {
 		"forgableByType": {
-			"@shadowknifeblade-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": true,
+			"@shadowknifeblade-(copper|tinbronze|bismuthbronze|blackbronze|demonite|steel)": true,
 			"*": false
 		},
 		"inForgeTransform": {
@@ -121,7 +101,7 @@
 			}
 		},
 		"groundStorageTransformByType": {
-			"@shadowknifeblade-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+			"@shadowknifeblade-(copper|tinbronze|bismuthbronze|blackbronze|demonite|steel)": {
 				"translation": {
 					"x": -0,
 					"y": 0.005,
@@ -162,7 +142,7 @@
 		"displayable": {
 			"shelf": {
 				"sizeByType": {
-					"@*-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+					"@*-(copper|tinbronze|bismuthbronze|blackbronze|demonite|steel)": {
 						"width": 2,
 						"height": 0.2,
 						"length": 8
@@ -174,7 +154,7 @@
 					}
 				},
 				"transformByType": {
-					"@*-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+					"@*-(copper|tinbronze|bismuthbronze|blackbronze|demonite|steel)": {
 						"translation": {
 							"x": -0.07,
 							"y": -0.09,

@@ -3,30 +3,10 @@
 	"variantgroups": [
 		{
 			"code": "material",
-			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "meteoriciron"]
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "demonite"]
 		}
 	],
 	"behaviorsByType": {
-		"@(.*-steel|.*-meteoriciron)": [
-			{
-				"name": "Quenchable",
-				"properties": { "metalVariantgroupCode": "material" }
-			},
-			{
-				"name": "GroundStorable",
-				"properties": {
-					"layout": "Quadrants",
-					"collisionBox": {
-						"x1": 0,
-						"y1": 0,
-						"z1": 0,
-						"x2": 1,
-						"y2": 0.125,
-						"z2": 1
-					}
-				}
-			}
-		],
 		"*": [
 			{
 				"name": "GroundStorable",
@@ -51,8 +31,7 @@
 		"*-tinbronze": { "base": "game:item/tool/axe/copper" },
 		"*-bismuthbronze": { "base": "game:item/tool/axe/copper" },
 		"*-blackbronze": { "base": "game:item/tool/axe/copper" },
-		"*-steel": { "base": "game:item/tool/axe/iron" },
-		"*-meteoriciron": { "base": "game:item/tool/axe/iron" },
+		"*-demonite": { "base": "game:item/tool/axe/iron" },
 		"*": { "base": "game:item/tool/axe/stone" }
 	},
 	"texturesByType": {
@@ -66,7 +45,7 @@
 			"string": { "base": "game:block/transparent" },
 			"handle": { "base": "game:block/transparent" }
 		},
-		"shadowaxehead-meteoriciron": {
+		"shadowaxehead-demonite": {
 			"material": { "base": "block/metal/ingot/demonite" },
 			"string": { "base": "game:block/transparent" },
 			"handle": { "base": "game:block/transparent" }
@@ -96,7 +75,7 @@
 			}
 		},
 		"forgableByType": {
-			"@shadowaxehead-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": true,
+			"@shadowaxehead-(copper|tinbronze|bismuthbronze|blackbronze|demonite)": true,
 			"*": false
 		},
 		"onTongTransformByType": {
@@ -112,7 +91,7 @@
 					"z": 85
 				}
 			},
-			"shadowaxehead-meteoriciron": {
+			"shadowaxehead-demonite": {
 				"translation": {
 					"x": -1.4,
 					"y": -0.9,
@@ -156,7 +135,7 @@
 					"z": 0.5
 				}
 			},
-			"@shadowaxehead-(meteoriciron)": {
+			"@shadowaxehead-(demonite)": {
 				"translation": {
 					"x": -1.27,
 					"y": -0.12,
@@ -204,7 +183,7 @@
 					"z": 0.5
 				}
 			},
-			"@*-(meteoriciron)": {
+			"@*-(demonite)": {
 				"translation": {
 					"x": -0.55,
 					"y": 0,
@@ -250,7 +229,7 @@
 						"height": 2,
 						"length": 6
 					},
-					"@*-(meteoriciron)": {
+					"@*-(demonite)": {
 						"width": 8,
 						"height": 2,
 						"length": 6
@@ -269,7 +248,7 @@
 							"z": 0.125
 						}
 					},
-					"@*-(meteoriciron|steel)": {
+					"@*-(demonite|steel)": {
 						"translation": {
 							"x": -0.38,
 							"y": 0,
@@ -292,7 +271,7 @@
 		"items": [ "*" ]
 	},
 	"guiTransformByType": {
-		"@*-(meteoriciron|steel)": {
+		"@*-(demonite|steel)": {
 			"translation": {
 				"x": 0,
 				"y": 0,

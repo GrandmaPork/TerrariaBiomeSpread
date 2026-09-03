@@ -47,7 +47,7 @@
   "variantgroups": [
     {
       "code": "ore",
-      "loadFromProperties": "block/ore-nugget"
+      "loadFromProperties": "terrariacorruption:block/corruptore-nugget"
     }
   ],
   "shape": { "base": "game:item/nugget" },

@@ -3,7 +3,7 @@
 	"variantgroups": [
 		{
 			"code": "material",
-			"states": [ "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "meteoriciron", "obsidian" ]
+			"states": [ "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "demonite", "obsidian" ]
 		}
 	],
 	"behaviors": [
@@ -30,7 +30,7 @@
 		"*-gold": { "base": "game:item/tool/arrowhead-copper" },
 		"*-silver": { "base": "game:item/tool/arrowhead-copper" },
 		"*-iron": { "base": "game:item/tool/arrowhead-copper" },
-		"*-meteoriciron": { "base": "game:item/tool/arrowhead-copper" },
+		"*-demonite": { "base": "game:item/tool/arrowhead-copper" },
 		"*": { "base": "game:item/tool/arrowhead-stone" }
 	},
 	"texturesByType": {
@@ -40,7 +40,7 @@
 		"shadowarrowhead-obsidian": {
 			"material": { "base": "block/stone/rock/{material}1" }
 		},
-		"shadowarrowhead-meteoriciron": {
+		"shadowarrowhead-demonite": {
 			"material": { "base": "block/metal/ingot/demonite" }
 		},
 		"*": {

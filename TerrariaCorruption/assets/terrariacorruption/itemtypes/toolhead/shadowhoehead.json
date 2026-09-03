@@ -3,30 +3,10 @@
 	"variantgroups": [
 		{
 			"code": "material",
-			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "meteoriciron"]
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "demonite"]
 		}
 	],
 	"behaviorsByType": {
-		"@(.*-steel|.*-meteoriciron)": [
-			{
-				"name": "Quenchable",
-				"properties": { "metalVariantgroupCode": "material" }
-			},
-			{
-				"name": "GroundStorable",
-				"properties": {
-					"layout": "Quadrants",
-					"collisionBox": {
-						"x1": 0,
-						"y1": 0,
-						"z1": 0,
-						"x2": 1,
-						"y2": 0.125,
-						"z2": 1
-					}
-				}
-			}
-		],
 		"*": [
 			{
 				"name": "GroundStorable",
@@ -52,7 +32,7 @@
 		"*-bismuthbronze": { "base": "game:item/tool/hoe-copper" },
 		"*-blackbronze": { "base": "game:item/tool/hoe-copper" },
 		"*-steel": { "base": "game:item/tool/hoe-copper" },
-		"*-meteoriciron": { "base": "game:item/tool/hoe-copper" },
+		"*-demonite": { "base": "game:item/tool/hoe-copper" },
 		"*": { "base": "game:item/tool/hoe-stone" }
 	},
 	"texturesByType": {
@@ -66,7 +46,7 @@
 			"string": { "base": "game:block/transparent" },
 			"handle": { "base": "game:block/transparent" }
 		},
-		"shadowhoehead-meteoriciron": {
+		"shadowhoehead-demonite": {
 			"material": { "base": "block/metal/ingot/demonite" },
 			"string": { "base": "game:block/transparent" },
 			"handle": { "base": "game:block/transparent" }
@@ -96,7 +76,7 @@
 			}
 		},
 		"forgableByType": {
-			"@shadowhoehead-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": true,
+			"@shadowhoehead-(copper|tinbronze|bismuthbronze|blackbronze|demonite|steel)": true,
 			"*": false
 		},
 		"onTongTransform": {
@@ -129,7 +109,7 @@
 			}
 		},
 		"groundStorageTransformByType": {
-			"@*-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+			"@*-(copper|tinbronze|bismuthbronze|blackbronze|demonite|steel)": {
 				"translation": {
 					"x": -0.4,
 					"y": 0,
@@ -170,7 +150,7 @@
 		"displayable": {
 			"shelf": {
 				"sizeByType": {
-					"@*-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+					"@*-(copper|tinbronze|bismuthbronze|blackbronze|demonite|steel)": {
 						"width": 2.5,
 						"height": 2,
 						"length": 8
@@ -182,7 +162,7 @@
 					}
 				},
 				"transformByType": {
-					"@*-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+					"@*-(copper|tinbronze|bismuthbronze|blackbronze|demonite|steel)": {
 						"translation": {
 							"x": -0.4,
 							"y": 0.02,
