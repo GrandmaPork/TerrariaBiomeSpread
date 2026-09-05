@@ -2,13 +2,13 @@
   "code": "corruptore-nugget",
   "variants": [
     {
-      "Code": "cassiterite"
+      "Code": "shadowcassiterite"
     },
     {
-      "Code": "nativecopper"
+      "Code": "shadowcopper"
     },
     {
-      "Code": "bismuthinite"
+      "Code": "shadowbismuthinite"
     }
   ]
 }

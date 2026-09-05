@@ -28,7 +28,7 @@
   "maxstacksize": 4,
   "shapeByType": {
     "@shadowspearhead-(copper|tinbronze|bismuthbronze|blackbronze)": { "base": "item/tool/spear/metal-{material}" },
-    "*-demonite": { "base": "game:item/tool/spear/meteoriciron" },
+    "*-demonite": { "base": "game:item/tool/spear/metal-meteoriciron" },
     "*": { "base": "game:item/tool/spear/stone" }
   },
   "texturesByType": {

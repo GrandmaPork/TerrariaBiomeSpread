@@ -52,7 +52,7 @@
   ],
   "shape": { "base": "game:item/nugget" },
   "texturesByType": {
-    "@shadownugget-(nativecopper|cassiterite|bismuth)": {
+    "@shadownugget-(shadowcopper|shadowcassiterite|shadowbismuthinite)": {
       "ore": { "base": "item/resource/nugget/{ore}" }
     },
     "*": {

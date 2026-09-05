@@ -486,6 +486,36 @@
         "code": "corruptore-{ore}"
       }
     ],
+    "corruptlooseores-nativecopper-*": [
+      {
+        "type": "item",
+        "code": "shadownugget-shadowcopper",
+        "quantity": {
+          "avg": 2,
+          "var": 1
+        }
+      }
+    ],
+    "corruptlooseores-cassiterite-*": [
+      {
+        "type": "item",
+        "code": "shadownugget-shadowcassiterite",
+        "quantity": {
+          "avg": 2,
+          "var": 1
+        }
+      }
+    ],
+    "corruptlooseores-bismuthinite-*": [
+      {
+        "type": "item",
+        "code": "shadownugget-shadowbismuthinite",
+        "quantity": {
+          "avg": 2,
+          "var": 1
+        }
+      }
+    ],
 
     "*": [
       {

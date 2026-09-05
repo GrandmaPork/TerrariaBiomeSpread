@@ -19,7 +19,7 @@
   "variantgroups": [
     {
       "code": "material",
-      "states": [ "cassiterite" ]
+      "states": [ "shadowcassiterite" ]
     }
   ],
   "attributes": {

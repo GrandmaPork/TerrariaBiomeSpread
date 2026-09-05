@@ -2,13 +2,58 @@
   "code": "corruptore-graded",
   "variants": [
     {
-      "Code": "nativecopper"
+      "Code": "shadowcopper"
     },
     {
-      "Code": "cassiterite"
+      "Code": "shadowcassiterite"
     },
     {
-      "Code": "bismuthinite"
+      "Code": "shadowbismuthinite"
+    },
+    {
+      "Code": "limonite"
+    },
+    {
+      "Code": "quartz_nativegold"
+    },
+    {
+      "Code": "galena"
+    },
+    {
+      "Code": "chromite"
+    },
+    {
+      "Code": "ilmenite"
+    },
+    {
+      "Code": "sphalerite"
+    },
+    {
+      "Code": "quartz_nativesilver"
+    },
+    {
+      "Code": "galena_nativesilver"
+    },
+    {
+      "Code": "magnetite"
+    },
+    {
+      "Code": "hematite"
+    },
+    {
+      "Code": "malachite"
+    },
+    {
+      "Code": "pentlandite"
+    },
+    {
+      "Code": "uranium"
+    },
+    {
+      "Code": "wolframite"
+    },
+    {
+      "Code": "rhodochrosite"
     }
   ]
 }

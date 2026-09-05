@@ -490,13 +490,13 @@
     "corruptore-*-magnetite-*": 3,
 
     "corruptore-*-galena-*": 2,
-    "corruptore-*-cassiterite-*": 2,
+    "corruptore-*-cassiterite-*": 3,
     "corruptore-*-chromite-*": 5,
     "corruptore-*-platinum-*": 5,
     "corruptore-*-ilmenite-*": 5,
     "corruptore-*-sphalerite-*": 2,
     "corruptore-*-rocksalt_sylvite-*": 2,
-    "corruptore-*-bismuthinite-*": 2,
+    "corruptore-*-bismuthinite-*": 3,
     "corruptore-*-quartz_nativesilver-*": 3,
     "corruptore-*-galena_nativesilver-*": 2,
     "corruptore-*-quartz_nativegold-*": 3,
@@ -507,6 +507,60 @@
     "corruptore-*-rhodochrosite-*": 4
   },
   "dropsByType": {
+    "corruptore-*-bismuthinite-*": [
+      {
+        "type": "item",
+        "code": "corruptcrystalizedore-{grade}-shadowbismuthinite-{rock}",
+        "quantity": {
+          "avg": 0.01,
+          "var": 0
+        }
+      },
+      {
+        "type": "item",
+        "code": "corruptore-{grade}-shadowbismuthinite-{rock}",
+        "quantity": {
+          "avg": 1.25,
+          "var": 0
+        }
+      }
+    ],
+    "corruptore-*-cassiterite-*": [
+      {
+        "type": "item",
+        "code": "corruptcrystalizedore-{grade}-shadowcassiterite-{rock}",
+        "quantity": {
+          "avg": 0.01,
+          "var": 0
+        }
+      },
+      {
+        "type": "item",
+        "code": "corruptore-{grade}-shadowcassiterite-{rock}",
+        "quantity": {
+          "avg": 1.25,
+          "var": 0
+        }
+      }
+    ],
+    "corruptore-*-nativecopper-*": [
+      {
+        "type": "item",
+        "code": "corruptcrystalizedore-{grade}-shadowcopper-{rock}",
+        "quantity": {
+          "avg": 0.01,
+          "var": 0
+        }
+      },
+      {
+        "type": "item",
+        "code": "corruptore-{grade}-shadowcopper-{rock}",
+        "quantity": {
+          "avg": 1.25,
+          "var": 0
+        }
+      }
+    ],
     "*": [
       {
         "type": "item",

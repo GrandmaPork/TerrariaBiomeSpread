@@ -86,6 +86,7 @@ namespace TerrariaCorruption
 
             api.RegisterItemClass(Mod.Info.ModID + ".corruptstone", typeof(Items.ItemCorruptStone));
             api.RegisterItemClass(Mod.Info.ModID + ".corruptflint", typeof(Items.ItemCorruptFlint));
+            api.RegisterItemClass(Mod.Info.ModID + ".corruptorechunk", typeof(Items.ItemCorruptOre));
         }
         public override void StartClientSide(ICoreClientAPI api)
         {
