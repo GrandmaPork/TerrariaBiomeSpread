@@ -1,0 +1,186 @@
+{
+	"code": "shadowprospectingpick",
+	"storageFlags": 5,
+	"class": "ItemProspectingPick",
+	"tags": [ "tool", "tool-pickaxe", "tool-prospectingpick" ],
+	"attributes": {
+		"attachableToEntity": { "categoryCode": "toolholding" },
+		"heldItemPitchFollow": 0.9,
+		"handbook": {
+			"groupBy": [ "prospectingpick-*" ]
+		},
+		"toolrackTransform": {
+			"rotation": {
+				"y": 1,
+				"z": -1
+			},
+			"translation": {
+				"x": -0.3,
+				"y": 0.6
+			},
+			"scale": 1.25
+		},
+		"groundStorageTransform": {
+			"translation": {
+				"x": 0,
+				"y": 0.1,
+				"z": -0.123
+			},
+			"rotation": {
+				"x": 26,
+				"y": 88,
+				"z": -87
+			},
+			"scale": 0.88
+		},
+		"slotRefillIdentifier": "propick",
+		"rememberToolModeWhenBroken": true
+	},
+	"behaviors": [
+		{
+			"name": "GroundStorable",
+			"properties": {
+				"layout": "WallHalves",
+				"wallOffY": 1,
+				"ctrlKey": true,
+				"selectionBox": {
+					"x1": 0,
+					"y1": 0,
+					"z1": 0,
+					"x2": 1,
+					"y2": 0.1,
+					"z2": 1
+				},
+				"collisionBox": {
+					"x1": 0,
+					"y1": 0,
+					"z1": 0,
+					"x2": 0,
+					"y2": 0,
+					"z2": 0
+				}
+			}
+		},
+		{ "name": "Buffable" }
+	],
+	"variantgroups": [
+		{
+			"code": "metal",
+			"states": [
+				"shadowcopper",
+				"shadowtinbronze",
+				"shadowbismuthbronze",
+				"shadowblackbronze",
+				"demonite"
+			]
+		}
+	],
+	"tool": "pickaxe",
+	"damagedby": [ "blockbreaking", "attacking" ],
+	"shape": { "base": "game:item/tool/prospectingpick" },
+	"heldTpHitAnimation": "smithing",
+	"texturesByType": {
+		"*": {
+			"metal": { "base": "block/metal/ingot/{metal}" },
+			"handle": { "base": "game:item/tool/handle" }
+		}
+	},
+	"tooltierbytype": {
+		"*-copper": 3,
+		"*-bismuthbronze": 4,
+		"*-tinbronze": 4,
+		"*-blackbronze": 4,
+		"*-meteoriciron": 5
+	},
+	"miningspeedbytype": {
+		"shadowprospectingpick-shadowcopper": {
+			"stone": 2.5,
+			"ore": 2.5
+		},
+		"shadowprospectingpick-shadowbismuthbronze": {
+			"stone": 3,
+			"ore": 3
+		},
+		"shadowprospectingpick-shadowtinbronze": {
+			"stone": 3.3,
+			"ore": 3.3
+		},
+		"shadowprospectingpick-shadowblackbronze": {
+			"stone": 3.5,
+			"ore": 3.5
+		},
+		"shadowprospectingpick-demonite": {
+			"stone": 4.75,
+			"ore": 4.75,
+			"metal": 4.75
+		}
+	},
+	"attackpowerbytype": {
+		"shadowprospectingpick-shadowcopper": 1.75,
+		"shadowprospectingpick-shadowbismuthbronze": 2,
+		"shadowprospectingpick-shadowtinbronze": 2.25,
+		"shadowprospectingpick-shadowblackbronze": 2.5,
+		"shadowprospectingpick-demonite": 3
+	},
+	"durabilitybytype": {
+		"shadowprospectingpick-shadowcopper": 450,
+		"shadowprospectingpick-shadowtinbronze": 750,
+		"shadowprospectingpick-shadowbismuthbronze": 900,
+		"shadowprospectingpick-shadowblackbronze": 1050,
+		"shadowprospectingpick-demonite": 2700
+	},
+	"creativeinventory": {
+		"general": [ "*" ],
+		"items": [ "*" ],
+		"tools": [ "*" ]
+	},
+	"guiTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 107,
+			"y": -58,
+			"z": -16
+		},
+		"origin": {
+			"x": 0.44,
+			"y": 0.3,
+			"z": 0.42
+		},
+		"scale": 1.68
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0.3,
+			"y": 0.4,
+			"z": -0.2
+		},
+		"rotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.45,
+			"z": 0.5
+		},
+		"scale": 3.6
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -0.78,
+			"y": -0.53,
+			"z": -0.11
+		},
+		"rotation": {
+			"x": 90,
+			"y": 0,
+			"z": -2
+		},
+		"scale": 0.9
+	}
+}

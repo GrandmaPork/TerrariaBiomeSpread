@@ -1,0 +1,28 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "shadowingot-*",
+		"name": "metal",
+		"allowedVariants": [ "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "silver", "gold", "iron", "demonite", "steel" ]
+	},
+	"pattern": [
+		[
+			"#####",
+			"#####",
+			"#####",
+			"#####"
+		],
+		[
+			"#####",
+			"#####",
+			"#####",
+			"#####"
+		]
+	],
+	"name": "Hammer",
+	"code": "shadowhammerhead-{metal}",
+	"output": {
+		"type": "item",
+		"code": "shadowhammerhead-{metal}"
+	}
+}

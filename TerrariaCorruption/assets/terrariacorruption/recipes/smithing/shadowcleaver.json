@@ -1,0 +1,22 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "shadowingot-*",
+		"name": "metal",
+		"allowedVariants": [ "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "silver", "gold", "iron", "demonite", "steel" ]
+	},
+	"pattern": [
+		[
+			"########____",
+			"############",
+			"########____",
+			"########____"
+		]
+	],
+	"name": "Cleaver",
+	"code": "shadowcleaverhead-{metal}",
+	"output": {
+		"type": "item",
+		"code": "shadowcleaverhead-{metal}"
+	}
+}

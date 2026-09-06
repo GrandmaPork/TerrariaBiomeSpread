@@ -1,0 +1,564 @@
+[
+	{
+		"ingredientPattern": "LLL,LCL,LLL",
+		"ingredients": {
+			"C": {
+				"type": "item",
+				"code": "game:clay-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-*",
+				"name": "rock",
+				"allowedVariants": [ "andesite", "chalk", "chert", "conglomerate", "limestone", "claystone", "granite", "sandstone", "shale", "basalt", "peridotite", "phyllite", "slate", "bauxite", "suevite", "whitemarble", "greenmarble", "redmarble", "kimberlite" ]
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestone-{rock}",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "andesite", "granite", "peridotite", "phyllite" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-andesite"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-andesite-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "basalt", "shale", "slate" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-basalt"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-basalt-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "ZBX,AGC,NSG",
+		"ingredients": {
+			"X": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "andesite", "chalk", "chert", "conglomerate", "limestone", "claystone", "granite", "sandstone", "shale", "basalt", "peridotite", "phyllite", "slate", "bauxite", "suevite", "whitemarble", "greenmarble", "redmarble", "kimberlite" ]
+			},
+			"Z": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"B": {
+				"type": "item",
+				"code": "corruptstone-bauxite"
+			},
+			"A": {
+				"type": "item",
+				"code": "corruptstone-andesite"
+			},
+			"C": {
+				"type": "item",
+				"code": "corruptstone-claystone"
+			},
+			"N": {
+				"type": "item",
+				"code": "corruptstone-conglomerate"
+			},
+			"S": {
+				"type": "item",
+				"code": "corruptstone-shale"
+			},
+			"G": {
+				"type": "item",
+				"code": "corruptstone-granite"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-mixed-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "bauxite", "chert", "claystone", "sandstone" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-bauxite"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-bauxite-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "chalk", "limestone" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-chalk"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-chalk-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "chert", "conglomerate", "claystone", "sandstone", "phyllite" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-chert"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-chert-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "conglomerate", "claystone", "limestone", "sandstone", "phyllite" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-claystone"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-claystone-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "conglomerate", "claystone", "limestone", "sandstone", "phyllite" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-conglomerate"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-conglomerate-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "andesite", "granite", "peridotite", "phyllite" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-granite"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-granite-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "chalk", "limestone" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-limestone"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-limestone-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "andesite", "granite", "peridotite", "phyllite" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-peridotite"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-peridotite-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "conglomerate", "claystone", "sandstone", "phyllite" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-phyllite"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-phyllite-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "conglomerate", "claystone", "limestone", "sandstone", "phyllite" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-sandstone"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-sandstone-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "basalt", "shale", "slate" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-shale"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-shale-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "basalt", "shale", "slate" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-slate"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-slate-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "andesite", "granite", "peridotite", "phyllite" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-kimberlite"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-kimberlite-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "andesite", "granite", "peridotite", "phyllite" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-suevite"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-suevite-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "chalk", "limestone" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-whitemarble"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-whitemarble-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "chalk", "limestone" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-redmarble"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-redmarble-north",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SLG,LLL,LLL",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "corruptgravel-*",
+				"name": "rock",
+				"allowedVariants": [ "chalk", "limestone" ]
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsand-*"
+			},
+			"L": {
+				"type": "item",
+				"code": "corruptstone-greenmarble"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptcobblestonefan-greenmarble-north",
+			"quantity": 2
+		}
+	}
+]

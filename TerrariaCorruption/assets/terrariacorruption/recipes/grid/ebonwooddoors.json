@@ -1,0 +1,122 @@
+[
+	{
+		"name": "Solid door",
+		"ingredientPattern": "WW,WW,WW",
+		"ingredients": {
+			"W": {
+				"type": "item",
+				"code": "ebonwoodplank",
+				"name": "wood"
+			}
+		},
+		"width": 2,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "ebonwooddoor-solid"
+		}
+	},
+	{
+		"name": "1x3 gate",
+		"ingredientPattern": "WW_,WW_,WWN",
+		"ingredients": {
+			"W": {
+				"type": "item",
+				"code": "ebonwoodplank",
+				"name": "wood",
+				"quantity": 2
+			},
+			"N": {
+				"type": "item",
+				"code": "game:metalnailsandstrips-{metal}"
+			}
+		},
+		"allowedVariants": {
+			"metal": [ "copper", "blackbronze", "tinbronze", "bismuthbronze", "iron", "silver", "gold", "meteoriciron", "steel", "electrum" ]
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "ebonwooddoor-1x3gate"
+		}
+	},
+	{
+		"name": "2x2 gate",
+		"ingredientPattern": "N__,WWW,WWW",
+		"ingredients": {
+			"W": {
+				"type": "item",
+				"code": "ebonwoodplank",
+				"name": "wood",
+				"quantity": 2
+			},
+			"N": {
+				"type": "item",
+				"code": "game:metalnailsandstrips-{metal}",
+				"quantity": 2
+			}
+		},
+		"allowedVariants": {
+			"metal": [ "copper", "blackbronze", "tinbronze", "bismuthbronze", "iron", "silver", "gold", "meteoriciron", "steel", "electrum" ]
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "ebonwooddoor-2x2gate"
+		}
+	},
+	{
+		"name": "2x3 gate",
+		"ingredientPattern": "WWW,WWW,NWW",
+		"ingredients": {
+			"W": {
+				"type": "item",
+				"code": "ebonwoodplank",
+				"name": "wood",
+				"quantity": 3
+			},
+			"N": {
+				"type": "item",
+				"code": "game:metalnailsandstrips-{metal}",
+				"quantity": 6
+			}
+		},
+		"allowedVariants": {
+			"metal": [ "copper", "blackbronze", "tinbronze", "bismuthbronze", "iron", "silver", "gold", "meteoriciron", "steel", "electrum" ]
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "ebonwooddoor-2x3gate"
+		}
+	},
+	{
+		"name": "2x4 gate",
+		"ingredientPattern": "WWW,WWW,WWN",
+		"ingredients": {
+			"W": {
+				"type": "item",
+				"code": "ebonwoodplank",
+				"name": "wood",
+				"quantity": 4
+			},
+			"N": {
+				"type": "item",
+				"code": "game:metalnailsandstrips-{metal}",
+				"quantity": 10
+			}
+		},
+		"allowedVariants": {
+			"metal": [ "copper", "blackbronze", "tinbronze", "bismuthbronze", "iron", "silver", "gold", "meteoriciron", "steel", "electrum" ]
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "ebonwooddoor-2x4gate"
+		}
+	}
+]

@@ -52,8 +52,8 @@
 		}
 	],
 	"creativeinventory": {
-		"general": [ "woodenfence-*-ew-free" ],
-		"decorative": [ "woodenfence-*-ew-free" ]
+		"general": [ "ebonwoodfence-*-ew-free" ],
+		"decorative": [ "ebonwoodfence-*-ew-free" ]
 	},
 	"shapebytype": {
 		"*-empty-free": { "base": "game:block/wood/fence/empty" },

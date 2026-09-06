@@ -1,0 +1,138 @@
+[
+	{
+		"ingredientPattern": "_A_,GGG,GGG",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"tags": [ "tool-axe" ],
+				"isTool": true
+			},
+			"G": {
+				"type": "block",
+				"code": "corruptlog-placed-*-ud",
+				"name": "wood"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptlogquad-placed-{wood}-ud",
+			"quantity": 6
+		}
+	},
+	{
+		"ingredientPattern": "AG,GG",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"tags": [ "tool-axe" ],
+				"isTool": true
+			},
+			"G": {
+				"type": "block",
+				"code": "corruptlogquad-placed-*-ud",
+				"name": "wood"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"output": {
+			"type": "block",
+			"code": "corruptlogquad-barkedcorner-{wood}-north",
+			"quantity": 3
+		}
+	},
+	{
+		"ingredientPattern": "__G,_AG,GGG",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"tags": [ "tool-axe" ],
+				"isTool": true
+			},
+			"G": {
+				"type": "block",
+				"code": "corruptlogquad-placed-*-ud",
+				"name": "wood"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"recipeGroup": 1,
+		"output": {
+			"type": "block",
+			"code": "corruptlogquad-barkedcorner-{wood}-north",
+			"quantity": 5
+		}
+	},
+
+	{
+		"ingredientPattern": "_A_,GGG,GGG",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"tags": [ "tool-axe" ],
+				"isTool": true
+			},
+			"G": {
+				"type": "block",
+				"code": "corruptdebarkedlog-*-ud",
+				"name": "wood",
+				"skipVariants": [ "veryaged", "rotten", "veryrotten" ]
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptlogquad-debarked-{wood}-ud",
+			"quantity": 6
+		}
+	},
+	{
+		"ingredientPattern": "AG,GG",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"tags": [ "tool-axe" ],
+				"isTool": true
+			},
+			"G": {
+				"type": "block",
+				"code": "corruptlogquad-debarked-*-ud",
+				"name": "wood"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"output": {
+			"type": "block",
+			"code": "corruptlogquad-debarkedcorner-{wood}-north",
+			"quantity": 3
+		}
+	},
+	{
+		"ingredientPattern": "__G,_AG,GGG",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"tags": [ "tool-axe" ],
+				"isTool": true
+			},
+			"G": {
+				"type": "block",
+				"code": "corruptlogquad-debarked-*-ud",
+				"name": "wood"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"recipeGroup": 1,
+		"output": {
+			"type": "block",
+			"code": "corruptlogquad-debarkedcorner-{wood}-north",
+			"quantity": 5
+		}
+	}
+]

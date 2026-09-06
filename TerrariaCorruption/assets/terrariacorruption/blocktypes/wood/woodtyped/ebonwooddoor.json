@@ -15,9 +15,6 @@
       "states": [ "sleek-windowed", "solid", "1x3gate", "2x2gate", "2x4gate", "2x3gate" ]
     }
   ],
-  "skipVariants": [
-    "ebonwooddoor-sleek-windowed-veryaged-*"
-  ],
   "attributes": {
     "isCorrupt": true,
     "handbook": {

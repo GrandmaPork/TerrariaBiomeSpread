@@ -19,10 +19,11 @@
   "variantgroups": [
     {
       "code": "material",
-      "states": [ "cassiterite" ]
+      "states": [ "shadowcassiterite" ]
     }
   ],
   "attributes": {
+    "isCorrupt": true,
     "handbook": {
       "groupBy": [ "crushed-*" ],
       "extraSections": [
@@ -65,7 +66,6 @@
   },
   "shape": { "base": "game:item/resource/crushed/normal" },
   "textureByType": {
-    "*-iron": { "base": "game:item/resource/crushed/hematite" },
     "*": { "base": "item/resource/crushed/{material}" }
   },
   "creativeinventory": {

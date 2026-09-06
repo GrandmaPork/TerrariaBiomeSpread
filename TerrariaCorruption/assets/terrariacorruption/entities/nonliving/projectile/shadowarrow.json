@@ -5,7 +5,7 @@
   "variantgroups": [
     {
       "code": "material",
-      "states": [ "crude", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "demonite", "obsidian" ]
+      "states": [ "flint", "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "demonite", "obsidian" ]
     }
   ],
   "attributes": {
@@ -27,12 +27,8 @@
     "size": 0.75,
     "renderer": "Shape",
     "shapeByType": {
-      "shadowarrow-crude": { "base": "game:entity/nonliving/projectile/arrow/crude" },
       "shadowarrow-flint": { "base": "game:entity/nonliving/projectile/arrow/stone" },
       "shadowarrow-obsidian": { "base": "game:entity/nonliving/projectile/arrow/stone" },
-      "shadowarrow-gold": { "base": "game:entity/nonliving/projectile/arrow/gold" },
-      "shadowarrow-silver": { "base": "game:entity/nonliving/projectile/arrow/silver" },
-      "shadowarrow-bone": { "base": "game:entity/nonliving/projectile/arrow/bowtorn" },
       "*": { "base": "game:entity/nonliving/projectile/arrow/copper" }
     },
     "texturesByType": {

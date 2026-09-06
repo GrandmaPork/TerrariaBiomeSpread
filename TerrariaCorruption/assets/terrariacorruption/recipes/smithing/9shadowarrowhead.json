@@ -1,0 +1,27 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "shadowingot-*",
+		"name": "metal",
+		"allowedVariants": [ "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "demonite" ]
+	},
+	"pattern": [
+		[
+			"##_##_##",
+			"#__#__#_",
+			"________",
+			"##_##_##",
+			"#__#__#_",
+			"________",
+			"##_##_##",
+			"#__#__#_"
+		]
+	],
+	"name": "9 Arrowheads",
+	"code": "9shadowarrowheads-{metal}",
+	"output": {
+		"type": "item",
+		"code": "shadowarrowhead-{metal}",
+		"stacksize": 9
+	}
+}

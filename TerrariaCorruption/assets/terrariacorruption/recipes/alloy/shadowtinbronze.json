@@ -1,0 +1,20 @@
+{
+	"ingredients": [
+		{
+			"type": "item",
+			"code": "shadowingot-shadowtin",
+			"minratio": 0.08,
+			"maxratio": 0.12
+		},
+		{
+			"type": "item",
+			"code": "shadowingot-shadowcopper",
+			"minratio": 0.88,
+			"maxratio": 0.92
+		}
+	],
+	"output": {
+		"type": "item",
+		"code": "shadowingot-shadowtinbronze"
+	}
+}

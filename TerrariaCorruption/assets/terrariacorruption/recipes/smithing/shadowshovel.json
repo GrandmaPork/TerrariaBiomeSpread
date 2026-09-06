@@ -1,0 +1,24 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "shadowingot-*",
+		"name": "metal",
+		"allowedVariants": [ "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "silver", "gold", "iron", "demonite", "steel" ]
+	},
+	"pattern": [
+		[
+			"__#####",
+			"_######",
+			"#######",
+			"#######",
+			"_######",
+			"__#####"
+		]
+	],
+	"name": "Shovel",
+	"code": "shadowshovelhead-{metal}",
+	"output": {
+		"type": "item",
+		"code": "shadowshovelhead-{metal}"
+	}
+}

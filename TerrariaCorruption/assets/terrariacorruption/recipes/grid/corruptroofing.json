@@ -1,0 +1,1160 @@
+[
+	{
+		"ingredientPattern": "_H,H_",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corrupthay-normal-ud",
+				"name": "type"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofing-thatch-east-free",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "_H_,H_H",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corrupthay-normal-ud",
+				"name": "type"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridge-thatch-ns-free",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "_H_,HHH",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corrupthay-normal-ud",
+				"name": "type"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingtip-thatch-free",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "_H,H_,_H",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corrupthay-normal-ud",
+				"name": "type"
+			}
+		},
+		"width": 2,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingcornerinner-thatch-east-free",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "_H,HH",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corrupthay-normal-ud",
+				"name": "type"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingcornerouter-thatch-east-free",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "___,___,_H_",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-thatch-east-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingbottom-thatch-east-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "_H_,___,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-thatch-east-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingtop-thatch-east-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "___,H__,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-thatch-east-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofinghalfleft-thatch-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "___,__H,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-thatch-east-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofinghalfright-thatch-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "___,_H_,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofingridge-thatch-ns-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridgeend-thatch-east-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "___,H__,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofingridge-thatch-ns-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridgehalfleft-thatch-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "___,__H,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofingridge-thatch-ns-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridgehalfright-thatch-east-free",
+			"quantity": 2
+		}
+	},
+
+	{
+		"ingredientPattern": "__H,CH_,H__",
+		"ingredients": {
+			"C": {
+				"type": "item",
+				"code": "game:clay-*",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "corruptstone-slate",
+				"quantity": 3
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofing-slate-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "CH_,H_H",
+		"ingredients": {
+			"C": {
+				"type": "item",
+				"code": "game:clay-*",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "corruptstone-slate",
+				"quantity": 3
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridge-slate-ns-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "CH_,HHH",
+		"ingredients": {
+			"C": {
+				"type": "item",
+				"code": "game:clay-*",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "corruptstone-slate",
+				"quantity": 3
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingtip-slate-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "_H,HC,_H",
+		"ingredients": {
+			"C": {
+				"type": "item",
+				"code": "game:clay-*",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "corruptstone-slate",
+				"quantity": 3
+			}
+		},
+		"width": 2,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingcornerinner-slate-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "CH,HH",
+		"ingredients": {
+			"C": {
+				"type": "item",
+				"code": "game:clay-*",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "corruptstone-slate",
+				"quantity": 3
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingcornerouter-slate-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "___,___,_H_",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-slate-east-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingbottom-slate-east-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "_H_,___,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-slate-east-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingtop-slate-east-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "___,H__,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-slate-east-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofinghalfleft-slate-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "___,__H,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-slate-east-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofinghalfright-slate-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "___,_H_,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofingridge-slate-ns-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridgeend-slate-east-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "___,H__,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofingridge-slate-ns-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridgehalfleft-slate-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "___,__H,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofingridge-slate-ns-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridgehalfright-slate-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "S",
+		"ingredients": {
+			"S": {
+				"type": "block",
+				"code": "corruptslantedroofing*-slate-*",
+				"quantity": 1
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"output": {
+			"type": "item",
+			"code": "game:stone-slate",
+			"quantity": 4
+		}
+	},
+
+	{
+		"ingredientPattern": "___,___,_H_",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-bamboo-east-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingbottom-bamboo-east-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "_H_,___,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-bamboo-east-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingtop-bamboo-east-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "___,H__,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-bamboo-east-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofinghalfleft-bamboo-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "___,__H,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-bamboo-east-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofinghalfright-bamboo-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "___,_H_,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofingridge-bamboo-ns-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridgeend-bamboo-east-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "___,H__,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofingridge-bamboo-ns-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridgehalfleft-bamboo-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "___,__H,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofingridge-bamboo-ns-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridgehalfright-bamboo-east-free",
+			"quantity": 2
+		}
+	},
+
+	{
+		"ingredientPattern": "_H,HP,PS",
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"code": "corruptdrygrass",
+				"name": "type"
+			},
+			"P": {
+				"type": "item",
+				"code": "ebonwoodplank",
+				"name": "wood",
+				"quantity": 2
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsoil-medium-none"
+			}
+		},
+		"width": 2,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofing-sod-east-free",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "_H,HP,_S",
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"code": "corruptdrygrass",
+				"name": "type"
+			},
+			"P": {
+				"type": "block",
+				"code": "corruptlog-placed-*-ud",
+				"name": "wood",
+				"quantity": 1
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsoil-medium-none"
+			}
+		},
+		"recipegroup": 1,
+		"width": 2,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofing-sod-east-free",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "_H_,HPH,PSP",
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"code": "corruptdrygrass",
+				"name": "type"
+			},
+			"P": {
+				"type": "item",
+				"code": "ebonwoodplank",
+				"name": "wood",
+				"skipVariants": [ "veryaged" ],
+				"quantity": 2
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsoil-medium-none"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridge-sod-ns-free",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "_H_,HPH,_S_",
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"code": "corruptdrygrass",
+				"name": "type"
+			},
+			"P": {
+				"type": "block",
+				"code": "corruptlog-placed-*-ud",
+				"name": "wood",
+				"quantity": 1
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsoil-medium-none"
+			}
+		},
+		"recipegroup": 1,
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridge-sod-ns-free",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "_H_,HHH,PSP",
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"code": "corruptdrygrass",
+				"name": "type"
+			},
+			"P": {
+				"type": "item",
+				"code": "ebonwoodplank",
+				"name": "wood",
+				"quantity": 2
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsoil-medium-none"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingtip-sod-free",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "_H_,HHH,PS_",
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"code": "corruptdrygrass",
+				"name": "type"
+			},
+			"P": {
+				"type": "block",
+				"code": "corruptlog-placed-*-ud",
+				"name": "wood",
+				"quantity": 1
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsoil-medium-none"
+			}
+		},
+		"recipegroup": 1,
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingtip-sod-free",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "PH_,PH_,PSH",
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"code": "corruptdrygrass",
+				"name": "type"
+			},
+			"P": {
+				"type": "item",
+				"code": "ebonwoodplank",
+				"name": "wood",
+				"quantity": 2
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsoil-medium-none"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingcornerinner-sod-east-free",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "_H_,PH_,_SH",
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"code": "corruptdrygrass",
+				"name": "type"
+			},
+			"P": {
+				"type": "block",
+				"code": "corruptlog-placed-*-ud",
+				"name": "wood",
+				"quantity": 1
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsoil-medium-none"
+			}
+		},
+		"recipegroup": 1,
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingcornerinner-sod-east-free",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "_H,HH,PS",
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"code": "corruptdrygrass",
+				"name": "type"
+			},
+			"P": {
+				"type": "item",
+				"code": "ebonwoodplank",
+				"name": "wood",
+				"quantity": 2
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsoil-medium-none"
+			}
+		},
+		"width": 2,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingcornerouter-sod-east-free",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "_H,HH,PS",
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"code": "corruptdrygrass",
+				"name": "type"
+			},
+			"P": {
+				"type": "block",
+				"code": "corruptlog-placed-*-ud",
+				"name": "wood",
+				"quantity": 1
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptsoil-medium-none"
+			}
+		},
+		"recipegroup": 1,
+		"width": 2,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingcornerouter-sod-east-free",
+			"quantity": 4
+		}
+	},
+
+	{
+		"ingredientPattern": "___,___,_H_",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-sod-east-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingbottom-sod-east-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "_H_,___,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-sod-east-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingtop-sod-east-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "___,H__,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-sod-east-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofinghalfleft-sod-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "___,__H,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-sod-east-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofinghalfright-sod-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "___,_H_,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofingridge-sod-ns-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridgeend-sod-east-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "___,H__,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofingridge-sod-ns-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridgehalfleft-sod-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "___,__H,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofingridge-sod-ns-free"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridgehalfright-sod-east-free",
+			"quantity": 2
+		}
+	},
+
+	{
+		"ingredientPattern": "__H,_H_,H__",
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"code": "ebonwoodplank",
+				"name": "wood",
+				"skipVariants": [ "veryaged" ],
+				"quantity": 2
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofing-ebonwood-east-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "_H_,H_H",
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"code": "ebonwoodplank*",
+				"name": "wood",
+				"quantity": 2
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridge-ebonwood-ns-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "_H_,HHH",
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"code": "ebonwoodplank",
+				"name": "wood",
+				"quantity": 2
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingtip-ebonwood-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "_H,H_,_H",
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"code": "ebonwoodplank",
+				"name": "wood",
+				"quantity": 2
+			}
+		},
+		"width": 2,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingcornerinner-ebonwood-east-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "_H,HH",
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"code": "ebonwoodplank",
+				"name": "wood",
+				"quantity": 2
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingcornerouter-ebonwood-east-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "___,___,_H_",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-ebonwood-east-free",
+				"name": "wood",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingbottom-ebonwood-east-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "_H_,___,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-ebonwood-east-free",
+				"name": "wood",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingtop-ebonwood-east-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "___,H__,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-ebonwood-east-free",
+				"name": "wood",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofinghalfleft-ebonwood-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "___,__H,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofing-ebonwood-east-free",
+				"name": "wood",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofinghalfright-ebonwood-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "___,_H_,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofingridge-*-ns-free",
+				"name": "wood",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridgeend-ebonwood-east-free",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "___,H__,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofingridge-*-ns-free",
+				"name": "wood",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridgehalfleft-ebonwood-east-free",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "___,__H,___",
+		"ingredients": {
+			"H": {
+				"type": "block",
+				"code": "corruptslantedroofingridge-*-ns-free",
+				"name": "wood",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "corruptslantedroofingridgehalfright-ebonwood-east-free",
+			"quantity": 2
+		}
+	}
+]

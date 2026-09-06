@@ -3,30 +3,10 @@
 	"variantgroups": [
 		{
 			"code": "material",
-			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "meteoriciron"]
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "demonite"]
 		}
 	],
 	"behaviorsByType": {
-		"@(.*-steel|.*-meteoriciron)": [
-			{
-				"name": "Quenchable",
-				"properties": { "metalVariantgroupCode": "material" }
-			},
-			{
-				"name": "GroundStorable",
-				"properties": {
-					"layout": "Quadrants",
-					"collisionBox": {
-						"x1": 0,
-						"y1": 0,
-						"z1": 0,
-						"x2": 1,
-						"y2": 0.125,
-						"z2": 1
-					}
-				}
-			}
-		],
 		"*": [
 			{
 				"name": "GroundStorable",
@@ -47,12 +27,11 @@
 	"heldTpUseAnimation": "interactstatic",
 	"maxstacksize": 4,
 	"shapeByType": {
-		"*-copper": { "base": "game:item/tool/shovelhead-copper" },
-		"*-tinbronze": { "base": "game:item/tool/shovelhead-copper" },
-		"*-bismuthbronze": { "base": "game:item/tool/shovelhead-copper" },
-		"*-blackbronze": { "base": "game:item/tool/shovelhead-copper" },
-		"*-steel": { "base": "game:item/tool/shovelhead-copper" },
-		"*-meteoriciron": { "base": "game:item/tool/shovelhead-copper" },
+		"*-shadowcopper": { "base": "game:item/tool/shovelhead-copper" },
+		"*-shadowtinbronze": { "base": "game:item/tool/shovelhead-copper" },
+		"*-shadowbismuthbronze": { "base": "game:item/tool/shovelhead-copper" },
+		"*-shadowblackbronze": { "base": "game:item/tool/shovelhead-copper" },
+		"*-demonite": { "base": "game:item/tool/shovelhead-copper" },
 		"*": { "base": "game:item/tool/shovel-stone" }
 	},
 	"texturesByType": {
@@ -63,11 +42,6 @@
 		},
 		"@shadowshovelhead-(flint|chert|granite|andesite|basalt|obsidian|peridotite)": {
 			"material": { "base": "block/stone/rock/{material}1" },
-			"string": { "base": "game:block/transparent" },
-			"handle": { "base": "game:block/transparent" }
-		},
-		"shadowshovelhead-meteoriciron": {
-			"material": { "base": "block/metal/ingot/demonite" },
 			"string": { "base": "game:block/transparent" },
 			"handle": { "base": "game:block/transparent" }
 		},
@@ -97,7 +71,7 @@
 			"scale": 0.9
 		},
 		"forgableByType": {
-			"@shadowshovelhead-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": true,
+			"@shadowshovelhead-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": true,
 			"*": false
 		},
 		"onTongTransform": {
@@ -130,7 +104,7 @@
 			}
 		},
 		"groundStorageTransformByType": {
-			"@*-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": {
+			"@*-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 				"translation": {
 					"x": -0.08,
 					"y": -0.043,
@@ -167,7 +141,7 @@
 		"displayable": {
 			"shelf": {
 				"sizeByType": {
-					"@*-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": {
+					"@*-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 						"width": 6,
 						"height": 2,
 						"length": 8
@@ -179,7 +153,7 @@
 					}
 				},
 				"transformByType": {
-					"@*-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": {
+					"@*-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 						"translation": {
 							"x": -0.7,
 							"y": 0.005,
@@ -222,7 +196,7 @@
 		"items": [ "*" ]
 	},
 	"guiTransformByType": {
-		"@shadowshovelhead-(copper|tinbronze|bismuthbronze|blackbronze|iron|meteoriciron|gold|silver|steel)": {
+		"@shadowshovelhead-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 			"rotate": false,
 			"translation": {
 				"x": 0,
@@ -279,7 +253,7 @@
 		"scale": 3.6
 	},
 	"tpHandTransformByType": {
-		"@shadowshovelhead-(copper|tinbronze|bismuthbronze|blackbronze|iron|meteoriciron|gold|silver)": {
+		"@shadowshovelhead-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 			"translation": {
 				"x": -0.7,
 				"y": -0.6,

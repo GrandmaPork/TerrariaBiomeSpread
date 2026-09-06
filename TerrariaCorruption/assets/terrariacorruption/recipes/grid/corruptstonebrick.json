@@ -1,0 +1,28 @@
+[
+	{
+		"ingredientPattern": "H,C,S",
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"tags": [ "tool-hammer" ],
+				"isTool": true
+			},
+			"C": {
+				"type": "item",
+				"tags": [ "tool-chisel" ],
+				"isTool": true
+			},
+			"S": {
+				"type": "block",
+				"code": "corruptrock-travertine"
+			}
+		},
+		"width": 1,
+		"height": 3,
+		"output": {
+			"type": "item",
+			"code": "corruptstonebrick-travertine",
+			"quantity": 4
+		}
+	}
+]

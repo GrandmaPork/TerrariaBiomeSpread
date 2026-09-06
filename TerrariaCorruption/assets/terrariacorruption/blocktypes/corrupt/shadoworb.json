@@ -30,6 +30,7 @@
   },
   "blockmaterial": "Metal",
   "replaceable": 100,
+  "requiredMiningTier": 5,
   "resistance": 4,
   "lightAbsorption": 0,
   "maxStackSize": 1,

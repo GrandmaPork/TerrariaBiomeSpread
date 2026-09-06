@@ -1,0 +1,389 @@
+[
+  {
+    // All these recipes are just matching templates. The actual quantity is determined in code in ItemNugget.OnCreatedByCrafting. The quantity is read from the ore attributes from the ore json file
+    "ingredientPattern": "H,S",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "tags": [ "tool-hammer" ],
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "corruptore-poor-{ore}-*"
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "allowedVariants": {
+      "ore": [ "shadowcopper", "shadowbismuthinite", "shadowcassiterite" ]
+    },
+    "output": {
+      "type": "item",
+      "code": "shadownugget-{ore}",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "H,S",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "tags": [ "tool-hammer" ],
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "corruptore-medium-{ore}-*"
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "allowedVariants": {
+      "ore": [ "shadowcopper", "shadowbismuthinite", "shadowcassiterite" ]
+    },
+    "output": {
+      "type": "item",
+      "code": "shadownugget-{ore}",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "H,S",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "tags": [ "tool-hammer" ],
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "corruptore-rich-{ore}-*"
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "allowedVariants": {
+      "ore": [ "shadowcopper", "shadowbismuthinite", "shadowcassiterite" ]
+    },
+    "output": {
+      "type": "item",
+      "code": "shadownugget-{ore}",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "H,S",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "tags": [ "tool-hammer" ],
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "corruptore-bountiful-{ore}-*"
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "allowedVariants": {
+      "ore": [ "shadowcopper", "shadowbismuthinite", "shadowcassiterite" ]
+    },
+    "output": {
+      "type": "item",
+      "code": "shadownugget-{ore}",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "H,S",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "tags": [ "tool-hammer" ],
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "corruptore-poor-*_{ore}-*"
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "allowedVariants": {
+      "ore": [ "shadowcopper", "shadowbismuthinite", "shadowcassiterite" ]
+    },
+    "output": {
+      "type": "item",
+      "code": "shadownugget-{ore}",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "H,S",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "tags": [ "tool-hammer" ],
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "corruptore-medium-*_{ore}-*"
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "allowedVariants": {
+      "ore": [ "shadowcopper", "shadowbismuthinite", "shadowcassiterite" ]
+    },
+    "output": {
+      "type": "item",
+      "code": "shadownugget-{ore}",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "H,S",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "tags": [ "tool-hammer" ],
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "corruptore-rich-*_{ore}-*"
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "allowedVariants": {
+      "ore": [ "shadowcopper", "shadowbismuthinite", "shadowcassiterite" ]
+    },
+    "output": {
+      "type": "item",
+      "code": "shadownugget-{ore}",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "H,S",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "tags": [ "tool-hammer" ],
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "corruptore-bountiful-*_{ore}-*"
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "allowedVariants": {
+      "ore": [ "shadowcopper", "shadowbismuthinite", "shadowcassiterite" ]
+    },
+    "output": {
+      "type": "item",
+      "code": "shadownugget-{ore}",
+      "quantity": 1
+    }
+  },
+
+
+  {
+    "ingredientPattern": "H,S",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "tags": [ "tool-hammer" ],
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "corruptcrystalizedore-poor-{ore}-*"
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "allowedVariants": {
+      "ore": [ "shadowcopper", "shadowbismuthinite", "shadowcassiterite" ]
+    },
+    "output": {
+      "type": "item",
+      "code": "shadownugget-{ore}",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "H,S",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "tags": [ "tool-hammer" ],
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "corruptcrystalizedore-medium-{ore}-*"
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "allowedVariants": {
+      "ore": [ "shadowcopper", "shadowbismuthinite", "shadowcassiterite" ]
+    },
+    "output": {
+      "type": "item",
+      "code": "shadownugget-{ore}",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "H,S",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "tags": [ "tool-hammer" ],
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "corruptcrystalizedore-rich-{ore}-*"
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "allowedVariants": {
+      "ore": [ "shadowcopper", "shadowbismuthinite", "shadowcassiterite" ]
+    },
+    "output": {
+      "type": "item",
+      "code": "shadownugget-{ore}",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "H,S",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "tags": [ "tool-hammer" ],
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "corruptcrystalizedore-bountiful-{ore}-*"
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "allowedVariants": {
+      "ore": [ "shadowcopper", "shadowbismuthinite", "shadowcassiterite" ]
+    },
+    "output": {
+      "type": "item",
+      "code": "shadownugget-{ore}",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "H,S",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "tags": [ "tool-hammer" ],
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "corruptcrystalizedore-poor-*_{ore}-*"
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "allowedVariants": {
+      "ore": [ "shadowcopper", "shadowbismuthinite", "shadowcassiterite" ]
+    },
+    "output": {
+      "type": "item",
+      "code": "shadownugget-{ore}",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "H,S",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "tags": [ "tool-hammer" ],
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "corruptcrystalizedore-medium-*_{ore}-*"
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "allowedVariants": {
+      "ore": [ "shadowcopper", "shadowbismuthinite", "shadowcassiterite" ]
+    },
+    "output": {
+      "type": "item",
+      "code": "shadownugget-{ore}",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "H,S",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "tags": [ "tool-hammer" ],
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "corruptcrystalizedore-rich-*_{ore}-*"
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "allowedVariants": {
+      "ore": [ "shadowcopper", "shadowbismuthinite", "shadowcassiterite" ]
+    },
+    "output": {
+      "type": "item",
+      "code": "shadownugget-{ore}",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "H,S",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "tags": [ "tool-hammer" ],
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "corruptcrystalizedore-bountiful-*_{ore}-*"
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "allowedVariants": {
+      "ore": [ "shadowcopper", "shadowbismuthinite", "shadowcassiterite" ]
+    },
+    "output": {
+      "type": "item",
+      "code": "shadownugget-{ore}",
+      "quantity": 1
+    }
+  }
+]

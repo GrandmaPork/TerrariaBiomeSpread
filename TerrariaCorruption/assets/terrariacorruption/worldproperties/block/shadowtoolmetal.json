@@ -1,11 +1,11 @@
 {
   "code": "shadowtoolmetal",
   "variants": [
-    { "code": "bismuth" },
-    { "code": "bismuthbronze" },
-    { "code": "blackbronze" },
-    { "code": "copper" },
+    { "code": "shadowbismuth" },
+    { "code": "shadowbismuthbronze" },
+    { "code": "shadowblackbronze" },
+    { "code": "shadowcopper" },
     { "code": "demonite" },
-    { "code": "tinbronze" }
+    { "code": "shadowtinbronze" }
   ]
 }

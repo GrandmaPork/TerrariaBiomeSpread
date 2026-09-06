@@ -1,0 +1,17 @@
+{
+	"ingredientPattern": "GG,GG",
+	"ingredients": {
+		"G": {
+			"type": "item",
+			"code": "corruptdrygrass",
+			"quantity": 2
+		}
+	},
+	"width": 2,
+	"height": 2,
+	"output": {
+		"type": "block",
+		"code": "corrupthay-normal-ud",
+		"quantity": 1
+	}
+}

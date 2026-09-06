@@ -1,5 +1,5 @@
 {
-	"code": "ebonwoodwoodenfencegate",
+	"code": "ebonwoodfencegate",
 	"class": "BlockFenceGate",
 	"behaviors": [ { "name": "Lockable" } ],
 	"attributes": {

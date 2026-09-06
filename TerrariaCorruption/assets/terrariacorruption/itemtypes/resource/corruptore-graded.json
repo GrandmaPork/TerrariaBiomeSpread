@@ -18,12 +18,17 @@
       "loadFromProperties": "terrariacorruption:block/corruptrockwithdeposit"
     }
   ],
-  "shape": { "base": "game:item/ore/{grade}/{ore}" },
+  "shapeByType": {
+    "corruptore-*-shadowbismuthinite-*": { "base": "game:item/ore/{grade}/bismuthinite" },
+    "corruptore-*-shadowcassiterite-*": { "base": "game:item/ore/{grade}/cassiterite" },
+    "corruptore-*-shadowcopper-*": { "base": "game:item/ore/{grade}/nativecopper" },
+    "*": { "base": "game:item/ore/{grade}/{ore}" }
+  },
   "textures": {
     "ore": {
       "base": "block/stone/rock/{rock}1",
       "overlaysByType": {
-        "@*-(nativecopper|bismuth|cassiterite)-.*": [ "block/stone/ore/{ore}1" ],
+        "@*-(shadowcopper|shadowbismuthinite|shadowcassiterite)-.*": [ "block/stone/ore/{ore}1" ],
         "*": [ "game:block/stone/ore/{ore}1" ]
       }
     }
@@ -43,10 +48,25 @@
       }
     },
     "metalUnitsByType": {
-      "corruptore-poor-cassiterite-*": 5,
-      "corruptore-medium-cassiterite-*": 10,
-      "corruptore-rich-cassiterite-*": 15,
-      "corruptore-bountiful-cassiterite-*": 20,
+      "corruptore-poor-shadowcassiterite-*": 5,
+      "corruptore-medium-shadowcassiterite-*": 10,
+      "corruptore-rich-shadowcassiterite-*": 15,
+      "corruptore-bountiful-shadowcassiterite-*": 20,
+
+      "corruptore-poor-hematite-*": 20,
+      "corruptore-medium-hematite-*": 25,
+      "corruptore-rich-hematite-*": 30,
+      "corruptore-bountiful-hematite-*": 40,
+
+      "corruptore-poor-quartz_nativesilver-*": 10,
+      "corruptore-medium-quartz_nativesilver-*": 15,
+      "corruptore-rich-quartz_nativesilver-*": 20,
+      "corruptore-bountiful-quartz_nativesilver-*": 25,
+
+      "corruptore-poor-quartz_nativegold-*": 5,
+      "corruptore-medium-quartz_nativegold-*": 10,
+      "corruptore-rich-quartz_nativegold-*": 15,
+      "corruptore-bountiful-quartz_nativegold-*": 20,
 
       "corruptore-poor-*": 15,
       "corruptore-medium-*": 20,
@@ -67,37 +87,37 @@
     "inBarrelShape": "game:block/wood/barrel/contents-ore"
   },
   "allowedVariants": [
-    "corruptore-poor-bismuthinite-andesite",
-    "corruptore-medium-bismuthinite-andesite",
-    "corruptore-rich-bismuthinite-andesite",
-    "corruptore-poor-bismuthinite-granite",
-    "corruptore-medium-bismuthinite-granite",
-    "corruptore-rich-bismuthinite-granite",
-    "corruptore-poor-bismuthinite-basalt",
-    "corruptore-medium-bismuthinite-basalt",
-    "corruptore-rich-bismuthinite-basalt",
-    "corruptore-bountiful-bismuthinite-basalt",
-    "corruptore-poor-bismuthinite-peridotite",
-    "corruptore-medium-bismuthinite-peridotite",
-    "corruptore-rich-bismuthinite-peridotite",
-    "corruptore-poor-bismuthinite-phyllite",
-    "corruptore-medium-bismuthinite-phyllite",
-    "corruptore-poor-bismuthinite-slate",
-    "corruptore-medium-bismuthinite-slate",
-    "corruptore-poor-cassiterite-andesite",
-    "corruptore-medium-cassiterite-andesite",
-    "corruptore-poor-cassiterite-granite",
-    "corruptore-medium-cassiterite-granite",
-    "corruptore-rich-cassiterite-granite",
-    "corruptore-bountiful-cassiterite-granite",
-    "corruptore-poor-cassiterite-basalt",
-    "corruptore-medium-cassiterite-basalt",
-    "corruptore-poor-cassiterite-peridotite",
-    "corruptore-medium-cassiterite-peridotite",
-    "corruptore-poor-cassiterite-phyllite",
-    "corruptore-medium-cassiterite-phyllite",
-    "corruptore-poor-cassiterite-slate",
-    "corruptore-medium-cassiterite-slate",
+    "corruptore-poor-shadowbismuthinite-andesite",
+    "corruptore-medium-shadowbismuthinite-andesite",
+    "corruptore-rich-shadowbismuthinite-andesite",
+    "corruptore-poor-shadowbismuthinite-granite",
+    "corruptore-medium-shadowbismuthinite-granite",
+    "corruptore-rich-shadowbismuthinite-granite",
+    "corruptore-poor-shadowbismuthinite-basalt",
+    "corruptore-medium-shadowbismuthinite-basalt",
+    "corruptore-rich-shadowbismuthinite-basalt",
+    "corruptore-bountiful-shadowbismuthinite-basalt",
+    "corruptore-poor-shadowbismuthinite-peridotite",
+    "corruptore-medium-shadowbismuthinite-peridotite",
+    "corruptore-rich-shadowbismuthinite-peridotite",
+    "corruptore-poor-shadowbismuthinite-phyllite",
+    "corruptore-medium-shadowbismuthinite-phyllite",
+    "corruptore-poor-shadowbismuthinite-slate",
+    "corruptore-medium-shadowbismuthinite-slate",
+    "corruptore-poor-shadowcassiterite-andesite",
+    "corruptore-medium-shadowcassiterite-andesite",
+    "corruptore-poor-shadowcassiterite-granite",
+    "corruptore-medium-shadowcassiterite-granite",
+    "corruptore-rich-shadowcassiterite-granite",
+    "corruptore-bountiful-shadowcassiterite-granite",
+    "corruptore-poor-shadowcassiterite-basalt",
+    "corruptore-medium-shadowcassiterite-basalt",
+    "corruptore-poor-shadowcassiterite-peridotite",
+    "corruptore-medium-shadowcassiterite-peridotite",
+    "corruptore-poor-shadowcassiterite-phyllite",
+    "corruptore-medium-shadowcassiterite-phyllite",
+    "corruptore-poor-shadowcassiterite-slate",
+    "corruptore-medium-shadowcassiterite-slate",
     "corruptore-poor-sphalerite-andesite",
     "corruptore-medium-sphalerite-andesite",
     "corruptore-poor-sphalerite-granite",
@@ -135,37 +155,37 @@
     "corruptore-medium-sphalerite-slate",
     "corruptore-rich-sphalerite-slate",
     "corruptore-bountiful-sphalerite-slate",
-    "corruptore-poor-nativecopper-granite",
-    "corruptore-medium-nativecopper-granite",
-    "corruptore-rich-nativecopper-granite",
-    "corruptore-poor-nativecopper-basalt",
-    "corruptore-medium-nativecopper-basalt",
-    "corruptore-rich-nativecopper-basalt",
-    "corruptore-bountiful-nativecopper-basalt",
-    "corruptore-poor-nativecopper-slate",
-    "corruptore-medium-nativecopper-slate",
-    "corruptore-rich-nativecopper-slate",
-    "corruptore-poor-nativecopper-andesite",
-    "corruptore-medium-nativecopper-andesite",
-    "corruptore-rich-nativecopper-andesite",
-    "corruptore-poor-nativecopper-peridotite",
-    "corruptore-medium-nativecopper-peridotite",
-    "corruptore-rich-nativecopper-peridotite",
-    "corruptore-poor-nativecopper-claystone",
-    "corruptore-medium-nativecopper-claystone",
-    "corruptore-poor-nativecopper-sandstone",
-    "corruptore-medium-nativecopper-sandstone",
-    "corruptore-poor-nativecopper-shale",
-    "corruptore-medium-nativecopper-shale",
-    "corruptore-poor-nativecopper-chalk",
-    "corruptore-medium-nativecopper-chalk",
-    "corruptore-poor-nativecopper-chert",
-    "corruptore-medium-nativecopper-chert",
-    "corruptore-poor-nativecopper-conglomerate",
-    "corruptore-medium-nativecopper-conglomerate",
-    "corruptore-poor-nativecopper-phyllite",
-    "corruptore-medium-nativecopper-phyllite",
-    "corruptore-rich-nativecopper-phyllite",
+    "corruptore-poor-shadowcopper-granite",
+    "corruptore-medium-shadowcopper-granite",
+    "corruptore-rich-shadowcopper-granite",
+    "corruptore-poor-shadowcopper-basalt",
+    "corruptore-medium-shadowcopper-basalt",
+    "corruptore-rich-shadowcopper-basalt",
+    "corruptore-bountiful-shadowcopper-basalt",
+    "corruptore-poor-shadowcopper-slate",
+    "corruptore-medium-shadowcopper-slate",
+    "corruptore-rich-shadowcopper-slate",
+    "corruptore-poor-shadowcopper-andesite",
+    "corruptore-medium-shadowcopper-andesite",
+    "corruptore-rich-shadowcopper-andesite",
+    "corruptore-poor-shadowcopper-peridotite",
+    "corruptore-medium-shadowcopper-peridotite",
+    "corruptore-rich-shadowcopper-peridotite",
+    "corruptore-poor-shadowcopper-claystone",
+    "corruptore-medium-shadowcopper-claystone",
+    "corruptore-poor-shadowcopper-sandstone",
+    "corruptore-medium-shadowcopper-sandstone",
+    "corruptore-poor-shadowcopper-shale",
+    "corruptore-medium-shadowcopper-shale",
+    "corruptore-poor-shadowcopper-chalk",
+    "corruptore-medium-shadowcopper-chalk",
+    "corruptore-poor-shadowcopper-chert",
+    "corruptore-medium-shadowcopper-chert",
+    "corruptore-poor-shadowcopper-conglomerate",
+    "corruptore-medium-shadowcopper-conglomerate",
+    "corruptore-poor-shadowcopper-phyllite",
+    "corruptore-medium-shadowcopper-phyllite",
+    "corruptore-rich-shadowcopper-phyllite",
     "corruptore-poor-malachite-limestone",
     "corruptore-medium-malachite-limestone",
     "corruptore-rich-malachite-limestone",
@@ -587,7 +607,7 @@
     "corruptore-medium-ilmenite-*": {
       "crushedStack": {
         "type": "item",
-        "code": "game:game:crushed-ilmenite"
+        "code": "game:crushed-ilmenite"
       },
       "quantity": { "avg": 1.33 },
       "hardnessTier": 4
@@ -608,34 +628,34 @@
       "quantity": { "avg": 2.33 },
       "hardnessTier": 4
     },
-    "corruptore-poor-cassiterite-*": {
+    "corruptore-poor-shadowcassiterite-*": {
       "crushedStack": {
         "type": "item",
-        "code": "game:crushed-cassiterite"
+        "code": "corruptcrushed-shadowcassiterite"
       },
       "quantity": { "avg": ".33" },
       "hardnessTier": 1
     },
-    "corruptore-medium-cassiterite-*": {
+    "corruptore-medium-shadowcassiterite-*": {
       "crushedStack": {
         "type": "item",
-        "code": "corruptcrushed-cassiterite"
+        "code": "corruptcrushed-shadowcassiterite"
       },
       "quantity": { "avg": ".66" },
       "hardnessTier": 1
     },
-    "corruptore-rich-cassiterite-*": {
+    "corruptore-rich-shadowcassiterite-*": {
       "crushedStack": {
         "type": "item",
-        "code": "corruptcrushed-cassiterite"
+        "code": "corruptcrushed-shadowcassiterite"
       },
       "quantity": { "avg": 1 },
       "hardnessTier": 1
     },
-    "corruptore-bountiful-cassiterite-*": {
+    "corruptore-bountiful-shadowcassiterite-*": {
       "crushedStack": {
         "type": "item",
-        "code": "corruptcrushed-cassiterite"
+        "code": "corruptcrushed-shadowcassiterite"
       },
       "quantity": { "avg": 1.33 },
       "hardnessTier": 1
@@ -757,7 +777,7 @@
       {
         "name": "ArtPigment",
         "properties": {
-          "decorBlockCodes": [ "caveart-yellowochre-1-*" ],
+          "decorBlockCodes": [ "game:caveart-yellowochre-1-*" ],
           "paintableOnBlockMaterials": [ "Stone", "Wood", "Brick", "Ceramic", "Metal", "Meta" ]
         }
       }
@@ -780,7 +800,7 @@
       {
         "name": "ArtPigment",
         "properties": {
-          "decorBlockCodes": [ "caveart-redochre-1-*" ],
+          "decorBlockCodes": [ "game:caveart-redochre-1-*" ],
           "paintableOnBlockMaterials": [ "Stone", "Wood", "Brick", "Ceramic", "Metal", "Meta" ]
         }
       }

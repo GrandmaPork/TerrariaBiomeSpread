@@ -1,0 +1,20 @@
+[
+	{
+		"ingredientPattern": "PP,PP",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "ebonwoodplank",
+				"name": "wood",
+				"quantity": 1
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"output": {
+			"type": "block",
+			"code": "ebonwoodplanks-ud",
+			"quantity": 1
+		}
+	}
+]

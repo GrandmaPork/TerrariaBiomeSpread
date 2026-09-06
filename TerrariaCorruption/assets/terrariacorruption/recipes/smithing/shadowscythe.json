@@ -1,0 +1,21 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "shadowingot-*",
+		"name": "metal",
+		"allowedVariants": [ "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "silver", "gold", "iron", "demonite", "steel" ]
+	},
+	"pattern": [
+		[
+			"###########____",
+			"_______########",
+			"____________###"
+		]
+	],
+	"name": "Scythe",
+	"code": "shadowscythehead-{metal}",
+	"output": {
+		"type": "item",
+		"code": "shadowscythehead-{metal}"
+	}
+}

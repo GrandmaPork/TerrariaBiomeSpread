@@ -1,0 +1,26 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "shadowingot-*",
+		"name": "metal",
+		"allowedVariants": [ "shadowtinbronze", "shadowbismuthbronze" ]
+	},
+	"pattern": [
+		[
+			"___#####_###",
+			"############",
+			"___#####_###"
+		],
+		[
+			"_________###",
+			"_________###",
+			"_________###"
+		]
+	],
+	"name": "Spear",
+	"code": "shadowspearhead-{metal}",
+	"output": {
+		"type": "item",
+		"code": "shadowspearhead-{metal}"
+	}
+}
