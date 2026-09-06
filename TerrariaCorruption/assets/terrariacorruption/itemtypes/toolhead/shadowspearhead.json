@@ -3,7 +3,7 @@
   "variantgroups": [
     {
       "code": "material",
-      "states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "demonite" ]
+      "states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "demonite" ]
     }
   ],
   "behaviorsByType": {
@@ -27,7 +27,7 @@
   "heldTpUseAnimation": "interactstatic",
   "maxstacksize": 4,
   "shapeByType": {
-    "@shadowspearhead-(copper|tinbronze|bismuthbronze|blackbronze)": { "base": "item/tool/spear/metal-{material}" },
+    "@shadowspearhead-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze)": { "base": "item/tool/spear/metal-{material}" },
     "*-demonite": { "base": "game:item/tool/spear/metal-meteoriciron" },
     "*": { "base": "game:item/tool/spear/stone" }
   },
@@ -37,12 +37,7 @@
       "string": { "base": "game:block/transparent" },
       "handle": { "base": "game:block/transparent" }
     },
-    "*-demonite": {
-      "ingot": { "base": "block/metal/ingot/demonite" },
-      "string": { "base": "game:block/transparent" },
-      "handle": { "base": "game:block/transparent" }
-    },
-    "@shadowspearhead-(copper|tinbronze|bismuthbronze|blackbronze)": {
+    "@shadowspearhead-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
       "ingot": { "base": "block/metal/ingot/{material}" },
       "string": { "base": "game:block/transparent" },
       "handle": { "base": "game:block/transparent" }
@@ -74,7 +69,7 @@
       "scale": 0.9
     },
     "forgableByType": {
-      "@shadowspearhead-(copper|tinbronze|bismuthbronze|blackbronze|demonite)": true,
+      "@shadowspearhead-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": true,
       "*": false
     },
     "onTongTransform": {
@@ -107,7 +102,7 @@
       }
     },
     "groundStorageTransformByType": {
-      "*-copper": {
+      "*-shadowcopper": {
         "translation": {
           "x": -0.9,
           "y": 0.01,
@@ -124,7 +119,7 @@
           "z": 0.5
         }
       },
-      "@*-(tinbronze|bismuthbronze)": {
+      "@*-(shadowtinbronze|shadowbismuthbronze)": {
         "translation": {
           "x": -0.9,
           "y": 0.04,
@@ -141,7 +136,7 @@
           "z": 0.5
         }
       },
-      "@*-(blackbronze|gold|silver|iron|demonite)": {
+      "@*-(shadowblackbronze|demonite)": {
         "translation": {
           "x": -0.9,
           "y": 0.05,
@@ -182,22 +177,22 @@
     "displayable": {
       "shelf": {
         "sizeByType": {
-          "*-copper": {
+          "*-shadowcopper": {
             "width": 3.5,
             "height": 0.5,
             "length": 8
           },
-          "*-tinbronze": {
+          "*-shadowtinbronze": {
             "width": 3,
             "height": 2.5,
             "length": 8
           },
-          "*-bismuthbronze": {
+          "*-shadowbismuthbronze": {
             "width": 3,
             "height": 2.5,
             "length": 8
           },
-          "@*-(blackbronze|gold|silver|iron|demonite)": {
+          "@*-(shadowblackbronze|demonite)": {
             "width": 3,
             "height": 2.5,
             "length": 8
@@ -209,7 +204,7 @@
           }
         },
         "transformByType": {
-          "*-copper": {
+          "*-shadowcopper": {
             "translation": {
               "x": -0.965,
               "y": 0.0177,
@@ -226,7 +221,7 @@
               "z": 0.5
             }
           },
-          "*-tinbronze": {
+          "*-shadowtinbronze": {
             "translation": {
               "x": -1.05,
               "y": 0.02,
@@ -243,7 +238,7 @@
               "z": 0.5
             }
           },
-          "*-bismuthbronze": {
+          "*-shadowbismuthbronze": {
             "translation": {
               "x": -1.05,
               "y": 0.02,
@@ -260,7 +255,7 @@
               "z": 0.5
             }
           },
-          "@*-(blackbronze|gold|silver|iron|demonite)": {
+          "@*-(shadowblackbronze|demonite)": {
             "translation": {
               "x": -1.05,
               "y": 0.02,
@@ -303,7 +298,7 @@
     "items": [ "*" ]
   },
   "guiTransformByType": {
-    "@*-(copper|tinbronze|bismuthbronze)": {
+    "@*-(shadowcopper|shadowtinbronze|shadowbismuthbronze)": {
       "rotation": {
         "x": 2,
         "y": 13,
@@ -316,7 +311,7 @@
       },
       "scale": 2.22
     },
-    "@*-(blackbronze|iron|demonite)": {
+    "@*-(shadowblackbronze|demonite)": {
       "rotation": {
         "x": -180,
         "y": -32,
@@ -344,7 +339,7 @@
     }
   },
   "tpHandTransformByType": {
-    "@*-(copper|tinbronze|bismuthbronze|blackbronze|iron|demonite)": {
+    "@*-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
       "translation": {
         "x": 0,
         "y": 0.04,
@@ -382,7 +377,7 @@
     }
   },
   "groundTransformByType": {
-    "@*-(copper|tinbronze|bismuthbronze|blackbronze|iron|demonite)": {
+    "@*-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
       "translation": {
         "x": 0,
         "y": 0,

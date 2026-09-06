@@ -45,7 +45,7 @@
 		},
 		{
 			"code": "material",
-			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze","meteoriciron"]
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze","demonite"]
 		}
 	],
 	"skipVariants": [
@@ -62,7 +62,7 @@
 	],
 	"shapeByType": {
 		"@shadowspear-generic-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": { "base": "game:item/tool/spear/stone" },
-		"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": { "base": "item/tool/spear/metal-{material}" }
+		"@shadowspear-generic-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": { "base": "item/tool/spear/metal-{material}" }
 	},
 	"texturesByType": {
 		"shadowspear-generic-flint": {
@@ -71,10 +71,7 @@
 		"@shadowspear-generic-(chert|granite|andesite|basalt|obsidian|peridotite)": {
 			"stone": { "base": "block/stone/rock/{material}1" }
 		},
-		"shadowspear-generic-meteoriciron": {
-			"ingot": { "base": "block/metal/ingot/demonite" }
-		},
-		"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze)": {
+		"@shadowspear-generic-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 			"ingot": { "base": "block/metal/ingot/{material}" }
 		}
 	},
@@ -90,13 +87,14 @@
 		"shadowspear-generic-basalt": 1.75,
 		"shadowspear-generic-flint": 2,
 		"shadowspear-generic-obsidian": 2.25,
-		"shadowspear-generic-copper": 2.75,
-		"shadowspear-generic-bismuthbronze": 3.25,
-		"shadowspear-generic-tinbronze": 3.75,
-		"shadowspear-generic-blackbronze": 4,
-		"shadowspear-generic-meteoriciron": 4.3
+		"shadowspear-generic-shadowcopper": 2.75,
+		"shadowspear-generic-shadowbismuthbronze": 3.25,
+		"shadowspear-generic-shadowtinbronze": 3.75,
+		"shadowspear-generic-shadowblackbronze": 4,
+		"shadowspear-generic-demonite": 4.3
 	},
 	"attributes": {
+		"isCorrupt": true,
 		"heldItemPitchFollow": 1,
 		"groundStorageTransformByType": {
 			"shadowspear-generic-hacking": {
@@ -112,7 +110,7 @@
 				},
 				"scale": 0.85
 			},
-			"@shadowspear-generic-(copper|tinbronze|bismuthbronze)": {
+			"@shadowspear-generic-(shadowcopper|shadowtinbronze|shadowbismuthbronze)": {
 				"translation": {
 					"x": -0.39,
 					"y": 0.78,
@@ -125,7 +123,7 @@
 				},
 				"scale": 0.85
 			},
-			"@shadowspear-generic-(blackbronze|meteoriciron)": {
+			"@shadowspear-generic-(shadowblackbronze|demonite)": {
 				"translation": {
 					"x": -0.39,
 					"y": 0.78,
@@ -159,11 +157,11 @@
 		"damageByType": {
 			"*-flint": 4.0,
 			"*-obsidian": 4.5,
-			"*-copper": 5,
-			"*-bismuthbronze": 5.75,
-			"*-tinbronze": 6.0,
-			"*-blackbronze": 6.5,
-			"*-meteoriciron": 6.9,
+			"*-shadowcopper": 5,
+			"*-shadowbismuthbronze": 5.75,
+			"*-shadowtinbronze": 6.0,
+			"*-shadowblackbronze": 6.5,
+			"*-demonite": 6.9,
 			"*-steel": 7.0,
 			"*": 3.0
 		},
@@ -175,11 +173,11 @@
 			"*-basalt": 0,
 			"*-flint": 0,
 			"*-obsidian": 0,
-			"*-copper": 0,
-			"*-bismuthbronze": 1,
-			"*-tinbronze": 1,
-			"*-blackbronze": 1,
-			"*-meteoriciron": 2
+			"*-shadowcopper": 0,
+			"*-shadowbismuthbronze": 1,
+			"*-shadowtinbronze": 1,
+			"*-shadowblackbronze": 1,
+			"*-demonite": 2
 		},
 		"spearEntityCodeByType": {
 			"*": "terrariacorruption:shadowspear-{type}-{material}"
@@ -265,7 +263,7 @@
 					"z": -1
 				}
 			},
-			"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": {
+			"@shadowspear-generic-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 				"rotation": {
 					"x": 90,
 					"y": 1,
@@ -467,11 +465,11 @@
 		"shadowspear-generic-obsidian": 80,
 		"shadowspear-generic-flint": 45,
 		"shadowspear-scrap-scrap": 80,
-		"shadowspear-generic-copper": 220,
-		"shadowspear-generic-tinbronze": 300,
-		"shadowspear-generic-bismuthbronze": 360,
-		"shadowspear-generic-blackbronze": 450,
-		"shadowspear-generic-meteoriciron": 700,
+		"shadowspear-generic-shadowcopper": 220,
+		"shadowspear-generic-shadowtinbronze": 300,
+		"shadowspear-generic-shadowbismuthbronze": 360,
+		"shadowspear-generic-shadowblackbronze": 450,
+		"shadowspear-generic-demonite": 700,
 		"shadowspear-generic-steel": 700
 	},
 	"creativeinventory": {
@@ -617,7 +615,7 @@
 			},
 			"scale": 3.09
 		},
-		"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+		"@shadowspear-generic-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite|steel)": {
 			"rotation": {
 				"x": 33,
 				"y": 0,
@@ -755,7 +753,7 @@
 			},
 			"scale": 0.8
 		},
-		"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": {
+		"@shadowspear-generic-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 			"translation": {
 				"x": -1.29,
 				"y": 0.03,

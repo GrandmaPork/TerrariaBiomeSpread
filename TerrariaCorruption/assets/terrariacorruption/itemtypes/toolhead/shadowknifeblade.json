@@ -3,7 +3,7 @@
 	"variantgroups": [
 		{
 			"code": "material",
-			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "demonite"]
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "demonite"]
 		}
 	],
 	"behaviorsByType": {
@@ -27,7 +27,7 @@
 	"heldTpUseAnimation": "interactstatic",
 	"maxstacksize": 4,
 	"shapeByType": {
-		"@shadowknifeblade-(copper|tinbronze|bismuthbronze|blackbronze|steel|demonite)": { "base": "game:item/tool/knife/copper" },
+		"@shadowknifeblade-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": { "base": "game:item/tool/knife/copper" },
 		"*": { "base": "game:item/tool/knife/stoneblade" }
 	},
 	"particlesTextureCode": "material",
@@ -38,11 +38,6 @@
 		"@shadowknifeblade-(chert|flint|granite|andesite|basalt|obsidian|peridotite)": {
 			"material": { "base": "block/stone/rock/{material}1" }
 		},
-		"shadowknifeblade-demonite": {
-			"material": { "base": "block/metal/ingot/demonite" },
-			"string": { "base": "game:block/transparent" },
-			"handle": { "base": "game:block/transparent" }
-		},
 		"*": {
 			"material": { "base": "block/metal/ingot/{material}" },
 			"string": { "base": "game:block/transparent" },
@@ -51,7 +46,7 @@
 	},
 	"attributes": {
 		"forgableByType": {
-			"@shadowknifeblade-(copper|tinbronze|bismuthbronze|blackbronze|demonite|steel)": true,
+			"@shadowknifeblade-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": true,
 			"*": false
 		},
 		"inForgeTransform": {
@@ -101,7 +96,7 @@
 			}
 		},
 		"groundStorageTransformByType": {
-			"@shadowknifeblade-(copper|tinbronze|bismuthbronze|blackbronze|demonite|steel)": {
+			"@shadowknifeblade-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 				"translation": {
 					"x": -0,
 					"y": 0.005,
@@ -142,7 +137,7 @@
 		"displayable": {
 			"shelf": {
 				"sizeByType": {
-					"@*-(copper|tinbronze|bismuthbronze|blackbronze|demonite|steel)": {
+					"@*-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 						"width": 2,
 						"height": 0.2,
 						"length": 8
@@ -154,7 +149,7 @@
 					}
 				},
 				"transformByType": {
-					"@*-(copper|tinbronze|bismuthbronze|blackbronze|demonite|steel)": {
+					"@*-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 						"translation": {
 							"x": -0.07,
 							"y": -0.09,

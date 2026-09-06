@@ -59,14 +59,15 @@
     },
     "workableTemperatureByType": {
       "shadowingot-lead": 0,
-      "shadowingot-tin": 0
+      "shadowingot-shadowtin": 0
     },
     "requiresAnvilTierByType": {
-      "shadowingot-meteoriciron": 4
+      "shadowingot-demonite": 4,
+      "*": 3
     },
     "shatteredStack": {
       "type": "item",
-      "code": "shadowmetalbit-{metal}"
+      "code": "metalbit-{metal}"
     },
     "displaycaseable": true,
     "shelvable": true,
@@ -137,49 +138,49 @@
     "items": [ "*" ]
   },
   "materialDensityByType": {
-    "*-copper": 8960,
-    "*-tinbronze": 7600,
-    "*-bismuthbronze": 7900,
-    "*-blackbronze": 9000,
+    "*-shadowcopper": 8960,
+    "*-shadowtinbronze": 7600,
+    "*-shadowbismuthbronze": 7900,
+    "*-shadowblackbronze": 9000,
     "*-demonite": 7800,
-    "*-tin": 7260,
-    "*-bismuth": 9790
+    "*-shadowtin": 7260,
+    "*-shadowbismuth": 9790
   },
   "combustiblePropsByType": {
-    "shadowingot-copper": {
+    "shadowingot-shadowcopper": {
       "meltingPoint": 1084,
       "meltingDuration": 30,
       "smeltedRatio": 1,
       "smeltedStack": {
         "type": "item",
-        "code": "shadowingot-copper"
+        "code": "shadowingot-shadowcopper"
       }
     },
-    "shadowingot-tinbronze": {
+    "shadowingot-shadowtinbronze": {
       "meltingPoint": 950,
       "meltingDuration": 30,
       "smeltedRatio": 1,
       "smeltedStack": {
         "type": "item",
-        "code": "shadowingot-tinbronze"
+        "code": "shadowingot-shadowtinbronze"
       }
     },
-    "shadowingot-bismuthbronze": {
+    "shadowingot-shadowbismuthbronze": {
       "meltingPoint": 850,
       "meltingDuration": 30,
       "smeltedRatio": 1,
       "smeltedStack": {
         "type": "item",
-        "code": "shadowingot-bismuthbronze"
+        "code": "shadowingot-shadowbismuthbronze"
       }
     },
-    "shadowingot-blackbronze": {
+    "shadowingot-shadowblackbronze": {
       "meltingPoint": 1020,
       "meltingDuration": 30,
       "smeltedRatio": 1,
       "smeltedStack": {
         "type": "item",
-        "code": "shadowingot-blackbronze"
+        "code": "shadowingot-shadowblackbronze"
       }
     },
     "shadowingot-demonite": {
@@ -191,22 +192,22 @@
         "code": "shadowingot-demonite"
       }
     },
-    "shadowingot-tin": {
+    "shadowingot-shadowtin": {
       "meltingPoint": 232,
       "meltingDuration": 30,
       "smeltedRatio": 1,
       "smeltedStack": {
         "type": "item",
-        "code": "shadowingot-tin"
+        "code": "shadowingot-shadowtin"
       }
     },
-    "shadowingot-bismuth": {
+    "shadowingot-shadowbismuth": {
       "meltingPoint": 271,
       "meltingDuration": 30,
       "smeltedRatio": 1,
       "smeltedStack": {
         "type": "item",
-        "code": "shadowingot-bismuth"
+        "code": "shadowingot-shadowbismuth"
       }
     }
   },

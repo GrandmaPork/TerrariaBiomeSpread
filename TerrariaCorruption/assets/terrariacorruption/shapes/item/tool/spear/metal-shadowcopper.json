@@ -9,7 +9,7 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"ingot": "block/metal/ingot/copper",
+		"ingot": "block/metal/ingot/shadowcopper",
 		"string": "game:item/resource/string",
 		"handle": "game:item/tool/handle"
 	},

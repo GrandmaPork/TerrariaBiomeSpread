@@ -348,7 +348,7 @@
     "rock": {
       "base": "block/stone/rock/{rock}1",
       "overlaysByType": {
-        "@corruptlooseores-(nativecopper|bismuth|cassiterite)-.*": [ "block/stone/ore/{ore}1" ],
+        "@corruptlooseores-(nativecopper|bismuthinite|cassiterite)-.*": [ "block/stone/ore/{ore}1" ],
         "*": [ "game:block/stone/ore/{ore}1" ]
       }
     }

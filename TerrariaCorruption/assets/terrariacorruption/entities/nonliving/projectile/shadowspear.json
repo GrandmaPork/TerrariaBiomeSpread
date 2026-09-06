@@ -13,7 +13,7 @@
 		},
 		{
 			"code": "material",
-			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "scrap", "copper", "tinbronze", "bismuthbronze", "blackbronze", "meteoriciron" ]
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "shadowshadowcopper", "shadowshadowtinbronze", "shadowshadowbismuthbronze", "shadowshadowblackbronze", "demonite" ]
 		}
 	],
 	"skipVariants": [
@@ -39,7 +39,7 @@
 				"base": "game:item/tool/spear/scrap",
 				"offsetX": -0.8125
 			},
-			"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze|iron|meteoriciron)": {
+			"@shadowspear-generic-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 				"base": "item/tool/spear/metal-{material}",
 				"offsetX": -0.8125
 			},
@@ -56,13 +56,13 @@
 			"shadowspear-generic-flint": {
 				"stone": { "base": "block/stone/{material}" }
 			},
-			"shadowspear-generic-meteoriciron": {
+			"shadowspear-generic-demonite": {
 				"stone": { "base": "block/metal/ingot/demonite" }
 			},
 			"@shadowspear-generic-(chert|granite|andesite|basalt|obsidian|peridotite)": {
 				"stone": { "base": "block/stone/rock/{material}1" }
 			},
-			"@shadowspear-generic-(copper|tinbronze|bismuthbronze|blackbronze)": {
+			"@shadowspear-generic-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze)": {
 				"ingot": { "base": "block/metal/ingot/{material}" }
 			}
 		},

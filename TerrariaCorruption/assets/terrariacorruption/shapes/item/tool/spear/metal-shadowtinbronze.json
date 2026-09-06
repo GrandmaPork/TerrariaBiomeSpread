@@ -9,7 +9,7 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"tinbronze": "block/metal/ingot/tinbronze",
+		"tinbronze": "block/metal/ingot/shadowtinbronze",
 		"string": "game:item/resource/string",
 		"handle": "game:item/tool/handle"
 	},

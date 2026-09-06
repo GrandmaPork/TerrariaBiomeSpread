@@ -3,7 +3,7 @@
 	"variantgroups": [
 		{
 			"code": "material",
-			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "demonite"]
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "demonite" ]
 		}
 	],
 	"behaviorsByType": {
@@ -27,11 +27,10 @@
 	"heldTpUseAnimation": "interactstatic",
 	"maxstacksize": 4,
 	"shapeByType": {
-		"*-copper": { "base": "game:item/tool/hoe-copper" },
-		"*-tinbronze": { "base": "game:item/tool/hoe-copper" },
-		"*-bismuthbronze": { "base": "game:item/tool/hoe-copper" },
-		"*-blackbronze": { "base": "game:item/tool/hoe-copper" },
-		"*-steel": { "base": "game:item/tool/hoe-copper" },
+		"*-shadowcopper": { "base": "game:item/tool/hoe-copper" },
+		"*-shadowtinbronze": { "base": "game:item/tool/hoe-copper" },
+		"*-shadowbismuthbronze": { "base": "game:item/tool/hoe-copper" },
+		"*-shadowblackbronze": { "base": "game:item/tool/hoe-copper" },
 		"*-demonite": { "base": "game:item/tool/hoe-copper" },
 		"*": { "base": "game:item/tool/hoe-stone" }
 	},
@@ -76,7 +75,7 @@
 			}
 		},
 		"forgableByType": {
-			"@shadowhoehead-(copper|tinbronze|bismuthbronze|blackbronze|demonite|steel)": true,
+			"@shadowhoehead-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": true,
 			"*": false
 		},
 		"onTongTransform": {
@@ -109,7 +108,7 @@
 			}
 		},
 		"groundStorageTransformByType": {
-			"@*-(copper|tinbronze|bismuthbronze|blackbronze|demonite|steel)": {
+			"@*-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 				"translation": {
 					"x": -0.4,
 					"y": 0,
@@ -150,7 +149,7 @@
 		"displayable": {
 			"shelf": {
 				"sizeByType": {
-					"@*-(copper|tinbronze|bismuthbronze|blackbronze|demonite|steel)": {
+					"@*-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 						"width": 2.5,
 						"height": 2,
 						"length": 8
@@ -162,7 +161,7 @@
 					}
 				},
 				"transformByType": {
-					"@*-(copper|tinbronze|bismuthbronze|blackbronze|demonite|steel)": {
+					"@*-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 						"translation": {
 							"x": -0.4,
 							"y": 0.02,
@@ -185,7 +184,7 @@
 		"items": [ "*" ]
 	},
 	"guiTransformByType": {
-		"@shadowhoehead-(copper|tinbronze|bismuthbronze|blackbronze|eteoriciron|steel)": {
+		"@shadowhoehead-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 			"rotate": false,
 			"translation": {
 				"x": 0,

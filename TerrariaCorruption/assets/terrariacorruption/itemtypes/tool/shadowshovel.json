@@ -29,9 +29,10 @@
 		{ "name": "Buffable" }
 	],
 	"attributes": {
+		"isCorrupt": true,
 		"attachableToEntity": { "categoryCode": "toolholding" },
 		"groundStorageTransformByType": {
-			"@shadowshovel-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron|steel)": {
+			"@shadowshovel-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 				"translation": {
 					"x": 0,
 					"y": 0.59,
@@ -84,11 +85,11 @@
 				"obsidian",
 				"peridotite",
 				"flint",
-				"copper",
-				"tinbronze",
-				"bismuthbronze",
-				"blackbronze",
-				"meteoriciron"
+				"shadowcopper",
+				"shadowtinbronze",
+				"shadowbismuthbronze",
+				"shadowblackbronze",
+				"demonite"
 			]
 		}
 	],
@@ -102,12 +103,11 @@
 		"shadowshovel-obsidian": { "base": "game:item/tool/shovel-stone" },
 		"shadowshovel-peridotite": { "base": "game:item/tool/shovel-stone" },
 		"shadowshovel-flint": { "base": "game:item/tool/shovel-stone" },
-		"shadowshovel-copper": { "base": "game:item/tool/shovel-copper" },
-		"shadowshovel-tinbronze": { "base": "game:item/tool/shovel-copper" },
-		"shadowshovel-bismuthbronze": { "base": "game:item/tool/shovel-copper" },
-		"shadowshovel-blackbronze": { "base": "game:item/tool/shovel-copper" },
-		"shadowshovel-meteoriciron": { "base": "game:item/tool/shovel-copper" },
-		"shadowshovel-steel": { "base": "game:item/tool/shovel-copper" }
+		"shadowshovel-shadowcopper": { "base": "game:item/tool/shovel-copper" },
+		"shadowshovel-shadowtinbronze": { "base": "game:item/tool/shovel-copper" },
+		"shadowshovel-shadowbismuthbronze": { "base": "game:item/tool/shovel-copper" },
+		"shadowshovel-shadowblackbronze": { "base": "game:item/tool/shovel-copper" },
+		"shadowshovel-demonite": { "base": "game:item/tool/shovel-copper" },
 	},
 	"heldTpIdleAnimation": "shovelidle",
 	"heldRightReadyAnimation": "shovelready",
@@ -134,9 +134,6 @@
 		},
 		"shadowshovel-peridotite": {
 			"material": { "base": "block/stone/rock/{material}1" }
-		},
-		"shadowshovel-meteoriciron": {
-			"material": { "base": "block/metal/ingot/demonite" }
 		},
 		"*": {
 			"material": { "base": "block/metal/ingot/{material}" }
@@ -185,31 +182,31 @@
 			"gravel": 2.1,
 			"snow": 2.1
 		},
-		"shadowshovel-copper": {
+		"shadowshovel-shadowcopper": {
 			"soil": 4,
 			"sand": 4,
 			"gravel": 2.6,
 			"snow": 2.6
 		},
-		"shadowshovel-bismuthbronze": {
+		"shadowshovel-shadowbismuthbronze": {
 			"soil": 5,
 			"sand": 5,
 			"gravel": 3.2,
 			"snow": 3.2
 		},
-		"shadowshovel-tinbronze": {
+		"shadowshovel-shadowtinbronze": {
 			"soil": 5.4,
 			"sand": 5.4,
 			"gravel": 3.6,
 			"snow": 3.6
 		},
-		"shadowshovel-blackbronze": {
+		"shadowshovel-shadowblackbronze": {
 			"soil": 5.5,
 			"sand": 5.5,
 			"gravel": 3.7,
 			"snow": 3.7
 		},
-		"shadowshovel-meteoriciron": {
+		"shadowshovel-demonite": {
 			"soil": 6.5,
 			"sand": 6.5,
 			"gravel": 4.2,
@@ -225,11 +222,11 @@
 		"shadowshovel-obsidian": 1.25,
 
 		"shadowshovel-flint": 1,
-		"shadowshovel-copper": 1.25,
-		"shadowshovel-bismuthbronze": 1.5,
-		"shadowshovel-tinbronze": 1.75,
-		"shadowshovel-blackbronze": 2,
-		"shadowshovel-meteoriciron": 2.35,
+		"shadowshovel-shadowcopper": 1.25,
+		"shadowshovel-shadowbismuthbronze": 1.5,
+		"shadowshovel-shadowtinbronze": 1.75,
+		"shadowshovel-shadowblackbronze": 2,
+		"shadowshovel-demonite": 2.35,
 		"shadowshovel-steel": 2.5
 	},
 	"durabilitybytype": {
@@ -241,10 +238,10 @@
 		"shadowshovel-flint": 270,
 		"shadowshovel-obsidian": 300,
 
-		"shadowshovel-tinbronze": 1800,
-		"shadowshovel-bismuthbronze": 1950,
-		"shadowshovel-blackbronze": 2100,
-		"shadowshovel-meteoriciron": 4200,
+		"shadowshovel-shadowtinbronze": 1800,
+		"shadowshovel-shadowbismuthbronze": 1950,
+		"shadowshovel-shadowblackbronze": 2100,
+		"shadowshovel-demonite": 4200,
 		"shadowshovel-steel": 9000
 	},
 	"creativeinventory": {
@@ -253,7 +250,7 @@
 		"tools": [ "*" ]
 	},
 	"guiTransformByType": {
-		"@shadowshovel-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": {
+		"@shadowshovel-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 			"rotation": {
 				"x": -115,
 				"y": -28,

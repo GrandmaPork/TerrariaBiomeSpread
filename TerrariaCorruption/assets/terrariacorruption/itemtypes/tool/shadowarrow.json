@@ -4,7 +4,7 @@
 	"variantgroups": [
 		{
 			"code": "material",
-			"states": [ "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "meteoriciron", "obsidian" ]
+			"states": [ "flint", "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "demonite", "obsidian" ]
 		}
 	],
 	"maxstacksize": 64,
@@ -23,9 +23,6 @@
 		},
 		"*-obsidian": {
 			"material": { "base": "block/stone/rock/obsidian1" }
-		},
-		"*-meteoriciron": {
-			"material": { "base": "block/metal/ingot/demonite" }
 		},
 		"*": {
 			"material": { "base": "block/metal/ingot/{material}" }
@@ -87,20 +84,20 @@
 		"damageByType": {
 			"*-flint": -0.25,
 			"*-obsidian": 0,
-			"*-copper": 0.5,
-			"*-tinbronze": 1.5,
-			"*-bismuthbronze": 1.5,
-			"*-blackbronze": 2,
-			"*-meteoriciron": 2.75
+			"*-shadowcopper": 0.5,
+			"*-shadowtinbronze": 1.5,
+			"*-shadowbismuthbronze": 1.5,
+			"*-shadowblackbronze": 2,
+			"*-demonite": 2.75
 		},
 		"breakChanceOnImpactByType": {
 			"*-flint": 0.025,
 			"*-obsidian": 0.02,
-			"*-copper": 0.015,
-			"*-tinbronze": 0.0125,
-			"*-bismuthbronze": 0.0125,
-			"*-blackbronze": 0.01,
-			"*-meteoriciron": 0.01
+			"*-shadowcopper": 0.015,
+			"*-shadowtinbronze": 0.0125,
+			"*-shadowbismuthbronze": 0.0125,
+			"*-shadowblackbronze": 0.01,
+			"*-demonite": 0.01
 		},
 		"handbook": {
 			"groupBy": [ "shadowarrow-*" ]

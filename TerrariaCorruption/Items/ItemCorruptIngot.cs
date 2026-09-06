@@ -17,7 +17,7 @@ using Vintagestory.GameContent;
 
 namespace TerrariaCorruption.Items
 {
-    public class ItemCorruptOre : ItemOre
+    public class ItemCorruptIngot : ItemIngot
     {
     }
 }

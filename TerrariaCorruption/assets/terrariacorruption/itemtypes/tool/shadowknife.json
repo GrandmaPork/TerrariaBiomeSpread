@@ -6,6 +6,7 @@
 	"damagedby": [ "blockbreaking", "attacking" ],
 	"tool": "knife",
 	"attributes": {
+		"isCorrupt": true,
 		"attachableToEntity": { "categoryCode": "toolholding" },
 		"heldItemPitchFollow": 1,
 		"knifeHitBlockAnimation": "knifecut",
@@ -106,7 +107,7 @@
 			}
 		},
 		"groundStorageTransformByType": {
-			"@shadowknife-generic-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": {
+			"@shadowknife-generic-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 				"translation": {
 					"x": 0,
 					"y": 0.01,
@@ -188,7 +189,7 @@
 		"displayable": {
 			"shelf": {
 				"sizeByType": {
-					"@*-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": {
+					"@*-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 						"width": 2,
 						"height": 1,
 						"length": 8
@@ -200,7 +201,7 @@
 					}
 				},
 				"transformByType": {
-					"@*-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": {
+					"@*-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 						"translation": {
 							"x": -0.05,
 							"y": -0.07,
@@ -281,11 +282,11 @@
 				"obsidian",
 				"peridotite",
 				"flint",
-				"copper",
-				"tinbronze",
-				"bismuthbronze",
-				"blackbronze",
-				"meteoriciron",
+				"shadowcopper",
+				"shadowtinbronze",
+				"shadowbismuthbronze",
+				"shadowblackbronze",
+				"demonite",
 				"bonechert",
 				"bonegranite",
 				"boneandesite",
@@ -368,7 +369,7 @@
 			"material": { "base": "block/stone/flint" },
 			"handle": { "base": "game:block/creature/bone-yellow" }
 		},
-		"shadowknife-generic-meteoriciron": {
+		"shadowknife-generic-demonite": {
 			"material": { "base": "block/metal/ingot/demonite" }
 		},
 		"shadowknife-generic-*": {
@@ -384,11 +385,11 @@
 		"shadowknife-generic-flint": 390,
 		"shadowknife-generic-obsidian": 480,
 
-		"shadowknife-generic-copper": 900,
-		"shadowknife-generic-tinbronze": 1350,
-		"shadowknife-generic-bismuthbronze": 1500,
-		"shadowknife-generic-blackbronze": 1650,
-		"shadowknife-generic-meteoriciron": 3600,
+		"shadowknife-generic-shadowcopper": 900,
+		"shadowknife-generic-shadowtinbronze": 1350,
+		"shadowknife-generic-shadowbismuthbronze": 1500,
+		"shadowknife-generic-shadowblackbronze": 1650,
+		"shadowknife-generic-demonite": 3600,
 		"shadowknife-generic-steel": 6750,
 
 		"shadowknife-generic-bonechert": 330,
@@ -421,23 +422,20 @@
 		"shadowknife-generic-flint": {
 			"plant": 1.4
 		},
-		"shadowknife-generic-copper": {
+		"shadowknife-generic-shadowcopper": {
 			"plant": 1.7
 		},
-		"shadowknife-generic-bismuthbronze": {
+		"shadowknife-generic-shadowbismuthbronze": {
 			"plant": 2.1
 		},
-		"shadowknife-generic-tinbronze": {
+		"shadowknife-generic-shadowtinbronze": {
 			"plant": 2.2
 		},
-		"shadowknife-generic-blackbronze": {
+		"shadowknife-generic-shadowblackbronze": {
 			"plant": 2.3
 		},
-		"shadowknife-generic-meteoriciron": {
+		"shadowknife-generic-demonite": {
 			"plant": 2.4
-		},
-		"shadowknife-generic-steel": {
-			"plant": 2.6
 		},
 		"shadowknife-generic-bonechert": {
 			"plant": 1.2
@@ -470,11 +468,11 @@
 		"shadowknife-generic-obsidian": 1.5,
 
 		"shadowknife-generic-flint": 1,
-		"shadowknife-generic-copper": 1.5,
-		"shadowknife-generic-bismuthbronze": 2,
-		"shadowknife-generic-tinbronze": 2.5,
-		"shadowknife-generic-blackbronze": 3,
-		"shadowknife-generic-meteoriciron": 3.75,
+		"shadowknife-generic-shadowcopper": 1.5,
+		"shadowknife-generic-shadowbismuthbronze": 2,
+		"shadowknife-generic-shadowtinbronze": 2.5,
+		"shadowknife-generic-shadowblackbronze": 3,
+		"shadowknife-generic-demonite": 3.75,
 		"shadowknife-generic-steel": 4,
 
 		"shadowknife-generic-bonechert": 0.75,

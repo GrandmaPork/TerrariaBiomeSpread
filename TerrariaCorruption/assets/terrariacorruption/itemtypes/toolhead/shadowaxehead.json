@@ -3,7 +3,7 @@
 	"variantgroups": [
 		{
 			"code": "material",
-			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "demonite"]
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "demonite" ]
 		}
 	],
 	"behaviorsByType": {
@@ -75,11 +75,11 @@
 			}
 		},
 		"forgableByType": {
-			"@shadowaxehead-(copper|tinbronze|bismuthbronze|blackbronze|demonite)": true,
+			"@shadowaxehead-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": true,
 			"*": false
 		},
 		"onTongTransformByType": {
-			"@shadowaxehead-(copper|bismuthbronze|tinbronze|blackbronze)": {
+			"@shadowaxehead-(shadowcopper|shadowbismuthbronze|shadowtinbronze|shadowblackbronze)": {
 				"translation": {
 					"x": -0.55,
 					"y": -0.51,
@@ -118,7 +118,7 @@
 		},
 		"tongOpening": "medium",
 		"onMetalTongTransformByType": {
-			"@shadowaxehead-(copper|bismuthbronze|tinbronze|blackbronze)": {
+			"@shadowaxehead-(shadowcopper|shadowbismuthbronze|shadowtinbronze|shadowblackbronze)": {
 				"translation": {
 					"x": -1.35,
 					"y": -0.13,
@@ -166,7 +166,7 @@
 			}
 		},
 		"groundStorageTransformByType": {
-			"@*-(copper|tinbronze|bismuthbronze|blackbronze)": {
+			"@*-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze)": {
 				"translation": {
 					"x": -0.6,
 					"y": 0,
@@ -224,7 +224,7 @@
 		"displayable": {
 			"shelf": {
 				"sizeByType": {
-					"@*-(copper|tinbronze|bismuthbronze|blackbronze)": {
+					"@*-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze)": {
 						"width": 6,
 						"height": 2,
 						"length": 6
@@ -241,7 +241,7 @@
 					}
 				},
 				"transformByType": {
-					"@*-(copper|tinbronze|bismuthbronze|blackbronze)": {
+					"@*-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze)": {
 						"translation": {
 							"x": -0.47,
 							"y": 0,
@@ -271,7 +271,7 @@
 		"items": [ "*" ]
 	},
 	"guiTransformByType": {
-		"@*-(demonite|steel)": {
+		"*-demonite": {
 			"translation": {
 				"x": 0,
 				"y": 0,
@@ -289,7 +289,7 @@
 			},
 			"scale": 2.8
 		},
-		"@*-(copper|tinbronze|bismuthbronze|blackbronze)": {
+		"@*-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze)": {
 			"translation": {
 				"x": 0,
 				"y": 0,

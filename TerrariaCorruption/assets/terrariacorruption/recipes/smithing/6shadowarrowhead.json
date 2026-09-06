@@ -3,7 +3,7 @@
 		"type": "item",
 		"code": "shadowingot-*",
 		"name": "metal",
-		"allowedVariants": [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "demonite" ]
+		"allowedVariants": [ "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "demonite" ]
 	},
 	"pattern": [
 		[

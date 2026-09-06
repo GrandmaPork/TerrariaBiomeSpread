@@ -31,10 +31,11 @@
 		{ "name": "Buffable" }
 	],
 	"attributes": {
+		"isCorrupt": true,
 		"attachableToEntity": { "categoryCode": "toolholding" },
 		"heldItemPitchFollow": 0.5,
 		"groundStorageTransformByType": {
-			"@shadowhoe-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": {
+			"@shadowhoe-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 				"translation": {
 					"x": 0,
 					"y": 0.04,
@@ -65,7 +66,7 @@
 			"groupBy": [ "hoe-*" ]
 		},
 		"toolrackTransformByType": {
-			"@shadowhoe-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": {
+			"@shadowhoe-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 				"rotation": {
 					"y": 1,
 					"z": -1
@@ -100,11 +101,11 @@
 				"obsidian",
 				"peridotite",
 				"flint",
-				"copper",
-				"tinbronze",
-				"bismuthbronze",
-				"blackbronze",
-				"meteoriciron"
+				"shadowcopper",
+				"shadowtinbronze",
+				"shadowbismuthbronze",
+				"shadowblackbronze",
+				"demonite"
 			]
 		}
 	],
@@ -117,21 +118,18 @@
 		"*-obsidian": { "base": "game:item/tool/hoe-stone" },
 		"*-peridotite": { "base": "game:item/tool/hoe-stone" },
 		"*-flint": { "base": "game:item/tool/hoe-stone" },
-		"*-copper": { "base": "game:item/tool/hoe-copper" },
-		"*-tinbronze": { "base": "game:item/tool/hoe-copper" },
-		"*-bismuthbronze": { "base": "game:item/tool/hoe-copper" },
-		"*-blackbronze": { "base": "game:item/tool/hoe-copper" },
-		"*-meteoriciron": { "base": "game:item/tool/hoe-copper" }
+		"*-shadowcopper": { "base": "game:item/tool/hoe-copper" },
+		"*-shadowtinbronze": { "base": "game:item/tool/hoe-copper" },
+		"*-shadowbismuthbronze": { "base": "game:item/tool/hoe-copper" },
+		"*-shadowblackbronze": { "base": "game:item/tool/hoe-copper" },
+		"*-demonite": { "base": "game:item/tool/hoe-copper" }
 	},
 	"heldTpHitAnimation": "breaktool",
 	"texturesByType": {
 		"*-flint": {
 			"material": { "base": "block/stone/{material}" }
 		},
-		"*-meteoriciron": {
-			"material": { "base": "block/metal/ingot/demonite" }
-		},
-		"@shadowhoe-(copper|tinbronze|bismuthbronze|blackbronze)": {
+		"@shadowhoe-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 			"material": { "base": "block/metal/ingot/{material}" }
 		},
 		"*": {
@@ -149,20 +147,20 @@
 		"shadowhoe-flint": {
 			"soil": 2.0
 		},
-		"shadowhoe-copper": {
+		"shadowhoe-shadowcopper": {
 			"soil": 3.0
 		},
-		"shadowhoe-bismuthbronze": {
+		"shadowhoe-shadowbismuthbronze": {
 			"soil": 3.6
 		},
-		"shadowhoe-tinbronze": {
+		"shadowhoe-shadowtinbronze": {
 			"soil": 4.0
 		},
-		"shadowhoe-blackbronze": {
+		"shadowhoe-shadowblackbronze": {
 			"soil": 4.2
 		},
-		"shadowhoe-meteoriciron": {
-			"soil": 4.75
+		"shadowhoe-demonite": {
+			"soil": 5
 		}
 	},
 	"durabilitybytype": {
@@ -174,19 +172,19 @@
 		"shadowhoe-peridotite": 90,
 		"shadowhoe-flint": 120,
 
-		"shadowhoe-copper": 600,
-		"shadowhoe-tinbronze": 840,
-		"shadowhoe-bismuthbronze": 900,
-		"shadowhoe-blackbronze": 990,
-		"shadowhoe-meteoriciron": 1800
+		"shadowhoe-shadowcopper": 600,
+		"shadowhoe-shadowtinbronze": 840,
+		"shadowhoe-shadowbismuthbronze": 900,
+		"shadowhoe-shadowblackbronze": 990,
+		"shadowhoe-demonite": 1800
 	},
 	"attackpowerbytype": {
 		"@shadowhoe-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": 1,
 
-		"shadowhoe-copper": 1.75,
-		"shadowhoe-bismuthbronze": 2,
-		"shadowhoe-tinbronze": 2.25,
-		"shadowhoe-blackbronze": 2.5,
+		"shadowhoe-shadowcopper": 1.75,
+		"shadowhoe-shadowbismuthbronze": 2,
+		"shadowhoe-shadowtinbronze": 2.25,
+		"shadowhoe-shadowblackbronze": 2.5,
 		"shadowhoe-metoriciron": 2.8
 	},
 	"creativeinventory": {
@@ -195,7 +193,7 @@
 		"tools": [ "*" ]
 	},
 	"guiTransformByType": {
-		"@shadowhoe-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": {
+		"@shadowhoe-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 			"rotate": false,
 			"translation": {
 				"x": 0,
@@ -252,7 +250,7 @@
 		"scale": 3.6
 	},
 	"tpHandTransformByType": {
-		"@shadowhoe-(copper|tinbronze|bismuthbronze|blackbronze|meteoriciron)": {
+		"@shadowhoe-(shadowcopper|shadowtinbronze|shadowbismuthbronze|shadowblackbronze|demonite)": {
 			"translation": {
 				"x": -1,
 				"y": -0.5,

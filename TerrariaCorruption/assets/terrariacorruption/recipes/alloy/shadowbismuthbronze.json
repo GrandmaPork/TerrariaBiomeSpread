@@ -2,7 +2,7 @@
 	"ingredients": [
 		{
 			"type": "item",
-			"code": "shadowingot-copper",
+			"code": "shadowingot-shadowcopper",
 			"minratio": 0.5,
 			"maxratio": 0.7
 		},
@@ -14,13 +14,13 @@
 		},
 		{
 			"type": "item",
-			"code": "shadowingot-bismuth",
+			"code": "shadowingot-shadowbismuth",
 			"minratio": 0.1,
 			"maxratio": 0.2
 		}
 	],
 	"output": {
 		"type": "item",
-		"code": "shadowingot-bismuthbronze"
+		"code": "shadowingot-shadowbismuthbronze"
 	}
 }

@@ -3,7 +3,7 @@
 	"variantgroups": [
 		{
 			"code": "material",
-			"states": [ "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "demonite", "obsidian" ]
+			"states": [ "flint", "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "demonite", "obsidian" ]
 		}
 	],
 	"behaviors": [
@@ -23,13 +23,10 @@
 		}
 	],
 	"shapeByType": {
-		"*-copper": { "base": "game:item/tool/arrowhead-copper" },
-		"*-tinbronze": { "base": "game:item/tool/arrowhead-copper" },
-		"*-bismuthbronze": { "base": "game:item/tool/arrowhead-copper" },
-		"*-blackbronze": { "base": "game:item/tool/arrowhead-copper" },
-		"*-gold": { "base": "game:item/tool/arrowhead-copper" },
-		"*-silver": { "base": "game:item/tool/arrowhead-copper" },
-		"*-iron": { "base": "game:item/tool/arrowhead-copper" },
+		"*-shadowcopper": { "base": "game:item/tool/arrowhead-copper" },
+		"*-shadowtinbronze": { "base": "game:item/tool/arrowhead-copper" },
+		"*-shadowbismuthbronze": { "base": "game:item/tool/arrowhead-copper" },
+		"*-shadowblackbronze": { "base": "game:item/tool/arrowhead-copper" },
 		"*-demonite": { "base": "game:item/tool/arrowhead-copper" },
 		"*": { "base": "game:item/tool/arrowhead-stone" }
 	},
@@ -39,9 +36,6 @@
 		},
 		"shadowarrowhead-obsidian": {
 			"material": { "base": "block/stone/rock/{material}1" }
-		},
-		"shadowarrowhead-demonite": {
-			"material": { "base": "block/metal/ingot/demonite" }
 		},
 		"*": {
 			"material": { "base": "block/metal/ingot/{material}" }
