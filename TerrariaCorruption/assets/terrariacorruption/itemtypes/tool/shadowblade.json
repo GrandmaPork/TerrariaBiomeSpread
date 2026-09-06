@@ -1,0 +1,302 @@
+{
+	"code": "shadowblade",
+	"tags": [ "weapon", "weapon-melee", "weapon-sword", "tool-sword" ],
+	"damagedby": [ "blockbreaking", "attacking" ],
+	"tool": "sword",
+	"variantgroups": [
+		{
+			"code": "type",
+			"states": [ "falx", "blackguard", "longsword", "forlorn", "scrap", "gladius", "arming", "claymore", "sabre" ]
+		},
+		{
+			"code": "metal",
+			"states": [ "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "demonite" ]
+		}
+	],
+	"skipVariants": [
+		"shadowblade-falx-scrap",
+		"shadowblade-falx-ruined",
+		"shadowblade-falx-admin"
+	],
+	"allowedVariants": [
+		"shadowblade-falx-*",
+		"shadowblade-scrap-scrap",
+		"shadowblade-blackguard-iron",
+		"shadowblade-longsword-admin",
+		"shadowblade-forlorn-iron",
+		"shadowblade-gladius-ruined",
+		"shadowblade-arming-ruined",
+		"shadowblade-claymore-ruined",
+		"shadowblade-sabre-ruined"
+	],
+	"shapeByType": {
+		"blade-longsword-admin": { "base": "game:item/tool/blade/admin" },
+		"*": { "base": "item/tool/blade/{type}" }
+	},
+	"texturesByType": {
+		"shadowblade-falx-shadowcopper": {
+			"falxstring": { "base": "block/cloth/burlap/string" },
+			"thongs": { "base": "block/cloth/leather/longstiches" },
+			"woodguard": { "base": "block/wood/debarked/veryaged" },
+			"handle": { "base": "block/wood/debarked/veryaged" },
+			"falxblade": { "base": "block/metal/ingot/shadowcopper" },
+			"cloth": { "base": "block/transparent" },
+			"handguard": { "base": "block/transparent" },
+			"spinerivet": { "base": "block/transparent" },
+			"pips": { "base": "block/transparent" }
+		},
+		"shadowblade-falx-shadowtinbronze": {
+			"falxstring": { "base": "block/transparent" },
+			"thongs": { "base": "block/transparent" },
+			"woodguard": { "base": "block/transparent" },
+			"handle": { "base": "block/wood/debarked/aged" },
+			"falxblade": { "base": "block/metal/ingot/shadowtinbronze" },
+			"cloth": { "base": "block/transparent" },
+			"handguard": { "base": "block/metal/sheet/shadowtinbronze1" },
+			"spinerivet": { "base": "block/metal/sheet/shadowtinbronze1" },
+			"pips": { "base": "block/transparent" }
+		},
+		"shadowblade-falx-shadowbismuthbronze": {
+			"falxstring": { "base": "block/transparent" },
+			"thongs": { "base": "block/transparent" },
+			"woodguard": { "base": "block/transparent" },
+			"handle": { "base": "block/wood/debarked/veryaged" },
+			"falxblade": { "base": "block/metal/ingot/shadowbismuthbronze" },
+			"cloth": { "base": "block/transparent" },
+			"handguard": { "base": "block/metal/sheet/shadowbismuthbronze5" },
+			"spinerivet": { "base": "block/metal/sheet/shadowbismuthbronze5" },
+			"pips": { "base": "block/transparent" }
+		},
+		"shadowblade-falx-shadowblackbronze": {
+			"falxstring": { "base": "block/transparent" },
+			"thongs": { "base": "block/transparent" },
+			"woodguard": { "base": "block/transparent" },
+			"handle": { "base": "block/wood/debarked/birch" },
+			"falxblade": { "base": "block/metal/sheet/shadowblackbronze5" },
+			"cloth": { "base": "block/transparent" },
+			"handguard": { "base": "block/metal/sheet/shadowblackbronze5" },
+			"spinerivet": { "base": "block/metal/sheet/lead1" },
+			"pips": { "base": "block/transparent" }
+		},
+		"shadowblade-falx-demonite": {
+			"falxstring": { "base": "block/transparent" },
+			"thongs": { "base": "block/transparent" },
+			"woodguard": { "base": "block/transparent" },
+			"handle": { "base": "block/wood/debarked/veryaged" },
+			"falxblade": { "base": "block/metal/ingot/demonite" },
+			"cloth": { "base": "block/transparent" },
+			"handguard": { "base": "block/metal/sheet/demonite1" },
+			"spinerivet": { "base": "block/metal/sheet/iron1" },
+			"pips": { "base": "block/transparent" }
+		}
+	},
+	"attributes": {
+		"heldItemPitchFollow": 0.9,
+		"handbook": {
+			"groupBy": [ "blade-*" ]
+		},
+		"toolrackTransformByType": {
+			"*": {
+				"rotation": {
+					"y": 180,
+					"z": 1
+				},
+				"translation": {
+					"x": -0.1,
+					"y": 0.6
+				},
+				"scale": 1.25
+			}
+		},
+		"groundStorageTransformByType": {
+			"shadowblade-falx-*": {
+				"translation": {
+					"x": 0.24,
+					"y": 0.195,
+					"z": -0.06
+				},
+				"rotation": {
+					"x": 24,
+					"y": 61,
+					"z": -87
+				},
+				"scale": 0.88
+			},
+			"*": {
+				"translation": {
+					"x": 0.24,
+					"y": 0.195,
+					"z": -0.06
+				},
+				"rotation": {
+					"x": 24,
+					"y": 61,
+					"z": -87
+				},
+				"scale": 0.88
+			}
+		},
+		"antlerMountable": true,
+		"onAntlerMountTransformByType": {
+			"*": {
+				"translation": {
+					"x": -0.45,
+					"y": 0.533,
+					"z": -0.1
+				},
+				"rotation": {
+					"x": -90,
+					"y": 0,
+					"z": -90
+				},
+				"origin": {
+					"x": 0.5,
+					"y": 0,
+					"z": 0.5
+				},
+				"scale": 0.8
+			}
+		}
+	},
+	"attributesByType": {
+		"shadowblade-falx-*": {
+			"ripHarvest": true,
+			"attachableToEntity": {
+				"categoryCode": "weaponfalx",
+				"attachedShapeBySlotCode": {
+					"frontrightside": { "base": "game:item/wearable/hooved/elk/weaponr-falx" },
+					"frontleftside": { "base": "game:item/wearable/hooved/elk/weaponl-falx" }
+				}
+			}
+		},
+		"*": {
+			"attachableToEntity": { "categoryCode": "toolholding" }
+		}
+	},
+	"behaviors": [
+		{
+			"name": "GroundStorable",
+			"properties": {
+				"layout": "WallHalves",
+				"wallOffYByType": {
+					"*": 1
+				},
+				"ctrlKey": true,
+				"selectionBox": {
+					"x1": 0,
+					"y1": 0,
+					"z1": 0,
+					"x2": 1,
+					"y2": 0.1,
+					"z2": 1
+				},
+				"collisionBox": {
+					"x1": 0,
+					"y1": 0,
+					"z1": 0,
+					"x2": 0,
+					"y2": 0,
+					"z2": 0
+				}
+			}
+		},
+		{ "name": "AnimationAuthoritative" },
+		{ "name": "Buffable" },
+		{ "name": "Sharpenable" }
+	],
+	"heldTpHitAnimationByType": {
+		"*": "falx"
+	},
+	"attackRangebytype": {
+		"*": 2.5
+	},
+	"tooltierbytype": {
+		"*-shadowcopper": 3,
+		"*-shadowbismuthbronze": 4,
+		"*-shadowtinbronze": 4,
+		"*-shadowblackbronze": 4,
+		"*-demonite": 5
+	},
+	"attackpowerbytype": {
+		"shadowblade-falx-shadowcopper": 4.75,
+		"shadowblade-falx-shadowbismuthbronze": 5.25,
+		"shadowblade-falx-shadowtinbronze": 5.5,
+		"shadowblade-falx-shadowblackbronze": 5.75,
+		"shadowblade-falx-demonite": 6.25
+	},
+	"durabilitybytype": {
+		"shadowblade-falx-shadowcopper": 750,
+		"shadowblade-falx-shadowtinbronze": 1350,
+		"shadowblade-falx-shadowbismuthbronze": 1590,
+		"shadowblade-falx-shadowblackbronze": 1800,
+		"shadowblade-falx-demonite": 3300
+	},
+	"creativeinventoryByType": {
+		"*": {
+			"general": [ "*" ],
+			"items": [ "*" ],
+			"tools": [ "*" ],
+			"clutterByType": { "*-ruined": [ "*" ] }
+		}
+	},
+	"guiTransformByType": {
+		"*": {
+			"translation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": -53,
+				"y": 118,
+				"z": -5
+			},
+			"origin": {
+				"x": 0.65,
+				"y": 0.1,
+				"z": 0.37
+			},
+			"scale": 1.65
+		}
+	},
+	"groundTransformByType": {
+		"*": {
+			"translation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5,
+				"y": 0,
+				"z": 0.5
+			},
+			"scale": 3.4
+		}
+	},
+	"tpHandTransformByType": {
+		"*": {
+			"translation": {
+				"x": -1.03,
+				"y": -0.005,
+				"z": -0.66
+			},
+			"rotation": {
+				"x": 85,
+				"y": 0,
+				"z": 2
+			},
+			"origin": {
+				"x": 0.5,
+				"y": 0,
+				"z": 0.5
+			},
+			"scale": 0.8
+		}
+	}
+}

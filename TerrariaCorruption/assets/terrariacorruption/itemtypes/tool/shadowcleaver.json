@@ -1,0 +1,215 @@
+{
+	"code": "shadowcleaver",
+	"tags": [ "weapon", "weapon-melee", "tool", "tool-cleaver" ],
+	"class": "ItemCleaver",
+	"damagedby": [ "blockbreaking", "attacking" ],
+	"behaviorsByType": {
+		"@(.*-steel|.*-demonite|.*-iron)": [
+			{
+				"name": "GroundStorable",
+				"properties": {
+					"layout": "WallHalves",
+					"wallOffY": 1,
+					"ctrlKey": true,
+					"selectionBox": {
+						"x1": 0,
+						"y1": 0,
+						"z1": 0,
+						"x2": 1,
+						"y2": 0.1,
+						"z2": 1
+					},
+					"collisionBox": {
+						"x1": 0,
+						"y1": 0,
+						"z1": 0,
+						"x2": 0,
+						"y2": 0,
+						"z2": 0
+					}
+				}
+			},
+			{
+				"name": "AnimationAuthoritative",
+				"properties": { "strikeSound": "sounds/tool/slash" }
+			},
+			{ "name": "Buffable" }
+		],
+		"*": [
+			{
+				"name": "GroundStorable",
+				"properties": {
+					"layout": "WallHalves",
+					"wallOffY": 1,
+					"ctrlKey": true,
+					"selectionBox": {
+						"x1": 0,
+						"y1": 0,
+						"z1": 0,
+						"x2": 1,
+						"y2": 0.1,
+						"z2": 1
+					},
+					"collisionBox": {
+						"x1": 0,
+						"y1": 0,
+						"z1": 0,
+						"x2": 0,
+						"y2": 0,
+						"z2": 0
+					}
+				}
+			},
+			{
+				"name": "AnimationAuthoritative",
+				"properties": { "strikeSound": "sounds/tool/slash" }
+			},
+			{ "name": "Buffable" }
+		]
+	},
+	"variantgroups": [
+		{
+			"code": "metal",
+			"states": [ "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "demonite" ]
+		}
+	],
+	"shape": { "base": "game:item/tool/cleaver" },
+	"textures": {
+		"metal": { "base": "block/metal/sheet/{metal}1" },
+		"toolhandle": {
+			"base": "block/metal/sheet/{metal}1",
+			"overlays": [ "game:item/tool/cleaver-overlay" ]
+		}
+	},
+	"attributes": {
+		"attachableToEntity": { "categoryCode": "toolholding" },
+		"heldItemPitchFollow": 0.9,
+		"handbook": {
+			"groupBy": [ "cleaver-*" ]
+		},
+		"rackable": true,
+		"toolrackTransform": {
+			"translation": {
+				"x": -0.35,
+				"y": 0.05,
+				"z": 0
+			},
+			"rotation": {
+				"x": 90,
+				"y": 0,
+				"z": 0
+			},
+			"scale": 2
+		},
+		"groundStorageTransform": {
+			"translation": {
+				"x": 0,
+				"y": -0.23,
+				"z": 0.3
+			},
+			"rotation": {
+				"x": -155,
+				"y": 0,
+				"z": -87
+			},
+			"scale": 0.88
+		},
+		"displayable": {
+			"shelf": {
+				"size": {
+					"width": 3.5,
+					"height": 1,
+					"length": 8
+				},
+				"transform": {
+					"translation": {
+						"x": 0.45,
+						"y": -0.08,
+						"z": 0.1
+					},
+					"rotation": {
+						"x": 88,
+						"y": 0,
+						"z": 108
+					},
+					"origin": {
+						"x": 0.4,
+						"y": 0.1,
+						"z": 0.5
+					}
+				}
+			}
+		}
+	},
+
+	"heldTpHitAnimation": "cleaverhit",
+	"heldTpUseAnimation": "cleaverhit",
+	"durabilitybytype": {
+		"coppercleaver-shadowcopper": 600,
+		"coppercleaver-shadowtinbronze": 1050,
+		"coppercleaver-shadowbismuthbronze": 1200,
+		"coppercleaver-shadowblackbronze": 1350,
+		"coppercleaver-demonite": 2550
+	},
+	"attackpowerbytype": {
+		"coppercleaver-shadowcopper": 1.25,
+		"coppercleaver-shadowbismuthbronze": 1.5,
+		"coppercleaver-shadowtinbronze": 1.75,
+		"coppercleaver-shadowblackbronze": 2,
+		"coppercleaver-demonite": 2.6
+	},
+	"creativeinventory": {
+		"general": [ "*" ],
+		"items": [ "*" ],
+		"tools": [ "*" ]
+	},
+	"guiTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 0,
+			"y": 26,
+			"z": 140
+		},
+		"origin": {
+			"x": 0.55,
+			"y": 0.52,
+			"z": 0.5
+		},
+		"scale": 2.53
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": -90,
+			"y": 0,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.5,
+			"z": 0.45
+		},
+		"scale": 3.6
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -0.7799,
+			"y": -0.48,
+			"z": -0.5
+		},
+		"rotation": {
+			"x": 0,
+			"y": 180,
+			"z": 0
+		},
+		"scale": 1
+	}
+}

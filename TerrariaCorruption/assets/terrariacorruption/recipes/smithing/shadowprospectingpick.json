@@ -1,0 +1,21 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "shadowingot-*",
+		"name": "metal",
+		"allowedVariants": [ "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "silver", "gold", "iron", "demonite", "steel" ]
+	},
+	"pattern": [
+		[
+			"_____####",
+			"__#######",
+			"#####____"
+		]
+	],
+	"name": "Prospecting pickaxe",
+	"code": "shadowprospectingpickhead-{metal}",
+	"output": {
+		"type": "item",
+		"code": "shadowprospectingpickhead-{metal}"
+	}
+}

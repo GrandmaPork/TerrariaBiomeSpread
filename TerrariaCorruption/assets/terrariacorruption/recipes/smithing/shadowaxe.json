@@ -1,0 +1,23 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "shadowingot-*",
+		"name": "metal",
+		"allowedVariants": [ "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "demonite" ]
+	},
+	"pattern": [
+		[
+			"#####____",
+			"#########",
+			"#########",
+			"#########",
+			"#####____"
+		]
+	],
+	"name": "Axe",
+	"code": "shadowaxehead-{metal}",
+	"output": {
+		"type": "item",
+		"code": "shadowaxehead-{metal}"
+	}
+}
