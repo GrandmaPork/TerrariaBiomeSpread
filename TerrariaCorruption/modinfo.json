@@ -2,13 +2,13 @@
     "$schema": "https://moddbcdn.vintagestory.at/schema/modinfo.latest.json",
     "type": "Code",
     "modid": "terrariacorruption",
-    "name": "TerrariaCorruption",
+    "name": "TerrariaBiomeSpread",
     "authors": [
         "GrandmaPork"
     ],
     "description": "(minor survival implementation) Adds the Corruption from Terraria that spreads once placed",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "dependencies": {
-        "game": "1.22.2"
+        "game": "1.22.7"
     }
 }
