@@ -40,8 +40,8 @@
 		}
 	],
 	"shapeByType": {
-		"@*-(demonite)": { "base": "item/tool/crowbar-iron" },
-		"*": { "base": "item/tool/crowbar-copper" }
+		"shadowcrowbar-demonite": { "base": "game:item/tool/crowbar-iron" },
+		"*": { "base": "game:item/tool/crowbar-copper" }
 	},
 	"textures": {
 		"metal": { "base": "block/metal/ingot/{metal}" }
@@ -69,7 +69,7 @@
 			"scale": 1.25
 		},
 		"groundStorageTransformByType": {
-			"@*-(iron|demonite|steel)": {
+			"*-demonite": {
 				"translation": {
 					"x": 0,
 					"y": 0.155,
@@ -169,7 +169,7 @@
 		"tools": [ "*" ]
 	},
 	"guiTransformByType": {
-		"@*-(iron|demonite|steel)": {
+		"*-demonite": {
 			"translation": {
 				"x": 0,
 				"y": 0,

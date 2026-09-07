@@ -6,88 +6,74 @@
 	"variantgroups": [
 		{
 			"code": "type",
-			"states": [ "falx", "blackguard", "longsword", "forlorn", "scrap", "gladius", "arming", "claymore", "sabre" ]
+			"states": [ "falx" ]
 		},
 		{
 			"code": "metal",
 			"states": [ "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "demonite" ]
 		}
 	],
-	"skipVariants": [
-		"shadowblade-falx-scrap",
-		"shadowblade-falx-ruined",
-		"shadowblade-falx-admin"
-	],
 	"allowedVariants": [
-		"shadowblade-falx-*",
-		"shadowblade-scrap-scrap",
-		"shadowblade-blackguard-iron",
-		"shadowblade-longsword-admin",
-		"shadowblade-forlorn-iron",
-		"shadowblade-gladius-ruined",
-		"shadowblade-arming-ruined",
-		"shadowblade-claymore-ruined",
-		"shadowblade-sabre-ruined"
+		"shadowblade-falx-*"
 	],
 	"shapeByType": {
-		"blade-longsword-admin": { "base": "game:item/tool/blade/admin" },
-		"*": { "base": "item/tool/blade/{type}" }
+		"*": { "base": "item/tool/blade/falx/{metal}" }
 	},
 	"texturesByType": {
 		"shadowblade-falx-shadowcopper": {
-			"falxstring": { "base": "block/cloth/burlap/string" },
-			"thongs": { "base": "block/cloth/leather/longstiches" },
-			"woodguard": { "base": "block/wood/debarked/veryaged" },
-			"handle": { "base": "block/wood/debarked/veryaged" },
+			"falxstring": { "base": "game:block/cloth/burlap/string" },
+			"thongs": { "base": "game:block/cloth/leather/longstiches" },
+			"woodguard": { "base": "game:block/wood/debarked/veryaged" },
+			"handle": { "base": "game:block/wood/debarked/veryaged" },
 			"falxblade": { "base": "block/metal/ingot/shadowcopper" },
-			"cloth": { "base": "block/transparent" },
-			"handguard": { "base": "block/transparent" },
-			"spinerivet": { "base": "block/transparent" },
-			"pips": { "base": "block/transparent" }
+			"cloth": { "base": "game:block/transparent" },
+			"handguard": { "base": "game:block/transparent" },
+			"spinerivet": { "base": "game:block/transparent" },
+			"pips": { "base": "game:block/transparent" }
 		},
 		"shadowblade-falx-shadowtinbronze": {
-			"falxstring": { "base": "block/transparent" },
-			"thongs": { "base": "block/transparent" },
-			"woodguard": { "base": "block/transparent" },
-			"handle": { "base": "block/wood/debarked/aged" },
+			"falxstring": { "base": "game:block/transparent" },
+			"thongs": { "base": "game:block/transparent" },
+			"woodguard": { "base": "game:block/transparent" },
+			"handle": { "base": "game:block/wood/debarked/aged" },
 			"falxblade": { "base": "block/metal/ingot/shadowtinbronze" },
-			"cloth": { "base": "block/transparent" },
+			"cloth": { "base": "game:block/transparent" },
 			"handguard": { "base": "block/metal/sheet/shadowtinbronze1" },
 			"spinerivet": { "base": "block/metal/sheet/shadowtinbronze1" },
-			"pips": { "base": "block/transparent" }
+			"pips": { "base": "game:block/transparent" }
 		},
 		"shadowblade-falx-shadowbismuthbronze": {
-			"falxstring": { "base": "block/transparent" },
-			"thongs": { "base": "block/transparent" },
-			"woodguard": { "base": "block/transparent" },
-			"handle": { "base": "block/wood/debarked/veryaged" },
+			"falxstring": { "base": "game:block/transparent" },
+			"thongs": { "base": "game:block/transparent" },
+			"woodguard": { "base": "game:block/transparent" },
+			"handle": { "base": "game:block/wood/debarked/veryaged" },
 			"falxblade": { "base": "block/metal/ingot/shadowbismuthbronze" },
-			"cloth": { "base": "block/transparent" },
+			"cloth": { "base": "game:block/transparent" },
 			"handguard": { "base": "block/metal/sheet/shadowbismuthbronze5" },
 			"spinerivet": { "base": "block/metal/sheet/shadowbismuthbronze5" },
-			"pips": { "base": "block/transparent" }
+			"pips": { "base": "game:block/transparent" }
 		},
 		"shadowblade-falx-shadowblackbronze": {
-			"falxstring": { "base": "block/transparent" },
-			"thongs": { "base": "block/transparent" },
-			"woodguard": { "base": "block/transparent" },
-			"handle": { "base": "block/wood/debarked/birch" },
+			"falxstring": { "base": "game:block/transparent" },
+			"thongs": { "base": "game:block/transparent" },
+			"woodguard": { "base": "game:block/transparent" },
+			"handle": { "base": "game:block/wood/debarked/birch" },
 			"falxblade": { "base": "block/metal/sheet/shadowblackbronze5" },
-			"cloth": { "base": "block/transparent" },
+			"cloth": { "base": "game:block/transparent" },
 			"handguard": { "base": "block/metal/sheet/shadowblackbronze5" },
-			"spinerivet": { "base": "block/metal/sheet/lead1" },
-			"pips": { "base": "block/transparent" }
+			"spinerivet": { "base": "block/metal/sheet/shadowtin1" },
+			"pips": { "base": "game:block/transparent" }
 		},
 		"shadowblade-falx-demonite": {
-			"falxstring": { "base": "block/transparent" },
-			"thongs": { "base": "block/transparent" },
-			"woodguard": { "base": "block/transparent" },
-			"handle": { "base": "block/wood/debarked/veryaged" },
+			"falxstring": { "base": "game:block/transparent" },
+			"thongs": { "base": "game:block/transparent" },
+			"woodguard": { "base": "game:block/transparent" },
+			"handle": { "base": "game:block/wood/debarked/veryaged" },
 			"falxblade": { "base": "block/metal/ingot/demonite" },
-			"cloth": { "base": "block/transparent" },
-			"handguard": { "base": "block/metal/sheet/demonite1" },
-			"spinerivet": { "base": "block/metal/sheet/iron1" },
-			"pips": { "base": "block/transparent" }
+			"cloth": { "base": "game:block/transparent" },
+			"handguard": { "base": "block/metal/sheet/shadowblackbronze1" },
+			"spinerivet": { "base": "block/metal/sheet/shadowblackbronze1" },
+			"pips": { "base": "game:block/transparent" }
 		}
 	},
 	"attributes": {
@@ -164,8 +150,8 @@
 			"attachableToEntity": {
 				"categoryCode": "weaponfalx",
 				"attachedShapeBySlotCode": {
-					"frontrightside": { "base": "game:item/wearable/hooved/elk/weaponr-falx" },
-					"frontleftside": { "base": "game:item/wearable/hooved/elk/weaponl-falx" }
+					"frontrightside": { "base": "item/wearable/hooved/elk/weaponr-falx" },
+					"frontleftside": { "base": "item/wearable/hooved/elk/weaponl-falx" }
 				}
 			}
 		},

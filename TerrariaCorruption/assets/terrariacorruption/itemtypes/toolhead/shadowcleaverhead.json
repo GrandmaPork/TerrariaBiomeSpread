@@ -41,9 +41,9 @@
 		"selectiveElements": [ "Origin/*" ]
 	},
 	"textures": {
-		"metal": { "base": "game:block/metal/sheet/{metal}1" },
+		"metal": { "base": "block/metal/sheet/{metal}1" },
 		"toolhandle": {
-			"base": "game:block/metal/sheet/{metal}1",
+			"base": "block/metal/sheet/{metal}1",
 			"overlays": [ "game:item/tool/cleaver-overlay" ]
 		},
 		"oak": { "base": "game:block/wood/debarked/oak" }
