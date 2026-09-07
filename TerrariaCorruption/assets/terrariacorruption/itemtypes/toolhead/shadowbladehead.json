@@ -3,7 +3,7 @@
 	"variantgroups": [
 		{
 			"code": "type",
-			"states": [ "falx", "short" ]
+			"states": [ "falx" ]
 		},
 		{
 			"code": "metal",
@@ -29,18 +29,12 @@
 		]
 	},
 	"allowedVariants": [
-		"shadowbladehead-falx-*",
-		"shadowbladehead-short-iron"
+		"shadowbladehead-falx-*"
 	],
 	"heldTpUseAnimation": "interactstatic",
 	"maxstacksize": 4,
 	"shapeByType": {
-		"shadowbladehead-falx-shadowcopper": { "base": "game:item/tool/blade/falx/copper" },
-		"shadowbladehead-falx-shadowtinbronze": { "base": "game:item/tool/blade/falx/tinbronze" },
-		"shadowbladehead-falx-shadowbismuthbronze": { "base": "game:item/tool/blade/falx/bismuthbronze" },
-		"shadowbladehead-falx-shadowblackbronze": { "base": "game:item/tool/blade/falx/blackbronze" },
-		"shadowbladehead-falx-demonite": { "base": "game:item/tool/blade/falx/meteoriciron" },
-		"shadowbladehead-short-iron": { "base": "game:item/tool/blade/blackguard" }
+		"*": { "base": "item/tool/blade/falx/{metal}" }
 	},
 	"particlesTextureCode": "metal",
 	"texturesByType": {
@@ -51,10 +45,6 @@
 			"cloth": { "base": "game:block/transparent" },
 			"string": { "base": "game:block/transparent" },
 			"longstiches": { "base": "game:block/transparent" },
-			"metal": { "base": "block/metal/ingot/{metal}" }
-		},
-		"shadowbladehead-short-iron": {
-			"handle": { "base": "game:block/transparent" },
 			"metal": { "base": "block/metal/ingot/{metal}" }
 		}
 	},

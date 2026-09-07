@@ -38,12 +38,12 @@
 		},
 		{
 			"code": "metal",
-			"states": [ "shadowcopper", "shadowtinbronze", "shadowshadowbismuthbronze", "shadowshadowblackbronze", "demonite" ]
+			"states": [ "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "demonite" ]
 		}
 	],
 	"shape": { "base": "game:item/tool/tongs/tongsmetal1" },
 	"textures": {
-		"metal": { "base": "block/metal/sheet-plain/{metal}1" }
+		"metal": { "base": "block/metal/sheet/{metal}1" }
 	},
 	"attributes": {
 		"rackable": true,
