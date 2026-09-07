@@ -1,0 +1,23 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "shadowingot-*",
+		"name": "metal",
+		"allowedVariants": [ "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "demonite" ]
+	},
+	"pattern": [
+		[
+			"__________###",
+			"###########__",
+			"_______##____",
+			"###########__",
+			"__________###"
+		]
+	],
+	"name": "Tongs",
+	"code": "shadowmetaltongs-{metal}",
+	"output": {
+		"type": "item",
+		"code": "shadowtongsmetal-standard-{metal}"
+	}
+}

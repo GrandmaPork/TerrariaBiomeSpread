@@ -1,0 +1,21 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "shadowingot-*",
+		"name": "metal",
+		"allowedVariants": [ "shadowcopper", "shadowtinbronze", "shadowbismuthbronze", "shadowblackbronze", "demonite" ]
+	},
+	"pattern": [
+		[
+			"______###",
+			"#######__",
+			"______###"
+		]
+	],
+	"name": "Wrench",
+	"code": "shadowwrench-{metal}",
+	"output": {
+		"type": "item",
+		"code": "shadowwrench-{metal}"
+	}
+}

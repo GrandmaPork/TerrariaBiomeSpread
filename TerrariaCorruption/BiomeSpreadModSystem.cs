@@ -141,7 +141,7 @@ namespace TerrariaCorruption
                 case "crop":
                     corruptBlock = sapi.World.GetBlock(new AssetLocation("deadcrop"));
                     if (corruptBlock == null) return;
-                    Mod.Logger.Notification("Replace " + targetBlock.Code.Path + " with " + corruptBlock.Code.Path);
+                    //Mod.Logger.Notification("Replace " + targetBlock.Code.Path + " with " + corruptBlock.Code.Path);
                     SetCorruptBlock(victim, corruptBlock);
                     break;
 

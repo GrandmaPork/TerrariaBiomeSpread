@@ -19,10 +19,10 @@
 		{
 			"code": "material",
 			"states": [
-				"copper",
-				"tinbronze",
-				"bismuthbronze",
-				"blackbronze",
+				"shadowcopper",
+				"shadowtinbronze",
+				"shadowbismuthbronze",
+				"shadowblackbronze",
 				"demonite"
 			]
 		}
@@ -57,10 +57,10 @@
 		"shadowarmor-*-sewn-wood"
 	],
 	"allowedVariants": [
-		"shadowarmor-*-lamellar-copper",
-		"shadowarmor-*-lamellar-tinbronze",
-		"shadowarmor-*-lamellar-bismuthbronze",
-		"shadowarmor-*-lamellar-blackbronze",
+		"shadowarmor-*-lamellar-shadowcopper",
+		"shadowarmor-*-lamellar-shadowtinbronze",
+		"shadowarmor-*-lamellar-shadowbismuthbronze",
+		"shadowarmor-*-lamellar-shadowblackbronze",
 		"shadowarmor-*-lamellar-demonite",
 
 		"shadowarmor-*-scale-*",
@@ -69,29 +69,29 @@
 		"shadowarmor-*-brigandine-*"
 	],
 	"shapeByType": {
-		"shadowarmor-head-brigandine-tinbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
-		"shadowarmor-head-brigandine-blackbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
-		"shadowarmor-head-brigandine-bismuthbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
+		"shadowarmor-head-brigandine-shadowtinbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
+		"shadowarmor-head-brigandine-shadowblackbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
+		"shadowarmor-head-brigandine-shadowbismuthbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
 		"shadowarmor-head-brigandine-demonite": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-meteoriciron" },
-		"shadowarmor-head-brigandine-*": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-{material}" },
+		"shadowarmor-head-brigandine-*": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-copper" },
 
-		"shadowarmor-head-chain-tinbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
-		"shadowarmor-head-chain-blackbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
-		"shadowarmor-head-chain-bismuthbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
+		"shadowarmor-head-chain-shadowtinbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
+		"shadowarmor-head-chain-shadowblackbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
+		"shadowarmor-head-chain-shadowbismuthbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
 		"shadowarmor-head-chain-demonite": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-meteoriciron" },
-		"shadowarmor-head-chain-*": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-{material}" },
+		"shadowarmor-head-chain-*": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-copper" },
 
-		"shadowarmor-head-scale-tinbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
-		"shadowarmor-head-scale-blackbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
-		"shadowarmor-head-scale-bismuthbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
+		"shadowarmor-head-scale-shadowtinbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
+		"shadowarmor-head-scale-shadowblackbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
+		"shadowarmor-head-scale-shadowbismuthbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
 		"shadowarmor-head-scale-demonite": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-meteoriciron" },
-		"shadowarmor-head-scale-*": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-{material}" },
+		"shadowarmor-head-scale-*": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-copper" },
 
-		"shadowarmor-head-plate-tinbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
-		"shadowarmor-head-plate-blackbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
-		"shadowarmor-head-plate-bismuthbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
+		"shadowarmor-head-plate-shadowtinbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
+		"shadowarmor-head-plate-shadowblackbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
+		"shadowarmor-head-plate-shadowbismuthbronze": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-bronze" },
 		"shadowarmor-head-plate-demonite": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-meteoriciron" },
-		"shadowarmor-head-plate-*": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-{material}" },
+		"shadowarmor-head-plate-*": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}-copper" },
 
 		"shadowarmor-*": { "base": "game:entity/humanoid/seraph/armor/{construction}/{bodypart}" }
 	},
@@ -157,35 +157,29 @@
 			"perTierFlatDamageReductionLoss": [ 0.1, 0.2 ]
 		},
 		"footStepSoundByType": {
-			"shadowarmor-body-jerkin-*": "wearable/leather*",
-			"shadowarmor-body-sewn-*": "wearable/leather*",
-			"shadowarmor-body-tailored-*-linen": "wearable/leather*",
-			"shadowarmor-body-lamellar-wood": "wearable/leather*",
-			"shadowarmor-body-lamellar-*": "wearable/brigandine*",
-			"shadowarmor-body-brigandine-*": "wearable/brigandine*",
-			"shadowarmor-body-chain-*": "wearable/chain*",
-			"shadowarmor-body-scale-*": "wearable/scale*",
-			"shadowarmor-body-plate-*": "wearable/plate*",
-			"shadowarmor-body-antique-blackguard-*": "wearable/brigandine*",
-			"shadowarmor-body-antique-forlorn-*": "wearable/plate*"
+			"shadowarmor-body-lamellar-*": "game:wearable/brigandine*",
+			"shadowarmor-body-brigandine-*": "game:wearable/brigandine*",
+			"shadowarmor-body-chain-*": "game:wearable/chain*",
+			"shadowarmor-body-scale-*": "game:wearable/scale*",
+			"shadowarmor-body-plate-*": "game:wearable/plate*"
 		},
 		"protectionModifiersByType": {
-			"shadowarmor-*-lamellar-copper": {
+			"shadowarmor-*-lamellar-shadowcopper": {
 				"relativeProtection": 0.75,
 				"flatDamageReduction": 0.5,
 				"protectionTier": 1
 			},
-			"shadowarmor-*-lamellar-tinbronze": {
+			"shadowarmor-*-lamellar-shadowtinbronze": {
 				"relativeProtection": 0.77,
 				"flatDamageReduction": 0.6,
 				"protectionTier": 2
 			},
-			"shadowarmor-*-lamellar-bismuthbronze": {
+			"shadowarmor-*-lamellar-shadowbismuthbronze": {
 				"relativeProtection": 0.76,
 				"flatDamageReduction": 0.58,
 				"protectionTier": 2
 			},
-			"shadowarmor-*-lamellar-blackbronze": {
+			"shadowarmor-*-lamellar-shadowblackbronze": {
 				"relativeProtection": 0.78,
 				"flatDamageReduction": 0.65,
 				"protectionTier": 2
@@ -197,22 +191,22 @@
 			},
 
 
-			"shadowarmor-*-brigandine-copper": {
+			"shadowarmor-*-brigandine-shadowcopper": {
 				"relativeProtection": 0.78,
 				"flatDamageReduction": 1.0,
 				"protectionTier": 1
 			},
-			"shadowarmor-*-brigandine-tinbronze": {
+			"shadowarmor-*-brigandine-shadowtinbronze": {
 				"relativeProtection": 0.8,
 				"flatDamageReduction": 1.1,
 				"protectionTier": 2
 			},
-			"shadowarmor-*-brigandine-bismuthbronze": {
+			"shadowarmor-*-brigandine-shadowbismuthbronze": {
 				"relativeProtection": 0.79,
 				"flatDamageReduction": 1.1,
 				"protectionTier": 2
 			},
-			"shadowarmor-*-brigandine-blackbronze": {
+			"shadowarmor-*-brigandine-shadowblackbronze": {
 				"relativeProtection": 0.81,
 				"flatDamageReduction": 1.15,
 				"protectionTier": 2
@@ -223,22 +217,22 @@
 				"protectionTier": 4
 			},
 
-			"shadowarmor-*-chain-copper": {
+			"shadowarmor-*-chain-shadowcopper": {
 				"relativeProtection": 0.8,
 				"flatDamageReduction": 1.1,
 				"protectionTier": 1
 			},
-			"shadowarmor-*-chain-tinbronze": {
+			"shadowarmor-*-chain-shadowtinbronze": {
 				"relativeProtection": 0.82,
 				"flatDamageReduction": 1.2,
 				"protectionTier": 2
 			},
-			"shadowarmor-*-chain-bismuthbronze": {
+			"shadowarmor-*-chain-shadowbismuthbronze": {
 				"relativeProtection": 0.81,
 				"flatDamageReduction": 1.2,
 				"protectionTier": 2
 			},
-			"shadowarmor-*-chain-blackbronze": {
+			"shadowarmor-*-chain-shadowblackbronze": {
 				"relativeProtection": 0.83,
 				"flatDamageReduction": 1.25,
 				"protectionTier": 2
@@ -249,22 +243,22 @@
 				"protectionTier": 4
 			},
 
-			"shadowarmor-*-scale-copper": {
+			"shadowarmor-*-scale-shadowcopper": {
 				"relativeProtection": 0.84,
 				"flatDamageReduction": 1.3,
 				"protectionTier": 1
 			},
-			"shadowarmor-*-scale-tinbronze": {
+			"shadowarmor-*-scale-shadowtinbronze": {
 				"relativeProtection": 0.86,
 				"flatDamageReduction": 1.35,
 				"protectionTier": 2
 			},
-			"shadowarmor-*-scale-bismuthbronze": {
+			"shadowarmor-*-scale-shadowbismuthbronze": {
 				"relativeProtection": 0.85,
 				"flatDamageReduction": 1.3,
 				"protectionTier": 2
 			},
-			"shadowarmor-*-scale-blackbronze": {
+			"shadowarmor-*-scale-shadowblackbronze": {
 				"relativeProtection": 0.87,
 				"flatDamageReduction": 1.4,
 				"protectionTier": 2
@@ -274,25 +268,25 @@
 				"flatDamageReduction": 1.57,
 				"protectionTier": 4
 			},
-			"shadowarmor-*-plate-copper": {
+			"shadowarmor-*-plate-shadowcopper": {
 				"relativeProtection": 0.9,
 				"flatDamageReduction": 1.5,
 				"highDamageTierResistant": true,
 				"protectionTier": 1
 			},
-			"shadowarmor-*-plate-tinbronze": {
+			"shadowarmor-*-plate-shadowtinbronze": {
 				"relativeProtection": 0.92,
 				"flatDamageReduction": 1.6,
 				"highDamageTierResistant": true,
 				"protectionTier": 2
 			},
-			"shadowarmor-*-plate-bismuthbronze": {
+			"shadowarmor-*-plate-shadowbismuthbronze": {
 				"relativeProtection": 0.94,
 				"flatDamageReduction": 1.55,
 				"highDamageTierResistant": true,
 				"protectionTier": 2
 			},
-			"shadowarmor-*-plate-blackbronze": {
+			"shadowarmor-*-plate-shadowblackbronze": {
 				"relativeProtection": 0.95,
 				"flatDamageReduction": 1.65,
 				"highDamageTierResistant": true,
@@ -350,31 +344,31 @@
 	},
 	"renderAlphaTest": 0.25,
 	"durabilityByType": {
-		"shadowarmor-*-lamellar-copper": 1250,
-		"shadowarmor-*-lamellar-tinbronze": 1800,
-		"shadowarmor-*-lamellar-bismuthbronze": 1525,
-		"shadowarmor-*-lamellar-blackbronze": 1875,
+		"shadowarmor-*-lamellar-shadowcopper": 1250,
+		"shadowarmor-*-lamellar-shadowtinbronze": 1800,
+		"shadowarmor-*-lamellar-shadowbismuthbronze": 1525,
+		"shadowarmor-*-lamellar-shadowblackbronze": 1875,
 		"shadowarmor-*-lamellar-demonite": 4800,
-		"shadowarmor-*-brigandine-copper": 2700,
-		"shadowarmor-*-brigandine-tinbronze": 3300,
-		"shadowarmor-*-brigandine-bismuthbronze": 3050,
-		"shadowarmor-*-brigandine-blackbronze": 3600,
+		"shadowarmor-*-brigandine-shadowcopper": 2700,
+		"shadowarmor-*-brigandine-shadowtinbronze": 3300,
+		"shadowarmor-*-brigandine-shadowbismuthbronze": 3050,
+		"shadowarmor-*-brigandine-shadowblackbronze": 3600,
 		"shadowarmor-*-brigandine-demonite": 4500,
-		"shadowarmor-*-chain-copper": 1800,
-		"shadowarmor-*-chain-tinbronze": 2100,
-		"shadowarmor-*-chain-bismuthbronze": 1850,
-		"shadowarmor-*-chain-blackbronze": 2150,
+		"shadowarmor-*-chain-shadowcopper": 1800,
+		"shadowarmor-*-chain-shadowtinbronze": 2100,
+		"shadowarmor-*-chain-shadowbismuthbronze": 1850,
+		"shadowarmor-*-chain-shadowblackbronze": 2150,
 		"shadowarmor-*-chain-demonite": 2700,
-		"shadowarmor-*-scale-copper": 2400,
-		"shadowarmor-*-scale-tinbronze": 3600,
-		"shadowarmor-*-scale-bismuthbronze": 3350,
-		"shadowarmor-*-scale-blackbronze": 3900,
+		"shadowarmor-*-scale-shadowcopper": 2400,
+		"shadowarmor-*-scale-shadowtinbronze": 3600,
+		"shadowarmor-*-scale-shadowbismuthbronze": 3350,
+		"shadowarmor-*-scale-shadowblackbronze": 3900,
 		"shadowarmor-*-scale-demonite": 5100,
 
-		"shadowarmor-*-plate-copper": 1500,
-		"shadowarmor-*-plate-tinbronze": 3000,
-		"shadowarmor-*-plate-bismuthbronze": 2700,
-		"shadowarmor-*-plate-blackbronze": 3600,
+		"shadowarmor-*-plate-shadowcopper": 1500,
+		"shadowarmor-*-plate-shadowtinbronze": 3000,
+		"shadowarmor-*-plate-shadowbismuthbronze": 2700,
+		"shadowarmor-*-plate-shadowblackbronze": 3600,
 		"shadowarmor-*-plate-demonite": 8400
 	},
 
