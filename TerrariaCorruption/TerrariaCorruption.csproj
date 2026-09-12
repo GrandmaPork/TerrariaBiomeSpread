@@ -88,6 +88,7 @@
   <Folder Include="assets\terrariacorruption\textures\block\plant\aquatic\waterlily\" />
   <Folder Include="assets\terrariacorruption\textures\block\plant\aquatic\seaweed\" />
   <Folder Include="assets\terrariacorruption\textures\block\stone\sand\" />
+  <Folder Include="Entities\AITask\" />
 </ItemGroup>
 
 <ItemGroup>

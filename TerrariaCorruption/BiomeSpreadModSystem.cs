@@ -30,20 +30,44 @@ namespace TerrariaCorruption
         private ICoreServerAPI sapi;
         private const int Fluid = 2;
         private static readonly Random rnd = new Random(); // "static" means all instances share one generator.
+        /// <summary>
+        /// Called when the mod system starts on either side (client or server).
+        /// Use this for general initialization that does not require side-specific APIs.
+        /// </summary>
+        /// <param name="api">The core API for the current side.</param>
         public override void Start(ICoreAPI api)
         {
             Mod.Logger.Notification("Hello from biomespread modsystem: " + api.Side);
         }
+        /// <summary>
+        /// Called when the mod system starts on the client side.
+        /// Use this to register client-only resources such as renderers or client events.
+        /// </summary>
+        /// <param name="api">The client API.</param>
         public override void StartClientSide(ICoreClientAPI api)
         {
             Mod.Logger.Notification("Hello from biomespread modsystem: " + api.Side);
         }
+        /// <summary>
+        /// Called when the mod system starts on the server side.
+        /// Save the server API here for world and block operations.
+        /// </summary>
+        /// <param name="api">The server API.</param>
         public override void StartServerSide(ICoreServerAPI api)
         {
             Mod.Logger.Notification("Hello from biomespread modsystem server side: " + Lang.Get("biomespread:hello"));
             // Save the server API into our variable
             sapi = api;
         }
+        /// <summary>
+        /// Check the 3x3x3 neighborhood around <paramref name="pos"/> and
+        /// return true if there is any non-corrupt, non-air block (excluding the center position).
+        /// Note: this method only inspects neighbors; it does not perform spreading. Call
+        /// <see cref="CorruptionNeighbor(BlockPos)"/> (for example from OnGameTick) or an equivalent
+        /// tick/event handler to actually trigger corruption spreading.
+        /// </summary>
+        /// <param name="pos">The center position to check around.</param>
+        /// <returns>True when at least one valid neighbor block exists to spread to; otherwise false.</returns>
         public bool CheckNeighbors(BlockPos pos) // returns true if non-corrupt block detected
         {
             bool shouldSpreadNeighbor = false;
@@ -56,6 +80,11 @@ namespace TerrariaCorruption
             });
             return shouldSpreadNeighbor;
         }
+        /// <summary>
+        /// Pick a random neighboring position around <paramref name="pos"/> and attempt to spread corruption there.
+        /// This is a lightweight wrapper used by blocks and tick handlers to trigger spreading without additional checks.
+        /// </summary>
+        /// <param name="pos">The source position to pick a neighboring target from.</param>
         public void CorruptionNeighbor(BlockPos pos) // separate from spreadCorruption so OnGameTick can use the corruption spread function. Is called by blocks instead of CheckNeighbors. Was originally corruptionPosShort
         {
             BlockPos victim = pos.AddCopy(rnd.Next(-1, 2), rnd.Next(-1, 2), rnd.Next(-1, 2)); // find random neighbor
@@ -67,6 +96,13 @@ namespace TerrariaCorruption
                 spreadCorruption(victim);
             }
         }
+        /// <summary>
+        /// Resolve and return the corrupt replacement block for the given <paramref name="targetBlock"/>.
+        /// The asset code is looked up in the terrariacorruption mod by prefixing the target code path with "corrupt".
+        /// </summary>
+        /// <param name="victim">The position where the block will be replaced (not used for lookup but kept for parity).</param>
+        /// <param name="targetBlock">The original block to be replaced.</param>
+        /// <returns>The corrupt replacement block, or null if none exists.</returns>
         public Block NewCorruptBlock(BlockPos victim, Block targetBlock) // optimized
         {
             AssetLocation findCode = new AssetLocation("terrariacorruption", "corrupt" + targetBlock.Code.Path);
@@ -74,7 +110,16 @@ namespace TerrariaCorruption
             if (corruptBlock == null) return null;
             return corruptBlock;
         }
-        public Block NewCorruptFluid(BlockPos victim) // after messing with code for quite a few hours, it seems like it would be better to add the corruptFluid check into SetCorruptBlock since no edge cases will be missed and no blocks will have a waterlogging issue, but it comes at the cost of a second call to GetBlock. This will hit performance, but it will be more readable and easier to maintain. 
+        /// <summary>
+        /// Check the fluid layer at <paramref name="victim"/> and return a corrupt fluid block if one exists.
+        /// This handles waterlogged or fluid-replaced variants by looking up a "corrupt" prefixed asset for the fluid.
+        /// </summary>
+        /// <param name="victim">The block position to check the fluid layer for.</param>
+        /// <returns>The corrupt fluid block, or null if none is present.</returns>
+        // after messing with code for quite a few hours, it seems like it would be better to add the corruptFluid check into SetCorruptBlock
+        // since no edge cases will be missed and no blocks will have a waterlogging issue, but it comes at the cost of a second call to GetBlock.
+        // This will hit performance, but it will be more readable and easier to maintain.
+        public Block NewCorruptFluid(BlockPos victim)
         {
             Block check = sapi.World.BlockAccessor.GetBlock(victim, Fluid); // check water layer
             if (check.BlockId == 0) return null;
@@ -84,6 +129,13 @@ namespace TerrariaCorruption
             Block waterOverride = sapi.World.GetBlock(new AssetLocation("terrariacorruption", "corrupt" + check.Code.Path));
             return waterOverride;
         }
+        /// <summary>
+        /// Continue corrupting upward through a vertical column of blocks that match pillar-like types
+        /// (logs, water, aquatic blocks). For each matching block the corresponding corrupt block (and
+        /// corrupt fluid if present) is applied and the position moves up one Y level.
+        /// </summary>
+        /// <param name="victim">Starting position for the pillar corruption.</param>
+        /// <param name="targetBlock">The block at the starting position.</param>
         public void pillarCorruption(BlockPos victim, Block targetBlock)
         {
             while (targetBlock.Code.Path.StartsWith("log-") ||
@@ -99,6 +151,13 @@ namespace TerrariaCorruption
                 SetCorruptBlock(victim, corruptBlock, corruptFluid);
             }
         }
+        /// <summary>
+        /// Handle special-case corruption behavior for specific block types such as mushrooms, farmland,
+        /// crops, aquatic plants, logs and similar. This method performs custom replacements and additional
+        /// actions (for example replacing crop above farmland with a dead plant) before setting corrupt blocks.
+        /// </summary>
+        /// <param name="victim">The position to corrupt.</param>
+        /// <param name="targetBlock">The block currently at <paramref name="victim"/>.</param>
         public void specialConditions(BlockPos victim, Block targetBlock)
         {
             AssetLocation specialCode;
@@ -163,6 +222,12 @@ namespace TerrariaCorruption
                     break;
             }
         }
+        /// <summary>
+        /// Main entry point for attempting to spread corruption to the block at <paramref name="victim"/>.
+        /// This method inspects the target block's type and applies the appropriate corrupt replacement,
+        /// handling special cases and fluid replacements where necessary.
+        /// </summary>
+        /// <param name="victim">The target position for corruption.</param>
         public void spreadCorruption(BlockPos victim)
         {
             Block corruptBlock;
@@ -224,7 +289,15 @@ namespace TerrariaCorruption
                     break;
             }
         }
-        public void SetCorruptBlock(BlockPos victim, Block corruptBlock, Block corruptFluid) // to be added in soon
+        /// <summary>
+        /// Set a corrupt block and optionally a corrupt fluid at <paramref name="victim"/>.
+        /// If <paramref name="corruptFluid"/> is non-null the fluid layer will be set first.
+        /// The chunk is marked modified when changes are applied.
+        /// </summary>
+        /// <param name="victim">Position to modify.</param>
+        /// <param name="corruptBlock">The corrupt block to set (may be null).</param>
+        /// <param name="corruptFluid">Optional corrupt fluid to set in the fluid layer.</param>
+        public void SetCorruptBlock(BlockPos victim, Block corruptBlock, Block corruptFluid) 
         {
             if (corruptFluid != null)
             {
@@ -235,7 +308,13 @@ namespace TerrariaCorruption
             sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);
             sapi.World.BlockAccessor.GetChunkAtBlockPos(victim)?.MarkModified();
         }
-        public void SetCorruptBlock(BlockPos victim, Block corruptBlock) // to be added in soon
+        /// <summary>
+        /// Set a corrupt block at <paramref name="victim"/> and mark the chunk modified.
+        /// This overload does not modify the fluid layer.
+        /// </summary>
+        /// <param name="victim">Position to modify.</param>
+        /// <param name="corruptBlock">The corrupt block to set (may be null).</param>
+        public void SetCorruptBlock(BlockPos victim, Block corruptBlock) 
         {
             if (corruptBlock == null) return;
             sapi.World.BlockAccessor.SetBlock(corruptBlock.BlockId, victim);

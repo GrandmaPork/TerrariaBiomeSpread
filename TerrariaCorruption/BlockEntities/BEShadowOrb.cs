@@ -36,6 +36,8 @@ namespace TerrariaCorruption.BlockEntities
                 RegisterGameTickListener(OnGameTick, 50);
             }
             minHeight = rnd.Next(71, 83);
+
+            MeteorsModSystem.AskToBeFavored(Pos);
         }
         private void OnGameTick(float dt)
         {

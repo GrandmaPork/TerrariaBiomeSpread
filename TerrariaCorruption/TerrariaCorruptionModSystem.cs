@@ -82,7 +82,9 @@ namespace TerrariaCorruption
             api.RegisterBlockClass(Mod.Info.ModID + ".shadoworb", typeof(Blocks.BlockShadowOrb)); // register orbs as blocks
 
             api.RegisterBlockEntityClass(Mod.Info.ModID + ".shadowspread", typeof(BlockEntities.BEShadowOrb)); // register orb block entity behavior
+
             //api.RegisterBlockEntityClass(Mod.Info.ModID + ".corruptdynamictreepart", typeof(BlockEntities.BECorruptFruitTreePart)); // not worth the effort rn
+            api.RegisterEntity(Mod.Info.ModID + ".shadowmeteor", typeof(Entities.EntityMeteor));
 
             api.RegisterItemClass(Mod.Info.ModID + ".corruptstone", typeof(Items.ItemCorruptStone));
             api.RegisterItemClass(Mod.Info.ModID + ".corruptflint", typeof(Items.ItemCorruptFlint));
@@ -103,19 +105,19 @@ namespace TerrariaCorruption
 
             //api.Event.RegisterGameTickListener(SpreadTimer, 3000);
 
-    //        api.ChatCommands.Create("treasure").RequiresPlayer()
-    //.WithDescription("Place a treasure chest with random items")
-    //.RequiresPrivilege(Privilege.controlserver)
-    //.HandleWith(new OnCommandDelegate(PlaceTreasureChestInFrontOfPlayer));
-    //    }
-    //    private TextCommandResult PlaceTreasureChestInFrontOfPlayer(TextCommandCallingArgs args)
-    //    {
-    //        Block chest = sapi.World.GetBlock(new AssetLocation("chest-south"));
-    //        chest.TryPlaceBlockForWorldGen(sapi.World.BlockAccessor,
-    //            args.Caller.Player.Entity.Pos.HorizontalAheadCopy(2).AsBlockPos, BlockFacing.UP, null
-    //        );
-    //        GeneratedStructure shadowpit = sapi.World.GetOrCreateGeneratedStructure("terrariacorruption:shadowpit");
-    //        return TextCommandResult.Success();
+            //        api.ChatCommands.Create("treasure").RequiresPlayer()
+            //.WithDescription("Place a treasure chest with random items")
+            //.RequiresPrivilege(Privilege.controlserver)
+            //.HandleWith(new OnCommandDelegate(PlaceTreasureChestInFrontOfPlayer));
+            //    }
+            //    private TextCommandResult PlaceTreasureChestInFrontOfPlayer(TextCommandCallingArgs args)
+            //    {
+            //        Block chest = sapi.World.GetBlock(new AssetLocation("chest-south"));
+            //        chest.TryPlaceBlockForWorldGen(sapi.World.BlockAccessor,
+            //            args.Caller.Player.Entity.Pos.HorizontalAheadCopy(2).AsBlockPos, BlockFacing.UP, null
+            //        );
+            //        GeneratedStructure shadowpit = sapi.World.GetOrCreateGeneratedStructure("terrariacorruption:shadowpit");
+            //        return TextCommandResult.Success();
         }
     }
 }

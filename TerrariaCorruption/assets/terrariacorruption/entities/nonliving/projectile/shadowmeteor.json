@@ -1,0 +1,46 @@
+{
+  "code": "shadowmeteor",
+  "class": "terrariacorruption.shadowmeteor",
+  "tags": [ "inanimate" ],
+  "attributes": {
+    "isCorrupt": true,
+    "isProjectile": true
+  },
+  "hitboxSize": {
+    "x": 0.9,
+    "y": 0.9
+  },
+  "behaviorConfigs": {
+    "passivephysics": {
+      "groundDragFactor": 1,
+      "airDragFactor": 0.5,
+      "gravityFactor": 1
+    }
+  },
+  "client": {
+    "size": 0.9,
+    "renderer": "Shape",
+    "shape": {
+      "base": "block/corrupt/shadoworb"
+    },
+    "texturesByType": {
+      "base": "block/corrupt/shadoworb"
+    },
+    "behaviors": [
+      { "code": "passivephysics" },
+      { "code": "interpolateposition" }
+    ]
+  },
+  "server": {
+    "behaviors": [
+      { "code": "passivephysics" },
+      {
+        "code": "despawn",
+        "minSeconds": 600
+      },
+      { "code": "entitystatetags" }
+    ]
+  },
+  "sounds": {
+  }
+}
