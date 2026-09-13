@@ -14,11 +14,12 @@
   "behaviorConfigs": {
     "passivephysics": {
       "groundDragFactor": 1,
-      "airDragFactor": 0.5,
+      "airDragFactor": 1,
       "gravityFactor": 1
     }
   },
   "client": {
+    "glowLevel": 100,
     "size": 0.9,
     "renderer": "Shape",
     "shape": {

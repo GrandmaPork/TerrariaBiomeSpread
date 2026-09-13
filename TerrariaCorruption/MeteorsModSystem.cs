@@ -103,7 +103,7 @@ namespace TerrariaCorruption
         {
             Vec2d direction = new Vec2d(spawn.X - pos.X, spawn.Z - pos.Z).Normalize(); // point to spawn
 
-            double distance = direction.Length() * speed;
+            double distance = direction.Length() * speed; // assign distance based on speed
 
             int destinationHeight = sapi.WorldManager.GetSurfacePosY(spawn.X + (int)(direction.X * distance), spawn.Z + (int)(direction.Y * distance)) ?? 100; // chunk needs to be loaded first. Also I probably need to forgo the surface pos and let entity collision logic handle this
 
@@ -119,7 +119,7 @@ namespace TerrariaCorruption
             {
                 if (shadowOrb[i] != null)
                 {
-                    sapi.WorldManager.LoadChunkColumn(shadowOrb[i].X / 16, shadowOrb[i].Z / 16);
+                    sapi.WorldManager.LoadChunkColumn(shadowOrb[i].X, shadowOrb[i].Z, true);
                     Mod.Logger.Notification("Loading chunk column for favored shadow orb at " + shadowOrb[i]);
                 }
             }
