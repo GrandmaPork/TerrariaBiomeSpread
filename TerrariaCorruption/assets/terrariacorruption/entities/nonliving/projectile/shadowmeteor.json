@@ -1,7 +1,8 @@
 {
   "code": "shadowmeteor",
   "class": "terrariacorruption.shadowmeteor",
-  "tags": [ "inanimate" ],
+  "tags": [ "inanimate", "projectile"],
+  "knockbackResistance": 1,
   "attributes": {
     "isCorrupt": true,
     "isProjectile": true
@@ -23,6 +24,11 @@
     "shape": {
       "base": "block/corrupt/shadoworb"
     },
+    "blockmaterial": "Metal",
+    "replaceable": 100,
+    "resistance": 4,
+    "lightAbsorption": 0,
+    "maxStackSize": 1,
     "texturesByType": {
       "base": "block/corrupt/shadoworb"
     },
