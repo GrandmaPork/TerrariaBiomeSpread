@@ -1,7 +1,7 @@
 {
   "code": "shadowmeteor",
-  "class": "terrariacorruption.shadowmeteor",
-  "tags": [ "inanimate", "projectile"],
+  "class": "terrariacorruption.fallingmeteor",
+  "tags": [ "inanimate", "projectile" ],
   "knockbackResistance": 1,
   "attributes": {
     "isCorrupt": true,
@@ -14,14 +14,222 @@
   "behaviorConfigs": {
     "passivephysics": {
       "groundDragFactor": 1,
-      "airDragFactor": 1,
-      "gravityFactor": 1
+      "airDragFactor": 0.25,
+      "gravityFactor": 0.25
     }
   },
+  "particleProperties": [
+    {
+      // Ember cubicles // from firepit json
+      "hsvaColor": [
+        {
+          "avg": 30,
+          "var": 20
+        },
+        {
+          "avg": 255,
+          "var": 50
+        },
+        {
+          "avg": 255,
+          "var": 50
+        },
+        {
+          "avg": 255,
+          "var": 0
+        }
+      ],
+      "gravityEffect": {
+        "dist": "invexp",
+        "avg": -0.1,
+        "var": 0.4
+      },
+      "posOffset": [
+        {
+          "avg": 0,
+          "var": 0.2
+        },
+        {
+          "avg": -0.4,
+          "var": 0
+        },
+        {
+          "avg": 0,
+          "var": 0.2
+        }
+      ],
+      "velocity": [
+        {
+          "avg": 0,
+          "var": 0.15
+        },
+        {
+          "avg": 0.5,
+          "var": 0.1
+        },
+        {
+          "avg": 0,
+          "var": 0.15
+        }
+      ],
+      "quantity": { "avg": 0.015 },
+      "size": {
+        "avg": 0.4,
+        "var": 0
+      },
+      "sizeEvolve": {
+        "transform": "quadratic",
+        "factor": -0.7
+      },
+      "lifeLength": { "avg": 1.5 },
+      "vertexFlags": 128,
+      "windAffectednes": 0.2
+    },
+    {
+      // Smoke quads
+      "hsvaColor": [
+        {
+          "avg": 0,
+          "var": 0
+        },
+        {
+          "avg": 0,
+          "var": 0
+        },
+        {
+          "avg": 70,
+          "var": 30
+        },
+        {
+          "avg": 220,
+          "var": 50
+        }
+      ],
+      "opacityEvolve": {
+        "transform": "linear",
+        "factor": -255
+      },
+      "gravityEffect": {
+        "avg": 0,
+        "var": 0
+      },
+      "posOffset": [
+        {
+          "avg": 0,
+          "var": 0.2
+        },
+        {
+          "avg": -0.4,
+          "var": 0
+        },
+        {
+          "avg": 0,
+          "var": 0.2
+        }
+      ],
+      "velocity": [
+        {
+          "avg": 0,
+          "var": 0.025
+        },
+        {
+          "avg": 0.2,
+          "var": 0.05
+        },
+        {
+          "avg": 0,
+          "var": 0.025
+        }
+      ],
+      "quantity": { "avg": 0.08 },
+      "size": {
+        "avg": 0.3,
+        "var": 0.05
+      },
+      "sizeEvolve": {
+        "transform": "linear",
+        "factor": 1.5
+      },
+      "particleModel": "Quad",
+      "lifeLength": { "avg": 18 },
+      "selfPropelled": true,
+      "windAffectednes": 0.7
+    },
+    {
+      // Fire quads
+      "hsvaColor": [
+        {
+          "avg": 20,
+          "var": 20
+        },
+        {
+          "avg": 255,
+          "var": 50
+        },
+        {
+          "avg": 255,
+          "var": 50
+        },
+        {
+          "avg": 255,
+          "var": 0
+        }
+      ],
+      "opacityEvolve": {
+        "transform": "quadratic",
+        "factor": -16
+      },
+      "gravityEffect": {
+        "avg": 0,
+        "var": 0
+      },
+      "posOffset": [
+        {
+          "avg": 0,
+          "var": 0.1
+        },
+        {
+          "avg": -0.3,
+          "var": 0
+        },
+        {
+          "avg": 0,
+          "var": 0.1
+        }
+      ],
+      "velocity": [
+        {
+          "avg": 0,
+          "var": 0.1
+        },
+        {
+          "avg": 0.125,
+          "var": 0.05
+        },
+        {
+          "avg": 0,
+          "var": 0.1
+        }
+      ],
+      "quantity": { "avg": 1 },
+      "size": {
+        "avg": 0.35,
+        "var": 0.05
+      },
+      "lifeLength": { "avg": 0.25 },
+      "sizeEvolve": {
+        "transform": "linear",
+        "factor": 0.25
+      },
+      "particleModel": "Quad",
+      "vertexFlags": 128,
+      "windAffectednes": 0.5
+    }
+  ],
   "client": {
-    "glowLevel": 100,
+    "glowLevel": 255,
     "size": 0.9,
-    "renderer": "Shape",
+    "renderer": "MeteorRenderer",
     "shape": {
       "base": "block/corrupt/shadoworb"
     },
@@ -34,20 +242,42 @@
       "base": "block/corrupt/shadoworb"
     },
     "behaviors": [
-      { "code": "passivephysics" },
-      { "code": "interpolateposition" }
+      { "code": "interpolateposition" },
+      {
+        "code": "FallingMeteorMotion",
+        "horizontalSpeed": {
+          "min": 20,
+          "max": 50
+        },
+        "verticalSpeed": {
+          "min": 2,
+          "max": 20
+        },
+        { "code": "MeteorExplosion" }
+      }
     ]
   },
   "server": {
     "behaviors": [
-      { "code": "passivephysics" },
       {
         "code": "despawn",
-        "minSeconds": 600
+        "minSeconds": 360
       },
-      { "code": "entitystatetags" }
+      {
+        "code": "FallingMeteorMotion",
+        "horizontalSpeed": {
+          "min": 20,
+          "max": 50
+        },
+        "verticalSpeed": {
+          "min": 2,
+          "max": 20
+        }
+      },
+      { "code": "MeteorExplosion" }
     ]
   },
   "sounds": {
+    "death": "game:tool/breakreinforced"
   }
 }

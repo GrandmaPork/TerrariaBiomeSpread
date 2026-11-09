@@ -30,33 +30,35 @@ namespace TerrariaCorruption
         private static readonly Random rnd = new Random(); // "static" means all instances share one generator.
         public float timer = 0;
         public int speed = 2; // not sure what the unit here will be. Probably blocks per second
-        public override void Start(ICoreAPI api)
-        {
-            //Mod.Logger.Notification("Hello from terrariacorruption mod: " + api.Side);
-        }
-        public override void StartClientSide(ICoreClientAPI api)
-        {
-            //Mod.Logger.Notification("Hello from terrariacorruption mod: " + api.Side);
-        }
+        public static BlockPos regionalDestination;
+        //public override void Start(ICoreAPI api)
+        //{
+        //    //Mod.Logger.Notification("Hello from terrariacorruption mod: " + api.Side);
+        //}
+        //public override void StartClientSide(ICoreClientAPI api)
+        //{
+        //    //Mod.Logger.Notification("Hello from terrariacorruption mod: " + api.Side);
+        //}
         public override void StartServerSide(ICoreServerAPI api)
         {
             Mod.Logger.Notification("Hello from terrariacorruption mod server side: " + Lang.Get("terrariacorruption:hello"));
             // Save the server API into our variable
             sapi = api;
 
-            api.Event.RegisterGameTickListener(SpawnMeteors, 10000, 100000); // ms
+            api.Event.RegisterGameTickListener(SpawnMeteors, 10000, 200000); // ms
             LoadFavoredShadowOrbs(); // Begin loading chunks with shadow orbs (they will register themselves when they are loaded with a limit of 3)
         }
         /// <summary>
-        /// spawns a meteor above the player at y240 and calls <see cref="SetMeteorDestination(Entity meteor, BlockPos pos)"/> to set the destination of the meteor
+        /// spawns a meteor above the player at y240 and calls <see cref="PointToDestination(Entity meteor, BlockPos pos)"/> to set the destination of the meteor
         /// </summary>
         /// <param name="api"></param>
         private void SpawnMeteors(float dt) // idk why float dt is needed but it wont work without it
         {
-            timer += dt;
+            //timer += dt;
 
-            if (timer <= 2) return; // 5 minutes x2
-
+            //if (timer <= 2) return; // 200 seconds x4
+            //timer = 0;
+            if (sapi.Side != EnumAppSide.Server) return; // only run on server side
             Mod.Logger.Notification("Spawn meteors is run");
             spawn = sapi.World.DefaultSpawnPosition.AsBlockPos.AsVec3i;
 
@@ -70,23 +72,25 @@ namespace TerrariaCorruption
                 return;
             }
 
-            BlockPos playerPos = sapi.World.NearestPlayer(spawn.X, spawn.Y, spawn.Z).Entity.Pos.AsBlockPos;
+            EntityPos playerPos = sapi.World.NearestPlayer(spawn.X, spawn.Y, spawn.Z).Entity.Pos;
             if (playerPos == null) return;
-
+            BlockPos playerBlock = playerPos.AsBlockPos;
+            FindRegionalDestination(playerBlock);
+            if (regionalDestination == null) return;
             Entity meteor = sapi.World.ClassRegistry.CreateEntity(type);
 
             // Generate a random position around the player at y 200
-            BlockPos meteorPos = new BlockPos(playerPos.X + rnd.Next(-1, 2), 200, playerPos.Z + rnd.Next(-1, 2));
-            Mod.Logger.Notification("playerPos: " + playerPos);
-            Mod.Logger.Notification("meteorPos: " + meteorPos);
+            BlockPos meteorPos = new BlockPos(playerBlock.X + rnd.Next(-1, 2), 200, playerBlock.Z + rnd.Next(-1, 2));
+            //Mod.Logger.Notification("playerPos: " + playerPos);
+            //Mod.Logger.Notification("meteorPos: " + meteorPos);
 
             //Vec3d aheadPos = pos.AheadCopy(1, meteor.Pos.Pitch + rndpitch, meteor.Pos.Yaw + rndyaw);
-            Vec2d direction = SetMeteorDestination(meteorPos);
+            Vec2d direction = PointToDestination(meteorPos);
             Vec3d velocity = new Vec3d(direction.X * speed, 0, direction.Y * speed);
 
             meteor.Pos.SetPos(meteorPos);
             meteor.Pos.SetFrom(meteor.Pos);
-            meteor.Pos.Motion.Set(velocity);
+            meteor.Pos.Motion.Set(velocity); // m/s hopefully. If so, distance = speed * time. time is = sqrt(height/gravity * 2). gravity is unknown, will assume to be 10 m/s^2
             meteor.World = sapi.World;
             //entityToSpawn.PreInitialize();
 
@@ -99,19 +103,25 @@ namespace TerrariaCorruption
         /// </summary>
         /// <param name="meteor"></param>
         /// <param name="pos"></param>
-        public Vec2d SetMeteorDestination(BlockPos pos)
+        public Vec2d PointToDestination(BlockPos pos)
         {
-            Vec2d direction = new Vec2d(spawn.X - pos.X, spawn.Z - pos.Z).Normalize(); // point to spawn
+            Vec2d direction = new Vec2d(regionalDestination.X - pos.X, regionalDestination.Z - pos.Z).Normalize(); // point to spawn
+            int destinationHeight = sapi.WorldManager.GetSurfacePosY(regionalDestination.X, regionalDestination.Z) ?? 100; // chunk needs to be loaded first. Also I probably need to forgo the surface pos and let entity collision logic handle this
 
-            double distance = direction.Length() * speed; // assign distance based on speed
-
-            int destinationHeight = sapi.WorldManager.GetSurfacePosY(spawn.X + (int)(direction.X * distance), spawn.Z + (int)(direction.Y * distance)) ?? 100; // chunk needs to be loaded first. Also I probably need to forgo the surface pos and let entity collision logic handle this
-
-            BlockPos destination = new BlockPos(spawn.X + (int)(direction.X * distance), destinationHeight, spawn.Z + (int)(direction.Y * distance));
-            Mod.Logger.Notification("Meteor destination set to: " + destination);
-            //sapi.WorldManager.LoadChunkColumn(destination.X / 16, destination.Z / 16); // Load the chunk where the meteor will land. Unloading the function needs to be handled when the shadow orb is destroyed, or if the maximum chunks allowed by this mod are exceeded! This is so the corruption spreads while you aren't near it
 
             return direction;
+        }
+        /// <summary>
+        /// Takes the player position and finds a blockpos that each shadow meteor will be aimed at
+        /// </summary>
+        /// <param name="playerPos"></param>
+        public void FindRegionalDestination(BlockPos playerPos)
+        {
+            float difference = (spawn - playerPos.AsVec3i).Length();
+            regionalDestination = playerPos.AddCopy((int)difference + 50, 60, (int)difference + 50);
+            Mod.Logger.Notification("Meteor destination set to: " + regionalDestination);
+
+            //sapi.WorldManager.LoadChunkColumn(regionalDestination.X, regionalDestination.Z); // Load the chunk where the meteor will land. Unloading the function needs to be handled when the shadow orb is destroyed, or if the maximum chunks allowed by this mod are exceeded! This is so the corruption spreads while you aren't near it
         }
         public void LoadFavoredShadowOrbs()
         {
@@ -141,6 +151,7 @@ namespace TerrariaCorruption
                 ongoing++;
                 //shadowOrb1 = orb;
                 shadowOrb[ongoing] = orb;
+                //sapi.Logger.Notification("Favored shadow orb at: " + orb);
             }
             else
             {
@@ -149,5 +160,11 @@ namespace TerrariaCorruption
             }
 
         }
+
+        public void NotifyCrash(BlockPos pos)
+        {
+            Mod.Logger.Notification("A meteor has landed at: " + pos);
+        }
+        //
     }
 }
