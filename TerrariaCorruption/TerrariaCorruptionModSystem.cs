@@ -6,6 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks.Dataflow;
+using TerrariaCorruption.EntityRenderers;
+using TerrariaCorruption.Entities.Behaviors;
+using TerrariaCorruption.EntityRenderers;
 using Vintagestory.API.Client;
 
 
@@ -61,6 +64,7 @@ namespace TerrariaCorruption
         public override void Start(ICoreAPI api)
         {
             Mod.Logger.Notification("Hello from terrariacorruption mod: " + api.Side);
+            // blocks
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptsoil", typeof(Blocks.BlockCorruptSoil));
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptsoildeposit", typeof(Blocks.BlockCorruptSoilDeposit));
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptforestfloor", typeof(Blocks.BlockCorruptForestFloor));
@@ -77,25 +81,34 @@ namespace TerrariaCorruption
 
             //api.RegisterBlockClass(Mod.Info.ModID + ".corruptdynamictreebranch", typeof(Blocks.BlockCorruptFruitTreeBranch));
 
-
             api.RegisterBlockClass(Mod.Info.ModID + ".corruptknappingsurface", typeof(Blocks.BlockCorruptKnappingSurface));
             api.RegisterBlockClass(Mod.Info.ModID + ".shadoworb", typeof(Blocks.BlockShadowOrb)); // register orbs as blocks
 
+            // block entities
             api.RegisterBlockEntityClass(Mod.Info.ModID + ".shadowspread", typeof(BlockEntities.BEShadowOrb)); // register orb block entity behavior
-
             //api.RegisterBlockEntityClass(Mod.Info.ModID + ".corruptdynamictreepart", typeof(BlockEntities.BECorruptFruitTreePart)); // not worth the effort rn
-            api.RegisterEntity(Mod.Info.ModID + ".shadowmeteor", typeof(Entities.EntityMeteor));
 
+            //entities
+            api.RegisterEntity(Mod.Info.ModID + ".shadowmeteor", typeof(Entities.EntityFallingMeteor));
+
+            // items
             api.RegisterItemClass(Mod.Info.ModID + ".corruptstone", typeof(Items.ItemCorruptStone));
             api.RegisterItemClass(Mod.Info.ModID + ".corruptflint", typeof(Items.ItemCorruptFlint));
             api.RegisterItemClass(Mod.Info.ModID + ".corruptorechunk", typeof(Items.ItemCorruptOre));
             api.RegisterItemClass(Mod.Info.ModID + ".corruptingot", typeof(Items.ItemCorruptIngot));
+
+            // entity behaviors
+            api.RegisterEntityBehaviorClass("FallingMeteorMotion", typeof(EntityBehaviorFallingMeteorMotion));
+            api.RegisterEntityBehaviorClass("ShowerMeteorMotion", typeof(EntityBehaviorShowerMeteorMotion));
+            api.RegisterEntityBehaviorClass("MeteorExplosion", typeof(EntityBehaviorMeteorExplosion));
         }
         public override void StartClientSide(ICoreClientAPI api)
         {
             Mod.Logger.Notification("Hello from terrariacorruption mod: " + api.Side);
             //api.Logger.Notification(api.World.ApplyColorMapOnRgba("climateCorruptPlantTint","seasonalCorruptGrass",0xFFFFFF,0, 0, 0).ToString());
             //api.Logger.Notification(api.World.ApplyColorMapOnRgba("climateCorruptPlantTint", "seasonalCorruptGrass", 0xFFFFFF, 0, 0, 0).ToString());
+            //renderers
+            api.RegisterEntityRendererClass("MeteorRenderer", typeof(MeteorRenderer));
         }
         public override void StartServerSide(ICoreServerAPI api)
         {

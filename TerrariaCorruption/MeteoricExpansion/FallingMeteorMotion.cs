@@ -1,4 +1,4 @@
-﻿using MeteoricExpansion.Utility;
+﻿using TerrariaCorruption.Utility;
 using System;
 using System.Threading.Tasks;
 using Vintagestory.API;
@@ -11,32 +11,37 @@ using Vintagestory.API.Server;
 
 namespace TerrariaCorruption.Entities.Behaviors
 {
-    /// <summary>Handles the motion behavior of falling meteors.</summary>
+    /// <summary>
+    /// Handles the motion behavior of falling meteors.
+    /// </summary>
     class EntityBehaviorFallingMeteorMotion : EntityBehaviorMeteorMotionBase
     {
         private AssetLocation[] MeteorSounds { get; } = {
-            new AssetLocation("meteoricexpansion", "sounds/effect/meteor_rumble_fade1_double"),
-            new AssetLocation("meteoricexpansion", "sounds/effect/meteor_rumble_fade2_double"),
-            new AssetLocation("meteoricexpansion", "sounds/effect/meteor_rumble_fade3_double")
+            new AssetLocation("terrariacorruption", "sounds/effect/meteor_rumble_fade1_double"),
+            new AssetLocation("terrariacorruption", "sounds/effect/meteor_rumble_fade2_double"),
+            new AssetLocation("terrariacorruption", "sounds/effect/meteor_rumble_fade3_double")
         };
 
         private int IdleSoundLengthInMilliseconds { get; } = 2000;
         private long IdleSoundStartTime { get; set; } = 0;
         private int RotationAxisToIgnore { get; set; }
 
-        /// <summary>Returns the registered behavior name.</summary>
+        /// <summary>
+        /// Returns the registered behavior name.
+        /// </summary>
         public override string PropertyName()
         {
             return "fallingmeteormotion";
         }
 
-        /// <summary>Creates the falling meteor motion behavior (empty).</summary>
-        public EntityBehaviorFallingMeteorMotion(Entity entity) : base(entity)
-        {
-            
-        }
+        /// <summary>
+        /// Creates the falling meteor motion behavior (empty).
+        /// </summary>
+        public EntityBehaviorFallingMeteorMotion(Entity entity) : base(entity){}
 
-        /// <summary>Initializes translation, rotation, particles, and direction metadata.</summary>
+        /// <summary>
+        /// Initializes translation, rotation, particles, and direction metadata.
+        /// </summary>
         public override void Initialize(EntityProperties properties, JsonObject attributes)
         {
             base.Initialize(properties, attributes);
@@ -51,7 +56,9 @@ namespace TerrariaCorruption.Entities.Behaviors
             //-- The meteor direction is stored as an attribute and used to calculate meteorite placement and shrapnel, since entity.PreviousServerPos is never assigned --//
             entity.Attributes.SetVec3i("direction", new Vec3i((int)(RandomTranslation.X + .5f), (int)(RandomTranslation.Y + .5f), (int)(RandomTranslation.Z + .5f)));
         }
-        /// <summary>Updates motion, particles, and periodic rumble sounds.</summary>
+        /// <summary>
+        /// Updates motion, particles, and periodic rumble sounds.
+        /// </summary>
         public override void OnGameTick(float deltaTime)
         {
             CalculateEntityTransforms(deltaTime);
@@ -61,7 +68,7 @@ namespace TerrariaCorruption.Entities.Behaviors
             UpdateMeteorParticles();
             SpawnMeteorParticles();
 
-            if(entity.Api.Side == EnumAppSide.Server)
+            if (entity.Api.Side == EnumAppSide.Server)
             {
                 if ((IdleSoundStartTime + IdleSoundLengthInMilliseconds) / 2 < entity.World.ElapsedMilliseconds)
                 {
@@ -71,7 +78,9 @@ namespace TerrariaCorruption.Entities.Behaviors
                 }
             }
         }
-        /// <summary>Calculates a randomized falling direction and speed.</summary>
+        /// <summary>
+        /// Calculates a randomized falling direction and speed.
+        /// </summary>
         public void DetermineMeteorTranslation(MinMaxTuple horizontalSpeed, MinMaxTuple verticalSpeed)
         {
             int randomHorizontalSpeed = Rand.Next(horizontalSpeed.Min, horizontalSpeed.Max);
@@ -90,7 +99,9 @@ namespace TerrariaCorruption.Entities.Behaviors
             if (IsMovingSouth != false)
                 RandomTranslation.Z *= -1;
         }
-        /// <summary>Calculates randomized rotation periods for the meteor.</summary>
+        /// <summary>
+        /// Calculates randomized rotation periods for the meteor.
+        /// </summary>
         protected void DetermineMeteorRotation(int minRotation, int maxRotation)
         {
             switch (RotationAxisToIgnore)

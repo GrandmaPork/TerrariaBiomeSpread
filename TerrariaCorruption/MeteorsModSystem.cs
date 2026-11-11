@@ -45,7 +45,7 @@ namespace TerrariaCorruption
             // Save the server API into our variable
             sapi = api;
 
-            api.Event.RegisterGameTickListener(SpawnMeteors, 10000, 200000); // ms
+            //api.Event.RegisterGameTickListener(SpawnMeteors, 10000, 200000); // ms
             LoadFavoredShadowOrbs(); // Begin loading chunks with shadow orbs (they will register themselves when they are loaded with a limit of 3)
         }
         /// <summary>

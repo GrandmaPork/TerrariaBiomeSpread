@@ -16,8 +16,8 @@
         public int MaximumMinutesBetweenMeteorSpawns = 30;
         public int MinimumSpawnDistanceInChunks = 1;
         public int MaximumSpawnDistanceInChunks = 6;
-        public int MinimumMeteorLifespanInSeconds = 3;
-        public int MaximumMeteorLifespanInSeconds = 10;
+        public int MinimumMeteorLifespanInSeconds = 10;
+        public int MaximumMeteorLifespanInSeconds = 15;
         public int MinimumCraterSmoulderTimeInMinutes = 2;
         public int MaximumCraterSmoulderTimeInMinutes = 10;
         public double CraterSizeMultiplier = 1.75;

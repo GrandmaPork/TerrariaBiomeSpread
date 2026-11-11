@@ -9,7 +9,7 @@ using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 
-namespace MeteoricExpansion.Utility
+namespace TerrariaCorruption.Utility
 {
     public class MinMaxTuple
     {

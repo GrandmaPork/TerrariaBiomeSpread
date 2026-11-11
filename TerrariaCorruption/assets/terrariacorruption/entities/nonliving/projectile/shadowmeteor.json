@@ -1,22 +1,16 @@
 {
   "code": "shadowmeteor",
-  "class": "terrariacorruption.fallingmeteor",
-  "tags": [ "inanimate", "projectile" ],
+  "class": "terrariacorruption.shadowmeteor",
+  "habitat": "air",
+  "tags": [ "inanimate" ],
   "knockbackResistance": 1,
   "attributes": {
     "isCorrupt": true,
-    "isProjectile": true
+    "sizeVariance": 1.0
   },
   "hitboxSize": {
     "x": 0.9,
     "y": 0.9
-  },
-  "behaviorConfigs": {
-    "passivephysics": {
-      "groundDragFactor": 1,
-      "airDragFactor": 0.25,
-      "gravityFactor": 0.25
-    }
   },
   "particleProperties": [
     {
@@ -252,9 +246,9 @@
         "verticalSpeed": {
           "min": 2,
           "max": 20
-        },
-        { "code": "MeteorExplosion" }
-      }
+        }
+      },
+      { "code": "MeteorExplosion" }
     ]
   },
   "server": {

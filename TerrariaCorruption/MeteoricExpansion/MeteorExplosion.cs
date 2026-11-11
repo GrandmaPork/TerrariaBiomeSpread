@@ -1,10 +1,13 @@
-﻿using MeteoricExpansion.Utility;
+﻿using TerrariaCorruption.Utility;
 using System;
 using System.Collections.Generic;
+using TerrariaCorruption.BlockEntities;
+using TerrariaCorruption.Blocks;
 using Vintagestory.API;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
+using Vintagestory.API.Config;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
@@ -16,7 +19,7 @@ namespace TerrariaCorruption
     class EntityBehaviorMeteorExplosion : EntityBehavior
     {
         ICoreAPI sidedAPI;
-        ICoreServerAPI serverAPI;
+        ICoreServerAPI sapi;
 
         //-- IBulkBlockAccessor doesn't seem to relight chunks when it should? --//
         IBlockAccessor blockAccessor;
@@ -45,6 +48,7 @@ namespace TerrariaCorruption
         private bool fillWithLiquid = false;
         private int fillHeight;
         AssetLocation liquidAsset;
+        private Block shadowOrb;
 
         private List<BlockPos> positionsChanged = new List<BlockPos>(); // not sure why this isn't used
 
@@ -66,8 +70,10 @@ namespace TerrariaCorruption
 
             if (sidedAPI.Side == EnumAppSide.Server)
             {
-                serverAPI = (ICoreServerAPI)sidedAPI;
-                explosionRadiusModifier = serverAPI.World.Config.GetDouble("CraterSizeMultiplier", 1.5);
+                sapi = (ICoreServerAPI)sidedAPI;
+                explosionRadiusModifier = sapi.World.Config.GetDouble("CraterSizeMultiplier", 1.5);
+
+                shadowOrb = sapi.World.GetBlock(new AssetLocation("terrariacorruption", "shadoworb"));
 
                 meteorDamageSource = new DamageSource
                 {
@@ -75,7 +81,9 @@ namespace TerrariaCorruption
                 };
             }
         }
-        /// <summary>Handles meteor despawn effects and selects the appropriate explosion.</summary>
+        /// <summary>
+        /// Handles meteor despawn effects and selects the appropriate explosion.
+        /// </summary>
         public override void OnEntityDespawn(EntityDespawnData despawn)
         {
             base.OnEntityDespawn(despawn);
@@ -109,17 +117,19 @@ namespace TerrariaCorruption
             }
 
         }
-        /// <summary>Explodes the meteor in the air and injures nearby entities when destructive mode is enabled.</summary>
+        /// <summary>
+        /// Explodes the meteor in the air and injures nearby entities when destructive mode is enabled.
+        /// </summary>
         private void ExplodeInAir()
         {
             if (sidedAPI.Side == EnumAppSide.Server)
             {
                 this.entity.World.PlaySoundAt(new AssetLocation("terrariacorruption", "sounds/effect/air_meteor_explosion_layered"), this.entity, null, true, 512, 1.0f);
 
-                if (serverAPI.World.Config.GetBool("Destructive") == true)
-                {
-                    InjureEntities(this.entity.Pos.XYZ);
-                }
+                //if (sapi.World.Config.GetBool("Destructive") == true) // will remove config option
+                //{
+                InjureEntities(this.entity.Pos.XYZ);
+                //}
             }
         }
         /// <summary>
@@ -140,18 +150,18 @@ namespace TerrariaCorruption
 
                 Vec3d shrapnelDirection = MeteoricExpansionHelpers.InvertVector(meteorDirection);
 
-                if (serverAPI.World.Config.GetBool("Destructive") == true)
-                {
-                    CreateCrater(meteorDirection, shrapnelDirection);
-                    InjureEntities(currentPos);
-                }
+                //if (sapi.World.Config.GetBool("Destructive") == true) // will remove config option
+                //{
+                CreateCrater(meteorDirection, shrapnelDirection);
+                InjureEntities(currentPos);
+                //}
 
-                //-- The meteor has a chance to 'break apart' on impact and throw out its own drops on impact, amount based on its size --//
-                foreach (BlockDropItemStack itemStack in entity.Properties.Drops)
-                    for (int i = 0; i < (int)(entity.Properties.Client.Size * explosionRand.Next(minMeteorDrops, maxMeteorDrops)); i++)
-                    {
-                        entity.World.SpawnItemEntity(itemStack.GetNextItemStack(), entity.Pos.XYZ, GetNewItemStackVector(shrapnelDirection, itemStackVelocityModifier));
-                    }
+                //-- The meteor has a chance to 'break apart' on impact and throw out its own drops on impact, amount based on its size --// // maybe i'll repurpose this
+                //foreach (BlockDropItemStack itemStack in entity.Properties.Drops)
+                //    for (int i = 0; i < (int)(entity.Properties.Client.Size * explosionRand.Next(minMeteorDrops, maxMeteorDrops)); i++)
+                //    {
+                //        entity.World.SpawnItemEntity(itemStack.GetNextItemStack(), entity.Pos.XYZ, GetNewItemStackVector(shrapnelDirection, itemStackVelocityModifier));
+                //    }
             }
         }
 
@@ -160,7 +170,7 @@ namespace TerrariaCorruption
         {
             List<BlockPos> ashPositions = new List<BlockPos>();
 
-            blockAccessor = serverAPI.World.GetBlockAccessor(true, true, false);
+            blockAccessor = sapi.World.GetBlockAccessor(true, true, false);
 
             Vec3i centerPos = this.entity.Pos.XYZInt;
 
@@ -211,7 +221,7 @@ namespace TerrariaCorruption
                         {
                             if (block.Code.Equals(new AssetLocation("game", "rock-" + block.Code.EndVariant())))
                             {
-                                blockAccessor.SetBlock(serverAPI.World.GetBlock(new AssetLocation("game", "crackedrock-" + block.Code.EndVariant())).Id, blockPos);
+                                blockAccessor.SetBlock(sapi.World.GetBlock(new AssetLocation("game", "crackedrock-" + block.Code.EndVariant())).Id, blockPos);
                             }
                         }
                     }
@@ -219,6 +229,12 @@ namespace TerrariaCorruption
             blockAccessor.Commit();
 
             //PlaceMeteor(meteorDirection, shrapnelDirection, centerPos, explosionRadius); // replace with place structure
+            //Block shadoworb = sapi.World.GetBlock(new AssetLocation("terrariacorruption" + "shadoworb")); // temporary patch
+            if (shadowOrb != null)
+            {
+                sapi.World.BlockAccessor.SetBlock(shadowOrb.BlockId, centerPos.AsBlockPos.AddCopy(0, 0, 0));
+                positionsChanged.Add(centerPos.AsBlockPos.Copy());
+            }
 
             blockAccessor.Commit();
         }
@@ -275,7 +291,7 @@ namespace TerrariaCorruption
                         blockAccessor.SetBlock(0, explosionPos, BlockLayersAccess.Solid);
 
                         if (explosionPos.Y <= fillHeight)
-                            blockAccessor.SetBlock(serverAPI.WorldManager.GetBlockId(liquidAsset), explosionPos, BlockLayersAccess.Fluid);
+                            blockAccessor.SetBlock(sapi.WorldManager.GetBlockId(liquidAsset), explosionPos, BlockLayersAccess.Fluid);
                     }
                     break;
 
@@ -395,8 +411,8 @@ namespace TerrariaCorruption
         }
         private bool IsPositionClaimed(BlockPos blockPos)
         {
-            if (serverAPI.World.Config.GetBool("ClaimsProtected") == true)
-                foreach (LandClaim claim in serverAPI.World.Claims.All)
+            if (sapi.World.Config.GetBool("ClaimsProtected") == true) // the corruption doesn't care about your claims
+                foreach (LandClaim claim in sapi.World.Claims.All)
                 {
                     if (claim.PositionInside(blockPos))
                         return true;

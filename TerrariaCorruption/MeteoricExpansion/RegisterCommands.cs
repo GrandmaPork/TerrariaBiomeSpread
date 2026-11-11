@@ -1,27 +1,92 @@
-﻿using MeteoricExpansion.Entities;
-using MeteoricExpansion.Entities.Behaviors;
-using MeteoricExpansion.Utility;
+﻿using System.Runtime.CompilerServices;
+using TerrariaCorruption.Entities;
+using TerrariaCorruption.Entities.Behaviors;
+using TerrariaCorruption.Utility;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
+using Vintagestory.Common;
 using Vintagestory.GameContent;
 
-namespace MeteoricExpansion
+namespace TerrariaCorruption
 {
     class RegisterCommands : ModSystem
     {
+        private ICoreServerAPI sapi;
+        private ICoreClientAPI capi;
+
+        private ICoreAPI api;
         /// <summary>Restricts this system to server-side loading.</summary>
         public override bool ShouldLoad(EnumAppSide side)
         {
             return side == EnumAppSide.Server;
         }
-        /// <summary>Initializes server commands; test commands are currently disabled.</summary>
+        //private void RegisterCommand() // idk how the hell this works so im just getting rid of it
+        //{
+        //    var parsers = sapi.ChatCommands.Parsers;
+
+        //    sapi.ChatCommands
+        //        .GetOrCreate("spawnmeteor")
+        //        .IgnoreAdditionalArgs()
+        //        .HandleWith(MeteoricExpansion)
+        //        .RequiresPrivilege("controlserver")
+        //        .WithPreCondition(loadWorkSpace)
+        //        .WithDescription("Spawns meteor above the player")
+        //        .Validate()
+        //        ;
+        //}
         public override void StartServerSide(ICoreServerAPI api)
         {
-            /*
+            //base.StartServerSide(api);
+            //this.sapi = sapi;
+            sapi = api;
+
+            sapi.ChatCommands.GetOrCreate("debug")
+                .BeginSubCommand("spawnmeteor")
+                .WithDescription("Spawn meteor above the player")
+                .RequiresPrivilege(Privilege.controlserver)
+
+                .BeginSubCommand("pos")
+                .RequiresPlayer()
+                .HandleWith(CmdSpawnMeteor)
+                .EndSubCommand()
+
+                .EndSubCommand()
+                ;
+        }
+        private TextCommandResult CmdSpawnMeteor(TextCommandCallingArgs args)
+        {
+            EntityProperties entityType = sapi.World.GetEntityType(new AssetLocation("terrariacorruption", "shadowmeteor"));
+            Entity entity = (EntityFallingMeteor)sapi.World.ClassRegistry.CreateEntity(entityType);
+            var player = args.Caller.Player as IServerPlayer;
+
+            if (player == null) return TextCommandResult.Error("This command can only be used by a player.");
+
+            var entityPos = new EntityPos(player.Entity.Pos.X, sapi.WorldManager.MapSizeY - 10, player.Entity.Pos.Z);
+
+            entity.Pos.SetPos(entityPos);
+            entity.Pos.SetFrom(entity.Pos);
+
+            sapi.World.SpawnEntity(entity);
+
+            if (entity == null)
+            {
+                return TextCommandResult.Error("Failed to spawn meteor.");
+            }
+
+            //System.Diagnostics.Debug.WriteLine("Spawned at: " + entity.Pos);
+            //System.Diagnostics.Debug.WriteLine("Player at: " + player.Entity.Pos);
+            return TextCommandResult.Success("Meteor spawned at: " + entity.Pos);
+        }
+        /// <summary>Initializes server commands; test commands are currently disabled.</summary>
+        /*public override void StartServerSide(ICoreServerAPI api)
+        {
+
             base.StartServerSide(api);
             //-- Registers a command that will spawn a random meteor 10 blocks above the player --//
+            /*
             api.RegisterCommand("fallingmeteor", "Spawns a meteor for testing purposes.", "",
             (IServerPlayer player, int groupId, CmdArgs args) =>
             {
@@ -82,6 +147,11 @@ namespace MeteoricExpansion
                     blockAccessor.Commit();
                 }, Privilege.controlserver);
             */
-        }
+
+        //}
+    }
+    abstract class SummonMeteor : ChatCommand
+    {
+        //public abstract void CallHandler(IServerPlayer player, int groupId, CmdArgs args) { }
     }
 }

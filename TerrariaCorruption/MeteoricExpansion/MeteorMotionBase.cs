@@ -1,4 +1,4 @@
-﻿using MeteoricExpansion.Utility;
+﻿using TerrariaCorruption.Utility;
 using System;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
@@ -38,8 +38,8 @@ namespace TerrariaCorruption.Entities.Behaviors
             VerticalSpeed.Min = attributes["verticalSpeed"]["min"].AsInt();
             VerticalSpeed.Max = attributes["verticalSpeed"]["max"].AsInt();
 
-            EntityTransforms = entity.ServerPos;
-            entity.Pos.SetFrom(entity.ServerPos);
+            EntityTransforms = entity.Pos;
+            entity.Pos.SetFrom(entity.Pos);
         }
         /// <summary>Seeds the behavior's random number generator from the entity ID.</summary>
         protected void InitializeRandomValues()
@@ -51,8 +51,8 @@ namespace TerrariaCorruption.Entities.Behaviors
         {
             base.OnGameTick(deltaTime);
 
-            entity.ServerPos.SetFrom(EntityTransforms);
-            entity.Pos.SetFrom(entity.ServerPos);
+            entity.Pos.SetFrom(EntityTransforms);
+            entity.Pos.SetFrom(entity.Pos);
         }
         /// <summary>Calculates the next entity transform.</summary>
         protected abstract void CalculateEntityTransforms(float deltaTime);

@@ -1,4 +1,4 @@
-﻿using MeteoricExpansion.Utility;
+﻿using TerrariaCorruption.Utility;
 using System;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
@@ -60,7 +60,9 @@ namespace TerrariaCorruption.Entities
         /// </summary>
         protected long ElapsedLifetime { get; set; }
 
-        /// <summary>Initializes the base entity without applying meteor-specific scaling or lifespan.</summary>
+        /// <summary>
+        /// Initializes the base entity without applying meteor-specific scaling or lifespan.
+        /// </summary>
         public void SkipMeteorInit(EntityProperties properties, ICoreAPI api, long InChunkIndex3d)
         {
             base.Initialize(properties, api, InChunkIndex3d);
